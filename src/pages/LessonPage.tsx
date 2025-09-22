@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { Card, CardContent } from '@/components/ui/card';
+import { CodeBlock } from '@/components/CodeBlock';
 
 // Mock lesson data - in real app this would come from Supabase
 const lessonData: Record<string, any> = {
@@ -494,17 +495,13 @@ export default function LessonPage() {
                 </h2>
                 
                 {lesson.codeExamples.map((example: any, index: number) => (
-                  <Card key={index}>
-                    <CardContent className="p-0">
-                      <div className="bg-muted/50 px-4 py-2 border-b">
-                        <h3 className="font-medium">{example.title}</h3>
-                        <p className="text-sm text-muted-foreground capitalize">{example.language}</p>
-                      </div>
-                      <pre className="p-4 text-sm overflow-x-auto">
-                        <code>{example.code}</code>
-                      </pre>
-                    </CardContent>
-                  </Card>
+                  <CodeBlock
+                    key={index}
+                    title={example.title}
+                    code={example.code}
+                    language={example.language}
+                    showLanguageSelector={true}
+                  />
                 ))}
               </div>
             )}
