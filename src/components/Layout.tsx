@@ -28,14 +28,14 @@ export function Layout({ children }: LayoutProps) {
       <div className="min-h-screen flex w-full">
         <AppSidebar />
         
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 flex flex-col min-w-0">
           {/* Header */}
           <header className="h-14 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
             <div className="flex items-center justify-between h-full px-4">
-              <div className="flex items-center gap-2">
-                <SidebarTrigger />
-                <div className="h-6 w-px bg-border" />
-                <div className="text-sm text-muted-foreground">
+              <div className="flex items-center gap-2 min-w-0">
+                <SidebarTrigger className="md:hidden" />
+                <div className="h-6 w-px bg-border hidden sm:block" />
+                <div className="text-sm text-muted-foreground hidden md:block truncate">
                   Master the key patterns to solve any coding interview
                 </div>
               </div>
@@ -46,7 +46,7 @@ export function Layout({ children }: LayoutProps) {
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" className="relative h-8 w-8 rounded-full">
                         <Avatar className="h-8 w-8">
-                          <AvatarFallback className="bg-primary text-primary-foreground">
+                          <AvatarFallback className="bg-primary text-primary-foreground text-sm">
                             {user.email?.charAt(0).toUpperCase()}
                           </AvatarFallback>
                         </Avatar>
@@ -89,11 +89,11 @@ export function Layout({ children }: LayoutProps) {
                   </DropdownMenu>
                 ) : (
                   <div className="flex items-center gap-2">
-                    <Button variant="ghost" size="sm" asChild>
+                    <Button variant="ghost" size="sm" className="hidden sm:inline-flex" asChild>
                       <Link to="/auth">Sign In</Link>
                     </Button>
                     <Button size="sm" asChild>
-                      <Link to="/auth">Get Started</Link>
+                      <Link to="/auth" className="text-sm">Get Started</Link>
                     </Button>
                   </div>
                 )}
@@ -102,8 +102,10 @@ export function Layout({ children }: LayoutProps) {
           </header>
           
           {/* Main Content */}
-          <main className="flex-1 overflow-auto">
-            {children}
+          <main className="flex-1 overflow-auto min-w-0">
+            <div className="min-h-full">
+              {children}
+            </div>
           </main>
         </div>
       </div>

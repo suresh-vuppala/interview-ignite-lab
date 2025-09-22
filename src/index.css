@@ -118,3 +118,57 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Blog content styling */
+.blog-content h1,
+.blog-content h2,
+.blog-content h3 {
+  @apply font-bold text-foreground;
+}
+
+.blog-content h1 {
+  @apply text-3xl mb-6 mt-8;
+}
+
+.blog-content h2 {
+  @apply text-2xl mb-4 mt-6;
+}
+
+.blog-content h3 {
+  @apply text-xl mb-3 mt-4;
+}
+
+.blog-content p {
+  @apply leading-relaxed text-foreground mb-4;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-lg my-4;
+}
+
+.blog-content ul,
+.blog-content ol {
+  @apply space-y-2 mb-4;
+}
+
+.blog-content li {
+  @apply leading-relaxed;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .sidebar-mobile-hidden {
+    display: none;
+  }
+}
+
+/* Ensure proper text wrapping */
+.blog-content {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Smooth transitions for interactive elements */
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
