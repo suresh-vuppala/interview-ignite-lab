@@ -19,9 +19,7 @@ import {
 import { useAuth } from '@/hooks/useAuth';
 import { Card, CardContent } from '@/components/ui/card';
 import { CodeBlock } from '@/components/CodeBlock';
-
-// Mock lesson data - in real app this would come from Supabase
-const lessonData: Record<string, any> = {
+import { lessonData } from '@/data/lessonData';
   'getting-started-overview': {
     title: 'Course Overview',
     course: 'Getting Started',
@@ -245,128 +243,23 @@ A special case where pointers maintain a window of elements.
       }
     ]
   },
-  'system-design-fundamentals': {
-    title: 'System Design Fundamentals',
-    course: 'System Design',
-    duration: 45,
-    isPremium: false,
-    content: `
-# System Design Fundamentals
-
-System design interviews test your ability to design large-scale distributed systems. This lesson covers the fundamental concepts you need to know.
-
-## Key Principles
-
-### 1. Scalability
-- **Horizontal vs Vertical scaling**
-- **Load balancing strategies**
-- **Auto-scaling mechanisms**
-
-### 2. Reliability
-- **Fault tolerance**
-- **Redundancy and replication**
-- **Circuit breakers**
-
-### 3. Availability
-- **Uptime requirements (99.9% vs 99.99%)**
-- **Failover mechanisms**
-- **Disaster recovery**
-
-### 4. Consistency
-- **ACID properties**
-- **CAP theorem**
-- **Eventual consistency**
-
-## Common Components
-
-### Load Balancers
-Distribute incoming requests across multiple servers.
-
-### Databases
-- **SQL vs NoSQL**
-- **Sharding strategies**
-- **Read replicas**
-
-### Caching
-- **In-memory caches (Redis, Memcached)**
-- **CDNs for static content**
-- **Application-level caching**
-
-### Message Queues
-- **Asynchronous processing**
-- **Pub/Sub patterns**
-- **Message ordering and delivery guarantees**
-
-## Design Process
-
-1. **Clarify requirements** (functional and non-functional)
-2. **Estimate scale** (users, data, requests)
-3. **High-level design** (major components)
-4. **Detailed design** (APIs, schemas, algorithms)
-5. **Scale the design** (bottlenecks and solutions)
-
-## Example: Design a URL Shortener
-
-Let's walk through designing a system like bit.ly or tinyurl.
-    `,
-    codeExamples: [
-      {
-        title: 'URL Encoding Algorithm',
-        language: 'python',
-        code: `import hashlib
-import base64
-
-def encode_url(long_url, counter):
-    """
-    Encode a long URL into a short URL
-    """
-    # Option 1: Use counter-based encoding
-    def base62_encode(num):
-        alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        if num == 0:
-            return alphabet[0]
-        
-        result = ""
-        while num > 0:
-            result = alphabet[num % 62] + result
-            num //= 62
-        return result
-    
-    short_code = base62_encode(counter)
-    return f"https://short.ly/{short_code}"
-
-# Option 2: Hash-based approach
-def hash_encode_url(long_url):
-    """
-    Use MD5 hash for encoding (with collision handling)
-    """
-    hash_object = hashlib.md5(long_url.encode())
-    hex_dig = hash_object.hexdigest()
-    
-    # Take first 7 characters for short URL
-    short_code = hex_dig[:7]
-    return f"https://short.ly/{short_code}"`
-      }
-    ]
-  }
-};
 
 export default function LessonPage() {
-  const { courseSlug, lessonSlug } = useParams();
+  const { courseSlug, categorySlug, lessonSlug } = useParams();
   const { user } = useAuth();
   const [lesson, setLesson] = useState<any>(null);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     // Simulate loading lesson data
-    const lessonKey = `${courseSlug}-${lessonSlug}`;
+    const lessonKey = categorySlug ? `${courseSlug}-${categorySlug}-${lessonSlug}` : `${courseSlug}-${lessonSlug}`;
     const lessonData = getLessonData(lessonKey);
     setLesson(lessonData);
     
     // Simulate progress
     const timer = setTimeout(() => setProgress(75), 1000);
     return () => clearTimeout(timer);
-  }, [courseSlug, lessonSlug]);
+  }, [courseSlug, categorySlug, lessonSlug]);
 
   const getLessonData = (key: string) => {
     return lessonData[key] || {
