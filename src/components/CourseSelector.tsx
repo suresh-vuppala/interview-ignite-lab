@@ -63,7 +63,7 @@ export function CourseSelector() {
           <ChevronDown className="w-4 h-4" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="start" className="w-80">
+      <DropdownMenuContent align="start" className="w-80 bg-background border shadow-lg z-50">
         {courses.map((course) => (
           <DropdownMenuItem key={course.id} asChild>
             <NavLink 

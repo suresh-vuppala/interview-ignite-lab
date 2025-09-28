@@ -8,6 +8,7 @@ import { AuthProvider } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
+import CourseOverview from "./pages/CourseOverview";
 import LessonPage from "./pages/LessonPage";
 import NotFound from "./pages/NotFound";
 
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/course/:courseSlug" element={<CourseOverview />} />
             <Route path="/course/:courseSlug/:categorySlug/:lessonSlug" element={<LessonPage />} />
             <Route path="/course/:courseSlug/:lessonSlug" element={<LessonPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
