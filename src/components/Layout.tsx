@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/AppSidebar';
 import { Button } from '@/components/ui/button';
@@ -33,7 +33,7 @@ export function Layout({ children }: LayoutProps) {
           <header className="h-14 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
             <div className="flex items-center justify-between h-full px-4">
               <div className="flex items-center gap-2 min-w-0">
-                <SidebarTrigger className="md:hidden" />
+                <SidebarTrigger />
                 <div className="h-6 w-px bg-border hidden sm:block" />
                 <div className="text-sm text-muted-foreground hidden md:block truncate">
                   Master the key patterns to solve any coding interview

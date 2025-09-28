@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { 
   BookOpen, 
@@ -206,19 +206,32 @@ export function AppSidebar() {
   const toggleGroup = (groupKey: string) => {
     setOpenGroups(prev => {
       const newState = { ...prev };
-      // Close all other groups when opening a new one
+      // Close all other groups when opening a new one (accordion behavior)
       Object.keys(newState).forEach(key => {
-        if (key !== groupKey) {
-          newState[key] = false;
-        }
+        newState[key] = false;
       });
+      // Toggle the selected group
       newState[groupKey] = !prev[groupKey];
       return newState;
     });
+    
+    // Also close all modules when switching groups
+    setOpenModules({});
   };
 
-  const toggleModule = (moduleKey: string) => {
-    setOpenModules(prev => ({ ...prev, [moduleKey]: !prev[moduleKey] }));
+  const toggleModule = (moduleKey: string, courseId: string) => {
+    setOpenModules(prev => {
+      const newState = { ...prev };
+      // Close all modules in the same course (accordion behavior within course)
+      Object.keys(newState).forEach(key => {
+        if (key.startsWith(courseId + '-')) {
+          newState[key] = false;
+        }
+      });
+      // Toggle the selected module
+      newState[moduleKey] = !prev[moduleKey];
+      return newState;
+    });
   };
   
   // Filter courses and lessons based on search query
@@ -323,7 +336,7 @@ export function AppSidebar() {
                               const moduleActive = isModuleActive(module);
 
                               return (
-                                <Collapsible key={module.title} open={isModuleOpen} onOpenChange={() => toggleModule(moduleKey)}>
+                                <Collapsible key={module.title} open={isModuleOpen} onOpenChange={() => toggleModule(moduleKey, course.id)}>
                                   <SidebarMenuSubItem>
                                     <CollapsibleTrigger asChild>
                                       <SidebarMenuSubButton className={`${getNavClass(moduleActive)} font-medium`}>
