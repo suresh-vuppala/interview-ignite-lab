@@ -184,6 +184,11 @@ export function AppSidebar() {
   const currentPath = location.pathname;
   const [searchQuery, setSearchQuery] = useState("");
   
+  // Extract current course from URL path
+  const pathSegments = currentPath.split('/');
+  const currentCourseSlug = pathSegments[2]; // /course/:courseSlug/...
+  const currentCourse = courses.find(course => course.id === currentCourseSlug);
+  
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({
     "dsa": true,
     "system-design-hld": false,
@@ -305,82 +310,73 @@ export function AppSidebar() {
         </SidebarGroup>
 
         {/* Course Content */}
-        <SidebarGroup>
-          <SidebarGroupLabel>Courses</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {(searchQuery ? filteredCourses : courses).map((course) => {
-                const isOpen = openGroups[course.id];
-                const courseActive = isCourseActive(course);
+        {currentCourse && (
+          <SidebarGroup>
+            <SidebarGroupLabel>
+              <div className="flex items-center gap-2">
+                <currentCourse.icon className="w-4 h-4" />
+                {state === "expanded" && <span>{currentCourse.title}</span>}
+              </div>
+            </SidebarGroupLabel>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {currentCourse.modules.map((module) => {
+                  const moduleKey = `${currentCourse.id}-${module.title.toLowerCase().replace(/\s+/g, '-')}`;
+                  const isModuleOpen = openModules[moduleKey];
+                  const moduleActive = isModuleActive(module);
 
-                return (
-                  <Collapsible key={course.id} open={isOpen} onOpenChange={() => toggleGroup(course.id)}>
-                    <SidebarMenuItem>
-                      <CollapsibleTrigger asChild>
-                        <SidebarMenuButton className={getNavClass(courseActive)}>
-                          <course.icon className="w-4 h-4" />
-                          {state === "expanded" && (
-                            <>
-                              <span className="flex-1 text-left text-sm">{course.title}</span>
-                              <ChevronRight className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-90' : ''}`} />
-                            </>
-                          )}
-                        </SidebarMenuButton>
-                      </CollapsibleTrigger>
-                      {state === "expanded" && (
-                        <CollapsibleContent>
-                          <SidebarMenuSub>
-                            {course.modules.map((module) => {
-                              const moduleKey = `${course.id}-${module.title.toLowerCase().replace(/\s+/g, '-')}`;
-                              const isModuleOpen = openModules[moduleKey];
-                              const moduleActive = isModuleActive(module);
-
-                              return (
-                                <Collapsible key={module.title} open={isModuleOpen} onOpenChange={() => toggleModule(moduleKey, course.id)}>
-                                  <SidebarMenuSubItem>
-                                    <CollapsibleTrigger asChild>
-                                      <SidebarMenuSubButton className={`${getNavClass(moduleActive)} font-medium`}>
-                                        <span className="flex-1 text-left">{module.title}</span>
-                                        <ChevronRight className={`w-3 h-3 transition-transform ${isModuleOpen ? 'rotate-90' : ''}`} />
+                  return (
+                    <Collapsible key={module.title} open={isModuleOpen} onOpenChange={() => toggleModule(moduleKey, currentCourse.id)}>
+                      <SidebarMenuItem>
+                        <CollapsibleTrigger asChild>
+                          <SidebarMenuButton className={`${getNavClass(moduleActive)} font-medium`}>
+                            <span className="flex-1 text-left">{module.title}</span>
+                            <ChevronRight className={`w-3 h-3 transition-transform ${isModuleOpen ? 'rotate-90' : ''}`} />
+                          </SidebarMenuButton>
+                        </CollapsibleTrigger>
+                        {state === "expanded" && (
+                          <CollapsibleContent>
+                            <SidebarMenuSub>
+                              <div className="ml-4 space-y-1">
+                                {module.lessons
+                                  .filter(lesson =>
+                                    lesson.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                    module.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                    currentCourse.title.toLowerCase().includes(searchQuery.toLowerCase())
+                                  )
+                                  .map((lesson) => (
+                                    <SidebarMenuSubItem key={lesson.title}>
+                                      <SidebarMenuSubButton asChild>
+                                        <NavLink 
+                                          to={lesson.url} 
+                                          className={`${getNavClass(isLessonActive(lesson.url))} flex items-center gap-2 text-sm py-1`}
+                                        >
+                                          <span className="flex-1">{lesson.title}</span>
+                                          {lesson.isPremium && !hasAccess(lesson.isPremium) && (
+                                            <Lock className="w-3 h-3 text-yellow-500" />
+                                          )}
+                                          {lesson.isPremium && (
+                                            <Badge variant="secondary" className="text-xs px-1 py-0">
+                                              <Crown className="w-2 h-2 mr-1" />
+                                              PRO
+                                            </Badge>
+                                          )}
+                                        </NavLink>
                                       </SidebarMenuSubButton>
-                                    </CollapsibleTrigger>
-                                    <CollapsibleContent>
-                                      <div className="ml-4 space-y-1">
-                                        {module.lessons.map((lesson) => (
-                                          <SidebarMenuSubButton key={lesson.title} asChild>
-                                            <NavLink 
-                                              to={lesson.url} 
-                                              className={`${getNavClass(isLessonActive(lesson.url))} flex items-center gap-2 text-sm py-1`}
-                                            >
-                                              <span className="flex-1">{lesson.title}</span>
-                                              {lesson.isPremium && !hasAccess(lesson.isPremium) && (
-                                                <Lock className="w-3 h-3 text-yellow-500" />
-                                              )}
-                                              {lesson.isPremium && (
-                                                <Badge variant="secondary" className="text-xs px-1 py-0">
-                                                  <Crown className="w-2 h-2 mr-1" />
-                                                  PRO
-                                                </Badge>
-                                              )}
-                                            </NavLink>
-                                          </SidebarMenuSubButton>
-                                        ))}
-                                      </div>
-                                    </CollapsibleContent>
-                                  </SidebarMenuSubItem>
-                                </Collapsible>
-                              );
-                            })}
-                          </SidebarMenuSub>
-                        </CollapsibleContent>
-                      )}
-                    </SidebarMenuItem>
-                  </Collapsible>
-                );
-              })}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+                                    </SidebarMenuSubItem>
+                                  ))}
+                              </div>
+                            </SidebarMenuSub>
+                          </CollapsibleContent>
+                        )}
+                      </SidebarMenuItem>
+                    </Collapsible>
+                  );
+                })}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        )}
       </SidebarContent>
     </Sidebar>
   );
