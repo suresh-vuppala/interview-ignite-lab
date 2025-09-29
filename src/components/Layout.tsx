@@ -3,7 +3,7 @@ import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/AppSidebar';
 import { CourseSelector } from '@/components/CourseSelector';
 import { Button } from '@/components/ui/button';
-import { User, LogOut, Crown } from 'lucide-react';
+import { User, LogOut, Crown, Sun, Moon } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import {
@@ -14,8 +14,17 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu"
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
+import { useTheme } from "next-themes";
 
 interface LayoutProps {
   children: ReactNode;
@@ -23,6 +32,7 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   const { user, signOut } = useAuth();
+  const { theme, setTheme } = useTheme();
 
   return (
     <SidebarProvider>
@@ -33,17 +43,73 @@ export function Layout({ children }: LayoutProps) {
           {/* Header */}
           <header className="h-14 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
             <div className="flex items-center justify-between h-full px-4">
-              <div className="flex items-center gap-2 min-w-0">
+              <div className="flex items-center gap-4 min-w-0">
                 <SidebarTrigger />
                 <div className="h-6 w-px bg-border hidden sm:block" />
-                <CourseSelector />
-                <div className="h-6 w-px bg-border hidden sm:block" />
-                <div className="text-sm text-muted-foreground hidden md:block truncate">
-                  Master the key patterns to solve any coding interview
-                </div>
+                
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger>Courses</NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <div className="grid gap-3 p-4 md:w-[400px] lg:w-[500px]">
+                          <Link className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground" to="/course/dsa">
+                            <div className="text-sm font-medium leading-none">DSA</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Data Structures & Algorithms
+                            </p>
+                          </Link>
+                          <Link className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground" to="/course/system-design-hld">
+                            <div className="text-sm font-medium leading-none">System Design (HLD)</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              High Level Design
+                            </p>
+                          </Link>
+                          <Link className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground" to="/course/lld">
+                            <div className="text-sm font-medium leading-none">LLD</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Low Level Design
+                            </p>
+                          </Link>
+                          <Link className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground" to="/course/behavioral">
+                            <div className="text-sm font-medium leading-none">Behavioral</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Interview Skills
+                            </p>
+                          </Link>
+                        </div>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                      <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50" href="/interviews">
+                        Interviews
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                      <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50" href="/questions">
+                        Questions
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                      <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50" href="/social">
+                        Social
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
               </div>
               
               <div className="flex items-center gap-2">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+                >
+                  <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                  <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                  <span className="sr-only">Toggle theme</span>
+                </Button>
+                
                 {user ? (
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
@@ -71,12 +137,6 @@ export function Layout({ children }: LayoutProps) {
                         </div>
                       </DropdownMenuLabel>
                       <DropdownMenuSeparator />
-                      <DropdownMenuItem asChild>
-                        <Link to="/settings">
-                          <User className="mr-2 h-4 w-4" />
-                          <span>Settings</span>
-                        </Link>
-                      </DropdownMenuItem>
                       <DropdownMenuItem asChild>
                         <Link to="/upgrade">
                           <Crown className="mr-2 h-4 w-4" />

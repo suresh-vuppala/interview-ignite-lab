@@ -4,7 +4,7 @@ import { Layout } from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Clock, Users, Star, Lock, Crown } from "lucide-react";
+import { Lock, Crown } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { 
   Database,
@@ -24,10 +24,10 @@ const courses = [
         title: "Arrays & Strings",
         url: "/course/dsa/arrays",
         lessons: [
-          { title: "Introduction to Arrays", url: "/course/dsa/arrays/intro", isPremium: false, estimatedTime: 30 },
-          { title: "Two Pointers Technique", url: "/course/dsa/arrays/two-pointers", isPremium: false, estimatedTime: 45 },
-          { title: "Sliding Window", url: "/course/dsa/arrays/sliding-window", isPremium: true, estimatedTime: 60 },
-          { title: "Prefix Sum", url: "/course/dsa/arrays/prefix-sum", isPremium: true, estimatedTime: 50 },
+          { title: "Introduction to Arrays", url: "/course/dsa/arrays/intro", isPremium: false },
+          { title: "Two Pointers Technique", url: "/course/dsa/arrays/two-pointers", isPremium: false },
+          { title: "Sliding Window", url: "/course/dsa/arrays/sliding-window", isPremium: true },
+          { title: "Prefix Sum", url: "/course/dsa/arrays/prefix-sum", isPremium: true },
         ]
       },
       {
@@ -169,13 +169,6 @@ export default function CourseOverview() {
     );
   }
 
-  const totalLessons = course.modules.reduce((acc, module) => acc + module.lessons.length, 0);
-  const freeLessons = course.modules.reduce((acc, module) => 
-    acc + module.lessons.filter(lesson => !lesson.isPremium).length, 0
-  );
-  const totalTime = course.modules.reduce((acc, module) => 
-    acc + module.lessons.reduce((lessonAcc, lesson) => lessonAcc + (lesson.estimatedTime || 30), 0), 0
-  );
 
   return (
     <Layout>
@@ -193,20 +186,6 @@ export default function CourseOverview() {
               </div>
             </div>
             
-            <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>{Math.round(totalTime / 60)}h {totalTime % 60}m</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Users className="w-4 h-4" />
-                <span>{totalLessons} lessons</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Star className="w-4 h-4" />
-                <span>{freeLessons} free lessons</span>
-              </div>
-            </div>
           </div>
 
           {/* Course Modules */}
@@ -241,8 +220,6 @@ export default function CourseOverview() {
                           <div>
                             <h4 className="font-medium text-foreground">{lesson.title}</h4>
                             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                              <Clock className="w-3 h-3" />
-                              <span>{lesson.estimatedTime || 30}min</span>
                               {lesson.isPremium && (
                                 <Badge variant="secondary" className="text-xs px-1.5 py-0.5">
                                   <Crown className="w-2 h-2 mr-1" />

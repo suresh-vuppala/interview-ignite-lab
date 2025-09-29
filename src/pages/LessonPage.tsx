@@ -99,7 +99,7 @@ export default function LessonPage() {
             {/* Header */}
             <div className="mb-6">
               <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                <Link to="/dashboard" className="hover:text-foreground">Dashboard</Link>
+                <Link to="/" className="hover:text-foreground">Home</Link>
                 <ChevronRight className="w-4 h-4" />
                 <span>{lesson.course}</span>
                 <ChevronRight className="w-4 h-4" />

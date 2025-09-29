@@ -85,7 +85,7 @@ const Index = () => {
 
   useEffect(() => {
     if (user) {
-      navigate('/dashboard');
+      navigate('/course/dsa');
     }
   }, [user, navigate]);
 

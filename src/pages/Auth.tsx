@@ -21,7 +21,7 @@ export default function Auth() {
 
   useEffect(() => {
     if (user) {
-      navigate('/dashboard');
+      navigate('/');
     }
   }, [user, navigate]);
 
@@ -32,7 +32,7 @@ export default function Auth() {
     const { error } = await signIn(signInEmail, signInPassword);
     
     if (!error) {
-      navigate('/dashboard');
+      navigate('/');
     }
     
     setIsLoading(false);

@@ -3,7 +3,6 @@ import { NavLink, useLocation } from "react-router-dom";
 import { 
   BookOpen, 
   Home, 
-  Settings, 
   Lock, 
   Crown,
   ChevronRight,
@@ -173,8 +172,7 @@ const courses = [
 ];
 
 const mainItems = [
-  { title: "Dashboard", url: "/dashboard", icon: Home },
-  { title: "Settings", url: "/settings", icon: Settings },
+  { title: "Home", url: "/", icon: Home },
 ];
 
 export function AppSidebar() {
