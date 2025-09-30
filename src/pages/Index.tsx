@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Layout } from '@/components/Layout';
 import { 
   BookOpen, 
   Code, 
@@ -89,28 +90,12 @@ const Index = () => {
     }
   }, [user, navigate]);
 
+  if (user) {
+    return null;
+  }
+
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center">
-              <BookOpen className="w-4 h-4 text-white" />
-            </div>
-            <span className="font-bold text-xl">Interview60</span>
-          </div>
-          
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" asChild>
-              <Link to="/auth">Sign In</Link>
-            </Button>
-            <Button asChild>
-              <Link to="/auth">Get Started Free</Link>
-            </Button>
-          </div>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 text-center bg-gradient-to-br from-background via-primary/5 to-background">

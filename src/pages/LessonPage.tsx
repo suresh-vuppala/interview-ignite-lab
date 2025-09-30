@@ -111,10 +111,6 @@ export default function LessonPage() {
                   <h1 className="text-3xl font-bold mb-2">{lesson.title}</h1>
                   <div className="flex items-center gap-4 text-sm text-muted-foreground">
                     <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      {lesson.duration} min
-                    </div>
-                    <div className="flex items-center gap-1">
                       <BookOpen className="w-4 h-4" />
                       {lesson.course}
                     </div>
@@ -137,14 +133,6 @@ export default function LessonPage() {
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </Button>
                 </div>
-              </div>
-              
-              <div className="space-y-2">
-                <div className="flex justify-between text-sm">
-                  <span>Progress</span>
-                  <span>{progress}%</span>
-                </div>
-                <Progress value={progress} className="h-2" />
               </div>
             </div>
 
@@ -228,11 +216,6 @@ export default function LessonPage() {
                 Previous Lesson
               </Button>
               
-              <Button>
-                <CheckCircle className="w-4 h-4 mr-2" />
-                Mark Complete
-              </Button>
-              
               <Button variant="outline">
                 Next Lesson
                 <ChevronRight className="w-4 h-4 ml-2" />
@@ -242,23 +225,6 @@ export default function LessonPage() {
 
           {/* Sidebar - Hidden on mobile, shown on larger screens */}
           <div className="xl:col-span-1 hidden xl:block p-6 space-y-6">
-            {/* Course Progress */}
-            <Card>
-              <CardContent className="p-4">
-                <h3 className="font-semibold mb-3">Course Progress</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span>Completed</span>
-                    <span>3/8 lessons</span>
-                  </div>
-                  <Progress value={38} />
-                  <p className="text-xs text-muted-foreground">
-                    Keep going! You're making great progress.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
             {/* Related Lessons */}
             <Card>
               <CardContent className="p-4">
@@ -268,7 +234,6 @@ export default function LessonPage() {
                     <Play className="w-4 h-4 text-muted-foreground" />
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium truncate">Sliding Window Pattern</p>
-                      <p className="text-xs text-muted-foreground">20 min</p>
                     </div>
                   </div>
                   
@@ -276,7 +241,7 @@ export default function LessonPage() {
                     <Lock className="w-4 h-4 text-yellow-500" />
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium truncate">Dynamic Programming</p>
-                      <p className="text-xs text-muted-foreground">35 min • PRO</p>
+                      <Badge variant="secondary" className="text-xs ml-2">PRO</Badge>
                     </div>
                   </div>
                   
@@ -284,7 +249,6 @@ export default function LessonPage() {
                     <Play className="w-4 h-4 text-muted-foreground" />
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium truncate">Binary Search</p>
-                      <p className="text-xs text-muted-foreground">25 min</p>
                     </div>
                   </div>
                 </div>

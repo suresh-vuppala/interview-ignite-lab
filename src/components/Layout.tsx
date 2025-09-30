@@ -1,9 +1,8 @@
 import React, { ReactNode } from 'react';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/AppSidebar';
-import { CourseSelector } from '@/components/CourseSelector';
 import { Button } from '@/components/ui/button';
-import { User, LogOut, Crown, Sun, Moon } from 'lucide-react';
+import { User, LogOut, Crown, Sun, Moon, BookOpen, Briefcase, HelpCircle, Users } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import {
@@ -50,7 +49,10 @@ export function Layout({ children }: LayoutProps) {
                 <NavigationMenu>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-                      <NavigationMenuTrigger>Courses</NavigationMenuTrigger>
+                      <NavigationMenuTrigger>
+                        <BookOpen className="w-4 h-4 mr-2" />
+                        Courses
+                      </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <div className="grid gap-3 p-4 md:w-[400px] lg:w-[500px]">
                           <Link className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground" to="/course/dsa">
@@ -82,16 +84,19 @@ export function Layout({ children }: LayoutProps) {
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                       <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50" href="/interviews">
+                        <Briefcase className="w-4 h-4 mr-2" />
                         Interviews
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                       <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50" href="/questions">
+                        <HelpCircle className="w-4 h-4 mr-2" />
                         Questions
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                       <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50" href="/social">
+                        <Users className="w-4 h-4 mr-2" />
                         Social
                       </NavigationMenuLink>
                     </NavigationMenuItem>

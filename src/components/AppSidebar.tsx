@@ -256,7 +256,7 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar className={`${state === "collapsed" ? "w-14" : "w-80"} transition-all duration-300`}>
+    <Sidebar className={`${state === "collapsed" ? "w-14" : "w-64"} transition-all duration-300`}>
       <SidebarContent>
         {/* Logo/Brand */}
         <div className="p-4 border-b border-sidebar-border">
@@ -328,8 +328,9 @@ export function AppSidebar() {
                       <SidebarMenuItem>
                         <CollapsibleTrigger asChild>
                           <SidebarMenuButton className={`${getNavClass(moduleActive)} font-medium`}>
-                            <span className="flex-1 text-left">{module.title}</span>
-                            <ChevronRight className={`w-3 h-3 transition-transform ${isModuleOpen ? 'rotate-90' : ''}`} />
+                            <Code className="w-4 h-4 flex-shrink-0" />
+                            <span className="flex-1 text-left truncate">{module.title}</span>
+                            <ChevronRight className={`w-3 h-3 flex-shrink-0 transition-transform ${isModuleOpen ? 'rotate-90' : ''}`} />
                           </SidebarMenuButton>
                         </CollapsibleTrigger>
                         {state === "expanded" && (
@@ -349,12 +350,13 @@ export function AppSidebar() {
                                           to={lesson.url} 
                                           className={`${getNavClass(isLessonActive(lesson.url))} flex items-center gap-2 text-sm py-1`}
                                         >
-                                          <span className="flex-1">{lesson.title}</span>
+                                          <BookOpen className="w-3 h-3 flex-shrink-0" />
+                                          <span className="flex-1 truncate">{lesson.title}</span>
                                           {lesson.isPremium && !hasAccess(lesson.isPremium) && (
-                                            <Lock className="w-3 h-3 text-yellow-500" />
+                                            <Lock className="w-3 h-3 flex-shrink-0 text-yellow-500" />
                                           )}
                                           {lesson.isPremium && (
-                                            <Badge variant="secondary" className="text-xs px-1 py-0">
+                                            <Badge variant="secondary" className="text-xs px-1 py-0 flex-shrink-0">
                                               <Crown className="w-2 h-2 mr-1" />
                                               PRO
                                             </Badge>

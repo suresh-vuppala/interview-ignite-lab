@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -154,7 +154,15 @@ const courses = [
 
 export default function CourseOverview() {
   const { courseSlug } = useParams();
+  const navigate = useNavigate();
   const course = courses.find(c => c.id === courseSlug);
+
+  useEffect(() => {
+    if (course && course.modules.length > 0 && course.modules[0].lessons.length > 0) {
+      const firstLesson = course.modules[0].lessons[0];
+      navigate(firstLesson.url, { replace: true });
+    }
+  }, [course, navigate]);
 
   if (!course) {
     return (
