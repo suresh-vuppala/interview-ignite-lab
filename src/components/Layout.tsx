@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/AppSidebar';
 import { Button } from '@/components/ui/button';
-import { User, LogOut, Crown, Sun, Moon, BookOpen, Briefcase, HelpCircle, Users } from 'lucide-react';
+import { LogOut, Crown, Sun, Moon, BookOpen, Briefcase, HelpCircle, Users, Menu, GraduationCap } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import {
@@ -20,7 +20,12 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { useTheme } from "next-themes";
@@ -32,6 +37,7 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   const { user, signOut } = useAuth();
   const { theme, setTheme } = useTheme();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <SidebarProvider>
@@ -43,10 +49,18 @@ export function Layout({ children }: LayoutProps) {
           <header className="h-14 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
             <div className="flex items-center justify-between h-full px-4">
               <div className="flex items-center gap-4 min-w-0">
-                <SidebarTrigger />
-                <div className="h-6 w-px bg-border hidden sm:block" />
+                <SidebarTrigger className="lg:hidden" />
                 
-                <NavigationMenu>
+                {/* Logo */}
+                <Link to="/" className="flex items-center gap-2 font-bold text-lg hover:opacity-80 transition-opacity">
+                  <GraduationCap className="h-6 w-6 text-primary" />
+                  <span className="hidden sm:inline">Interview60</span>
+                </Link>
+                
+                <div className="h-6 w-px bg-border hidden lg:block" />
+                
+                {/* Desktop Navigation */}
+                <NavigationMenu className="hidden lg:flex">
                   <NavigationMenuList>
                     <NavigationMenuItem>
                       <NavigationMenuTrigger>
@@ -118,7 +132,7 @@ export function Layout({ children }: LayoutProps) {
                 {user ? (
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+                      <Button variant="ghost" className="relative h-8 w-8 rounded-full hidden lg:flex">
                         <Avatar className="h-8 w-8">
                           <AvatarFallback className="bg-primary text-primary-foreground text-sm">
                             {user.email?.charAt(0).toUpperCase()}
@@ -155,16 +169,134 @@ export function Layout({ children }: LayoutProps) {
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
-                ) : (
-                  <div className="flex items-center gap-2">
-                    <Button variant="ghost" size="sm" className="hidden sm:inline-flex" asChild>
-                      <Link to="/auth">Sign In</Link>
+                ) : null}
+
+                {/* Mobile Menu */}
+                <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+                  <SheetTrigger asChild>
+                    <Button variant="ghost" size="sm" className="lg:hidden">
+                      <Menu className="h-5 w-5" />
                     </Button>
-                    <Button size="sm" asChild>
-                      <Link to="/auth" className="text-sm">Get Started</Link>
-                    </Button>
-                  </div>
-                )}
+                  </SheetTrigger>
+                  <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                    <nav className="flex flex-col gap-4 mt-6">
+                      <div className="space-y-1">
+                        <h3 className="font-semibold text-sm text-muted-foreground mb-2">Courses</h3>
+                        <Link 
+                          to="/course/dsa" 
+                          className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-accent transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          <BookOpen className="h-4 w-4" />
+                          <div>
+                            <div className="font-medium">DSA</div>
+                            <div className="text-xs text-muted-foreground">Data Structures & Algorithms</div>
+                          </div>
+                        </Link>
+                        <Link 
+                          to="/course/system-design-hld" 
+                          className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-accent transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          <BookOpen className="h-4 w-4" />
+                          <div>
+                            <div className="font-medium">System Design (HLD)</div>
+                            <div className="text-xs text-muted-foreground">High Level Design</div>
+                          </div>
+                        </Link>
+                        <Link 
+                          to="/course/lld" 
+                          className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-accent transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          <BookOpen className="h-4 w-4" />
+                          <div>
+                            <div className="font-medium">LLD</div>
+                            <div className="text-xs text-muted-foreground">Low Level Design</div>
+                          </div>
+                        </Link>
+                        <Link 
+                          to="/course/behavioral" 
+                          className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-accent transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          <BookOpen className="h-4 w-4" />
+                          <div>
+                            <div className="font-medium">Behavioral</div>
+                            <div className="text-xs text-muted-foreground">Interview Skills</div>
+                          </div>
+                        </Link>
+                      </div>
+
+                      <div className="border-t pt-4 space-y-1">
+                        <Link 
+                          to="/interviews" 
+                          className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-accent transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          <Briefcase className="h-4 w-4" />
+                          <span>Interviews</span>
+                        </Link>
+                        <Link 
+                          to="/questions" 
+                          className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-accent transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          <HelpCircle className="h-4 w-4" />
+                          <span>Questions</span>
+                        </Link>
+                        <Link 
+                          to="/social" 
+                          className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-accent transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          <Users className="h-4 w-4" />
+                          <span>Social</span>
+                        </Link>
+                      </div>
+
+                      {user ? (
+                        <div className="border-t pt-4 space-y-1">
+                          <div className="px-3 py-2">
+                            <p className="text-sm font-medium">{user.user_metadata?.full_name || user.email}</p>
+                            <p className="text-xs text-muted-foreground">{user.email}</p>
+                            <Badge variant="secondary" className="w-fit mt-2">
+                              <Crown className="w-3 h-3 mr-1" />
+                              Free Plan
+                            </Badge>
+                          </div>
+                          <Link 
+                            to="/upgrade" 
+                            className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-accent transition-colors"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            <Crown className="h-4 w-4" />
+                            <span>Upgrade to Pro</span>
+                          </Link>
+                          <button 
+                            onClick={() => {
+                              signOut();
+                              setMobileMenuOpen(false);
+                            }}
+                            className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-accent transition-colors w-full text-left"
+                          >
+                            <LogOut className="h-4 w-4" />
+                            <span>Log out</span>
+                          </button>
+                        </div>
+                      ) : (
+                        <div className="border-t pt-4 space-y-2">
+                          <Button variant="outline" className="w-full" asChild onClick={() => setMobileMenuOpen(false)}>
+                            <Link to="/auth">Sign In</Link>
+                          </Button>
+                          <Button className="w-full" asChild onClick={() => setMobileMenuOpen(false)}>
+                            <Link to="/auth">Get Started</Link>
+                          </Button>
+                        </div>
+                      )}
+                    </nav>
+                  </SheetContent>
+                </Sheet>
               </div>
             </div>
           </header>

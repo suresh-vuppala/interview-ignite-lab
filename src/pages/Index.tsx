@@ -82,20 +82,37 @@ const testimonials = [
 
 const Index = () => {
   const { user } = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (user) {
-      navigate('/course/dsa');
-    }
-  }, [user, navigate]);
 
   if (user) {
-    return null;
+    return (
+      <Layout>
+        <div className="container mx-auto px-4 py-12">
+          <h1 className="text-4xl font-bold mb-4">Welcome to Interview60</h1>
+          <p className="text-muted-foreground">Select a course from the menu to get started.</p>
+        </div>
+      </Layout>
+    );
   }
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Landing Page Navigation */}
+      <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <BookOpen className="h-6 w-6 text-primary" />
+            <span className="font-bold text-xl">Interview60</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Button variant="ghost" asChild>
+              <Link to="/auth">Sign In</Link>
+            </Button>
+            <Button asChild>
+              <Link to="/auth">Get Started</Link>
+            </Button>
+          </div>
+        </div>
+      </nav>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 text-center bg-gradient-to-br from-background via-primary/5 to-background">
