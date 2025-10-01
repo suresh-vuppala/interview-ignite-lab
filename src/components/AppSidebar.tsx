@@ -21,14 +21,14 @@ export function AppSidebar() {
   const course = lessonData[courseId as keyof typeof lessonData];
 
   return (
-    <Sidebar className="w-64">
+    <Sidebar className="w-64 border-r">
       <SidebarContent>
         {course && (
           <SidebarGroup>
-            <SidebarGroupLabel className="text-base font-bold px-4 py-3 border-b">
+            <SidebarGroupLabel className="text-base font-bold px-4 py-3 bg-muted/50 border-b">
               {course.title}
             </SidebarGroupLabel>
-            <SidebarGroupContent className="pt-2">
+            <SidebarGroupContent>
               <SidebarMenu className="space-y-0">
                 {course.modules.map((module, moduleIndex) => (
                   <Collapsible
@@ -37,20 +37,23 @@ export function AppSidebar() {
                       location.pathname.includes(`/${module.slug}/${lesson.slug}`)
                     )}
                   >
-                    <SidebarMenuItem className="border-l-2 border-muted">
+                    {/* Module Header - Dark Grey Background */}
+                    <SidebarMenuItem>
                       <CollapsibleTrigger asChild>
                         <SidebarMenuButton className={cn(
-                          "w-full justify-start py-2.5 hover:bg-accent/50",
-                          "data-[state=open]:bg-muted/30"
+                          "w-full justify-start py-3 px-4 bg-muted/30 hover:bg-muted/50",
+                          "border-b border-border/50",
+                          "data-[state=open]:bg-muted/50"
                         )}>
                           <div className="flex items-center gap-2 w-full">
-                            <Code className="h-4 w-4 flex-shrink-0 text-muted-foreground" />
-                            <span className="truncate font-medium text-sm">{module.title}</span>
+                            <Code className="h-4 w-4 flex-shrink-0" />
+                            <span className="font-semibold text-sm leading-tight">{module.title}</span>
                           </div>
                         </SidebarMenuButton>
                       </CollapsibleTrigger>
                       <CollapsibleContent>
-                        <div className="space-y-0 border-l-2 border-muted ml-2">
+                        {/* Lessons - Light Grey Background */}
+                        <div className="bg-background border-b border-border/50">
                           {module.lessons.map((lesson, lessonIndex) => {
                             const lessonPath = `/course/${courseId}/${module.slug}/${lesson.slug}`;
                             const isActive = location.pathname === lessonPath;
@@ -62,16 +65,17 @@ export function AppSidebar() {
                                   asChild
                                   isActive={isActive}
                                   className={cn(
-                                    "w-full py-2 hover:bg-accent/50",
-                                    isActive && "bg-accent border-l-2 border-primary",
+                                    "w-full py-2.5 px-4 hover:bg-muted/30",
+                                    isActive && "bg-primary/10 border-l-4 border-primary font-medium",
+                                    !isActive && "border-l-4 border-transparent",
                                     isLocked && 'opacity-60'
                                   )}
                                 >
                                   <Link to={lessonPath}>
-                                    <div className="flex items-center gap-2 w-full pl-2">
-                                      <BookOpen className="h-3.5 w-3.5 flex-shrink-0 text-muted-foreground" />
-                                      <span className="truncate text-sm flex-1">{lesson.title}</span>
-                                      {isLocked && <Lock className="h-3 w-3 flex-shrink-0 text-muted-foreground" />}
+                                    <div className="flex items-center gap-2 w-full">
+                                      <BookOpen className="h-4 w-4 flex-shrink-0" />
+                                      <span className="text-sm leading-tight flex-1 overflow-hidden text-ellipsis">{lesson.title}</span>
+                                      {isLocked && <Lock className="h-3.5 w-3.5 flex-shrink-0 text-muted-foreground" />}
                                     </div>
                                   </Link>
                                 </SidebarMenuButton>
