@@ -125,7 +125,7 @@ export function CodeBlock({ title, code, language = 'python', showLanguageSelect
       </div>
       
       <CardContent className="p-0">
-        <div className="relative">
+        <div className="relative max-h-[600px] overflow-auto">
           <SyntaxHighlighter
             language={selectedLanguage}
             style={customStyle}
@@ -143,8 +143,6 @@ export function CodeBlock({ title, code, language = 'python', showLanguageSelect
               minWidth: '2.5rem',
               textAlign: 'right',
             }}
-            wrapLines
-            wrapLongLines
           >
             {code}
           </SyntaxHighlighter>
