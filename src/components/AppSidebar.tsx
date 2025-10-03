@@ -9,16 +9,150 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import { Code, BookOpen, Lock } from 'lucide-react';
-import { lessonData } from '@/data/lessonData';
+import { Code, BookOpen, Lock, Database, Brain, GitBranch, MessageSquare } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { cn } from '@/lib/utils';
+
+const courses = [
+  {
+    id: "dsa",
+    title: "DSA (Data Structures & Algorithms)",
+    icon: Database,
+    modules: [
+      {
+        title: "Arrays & Strings",
+        slug: "arrays",
+        lessons: [
+          { title: "Introduction to Arrays", slug: "intro", isPremium: false },
+          { title: "Two Pointers Technique", slug: "two-pointers", isPremium: false },
+          { title: "Sliding Window", slug: "sliding-window", isPremium: true },
+          { title: "Prefix Sum", slug: "prefix-sum", isPremium: true },
+        ]
+      },
+      {
+        title: "Linked Lists",
+        slug: "linked-lists",
+        lessons: [
+          { title: "Basics", slug: "basics", isPremium: false },
+          { title: "Fast & Slow Pointers", slug: "fast-slow", isPremium: true },
+          { title: "Reversal", slug: "reversal", isPremium: true },
+        ]
+      },
+      {
+        title: "Trees & Graphs",
+        slug: "trees",
+        lessons: [
+          { title: "Tree Fundamentals", slug: "fundamentals", isPremium: false },
+          { title: "DFS & BFS", slug: "dfs-bfs", isPremium: true },
+          { title: "Binary Search Trees", slug: "bst", isPremium: true },
+        ]
+      }
+    ]
+  },
+  {
+    id: "system-design-hld",
+    title: "System Design (HLD)",
+    icon: Brain,
+    modules: [
+      {
+        title: "Scalability Basics",
+        slug: "scalability",
+        lessons: [
+          { title: "Load Balancing", slug: "load-balancing", isPremium: false },
+          { title: "Horizontal vs Vertical Scaling", slug: "scaling", isPremium: true },
+          { title: "Auto Scaling", slug: "auto-scaling", isPremium: true },
+        ]
+      },
+      {
+        title: "Databases",
+        slug: "databases",
+        lessons: [
+          { title: "SQL vs NoSQL", slug: "sql-nosql", isPremium: false },
+          { title: "Sharding", slug: "sharding", isPremium: true },
+          { title: "Replication", slug: "replication", isPremium: true },
+        ]
+      },
+      {
+        title: "Caching",
+        slug: "caching",
+        lessons: [
+          { title: "Cache Patterns", slug: "patterns", isPremium: false },
+          { title: "CDN", slug: "cdn", isPremium: true },
+        ]
+      }
+    ]
+  },
+  {
+    id: "lld",
+    title: "LLD (Low Level Design)",
+    icon: GitBranch,
+    modules: [
+      {
+        title: "Design Patterns",
+        slug: "design-patterns",
+        lessons: [
+          { title: "Singleton Pattern", slug: "singleton", isPremium: false },
+          { title: "Factory Pattern", slug: "factory", isPremium: true },
+          { title: "Observer Pattern", slug: "observer", isPremium: true },
+        ]
+      },
+      {
+        title: "Object-Oriented Design",
+        slug: "oop",
+        lessons: [
+          { title: "SOLID Principles", slug: "solid", isPremium: false },
+          { title: "Inheritance vs Composition", slug: "inheritance", isPremium: true },
+        ]
+      },
+      {
+        title: "System Design Examples",
+        slug: "examples",
+        lessons: [
+          { title: "Parking Lot System", slug: "parking-lot", isPremium: true },
+          { title: "Elevator System", slug: "elevator", isPremium: true },
+        ]
+      }
+    ]
+  },
+  {
+    id: "behavioral",
+    title: "Behavioral Interview Prep",
+    icon: MessageSquare,
+    modules: [
+      {
+        title: "Interview Techniques",
+        slug: "techniques",
+        lessons: [
+          { title: "STAR Method", slug: "star-method", isPremium: false },
+          { title: "Storytelling", slug: "storytelling", isPremium: true },
+        ]
+      },
+      {
+        title: "Common Questions",
+        slug: "questions",
+        lessons: [
+          { title: "Leadership Examples", slug: "leadership", isPremium: false },
+          { title: "Conflict Resolution", slug: "conflict", isPremium: true },
+          { title: "Failure Stories", slug: "failure", isPremium: true },
+        ]
+      },
+      {
+        title: "Company Culture",
+        slug: "culture",
+        lessons: [
+          { title: "Culture Fit", slug: "fit", isPremium: true },
+          { title: "Values Alignment", slug: "values", isPremium: true },
+        ]
+      }
+    ]
+  }
+];
 
 export function AppSidebar() {
   const location = useLocation();
   const pathSegments = location.pathname.split('/');
   const courseId = pathSegments[2]; // /course/:courseId/...
-  const course = lessonData[courseId as keyof typeof lessonData];
+  const course = courses.find(c => c.id === courseId);
 
   return (
     <Sidebar className="w-64 border-r">
