@@ -97,24 +97,18 @@ export default function LessonPage() {
           {/* Main Content */}
           <div className="xl:col-span-3 min-w-0">
             {/* Header */}
-            <div className="mb-6">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                <Link to="/" className="hover:text-foreground">Home</Link>
-                <ChevronRight className="w-4 h-4" />
-                <span>{lesson.course}</span>
-                <ChevronRight className="w-4 h-4" />
-                <span>{lesson.title}</span>
-              </div>
+            <div className="mb-8">
+              <h1 className="text-3xl font-bold mb-3">{lesson.title}</h1>
               
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+              <div className="flex items-center justify-between flex-wrap gap-3">
+                <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1">
-                    <BookOpen className="w-4 h-4" />
-                    {lesson.course}
+                    <Clock className="w-4 h-4" />
+                    {lesson.duration} min
                   </div>
                   {lesson.isPremium && (
-                    <Badge variant="secondary">
-                      <Crown className="w-3 h-3 mr-1" />
+                    <Badge variant="secondary" className="gap-1">
+                      <Crown className="w-3 h-3" />
                       PRO
                     </Badge>
                   )}
@@ -135,27 +129,27 @@ export default function LessonPage() {
 
             {/* Content */}
             <div className="prose prose-slate max-w-none dark:prose-invert">
-              <div className="blog-content leading-relaxed space-y-4">
+              <div className="space-y-3 text-base leading-7">
                 {lesson.content.split('\n').map((line: string, index: number) => {
                   if (line.startsWith('# ')) {
-                    return <h2 key={index} className="text-2xl font-semibold text-foreground mb-4 mt-6">{line.slice(2)}</h2>;
+                    return <h2 key={index} className="text-2xl font-bold mt-8 mb-4">{line.slice(2)}</h2>;
                   }
                   if (line.startsWith('## ')) {
-                    return <h2 key={index} className="text-2xl font-semibold text-foreground mb-4 mt-6">{line.slice(3)}</h2>;
+                    return <h2 key={index} className="text-2xl font-bold mt-8 mb-4">{line.slice(3)}</h2>;
                   }
                   if (line.startsWith('### ')) {
-                    return <h3 key={index} className="text-xl font-medium text-foreground mb-3 mt-4">{line.slice(4)}</h3>;
+                    return <h3 key={index} className="text-xl font-semibold mt-6 mb-3">{line.slice(4)}</h3>;
                   }
                   if (line.startsWith('> ')) {
                     return (
-                      <blockquote key={index} className="border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-lg my-4">
-                        <p className="text-muted-foreground italic">{line.slice(2)}</p>
+                      <blockquote key={index} className="border-l-4 border-primary pl-4 py-3 bg-primary/5 rounded-r-lg my-3">
+                        <p className="text-muted-foreground italic m-0">{line.slice(2)}</p>
                       </blockquote>
                     );
                   }
                   if (line.startsWith('- ')) {
                     return (
-                      <li key={index} className="text-foreground leading-relaxed ml-4">
+                      <li key={index} className="ml-4 mb-2">
                         {line.slice(2).split('**').map((part, i) => 
                           i % 2 === 1 ? <span key={i} className="font-semibold text-primary">{part}</span> : part
                         )}
@@ -164,7 +158,7 @@ export default function LessonPage() {
                   }
                   if (line.match(/^\d+\. /)) {
                     return (
-                      <li key={index} className="text-foreground leading-relaxed ml-4">
+                      <li key={index} className="ml-4 mb-2">
                         {line.replace(/^\d+\. /, '').split('**').map((part, i) => 
                           i % 2 === 1 ? <span key={i} className="font-semibold text-primary">{part}</span> : part
                         )}
@@ -173,7 +167,7 @@ export default function LessonPage() {
                   }
                   if (line.trim() && !line.startsWith('#') && !line.startsWith('>') && !line.startsWith('-') && !line.match(/^\d+\./)) {
                     return (
-                      <p key={index} className="text-foreground leading-relaxed">
+                      <p key={index} className="mb-3">
                         {line.split('**').map((part, i) => 
                           i % 2 === 1 ? <span key={i} className="font-semibold text-primary">{part}</span> : part
                         )}

@@ -224,15 +224,15 @@ export function AppSidebar() {
                           <CollapsibleTrigger asChild>
                             <SidebarMenuButton 
                               className={cn(
-                                "w-full justify-between py-3 px-3 rounded-lg",
-                                "hover:bg-accent transition-colors",
-                                isOpen && "bg-accent",
+                                "w-full justify-between py-2.5 px-3 rounded-md",
+                                "hover:bg-accent/50 transition-colors",
+                                isOpen && "bg-accent/50",
                                 hasActiveLesson && "font-semibold"
                               )}
                             >
-                              <div className="flex items-center gap-2">
+                              <div className="flex items-center gap-2 min-w-0">
                                 <Code className="h-4 w-4 flex-shrink-0 text-primary" />
-                                <span className="text-sm font-medium">{module.title}</span>
+                                <span className="text-sm font-medium truncate">{module.title}</span>
                               </div>
                               <ChevronDown className={cn(
                                 "h-4 w-4 transition-transform flex-shrink-0",
@@ -241,7 +241,7 @@ export function AppSidebar() {
                             </SidebarMenuButton>
                           </CollapsibleTrigger>
                           <CollapsibleContent className="mt-1">
-                            <div className="ml-2 pl-4 border-l-2 border-border/50 space-y-1">
+                            <div className="space-y-0.5">
                               {module.lessons
                                 .filter(lesson => {
                                   if (!searchQuery) return true;
@@ -260,16 +260,15 @@ export function AppSidebar() {
                                         className={cn(
                                           "w-full py-2 px-3 rounded-md transition-colors",
                                           "hover:bg-accent/50",
-                                          isActive && "bg-primary/10 border-l-2 border-primary font-medium text-primary",
-                                          !isActive && "text-muted-foreground hover:text-foreground",
-                                          isLocked && 'opacity-70'
+                                          isActive && "bg-primary/10 font-medium text-primary",
+                                          !isActive && "text-muted-foreground hover:text-foreground"
                                         )}
                                       >
                                         <Link to={lessonPath}>
-                                          <div className="flex items-center gap-2 w-full">
+                                          <div className="flex items-center gap-2 w-full min-w-0">
                                             <BookOpen className="h-3.5 w-3.5 flex-shrink-0" />
-                                            <span className="text-sm flex-1 overflow-hidden text-ellipsis">{lesson.title}</span>
-                                            {isLocked && <Lock className="h-3 w-3 flex-shrink-0" />}
+                                            <span className="text-sm flex-1 truncate">{lesson.title}</span>
+                                            {isLocked && <Lock className="h-3 w-3 flex-shrink-0 text-muted-foreground" />}
                                           </div>
                                         </Link>
                                       </SidebarMenuButton>
