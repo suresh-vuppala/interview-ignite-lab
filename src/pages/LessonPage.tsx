@@ -107,20 +107,17 @@ export default function LessonPage() {
               </div>
               
               <div className="flex items-center justify-between mb-4">
-                <div>
-                  <h1 className="text-3xl font-bold mb-2">{lesson.title}</h1>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <BookOpen className="w-4 h-4" />
-                      {lesson.course}
-                    </div>
-                    {lesson.isPremium && (
-                      <Badge variant="secondary">
-                        <Crown className="w-3 h-3 mr-1" />
-                        PRO
-                      </Badge>
-                    )}
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-1">
+                    <BookOpen className="w-4 h-4" />
+                    {lesson.course}
                   </div>
+                  {lesson.isPremium && (
+                    <Badge variant="secondary">
+                      <Crown className="w-3 h-3 mr-1" />
+                      PRO
+                    </Badge>
+                  )}
                 </div>
                 
                 <div className="flex items-center gap-2">
@@ -141,7 +138,7 @@ export default function LessonPage() {
               <div className="blog-content leading-relaxed space-y-4">
                 {lesson.content.split('\n').map((line: string, index: number) => {
                   if (line.startsWith('# ')) {
-                    return <h1 key={index} className="text-3xl font-bold text-foreground mb-6 mt-8">{line.slice(2)}</h1>;
+                    return <h2 key={index} className="text-2xl font-semibold text-foreground mb-4 mt-6">{line.slice(2)}</h2>;
                   }
                   if (line.startsWith('## ')) {
                     return <h2 key={index} className="text-2xl font-semibold text-foreground mb-4 mt-6">{line.slice(3)}</h2>;

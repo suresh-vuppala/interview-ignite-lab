@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   Sidebar,
@@ -8,9 +9,12 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarHeader,
 } from '@/components/ui/sidebar';
-import { Code, BookOpen, Lock, Database, Brain, GitBranch, MessageSquare } from 'lucide-react';
+import { Code, BookOpen, Lock, Database, Brain, GitBranch, MessageSquare, Search, ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { Input } from '@/components/ui/input';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
 
 const courses = [
@@ -153,79 +157,137 @@ export function AppSidebar() {
   const pathSegments = location.pathname.split('/');
   const courseId = pathSegments[2]; // /course/:courseId/...
   const course = courses.find(c => c.id === courseId);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [openModuleIndex, setOpenModuleIndex] = useState<number | null>(null);
+
+  // Find which module is active based on current path
+  const activeModuleIndex = course?.modules.findIndex(module =>
+    location.pathname.includes(`/${module.slug}/`)
+  ) ?? null;
+
+  // Set the active module as open initially
+  useState(() => {
+    if (activeModuleIndex !== null && openModuleIndex === null) {
+      setOpenModuleIndex(activeModuleIndex);
+    }
+  });
+
+  const handleModuleToggle = (index: number) => {
+    setOpenModuleIndex(openModuleIndex === index ? null : index);
+  };
 
   return (
-    <Sidebar className="w-64 border-r">
-      <SidebarContent>
+    <Sidebar className="border-r">
+      <SidebarHeader className="border-b px-4 py-3">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Input
+            type="search"
+            placeholder="Search lessons..."
+            className="pl-9 h-9"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
+      </SidebarHeader>
+      
+      <ScrollArea className="flex-1">
+        <SidebarContent>
         {course && (
           <SidebarGroup>
-            <SidebarGroupLabel className="text-base font-bold px-4 py-3 bg-muted/50 border-b">
+            <SidebarGroupLabel className="text-base font-bold px-4 py-3 sticky top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-10 border-b">
               {course.title}
             </SidebarGroupLabel>
             <SidebarGroupContent>
-              <SidebarMenu className="space-y-0">
-                {course.modules.map((module, moduleIndex) => (
-                  <Collapsible
-                    key={moduleIndex}
-                    defaultOpen={module.lessons.some(lesson => 
+              <SidebarMenu className="space-y-1 p-2">
+                {course.modules
+                  .filter(module => {
+                    if (!searchQuery) return true;
+                    return module.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                           module.lessons.some(lesson => 
+                             lesson.title.toLowerCase().includes(searchQuery.toLowerCase())
+                           );
+                  })
+                  .map((module, moduleIndex) => {
+                    const isOpen = openModuleIndex === moduleIndex;
+                    const hasActiveLesson = module.lessons.some(lesson => 
                       location.pathname.includes(`/${module.slug}/${lesson.slug}`)
-                    )}
-                  >
-                    {/* Module Header - Dark Grey Background */}
-                    <SidebarMenuItem>
-                      <CollapsibleTrigger asChild>
-                        <SidebarMenuButton className={cn(
-                          "w-full justify-start py-3 px-4 bg-muted/30 hover:bg-muted/50",
-                          "border-b border-border/50",
-                          "data-[state=open]:bg-muted/50"
-                        )}>
-                          <div className="flex items-center gap-2 w-full">
-                            <Code className="h-4 w-4 flex-shrink-0" />
-                            <span className="font-semibold text-sm leading-tight">{module.title}</span>
-                          </div>
-                        </SidebarMenuButton>
-                      </CollapsibleTrigger>
-                      <CollapsibleContent>
-                        {/* Lessons - Light Grey Background */}
-                        <div className="bg-background border-b border-border/50">
-                          {module.lessons.map((lesson, lessonIndex) => {
-                            const lessonPath = `/course/${courseId}/${module.slug}/${lesson.slug}`;
-                            const isActive = location.pathname === lessonPath;
-                            const isLocked = lesson.isPremium;
+                    );
 
-                            return (
-                              <SidebarMenuItem key={lessonIndex}>
-                                <SidebarMenuButton
-                                  asChild
-                                  isActive={isActive}
-                                  className={cn(
-                                    "w-full py-2.5 px-4 hover:bg-muted/30",
-                                    isActive && "bg-primary/10 border-l-4 border-primary font-medium",
-                                    !isActive && "border-l-4 border-transparent",
-                                    isLocked && 'opacity-60'
-                                  )}
-                                >
-                                  <Link to={lessonPath}>
-                                    <div className="flex items-center gap-2 w-full">
-                                      <BookOpen className="h-4 w-4 flex-shrink-0" />
-                                      <span className="text-sm leading-tight flex-1 overflow-hidden text-ellipsis">{lesson.title}</span>
-                                      {isLocked && <Lock className="h-3.5 w-3.5 flex-shrink-0 text-muted-foreground" />}
-                                    </div>
-                                  </Link>
-                                </SidebarMenuButton>
-                              </SidebarMenuItem>
-                            );
-                          })}
-                        </div>
-                      </CollapsibleContent>
-                    </SidebarMenuItem>
-                  </Collapsible>
-                ))}
+                    return (
+                      <Collapsible
+                        key={moduleIndex}
+                        open={isOpen}
+                        onOpenChange={() => handleModuleToggle(moduleIndex)}
+                      >
+                        <SidebarMenuItem>
+                          <CollapsibleTrigger asChild>
+                            <SidebarMenuButton 
+                              className={cn(
+                                "w-full justify-between py-3 px-3 rounded-lg",
+                                "hover:bg-accent transition-colors",
+                                isOpen && "bg-accent",
+                                hasActiveLesson && "font-semibold"
+                              )}
+                            >
+                              <div className="flex items-center gap-2">
+                                <Code className="h-4 w-4 flex-shrink-0 text-primary" />
+                                <span className="text-sm font-medium">{module.title}</span>
+                              </div>
+                              <ChevronDown className={cn(
+                                "h-4 w-4 transition-transform flex-shrink-0",
+                                isOpen && "transform rotate-180"
+                              )} />
+                            </SidebarMenuButton>
+                          </CollapsibleTrigger>
+                          <CollapsibleContent className="mt-1">
+                            <div className="ml-2 pl-4 border-l-2 border-border/50 space-y-1">
+                              {module.lessons
+                                .filter(lesson => {
+                                  if (!searchQuery) return true;
+                                  return lesson.title.toLowerCase().includes(searchQuery.toLowerCase());
+                                })
+                                .map((lesson, lessonIndex) => {
+                                  const lessonPath = `/course/${courseId}/${module.slug}/${lesson.slug}`;
+                                  const isActive = location.pathname === lessonPath;
+                                  const isLocked = lesson.isPremium;
+
+                                  return (
+                                    <SidebarMenuItem key={lessonIndex}>
+                                      <SidebarMenuButton
+                                        asChild
+                                        isActive={isActive}
+                                        className={cn(
+                                          "w-full py-2 px-3 rounded-md transition-colors",
+                                          "hover:bg-accent/50",
+                                          isActive && "bg-primary/10 border-l-2 border-primary font-medium text-primary",
+                                          !isActive && "text-muted-foreground hover:text-foreground",
+                                          isLocked && 'opacity-70'
+                                        )}
+                                      >
+                                        <Link to={lessonPath}>
+                                          <div className="flex items-center gap-2 w-full">
+                                            <BookOpen className="h-3.5 w-3.5 flex-shrink-0" />
+                                            <span className="text-sm flex-1 overflow-hidden text-ellipsis">{lesson.title}</span>
+                                            {isLocked && <Lock className="h-3 w-3 flex-shrink-0" />}
+                                          </div>
+                                        </Link>
+                                      </SidebarMenuButton>
+                                    </SidebarMenuItem>
+                                  );
+                                })}
+                            </div>
+                          </CollapsibleContent>
+                        </SidebarMenuItem>
+                      </Collapsible>
+                    );
+                  })}
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
         )}
       </SidebarContent>
+      </ScrollArea>
     </Sidebar>
   );
 }
