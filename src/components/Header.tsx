@@ -55,7 +55,7 @@ export function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <BookOpen className="h-6 w-6 text-primary" />
-          <span className="font-bold text-xl">Interview60</span>
+          <span className="font-bold text-xl">InterviewEazy</span>
         </Link>
 
         {/* Desktop Navigation */}

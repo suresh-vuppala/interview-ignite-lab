@@ -5,13 +5,13 @@ export const dsaArraysIntro = {
   duration: 25,
   isPremium: false,
   content: `
-# Introduction to Arrays & Strings
+Arrays and strings are the fundamental building blocks of programming. Mastering these data structures is crucial for succeeding in technical interviews at top tech companies like Google, Facebook, Amazon, and Microsoft.
 
-Arrays and strings are the **fundamental building blocks** of programming. Mastering these data structures is crucial for succeeding in technical interviews at top tech companies like **Google**, **Facebook**, **Amazon**, and **Microsoft**.
+![Array Data Structure Visualization](https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=400&fit=crop)
 
 ## Why Arrays & Strings Matter
 
-Arrays and strings appear in approximately **60% of all coding interview questions**. They serve as the foundation for more complex data structures and algorithms.
+Arrays and strings appear in approximately 60% of all coding interview questions. They serve as the foundation for more complex data structures and algorithms.
 
 ### Key Characteristics
 

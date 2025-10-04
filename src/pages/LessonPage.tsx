@@ -129,45 +129,77 @@ export default function LessonPage() {
             </div>
 
             {/* Content */}
-            <div className="prose prose-slate max-w-none dark:prose-invert">
-              <div className="space-y-4 leading-relaxed">
+            <div className="max-w-none">
+              <div className="space-y-3 leading-relaxed">
                 {lesson.content.split('\n').map((line: string, index: number) => {
                   if (line.startsWith('## ')) {
-                    return <h2 key={index} className="text-2xl font-bold mt-8 mb-4 text-foreground">{line.slice(3)}</h2>;
+                    return <h2 key={index} className="text-2xl font-bold mt-6 mb-3 text-foreground">{line.slice(3)}</h2>;
                   }
                   if (line.startsWith('### ')) {
-                    return <h3 key={index} className="text-xl font-semibold mt-6 mb-3 text-foreground">{line.slice(4)}</h3>;
+                    return <h3 key={index} className="text-xl font-semibold mt-5 mb-2 text-foreground">{line.slice(4)}</h3>;
                   }
                   if (line.startsWith('> ')) {
                     return (
-                      <blockquote key={index} className="border-l-4 border-primary pl-4 py-3 bg-primary/5 rounded-r-lg my-3">
-                        <p className="text-muted-foreground italic m-0">{line.slice(2)}</p>
+                      <blockquote key={index} className="border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-lg my-3">
+                        <p className="text-muted-foreground italic m-0 leading-relaxed">{line.slice(2)}</p>
                       </blockquote>
                     );
                   }
                   if (line.startsWith('- ')) {
                     return (
-                      <li key={index} className="ml-4 mb-1.5 text-foreground">
+                      <li key={index} className="ml-4 mb-2 text-foreground leading-relaxed">
                         {line.slice(2).split('**').map((part, i) => 
-                          i % 2 === 1 ? <strong key={i} className="font-bold text-primary">{part}</strong> : part
+                          i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part
+                        ).map((part, i) => 
+                          typeof part === 'string' && part.includes('`') 
+                            ? part.split('`').map((code, j) => 
+                                j % 2 === 1 ? <code key={j} className="font-mono text-primary bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
+                              )
+                            : part
                         )}
                       </li>
                     );
                   }
                   if (line.match(/^\d+\. /)) {
                     return (
-                      <li key={index} className="ml-4 mb-1.5 text-foreground">
+                      <li key={index} className="ml-4 mb-2 text-foreground leading-relaxed">
                         {line.replace(/^\d+\. /, '').split('**').map((part, i) => 
-                          i % 2 === 1 ? <strong key={i} className="font-bold text-primary">{part}</strong> : part
+                          i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part
+                        ).map((part, i) => 
+                          typeof part === 'string' && part.includes('`') 
+                            ? part.split('`').map((code, j) => 
+                                j % 2 === 1 ? <code key={j} className="font-mono text-primary bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
+                              )
+                            : part
                         )}
                       </li>
                     );
                   }
-                  if (line.trim() && !line.startsWith('#') && !line.startsWith('>') && !line.startsWith('-') && !line.match(/^\d+\./)) {
+                  if (line.startsWith('![') && line.includes('](')) {
+                    const altMatch = line.match(/!\[(.*?)\]/);
+                    const urlMatch = line.match(/\((.*?)\)/);
+                    if (altMatch && urlMatch) {
+                      return (
+                        <img 
+                          key={index} 
+                          src={urlMatch[1]} 
+                          alt={altMatch[1]} 
+                          className="rounded-lg my-4 max-w-full h-auto"
+                        />
+                      );
+                    }
+                  }
+                  if (line.trim() && !line.startsWith('#') && !line.startsWith('>') && !line.startsWith('-') && !line.match(/^\d+\./) && !line.startsWith('![')) {
                     return (
-                      <p key={index} className="mb-3 text-foreground">
+                      <p key={index} className="mb-3 text-foreground leading-relaxed">
                         {line.split('**').map((part, i) => 
-                          i % 2 === 1 ? <strong key={i} className="font-bold text-primary">{part}</strong> : part
+                          i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part
+                        ).map((part, i) => 
+                          typeof part === 'string' && part.includes('`') 
+                            ? part.split('`').map((code, j) => 
+                                j % 2 === 1 ? <code key={j} className="font-mono text-primary bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
+                              )
+                            : part
                         )}
                       </p>
                     );
