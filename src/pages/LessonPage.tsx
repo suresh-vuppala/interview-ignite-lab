@@ -20,6 +20,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { Card, CardContent } from '@/components/ui/card';
 import { CodeBlock } from '@/components/CodeBlock';
 import { lessonData } from '@/data/lessonData';
+import { ScrollToTop } from '@/components/ScrollToTop';
 
 export default function LessonPage() {
   const { courseSlug, categorySlug, lessonSlug } = useParams();
@@ -129,16 +130,13 @@ export default function LessonPage() {
 
             {/* Content */}
             <div className="prose prose-slate max-w-none dark:prose-invert">
-              <div className="space-y-3 text-base leading-7">
+              <div className="space-y-4 leading-relaxed">
                 {lesson.content.split('\n').map((line: string, index: number) => {
-                  if (line.startsWith('# ')) {
-                    return <h2 key={index} className="text-2xl font-bold mt-8 mb-4">{line.slice(2)}</h2>;
-                  }
                   if (line.startsWith('## ')) {
-                    return <h2 key={index} className="text-2xl font-bold mt-8 mb-4">{line.slice(3)}</h2>;
+                    return <h2 key={index} className="text-2xl font-bold mt-8 mb-4 text-foreground">{line.slice(3)}</h2>;
                   }
                   if (line.startsWith('### ')) {
-                    return <h3 key={index} className="text-xl font-semibold mt-6 mb-3">{line.slice(4)}</h3>;
+                    return <h3 key={index} className="text-xl font-semibold mt-6 mb-3 text-foreground">{line.slice(4)}</h3>;
                   }
                   if (line.startsWith('> ')) {
                     return (
@@ -149,27 +147,27 @@ export default function LessonPage() {
                   }
                   if (line.startsWith('- ')) {
                     return (
-                      <li key={index} className="ml-4 mb-2">
+                      <li key={index} className="ml-4 mb-1.5 text-foreground">
                         {line.slice(2).split('**').map((part, i) => 
-                          i % 2 === 1 ? <span key={i} className="font-semibold text-primary">{part}</span> : part
+                          i % 2 === 1 ? <strong key={i} className="font-bold text-primary">{part}</strong> : part
                         )}
                       </li>
                     );
                   }
                   if (line.match(/^\d+\. /)) {
                     return (
-                      <li key={index} className="ml-4 mb-2">
+                      <li key={index} className="ml-4 mb-1.5 text-foreground">
                         {line.replace(/^\d+\. /, '').split('**').map((part, i) => 
-                          i % 2 === 1 ? <span key={i} className="font-semibold text-primary">{part}</span> : part
+                          i % 2 === 1 ? <strong key={i} className="font-bold text-primary">{part}</strong> : part
                         )}
                       </li>
                     );
                   }
                   if (line.trim() && !line.startsWith('#') && !line.startsWith('>') && !line.startsWith('-') && !line.match(/^\d+\./)) {
                     return (
-                      <p key={index} className="mb-3">
+                      <p key={index} className="mb-3 text-foreground">
                         {line.split('**').map((part, i) => 
-                          i % 2 === 1 ? <span key={i} className="font-semibold text-primary">{part}</span> : part
+                          i % 2 === 1 ? <strong key={i} className="font-bold text-primary">{part}</strong> : part
                         )}
                       </p>
                     );
@@ -261,6 +259,7 @@ export default function LessonPage() {
           </div>
         </div>
       </div>
+      <ScrollToTop />
     </Layout>
   );
 }

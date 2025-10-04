@@ -26,9 +26,11 @@ const courses = [
       {
         title: "Arrays & Strings",
         slug: "arrays",
-        lessons: [
+        items: [
+          { title: "Introduction", isHeader: true },
           { title: "Introduction to Arrays", slug: "intro", isPremium: false },
           { title: "Two Pointers Technique", slug: "two-pointers", isPremium: false },
+          { title: "Additional Problems", isHeader: true },
           { title: "Sliding Window", slug: "sliding-window", isPremium: true },
           { title: "Prefix Sum", slug: "prefix-sum", isPremium: true },
         ]
@@ -36,8 +38,10 @@ const courses = [
       {
         title: "Linked Lists",
         slug: "linked-lists",
-        lessons: [
+        items: [
+          { title: "Introduction", isHeader: true },
           { title: "Basics", slug: "basics", isPremium: false },
+          { title: "Advanced Topics", isHeader: true },
           { title: "Fast & Slow Pointers", slug: "fast-slow", isPremium: true },
           { title: "Reversal", slug: "reversal", isPremium: true },
         ]
@@ -45,8 +49,10 @@ const courses = [
       {
         title: "Trees & Graphs",
         slug: "trees",
-        lessons: [
+        items: [
+          { title: "Fundamentals", isHeader: true },
           { title: "Tree Fundamentals", slug: "fundamentals", isPremium: false },
+          { title: "Advanced", isHeader: true },
           { title: "DFS & BFS", slug: "dfs-bfs", isPremium: true },
           { title: "Binary Search Trees", slug: "bst", isPremium: true },
         ]
@@ -61,7 +67,8 @@ const courses = [
       {
         title: "Scalability Basics",
         slug: "scalability",
-        lessons: [
+        items: [
+          { title: "Core Concepts", isHeader: true },
           { title: "Load Balancing", slug: "load-balancing", isPremium: false },
           { title: "Horizontal vs Vertical Scaling", slug: "scaling", isPremium: true },
           { title: "Auto Scaling", slug: "auto-scaling", isPremium: true },
@@ -70,8 +77,10 @@ const courses = [
       {
         title: "Databases",
         slug: "databases",
-        lessons: [
+        items: [
+          { title: "Basics", isHeader: true },
           { title: "SQL vs NoSQL", slug: "sql-nosql", isPremium: false },
+          { title: "Advanced", isHeader: true },
           { title: "Sharding", slug: "sharding", isPremium: true },
           { title: "Replication", slug: "replication", isPremium: true },
         ]
@@ -79,7 +88,7 @@ const courses = [
       {
         title: "Caching",
         slug: "caching",
-        lessons: [
+        items: [
           { title: "Cache Patterns", slug: "patterns", isPremium: false },
           { title: "CDN", slug: "cdn", isPremium: true },
         ]
@@ -94,7 +103,7 @@ const courses = [
       {
         title: "Design Patterns",
         slug: "design-patterns",
-        lessons: [
+        items: [
           { title: "Singleton Pattern", slug: "singleton", isPremium: false },
           { title: "Factory Pattern", slug: "factory", isPremium: true },
           { title: "Observer Pattern", slug: "observer", isPremium: true },
@@ -103,7 +112,7 @@ const courses = [
       {
         title: "Object-Oriented Design",
         slug: "oop",
-        lessons: [
+        items: [
           { title: "SOLID Principles", slug: "solid", isPremium: false },
           { title: "Inheritance vs Composition", slug: "inheritance", isPremium: true },
         ]
@@ -111,7 +120,7 @@ const courses = [
       {
         title: "System Design Examples",
         slug: "examples",
-        lessons: [
+        items: [
           { title: "Parking Lot System", slug: "parking-lot", isPremium: true },
           { title: "Elevator System", slug: "elevator", isPremium: true },
         ]
@@ -126,7 +135,7 @@ const courses = [
       {
         title: "Interview Techniques",
         slug: "techniques",
-        lessons: [
+        items: [
           { title: "STAR Method", slug: "star-method", isPremium: false },
           { title: "Storytelling", slug: "storytelling", isPremium: true },
         ]
@@ -134,7 +143,7 @@ const courses = [
       {
         title: "Common Questions",
         slug: "questions",
-        lessons: [
+        items: [
           { title: "Leadership Examples", slug: "leadership", isPremium: false },
           { title: "Conflict Resolution", slug: "conflict", isPremium: true },
           { title: "Failure Stories", slug: "failure", isPremium: true },
@@ -143,7 +152,7 @@ const courses = [
       {
         title: "Company Culture",
         slug: "culture",
-        lessons: [
+        items: [
           { title: "Culture Fit", slug: "fit", isPremium: true },
           { title: "Values Alignment", slug: "values", isPremium: true },
         ]
@@ -162,7 +171,9 @@ export function AppSidebar() {
 
   // Find which module is active based on current path
   const activeModuleIndex = course?.modules.findIndex(module =>
-    location.pathname.includes(`/${module.slug}/`)
+    module.items.some((item: any) => 
+      !item.isHeader && location.pathname.includes(`/${module.slug}/${item.slug}`)
+    )
   ) ?? null;
 
   // Set the active module as open initially
@@ -204,14 +215,14 @@ export function AppSidebar() {
                   .filter(module => {
                     if (!searchQuery) return true;
                     return module.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           module.lessons.some(lesson => 
-                             lesson.title.toLowerCase().includes(searchQuery.toLowerCase())
+                           module.items.some((item: any) => 
+                             item.title.toLowerCase().includes(searchQuery.toLowerCase())
                            );
                   })
                   .map((module, moduleIndex) => {
                     const isOpen = openModuleIndex === moduleIndex;
-                    const hasActiveLesson = module.lessons.some(lesson => 
-                      location.pathname.includes(`/${module.slug}/${lesson.slug}`)
+                    const hasActiveLesson = module.items.some((item: any) => 
+                      !item.isHeader && location.pathname.includes(`/${module.slug}/${item.slug}`)
                     );
 
                     return (
@@ -242,18 +253,29 @@ export function AppSidebar() {
                           </CollapsibleTrigger>
                           <CollapsibleContent className="mt-1">
                             <div className="space-y-0.5">
-                              {module.lessons
-                                .filter(lesson => {
+                              {module.items
+                                .filter(item => {
                                   if (!searchQuery) return true;
-                                  return lesson.title.toLowerCase().includes(searchQuery.toLowerCase());
+                                  return item.title.toLowerCase().includes(searchQuery.toLowerCase());
                                 })
-                                .map((lesson, lessonIndex) => {
-                                  const lessonPath = `/course/${courseId}/${module.slug}/${lesson.slug}`;
+                                .map((item, itemIndex) => {
+                                  if (item.isHeader) {
+                                    return (
+                                      <div
+                                        key={itemIndex}
+                                        className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider"
+                                      >
+                                        {item.title}
+                                      </div>
+                                    );
+                                  }
+
+                                  const lessonPath = `/course/${courseId}/${module.slug}/${item.slug}`;
                                   const isActive = location.pathname === lessonPath;
-                                  const isLocked = lesson.isPremium;
+                                  const isLocked = item.isPremium;
 
                                   return (
-                                    <SidebarMenuItem key={lessonIndex}>
+                                    <SidebarMenuItem key={itemIndex}>
                                       <SidebarMenuButton
                                         asChild
                                         isActive={isActive}
@@ -267,7 +289,7 @@ export function AppSidebar() {
                                         <Link to={lessonPath}>
                                           <div className="flex items-center gap-2 w-full min-w-0">
                                             <BookOpen className="h-3.5 w-3.5 flex-shrink-0" />
-                                            <span className="text-sm flex-1 truncate">{lesson.title}</span>
+                                            <span className="text-sm flex-1 truncate">{item.title}</span>
                                             {isLocked && <Lock className="h-3 w-3 flex-shrink-0 text-muted-foreground" />}
                                           </div>
                                         </Link>
