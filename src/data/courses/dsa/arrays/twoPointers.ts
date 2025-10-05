@@ -1,3 +1,3 @@
-import twoPointersData from '../../json/dsa/arrays/twoPointers.json';
+import twoPointersData from './twoPointers.data';
 
 export const dsaArraysTwoPointers = twoPointersData;

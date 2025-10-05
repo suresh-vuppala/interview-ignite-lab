@@ -1,3 +1,3 @@
-import introData from '../../json/dsa/arrays/intro.json';
+import introData from './intro.data';
 
 export const dsaArraysIntro = introData;
