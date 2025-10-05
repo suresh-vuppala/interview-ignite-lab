@@ -1,0 +1,31 @@
+{
+  "id": "behavioral",
+  "title": "Behavioral Interview Prep",
+  "modules": [
+    {
+      "title": "Interview Techniques",
+      "slug": "techniques",
+      "items": [
+        { "title": "STAR Method", "slug": "star-method", "isPremium": false },
+        { "title": "Storytelling", "slug": "storytelling", "isPremium": true }
+      ]
+    },
+    {
+      "title": "Common Questions",
+      "slug": "questions",
+      "items": [
+        { "title": "Leadership Examples", "slug": "leadership", "isPremium": false },
+        { "title": "Conflict Resolution", "slug": "conflict", "isPremium": true },
+        { "title": "Failure Stories", "slug": "failure", "isPremium": true }
+      ]
+    },
+    {
+      "title": "Company Culture",
+      "slug": "culture",
+      "items": [
+        { "title": "Culture Fit", "slug": "fit", "isPremium": true },
+        { "title": "Values Alignment", "slug": "values", "isPremium": true }
+      ]
+    }
+  ]
+}

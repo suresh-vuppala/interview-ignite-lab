@@ -1,0 +1,35 @@
+{
+  "id": "system-design-hld",
+  "title": "System Design (HLD)",
+  "modules": [
+    {
+      "title": "Scalability Basics",
+      "slug": "scalability",
+      "items": [
+        { "title": "Core Concepts", "isHeader": true },
+        { "title": "Load Balancing", "slug": "load-balancing", "isPremium": false },
+        { "title": "Horizontal vs Vertical Scaling", "slug": "scaling", "isPremium": true },
+        { "title": "Auto Scaling", "slug": "auto-scaling", "isPremium": true }
+      ]
+    },
+    {
+      "title": "Databases",
+      "slug": "databases",
+      "items": [
+        { "title": "Basics", "isHeader": true },
+        { "title": "SQL vs NoSQL", "slug": "sql-nosql", "isPremium": false },
+        { "title": "Advanced", "isHeader": true },
+        { "title": "Sharding", "slug": "sharding", "isPremium": true },
+        { "title": "Replication", "slug": "replication", "isPremium": true }
+      ]
+    },
+    {
+      "title": "Caching",
+      "slug": "caching",
+      "items": [
+        { "title": "Cache Patterns", "slug": "patterns", "isPremium": false },
+        { "title": "CDN", "slug": "cdn", "isPremium": true }
+      ]
+    }
+  ]
+}

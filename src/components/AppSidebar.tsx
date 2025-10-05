@@ -16,148 +16,27 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/component
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
+import dsaCourseData from '@/data/courses/dsaCourse.json';
+import systemDesignCourseData from '@/data/courses/systemDesignCourse.json';
+import lldCourseData from '@/data/courses/lldCourse.json';
+import behavioralCourseData from '@/data/courses/behavioralCourse.json';
 
-const courses = [
+const courses: any[] = [
   {
-    id: "dsa",
-    title: "DSA (Data Structures & Algorithms)",
+    ...dsaCourseData,
     icon: Database,
-    modules: [
-      {
-        title: "Arrays & Strings",
-        slug: "arrays",
-        items: [
-          { title: "Introduction", isHeader: true },
-          { title: "Introduction to Arrays", slug: "intro", isPremium: false },
-          { title: "Two Pointers Technique", slug: "two-pointers", isPremium: false },
-          { title: "Additional Problems", isHeader: true },
-          { title: "Sliding Window", slug: "sliding-window", isPremium: true },
-          { title: "Prefix Sum", slug: "prefix-sum", isPremium: true },
-        ]
-      },
-      {
-        title: "Linked Lists",
-        slug: "linked-lists",
-        items: [
-          { title: "Introduction", isHeader: true },
-          { title: "Basics", slug: "basics", isPremium: false },
-          { title: "Advanced Topics", isHeader: true },
-          { title: "Fast & Slow Pointers", slug: "fast-slow", isPremium: true },
-          { title: "Reversal", slug: "reversal", isPremium: true },
-        ]
-      },
-      {
-        title: "Trees & Graphs",
-        slug: "trees",
-        items: [
-          { title: "Fundamentals", isHeader: true },
-          { title: "Tree Fundamentals", slug: "fundamentals", isPremium: false },
-          { title: "Advanced", isHeader: true },
-          { title: "DFS & BFS", slug: "dfs-bfs", isPremium: true },
-          { title: "Binary Search Trees", slug: "bst", isPremium: true },
-        ]
-      }
-    ]
   },
   {
-    id: "system-design-hld",
-    title: "System Design (HLD)",
+    ...systemDesignCourseData,
     icon: Brain,
-    modules: [
-      {
-        title: "Scalability Basics",
-        slug: "scalability",
-        items: [
-          { title: "Core Concepts", isHeader: true },
-          { title: "Load Balancing", slug: "load-balancing", isPremium: false },
-          { title: "Horizontal vs Vertical Scaling", slug: "scaling", isPremium: true },
-          { title: "Auto Scaling", slug: "auto-scaling", isPremium: true },
-        ]
-      },
-      {
-        title: "Databases",
-        slug: "databases",
-        items: [
-          { title: "Basics", isHeader: true },
-          { title: "SQL vs NoSQL", slug: "sql-nosql", isPremium: false },
-          { title: "Advanced", isHeader: true },
-          { title: "Sharding", slug: "sharding", isPremium: true },
-          { title: "Replication", slug: "replication", isPremium: true },
-        ]
-      },
-      {
-        title: "Caching",
-        slug: "caching",
-        items: [
-          { title: "Cache Patterns", slug: "patterns", isPremium: false },
-          { title: "CDN", slug: "cdn", isPremium: true },
-        ]
-      }
-    ]
   },
   {
-    id: "lld",
-    title: "LLD (Low Level Design)",
+    ...lldCourseData,
     icon: GitBranch,
-    modules: [
-      {
-        title: "Design Patterns",
-        slug: "design-patterns",
-        items: [
-          { title: "Singleton Pattern", slug: "singleton", isPremium: false },
-          { title: "Factory Pattern", slug: "factory", isPremium: true },
-          { title: "Observer Pattern", slug: "observer", isPremium: true },
-        ]
-      },
-      {
-        title: "Object-Oriented Design",
-        slug: "oop",
-        items: [
-          { title: "SOLID Principles", slug: "solid", isPremium: false },
-          { title: "Inheritance vs Composition", slug: "inheritance", isPremium: true },
-        ]
-      },
-      {
-        title: "System Design Examples",
-        slug: "examples",
-        items: [
-          { title: "Parking Lot System", slug: "parking-lot", isPremium: true },
-          { title: "Elevator System", slug: "elevator", isPremium: true },
-        ]
-      }
-    ]
   },
   {
-    id: "behavioral",
-    title: "Behavioral Interview Prep",
+    ...behavioralCourseData,
     icon: MessageSquare,
-    modules: [
-      {
-        title: "Interview Techniques",
-        slug: "techniques",
-        items: [
-          { title: "STAR Method", slug: "star-method", isPremium: false },
-          { title: "Storytelling", slug: "storytelling", isPremium: true },
-        ]
-      },
-      {
-        title: "Common Questions",
-        slug: "questions",
-        items: [
-          { title: "Leadership Examples", slug: "leadership", isPremium: false },
-          { title: "Conflict Resolution", slug: "conflict", isPremium: true },
-          { title: "Failure Stories", slug: "failure", isPremium: true },
-        ]
-      },
-      {
-        title: "Company Culture",
-        slug: "culture",
-        items: [
-          { title: "Culture Fit", slug: "fit", isPremium: true },
-          { title: "Values Alignment", slug: "values", isPremium: true },
-        ]
-      }
-    ]
   }
 ];
 

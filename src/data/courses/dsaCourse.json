@@ -1,0 +1,40 @@
+{
+  "id": "dsa",
+  "title": "DSA (Data Structures & Algorithms)",
+  "modules": [
+    {
+      "title": "Arrays & Strings",
+      "slug": "arrays",
+      "items": [
+        { "title": "Introduction", "isHeader": true },
+        { "title": "Introduction to Arrays", "slug": "intro", "isPremium": false },
+        { "title": "Two Pointers Technique", "slug": "two-pointers", "isPremium": false },
+        { "title": "Additional Problems", "isHeader": true },
+        { "title": "Sliding Window", "slug": "sliding-window", "isPremium": true },
+        { "title": "Prefix Sum", "slug": "prefix-sum", "isPremium": true }
+      ]
+    },
+    {
+      "title": "Linked Lists",
+      "slug": "linked-lists",
+      "items": [
+        { "title": "Introduction", "isHeader": true },
+        { "title": "Basics", "slug": "basics", "isPremium": false },
+        { "title": "Advanced Topics", "isHeader": true },
+        { "title": "Fast & Slow Pointers", "slug": "fast-slow", "isPremium": true },
+        { "title": "Reversal", "slug": "reversal", "isPremium": true }
+      ]
+    },
+    {
+      "title": "Trees & Graphs",
+      "slug": "trees",
+      "items": [
+        { "title": "Fundamentals", "isHeader": true },
+        { "title": "Tree Fundamentals", "slug": "fundamentals", "isPremium": false },
+        { "title": "Advanced", "isHeader": true },
+        { "title": "DFS & BFS", "slug": "dfs-bfs", "isPremium": true },
+        { "title": "Binary Search Trees", "slug": "bst", "isPremium": true }
+      ]
+    }
+  ]
+}
