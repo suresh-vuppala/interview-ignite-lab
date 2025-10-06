@@ -21,18 +21,72 @@ import { Card, CardContent } from '@/components/ui/card';
 import { CodeBlock } from '@/components/CodeBlock';
 import { lessonData } from '@/data/lessonData';
 import { ScrollToTop } from '@/components/ScrollToTop';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
+import dsaCourseData from '@/data/courses/dsaCourse.json';
+import systemDesignCourseData from '@/data/courses/systemDesignCourse.json';
+import lldCourseData from '@/data/courses/lldCourse.json';
+import behavioralCourseData from '@/data/courses/behavioralCourse.json';
+
+const courseMap: Record<string, any> = {
+  'dsa': dsaCourseData,
+  'system-design': systemDesignCourseData,
+  'lld': lldCourseData,
+  'behavioral': behavioralCourseData,
+};
 
 export default function LessonPage() {
   const { courseSlug, categorySlug, lessonSlug } = useParams();
   const { user } = useAuth();
   const [lesson, setLesson] = useState<any>(null);
   const [progress, setProgress] = useState(0);
+  const [prevLesson, setPrevLesson] = useState<{ path: string; title: string } | null>(null);
+  const [nextLesson, setNextLesson] = useState<{ path: string; title: string } | null>(null);
 
   useEffect(() => {
     // Simulate loading lesson data
     const lessonKey = categorySlug ? `${courseSlug}-${categorySlug}-${lessonSlug}` : `${courseSlug}-${lessonSlug}`;
     const lessonData = getLessonData(lessonKey);
     setLesson(lessonData);
+    
+    // Calculate prev/next lessons
+    if (courseSlug && categorySlug && lessonSlug) {
+      const courseData = courseMap[courseSlug];
+      if (courseData) {
+        const module = courseData.modules.find((m: any) => m.slug === categorySlug);
+        if (module) {
+          const currentIndex = module.items.findIndex((item: any) => !item.isHeader && item.slug === lessonSlug);
+          const lessons = module.items.filter((item: any) => !item.isHeader);
+          const currentLessonIndex = lessons.findIndex((item: any) => item.slug === lessonSlug);
+          
+          if (currentLessonIndex > 0) {
+            const prev = lessons[currentLessonIndex - 1];
+            setPrevLesson({
+              path: `/course/${courseSlug}/${categorySlug}/${prev.slug}`,
+              title: prev.title
+            });
+          } else {
+            setPrevLesson(null);
+          }
+          
+          if (currentLessonIndex < lessons.length - 1) {
+            const next = lessons[currentLessonIndex + 1];
+            setNextLesson({
+              path: `/course/${courseSlug}/${categorySlug}/${next.slug}`,
+              title: next.title
+            });
+          } else {
+            setNextLesson(null);
+          }
+        }
+      }
+    }
     
     // Simulate progress
     const timer = setTimeout(() => setProgress(75), 1000);
@@ -99,14 +153,49 @@ export default function LessonPage() {
           <div className="xl:col-span-3 min-w-0">
             {/* Header */}
             <div className="mb-8">
+              {/* Breadcrumb Navigation */}
+              <Breadcrumb className="mb-4">
+                <BreadcrumbList>
+                  <BreadcrumbItem>
+                    <BreadcrumbLink asChild>
+                      <Link to="/">Home</Link>
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator />
+                  {courseSlug && (
+                    <>
+                      <BreadcrumbItem>
+                        <BreadcrumbLink asChild>
+                          <Link to={`/course/${courseSlug}`}>
+                            {courseMap[courseSlug]?.title || courseSlug}
+                          </Link>
+                        </BreadcrumbLink>
+                      </BreadcrumbItem>
+                      <BreadcrumbSeparator />
+                    </>
+                  )}
+                  {categorySlug && courseSlug && (
+                    <>
+                      <BreadcrumbItem>
+                        <BreadcrumbLink asChild>
+                          <Link to={`/course/${courseSlug}`}>
+                            {courseMap[courseSlug]?.modules.find((m: any) => m.slug === categorySlug)?.title || categorySlug}
+                          </Link>
+                        </BreadcrumbLink>
+                      </BreadcrumbItem>
+                      <BreadcrumbSeparator />
+                    </>
+                  )}
+                  <BreadcrumbItem>
+                    <BreadcrumbPage>{lesson.title}</BreadcrumbPage>
+                  </BreadcrumbItem>
+                </BreadcrumbList>
+              </Breadcrumb>
+
               <h1 className="text-3xl font-bold mb-3">{lesson.title}</h1>
               
               <div className="flex items-center justify-between flex-wrap gap-3">
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    {lesson.duration} min
-                  </div>
                   {lesson.isPremium && (
                     <Badge variant="secondary" className="gap-1">
                       <Crown className="w-3 h-3" />
@@ -116,14 +205,32 @@ export default function LessonPage() {
                 </div>
                 
                 <div className="flex items-center gap-2">
-                  <Button variant="outline" size="sm">
-                    <ChevronLeft className="w-4 h-4 mr-1" />
-                    Previous
-                  </Button>
-                  <Button size="sm">
-                    Next
-                    <ChevronRight className="w-4 h-4 ml-1" />
-                  </Button>
+                  {prevLesson ? (
+                    <Button variant="outline" size="sm" asChild>
+                      <Link to={prevLesson.path}>
+                        <ChevronLeft className="w-4 h-4 mr-1" />
+                        Previous
+                      </Link>
+                    </Button>
+                  ) : (
+                    <Button variant="outline" size="sm" disabled>
+                      <ChevronLeft className="w-4 h-4 mr-1" />
+                      Previous
+                    </Button>
+                  )}
+                  {nextLesson ? (
+                    <Button size="sm" asChild>
+                      <Link to={nextLesson.path}>
+                        Next
+                        <ChevronRight className="w-4 h-4 ml-1" />
+                      </Link>
+                    </Button>
+                  ) : (
+                    <Button size="sm" disabled>
+                      Next
+                      <ChevronRight className="w-4 h-4 ml-1" />
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
@@ -153,7 +260,7 @@ export default function LessonPage() {
                         ).map((part, i) => 
                           typeof part === 'string' && part.includes('`') 
                             ? part.split('`').map((code, j) => 
-                                j % 2 === 1 ? <code key={j} className="font-mono text-primary bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
+                                j % 2 === 1 ? <code key={j} className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
                               )
                             : part
                         )}
@@ -168,7 +275,7 @@ export default function LessonPage() {
                         ).map((part, i) => 
                           typeof part === 'string' && part.includes('`') 
                             ? part.split('`').map((code, j) => 
-                                j % 2 === 1 ? <code key={j} className="font-mono text-primary bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
+                                j % 2 === 1 ? <code key={j} className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
                               )
                             : part
                         )}
@@ -197,7 +304,7 @@ export default function LessonPage() {
                         ).map((part, i) => 
                           typeof part === 'string' && part.includes('`') 
                             ? part.split('`').map((code, j) => 
-                                j % 2 === 1 ? <code key={j} className="font-mono text-primary bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
+                                j % 2 === 1 ? <code key={j} className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
                               )
                             : part
                         )}
@@ -232,15 +339,33 @@ export default function LessonPage() {
 
             {/* Navigation */}
             <div className="flex justify-between items-center mt-8 pt-6 border-t">
-              <Button variant="outline">
-                <ChevronLeft className="w-4 h-4 mr-2" />
-                Previous Lesson
-              </Button>
+              {prevLesson ? (
+                <Button variant="outline" asChild>
+                  <Link to={prevLesson.path}>
+                    <ChevronLeft className="w-4 h-4 mr-2" />
+                    <span className="truncate max-w-[150px]">{prevLesson.title}</span>
+                  </Link>
+                </Button>
+              ) : (
+                <Button variant="outline" disabled>
+                  <ChevronLeft className="w-4 h-4 mr-2" />
+                  Previous Lesson
+                </Button>
+              )}
               
-              <Button variant="outline">
-                Next Lesson
-                <ChevronRight className="w-4 h-4 ml-2" />
-              </Button>
+              {nextLesson ? (
+                <Button variant="outline" asChild>
+                  <Link to={nextLesson.path}>
+                    <span className="truncate max-w-[150px]">{nextLesson.title}</span>
+                    <ChevronRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </Button>
+              ) : (
+                <Button variant="outline" disabled>
+                  Next Lesson
+                  <ChevronRight className="w-4 h-4 ml-2" />
+                </Button>
+              )}
             </div>
           </div>
 

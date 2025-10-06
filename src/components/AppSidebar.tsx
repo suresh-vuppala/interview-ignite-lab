@@ -120,12 +120,12 @@ export function AppSidebar() {
                                 hasActiveLesson && "font-semibold"
                               )}
                             >
-                              <div className="flex items-center gap-2 min-w-0">
+                              <div className="flex items-center gap-2 min-w-0 flex-1 overflow-hidden">
                                 <Code className="h-4 w-4 flex-shrink-0 text-primary" />
-                                <span className="text-sm font-medium truncate">{module.title}</span>
+                                <span className="text-sm font-medium truncate block">{module.title}</span>
                               </div>
                               <ChevronDown className={cn(
-                                "h-4 w-4 transition-transform flex-shrink-0",
+                                "h-4 w-4 transition-transform flex-shrink-0 ml-1",
                                 isOpen && "transform rotate-180"
                               )} />
                             </SidebarMenuButton>
@@ -166,10 +166,10 @@ export function AppSidebar() {
                                         )}
                                       >
                                         <Link to={lessonPath}>
-                                          <div className="flex items-center gap-2 w-full min-w-0">
+                                          <div className="flex items-center gap-2 w-full min-w-0 overflow-hidden">
                                             <BookOpen className="h-3.5 w-3.5 flex-shrink-0" />
-                                            <span className="text-sm flex-1 truncate">{item.title}</span>
-                                            {isLocked && <Lock className="h-3 w-3 flex-shrink-0 text-muted-foreground" />}
+                                            <span className="text-sm flex-1 truncate block" title={item.title}>{item.title}</span>
+                                            {isLocked && <Lock className="h-3 w-3 flex-shrink-0 text-muted-foreground ml-1" />}
                                           </div>
                                         </Link>
                                       </SidebarMenuButton>
