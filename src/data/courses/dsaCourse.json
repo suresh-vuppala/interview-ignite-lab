@@ -9,6 +9,7 @@
         { "title": "Introduction", "isHeader": true },
         { "title": "Introduction to Arrays", "slug": "intro", "isPremium": false },
         { "title": "Two Pointers Technique", "slug": "two-pointers", "isPremium": false },
+        { "title": "Advanced Sliding Window Pattern with Complete Optimization Strategies", "slug": "sliding-window-advanced", "isPremium": false },
         { "title": "Additional Problems", "isHeader": true },
         { "title": "Sliding Window", "slug": "sliding-window", "isPremium": true },
         { "title": "Prefix Sum", "slug": "prefix-sum", "isPremium": true }
