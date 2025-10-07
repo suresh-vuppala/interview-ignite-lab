@@ -121,29 +121,7 @@ export default function LessonPage() {
     );
   }
 
-  if (lesson.isPremium && !hasAccess(lesson.isPremium)) {
-    return (
-      <Layout>
-        <div className="max-w-4xl mx-auto p-6">
-          <Card className="text-center p-8">
-            <CardContent className="space-y-4">
-              <Lock className="w-16 h-16 text-muted-foreground mx-auto" />
-              <h2 className="text-2xl font-bold">Premium Content</h2>
-              <p className="text-muted-foreground">
-                This lesson is part of our premium content. Upgrade to access advanced topics and exclusive materials.
-              </p>
-              <Button className="mt-4" asChild>
-                <Link to="/upgrade">
-                  <Crown className="w-4 h-4 mr-2" />
-                  Upgrade to Pro
-                </Link>
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </Layout>
-    );
-  }
+  const isLockedContent = lesson.isPremium && !hasAccess(lesson.isPremium);
 
   return (
     <Layout>
@@ -236,8 +214,18 @@ export default function LessonPage() {
             </div>
 
             {/* Content */}
-            <div className="max-w-none">
-              <div className="space-y-3 leading-relaxed">
+            <div className="max-w-none relative">
+              {isLockedContent && (
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/80 to-background z-10 flex items-end justify-center pb-12 pointer-events-none">
+                  <Button className="pointer-events-auto" asChild>
+                    <Link to="/upgrade">
+                      <Crown className="w-4 h-4 mr-2" />
+                      Unlock Premium Content
+                    </Link>
+                  </Button>
+                </div>
+              )}
+              <div className={`space-y-3 leading-relaxed ${isLockedContent ? 'max-h-[600px] overflow-hidden' : ''}`}>
                 {lesson.content.split('\n').map((line: string, index: number) => {
                   if (line.startsWith('## ')) {
                     return <h2 key={index} className="text-2xl font-bold mt-6 mb-3 text-foreground">{line.slice(3)}</h2>;
