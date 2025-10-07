@@ -165,10 +165,10 @@ export function AppSidebar() {
                                           !isActive && "text-muted-foreground hover:text-foreground"
                                         )}
                                       >
-                                        <Link to={lessonPath} className="flex items-center gap-2 w-full min-w-0 overflow-hidden">
+                                        <Link to={lessonPath} className="flex items-center gap-2 w-full">
                                           <BookOpen className="h-3.5 w-3.5 flex-shrink-0" />
-                                          <span className="text-sm truncate flex-1 min-w-0" title={item.title}>{item.title}</span>
-                                          {isLocked && <Lock className="h-3 w-3 flex-shrink-0 text-muted-foreground" />}
+                                          <span className="text-sm flex-1 min-w-0 truncate" title={item.title}>{item.title}</span>
+                                          {isLocked && <Lock className="h-3 w-3 flex-shrink-0 text-muted-foreground ml-auto" />}
                                         </Link>
                                       </SidebarMenuButton>
                                     </SidebarMenuItem>
