@@ -215,97 +215,130 @@ export default function LessonPage() {
 
             {/* Content */}
             <div className="max-w-none relative">
-              {isLockedContent && (
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/80 to-background z-10 flex items-end justify-center pb-12 pointer-events-none">
-                  <Button className="pointer-events-auto" asChild>
-                    <Link to="/upgrade">
-                      <Crown className="w-4 h-4 mr-2" />
-                      Unlock Premium Content
-                    </Link>
-                  </Button>
+              {isLockedContent ? (
+                <div className="relative min-h-[600px] bg-gradient-to-b from-muted/30 via-muted/50 to-muted rounded-lg overflow-hidden">
+                  {/* Blurred placeholder content */}
+                  <div className="p-8 space-y-6 blur-sm select-none pointer-events-none opacity-60">
+                    <div className="h-8 bg-foreground/10 rounded w-3/4"></div>
+                    <div className="space-y-3">
+                      <div className="h-4 bg-foreground/10 rounded"></div>
+                      <div className="h-4 bg-foreground/10 rounded w-5/6"></div>
+                      <div className="h-4 bg-foreground/10 rounded w-4/6"></div>
+                    </div>
+                    <div className="h-8 bg-foreground/10 rounded w-2/3 mt-8"></div>
+                    <div className="space-y-3">
+                      <div className="h-4 bg-foreground/10 rounded"></div>
+                      <div className="h-4 bg-foreground/10 rounded w-5/6"></div>
+                      <div className="h-4 bg-foreground/10 rounded w-3/4"></div>
+                      <div className="h-4 bg-foreground/10 rounded w-4/6"></div>
+                    </div>
+                    <div className="h-32 bg-foreground/10 rounded mt-8"></div>
+                    <div className="space-y-3">
+                      <div className="h-4 bg-foreground/10 rounded"></div>
+                      <div className="h-4 bg-foreground/10 rounded w-5/6"></div>
+                    </div>
+                  </div>
+                  
+                  {/* Premium overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background flex items-center justify-center">
+                    <div className="text-center space-y-4 p-8">
+                      <Lock className="w-16 h-16 mx-auto text-muted-foreground" />
+                      <h3 className="text-2xl font-bold">Premium Content</h3>
+                      <p className="text-muted-foreground max-w-md">
+                        Unlock this lesson and get access to advanced topics, code examples, and exclusive materials.
+                      </p>
+                      <Button size="lg" asChild>
+                        <Link to="/upgrade">
+                          <Crown className="w-5 h-5 mr-2" />
+                          Unlock Premium Content
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
                 </div>
-              )}
-              <div className={`space-y-3 leading-relaxed ${isLockedContent ? 'max-h-[600px] overflow-hidden' : ''}`}>
-                {lesson.content.split('\n').map((line: string, index: number) => {
-                  if (line.startsWith('## ')) {
-                    return <h2 key={index} className="text-2xl font-bold mt-6 mb-3 text-foreground">{line.slice(3)}</h2>;
-                  }
-                  if (line.startsWith('### ')) {
-                    return <h3 key={index} className="text-xl font-semibold mt-5 mb-2 text-foreground">{line.slice(4)}</h3>;
-                  }
-                  if (line.startsWith('> ')) {
-                    return (
-                      <blockquote key={index} className="border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-lg my-3">
-                        <p className="text-muted-foreground italic m-0 leading-relaxed">{line.slice(2)}</p>
-                      </blockquote>
-                    );
-                  }
-                  if (line.startsWith('- ')) {
-                    return (
-                      <li key={index} className="ml-4 mb-2 text-foreground leading-relaxed">
-                        {line.slice(2).split('**').map((part, i) => 
-                          i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part
-                        ).map((part, i) => 
-                          typeof part === 'string' && part.includes('`') 
-                            ? part.split('`').map((code, j) => 
-                                j % 2 === 1 ? <code key={j} className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
-                              )
-                            : part
-                        )}
-                      </li>
-                    );
-                  }
-                  if (line.match(/^\d+\. /)) {
-                    return (
-                      <li key={index} className="ml-4 mb-2 text-foreground leading-relaxed">
-                        {line.replace(/^\d+\. /, '').split('**').map((part, i) => 
-                          i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part
-                        ).map((part, i) => 
-                          typeof part === 'string' && part.includes('`') 
-                            ? part.split('`').map((code, j) => 
-                                j % 2 === 1 ? <code key={j} className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
-                              )
-                            : part
-                        )}
-                      </li>
-                    );
-                  }
-                  if (line.startsWith('![') && line.includes('](')) {
-                    const altMatch = line.match(/!\[(.*?)\]/);
-                    const urlMatch = line.match(/\((.*?)\)/);
-                    if (altMatch && urlMatch) {
+              ) : (
+                <div className="space-y-3 leading-relaxed">
+                  {lesson.content.split('\n').map((line: string, index: number) => {
+                    if (line.startsWith('## ')) {
+                      return <h2 key={index} className="text-2xl font-bold mt-6 mb-3 text-foreground">{line.slice(3)}</h2>;
+                    }
+                    if (line.startsWith('### ')) {
+                      return <h3 key={index} className="text-xl font-semibold mt-5 mb-2 text-foreground">{line.slice(4)}</h3>;
+                    }
+                    if (line.startsWith('> ')) {
                       return (
-                        <img 
-                          key={index} 
-                          src={urlMatch[1]} 
-                          alt={altMatch[1]} 
-                          className="rounded-lg my-4 max-w-full h-auto"
-                        />
+                        <blockquote key={index} className="border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-lg my-3">
+                          <p className="text-muted-foreground italic m-0 leading-relaxed">{line.slice(2)}</p>
+                        </blockquote>
                       );
                     }
-                  }
-                  if (line.trim() && !line.startsWith('#') && !line.startsWith('>') && !line.startsWith('-') && !line.match(/^\d+\./) && !line.startsWith('![')) {
-                    return (
-                      <p key={index} className="mb-3 text-foreground leading-relaxed">
-                        {line.split('**').map((part, i) => 
-                          i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part
-                        ).map((part, i) => 
-                          typeof part === 'string' && part.includes('`') 
-                            ? part.split('`').map((code, j) => 
-                                j % 2 === 1 ? <code key={j} className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
-                              )
-                            : part
-                        )}
-                      </p>
-                    );
-                  }
-                  return null;
-                })}
-              </div>
+                    if (line.startsWith('- ')) {
+                      return (
+                        <li key={index} className="ml-4 mb-2 text-foreground leading-relaxed">
+                          {line.slice(2).split('**').map((part, i) => 
+                            i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part
+                          ).map((part, i) => 
+                            typeof part === 'string' && part.includes('`') 
+                              ? part.split('`').map((code, j) => 
+                                  j % 2 === 1 ? <code key={j} className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
+                                )
+                              : part
+                          )}
+                        </li>
+                      );
+                    }
+                    if (line.match(/^\d+\. /)) {
+                      return (
+                        <li key={index} className="ml-4 mb-2 text-foreground leading-relaxed">
+                          {line.replace(/^\d+\. /, '').split('**').map((part, i) => 
+                            i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part
+                          ).map((part, i) => 
+                            typeof part === 'string' && part.includes('`') 
+                              ? part.split('`').map((code, j) => 
+                                  j % 2 === 1 ? <code key={j} className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
+                                )
+                              : part
+                          )}
+                        </li>
+                      );
+                    }
+                    if (line.startsWith('![') && line.includes('](')) {
+                      const altMatch = line.match(/!\[(.*?)\]/);
+                      const urlMatch = line.match(/\((.*?)\)/);
+                      if (altMatch && urlMatch) {
+                        return (
+                          <img 
+                            key={index} 
+                            src={urlMatch[1]} 
+                            alt={altMatch[1]} 
+                            className="rounded-lg my-4 max-w-full h-auto"
+                          />
+                        );
+                      }
+                    }
+                    if (line.trim() && !line.startsWith('#') && !line.startsWith('>') && !line.startsWith('-') && !line.match(/^\d+\./) && !line.startsWith('![')) {
+                      return (
+                        <p key={index} className="mb-3 text-foreground leading-relaxed">
+                          {line.split('**').map((part, i) => 
+                            i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part
+                          ).map((part, i) => 
+                            typeof part === 'string' && part.includes('`') 
+                              ? part.split('`').map((code, j) => 
+                                  j % 2 === 1 ? <code key={j} className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
+                                )
+                              : part
+                          )}
+                        </p>
+                      );
+                    }
+                    return null;
+                  })}
+                </div>
+              )}
             </div>
 
-            {/* Code Examples */}
-            {lesson.codeExamples && lesson.codeExamples.length > 0 && (
+            {/* Code Examples - Only show for unlocked content */}
+            {!isLockedContent && lesson.codeExamples && lesson.codeExamples.length > 0 && (
               <div className="mt-8 space-y-6">
                 <Separator />
                 <h2 className="text-xl font-semibold flex items-center gap-2">
