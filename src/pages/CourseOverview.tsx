@@ -13,145 +13,145 @@ import {
   MessageSquare
 } from "lucide-react";
 
-const courses = [
-  {
-    id: "dsa",
-    title: "DSA (Data Structures & Algorithms)",
-    icon: Database,
-    description: "Master algorithms and data structures with hands-on practice and real interview questions.",
-    modules: [
-      {
-        title: "Arrays & Strings",
-        url: "/course/dsa/arrays",
-        lessons: [
-          { title: "Introduction to Arrays", url: "/course/dsa/arrays/intro", isPremium: false },
-          { title: "Two Pointers Technique", url: "/course/dsa/arrays/two-pointers", isPremium: false },
-          { title: "Sliding Window", url: "/course/dsa/arrays/sliding-window", isPremium: true },
-          { title: "Prefix Sum", url: "/course/dsa/arrays/prefix-sum", isPremium: true },
-        ]
-      },
-      {
-        title: "Linked Lists",
-        url: "/course/dsa/linked-lists",
-        lessons: [
-          { title: "Basics", url: "/course/dsa/linked-lists/basics", isPremium: false, estimatedTime: 40 },
-          { title: "Fast & Slow Pointers", url: "/course/dsa/linked-lists/fast-slow", isPremium: true, estimatedTime: 55 },
-          { title: "Reversal", url: "/course/dsa/linked-lists/reversal", isPremium: true, estimatedTime: 50 },
-        ]
-      },
-      {
-        title: "Trees & Graphs",
-        url: "/course/dsa/trees",
-        lessons: [
-          { title: "Tree Fundamentals", url: "/course/dsa/trees/fundamentals", isPremium: false, estimatedTime: 45 },
-          { title: "DFS & BFS", url: "/course/dsa/trees/dfs-bfs", isPremium: true, estimatedTime: 60 },
-          { title: "Binary Search Trees", url: "/course/dsa/trees/bst", isPremium: true, estimatedTime: 55 },
-        ]
-      }
-    ]
-  },
-  {
-    id: "system-design-hld",
-    title: "System Design (HLD) Fundamentals",
-    icon: Brain,
-    description: "Learn high-level system architecture and design scalable distributed systems.",
-    modules: [
-      {
-        title: "Scalability Basics",
-        url: "/course/system-design-hld/scalability",
-        lessons: [
-          { title: "Load Balancing", url: "/course/system-design-hld/scalability/load-balancing", isPremium: false, estimatedTime: 40 },
-          { title: "Horizontal vs Vertical Scaling", url: "/course/system-design-hld/scalability/scaling", isPremium: true, estimatedTime: 50 },
-          { title: "Auto Scaling", url: "/course/system-design-hld/scalability/auto-scaling", isPremium: true, estimatedTime: 45 },
-        ]
-      },
-      {
-        title: "Databases",
-        url: "/course/system-design-hld/databases",
-        lessons: [
-          { title: "SQL vs NoSQL", url: "/course/system-design-hld/databases/sql-nosql", isPremium: false, estimatedTime: 35 },
-          { title: "Sharding", url: "/course/system-design-hld/databases/sharding", isPremium: true, estimatedTime: 55 },
-          { title: "Replication", url: "/course/system-design-hld/databases/replication", isPremium: true, estimatedTime: 50 },
-        ]
-      },
-      {
-        title: "Caching",
-        url: "/course/system-design-hld/caching",
-        lessons: [
-          { title: "Cache Patterns", url: "/course/system-design-hld/caching/patterns", isPremium: false, estimatedTime: 40 },
-          { title: "CDN", url: "/course/system-design-hld/caching/cdn", isPremium: true, estimatedTime: 45 },
-        ]
-      }
-    ]
-  },
-  {
-    id: "lld",
-    title: "LLD (Low Level Design)",
-    icon: GitBranch,
-    description: "Master object-oriented design patterns and principles for technical interviews.",
-    modules: [
-      {
-        title: "Design Patterns",
-        url: "/course/lld/design-patterns",
-        lessons: [
-          { title: "Singleton Pattern", url: "/course/lld/design-patterns/singleton", isPremium: false, estimatedTime: 35 },
-          { title: "Factory Pattern", url: "/course/lld/design-patterns/factory", isPremium: true, estimatedTime: 45 },
-          { title: "Observer Pattern", url: "/course/lld/design-patterns/observer", isPremium: true, estimatedTime: 50 },
-        ]
-      },
-      {
-        title: "Object-Oriented Design",
-        url: "/course/lld/oop",
-        lessons: [
-          { title: "SOLID Principles", url: "/course/lld/oop/solid", isPremium: false, estimatedTime: 60 },
-          { title: "Inheritance vs Composition", url: "/course/lld/oop/inheritance", isPremium: true, estimatedTime: 45 },
-        ]
-      },
-      {
-        title: "System Design Examples",
-        url: "/course/lld/examples",
-        lessons: [
-          { title: "Parking Lot System", url: "/course/lld/examples/parking-lot", isPremium: true, estimatedTime: 90 },
-          { title: "Elevator System", url: "/course/lld/examples/elevator", isPremium: true, estimatedTime: 85 },
-        ]
-      }
-    ]
-  },
-  {
-    id: "behavioral",
-    title: "Behavioral",
-    icon: MessageSquare,
-    description: "Ace behavioral interviews with proven frameworks and real examples.",
-    modules: [
-      {
-        title: "Interview Techniques",
-        url: "/course/behavioral/techniques",
-        lessons: [
-          { title: "STAR Method", url: "/course/behavioral/techniques/star-method", isPremium: false, estimatedTime: 30 },
-          { title: "Storytelling", url: "/course/behavioral/techniques/storytelling", isPremium: true, estimatedTime: 40 },
-        ]
-      },
-      {
-        title: "Common Questions",
-        url: "/course/behavioral/questions",
-        lessons: [
-          { title: "Leadership Examples", url: "/course/behavioral/questions/leadership", isPremium: false, estimatedTime: 35 },
-          { title: "Conflict Resolution", url: "/course/behavioral/questions/conflict", isPremium: true, estimatedTime: 40 },
-          { title: "Failure Stories", url: "/course/behavioral/questions/failure", isPremium: true, estimatedTime: 35 },
-        ]
-      },
-      {
-        title: "Company Culture",
-        url: "/course/behavioral/culture",
-        lessons: [
-          { title: "Culture Fit", url: "/course/behavioral/culture/fit", isPremium: true, estimatedTime: 25 },
-          { title: "Values Alignment", url: "/course/behavioral/culture/values", isPremium: true, estimatedTime: 30 },
-        ]
-      }
-    ]
-  }
-];
-
+// const courses = [
+//   {
+//     id: "dsa",
+//     title: "DSA (Data Structures & Algorithms)",
+//     icon: Database,
+//     description: "Master algorithms and data structures with hands-on practice and real interview questions.",
+//     modules: [
+//       {
+//         title: "Arrays & Strings",
+//         url: "/course/dsa/arrays",
+//         lessons: [
+//           { title: "Introduction to Arrays", url: "/course/dsa/arrays/intro", isPremium: false },
+//           { title: "Two Pointers Technique", url: "/course/dsa/arrays/two-pointers", isPremium: false },
+//           { title: "Sliding Window", url: "/course/dsa/arrays/sliding-window", isPremium: true },
+//           { title: "Prefix Sum", url: "/course/dsa/arrays/prefix-sum", isPremium: true },
+//         ]
+//       },
+//       {
+//         title: "Linked Lists",
+//         url: "/course/dsa/linked-lists",
+//         lessons: [
+//           { title: "Basics", url: "/course/dsa/linked-lists/basics", isPremium: false, estimatedTime: 40 },
+//           { title: "Fast & Slow Pointers", url: "/course/dsa/linked-lists/fast-slow", isPremium: true, estimatedTime: 55 },
+//           { title: "Reversal", url: "/course/dsa/linked-lists/reversal", isPremium: true, estimatedTime: 50 },
+//         ]
+//       },
+//       {
+//         title: "Trees & Graphs",
+//         url: "/course/dsa/trees",
+//         lessons: [
+//           { title: "Tree Fundamentals", url: "/course/dsa/trees/fundamentals", isPremium: false, estimatedTime: 45 },
+//           { title: "DFS & BFS", url: "/course/dsa/trees/dfs-bfs", isPremium: true, estimatedTime: 60 },
+//           { title: "Binary Search Trees", url: "/course/dsa/trees/bst", isPremium: true, estimatedTime: 55 },
+//         ]
+//       }
+//     ]
+//   },
+//   {
+//     id: "system-design-hld",
+//     title: "System Design (HLD) Fundamentals",
+//     icon: Brain,
+//     description: "Learn high-level system architecture and design scalable distributed systems.",
+//     modules: [
+//       {
+//         title: "Scalability Basics",
+//         url: "/course/system-design-hld/scalability",
+//         lessons: [
+//           { title: "Load Balancing", url: "/course/system-design-hld/scalability/load-balancing", isPremium: false, estimatedTime: 40 },
+//           { title: "Horizontal vs Vertical Scaling", url: "/course/system-design-hld/scalability/scaling", isPremium: true, estimatedTime: 50 },
+//           { title: "Auto Scaling", url: "/course/system-design-hld/scalability/auto-scaling", isPremium: true, estimatedTime: 45 },
+//         ]
+//       },
+//       {
+//         title: "Databases",
+//         url: "/course/system-design-hld/databases",
+//         lessons: [
+//           { title: "SQL vs NoSQL", url: "/course/system-design-hld/databases/sql-nosql", isPremium: false, estimatedTime: 35 },
+//           { title: "Sharding", url: "/course/system-design-hld/databases/sharding", isPremium: true, estimatedTime: 55 },
+//           { title: "Replication", url: "/course/system-design-hld/databases/replication", isPremium: true, estimatedTime: 50 },
+//         ]
+//       },
+//       {
+//         title: "Caching",
+//         url: "/course/system-design-hld/caching",
+//         lessons: [
+//           { title: "Cache Patterns", url: "/course/system-design-hld/caching/patterns", isPremium: false, estimatedTime: 40 },
+//           { title: "CDN", url: "/course/system-design-hld/caching/cdn", isPremium: true, estimatedTime: 45 },
+//         ]
+//       }
+//     ]
+//   },
+//   {
+//     id: "lld",
+//     title: "LLD (Low Level Design)",
+//     icon: GitBranch,
+//     description: "Master object-oriented design patterns and principles for technical interviews.",
+//     modules: [
+//       {
+//         title: "Design Patterns",
+//         url: "/course/lld/design-patterns",
+//         lessons: [
+//           { title: "Singleton Pattern", url: "/course/lld/design-patterns/singleton", isPremium: false, estimatedTime: 35 },
+//           { title: "Factory Pattern", url: "/course/lld/design-patterns/factory", isPremium: true, estimatedTime: 45 },
+//           { title: "Observer Pattern", url: "/course/lld/design-patterns/observer", isPremium: true, estimatedTime: 50 },
+//         ]
+//       },
+//       {
+//         title: "Object-Oriented Design",
+//         url: "/course/lld/oop",
+//         lessons: [
+//           { title: "SOLID Principles", url: "/course/lld/oop/solid", isPremium: false, estimatedTime: 60 },
+//           { title: "Inheritance vs Composition", url: "/course/lld/oop/inheritance", isPremium: true, estimatedTime: 45 },
+//         ]
+//       },
+//       {
+//         title: "System Design Examples",
+//         url: "/course/lld/examples",
+//         lessons: [
+//           { title: "Parking Lot System", url: "/course/lld/examples/parking-lot", isPremium: true, estimatedTime: 90 },
+//           { title: "Elevator System", url: "/course/lld/examples/elevator", isPremium: true, estimatedTime: 85 },
+//         ]
+//       }
+//     ]
+//   },
+//   {
+//     id: "behavioral",
+//     title: "Behavioral",
+//     icon: MessageSquare,
+//     description: "Ace behavioral interviews with proven frameworks and real examples.",
+//     modules: [
+//       {
+//         title: "Interview Techniques",
+//         url: "/course/behavioral/techniques",
+//         lessons: [
+//           { title: "STAR Method", url: "/course/behavioral/techniques/star-method", isPremium: false, estimatedTime: 30 },
+//           { title: "Storytelling", url: "/course/behavioral/techniques/storytelling", isPremium: true, estimatedTime: 40 },
+//         ]
+//       },
+//       {
+//         title: "Common Questions",
+//         url: "/course/behavioral/questions",
+//         lessons: [
+//           { title: "Leadership Examples", url: "/course/behavioral/questions/leadership", isPremium: false, estimatedTime: 35 },
+//           { title: "Conflict Resolution", url: "/course/behavioral/questions/conflict", isPremium: true, estimatedTime: 40 },
+//           { title: "Failure Stories", url: "/course/behavioral/questions/failure", isPremium: true, estimatedTime: 35 },
+//         ]
+//       },
+//       {
+//         title: "Company Culture",
+//         url: "/course/behavioral/culture",
+//         lessons: [
+//           { title: "Culture Fit", url: "/course/behavioral/culture/fit", isPremium: true, estimatedTime: 25 },
+//           { title: "Values Alignment", url: "/course/behavioral/culture/values", isPremium: true, estimatedTime: 30 },
+//         ]
+//       }
+//     ]
+//   }
+// ];
+const courses =[];
 export default function CourseOverview() {
   const { courseSlug } = useParams();
   const navigate = useNavigate();

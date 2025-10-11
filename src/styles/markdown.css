@@ -1,0 +1,11 @@
+.prose pre {
+  background-color: #1e1e1e;
+  color: #f8f8f2;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.prose code {
+  font-family: 'JetBrains Mono', monospace;
+}

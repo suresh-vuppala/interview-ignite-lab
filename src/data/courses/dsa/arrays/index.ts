@@ -1,4 +1,4 @@
-import { dsaArraysIntro } from './intro';
+import { dsaArraysIntro } from './01-Introduction/01-Introduction';
 import { dsaArraysTwoPointers } from './twoPointers';
 import { dsaArraysSlidingWindow } from './slidingWindow';
 
