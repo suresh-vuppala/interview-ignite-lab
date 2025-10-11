@@ -1,0 +1,82 @@
+{
+  "title": "Arrays & Strings",
+  "slug": "arrays",
+  "sections": [
+    {
+      "title": "01-Introduction",
+      "slug": "01-Introduction",
+      "type": "header",
+      "lessons": [
+        {
+          "order": 1,
+          "title": "Introduction to Arrays",
+          "slug": "01-Introduction-to-Arrays",
+          "isPremium": false
+        },
+        {
+          "order": 2,
+          "title": "Two Pointers Technique",
+          "slug": "02-Two-Pointers-Technique",
+          "isPremium": false
+        },
+        {
+          "order": 3,
+          "title": "Advanced Sliding Window Pattern",
+          "slug": "03-Advanced-Sliding-Window",
+          "isPremium": false
+        }
+      ]
+    },
+    {
+      "title": "02-Additional-Problems",
+      "slug": "02-Additional-Problems",
+      "type": "header",
+      "lessons": [
+        {
+          "order": 1,
+          "title": "Sliding Window",
+          "slug": "01-Sliding-Window",
+          "isPremium": true
+        },
+        {
+          "order": 2,
+          "title": "Prefix Sum",
+          "slug": "02-Prefix-Sum",
+          "isPremium": true
+        },
+        {
+          "order": 3,
+          "title": "03-Subheader",
+          "slug": "03-Subheader",
+          "type": "subHeader",
+          "lessons": [
+            {
+              "order": 1,
+              "title": "Sliding Window 1",
+              "slug": "01-Sliding-Window1",
+              "isPremium": true
+            },
+            {
+              "order": 2,
+              "title": "Sliding Window 2",
+              "slug": "02-Sliding-Window2",
+              "isPremium": true
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "title": "Sliding Window Problem",
+          "slug": "04-Sliding-Window-Problem",
+          "isPremium": true
+        },
+        {
+          "order": 5,
+          "title": "Prefix Sum Problem",
+          "slug": "05-Prefix-Sum-Problem",
+          "isPremium": true
+        }
+      ]
+    }
+  ]
+}

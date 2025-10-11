@@ -5,36 +5,159 @@
     {
       "title": "Arrays & Strings",
       "slug": "arrays",
-      "items": [
-        { "title": "Introduction", "isHeader": true },
-        { "title": "Introduction to Arrays", "slug": "intro", "isPremium": false },
-        { "title": "Two Pointers Technique", "slug": "two-pointers", "isPremium": false },
-        { "title": "Advanced Sliding Window Pattern with Complete Optimization Strategies", "slug": "sliding-window-advanced", "isPremium": false },
-        { "title": "Additional Problems", "isHeader": true },
-        { "title": "Sliding Window", "slug": "sliding-window", "isPremium": true },
-        { "title": "Prefix Sum", "slug": "prefix-sum", "isPremium": true }
+      "sections": [
+        {
+          "title": "01-Introduction",
+          "slug": "01-Introduction",
+          "type": "header",
+          "lessons": [
+            {
+              "order": 1,
+              "title": "Introduction to Arrays",
+              "slug": "01-Introduction-to-Arrays",
+              "isPremium": false
+            },
+            {
+              "order": 2,
+              "title": "Two Pointers Technique",
+              "slug": "02-Two-Pointers-Technique",
+              "isPremium": false
+            },
+            {
+              "order": 3,
+              "title": "Advanced Sliding Window Pattern",
+              "slug": "01-Advanced-Sliding-Window",
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "02-Additional-Problems",
+          "slug": "02-Additional-Problems",
+          "type": "header",
+          "lessons": [
+            {
+              "order": 1,
+              "title": "Sliding Window",
+              "slug": "01-Sliding-Window",
+              "isPremium": true
+            },
+            {
+              "order": 2,
+              "title": "Prefix Sum",
+              "slug": "02-Prefix-Sum",
+              "isPremium": true
+            },
+            {
+              "order": 3,
+              "title": "03-Subheader",
+              "slug": "03-Subheader",
+              "type": "subHeader",
+              "lessons": [
+                {
+                  "order": 1,
+                  "title": "Sliding Window 1",
+                  "slug": "01-Sliding-Window1",
+                  "isPremium": true
+                },
+                {
+                  "order": 2,
+                  "title": "Sliding Window 2",
+                  "slug": "02-Sliding-Window2",
+                  "isPremium": true
+                }
+              ]
+            },
+            {
+              "order": 4,
+              "title": "Sliding Window Problem",
+              "slug": "04-Sliding-Window-Problem",
+              "isPremium": true
+            },
+            {
+              "order": 5,
+              "title": "Prefix Sum Problem",
+              "slug": "05-Prefix-Sum-Problem",
+              "isPremium": true
+            }
+          ]
+        }
       ]
     },
     {
       "title": "Linked Lists",
       "slug": "linked-lists",
-      "items": [
-        { "title": "Introduction", "isHeader": true },
-        { "title": "Basics", "slug": "basics", "isPremium": false },
-        { "title": "Advanced Topics", "isHeader": true },
-        { "title": "Fast & Slow Pointers", "slug": "fast-slow", "isPremium": true },
-        { "title": "Reversal", "slug": "reversal", "isPremium": true }
+      "sections": [
+        {
+          "title": "01-Introduction",
+          "slug": "01-Introduction",
+          "type": "header",
+          "lessons": [
+            {
+              "order": 1,
+              "title": "Basics",
+              "slug": "01-Basics",
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "02-Advanced-Topics",
+          "slug": "02-Advanced-Topics",
+          "type": "header",
+          "lessons": [
+            {
+              "order": 1,
+              "title": "Fast & Slow Pointers",
+              "slug": "01-Fast-Slow-Pointers",
+              "isPremium": true
+            },
+            {
+              "order": 2,
+              "title": "Reversal",
+              "slug": "02-Reversal",
+              "isPremium": true
+            }
+          ]
+        }
       ]
     },
     {
       "title": "Trees & Graphs",
       "slug": "trees",
-      "items": [
-        { "title": "Fundamentals", "isHeader": true },
-        { "title": "Tree Fundamentals", "slug": "fundamentals", "isPremium": false },
-        { "title": "Advanced", "isHeader": true },
-        { "title": "DFS & BFS", "slug": "dfs-bfs", "isPremium": true },
-        { "title": "Binary Search Trees", "slug": "bst", "isPremium": true }
+      "sections": [
+        {
+          "title": "01-Fundamentals",
+          "slug": "01-Fundamentals",
+          "type": "header",
+          "lessons": [
+            {
+              "order": 1,
+              "title": "Tree Fundamentals",
+              "slug": "01-Tree-Fundamentals",
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "02-Advanced",
+          "slug": "02-Advanced",
+          "type": "header",
+          "lessons": [
+            {
+              "order": 1,
+              "title": "DFS & BFS",
+              "slug": "01-DFS-BFS",
+              "isPremium": true
+            },
+            {
+              "order": 2,
+              "title": "Binary Search Trees",
+              "slug": "02-BST",
+              "isPremium": true
+            }
+          ]
+        }
       ]
     }
   ]

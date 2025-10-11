@@ -1,0 +1,19 @@
+{
+  "order": 1,
+  "title": "Introduction to Arrays",
+  "slug": "01-Introduction-to-Arrays",
+  "isPremium": false,
+  "mdFile": "01-Introduction-to-Arrays.md",
+  "codeExamples": [
+    {
+      "title": "Basic Array Declaration",
+      "codeFile": "code/java/ArrayBasics.java",
+      "language": "java"
+    },
+    {
+      "title": "Iterating over Array",
+      "codeFile": "code/java/ArrayIteration.java",
+      "language": "java"
+    }
+  ]
+}
