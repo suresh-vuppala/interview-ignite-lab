@@ -33,6 +33,7 @@ const App = () => (
               <Route path="/course/:courseSlug" element={<CourseOverview />} />
               // Route for lessons **with section slug**
               <Route path="/course/:courseSlug/:moduleSlug/:sectionSlug/:lessonSlug" element={<LessonPage />} />
+              <Route path="/course/:courseSlug/:moduleSlug/:sectionSlug/:lessonSlug/:sublessonSlug" element={<LessonPage />} />
 
               // Route for lessons **without section slug** (directly under module)
               <Route path="/course/:courseSlug/:moduleSlug/:lessonSlug" element={<LessonPage />} />

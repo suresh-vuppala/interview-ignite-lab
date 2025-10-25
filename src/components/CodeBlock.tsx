@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,23 +6,29 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Copy, Check, Code2 } from 'lucide-react';
 
-interface CodeBlockProps {
-  title: string;
-  code: string;
-  language?: string;
-  showLanguageSelector?: boolean;
+// 🔹 Dynamically import all code files from your data folder
+const codeFiles = import.meta.glob('/src/data/**/*.@(cpp|java|py|js|ts)', { as: 'raw' });
+
+// 🔹 Helper function to fetch a file’s raw content
+async function fetchCodeFile(path: string): Promise<string> {
+  const loader = codeFiles[path];
+  if (!loader) {
+    console.warn(`⚠️ Code file not found: ${path}`);
+    return '// Code file not found';
+  }
+  return await loader();
 }
 
-const LANGUAGES = [
-  { value: 'python', label: 'Python' },
-  { value: 'javascript', label: 'JavaScript' },
-  { value: 'java', label: 'Java' },
-  { value: 'cpp', label: 'C++' },
-  { value: 'typescript', label: 'TypeScript' },
-  { value: 'go', label: 'Go' },
-  { value: 'rust', label: 'Rust' },
-  { value: 'sql', label: 'SQL' },
-];
+interface CodeLanguage {
+  language: string;
+  codeFile?: string; // only file path is given
+}
+
+interface CodeBlockProps {
+  title: string;
+  codes: CodeLanguage[]; // array of { language, codeFile }
+  showLanguageSelector?: boolean;
+}
 
 const customStyle = {
   ...oneDark,
@@ -38,42 +44,48 @@ const customStyle = {
     background: 'transparent',
     color: 'hsl(var(--foreground))',
   },
-  '.token.comment': {
-    color: 'hsl(var(--muted-foreground))',
-  },
-  '.token.keyword': {
-    color: 'hsl(330 100% 70%)', // Pink for keywords
-  },
-  '.token.string': {
-    color: 'hsl(120 100% 70%)', // Green for strings
-  },
-  '.token.function': {
-    color: 'hsl(200 100% 70%)', // Blue for functions
-  },
-  '.token.number': {
-    color: 'hsl(330 100% 80%)', // Light pink for numbers
-  },
-  '.token.operator': {
-    color: 'hsl(330 100% 65%)', // Pink for operators
-  },
-  '.token.punctuation': {
-    color: 'hsl(var(--muted-foreground))',
-  },
-  '.token.class-name': {
-    color: 'hsl(330 100% 75%)', // Pink for class names
-  },
-  '.token.variable': {
-    color: 'hsl(var(--foreground))',
-  },
+  '.token.comment': { color: 'hsl(var(--muted-foreground))' },
+  '.token.keyword': { color: 'hsl(330 100% 70%)' },
+  '.token.string': { color: 'hsl(120 100% 70%)' },
+  '.token.function': { color: 'hsl(200 100% 70%)' },
+  '.token.number': { color: 'hsl(330 100% 80%)' },
+  '.token.operator': { color: 'hsl(330 100% 65%)' },
+  '.token.punctuation': { color: 'hsl(var(--muted-foreground))' },
+  '.token.class-name': { color: 'hsl(330 100% 75%)' },
+  '.token.variable': { color: 'hsl(var(--foreground))' },
 };
 
-export function CodeBlock({ title, code, language = 'python', showLanguageSelector = true }: CodeBlockProps) {
-  const [selectedLanguage, setSelectedLanguage] = useState(language);
+export function CodeBlock({ title, codes, showLanguageSelector = true }: CodeBlockProps) {
+  const [selectedLanguage, setSelectedLanguage] = useState(codes[0]?.language || 'cpp');
+  const [loadedCodes, setLoadedCodes] = useState<{ [lang: string]: string }>({});
   const [copied, setCopied] = useState(false);
+
+  // 🧠 Load all available code files on mount
+  useEffect(() => {
+    const loadAllCodes = async () => {
+      const loaded: { [lang: string]: string } = {};
+      for (const c of codes) {
+        if (!c.codeFile) continue;
+        try {
+          const normalizedPath = c.codeFile.startsWith('/src')
+            ? c.codeFile
+            : `/src/data/${c.codeFile}`;
+          loaded[c.language] = await fetchCodeFile(normalizedPath);
+        } catch (err) {
+          console.error(`❌ Failed to load ${c.language}:`, err);
+          loaded[c.language] = '// Error loading code';
+        }
+      }
+      setLoadedCodes(loaded);
+    };
+    loadAllCodes();
+  }, [codes]);
+
+  const currentCode = loadedCodes[selectedLanguage] || '// Loading code...';
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(code);
+      await navigator.clipboard.writeText(currentCode);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
@@ -83,47 +95,46 @@ export function CodeBlock({ title, code, language = 'python', showLanguageSelect
 
   return (
     <Card className="overflow-hidden border-2 border-primary/20 bg-gradient-to-br from-background to-muted/30">
+      {/* Header */}
       <div className="bg-gradient-to-r from-primary/10 to-primary/5 border-b border-primary/20 px-4 py-3">
         <div className="flex items-center justify-between">
+          {/* Title & Language Selector */}
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2">
               <Code2 className="w-4 h-4 text-primary" />
               <h3 className="font-semibold text-foreground">{title}</h3>
             </div>
-            {showLanguageSelector && (
+
+            {showLanguageSelector && codes.length > 1 && (
               <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
                 <SelectTrigger className="w-32 h-8 bg-background/50 border-primary/30">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  {LANGUAGES.map((lang) => (
-                    <SelectItem key={lang.value} value={lang.value}>
-                      {lang.label}
+                  {codes.map((lang) => (
+                    <SelectItem key={lang.language} value={lang.language}>
+                      {lang.language.toUpperCase()}
                     </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
             )}
           </div>
-          
+
+          {/* Copy Button */}
           <Button
             variant="ghost"
             size="sm"
             onClick={handleCopy}
             className="h-8 px-3 hover:bg-primary/10 text-muted-foreground hover:text-primary"
           >
-            {copied ? (
-              <Check className="w-4 h-4" />
-            ) : (
-              <Copy className="w-4 h-4" />
-            )}
-            <span className="ml-1 text-xs">
-              {copied ? 'Copied!' : 'Copy'}
-            </span>
+            {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+            <span className="ml-1 text-xs">{copied ? 'Copied!' : 'Copy'}</span>
           </Button>
         </div>
       </div>
-      
+
+      {/* Code Display */}
       <CardContent className="p-0">
         <div className="relative max-h-[600px] overflow-auto">
           <SyntaxHighlighter
@@ -144,13 +155,8 @@ export function CodeBlock({ title, code, language = 'python', showLanguageSelect
               textAlign: 'right',
             }}
           >
-            {code}
+            {currentCode}
           </SyntaxHighlighter>
-          
-          {/* Pink highlight overlay for important lines */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="h-full w-full bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-30"></div>
-          </div>
         </div>
       </CardContent>
     </Card>

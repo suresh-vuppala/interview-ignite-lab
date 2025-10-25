@@ -7,13 +7,25 @@
   "codeExamples": [
     {
       "title": "Basic Array Declaration",
-      "codeFile": "code/java/ArrayBasics.java",
-      "language": "java"
+      "languages": [
+        {
+          "codeFile": "courses/dsa/arrays/01-Introduction/01-Introduction-to-Arrays/code/java/ArrayBasics.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/arrays/01-Introduction/01-Introduction-to-Arrays/code/cpp/ArrayBasics.cpp",
+          "language": "cpp"
+        }
+      ]
     },
     {
       "title": "Iterating over Array",
-      "codeFile": "code/java/ArrayIteration.java",
-      "language": "java"
+      "languages": [
+        {
+          "codeFile": "courses/dsa/arrays/01-Introduction/01-Introduction-to-Arrays/code/java/ArrayBasics.java",
+          "language": "java"
+        }
+      ]
     }
   ]
 }

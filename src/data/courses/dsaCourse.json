@@ -1,85 +1,208 @@
 {
   "id": "dsa",
-  "title": "DSA (Data Structures & Algorithms)",
+  "title": "Data Structures & Algorithms",
+  "description": "Structured roadmap covering fundamentals to advanced concepts in DSA with hands-on problem solving.",
   "modules": [
     {
-      "title": "Arrays & Strings",
-      "slug": "arrays",
+      "title": "Programming Essentials",
+      "slug": "programming-essentials",
+      "icon": "Code",
       "sections": [
         {
-          "title": "01-Introduction",
-          "slug": "01-Introduction",
-          "type": "header",
+          "title": "Getting Started",
+          "slug": "getting-started",
           "lessons": [
-            {
-              "order": 1,
-              "title": "Introduction to Arrays",
-              "slug": "01-Introduction-to-Arrays",
-              "isPremium": false
-            },
-            {
-              "order": 2,
-              "title": "Two Pointers Technique",
-              "slug": "02-Two-Pointers-Technique",
-              "isPremium": false
-            },
-            {
-              "order": 3,
-              "title": "Advanced Sliding Window Pattern",
-              "slug": "01-Advanced-Sliding-Window",
-              "isPremium": false
-            }
+            { "title": "Getting Started with Easy Problems", "slug": "getting-started-with-easy-problems" , "isPremium": true},
+            { "title": "Anatomy of Problem Statement", "slug": "anatomy-of-problem-statement" },
+            { "title": "Input/Output", "slug": "input-output" },
+            { "title": "Getting Started with Arrays", "slug": "getting-started-with-arrays" }
           ]
         },
         {
-          "title": "02-Additional-Problems",
-          "slug": "02-Additional-Problems",
-          "type": "header",
+          "title": "Understanding Time and Space Complexity Analysis",
+          "slug": "complexity-analysis",
           "lessons": [
-            {
-              "order": 1,
-              "title": "Sliding Window",
-              "slug": "01-Sliding-Window",
-              "isPremium": true
-            },
-            {
-              "order": 2,
-              "title": "Prefix Sum",
-              "slug": "02-Prefix-Sum",
-              "isPremium": true
-            },
-            {
-              "order": 3,
-              "title": "03-Subheader",
-              "slug": "03-Subheader",
-              "type": "subHeader",
-              "lessons": [
-                {
-                  "order": 1,
-                  "title": "Sliding Window 1",
-                  "slug": "01-Sliding-Window1",
-                  "isPremium": true
-                },
-                {
-                  "order": 2,
-                  "title": "Sliding Window 2",
-                  "slug": "02-Sliding-Window2",
-                  "isPremium": true
-                }
-              ]
-            },
-            {
-              "order": 4,
-              "title": "Sliding Window Problem",
-              "slug": "04-Sliding-Window-Problem",
-              "isPremium": true
-            },
-            {
-              "order": 5,
-              "title": "Prefix Sum Problem",
-              "slug": "05-Prefix-Sum-Problem",
-              "isPremium": true
-            }
+            { "title": "Time Complexity Analysis of Iterative Programs", "slug": "time-complexity-iterative" },
+            { "title": "Time Complexity Analysis of Recursive Programs", "slug": "time-complexity-recursive" },
+            { "title": "Common Complexities and Constraints", "slug": "common-complexities" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Subarrays, Subsets & Recursion",
+      "slug": "subarrays-subsets-recursion",
+      "icon": "Layers",
+      "sections": [
+        {
+          "title": "Core Topics",
+          "slug": "core-topics",
+          "lessons": [
+            { "title": "Subarrays vs Subsets vs Subsequences", "slug": "subarrays-vs-subsets-vs-subsequences" },
+            { "title": "Bit Manipulation", "slug": "bit-manipulation" },
+            { "title": "Recursion", "slug": "recursion" },
+            { "title": "Backtracking", "slug": "backtracking" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sorting Algorithms",
+      "slug": "sorting-algorithms",
+      "icon": "List",
+      "sections": [
+        {
+          "title": "Sorting Fundamentals",
+          "slug": "sorting-fundamentals",
+          "lessons": [
+            { "title": "Standard Sorting Algorithms", "slug": "standard-sorting-algorithms" },
+            { "title": "Bubble Sort", "slug": "bubble-sort" },
+            { "title": "Insertion Sort", "slug": "insertion-sort" },
+            { "title": "Selection Sort", "slug": "selection-sort" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Two Pointer Technique",
+      "slug": "two-pointer-technique",
+      "icon": "Code",
+      "sections": [
+        {
+          "title": "Two Pointer Applications",
+          "slug": "two-pointer-applications",
+          "lessons": [
+            { "title": "Introduction to Two Pointer Technique", "slug": "intro-two-pointer" },
+            { "title": "Problems on Two Pointer Technique", "slug": "problems-two-pointer" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Merge Sort",
+      "slug": "merge-sort",
+      "icon": "List",
+      "sections": [
+        {
+          "title": "Merge Sort Applications",
+          "slug": "merge-sort-applications",
+          "lessons": [
+            { "title": "Merge Sort and Its Applications", "slug": "merge-sort-applications" },
+            { "title": "Comparisons and Classifications", "slug": "comparisons-classifications" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Searching Algorithms",
+      "slug": "searching-algorithms",
+      "icon": "Search",
+      "sections": [
+        {
+          "title": "Search Fundamentals",
+          "slug": "search-fundamentals",
+          "lessons": [
+            { "title": "Introduction to Searching Algorithms", "slug": "intro-searching" },
+            { "title": "Linear Search", "slug": "linear-search" },
+            { "title": "Binary Search", "slug": "binary-search" },
+            { "title": "Applications of Binary Search", "slug": "binary-search-applications" },
+            { "title": "Binary Search the Answer", "slug": "binary-search-the-answer" },
+            { "title": "Problems on Binary Search", "slug": "problems-binary-search" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Math for Programming",
+      "slug": "math-for-programming",
+      "icon": "Calculator",
+      "sections": [
+        {
+          "title": "Essential Math",
+          "slug": "essential-math",
+          "lessons": [
+            { "title": "Prime Numbers", "slug": "prime-numbers" },
+            { "title": "Sieve of Eratosthenes", "slug": "sieve-of-eratosthenes" },
+            { "title": "Segmented Sieve", "slug": "segmented-sieve" },
+            { "title": "Modular Arithmetic", "slug": "modular-arithmetic" },
+            { "title": "Game Theory", "slug": "game-theory" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Hashing",
+      "slug": "hashing",
+      "icon": "Database",
+      "sections": [
+        {
+          "title": "Hashing Basics",
+          "slug": "hashing-basics",
+          "lessons": [
+            { "title": "Introduction to Hashing", "slug": "intro-to-hashing" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sliding Window Technique",
+      "slug": "sliding-window-technique",
+      "icon": "Text",
+      "sections": [
+        {
+          "title": "Sliding Window",
+          "slug": "sliding-window",
+          "lessons": [
+            { "title": "Introducing Sliding Window Technique", "slug": "introducing-sliding-window" },
+            { "title": "Maximum Sum of K Consecutive Elements", "slug": "max-sum-k-elements" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "String Problems",
+      "slug": "string-problems",
+      "icon": "Text",
+      "sections": [
+        {
+          "title": "String & Rolling Hash",
+          "slug": "string-rolling-hash",
+          "lessons": [
+            { "title": "Getting Started with String Problems", "slug": "getting-started-with-strings" },
+            { "title": "Problems on Rolling Hash", "slug": "problems-on-rolling-hash" },
+            { "title": "Substring Matching", "slug": "substring-matching" },
+            { "title": "Rabin-Karp", "slug": "rabin-karp" },
+            { "title": "Longest Common Substring", "slug": "longest-common-substring" },
+            { "title": "Prefix Sum", "slug": "prefix-sum" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Stacks",
+      "slug": "stacks",
+      "icon": "Layers",
+      "sections": [
+        {
+          "title": "Stack",
+          "slug": "stack",
+          "lessons": [
+            { "title": "Stack", "slug": "stack-queue-deque" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Queues",
+      "slug": "queues",
+      "icon": "Layers",
+      "sections": [
+        {
+          "title": "Queue",
+          "slug": "queue",
+          "lessons": [
+            { "title": "Queue and Deque", "slug": "deque" },
+            { "title": "Circular Queue", "slug": "circular-queue" }
           ]
         }
       ]
@@ -87,75 +210,132 @@
     {
       "title": "Linked Lists",
       "slug": "linked-lists",
+      "icon": "Link2",
       "sections": [
         {
-          "title": "01-Introduction",
-          "slug": "01-Introduction",
-          "type": "header",
+          "title": "Linked List Basics",
+          "slug": "linked-list-basics",
           "lessons": [
-            {
-              "order": 1,
-              "title": "Basics",
-              "slug": "01-Basics",
-              "isPremium": false
-            }
-          ]
-        },
-        {
-          "title": "02-Advanced-Topics",
-          "slug": "02-Advanced-Topics",
-          "type": "header",
-          "lessons": [
-            {
-              "order": 1,
-              "title": "Fast & Slow Pointers",
-              "slug": "01-Fast-Slow-Pointers",
-              "isPremium": true
-            },
-            {
-              "order": 2,
-              "title": "Reversal",
-              "slug": "02-Reversal",
-              "isPremium": true
-            }
+            { "title": "Linked Lists", "slug": "linked-lists" },
+            { "title": "Problems on Linked Lists", "slug": "problems-on-linked-lists" }
           ]
         }
       ]
     },
     {
-      "title": "Trees & Graphs",
+      "title": "Trees",
       "slug": "trees",
+      "icon": "TreePine",
       "sections": [
         {
-          "title": "01-Fundamentals",
-          "slug": "01-Fundamentals",
-          "type": "header",
+          "title": "Tree Fundamentals",
+          "slug": "tree-fundamentals",
           "lessons": [
-            {
-              "order": 1,
-              "title": "Tree Fundamentals",
-              "slug": "01-Tree-Fundamentals",
-              "isPremium": false
-            }
+            { "title": "Trees", "slug": "trees" },
+            { "title": "Tree Traversals", "slug": "tree-traversals" },
+            { "title": "Standard Problems on Trees", "slug": "standard-problems-on-trees" }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "title": "Binary Search Trees",
+      "slug": "binary-search-trees",
+      "icon": "TreePine",
+      "sections": [
         {
-          "title": "02-Advanced",
-          "slug": "02-Advanced",
-          "type": "header",
+          "title": "BST Operations",
+          "slug": "bst-operations",
           "lessons": [
-            {
-              "order": 1,
-              "title": "DFS & BFS",
-              "slug": "01-DFS-BFS",
-              "isPremium": true
-            },
-            {
-              "order": 2,
-              "title": "Binary Search Trees",
-              "slug": "02-BST",
-              "isPremium": true
-            }
+            { "title": "Binary Search Trees", "slug": "binary-search-trees" },
+            { "title": "Insert/Search/Delete", "slug": "insert-search-delete" },
+            { "title": "Tree Traversals (Recursive/Iterative)", "slug": "tree-traversals-recursive-iterative" },
+            { "title": "Problems on BST", "slug": "problems-on-bst" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Advanced Tree Problems",
+      "slug": "advanced-tree-problems",
+      "icon": "GitBranch",
+      "sections": [
+        {
+          "title": "Advanced Trees",
+          "slug": "advanced-trees",
+          "lessons": [
+            { "title": "Advanced Problems on Trees", "slug": "advanced-problems-on-trees" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Heaps",
+      "slug": "heaps",
+      "icon": "Triangle",
+      "sections": [
+        {
+          "title": "Heap Fundamentals",
+          "slug": "heap-fundamentals",
+          "lessons": [
+            { "title": "Heaps", "slug": "heaps" },
+            { "title": "Min/Max Heap", "slug": "min-max-heap" },
+            { "title": "Heap Sort", "slug": "heap-sort" },
+            { "title": "Problems on Heap", "slug": "problems-on-heap" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Dynamic Programming",
+      "slug": "dynamic-programming",
+      "icon": "Brain",
+      "sections": [
+        {
+          "title": "DP Fundamentals",
+          "slug": "dp-fundamentals",
+          "lessons": [
+            { "title": "Dynamic Programming", "slug": "dynamic-programming" },
+            { "title": "Nth Fibonacci Number", "slug": "nth-fibonacci" },
+            { "title": "Memoization", "slug": "memoization" },
+            { "title": "Tabulation", "slug": "tabulation" },
+            { "title": "Classic DP Problems", "slug": "classic-dp-problems" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Advanced DP",
+      "slug": "advanced-dp",
+      "icon": "Brain",
+      "sections": [
+        {
+          "title": "Advanced DP Problems",
+          "slug": "advanced-dp-problems",
+          "lessons": [
+            { "title": "Advanced DP Problems", "slug": "advanced-dp-problems" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Graphs",
+      "slug": "graphs",
+      "icon": "Network",
+      "sections": [
+        {
+          "title": "Graph Fundamentals",
+          "slug": "graph-fundamentals",
+          "lessons": [
+            { "title": "Introduction to Graphs", "slug": "introduction-to-graphs" },
+            { "title": "Graph Traversals", "slug": "graph-traversals" },
+            { "title": "Basics - BFS & DFS", "slug": "bfs-dfs-basics" },
+            { "title": "Problems", "slug": "graph-problems" },
+            { "title": "Dijkstra’s Algorithm", "slug": "dijkstra" },
+            { "title": "Topological Sorting", "slug": "topological-sorting" },
+            { "title": "Bipartite Graphs", "slug": "bipartite-graphs" },
+            { "title": "Kruskal's Algorithm", "slug": "kruskal" },
+            { "title": "Union-Find", "slug": "union-find" }
           ]
         }
       ]
