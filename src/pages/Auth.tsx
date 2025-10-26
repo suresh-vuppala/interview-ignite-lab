@@ -58,7 +58,7 @@ export default function Auth() {
                 <BookOpen className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-3xl font-bold">Interview60</h1>
+                <h1 className="text-3xl font-bold">InterviewSort</h1>
                 <p className="text-muted-foreground">Master coding interviews in 60 days</p>
               </div>
             </div>
@@ -129,7 +129,7 @@ export default function Auth() {
         <div className="w-full max-w-md mx-auto">
           <Card>
             <CardHeader className="text-center space-y-2">
-              <CardTitle>Welcome to Interview60</CardTitle>
+              <CardTitle>Welcome to InterviewSort</CardTitle>
               <CardDescription>
                 Start your journey to landing your dream tech job
               </CardDescription>

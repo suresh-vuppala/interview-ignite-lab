@@ -23,7 +23,7 @@ const courses = [
     description: "Master algorithms and data structures"
   },
   {
-    id: "system-design-hld",
+    id: "system-design",
     title: "System Design (HLD)",
     icon: Brain,
     description: "Learn high-level system architecture"

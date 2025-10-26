@@ -15,7 +15,7 @@ const courses = [
     description: "Master algorithms and data structures"
   },
   {
-    id: "system-design-hld",
+    id: "system-design",
     title: "System Design (HLD)",
     icon: Brain,
     description: "Learn high-level system architecture"
@@ -55,7 +55,7 @@ export function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <BookOpen className="h-6 w-6 text-primary" />
-          <span className="font-bold text-xl">InterviewEazy</span>
+          <span className="font-bold text-xl">InterviewSort</span>
         </Link>
 
         {/* Desktop Navigation */}

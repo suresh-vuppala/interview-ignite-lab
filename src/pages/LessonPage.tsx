@@ -41,43 +41,108 @@ interface Module {
   sections: Section[];
 }
 
-// Dynamically import module JSON
+// ✅ New version: Load all modules from single course-level JSON (e.g., dsa.json)
 const importModuleJson = async (courseSlug: string, moduleSlug: string) => {
   try {
-    const module = await import(`@/data/courses/${courseSlug}/${moduleSlug}/${moduleSlug}.json`);
-    return module.default || module;
+    // Load the full course JSON once (e.g., dsa.json)
+    const courseData = await import(`@/data/courses/${courseSlug}/${courseSlug}.json`);
+    const course = courseData.default || courseData;
+
+    // Find the requested module by its slug
+    const module = course.modules.find((m: any) => m.slug === moduleSlug);
+
+    if (!module) {
+      console.warn(`⚠️ Module not found in ${courseSlug}.json: ${moduleSlug}`);
+      return null;
+    }
+
+    return module;
   } catch (err) {
-    console.warn(`Failed to load module ${moduleSlug}`, err);
+    console.error(`❌ Failed to load course or module: ${courseSlug}/${moduleSlug}`, err);
     return null;
   }
 };
 
-// Dynamically import lesson JSON
-const importLessonJson = async (courseSlug: string, moduleSlug: string, sectionSlug: string, lessonSlug: string) => {
+// ✅ Build a safe dynamic path for the lesson JSON file
+const buildLessonPath = (
+  courseSlug: string,
+  moduleSlug: string,
+  sectionSlug?: string,
+  subsectionSlug?: string,
+  lessonSlug?: string
+): string => {
+  // 🧩 Build folder hierarchy safely
+  const parts = ['src', 'data', 'courses', courseSlug, moduleSlug];
+
+  if (sectionSlug) parts.push(sectionSlug);
+  if (subsectionSlug) parts.push(subsectionSlug);
+
+  // 🧠 The lesson folder always matches lessonSlug
+  return `/${parts.join('/')}/${lessonSlug}/${lessonSlug}.json`;
+};
+
+// ✅ Dynamically import the lesson JSON file (supports optional slugs)
+export const importLessonJson = async (
+  courseSlug: string,
+  moduleSlug: string,
+  sectionSlug?: string,
+  subsectionSlug?: string,
+  lessonSlug?: string
+) => {
+  if (!lessonSlug) return null;
+
   try {
-    const lesson = await import(`@/data/courses/${courseSlug}/${moduleSlug}/${sectionSlug}/${lessonSlug}/${lessonSlug}.json`);
+    const path = buildLessonPath(courseSlug, moduleSlug, sectionSlug, subsectionSlug, lessonSlug);
+    const lesson = await import(/* @vite-ignore */ path);
     return lesson.default || lesson;
   } catch (err) {
-    console.warn(`Failed to load lesson ${lessonSlug}`, err);
+    console.warn(`⚠️ Failed to load lesson JSON: ${lessonSlug}`, err);
     return null;
   }
 };
 
-// Fetch markdown content (via Vite glob import)
-export const fetchMarkdown = async (courseSlug: string, moduleSlug: string, sectionSlug: string, lessonSlug: string, mdFile: string) => {
-  const path = `/src/data/courses/${courseSlug}/${moduleSlug}/${sectionSlug}/${lessonSlug}/${mdFile}`;
-  const loader = markdownFiles[path];
-  if (!loader) return 'Content not available';
-  return await loader();
+// ✅ Fetch Markdown content dynamically
+export const fetchMarkdown = async (
+  courseSlug: string,
+  moduleSlug: string,
+  sectionSlug?: string,
+  subsectionSlug?: string,
+  lessonSlug?: string,
+  mdFile?: string
+) => {
+  if (!lessonSlug || !mdFile) return 'Markdown not available';
+
+  // 🧩 Construct folder path safely
+  const parts = ['src', 'data', 'courses', courseSlug, moduleSlug];
+  if (sectionSlug) parts.push(sectionSlug);
+  if (subsectionSlug) parts.push(subsectionSlug);
+
+  const path = `/${parts.join('/')}/${lessonSlug}/${mdFile}`;
+
+  try {
+    // 🧠 Assuming you have imported markdown files via glob:
+    // const markdownFiles = import.meta.glob('/src/data/courses/**/*.md', { as: 'raw' });
+    const loader = markdownFiles[path];
+    if (!loader) {
+      console.warn(`⚠️ Markdown file not found: ${path}`);
+      return 'Content not available';
+    }
+    return await loader();
+  } catch (err) {
+    console.warn(`⚠️ Failed to load markdown for ${lessonSlug}`, err);
+    return 'Content not available';
+  }
 };
 
 export default function LessonPage() {
-  const { courseSlug, moduleSlug, sectionSlug, lessonSlug } = useParams<{
+  const { courseSlug, moduleSlug, sectionSlug,subsectionSlug, lessonSlug } = useParams<{
     courseSlug: string;
     moduleSlug: string;
     sectionSlug?: string;
+    subsectionSlug?: string;
     lessonSlug: string;
   }>();
+  console.log({ courseSlug, moduleSlug, sectionSlug, subsectionSlug, lessonSlug });
 
   const { user } = useAuth();
 
@@ -86,54 +151,93 @@ export default function LessonPage() {
   const [prevLesson, setPrevLesson] = useState<{ path: string; title: string } | null>(null);
   const [nextLesson, setNextLesson] = useState<{ path: string; title: string } | null>(null);
 
-  useEffect(() => {
-    if (!courseSlug || !moduleSlug || !lessonSlug) return;
+useEffect(() => {
+  if (!courseSlug || !moduleSlug || !lessonSlug) return;
 
-    (async () => {
-      const moduleData: Module | null = await importModuleJson(courseSlug, moduleSlug);
-      if (!moduleData) return;
+  (async () => {
+    // 🧠 1. Load full course data from single file (e.g., dsa.json)
+    const courseData = await import(`@/data/courses/${courseSlug}/${courseSlug}.json`);
+    const course = courseData.default || courseData;
 
-      const flattenLessons = moduleData.sections.flatMap(section =>
-        section.lessons.flatMap(lesson =>
-          lesson.type === 'subHeader' && lesson.lessons
-            ? lesson.lessons.map(l => ({ ...l, sectionSlug: section.slug }))
-            : [{ ...lesson, sectionSlug: section.slug }]
-        )
-      );
+    // 🧩 2. Find specific module by slug
+    const moduleData = course.modules.find((m: any) => m.slug === moduleSlug);
+    if (!moduleData) {
+      console.warn(`⚠️ Module not found in ${courseSlug}.json: ${moduleSlug}`);
+      return;
+    }
 
-      const index = flattenLessons.findIndex(l => l.slug === lessonSlug);
-      if (index === -1) return;
+   // 🧩 Step 1: Flatten all lessons — including subsection lessons
+const flattenLessons = moduleData.sections.flatMap((section: any) =>
+  section.lessons.flatMap((lesson: any) => {
+    // Case 1️⃣: Subsection (lesson.type === 'subHeader')
+    if (lesson.lessons) {
+      return lesson.lessons.map((sub: any) => ({
+        ...sub,
+        sectionSlug: section.slug,
+        subSectionSlug: lesson.slug, // ✅ store subsection slug
+      }));
+    }
 
-      setPrevLesson(
-        index > 0
-          ? {
-              path: `/course/${courseSlug}/${moduleSlug}/${flattenLessons[index - 1].sectionSlug}/${flattenLessons[index - 1].slug}`,
-              title: flattenLessons[index - 1].title,
-            }
-          : null
-      );
+    // Case 2️⃣: Normal lesson under section
+    return {
+      ...lesson,
+      sectionSlug: section.slug,
+      subSectionSlug: null,
+    };
+  })
+);
 
-      setNextLesson(
-        index < flattenLessons.length - 1
-          ? {
-              path: `/course/${courseSlug}/${moduleSlug}/${flattenLessons[index + 1].sectionSlug}/${flattenLessons[index + 1].slug}`,
-              title: flattenLessons[index + 1].title,
-            }
-          : null
-      );
+// 🧭 Step 2: Find current lesson index
+const index = flattenLessons.findIndex((l: any) => l.slug === lessonSlug);
+if (index === -1) return;
 
-      const lessonData = await importLessonJson(courseSlug, moduleSlug, sectionSlug, lessonSlug);
-      if (!lessonData) return;
-      setLesson(lessonData);
+// 🧭 Step 3: Build dynamic path helper (handles subsection or not)
+const buildLessonUrl = (lesson: any) => {
+  if (lesson.subSectionSlug) {
+    // 🧠 Subsection lesson path
+    return `/course/${courseSlug}/${moduleSlug}/${lesson.sectionSlug}/${lesson.subSectionSlug}/${lesson.slug}`;
+  }
+  // 🧠 Regular lesson under section
+  return `/course/${courseSlug}/${moduleSlug}/${lesson.sectionSlug}/${lesson.slug}`;
+};
 
-      if (lessonData.mdFile) {
-        const md = await fetchMarkdown(courseSlug, moduleSlug, sectionSlug, lessonSlug, lessonData.mdFile);
-        setMarkdown(md);
-      } else {
-        setMarkdown(lessonData.content || '');
+// ⬅️ Step 4: Set previous lesson
+setPrevLesson(
+  index > 0
+    ? {
+        path: buildLessonUrl(flattenLessons[index - 1]),
+        title: flattenLessons[index - 1].title,
       }
-    })();
-  }, [courseSlug, moduleSlug, sectionSlug, lessonSlug]);
+    : null
+);
+
+// ➡️ Step 5: Set next lesson
+setNextLesson(
+  index < flattenLessons.length - 1
+    ? {
+        path: buildLessonUrl(flattenLessons[index + 1]),
+        title: flattenLessons[index + 1].title,
+      }
+    : null
+);
+
+
+    // 📘 6. Load lesson JSON
+    const lessonData = await importLessonJson(courseSlug, moduleSlug, sectionSlug, subsectionSlug, lessonSlug);
+    if (!lessonData) return;
+    lessonData.mdFile = lessonSlug+".md";
+    setLesson(lessonData);
+
+    // 🪶 7. Load markdown content if available
+    if (lessonData.mdFile) {
+      const md = await fetchMarkdown(courseSlug, moduleSlug, sectionSlug, subsectionSlug, lessonSlug, lessonData.mdFile);
+      setMarkdown(md);
+    } else {
+      setMarkdown(lessonData.content || '');
+    }
+  })();
+}, [courseSlug, moduleSlug, sectionSlug, lessonSlug]);
+
 
   if (!lesson) {
     return (
@@ -181,8 +285,16 @@ export default function LessonPage() {
         );
         return;
       }
+      if (line.startsWith('---')) {
+        elements.push(<hr key={index} className="my-8 border-t  opacity-100" />);
+        return;
+      }
 
       // Headings
+      if (line.startsWith('# ')) {
+        elements.push(<h2 key={index} className="text-3xl font-bold mt-6 mb-3 text-foreground">{line.slice(2)}</h2>);
+        return;
+      }
       if (line.startsWith('## ')) {
         elements.push(<h2 key={index} className="text-2xl font-bold mt-6 mb-3 text-foreground">{line.slice(3)}</h2>);
         return;

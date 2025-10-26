@@ -62,7 +62,7 @@ const testimonials = [
   {
     name: "Sarah Chen",
     role: "Software Engineer at Google",
-    content: "Interview60 helped me land my dream job at Google. The structured approach and real interview patterns made all the difference.",
+    content: "InterviewBucket helped me land my dream job at Google. The structured approach and real interview patterns made all the difference.",
     rating: 5
   },
   {
@@ -86,7 +86,7 @@ const Index = () => {
     return (
       <Layout>
         <div className="container mx-auto px-4 py-12">
-          <h1 className="text-4xl font-bold mb-4">Welcome to Interview60</h1>
+          <h1 className="text-4xl font-bold mb-4">Welcome to InterviewBucket</h1>
           <p className="text-muted-foreground">Select a course from the menu to get started.</p>
         </div>
       </Layout>
@@ -228,7 +228,7 @@ const Index = () => {
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Join thousands of developers who've successfully prepared for and aced 
-            their coding interviews with Interview60.
+            their coding interviews with InterviewBucket.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -266,7 +266,7 @@ const Index = () => {
                 <div className="w-8 h-8 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center">
                   <BookOpen className="w-4 h-4 text-white" />
                 </div>
-                <span className="font-bold text-xl">Interview60</span>
+                <span className="font-bold text-xl">InterviewBucket</span>
               </div>
               <p className="text-muted-foreground">
                 The most structured way to prepare for coding interviews.
@@ -304,7 +304,7 @@ const Index = () => {
           </div>
           
           <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 Interview60. All rights reserved.</p>
+            <p>&copy; 2025 InterviewBucket. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -1,6 +1,6 @@
 // /components/AppSidebar.tsx
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate  } from 'react-router-dom';
 import {
   Sidebar,
   SidebarContent,
@@ -11,6 +11,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarHeader,
+  useSidebar,
 } from '@/components/ui/sidebar';
 import {
   Code,
@@ -29,8 +30,8 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
 
 // Import courses
-import dsaCourseData from '@/data/courses/dsaCourse.json';
-import systemDesignCourseData from '@/data/courses/systemDesignCourse.json';
+import dsaCourseData from '@/data/courses/dsa/dsa.json';
+import systemDesignCourseData from '@/data/courses/system-design/system-design.json';
 import lldCourseData from '@/data/courses/lldCourse.json';
 import behavioralCourseData from '@/data/courses/behavioralCourse.json';
 
@@ -46,6 +47,7 @@ export function AppSidebar() {
   const pathSegments = location.pathname.split('/');
   const courseSlug = pathSegments[2];
   const course = courses.find((c) => c.id === courseSlug);
+  const { setOpenMobile  } = useSidebar(); // ✅ Sidebar context hook
 
   const [searchQuery, setSearchQuery] = useState('');
   const [openModuleIndex, setOpenModuleIndex] = useState<number | null>(null);
@@ -54,28 +56,60 @@ export function AppSidebar() {
   const matchesSearch = (text: string) =>
     text?.toLowerCase().includes(searchQuery.toLowerCase());
 
-  // ✅ Auto-open active module
-  useEffect(() => {
-    if (!course) return;
+const navigate = useNavigate();
 
-    const activeModuleIndex =
-      course.modules.findIndex((module: any) =>
-        module.sections?.some((section: any) =>
-          section.lessons.some((lesson: any) => {
-            if (lesson.lessons) {
-              return lesson.lessons.some((sl) =>
-                location.pathname.includes(`/${module.slug}/${section.slug}/${sl.slug}`)
-              );
-            }
-            return location.pathname.includes(`/${module.slug}/${section.slug}/${lesson.slug}`);
-          })
-        )
-      ) ?? null;
+useEffect(() => {
+  if (!course) return;
 
-    if (activeModuleIndex !== null && openModuleIndex === null) {
-      setOpenModuleIndex(activeModuleIndex);
+  // 🧭 1️⃣ Detect if we’re at course root (e.g. /course/system-design)
+  const isCourseRoot = pathSegments.length <= 3;
+
+  // 🧩 2️⃣ Try to find the active module by path
+  const activeModuleIndex =
+    course.modules.findIndex((module: any) =>
+      module.sections?.some((section: any) =>
+        section.lessons.some((lesson: any) => {
+          if (lesson.lessons) {
+            // has sub-lessons
+            return lesson.lessons.some((sl: any) =>
+              location.pathname.includes(`/${module.slug}/${section.slug}/${lesson.slug}/${sl.slug}`)
+            );
+          }
+          return location.pathname.includes(`/${module.slug}/${section.slug}/${lesson.slug}`);
+        })
+      )
+    ) ?? 0;
+
+  // 🧭 3️⃣ Default to first module if none active
+  const openIndex = activeModuleIndex >= 0 ? activeModuleIndex : 0;
+  if (openModuleIndex === null) setOpenModuleIndex(openIndex);
+
+  // 🚀 4️⃣ If at course root (like /course/system-design) → redirect to first lesson
+  if (isCourseRoot) {
+    const firstModule = course.modules?.[0];
+    const firstSection = firstModule?.sections?.[0];
+    const firstLesson = firstSection?.lessons?.[0];
+
+    if (firstLesson) {
+      let firstPath = '';
+
+      if (firstLesson.lessons && firstLesson.lessons.length > 0) {
+        // 🧠 subsection lesson
+        const subLesson = firstLesson.lessons[0];
+        firstPath = `/course/${courseSlug}/${firstModule.slug}/${firstSection.slug}/${firstLesson.slug}/${subLesson.slug}`;
+      } else {
+        // 🧠 normal lesson
+        firstPath = `/course/${courseSlug}/${firstModule.slug}/${firstSection.slug}/${firstLesson.slug}`;
+      }
+
+      // ✅ Navigate only if not already there
+      if (location.pathname !== firstPath) {
+        navigate(firstPath, { replace: true });
+      }
     }
-  }, [location.pathname, course]);
+  }
+}, [location.pathname, course]);
+
 
   const handleModuleToggle = (index: number) => {
     setOpenModuleIndex(openModuleIndex === index ? null : index);
@@ -119,7 +153,7 @@ export function AppSidebar() {
               return matchesSearch(lesson.title);
             })
             .map((lesson: any, lessonIndex: number) => {
-              const hasSubLessons = Array.isArray(lesson.sections) && lesson.sections.length > 0;
+              const hasSubLessons = Array.isArray(lesson.lessons) && lesson.lessons.length > 0;
 
               // Case 1️⃣: Lesson with sub-lessons
               if (hasSubLessons) {
@@ -129,7 +163,7 @@ export function AppSidebar() {
                       {lesson.title}
                     </div>
                     <div className="flex flex-col">
-                      {lesson.sections
+                      {lesson.lessons
                         .filter((subLesson: any) => matchesSearch(subLesson.title))
                         .map((subLesson: any, subIdx: number) => {
                           const subLessonPath = `/course/${courseSlug}/${module.slug}/${section.slug}/${lesson.slug}/${subLesson.slug}`;
@@ -141,7 +175,7 @@ export function AppSidebar() {
                                 asChild
                                 isActive={isActive}
                                 className={cn(
-                                  'w-full py-2 px-3 rounded-md transition-colors',
+                                  'w-full py-2 px-3 h-8 rounded-md transition-colors',
                                   'hover:bg-accent/50',
                                   isActive && 'bg-primary/10 font-medium text-primary',
                                   !isActive && 'text-muted-foreground hover:text-foreground'
@@ -181,21 +215,25 @@ export function AppSidebar() {
                     asChild
                     isActive={isActive}
                     className={cn(
-                      'w-full py-2 px-3 rounded-md transition-colors',
+                      'w-full py-2 px-3 h-8 rounded-md transition-colors',
                       'hover:bg-accent/50',
                       isActive && 'bg-primary/10 font-medium text-primary',
                       !isActive && 'text-muted-foreground hover:text-foreground'
                     )}
                   >
-                    <Link to={lessonPath} className="flex items-center gap-2 w-full">
+                    <Link to={lessonPath} 
+                      onClick={() => {
+                        if (window.innerWidth < 768) setOpenMobile (false);
+                      }}
+                      className="flex items-center gap-2 w-full">
                       {isActive ? (
                         <CircleDot className="h-3.5 w-3.5 text-primary" />
                       ) : (
                         <Circle className="h-3.5 w-3.5" />
                       )}
-                      <span className="text-sm flex-1 min-w-0 truncate" title={lesson.title}>
-                        {lesson.title.length > 25
-                          ? `${lesson.title.slice(0, 25)}...`
+                      <span className="text-sm flex-1 min-w-0 break-words whitespace-normal" title={lesson.title}>
+                        {lesson.title.length > 30
+                          ? `${lesson.title.slice(0, 30)}...`
                           : lesson.title}
                       </span>
                       {isLocked && (
@@ -271,10 +309,8 @@ export function AppSidebar() {
                               >
                                 <div className="flex items-center gap-2 min-w-0 flex-1 overflow-hidden">
                                   <Code className="h-4 w-4 flex-shrink-0 text-primary" />
-                                  <span className="text-[16px] font-bold truncate">
-                                    {module.title.length > 25
-                                      ? `${module.title.slice(0, 25)}...`
-                                      : module.title}
+                                  <span className="text-[16px] font-bold break-words whitespace-normal leading-snug">
+                                    {module.title}
                                   </span>
                                 </div>
                                 <ChevronDown

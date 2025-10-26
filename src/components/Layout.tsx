@@ -54,7 +54,7 @@ export function Layout({ children }: LayoutProps) {
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2 font-bold text-lg hover:opacity-80 transition-opacity">
                   <GraduationCap className="h-6 w-6 text-primary" />
-                  <span className="hidden sm:inline">Interview60</span>
+                  <span className="hidden sm:inline">InterviewSort</span>
                 </Link>
                 
                 <div className="h-6 w-px bg-border hidden lg:block" />
@@ -75,7 +75,7 @@ export function Layout({ children }: LayoutProps) {
                               Data Structures & Algorithms
                             </p>
                           </Link>
-                          <Link className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground" to="/course/system-design-hld">
+                          <Link className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground" to="/course/system-design">
                             <div className="text-sm font-medium leading-none">System Design (HLD)</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               High Level Design
@@ -194,7 +194,7 @@ export function Layout({ children }: LayoutProps) {
                           </div>
                         </Link>
                         <Link 
-                          to="/course/system-design-hld" 
+                          to="/course/system-design" 
                           className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-accent transition-colors"
                           onClick={() => setMobileMenuOpen(false)}
                         >

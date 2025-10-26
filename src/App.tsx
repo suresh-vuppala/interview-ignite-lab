@@ -32,9 +32,8 @@ const App = () => (
               <Route path="/auth" element={<Auth />} />
               <Route path="/course/:courseSlug" element={<CourseOverview />} />
               // Route for lessons **with section slug**
+              <Route path="/course/:courseSlug/:moduleSlug/:sectionSlug/:subsectionSlug/:lessonSlug" element={<LessonPage />} />
               <Route path="/course/:courseSlug/:moduleSlug/:sectionSlug/:lessonSlug" element={<LessonPage />} />
-              <Route path="/course/:courseSlug/:moduleSlug/:sectionSlug/:lessonSlug/:sublessonSlug" element={<LessonPage />} />
-
               // Route for lessons **without section slug** (directly under module)
               <Route path="/course/:courseSlug/:moduleSlug/:lessonSlug" element={<LessonPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

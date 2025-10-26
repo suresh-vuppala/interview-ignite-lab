@@ -18,7 +18,7 @@ const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 // === UPDATED: responsive widths (only change) ===
 const SIDEBAR_WIDTH_MOBILE = "20rem";   // mobile base
 const SIDEBAR_WIDTH_TABLET = "22rem";   // tablet
-const SIDEBAR_WIDTH_DESKTOP = "25rem";  // desktop
+const SIDEBAR_WIDTH_DESKTOP = "22rem";  // desktop
 const SIDEBAR_WIDTH_ICON = "3rem";
 // =================================================
 
@@ -432,7 +432,7 @@ const sidebarMenuButtonVariants = cva(
           "bg-background shadow-[0_0_0_1px_hsl(var(--sidebar-border))] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))]",
       },
       size: {
-        default: "h-8 text-sm",
+        default: "h-10 text-sm",
         sm: "h-7 text-xs",
         lg: "h-12 text-sm group-data-[collapsible=icon]:!p-0",
       },
