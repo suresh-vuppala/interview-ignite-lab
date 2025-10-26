@@ -1,0 +1,18 @@
+{
+  "order": 1,
+  "title": "Introducing Sliding Window Technique",
+  "slug": "introducing-sliding-window",
+  "isPremium": false,
+  "mdFile": "introducing-sliding-window.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/sliding-window-technique/sliding-window/introducing-sliding-window/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

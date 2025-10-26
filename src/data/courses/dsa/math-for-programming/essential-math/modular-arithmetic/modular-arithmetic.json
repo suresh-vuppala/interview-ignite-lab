@@ -1,0 +1,18 @@
+{
+  "order": 4,
+  "title": "Modular Arithmetic",
+  "slug": "modular-arithmetic",
+  "isPremium": false,
+  "mdFile": "modular-arithmetic.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/math-for-programming/essential-math/modular-arithmetic/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "order": 4,
+  "title": "Problems on BST",
+  "slug": "problems-on-bst",
+  "isPremium": false,
+  "mdFile": "problems-on-bst.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/binary-search-trees/bst-operations/problems-on-bst/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "order": 1,
+  "title": "Getting Started with String Problems",
+  "slug": "getting-started-with-strings",
+  "isPremium": false,
+  "mdFile": "getting-started-with-strings.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/string-problems/string-rolling-hash/getting-started-with-strings/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

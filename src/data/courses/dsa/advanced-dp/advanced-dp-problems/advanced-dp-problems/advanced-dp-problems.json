@@ -1,0 +1,18 @@
+{
+  "order": 1,
+  "title": "Advanced DP Problems",
+  "slug": "advanced-dp-problems",
+  "isPremium": false,
+  "mdFile": "advanced-dp-problems.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/advanced-dp/advanced-dp-problems/advanced-dp-problems/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

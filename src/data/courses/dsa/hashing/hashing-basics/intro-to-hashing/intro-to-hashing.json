@@ -1,0 +1,18 @@
+{
+  "order": 1,
+  "title": "Introduction to Hashing",
+  "slug": "intro-to-hashing",
+  "isPremium": false,
+  "mdFile": "intro-to-hashing.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/hashing/hashing-basics/intro-to-hashing/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

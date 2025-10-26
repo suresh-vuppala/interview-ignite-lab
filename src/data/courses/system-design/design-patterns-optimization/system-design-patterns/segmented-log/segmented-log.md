@@ -1,0 +1,3 @@
+# Segmented Log
+
+Content coming soon...

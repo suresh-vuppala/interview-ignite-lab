@@ -1,0 +1,18 @@
+{
+  "order": 2,
+  "title": "Bubble Sort",
+  "slug": "bubble-sort",
+  "isPremium": false,
+  "mdFile": "bubble-sort.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/bubble-sort/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

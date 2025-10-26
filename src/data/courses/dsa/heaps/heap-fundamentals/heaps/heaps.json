@@ -1,0 +1,18 @@
+{
+  "order": 1,
+  "title": "Heaps",
+  "slug": "heaps",
+  "isPremium": false,
+  "mdFile": "heaps.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/heaps/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

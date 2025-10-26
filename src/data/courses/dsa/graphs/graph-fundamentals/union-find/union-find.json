@@ -1,0 +1,18 @@
+{
+  "order": 9,
+  "title": "Union-Find",
+  "slug": "union-find",
+  "isPremium": false,
+  "mdFile": "union-find.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/union-find/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

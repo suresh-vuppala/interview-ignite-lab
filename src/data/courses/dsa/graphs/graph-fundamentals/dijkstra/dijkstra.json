@@ -1,0 +1,18 @@
+{
+  "order": 5,
+  "title": "Dijkstra\u2019s Algorithm",
+  "slug": "dijkstra",
+  "isPremium": false,
+  "mdFile": "dijkstra.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/dijkstra/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

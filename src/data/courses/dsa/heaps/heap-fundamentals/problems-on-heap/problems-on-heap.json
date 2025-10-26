@@ -1,0 +1,18 @@
+{
+  "order": 4,
+  "title": "Problems on Heap",
+  "slug": "problems-on-heap",
+  "isPremium": false,
+  "mdFile": "problems-on-heap.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/problems-on-heap/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

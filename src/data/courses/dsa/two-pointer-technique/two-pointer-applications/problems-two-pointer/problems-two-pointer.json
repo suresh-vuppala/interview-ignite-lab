@@ -1,0 +1,18 @@
+{
+  "order": 2,
+  "title": "Problems on Two Pointer Technique",
+  "slug": "problems-two-pointer",
+  "isPremium": false,
+  "mdFile": "problems-two-pointer.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/two-pointer-technique/two-pointer-applications/problems-two-pointer/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

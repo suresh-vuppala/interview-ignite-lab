@@ -1,0 +1,18 @@
+{
+  "order": 1,
+  "title": "Subarrays vs Subsets vs Subsequences",
+  "slug": "subarrays-vs-subsets-vs-subsequences",
+  "isPremium": false,
+  "mdFile": "subarrays-vs-subsets-vs-subsequences.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/core-topics/subarrays-vs-subsets-vs-subsequences/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "order": 3,
+  "title": "Input/Output",
+  "slug": "input-output",
+  "isPremium": false,
+  "mdFile": "input-output.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/programming-essentials/getting-started/input-output/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

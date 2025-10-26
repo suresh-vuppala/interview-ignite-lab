@@ -1,0 +1,18 @@
+{
+  "order": 2,
+  "title": "Problems on Rolling Hash",
+  "slug": "problems-on-rolling-hash",
+  "isPremium": false,
+  "mdFile": "problems-on-rolling-hash.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/string-problems/string-rolling-hash/problems-on-rolling-hash/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# RabbitMQ and Amazon SQS Internals
+
+Content coming soon...

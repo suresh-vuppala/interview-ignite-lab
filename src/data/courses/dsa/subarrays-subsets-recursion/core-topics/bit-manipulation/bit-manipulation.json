@@ -1,0 +1,18 @@
+{
+  "order": 2,
+  "title": "Bit Manipulation",
+  "slug": "bit-manipulation",
+  "isPremium": false,
+  "mdFile": "bit-manipulation.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/core-topics/bit-manipulation/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

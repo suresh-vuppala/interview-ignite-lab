@@ -1,0 +1,18 @@
+{
+  "order": 3,
+  "title": "Insertion Sort",
+  "slug": "insertion-sort",
+  "isPremium": false,
+  "mdFile": "insertion-sort.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/insertion-sort/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

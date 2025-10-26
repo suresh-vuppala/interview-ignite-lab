@@ -1,0 +1,18 @@
+{
+  "order": 4,
+  "title": "Selection Sort",
+  "slug": "selection-sort",
+  "isPremium": false,
+  "mdFile": "selection-sort.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/selection-sort/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

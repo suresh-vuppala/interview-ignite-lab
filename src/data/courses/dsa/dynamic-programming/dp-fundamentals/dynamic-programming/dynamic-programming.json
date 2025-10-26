@@ -1,0 +1,18 @@
+{
+  "order": 1,
+  "title": "Dynamic Programming",
+  "slug": "dynamic-programming",
+  "isPremium": false,
+  "mdFile": "dynamic-programming.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/dynamic-programming/dp-fundamentals/dynamic-programming/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

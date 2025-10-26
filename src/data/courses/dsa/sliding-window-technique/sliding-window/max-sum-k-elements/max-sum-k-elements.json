@@ -1,0 +1,18 @@
+{
+  "order": 2,
+  "title": "Maximum Sum of K Consecutive Elements",
+  "slug": "max-sum-k-elements",
+  "isPremium": false,
+  "mdFile": "max-sum-k-elements.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/sliding-window-technique/sliding-window/max-sum-k-elements/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

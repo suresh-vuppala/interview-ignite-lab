@@ -1,0 +1,3 @@
+# Applications of Binary Search
+
+Content coming soon...

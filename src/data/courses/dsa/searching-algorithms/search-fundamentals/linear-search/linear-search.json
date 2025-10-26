@@ -1,0 +1,18 @@
+{
+  "order": 2,
+  "title": "Linear Search",
+  "slug": "linear-search",
+  "isPremium": false,
+  "mdFile": "linear-search.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/searching-algorithms/search-fundamentals/linear-search/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

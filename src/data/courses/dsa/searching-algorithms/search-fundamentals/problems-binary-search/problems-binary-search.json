@@ -1,0 +1,18 @@
+{
+  "order": 6,
+  "title": "Problems on Binary Search",
+  "slug": "problems-binary-search",
+  "isPremium": false,
+  "mdFile": "problems-binary-search.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/searching-algorithms/search-fundamentals/problems-binary-search/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

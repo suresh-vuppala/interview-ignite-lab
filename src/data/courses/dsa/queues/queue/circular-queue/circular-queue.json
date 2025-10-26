@@ -1,0 +1,18 @@
+{
+  "order": 2,
+  "title": "Circular Queue",
+  "slug": "circular-queue",
+  "isPremium": false,
+  "mdFile": "circular-queue.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/queues/queue/circular-queue/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

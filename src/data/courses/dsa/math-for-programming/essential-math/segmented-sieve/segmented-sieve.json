@@ -1,0 +1,18 @@
+{
+  "order": 3,
+  "title": "Segmented Sieve",
+  "slug": "segmented-sieve",
+  "isPremium": false,
+  "mdFile": "segmented-sieve.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/math-for-programming/essential-math/segmented-sieve/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

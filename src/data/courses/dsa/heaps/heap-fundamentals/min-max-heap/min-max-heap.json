@@ -1,0 +1,18 @@
+{
+  "order": 2,
+  "title": "Min/Max Heap",
+  "slug": "min-max-heap",
+  "isPremium": false,
+  "mdFile": "min-max-heap.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/min-max-heap/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

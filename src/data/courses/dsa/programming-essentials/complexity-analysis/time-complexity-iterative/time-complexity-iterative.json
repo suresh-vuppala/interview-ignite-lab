@@ -1,0 +1,18 @@
+{
+  "order": 1,
+  "title": "Time Complexity Analysis of Iterative Programs",
+  "slug": "time-complexity-iterative",
+  "isPremium": false,
+  "mdFile": "time-complexity-iterative.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/programming-essentials/complexity-analysis/time-complexity-iterative/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Characteristics
+
+Content coming soon...

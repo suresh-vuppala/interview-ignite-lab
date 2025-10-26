@@ -1,0 +1,18 @@
+{
+  "order": 3,
+  "title": "Tree Traversals (Recursive/Iterative)",
+  "slug": "tree-traversals-recursive-iterative",
+  "isPremium": false,
+  "mdFile": "tree-traversals-recursive-iterative.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/binary-search-trees/bst-operations/tree-traversals-recursive-iterative/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

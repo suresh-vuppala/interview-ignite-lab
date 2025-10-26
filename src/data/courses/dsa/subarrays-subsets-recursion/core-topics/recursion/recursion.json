@@ -1,0 +1,18 @@
+{
+  "order": 3,
+  "title": "Recursion",
+  "slug": "recursion",
+  "isPremium": false,
+  "mdFile": "recursion.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/core-topics/recursion/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

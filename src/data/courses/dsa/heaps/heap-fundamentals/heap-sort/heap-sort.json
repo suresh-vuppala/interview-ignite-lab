@@ -1,0 +1,18 @@
+{
+  "order": 3,
+  "title": "Heap Sort",
+  "slug": "heap-sort",
+  "isPremium": false,
+  "mdFile": "heap-sort.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/heap-sort/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

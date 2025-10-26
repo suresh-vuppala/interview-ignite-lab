@@ -1,0 +1,18 @@
+{
+  "order": 2,
+  "title": "Nth Fibonacci Number",
+  "slug": "nth-fibonacci",
+  "isPremium": false,
+  "mdFile": "nth-fibonacci.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/dynamic-programming/dp-fundamentals/nth-fibonacci/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

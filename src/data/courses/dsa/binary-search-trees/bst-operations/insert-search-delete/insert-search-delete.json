@@ -1,0 +1,18 @@
+{
+  "order": 2,
+  "title": "Insert/Search/Delete",
+  "slug": "insert-search-delete",
+  "isPremium": false,
+  "mdFile": "insert-search-delete.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/binary-search-trees/bst-operations/insert-search-delete/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

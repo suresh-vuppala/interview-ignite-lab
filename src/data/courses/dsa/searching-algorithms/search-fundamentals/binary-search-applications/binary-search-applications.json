@@ -1,0 +1,18 @@
+{
+  "order": 4,
+  "title": "Applications of Binary Search",
+  "slug": "binary-search-applications",
+  "isPremium": false,
+  "mdFile": "binary-search-applications.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/searching-algorithms/search-fundamentals/binary-search-applications/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

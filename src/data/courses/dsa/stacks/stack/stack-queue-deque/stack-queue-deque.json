@@ -1,0 +1,18 @@
+{
+  "order": 1,
+  "title": "Stack",
+  "slug": "stack-queue-deque",
+  "isPremium": false,
+  "mdFile": "stack-queue-deque.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/stacks/stack/stack-queue-deque/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

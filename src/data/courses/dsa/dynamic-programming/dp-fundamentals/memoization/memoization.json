@@ -1,0 +1,18 @@
+{
+  "order": 3,
+  "title": "Memoization",
+  "slug": "memoization",
+  "isPremium": false,
+  "mdFile": "memoization.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/dynamic-programming/dp-fundamentals/memoization/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

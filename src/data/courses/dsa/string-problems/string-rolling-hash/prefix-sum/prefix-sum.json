@@ -1,0 +1,18 @@
+{
+  "order": 6,
+  "title": "Prefix Sum",
+  "slug": "prefix-sum",
+  "isPremium": false,
+  "mdFile": "prefix-sum.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/string-problems/string-rolling-hash/prefix-sum/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

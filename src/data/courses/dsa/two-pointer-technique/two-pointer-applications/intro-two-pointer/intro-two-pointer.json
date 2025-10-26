@@ -1,0 +1,18 @@
+{
+  "order": 1,
+  "title": "Introduction to Two Pointer Technique",
+  "slug": "intro-two-pointer",
+  "isPremium": false,
+  "mdFile": "intro-two-pointer.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/two-pointer-technique/two-pointer-applications/intro-two-pointer/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

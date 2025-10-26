@@ -1,0 +1,18 @@
+{
+  "order": 3,
+  "title": "Binary Search",
+  "slug": "binary-search",
+  "isPremium": false,
+  "mdFile": "binary-search.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/searching-algorithms/search-fundamentals/binary-search/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

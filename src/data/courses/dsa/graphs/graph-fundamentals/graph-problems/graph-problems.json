@@ -1,0 +1,18 @@
+{
+  "order": 4,
+  "title": "Problems",
+  "slug": "graph-problems",
+  "isPremium": false,
+  "mdFile": "graph-problems.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/graph-problems/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}

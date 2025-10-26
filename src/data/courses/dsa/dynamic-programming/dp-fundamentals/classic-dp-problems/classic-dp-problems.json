@@ -1,0 +1,18 @@
+{
+  "order": 5,
+  "title": "Classic DP Problems",
+  "slug": "classic-dp-problems",
+  "isPremium": false,
+  "mdFile": "classic-dp-problems.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/dynamic-programming/dp-fundamentals/classic-dp-problems/code/java/Example.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
+}
