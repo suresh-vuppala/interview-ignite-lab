@@ -1,4 +1,7 @@
 {
   "title": "Performance Metrics",
-  "slug": "performance-metrics"
+  "slug": "performance-metrics",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "performance-metrics.md"
 }

@@ -1,4 +1,7 @@
 {
   "title": "Segmented Log",
-  "slug": "segmented-log"
+  "slug": "segmented-log",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "segmented-log.md"
 }

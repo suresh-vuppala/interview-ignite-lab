@@ -1,0 +1,7 @@
+{
+  "title": "Database Proxying and Query Routing (PgBouncer, ProxySQL, Vitess)",
+  "slug": "db-proxy-query-routing",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "db-proxy-query-routing.md"
+}

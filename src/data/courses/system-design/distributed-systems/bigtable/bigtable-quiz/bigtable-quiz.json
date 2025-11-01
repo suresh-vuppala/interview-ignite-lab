@@ -1,4 +1,7 @@
 {
   "title": "Quiz",
-  "slug": "bigtable-quiz"
+  "slug": "bigtable-quiz",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bigtable-quiz.md"
 }

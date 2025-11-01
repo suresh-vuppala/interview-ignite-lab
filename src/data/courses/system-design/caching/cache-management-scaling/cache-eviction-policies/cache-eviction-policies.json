@@ -1,0 +1,7 @@
+{
+  "title": "Cache Eviction Policies (LRU, LFU, FIFO)",
+  "slug": "cache-eviction-policies",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "cache-eviction-policies.md"
+}

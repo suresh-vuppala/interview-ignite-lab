@@ -1,4 +1,7 @@
 {
   "title": "Partitioning and High-level Architecture",
-  "slug": "bigtable-partitioning-architecture"
+  "slug": "bigtable-partitioning-architecture",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bigtable-partitioning-architecture.md"
 }

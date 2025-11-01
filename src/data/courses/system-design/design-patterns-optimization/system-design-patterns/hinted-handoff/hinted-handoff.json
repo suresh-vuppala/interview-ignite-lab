@@ -1,4 +1,7 @@
 {
   "title": "Hinted Handoff",
-  "slug": "hinted-handoff"
+  "slug": "hinted-handoff",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "hinted-handoff.md"
 }

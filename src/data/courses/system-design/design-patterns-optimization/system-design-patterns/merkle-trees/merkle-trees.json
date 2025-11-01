@@ -1,4 +1,7 @@
 {
   "title": "Merkle Trees",
-  "slug": "merkle-trees"
+  "slug": "merkle-trees",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "merkle-trees.md"
 }

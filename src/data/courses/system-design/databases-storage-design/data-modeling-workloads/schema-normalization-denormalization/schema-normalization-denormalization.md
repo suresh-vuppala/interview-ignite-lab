@@ -1,0 +1,3 @@
+# Schema Design: Normalization vs Denormalization
+
+Content coming soon...

@@ -1,4 +1,7 @@
 {
   "title": "PACELC Theorem",
-  "slug": "pacelc-theorem"
+  "slug": "pacelc-theorem",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "pacelc-theorem.md"
 }

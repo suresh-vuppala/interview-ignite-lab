@@ -1,3 +1,0 @@
-# SQL vs NoSQL Databases
-
-Content coming soon...

@@ -1,4 +1,7 @@
 {
   "title": "Summary",
-  "slug": "bigtable-summary"
+  "slug": "bigtable-summary",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bigtable-summary.md"
 }

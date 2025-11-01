@@ -1,4 +1,7 @@
 {
   "title": "Deep Dive",
-  "slug": "hdfs-deep-dive"
+  "slug": "hdfs-deep-dive",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "hdfs-deep-dive.md"
 }

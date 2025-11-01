@@ -1,4 +1,7 @@
 {
   "title": "Single Master and Large Chunk Size",
-  "slug": "gfs-single-master-large-chunk"
+  "slug": "gfs-single-master-large-chunk",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "gfs-single-master-large-chunk.md"
 }

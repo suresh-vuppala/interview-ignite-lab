@@ -1,4 +1,7 @@
 {
   "title": "High Availability (HA)",
-  "slug": "hdfs-high-availability"
+  "slug": "hdfs-high-availability",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "hdfs-high-availability.md"
 }

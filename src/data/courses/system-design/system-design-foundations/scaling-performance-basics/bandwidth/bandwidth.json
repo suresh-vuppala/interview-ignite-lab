@@ -1,4 +1,7 @@
 {
   "title": "Bandwidth",
-  "slug": "bandwidth"
+  "slug": "bandwidth",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bandwidth.md"
 }

@@ -1,4 +1,7 @@
 {
   "title": "Characteristics",
-  "slug": "bigtable-characteristics"
+  "slug": "bigtable-characteristics",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bigtable-characteristics.md"
 }

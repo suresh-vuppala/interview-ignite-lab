@@ -1,4 +1,7 @@
 {
   "title": "Read Repair",
-  "slug": "read-repair"
+  "slug": "read-repair",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "read-repair.md"
 }

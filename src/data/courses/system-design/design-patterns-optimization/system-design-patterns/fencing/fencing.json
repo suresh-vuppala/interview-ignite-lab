@@ -1,4 +1,7 @@
 {
   "title": "Fencing",
-  "slug": "fencing"
+  "slug": "fencing",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "fencing.md"
 }

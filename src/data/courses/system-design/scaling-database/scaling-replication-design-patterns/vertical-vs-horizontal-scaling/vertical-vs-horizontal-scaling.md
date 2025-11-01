@@ -1,0 +1,3 @@
+# Vertical vs Horizontal Scaling
+
+Content coming soon...

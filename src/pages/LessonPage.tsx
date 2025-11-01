@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/Layout';
+import  CountdownTimer  from '@/components/CountdownTimer';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
@@ -18,6 +19,7 @@ interface Lesson {
   title: string;
   slug: string;
   isPremium: boolean;
+  isPosted: boolean;
   type?: 'subHeader';
   lessons?: Lesson[];
   sectionSlug?: string;
@@ -487,72 +489,104 @@ const renderTable = (lines: string[], key: number) => {
 };
 
 
-  return (
-    <Layout>
-      <div className="max-w-7xl mx-auto p-4 sm:p-6">
-        {/* Header */}
-        <div className="mb-6 flex items-center justify-between flex-wrap gap-3">
-          <h1 className="text-3xl font-bold">{lesson.title}</h1>
-          {lesson.isPremium && (
-            <Badge variant="secondary" className="gap-1 flex items-center">
-              <Crown className="w-3 h-3" /> PRO
-            </Badge>
-          )}
-        </div>
+return (
+  <Layout>
+    <div className="max-w-7xl mx-auto p-4 sm:p-6">
+      {/* Header */}
+      <div className="mb-6 flex items-center justify-between flex-wrap gap-3">
+        <h1 className="text-3xl font-bold">{lesson.title}</h1>
+        {lesson.isPremium && (
+          <Badge variant="secondary" className="gap-1 flex items-center">
+            <Crown className="w-3 h-3" /> PRO
+          </Badge>
+        )}
+      </div>
 
-        {/* Lesson Content */}
-        <div className="space-y-4">
-          {isLockedContent ? (
-            <div className="relative p-8 min-h-[400px] bg-muted/20 rounded-lg">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/70 to-background flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <Lock className="w-16 h-16 mx-auto text-muted-foreground" />
-                  <h3 className="text-2xl font-bold">Premium Content</h3>
-                  <p className="text-muted-foreground max-w-md mx-auto">
-                    Unlock this lesson to access advanced topics and code examples.
-                  </p>
-                  <Button size="lg" asChild>
-                    <Link to="/upgrade">
-                      <Crown className="w-5 h-5 mr-2" /> Unlock Premium Content
-                    </Link>
-                  </Button>
-                </div>
+      {/* Lesson Content */}
+      <div className="space-y-4">
+        {/* Case 1: Coming Soon (Not Posted Yet) */}
+        {!lesson.isPosted ? (
+          <div className="relative p-10 min-h-[400px] bg-gradient-to-b from-pink-50 to-white dark:from-pink-950/40 dark:to-background rounded-lg flex flex-col items-center justify-center text-center border border-pink-200 dark:border-pink-900 shadow-sm">
+            <div className="space-y-6 max-w-lg">
+              <h3 className="text-3xl font-bold text-foreground">
+                Full Course Dropping Soon 🚀
+              </h3>
+              <p className="text-muted-foreground text-lg">
+                We're putting the final touches! The course launches in:
+              </p>
+
+              {/* Countdown */}
+              <CountdownTimer targetDate="2026-01-01T00:00:00" />
+
+              <p className="text-muted-foreground text-base">
+                Get early updates, exclusive access, and free resources — join our waitlist below.
+              </p>
+
+              <Button
+                size="lg"
+                className="mt-3 bg-primary text-white hover:bg-primary/90"
+                asChild
+              >
+                <Link to="/join">Join the Waitlist</Link>
+              </Button>
+            </div>
+          </div>
+        ) : lesson.isPremium ? (
+          /* Case 2: Premium Content Lock */
+          <div className="relative p-8 min-h-[400px] bg-muted/20 rounded-lg">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/70 to-background flex items-center justify-center">
+              <div className="text-center space-y-4">
+                <Lock className="w-16 h-16 mx-auto text-muted-foreground" />
+                <h3 className="text-2xl font-bold">Premium Content</h3>
+                <p className="text-muted-foreground max-w-md mx-auto">
+                  Unlock this lesson to access advanced topics and code examples.
+                </p>
+                <Button size="lg" asChild>
+                  <Link to="/upgrade">
+                    <Crown className="w-5 h-5 mr-2" /> Unlock Premium Content
+                  </Link>
+                </Button>
               </div>
             </div>
-          ) : (
-            <div className="space-y-3 leading-relaxed">{renderMarkdown(markdown)}</div>
-          )}
-        </div>
-
-        {/* Navigation */}
-        <div className="flex justify-between mt-8 pt-6 border-t">
-          {prevLesson ? (
-            <Button variant="outline" asChild>
-              <Link to={prevLesson.path}>
-                <ChevronLeft className="w-4 h-4 mr-2" />
-                <span className="truncate max-w-[150px]">{prevLesson.title}</span>
-              </Link>
-            </Button>
-          ) : (
-            <Button variant="outline" disabled>
-              <ChevronLeft className="w-4 h-4 mr-2" /> Previous
-            </Button>
-          )}
-          {nextLesson ? (
-            <Button variant="outline" asChild>
-              <Link to={nextLesson.path}>
-                <span className="truncate max-w-[150px]">{nextLesson.title}</span>
-                <ChevronRight className="w-4 h-4 ml-2" />
-              </Link>
-            </Button>
-          ) : (
-            <Button variant="outline" disabled>
-              Next <ChevronRight className="w-4 h-4 ml-2" />
-            </Button>
-          )}
-        </div>
+          </div>
+        ) : (
+          /* Case 3: Public Lesson Content */
+          <div className="space-y-3 leading-relaxed">
+            {renderMarkdown(markdown)}
+          </div>
+        )}
       </div>
-      <ScrollToTop />
-    </Layout>
-  );
+
+      {/* Navigation */}
+      <div className="flex justify-between mt-8 pt-6 border-t">
+        {prevLesson ? (
+          <Button variant="outline" asChild>
+            <Link to={prevLesson.path}>
+              <ChevronLeft className="w-4 h-4 mr-2" />
+              <span className="truncate max-w-[150px]">{prevLesson.title}</span>
+            </Link>
+          </Button>
+        ) : (
+          <Button variant="outline" disabled>
+            <ChevronLeft className="w-4 h-4 mr-2" /> Previous
+          </Button>
+        )}
+        {nextLesson ? (
+          <Button variant="outline" asChild>
+            <Link to={nextLesson.path}>
+              <span className="truncate max-w-[150px]">{nextLesson.title}</span>
+              <ChevronRight className="w-4 h-4 ml-2" />
+            </Link>
+          </Button>
+        ) : (
+          <Button variant="outline" disabled>
+            Next <ChevronRight className="w-4 h-4 ml-2" />
+          </Button>
+        )}
+      </div>
+    </div>
+    <ScrollToTop />
+  </Layout>
+);
+
 }

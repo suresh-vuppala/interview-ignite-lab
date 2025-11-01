@@ -1,4 +1,7 @@
 {
   "title": "Latency",
-  "slug": "latency"
+  "slug": "latency",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "latency.md"
 }

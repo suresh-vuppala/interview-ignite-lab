@@ -1,4 +1,7 @@
 {
   "title": "Leader and Follower",
-  "slug": "leader-follower"
+  "slug": "leader-follower",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "leader-follower.md"
 }

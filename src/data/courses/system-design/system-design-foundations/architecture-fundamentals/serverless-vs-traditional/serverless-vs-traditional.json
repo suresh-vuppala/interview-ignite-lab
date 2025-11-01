@@ -1,4 +1,7 @@
 {
   "title": "Serverless vs Traditional Architectures",
-  "slug": "serverless-vs-traditional"
+  "slug": "serverless-vs-traditional",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "serverless-vs-traditional.md"
 }

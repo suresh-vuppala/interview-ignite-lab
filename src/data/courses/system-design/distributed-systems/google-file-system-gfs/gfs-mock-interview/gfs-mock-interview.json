@@ -1,4 +1,7 @@
 {
   "title": "Mock Interview",
-  "slug": "gfs-mock-interview"
+  "slug": "gfs-mock-interview",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "gfs-mock-interview.md"
 }

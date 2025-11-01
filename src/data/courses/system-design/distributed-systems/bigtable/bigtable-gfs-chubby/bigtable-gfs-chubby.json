@@ -1,4 +1,7 @@
 {
   "title": "GFS and Chubby",
-  "slug": "bigtable-gfs-chubby"
+  "slug": "bigtable-gfs-chubby",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bigtable-gfs-chubby.md"
 }

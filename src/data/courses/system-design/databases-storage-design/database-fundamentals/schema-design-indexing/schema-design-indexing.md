@@ -1,3 +1,0 @@
-# Schema Design and Indexing
-
-Content coming soon...

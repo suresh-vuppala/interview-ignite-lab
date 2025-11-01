@@ -1,0 +1,7 @@
+{
+  "title": "Distributed Transactions (Two-Phase Commit, XA)",
+  "slug": "distributed-transactions",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "distributed-transactions.md"
+}

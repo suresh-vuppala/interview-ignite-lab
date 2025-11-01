@@ -1,0 +1,3 @@
+# Index Types: B-Tree, Hash, GiST, GIN, Inverted Indexes
+
+Content coming soon...

@@ -1,0 +1,3 @@
+# Schema Registry and Serialization (Avro, Protobuf, JSON)
+
+Content coming soon...

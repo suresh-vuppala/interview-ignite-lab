@@ -53,9 +53,13 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-          <BookOpen className="h-6 w-6 text-primary" />
-          <span className="font-bold text-xl">InterviewSort</span>
+        <Link to="/" className="flex items-center gap-0 hover:opacity-80 transition-opacity">
+        <img
+          src="/InterviewSortLogo.png"
+          alt="InterviewSort Logo"
+          className="h-10 w-80 object-contain"
+        />
+            {/* <span className="font-bold text-xl text-pink">InterviewSort</span> */}
         </Link>
 
         {/* Desktop Navigation */}

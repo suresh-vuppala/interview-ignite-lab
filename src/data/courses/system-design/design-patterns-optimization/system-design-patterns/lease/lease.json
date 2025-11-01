@@ -1,4 +1,7 @@
 {
   "title": "Lease",
-  "slug": "lease"
+  "slug": "lease",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "lease.md"
 }

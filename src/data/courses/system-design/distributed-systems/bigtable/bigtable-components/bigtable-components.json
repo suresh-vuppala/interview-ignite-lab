@@ -1,4 +1,7 @@
 {
   "title": "Components",
-  "slug": "bigtable-components"
+  "slug": "bigtable-components",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bigtable-components.md"
 }

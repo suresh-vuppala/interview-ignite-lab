@@ -1,4 +1,7 @@
 {
   "title": "Split Brain",
-  "slug": "split-brain"
+  "slug": "split-brain",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "split-brain.md"
 }

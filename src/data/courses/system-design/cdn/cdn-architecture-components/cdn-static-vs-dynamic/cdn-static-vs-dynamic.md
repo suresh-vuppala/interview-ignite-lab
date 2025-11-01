@@ -1,0 +1,3 @@
+# Static vs Dynamic Content Handling
+
+Content coming soon...

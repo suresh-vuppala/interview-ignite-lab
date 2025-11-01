@@ -1,0 +1,3 @@
+# Cache Performance Metrics (Hit Rate, Miss Penalty, Latency)
+
+Content coming soon...

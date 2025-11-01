@@ -1,4 +1,7 @@
 {
   "title": "Mock Interview",
-  "slug": "bigtable-mock-interview"
+  "slug": "bigtable-mock-interview",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bigtable-mock-interview.md"
 }

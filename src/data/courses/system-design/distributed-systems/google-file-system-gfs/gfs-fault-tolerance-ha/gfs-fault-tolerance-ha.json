@@ -1,4 +1,7 @@
 {
   "title": "Fault Tolerance, High Availability, and Data Integrity",
-  "slug": "gfs-fault-tolerance-ha"
+  "slug": "gfs-fault-tolerance-ha",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "gfs-fault-tolerance-ha.md"
 }

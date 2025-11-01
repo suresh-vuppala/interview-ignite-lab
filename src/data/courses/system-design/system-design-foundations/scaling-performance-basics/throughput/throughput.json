@@ -1,4 +1,7 @@
 {
   "title": "Throughput",
-  "slug": "throughput"
+  "slug": "throughput",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "throughput.md"
 }

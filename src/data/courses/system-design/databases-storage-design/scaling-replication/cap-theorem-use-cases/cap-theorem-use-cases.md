@@ -1,3 +1,0 @@
-# CAP Theorem and Use Cases
-
-Content coming soon...

@@ -1,3 +1,0 @@
-# Pessimistic vs Optimistic Locking
-
-Content coming soon...

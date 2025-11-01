@@ -1,4 +1,7 @@
 {
   "title": "Mock Interview",
-  "slug": "hdfs-mock-interview"
+  "slug": "hdfs-mock-interview",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "hdfs-mock-interview.md"
 }

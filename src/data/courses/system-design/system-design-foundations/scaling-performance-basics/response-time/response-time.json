@@ -1,4 +1,7 @@
 {
   "title": "Response Time",
-  "slug": "response-time"
+  "slug": "response-time",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "response-time.md"
 }

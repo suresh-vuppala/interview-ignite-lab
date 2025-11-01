@@ -1,4 +1,7 @@
 {
   "title": "Read & Write Operations",
-  "slug": "bigtable-read-write-ops"
+  "slug": "bigtable-read-write-ops",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bigtable-read-write-ops.md"
 }

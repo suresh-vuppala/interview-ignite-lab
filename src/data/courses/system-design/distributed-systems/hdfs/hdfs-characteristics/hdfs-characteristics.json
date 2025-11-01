@@ -1,4 +1,7 @@
 {
   "title": "Characteristics",
-  "slug": "hdfs-characteristics"
+  "slug": "hdfs-characteristics",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "hdfs-characteristics.md"
 }

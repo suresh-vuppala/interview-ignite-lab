@@ -1,0 +1,3 @@
+# Types of Indexes (Clustered, Non-Clustered, Composite, Covering)
+
+Content coming soon...

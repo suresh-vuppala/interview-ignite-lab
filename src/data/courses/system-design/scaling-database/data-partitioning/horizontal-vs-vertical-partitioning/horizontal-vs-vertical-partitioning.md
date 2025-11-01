@@ -1,0 +1,3 @@
+# Horizontal vs Vertical Partitioning
+
+Content coming soon...

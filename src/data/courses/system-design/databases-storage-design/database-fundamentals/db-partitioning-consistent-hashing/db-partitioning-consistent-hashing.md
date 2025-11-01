@@ -1,3 +1,0 @@
-# Database Partitioning and Consistent Hashing
-
-Content coming soon...

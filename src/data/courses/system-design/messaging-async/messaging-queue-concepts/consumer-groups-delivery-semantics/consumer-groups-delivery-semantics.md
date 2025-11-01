@@ -1,3 +1,0 @@
-# Consumer Groups and Delivery Semantics
-
-Content coming soon...

@@ -1,3 +1,0 @@
-# Kafka vs RabbitMQ vs SQS
-
-Content coming soon...

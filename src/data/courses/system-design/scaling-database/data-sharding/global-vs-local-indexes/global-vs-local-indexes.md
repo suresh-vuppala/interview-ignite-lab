@@ -1,0 +1,3 @@
+# Global vs Local Indexes in Sharded Systems
+
+Content coming soon...

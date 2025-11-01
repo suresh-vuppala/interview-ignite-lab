@@ -1,3 +1,0 @@
-# SSTable
-
-Content coming soon...

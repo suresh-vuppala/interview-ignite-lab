@@ -1,4 +1,7 @@
 {
   "title": "Bloom Filters",
-  "slug": "bloom-filters"
+  "slug": "bloom-filters",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bloom-filters.md"
 }

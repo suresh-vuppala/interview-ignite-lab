@@ -1,4 +1,7 @@
 {
   "title": "Stateful vs Stateless Architectures",
-  "slug": "stateful-vs-stateless"
+  "slug": "stateful-vs-stateless",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "stateful-vs-stateless.md"
 }

@@ -1,4 +1,7 @@
 {
   "title": "SSTable",
-  "slug": "bigtable-sstable"
+  "slug": "bigtable-sstable",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bigtable-sstable.md"
 }

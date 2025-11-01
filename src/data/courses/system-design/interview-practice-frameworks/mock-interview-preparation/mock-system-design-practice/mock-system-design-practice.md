@@ -1,0 +1,3 @@
+# How to Practice Mock System Design Interviews
+
+Content coming soon...

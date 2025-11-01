@@ -1,4 +1,7 @@
 {
   "title": "Summary",
-  "slug": "hdfs-summary"
+  "slug": "hdfs-summary",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "hdfs-summary.md"
 }

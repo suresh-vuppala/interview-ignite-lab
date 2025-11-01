@@ -1,4 +1,7 @@
 {
   "title": "Consistent Hashing",
-  "slug": "consistent-hashing-pattern"
+  "slug": "consistent-hashing-pattern",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "consistent-hashing-pattern.md"
 }

@@ -1,3 +1,0 @@
-# Replication Models
-
-Content coming soon...

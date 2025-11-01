@@ -1,4 +1,7 @@
 {
   "title": "Checksum",
-  "slug": "checksum"
+  "slug": "checksum",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "checksum.md"
 }

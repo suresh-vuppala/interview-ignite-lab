@@ -1,4 +1,7 @@
 {
   "title": "Introduction",
-  "slug": "hdfs-introduction"
+  "slug": "hdfs-introduction",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "hdfs-introduction.md"
 }

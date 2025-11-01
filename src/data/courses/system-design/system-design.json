@@ -12,188 +12,578 @@
           "title": "Introduction to System Design",
           "slug": "introduction-to-system-design",
           "lessons": [
-            { "title": "What, Why, How, When, and Where of System Design", "slug": "what-why-how-when-where-system-design" , "isPremium": true},
-            { "title": "System Design Framework/Template", "slug": "system-design-framework-template" },
-            { "title": "Functional vs Non-Functional Requirements (FR vs NFR)", "slug": "functional-vs-non-functional-requirements" },
-            { "title": "Core Challenges in System Design", "slug": "core-challenges-system-design" },
-            { "title": "Common Constraints: Too Many Users, Too Much Data, Low Latency Needs", "slug": "common-constraints-system-design" }
+            {
+              "title": "What, Why, How, When, and Where of System Design",
+              "slug": "what-why-how-when-where-system-design",
+              "isPremium": true,
+              "isPosted": false
+            },
+            {
+              "title": "System Design Framework/Template",
+              "slug": "system-design-framework-template",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Functional vs Non-Functional Requirements (FR vs NFR)",
+              "slug": "functional-vs-non-functional-requirements",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Core Challenges in System Design",
+              "slug": "core-challenges-system-design",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Common Constraints: Too Many Users, Too Much Data, Low Latency Needs",
+              "slug": "common-constraints-system-design",
+              "isPosted": false,
+              "isPremium": false
+            }
           ]
         },
         {
           "title": "Scaling and Performance Basics",
           "slug": "scaling-performance-basics",
           "lessons": [
-            { "title": "Horizontal vs Vertical Scaling", "slug": "horizontal-vs-vertical-scaling" },
-            { "title": "Capacity Planning & Back-of-the-Envelope Estimation", "slug": "capacity-planning-estimation" },
-            { "title": "Performance Metrics", "slug": "performance-metrics" },
-            { "title": "Latency", "slug": "latency" },
-            { "title": "Throughput", "slug": "throughput" },
-            { "title": "Bandwidth", "slug": "bandwidth" },
-            { "title": "Response Time", "slug": "response-time" },
-            { "title": "Fault vs Failure - Understanding Reliability", "slug": "fault-vs-failure-reliability" }
+            {
+              "title": "Horizontal vs Vertical Scaling",
+              "slug": "horizontal-vs-vertical-scaling",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Capacity Planning & Back-of-the-Envelope Estimation",
+              "slug": "capacity-planning-estimation",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Performance Metrics",
+              "slug": "performance-metrics",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Latency",
+              "slug": "latency",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Throughput",
+              "slug": "throughput",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Bandwidth",
+              "slug": "bandwidth",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Response Time",
+              "slug": "response-time",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Fault vs Failure - Understanding Reliability",
+              "slug": "fault-vs-failure-reliability",
+              "isPosted": false,
+              "isPremium": false
+            }
           ]
         },
         {
           "title": "Architecture Fundamentals",
           "slug": "architecture-fundamentals",
           "lessons": [
-            { "title": "Client-Server Communication Model", "slug": "client-server-communication" },
-            { "title": "Monolithic vs Microservices Architecture", "slug": "monolithic-vs-microservices" },
-            { "title": "Stateful vs Stateless Architectures", "slug": "stateful-vs-stateless" },
-            { "title": "Serverless vs Traditional Architectures", "slug": "serverless-vs-traditional" },
-            { "title": "Hybrid Cloud vs All-Cloud Storage", "slug": "hybrid-cloud-vs-all-cloud" }
+            {
+              "title": "Client-Server Communication Model",
+              "slug": "client-server-communication",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Monolithic vs Microservices Architecture",
+              "slug": "monolithic-vs-microservices",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Stateful vs Stateless Architectures",
+              "slug": "stateful-vs-stateless",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Serverless vs Traditional Architectures",
+              "slug": "serverless-vs-traditional",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Hybrid Cloud vs All-Cloud Storage",
+              "slug": "hybrid-cloud-vs-all-cloud",
+              "isPosted": false,
+              "isPremium": false
+            }
           ]
         }
       ]
     },
-        {
+    {
       "title": "Networking and Proxy",
       "slug": "networking-proxy",
       "icon": "Server",
-      "sections": [ {
-      "title": "Networking Fundamentals",
-      "slug": "networking-fundamentals",
-      "lessons": [
-        { "title": "Computer Networks Overview", "slug": "network-overview" },
-        { "title": "IP Addressing, Subnets, and CIDR", "slug": "ip-addressing-subnets" },
-        { "title": "TCP vs UDP", "slug": "tcp-vs-udp" },
-        { "title": "Three-Way Handshake and Connection Lifecycle", "slug": "tcp-connection-lifecycle" },
-        { "title": "HTTP vs HTTPS", "slug": "http-vs-https" },
-        { "title": "DNS: Domain Name System", "slug": "dns-basics" },
-        { "title": "DNS Caching and TTL", "slug": "dns-caching" },
-        { "title": "Ports and Protocols", "slug": "ports-protocols" }
-      ]
-    },
+      "sections": [
         {
-      "title": "Network Security and Encryption",
-      "slug": "network-security",
-      "lessons": [
-        { "title": "TLS/SSL Handshake", "slug": "tls-ssl-handshake" },
-        { "title": "HTTPS Certificates and Validation", "slug": "https-certificates" },
-        { "title": "Firewall Basics and Security Groups", "slug": "firewall-security-groups" },
-        { "title": "Zero Trust Networking", "slug": "zero-trust-networking" },
-        { "title": "DDoS Protection Basics", "slug": "ddos-protection" }
-      ]
-    },
+          "title": "Networking Fundamentals",
+          "slug": "networking-fundamentals",
+          "lessons": [
+            {
+              "title": "Computer Networks Overview",
+              "slug": "network-overview",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "IP Addressing, Subnets, and CIDR",
+              "slug": "ip-addressing-subnets",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "TCP vs UDP",
+              "slug": "tcp-vs-udp",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Three-Way Handshake and Connection Lifecycle",
+              "slug": "tcp-connection-lifecycle",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "HTTP vs HTTPS",
+              "slug": "http-vs-https",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "DNS: Domain Name System",
+              "slug": "dns-basics",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "DNS Caching and TTL",
+              "slug": "dns-caching",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Ports and Protocols",
+              "slug": "ports-protocols",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Network Security and Encryption",
+          "slug": "network-security",
+          "lessons": [
+            {
+              "title": "TLS/SSL Handshake",
+              "slug": "tls-ssl-handshake",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "HTTPS Certificates and Validation",
+              "slug": "https-certificates",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Firewall Basics and Security Groups",
+              "slug": "firewall-security-groups",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Zero Trust Networking",
+              "slug": "zero-trust-networking",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "DDoS Protection Basics",
+              "slug": "ddos-protection",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
         {
           "title": "Proxies",
           "slug": "proxies",
           "lessons": [
-            { "title": "Proxy Overview", "slug": "proxy-overview" },
-            { "title": "Forward vs Reverse Proxy", "slug": "forward-vs-reverse-proxy" },
-            { "title": "Service Discovery Mechanisms", "slug": "service-discovery-mechanisms" }
+            {
+              "title": "Proxy Overview",
+              "slug": "proxy-overview",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Forward vs Reverse Proxy",
+              "slug": "forward-vs-reverse-proxy",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Service Discovery Mechanisms",
+              "slug": "service-discovery-mechanisms",
+              "isPosted": false,
+              "isPremium": false
+            }
           ]
-        }]},
+        }
+      ]
+    },
     {
       "title": "API Layer",
       "slug": "api-layer",
       "icon": "Server",
       "sections": [
-       
         {
           "title": "API Design and Communication",
           "slug": "api-design-communication",
           "lessons": [
-            { 
-              "title": "Introduction to APIs", 
-              "slug": "introduction-to-apis" 
+            {
+              "title": "Introduction to APIs",
+              "slug": "introduction-to-apis",
+              "isPosted": false,
+              "isPremium": false
             },
             {
-            "title": "API Architecture Styles",
-            "slug": "api-architecture-styles",
-            "lessons": [
-              { "title": "REST", "slug": "rest-api-style" },
-              { "title": "GraphQL", "slug": "graphql-api-style" },
-              { "title": "SOAP", "slug": "soap-api-style" },
-              { "title": "gRPC", "slug": "grpc-api-style" }
-            ]
+              "title": "API Architecture Styles",
+              "slug": "api-architecture-styles",
+              "lessons": [
+                {
+                  "title": "REST",
+                  "slug": "rest-api-style",
+                  "isPosted": false,
+                  "isPremium": false
+                },
+                {
+                  "title": "GraphQL",
+                  "slug": "graphql-api-style",
+                  "isPosted": false,
+                  "isPremium": false
+                },
+                {
+                  "title": "SOAP",
+                  "slug": "soap-api-style",
+                  "isPosted": false,
+                  "isPremium": false
+                },
+                {
+                  "title": "gRPC",
+                  "slug": "grpc-api-style",
+                  "isPosted": false,
+                  "isPremium": false
+                }
+              ],
+              "isPosted": false,
+              "isPremium": false
             },
-            { 
+            {
               "title": "HTTP Fundamentals",
               "slug": "http-fundamentals",
               "lessons": [
-                { "title": "HTTP Versions", "slug": "http-versions" },
-                { "title": "HTTP Methods", "slug": "http-methods" },
-                { "title": "GET Method", "slug": "http-get" },
-                { "title": "POST Method", "slug": "http-post" },
-                { "title": "PUT Method", "slug": "http-put" },
-                { "title": "PATCH Method", "slug": "http-patch" },
-                { "title": "DELETE Method", "slug": "http-delete" },
-                { "title": "HTTP Status Codes and Best Practices", "slug": "http-status-codes-best-practices" }
-              ]
+                {
+                  "title": "HTTP Versions",
+                  "slug": "http-versions",
+                  "isPosted": false,
+                  "isPremium": false
+                },
+                {
+                  "title": "HTTP Methods",
+                  "slug": "http-methods",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "GET Method",
+                  "slug": "http-get",
+                  "isPosted": false,
+                  "isPremium": false
+                },
+                {
+                  "title": "POST Method",
+                  "slug": "http-post",
+                  "isPosted": false,
+                  "isPremium": false
+                },
+                {
+                  "title": "PUT Method",
+                  "slug": "http-put",
+                  "isPosted": false,
+                  "isPremium": false
+                },
+                {
+                  "title": "PATCH Method",
+                  "slug": "http-patch",
+                  "isPosted": false,
+                  "isPremium": false
+                },
+                {
+                  "title": "DELETE Method",
+                  "slug": "http-delete",
+                  "isPosted": false,
+                  "isPremium": false
+                },
+                {
+                  "title": "HTTP Status Codes and Best Practices",
+                  "slug": "http-status-codes-best-practices",
+                  "isPosted": false,
+                  "isPremium": false
+                }
+              ],
+              "isPosted": false,
+              "isPremium": false
             },
-            { 
+            {
               "title": "REST API Best Practices",
               "slug": "rest-api-best-practices",
               "lessons": [
-                { "title": "Filtering and Sorting", "slug": "rest-api-filtering-sorting" },
-                { "title": "Pagination", "slug": "rest-api-pagination" },
-                { "title": "Rate Limiting", "slug": "rest-api-rate-limiting" },
-                { "title": "Versioning", "slug": "rest-api-versioning" }
-              ]
+                {
+                  "title": "Filtering and Sorting",
+                  "slug": "rest-api-filtering-sorting",
+                  "isPosted": false,
+                  "isPremium": false
+                },
+                {
+                  "title": "Pagination",
+                  "slug": "rest-api-pagination",
+                  "isPosted": false,
+                  "isPremium": false
+                },
+                {
+                  "title": "Rate Limiting",
+                  "slug": "rest-api-rate-limiting",
+                  "isPosted": false,
+                  "isPremium": false
+                },
+                {
+                  "title": "Versioning",
+                  "slug": "rest-api-versioning",
+                  "isPosted": false,
+                  "isPremium": false
+                }
+              ],
+              "isPosted": false,
+              "isPremium": false
             },
-            { "title": "Idempotent API", "slug": "api-idempotent" },
-            { "title": "Synchronous vs Asynchronous APIs", "slug": "sync-vs-async-apis" },
-            { "title": "Scaling APIs: Converting Sync to Async", "slug": "convert-sync-to-async-apis" }
+            {
+              "title": "Idempotent API",
+              "slug": "api-idempotent",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Synchronous vs Asynchronous APIs",
+              "slug": "sync-vs-async-apis",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Scaling APIs: Converting Sync to Async",
+              "slug": "convert-sync-to-async-apis",
+              "isPosted": false,
+              "isPremium": false
+            }
           ]
         },
         {
-      "title": "API Authentication Methods",
-      "slug": "api-authentication-methods",
-      "lessons": [
-        { "title": "Basic Authentication", "slug": "basic-auth" },
-        { "title": "Token-Based Authentication", "slug": "token-auth" },
-        { "title": "JWT (JSON Web Tokens)", "slug": "jwt-auth" },
-        { "title": "OAuth 2.0", "slug": "oauth2" }
-      ]
-    },
-    {
-      "title": "API Documentation",
-      "slug": "api-documentation",
-      "lessons": [
-        { "title": "Introduction to API Documentation", "slug": "intro-api-docs" },
-        { "title": "Swagger / OpenAPI", "slug": "swagger-openapi" },
-        { "title": "Postman Collections", "slug": "postman-api-docs" }
-      ]
-    },
-    {
-      "title": "API Gateways",
-      "slug": "api-gateways",
-      "lessons": [
-        { "title": "API Gateway – Role and Importance", "slug": "api-gateway-role-importance" },
-        { "title": "AWS API Gateway", "slug": "aws-api-gateway" },
-        { "title": "Kong Gateway", "slug": "kong-gateway" },
-        { "title": "Azure API Management", "slug": "azure-api-management" },
-        { "title": "Apigee", "slug": "apigee-gateway" },
-        { "title": "NGINX Gateway Service", "slug": "nginx-gateway" }
-      ]
-    },
-    {
-      "title": "API Performance Optimization",
-      "slug": "api-performance",
-      "lessons": [
-        { "title": "Techniques for API Performance", "slug": "api-performance-techniques" }
-      ]
-    },
-    {
-      "title": "API Implementation Frameworks",
-      "slug": "api-frameworks",
-      "lessons": [
-        { "title": "Flask", "slug": "flask-framework" },
-        { "title": "Node.js (Express)", "slug": "nodejs-express-framework" },
-        { "title": "Django", "slug": "django-framework" },
-        { "title": "Spring Boot", "slug": "spring-framework" },
-        { "title": "FastAPI", "slug": "fastapi-framework" }
-      ]
-    },
+          "title": "API Authentication Methods",
+          "slug": "api-authentication-methods",
+          "lessons": [
+            {
+              "title": "Basic Authentication",
+              "slug": "basic-auth",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Token-Based Authentication",
+              "slug": "token-auth",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "JWT (JSON Web Tokens)",
+              "slug": "jwt-auth",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "OAuth 2.0",
+              "slug": "oauth2",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "API Documentation",
+          "slug": "api-documentation",
+          "lessons": [
+            {
+              "title": "Introduction to API Documentation",
+              "slug": "intro-api-docs",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Swagger / OpenAPI",
+              "slug": "swagger-openapi",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Postman Collections",
+              "slug": "postman-api-docs",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "API Gateways",
+          "slug": "api-gateways",
+          "lessons": [
+            {
+              "title": "API Gateway – Role and Importance",
+              "slug": "api-gateway-role-importance",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "AWS API Gateway",
+              "slug": "aws-api-gateway",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Kong Gateway",
+              "slug": "kong-gateway",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Azure API Management",
+              "slug": "azure-api-management",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Apigee",
+              "slug": "apigee-gateway",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "NGINX Gateway Service",
+              "slug": "nginx-gateway",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "API Performance Optimization",
+          "slug": "api-performance",
+          "lessons": [
+            {
+              "title": "Techniques for API Performance",
+              "slug": "api-performance-techniques",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "API Implementation Frameworks",
+          "slug": "api-frameworks",
+          "lessons": [
+            {
+              "title": "Flask",
+              "slug": "flask-framework",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Node.js (Express)",
+              "slug": "nodejs-express-framework",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Django",
+              "slug": "django-framework",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Spring Boot",
+              "slug": "spring-framework",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "FastAPI",
+              "slug": "fastapi-framework",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
         {
           "title": "Trade-Offs",
           "slug": "trade-offs",
           "lessons": [
-            { "title": "REST vs RPC", "slug": "rest-vs-rpc" },
-            { "title": "API Gateway vs Load Balancer vs Reverse Proxy", "slug": "api-gateway-vs-load-balancer-vs-reverse-proxy" },
-            { "title": "Polling vs Long Polling vs WebSockets vs Webhooks vs SSE", "slug": "polling-longpoll-websockets-webhooks-sse" },
-            { "title": "Timeouts, Retries, Circuit Breakers, and Fallback Strategies", "slug": "timeouts-retries-circuit-breakers-fallback" }
+            {
+              "title": "REST vs RPC",
+              "slug": "rest-vs-rpc",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "API Gateway vs Load Balancer vs Reverse Proxy",
+              "slug": "api-gateway-vs-load-balancer-vs-reverse-proxy",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Polling vs Long Polling vs WebSockets vs Webhooks vs SSE",
+              "slug": "polling-longpoll-websockets-webhooks-sse",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Timeouts, Retries, Circuit Breakers, and Fallback Strategies",
+              "slug": "timeouts-retries-circuit-breakers-fallback",
+              "isPosted": false,
+              "isPremium": false
+            }
           ]
         }
       ]
@@ -207,410 +597,1242 @@
           "title": "Load Balancing Essentials",
           "slug": "load-balancing-essentials",
           "lessons": [
-            { "title": "Introduction to Load Balancing", "slug": "intro-load-balancing" },
-            { "title": "Types of Load Balancers", "slug": "types-load-balancers" },
-            { "title": "Load Balancing Algorithms", "slug": "load-balancing-algorithms" },
-            { "title": "Round Robin", "slug": "round-robin" },
-            { "title": "Consistent Hashing", "slug": "consistent-hashing" },
-            { "title": "Least Connections", "slug": "least-connections" },
-            { "title": "Stateless vs Stateful Load Balancers", "slug": "stateless-vs-stateful-load-balancers" },
-            { "title": "Load Balancer vs API Gateway", "slug": "load-balancer-vs-api-gateway" }
+            {
+              "title": "Introduction to Load Balancing",
+              "slug": "intro-load-balancing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Types of Load Balancers",
+              "slug": "types-load-balancers",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Load Balancing Algorithms",
+              "slug": "load-balancing-algorithms",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Round Robin",
+              "slug": "round-robin",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Consistent Hashing",
+              "slug": "consistent-hashing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Least Connections",
+              "slug": "least-connections",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Stateless vs Stateful Load Balancers",
+              "slug": "stateless-vs-stateful-load-balancers",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Load Balancer vs API Gateway",
+              "slug": "load-balancer-vs-api-gateway",
+              "isPosted": false,
+              "isPremium": false
+            }
           ]
         }
       ]
     },
-{
-  "title": "Caching",
-  "slug": "caching",
-  "icon": "Database",
-  "sections": [
     {
-      "title": "Caching Fundamentals",
-      "slug": "caching-fundamentals",
-      "lessons": [
-        { "title": "Caching Basics and Use Cases", "slug": "caching-basics" },
-        { "title": "Why Caching Matters in System Design", "slug": "why-caching-matters" },
-        { "title": "Cache Hierarchies (CPU, Application, Distributed)", "slug": "cache-hierarchies" },
-        { "title": "Hot vs Cold Data", "slug": "hot-vs-cold-data" },
-        { "title": "Cache Performance Metrics (Hit Rate, Miss Penalty, Latency)", "slug": "cache-performance-metrics" }
-      ]
-    },
-    {
-      "title": "Caching Patterns and Strategies",
-      "slug": "caching-patterns-strategies",
-      "lessons": [
-        { "title": "Cache Patterns Overview", "slug": "cache-patterns-overview" },
-        { "title": "Cache-Aside Pattern", "slug": "cache-aside" },
-        { "title": "Write-Through Pattern", "slug": "write-through" },
-        { "title": "Write-Back (Write-Behind) Pattern", "slug": "write-back" },
-        { "title": "Read-Through and Refresh-Ahead Patterns", "slug": "read-through-refresh-ahead" },
-        { "title": "Cache Invalidation Strategies", "slug": "cache-invalidation-strategies" },
-        { "title": "Consistency Challenges in Caching", "slug": "caching-consistency-challenges" }
-      ]
-    },
-    {
-      "title": "Cache Management and Scaling",
-      "slug": "cache-management-scaling",
-      "lessons": [
-        { "title": "Cache Eviction Policies (LRU, LFU, FIFO)", "slug": "cache-eviction-policies" },
-        { "title": "Time-To-Live (TTL) and Expiry Design", "slug": "cache-ttl-expiry" },
-        { "title": "Thundering Herd Problem and Mitigation", "slug": "thundering-herd-mitigation" },
-        { "title": "Cache Stampede and Dogpile Prevention", "slug": "cache-stampede-dogpile" },
-        { "title": "Scaling Cache (Redis, Memcached, Hazelcast)", "slug": "scaling-cache-redis-memcached" },
-        { "title": "Distributed Caching and Consistent Hashing", "slug": "distributed-caching-consistent-hashing" },
-        { "title": "Write Coalescing and Batch Updates", "slug": "cache-write-coalescing" }
-      ]
-    },
-    {
-      "title": "Advanced Caching Architectures",
-      "slug": "advanced-caching-architectures",
-      "lessons": [
-        { "title": "Multi-Level Caching (L1, L2, L3)", "slug": "multi-level-caching" },
-        { "title": "Application-Level vs Database-Level Caching", "slug": "app-vs-db-caching" },
-        { "title": "Geo-Distributed Cache Clusters", "slug": "geo-distributed-cache-clusters" },
-        { "title": "Cache Security and Isolation", "slug": "cache-security-isolation" }
-      ]
-    },
-    {
-      "title": "Trade-Offs and Operations",
-      "slug": "trade-offs-operations",
-      "lessons": [
-        { "title": "Redis vs Memcached vs Hazelcast", "slug": "redis-vs-memcached-vs-hazelcast" },
-        { "title": "Caching in Databases (MySQL Query Cache, Postgres, MongoDB)", "slug": "database-caching" },
-        { "title": "Cache Warm-Up and Pre-Population Strategies", "slug": "cache-warmup-prepopulation" },
-        { "title": "Monitoring Cache Metrics and Alerting", "slug": "cache-monitoring-alerting" },
-        { "title": "Common Cache Pitfalls and Anti-Patterns", "slug": "cache-pitfalls-antipatterns" }
-      ]
-    }
-  ]
-},
-{
-  "title": "Content Delivery Networks (CDN)",
-  "slug": "cdn",
-  "icon": "Globe",
-  "sections": [
-    {
-      "title": "CDN Fundamentals",
-      "slug": "cdn-fundamentals",
-      "lessons": [
-        { "title": "What is a CDN?", "slug": "what-is-cdn" },
-        { "title": "How CDNs Work (Edge Nodes, POPs, Origin Servers)", "slug": "how-cdn-works" },
-        { "title": "CDN Benefits: Latency, Scalability, and Availability", "slug": "cdn-benefits" }
-      ]
-    },
-    {
-      "title": "CDN Architecture and Components",
-      "slug": "cdn-architecture-components",
-      "lessons": [
-        { "title": "Edge Caching and Request Routing", "slug": "edge-caching-request-routing" },
-        { "title": "Cache Hierarchies in CDN (Edge, Regional, Origin)", "slug": "cdn-cache-hierarchies" },
-        { "title": "Geo-Replication and Load Balancing", "slug": "cdn-geo-replication" },
-        { "title": "Static vs Dynamic Content Handling", "slug": "cdn-static-vs-dynamic" }
-      ]
-    },
-    {
-      "title": "Advanced CDN Topics",
-      "slug": "advanced-cdn-topics",
-      "lessons": [
-        { "title": "CDN Integration with Application Caching", "slug": "cdn-integration-app-caching" },
-        { "title": "Content Invalidation and Purging", "slug": "cdn-content-invalidation" },
-        { "title": "CDN Security: DDoS Protection, TLS, WAF", "slug": "cdn-security" },
-        { "title": "Multi-CDN Strategies and Failover", "slug": "multi-cdn-strategies" },
-        { "title": "Cost Optimization in CDN Usage", "slug": "cdn-cost-optimization" }
-      ]
-    },
-    {
-      "title": "Real-World CDN Implementations",
-      "slug": "real-world-cdn",
-      "lessons": [
-        { "title": "Akamai, Cloudflare, Fastly, and AWS CloudFront Overview", "slug": "cdn-providers-overview" },
-        { "title": "Case Study: YouTube and Netflix CDN Design", "slug": "cdn-case-studies" },
-        { "title": "Edge Compute and Serverless at the Edge", "slug": "edge-compute-serverless" }
-      ]
-    }
-  ]
-},
-
-{
-  "title": "Databases and Storage Design",
-  "slug": "databases-storage-design",
-  "icon": "Database",
-  "description": "Deep dive into how databases are built and scaled — from internal storage structures like B-Trees and LSM Trees to sharding, replication, transactions, and distributed consistency models essential for Staff Engineers.",
-  "sections": [
-    {
-      "title": "Introduction to Database",
-      "slug": "intro-database",
-      "lessons": [
-        { "title": "Why Understand Database Internals?", "slug": "why-database-internals" },
-        { "title": "Storage Engines Overview (InnoDB, RocksDB, LevelDB)", "slug": "storage-engines-overview" }
-      ]
-    },
-    {
-      "title": "Core Data Structures and Storage Mechanisms",
-      "slug": "core-data-structures-storage",
-      "lessons": [
-        { "title": "B-Tree and B+Tree Structures", "slug": "b-tree-bplus-tree" },
-        { "title": "Log-Structured Merge (LSM) Trees", "slug": "lsm-tree" },
-        { "title": "SSTables and Write-Ahead Logs (WAL)", "slug": "sstables-wal" }
-      ]
-    },
-    {
-      "title": "Data Modeling and Workload Patterns",
-      "slug": "data-modeling-workloads",
-      "lessons": [
-        { "title": "Schema Design: Normalization vs Denormalization", "slug": "schema-normalization-denormalization" },
-        { "title": "SQL vs NoSQL: Data Models and Tradeoffs", "slug": "sql-vs-nosql-tradeoffs" },
-        { "title": "OLTP vs OLAP Workloads", "slug": "oltp-vs-olap-workloads" }
-      ]
-    },
+      "title": "Caching",
+      "slug": "caching",
+      "icon": "Database",
+      "sections": [
         {
-      "title": "Indexing and Query Optimization",
-      "slug": "indexing-query-optimization",
-      "lessons": [
-        { "title": "Database Indexing Fundamentals", "slug": "database-indexing-fundamentals" },
-        { "title": "Types of Indexes (Clustered, Non-Clustered, Composite, Covering)", "slug": "index-types" },
-        { "title": "Index Types: B-Tree, Hash, GiST, GIN, Inverted Indexes", "slug": "index-types2" },
-        { "title": "Bloom Filters and Index Optimization", "slug": "bloom-filters-index-optimization" },
-        { "title": "Index Maintenance and Performance Trade-Offs", "slug": "index-maintenance-performance-tradeoffs" },
-        { "title": "Query Execution Plans and Optimization", "slug": "query-execution-plans-optimization" }
+          "title": "Caching Fundamentals",
+          "slug": "caching-fundamentals",
+          "lessons": [
+            {
+              "title": "Caching Basics and Use Cases",
+              "slug": "caching-basics",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Why Caching Matters in System Design",
+              "slug": "why-caching-matters",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Cache Hierarchies (CPU, Application, Distributed)",
+              "slug": "cache-hierarchies",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Hot vs Cold Data",
+              "slug": "hot-vs-cold-data",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Cache Performance Metrics (Hit Rate, Miss Penalty, Latency)",
+              "slug": "cache-performance-metrics",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Caching Patterns and Strategies",
+          "slug": "caching-patterns-strategies",
+          "lessons": [
+            {
+              "title": "Cache Patterns Overview",
+              "slug": "cache-patterns-overview",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Cache-Aside Pattern",
+              "slug": "cache-aside",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Write-Through Pattern",
+              "slug": "write-through",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Write-Back (Write-Behind) Pattern",
+              "slug": "write-back",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Read-Through and Refresh-Ahead Patterns",
+              "slug": "read-through-refresh-ahead",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Cache Invalidation Strategies",
+              "slug": "cache-invalidation-strategies",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Consistency Challenges in Caching",
+              "slug": "caching-consistency-challenges",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Cache Management and Scaling",
+          "slug": "cache-management-scaling",
+          "lessons": [
+            {
+              "title": "Cache Eviction Policies (LRU, LFU, FIFO)",
+              "slug": "cache-eviction-policies",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Time-To-Live (TTL) and Expiry Design",
+              "slug": "cache-ttl-expiry",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Thundering Herd Problem and Mitigation",
+              "slug": "thundering-herd-mitigation",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Cache Stampede and Dogpile Prevention",
+              "slug": "cache-stampede-dogpile",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Scaling Cache (Redis, Memcached, Hazelcast)",
+              "slug": "scaling-cache-redis-memcached",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Distributed Caching and Consistent Hashing",
+              "slug": "distributed-caching-consistent-hashing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Write Coalescing and Batch Updates",
+              "slug": "cache-write-coalescing",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Advanced Caching Architectures",
+          "slug": "advanced-caching-architectures",
+          "lessons": [
+            {
+              "title": "Multi-Level Caching (L1, L2, L3)",
+              "slug": "multi-level-caching",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Application-Level vs Database-Level Caching",
+              "slug": "app-vs-db-caching",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Geo-Distributed Cache Clusters",
+              "slug": "geo-distributed-cache-clusters",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Cache Security and Isolation",
+              "slug": "cache-security-isolation",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Trade-Offs and Operations",
+          "slug": "trade-offs-operations",
+          "lessons": [
+            {
+              "title": "Redis vs Memcached vs Hazelcast",
+              "slug": "redis-vs-memcached-vs-hazelcast",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Caching in Databases (MySQL Query Cache, Postgres, MongoDB)",
+              "slug": "database-caching",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Cache Warm-Up and Pre-Population Strategies",
+              "slug": "cache-warmup-prepopulation",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Monitoring Cache Metrics and Alerting",
+              "slug": "cache-monitoring-alerting",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Common Cache Pitfalls and Anti-Patterns",
+              "slug": "cache-pitfalls-antipatterns",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        }
       ]
     },
     {
-      "title": "Transactions & Concurrency Control",
-      "slug": "transactions-concurrency",
-      "lessons": [
-        { "title": "Transactions: ACID vs BASE", "slug": "acid-vs-base" },
-        { "title": "Isolation Levels (Read Uncommitted → Serializable)", "slug": "isolation-levels" },
-        { "title": "Locking Mechanisms: Row, Table, Intent Locks", "slug": "locking-mechanisms" },
-        { "title": "Two-Phase Locking (2PL) and Variants", "slug": "two-phase-locking" },
-        { "title": "MVCC (Multi-Version Concurrency Control) & Snapshot Isolation", "slug": "mvcc-snapshot-isolation" },
-        { "title": "Pessimistic vs Optimistic Concurrency Control", "slug": "pessimistic-vs-optimistic" },
-        { "title": "Deadlocks, Detection, and Resolution Strategies", "slug": "deadlocks-detection-resolution" },
-        { "title": "Serializable Snapshot Isolation and Anomalies", "slug": "serializable-snapshot-isolation" },
-        { "title": "Best Practices: Designing for Concurrency", "slug": "concurrency-best-practices" }
-      ]
-    }
-
-  ]
-},{
-  "title": "Search  Systems",
-  "slug": "search-systems",
-  "icon": "Search",
-  "sections": [
-    {
-      "title": "Search Fundamentals",
-      "slug": "search-fundamentals",
-      "lessons": [
-        { "title": "Introduction to Search Systems", "slug": "introduction-search-systems" },
-        { "title": "How Search Differs from Database Queries", "slug": "search-vs-database-queries" },
-        { "title": "Full-Text Search Basics", "slug": "full-text-search-basics" },
-        { "title": "Inverted Index and Tokenization", "slug": "inverted-index-tokenization" },
-        { "title": "Autocomplete and Suggestion Systems", "slug": "autocomplete-suggestion-systems" }
+      "title": "Content Delivery Networks (CDN)",
+      "slug": "cdn",
+      "icon": "Globe",
+      "sections": [
+        {
+          "title": "CDN Fundamentals",
+          "slug": "cdn-fundamentals",
+          "lessons": [
+            {
+              "title": "What is a CDN?",
+              "slug": "what-is-cdn",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "How CDNs Work (Edge Nodes, POPs, Origin Servers)",
+              "slug": "how-cdn-works",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "CDN Benefits: Latency, Scalability, and Availability",
+              "slug": "cdn-benefits",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "CDN Architecture and Components",
+          "slug": "cdn-architecture-components",
+          "lessons": [
+            {
+              "title": "Edge Caching and Request Routing",
+              "slug": "edge-caching-request-routing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Cache Hierarchies in CDN (Edge, Regional, Origin)",
+              "slug": "cdn-cache-hierarchies",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Geo-Replication and Load Balancing",
+              "slug": "cdn-geo-replication",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Static vs Dynamic Content Handling",
+              "slug": "cdn-static-vs-dynamic",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Advanced CDN Topics",
+          "slug": "advanced-cdn-topics",
+          "lessons": [
+            {
+              "title": "CDN Integration with Application Caching",
+              "slug": "cdn-integration-app-caching",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Content Invalidation and Purging",
+              "slug": "cdn-content-invalidation",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "CDN Security: DDoS Protection, TLS, WAF",
+              "slug": "cdn-security",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Multi-CDN Strategies and Failover",
+              "slug": "multi-cdn-strategies",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Cost Optimization in CDN Usage",
+              "slug": "cdn-cost-optimization",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Real-World CDN Implementations",
+          "slug": "real-world-cdn",
+          "lessons": [
+            {
+              "title": "Akamai, Cloudflare, Fastly, and AWS CloudFront Overview",
+              "slug": "cdn-providers-overview",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Case Study: YouTube and Netflix CDN Design",
+              "slug": "cdn-case-studies",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Edge Compute and Serverless at the Edge",
+              "slug": "edge-compute-serverless",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        }
       ]
     },
     {
-      "title": "Search Infrastructure and Engines",
-      "slug": "search-infrastructure-engines",
-      "lessons": [
-        { "title": "Elasticsearch Architecture and Components", "slug": "elasticsearch-architecture" },
-        { "title": "Lucene and Solr Internals", "slug": "lucene-solr-internals" },
-        { "title": "OpenSearch Overview", "slug": "opensearch-overview" }
+      "title": "Databases and Storage Design",
+      "slug": "databases-storage-design",
+      "icon": "Database",
+      "description": "Deep dive into how databases are built and scaled — from internal storage structures like B-Trees and LSM Trees to sharding, replication, transactions, and distributed consistency models essential for Staff Engineers.",
+      "sections": [
+        {
+          "title": "Introduction to Database",
+          "slug": "intro-database",
+          "lessons": [
+            {
+              "title": "Why Understand Database Internals?",
+              "slug": "why-database-internals",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Storage Engines Overview (InnoDB, RocksDB, LevelDB)",
+              "slug": "storage-engines-overview",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Core Data Structures and Storage Mechanisms",
+          "slug": "core-data-structures-storage",
+          "lessons": [
+            {
+              "title": "B-Tree and B+Tree Structures",
+              "slug": "b-tree-bplus-tree",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Log-Structured Merge (LSM) Trees",
+              "slug": "lsm-tree",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "SSTables and Write-Ahead Logs (WAL)",
+              "slug": "sstables-wal",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Data Modeling and Workload Patterns",
+          "slug": "data-modeling-workloads",
+          "lessons": [
+            {
+              "title": "Schema Design: Normalization vs Denormalization",
+              "slug": "schema-normalization-denormalization",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "SQL vs NoSQL: Data Models and Tradeoffs",
+              "slug": "sql-vs-nosql-tradeoffs",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "OLTP vs OLAP Workloads",
+              "slug": "oltp-vs-olap-workloads",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Indexing and Query Optimization",
+          "slug": "indexing-query-optimization",
+          "lessons": [
+            {
+              "title": "Database Indexing Fundamentals",
+              "slug": "database-indexing-fundamentals",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Types of Indexes (Clustered, Non-Clustered, Composite, Covering)",
+              "slug": "index-types",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Index Types: B-Tree, Hash, GiST, GIN, Inverted Indexes",
+              "slug": "index-types2",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Bloom Filters and Index Optimization",
+              "slug": "bloom-filters-index-optimization",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Index Maintenance and Performance Trade-Offs",
+              "slug": "index-maintenance-performance-tradeoffs",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Query Execution Plans and Optimization",
+              "slug": "query-execution-plans-optimization",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Transactions & Concurrency Control",
+          "slug": "transactions-concurrency",
+          "lessons": [
+            {
+              "title": "Transactions: ACID vs BASE",
+              "slug": "acid-vs-base",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Isolation Levels (Read Uncommitted → Serializable)",
+              "slug": "isolation-levels",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Locking Mechanisms: Row, Table, Intent Locks",
+              "slug": "locking-mechanisms",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Two-Phase Locking (2PL) and Variants",
+              "slug": "two-phase-locking",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "MVCC (Multi-Version Concurrency Control) & Snapshot Isolation",
+              "slug": "mvcc-snapshot-isolation",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Pessimistic vs Optimistic Concurrency Control",
+              "slug": "pessimistic-vs-optimistic",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Deadlocks, Detection, and Resolution Strategies",
+              "slug": "deadlocks-detection-resolution",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Serializable Snapshot Isolation and Anomalies",
+              "slug": "serializable-snapshot-isolation",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Best Practices: Designing for Concurrency",
+              "slug": "concurrency-best-practices",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        }
       ]
-    }]},
-   {
+    },
+    {
+      "title": "Search  Systems",
+      "slug": "search-systems",
+      "icon": "Search",
+      "sections": [
+        {
+          "title": "Search Fundamentals",
+          "slug": "search-fundamentals",
+          "lessons": [
+            {
+              "title": "Introduction to Search Systems",
+              "slug": "introduction-search-systems",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "How Search Differs from Database Queries",
+              "slug": "search-vs-database-queries",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Full-Text Search Basics",
+              "slug": "full-text-search-basics",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Inverted Index and Tokenization",
+              "slug": "inverted-index-tokenization",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Autocomplete and Suggestion Systems",
+              "slug": "autocomplete-suggestion-systems",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Search Infrastructure and Engines",
+          "slug": "search-infrastructure-engines",
+          "lessons": [
+            {
+              "title": "Elasticsearch Architecture and Components",
+              "slug": "elasticsearch-architecture",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Lucene and Solr Internals",
+              "slug": "lucene-solr-internals",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "OpenSearch Overview",
+              "slug": "opensearch-overview",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "Scaling Database",
       "slug": "scaling-database",
       "icon": "MessageCircle",
       "sections": [
+        {
+          "title": "Data Partitioning",
+          "slug": "data-partitioning",
+          "lessons": [
             {
-      "title": "Data Partitioning",
-      "slug": "data-partitioning",
-      "lessons": [
-        { "title": "Why Partition Data?", "slug": "why-partition-data" },
-        { "title": "Horizontal vs Vertical Partitioning", "slug": "horizontal-vs-vertical-partitioning" },
-        { "title": "Range, Hash, and List Partitioning", "slug": "range-hash-list-partitioning" },
-        { "title": "Consistent Hashing Explained", "slug": "consistent-hashing" },
-        { "title": "Dynamic Rebalancing and Hotspot Mitigation", "slug": "dynamic-rebalancing-hotspots" },
-        { "title": "Partition Pruning and Query Routing", "slug": "partition-pruning-routing" }
+              "title": "Why Partition Data?",
+              "slug": "why-partition-data",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Horizontal vs Vertical Partitioning",
+              "slug": "horizontal-vs-vertical-partitioning",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Range, Hash, and List Partitioning",
+              "slug": "range-hash-list-partitioning",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Consistent Hashing Explained",
+              "slug": "consistent-hashing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Dynamic Rebalancing and Hotspot Mitigation",
+              "slug": "dynamic-rebalancing-hotspots",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Partition Pruning and Query Routing",
+              "slug": "partition-pruning-routing",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Data Replication",
+          "slug": "data-replication",
+          "lessons": [
+            {
+              "title": "Replication Fundamentals",
+              "slug": "replication-fundamentals",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Leader-Follower (Primary-Replica) Replication",
+              "slug": "leader-follower-replication",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Leader-Leader (Multi-Master) Replication",
+              "slug": "leader-leader-replication",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Asynchronous vs Synchronous Replication",
+              "slug": "async-vs-sync-replication",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Conflict Resolution and Write Conflicts",
+              "slug": "conflict-resolution",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Replication Lag and Read Consistency",
+              "slug": "replication-lag-read-consistency",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Geo-Replication and Cross-Region Databases",
+              "slug": "geo-replication-cross-region",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Data Sharding",
+          "slug": "data-sharding",
+          "lessons": [
+            {
+              "title": "What is Sharding?",
+              "slug": "what-is-sharding",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Shard Key Design and Anti-Patterns",
+              "slug": "shard-key-design",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Shard Management and Rebalancing",
+              "slug": "shard-management-rebalancing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Global vs Local Indexes in Sharded Systems",
+              "slug": "global-vs-local-indexes",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Distributed Joins and Query Routing",
+              "slug": "distributed-joins-query-routing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Sharding in Practice (MongoDB, Vitess, Spanner)",
+              "slug": "sharding-practice",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Scaling and Replication Design Patterns",
+          "slug": "scaling-replication-design-patterns",
+          "lessons": [
+            {
+              "title": "Vertical vs Horizontal Scaling",
+              "slug": "vertical-vs-horizontal-scaling",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Database Proxying and Query Routing (PgBouncer, ProxySQL, Vitess)",
+              "slug": "db-proxy-query-routing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Read/Write Splitting and Caching Layers",
+              "slug": "read-write-splitting-caching",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "CAP Theorem Deep Dive",
+              "slug": "cap-theorem-deep-dive",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "PACELC Theorem and Real-World Trade-offs",
+              "slug": "pacelc-theorem",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Eventual Consistency and Tunable Consistency Levels",
+              "slug": "eventual-consistency",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Distributed Transactions (Two-Phase Commit, XA)",
+              "slug": "distributed-transactions",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Storage Performance and Optimization",
+          "slug": "storage-performance-optimization",
+          "lessons": [
+            {
+              "title": "I/O and Buffer Pool Management",
+              "slug": "io-buffer-pool-management",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Caching Strategies (Page, Query, Result Cache)",
+              "slug": "caching-strategies",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Compression and Compaction Techniques",
+              "slug": "compression-compaction",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "SSD vs HDD Performance Characteristics",
+              "slug": "ssd-vs-hdd",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Write Amplification and Read Latency Trade-offs",
+              "slug": "write-amplification-read-latency",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Monitoring, Query Profiling, and Explain Plans",
+              "slug": "monitoring-query-profiling",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Distributed Database Design and Real-World Systems",
+          "slug": "distributed-db-design-real-world",
+          "lessons": [
+            {
+              "title": "Distributed Database Architectures Overview",
+              "slug": "distributed-db-architectures",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Google Spanner: TrueTime and Global Consistency",
+              "slug": "google-spanner-truetime",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Amazon DynamoDB: Partitioning and Replication",
+              "slug": "amazon-dynamodb-design",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "CockroachDB and YugabyteDB: Resilient SQL at Scale",
+              "slug": "cockroachdb-yugabytedb",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Cassandra and ScyllaDB: Eventually Consistent Systems",
+              "slug": "cassandra-scylladb",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "TiDB, Vitess, and PlanetScale: Scaling MySQL Architectures",
+              "slug": "tidb-vitess-planetscale",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        }
       ]
     },
-    {
-      "title": "Data Replication",
-      "slug": "data-replication",
-      "lessons": [
-        { "title": "Replication Fundamentals", "slug": "replication-fundamentals" },
-        { "title": "Leader-Follower (Primary-Replica) Replication", "slug": "leader-follower-replication" },
-        { "title": "Leader-Leader (Multi-Master) Replication", "slug": "leader-leader-replication" },
-        { "title": "Asynchronous vs Synchronous Replication", "slug": "async-vs-sync-replication" },
-        { "title": "Conflict Resolution and Write Conflicts", "slug": "conflict-resolution" },
-        { "title": "Replication Lag and Read Consistency", "slug": "replication-lag-read-consistency" },
-        { "title": "Geo-Replication and Cross-Region Databases", "slug": "geo-replication-cross-region" }
-      ]
-    },
-    {
-      "title": "Data Sharding",
-      "slug": "data-sharding",
-      "lessons": [
-        { "title": "What is Sharding?", "slug": "what-is-sharding" },
-        { "title": "Shard Key Design and Anti-Patterns", "slug": "shard-key-design" },
-        { "title": "Shard Management and Rebalancing", "slug": "shard-management-rebalancing" },
-        { "title": "Global vs Local Indexes in Sharded Systems", "slug": "global-vs-local-indexes" },
-        { "title": "Distributed Joins and Query Routing", "slug": "distributed-joins-query-routing" },
-        { "title": "Sharding in Practice (MongoDB, Vitess, Spanner)", "slug": "sharding-practice" }
-      ]
-    },
-    {
-      "title": "Scaling and Replication Design Patterns",
-      "slug": "scaling-replication-design-patterns",
-      "lessons": [
-        { "title": "Vertical vs Horizontal Scaling", "slug": "vertical-vs-horizontal-scaling" },
-        { "title": "Database Proxying and Query Routing (PgBouncer, ProxySQL, Vitess)", "slug": "db-proxy-query-routing" },
-        { "title": "Read/Write Splitting and Caching Layers", "slug": "read-write-splitting-caching" },
-        { "title": "CAP Theorem Deep Dive", "slug": "cap-theorem-deep-dive" },
-        { "title": "PACELC Theorem and Real-World Trade-offs", "slug": "pacelc-theorem" },
-        { "title": "Eventual Consistency and Tunable Consistency Levels", "slug": "eventual-consistency" },
-        { "title": "Distributed Transactions (Two-Phase Commit, XA)", "slug": "distributed-transactions" }
-      ]
-    },
-    {
-      "title": "Storage Performance and Optimization",
-      "slug": "storage-performance-optimization",
-      "lessons": [
-        { "title": "I/O and Buffer Pool Management", "slug": "io-buffer-pool-management" },
-        { "title": "Caching Strategies (Page, Query, Result Cache)", "slug": "caching-strategies" },
-        { "title": "Compression and Compaction Techniques", "slug": "compression-compaction" },
-        { "title": "SSD vs HDD Performance Characteristics", "slug": "ssd-vs-hdd" },
-        { "title": "Write Amplification and Read Latency Trade-offs", "slug": "write-amplification-read-latency" },
-        { "title": "Monitoring, Query Profiling, and Explain Plans", "slug": "monitoring-query-profiling" }
-      ]
-    },
-    {
-      "title": "Distributed Database Design and Real-World Systems",
-      "slug": "distributed-db-design-real-world",
-      "lessons": [
-        { "title": "Distributed Database Architectures Overview", "slug": "distributed-db-architectures" },
-        { "title": "Google Spanner: TrueTime and Global Consistency", "slug": "google-spanner-truetime" },
-        { "title": "Amazon DynamoDB: Partitioning and Replication", "slug": "amazon-dynamodb-design" },
-        { "title": "CockroachDB and YugabyteDB: Resilient SQL at Scale", "slug": "cockroachdb-yugabytedb" },
-        { "title": "Cassandra and ScyllaDB: Eventually Consistent Systems", "slug": "cassandra-scylladb" },
-        { "title": "TiDB, Vitess, and PlanetScale: Scaling MySQL Architectures", "slug": "tidb-vitess-planetscale" }
-      ]
-    }]},
     {
       "title": "Messaging and Asynchronous Communication",
       "slug": "messaging-async",
       "icon": "MessageCircle",
       "sections": [
         {
-      "title": "Messaging Fundamentals",
-      "slug": "messaging-fundamentals",
-      "lessons": [
-        { "title": "Introduction to Messaging Systems", "slug": "intro-messaging-systems" },
-        { "title": "Why Messaging and Event-Driven Architecture?", "slug": "why-messaging-event-driven" },
-        { "title": "Synchronous vs Asynchronous Communication", "slug": "sync-vs-async" },
-        { "title": "Message Queues vs Event Streams", "slug": "queues-vs-event-streams" },
-        { "title": "Core Messaging Concepts: Topics, Queues, Producers, Consumers", "slug": "core-messaging-concepts" }
+          "title": "Messaging Fundamentals",
+          "slug": "messaging-fundamentals",
+          "lessons": [
+            {
+              "title": "Introduction to Messaging Systems",
+              "slug": "intro-messaging-systems",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Why Messaging and Event-Driven Architecture?",
+              "slug": "why-messaging-event-driven",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Synchronous vs Asynchronous Communication",
+              "slug": "sync-vs-async",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Message Queues vs Event Streams",
+              "slug": "queues-vs-event-streams",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Core Messaging Concepts: Topics, Queues, Producers, Consumers",
+              "slug": "core-messaging-concepts",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Messaging Infrastructure and Technologies",
+          "slug": "messaging-infrastructure",
+          "lessons": [
+            {
+              "title": "How Message Brokers Work",
+              "slug": "how-message-brokers-work",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Zookeeper",
+              "slug": "zookeeper-works",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Kafka Architecture and Internals",
+              "slug": "kafka-architecture-internals",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "RabbitMQ Internals",
+              "slug": "rabbitmq-internals",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Amazon SQS and SNS",
+              "slug": "aws-sqs-sns",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Kafka vs RabbitMQ vs SQS: Choosing the Right Tool",
+              "slug": "kafka-vs-rabbitmq-vs-sqs",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Schema Registry and Serialization (Avro, Protobuf, JSON)",
+              "slug": "schema-registry-serialization",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Delivery Guarantees and Reliability",
+          "slug": "delivery-guarantees",
+          "lessons": [
+            {
+              "title": "Message Delivery Semantics: At-Most-Once, At-Least-Once, Exactly-Once",
+              "slug": "delivery-semantics",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Consumer Groups and Parallel Consumption",
+              "slug": "consumer-groups",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Idempotency and Message Ordering",
+              "slug": "idempotency-ordering",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Retries, Dead Letter Queues, and Poison Messages",
+              "slug": "retries-dead-letter",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Duplicate Message Handling",
+              "slug": "duplicate-handling",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Transactional Messaging and Outbox Pattern",
+              "slug": "transactional-messaging-outbox",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Scalability and Performance in Messaging Systems",
+          "slug": "messaging-scalability-performance",
+          "lessons": [
+            {
+              "title": "Partitioning and Sharding Strategies",
+              "slug": "partitioning-sharding",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Load Balancing Consumers",
+              "slug": "load-balancing-consumers",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Handling Backpressure",
+              "slug": "handling-backpressure",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Batching and Windowing",
+              "slug": "batching-windowing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "High Throughput and Low Latency Tuning",
+              "slug": "throughput-latency-tuning",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Monitoring Consumer Lag and Performance",
+              "slug": "monitoring-lag-performance",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        }
       ]
     },
     {
-      "title": "Messaging Infrastructure and Technologies",
-      "slug": "messaging-infrastructure",
-      "lessons": [
-        { "title": "How Message Brokers Work", "slug": "how-message-brokers-work" },
-        { "title": "Zookeeper", "slug": "zookeeper-works" },
-        { "title": "Kafka Architecture and Internals", "slug": "kafka-architecture-internals" },
-        { "title": "RabbitMQ Internals", "slug": "rabbitmq-internals" },
-        { "title": "Amazon SQS and SNS", "slug": "aws-sqs-sns" },
-        { "title": "Kafka vs RabbitMQ vs SQS: Choosing the Right Tool", "slug": "kafka-vs-rabbitmq-vs-sqs" },
-        { "title": "Schema Registry and Serialization (Avro, Protobuf, JSON)", "slug": "schema-registry-serialization" }
+      "title": "Data Processing and Storage Systems",
+      "slug": "data-processing-storage",
+      "icon": "DatabaseZap",
+      "sections": [
+        {
+          "title": "Batch Processing",
+          "slug": "batch-processing",
+          "lessons": [
+            {
+              "title": "Overview of Batch Processing",
+              "slug": "batch-processing-overview",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "MapReduce Fundamentals",
+              "slug": "mapreduce",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Dataflow Engines (Apache Beam, Flink Batch)",
+              "slug": "dataflow-engines",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Why Use Batch Processing?",
+              "slug": "why-batch-processing",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Stream Processing",
+          "slug": "stream-processing",
+          "lessons": [
+            {
+              "title": "Stream Processing Fundamentals",
+              "slug": "stream-processing-fundamentals",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Batch vs Stream Processing",
+              "slug": "batch-vs-stream",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Lambda Architecture",
+              "slug": "lambda-architecture",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Kappa Architecture",
+              "slug": "kappa-architecture",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Change Data Capture (CDC)",
+              "slug": "change-data-capture",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Stream Processing Tools (Kafka Streams, Flink, Spark Streaming)",
+              "slug": "stream-processing-tools",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Storage and Specialized Databases",
+          "slug": "storage-specialized-databases",
+          "lessons": [
+            {
+              "title": "Object Storage (S3, GCS, Azure Blob)",
+              "slug": "object-storage",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Time-Series Databases (InfluxDB, Prometheus, TimescaleDB)",
+              "slug": "timeseries-databases",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Columnar Databases (Parquet, ORC, ClickHouse)",
+              "slug": "columnar-databases",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Data Lakes and Lakehouse Architecture",
+              "slug": "data-lakes-lakehouse",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "ETL and Data Pipelines",
+          "slug": "etl-data-pipelines",
+          "lessons": [
+            {
+              "title": "What is ETL (Extract, Transform, Load)?",
+              "slug": "etl-overview",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Data Ingestion Strategies",
+              "slug": "data-ingestion-strategies",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Workflow Orchestration (Airflow, Dagster, Prefect)",
+              "slug": "workflow-orchestration",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Data Quality, Validation, and Deduplication",
+              "slug": "data-quality-validation",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Batch + Stream Hybrid Architectures",
+              "slug": "batch-stream-hybrid",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Trade-Offs and Considerations",
+          "slug": "tradeoffs",
+          "lessons": [
+            {
+              "title": "Throughput vs Latency in Data Pipelines",
+              "slug": "throughput-vs-latency",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Eventual Consistency and Data Ordering",
+              "slug": "eventual-consistency-ordering",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Data Freshness vs Cost Trade-Offs",
+              "slug": "data-freshness-cost",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        }
       ]
     },
-    {
-      "title": "Delivery Guarantees and Reliability",
-      "slug": "delivery-guarantees",
-      "lessons": [
-        { "title": "Message Delivery Semantics: At-Most-Once, At-Least-Once, Exactly-Once", "slug": "delivery-semantics" },
-        { "title": "Consumer Groups and Parallel Consumption", "slug": "consumer-groups" },
-        { "title": "Idempotency and Message Ordering", "slug": "idempotency-ordering" },
-        { "title": "Retries, Dead Letter Queues, and Poison Messages", "slug": "retries-dead-letter" },
-        { "title": "Duplicate Message Handling", "slug": "duplicate-handling" },
-        { "title": "Transactional Messaging and Outbox Pattern", "slug": "transactional-messaging-outbox" }
-      ]
-    },
-    {
-      "title": "Scalability and Performance in Messaging Systems",
-      "slug": "messaging-scalability-performance",
-      "lessons": [
-        { "title": "Partitioning and Sharding Strategies", "slug": "partitioning-sharding" },
-        { "title": "Load Balancing Consumers", "slug": "load-balancing-consumers" },
-        { "title": "Handling Backpressure", "slug": "handling-backpressure" },
-        { "title": "Batching and Windowing", "slug": "batching-windowing" },
-        { "title": "High Throughput and Low Latency Tuning", "slug": "throughput-latency-tuning" },
-        { "title": "Monitoring Consumer Lag and Performance", "slug": "monitoring-lag-performance" }
-      ]
-    }
-      ]
-    },
-    {
-  "title": "Data Processing and Storage Systems",
-  "slug": "data-processing-storage",
-  "icon": "DatabaseZap",
-  "sections": [
-    {
-      "title": "Batch Processing",
-      "slug": "batch-processing",
-      "lessons": [
-        { "title": "Overview of Batch Processing", "slug": "batch-processing-overview" },
-        { "title": "MapReduce Fundamentals", "slug": "mapreduce" },
-        { "title": "Dataflow Engines (Apache Beam, Flink Batch)", "slug": "dataflow-engines" },
-        { "title": "Why Use Batch Processing?", "slug": "why-batch-processing" }
-      ]
-    },
-    {
-      "title": "Stream Processing",
-      "slug": "stream-processing",
-      "lessons": [
-        { "title": "Stream Processing Fundamentals", "slug": "stream-processing-fundamentals" },
-        { "title": "Batch vs Stream Processing", "slug": "batch-vs-stream" },
-        { "title": "Lambda Architecture", "slug": "lambda-architecture" },
-        { "title": "Kappa Architecture", "slug": "kappa-architecture" },
-        { "title": "Change Data Capture (CDC)", "slug": "change-data-capture" },
-        { "title": "Stream Processing Tools (Kafka Streams, Flink, Spark Streaming)", "slug": "stream-processing-tools" }
-      ]
-    },
-    {
-      "title": "Storage and Specialized Databases",
-      "slug": "storage-specialized-databases",
-      "lessons": [
-        { "title": "Object Storage (S3, GCS, Azure Blob)", "slug": "object-storage" },
-        { "title": "Time-Series Databases (InfluxDB, Prometheus, TimescaleDB)", "slug": "timeseries-databases" },
-        { "title": "Columnar Databases (Parquet, ORC, ClickHouse)", "slug": "columnar-databases" },
-        { "title": "Data Lakes and Lakehouse Architecture", "slug": "data-lakes-lakehouse" }
-      ]
-    },
-    {
-      "title": "ETL and Data Pipelines",
-      "slug": "etl-data-pipelines",
-      "lessons": [
-        { "title": "What is ETL (Extract, Transform, Load)?", "slug": "etl-overview" },
-        { "title": "Data Ingestion Strategies", "slug": "data-ingestion-strategies" },
-        { "title": "Workflow Orchestration (Airflow, Dagster, Prefect)", "slug": "workflow-orchestration" },
-        { "title": "Data Quality, Validation, and Deduplication", "slug": "data-quality-validation" },
-        { "title": "Batch + Stream Hybrid Architectures", "slug": "batch-stream-hybrid" }
-      ]
-    },
-    {
-      "title": "Trade-Offs and Considerations",
-      "slug": "tradeoffs",
-      "lessons": [
-        { "title": "Throughput vs Latency in Data Pipelines", "slug": "throughput-vs-latency" },
-        { "title": "Eventual Consistency and Data Ordering", "slug": "eventual-consistency-ordering" },
-        { "title": "Data Freshness vs Cost Trade-Offs", "slug": "data-freshness-cost" }
-      ]
-    }
-  ]
-},
-
     {
       "title": "Distributed Systems Deep Dive",
       "slug": "distributed-systems",
@@ -620,60 +1842,270 @@
           "title": "Google File System (GFS)",
           "slug": "google-file-system-gfs",
           "lessons": [
-            { "title": "Introduction", "slug": "gfs-introduction" },
-            { "title": "High-level Architecture", "slug": "gfs-high-level-architecture" },
-            { "title": "Single Master and Large Chunk Size", "slug": "gfs-single-master-large-chunk" },
-            { "title": "Metadata", "slug": "gfs-metadata" },
-            { "title": "Master Operations", "slug": "gfs-master-operations" },
-            { "title": "Read Operation Anatomy", "slug": "gfs-read-anatomy" },
-            { "title": "Write Operation Anatomy", "slug": "gfs-write-anatomy" },
-            { "title": "Append Operation Anatomy", "slug": "gfs-append-anatomy" },
-            { "title": "Consistency Model and Snapshotting", "slug": "gfs-consistency-snapshot" },
-            { "title": "Fault Tolerance, High Availability, and Data Integrity", "slug": "gfs-fault-tolerance-ha" },
-            { "title": "Garbage Collection", "slug": "gfs-garbage-collection" },
-            { "title": "Criticism on GFS", "slug": "gfs-criticism" },
-            { "title": "Summary", "slug": "gfs-summary" },
-            { "title": "Quiz", "slug": "gfs-quiz" },
-            { "title": "Mock Interview", "slug": "gfs-mock-interview" }
+            {
+              "title": "Introduction",
+              "slug": "gfs-introduction",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "High-level Architecture",
+              "slug": "gfs-high-level-architecture",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Single Master and Large Chunk Size",
+              "slug": "gfs-single-master-large-chunk",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Metadata",
+              "slug": "gfs-metadata",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Master Operations",
+              "slug": "gfs-master-operations",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Read Operation Anatomy",
+              "slug": "gfs-read-anatomy",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Write Operation Anatomy",
+              "slug": "gfs-write-anatomy",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Append Operation Anatomy",
+              "slug": "gfs-append-anatomy",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Consistency Model and Snapshotting",
+              "slug": "gfs-consistency-snapshot",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Fault Tolerance, High Availability, and Data Integrity",
+              "slug": "gfs-fault-tolerance-ha",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Garbage Collection",
+              "slug": "gfs-garbage-collection",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Criticism on GFS",
+              "slug": "gfs-criticism",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Summary",
+              "slug": "gfs-summary",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Quiz",
+              "slug": "gfs-quiz",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Mock Interview",
+              "slug": "gfs-mock-interview",
+              "isPosted": false,
+              "isPremium": false
+            }
           ]
         },
         {
           "title": "Hadoop Distributed File System (HDFS)",
           "slug": "hdfs",
           "lessons": [
-            { "title": "Introduction", "slug": "hdfs-introduction" },
-            { "title": "High-level Architecture", "slug": "hdfs-high-level-architecture" },
-            { "title": "Deep Dive", "slug": "hdfs-deep-dive" },
-            { "title": "Read Operation Anatomy", "slug": "hdfs-read-anatomy" },
-            { "title": "Write Operation Anatomy", "slug": "hdfs-write-anatomy" },
-            { "title": "Data Integrity & Caching", "slug": "hdfs-data-integrity-caching" },
-            { "title": "Fault Tolerance", "slug": "hdfs-fault-tolerance" },
-            { "title": "High Availability (HA)", "slug": "hdfs-high-availability" },
-            { "title": "Characteristics", "slug": "hdfs-characteristics" },
-            { "title": "Summary", "slug": "hdfs-summary" },
-            { "title": "Quiz", "slug": "hdfs-quiz" },
-            { "title": "Mock Interview", "slug": "hdfs-mock-interview" }
+            {
+              "title": "Introduction",
+              "slug": "hdfs-introduction",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "High-level Architecture",
+              "slug": "hdfs-high-level-architecture",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Deep Dive",
+              "slug": "hdfs-deep-dive",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Read Operation Anatomy",
+              "slug": "hdfs-read-anatomy",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Write Operation Anatomy",
+              "slug": "hdfs-write-anatomy",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Data Integrity & Caching",
+              "slug": "hdfs-data-integrity-caching",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Fault Tolerance",
+              "slug": "hdfs-fault-tolerance",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "High Availability (HA)",
+              "slug": "hdfs-high-availability",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Characteristics",
+              "slug": "hdfs-characteristics",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Summary",
+              "slug": "hdfs-summary",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Quiz",
+              "slug": "hdfs-quiz",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Mock Interview",
+              "slug": "hdfs-mock-interview",
+              "isPosted": false,
+              "isPremium": false
+            }
           ]
         },
         {
           "title": "BigTable",
           "slug": "bigtable",
           "lessons": [
-            { "title": "Introduction", "slug": "bigtable-introduction" },
-            { "title": "BigTable Data Model", "slug": "bigtable-data-model" },
-            { "title": "System APIs", "slug": "bigtable-system-apis" },
-            { "title": "Partitioning and High-level Architecture", "slug": "bigtable-partitioning-architecture" },
-            { "title": "SSTable", "slug": "bigtable-sstable" },
-            { "title": "GFS and Chubby", "slug": "bigtable-gfs-chubby" },
-            { "title": "Components", "slug": "bigtable-components" },
-            { "title": "Working with Tablets", "slug": "bigtable-working-with-tablets" },
-            { "title": "Read & Write Operations", "slug": "bigtable-read-write-ops" },
-            { "title": "Fault Tolerance and Compaction", "slug": "bigtable-fault-tolerance-compaction" },
-            { "title": "Refinements", "slug": "bigtable-refinements" },
-            { "title": "Characteristics", "slug": "bigtable-characteristics" },
-            { "title": "Summary", "slug": "bigtable-summary" },
-            { "title": "Quiz", "slug": "bigtable-quiz" },
-            { "title": "Mock Interview", "slug": "bigtable-mock-interview" }
+            {
+              "title": "Introduction",
+              "slug": "bigtable-introduction",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "BigTable Data Model",
+              "slug": "bigtable-data-model",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "System APIs",
+              "slug": "bigtable-system-apis",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Partitioning and High-level Architecture",
+              "slug": "bigtable-partitioning-architecture",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "SSTable",
+              "slug": "bigtable-sstable",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "GFS and Chubby",
+              "slug": "bigtable-gfs-chubby",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Components",
+              "slug": "bigtable-components",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Working with Tablets",
+              "slug": "bigtable-working-with-tablets",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Read & Write Operations",
+              "slug": "bigtable-read-write-ops",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Fault Tolerance and Compaction",
+              "slug": "bigtable-fault-tolerance-compaction",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Refinements",
+              "slug": "bigtable-refinements",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Characteristics",
+              "slug": "bigtable-characteristics",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Summary",
+              "slug": "bigtable-summary",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Quiz",
+              "slug": "bigtable-quiz",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Mock Interview",
+              "slug": "bigtable-mock-interview",
+              "isPosted": false,
+              "isPremium": false
+            }
           ]
         }
       ]
@@ -687,167 +2119,545 @@
           "title": "System Design Patterns",
           "slug": "system-design-patterns",
           "lessons": [
-            { "title": "Bloom Filters", "slug": "bloom-filters" },
-            { "title": "Consistent Hashing", "slug": "consistent-hashing-pattern" },
-            { "title": "Quorum", "slug": "quorum" },
-            { "title": "Leader and Follower", "slug": "leader-follower" },
-            { "title": "Write-ahead Log", "slug": "write-ahead-log" },
-            { "title": "Segmented Log", "slug": "segmented-log" },
-            { "title": "High-Water Mark", "slug": "high-water-mark" },
-            { "title": "Lease", "slug": "lease" },
-            { "title": "Heartbeat", "slug": "heartbeat" },
-            { "title": "Gossip Protocol", "slug": "gossip-protocol" },
-            { "title": "Phi Accrual Failure Detection", "slug": "phi-accrual-failure-detection" },
-            { "title": "Split Brain", "slug": "split-brain" },
-            { "title": "Fencing", "slug": "fencing" },
-            { "title": "Checksum", "slug": "checksum" },
-            { "title": "Vector Clocks", "slug": "vector-clocks" },
-            { "title": "CAP Theorem", "slug": "cap-theorem-pattern" },
-            { "title": "PACELC Theorem", "slug": "pacelc-theorem" },
-            { "title": "Hinted Handoff", "slug": "hinted-handoff" },
-            { "title": "Read Repair", "slug": "read-repair" },
-            { "title": "Merkle Trees", "slug": "merkle-trees" }
+            {
+              "title": "Bloom Filters",
+              "slug": "bloom-filters",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Consistent Hashing",
+              "slug": "consistent-hashing-pattern",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Quorum",
+              "slug": "quorum",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Leader and Follower",
+              "slug": "leader-follower",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Write-ahead Log",
+              "slug": "write-ahead-log",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Segmented Log",
+              "slug": "segmented-log",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "High-Water Mark",
+              "slug": "high-water-mark",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Lease",
+              "slug": "lease",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Heartbeat",
+              "slug": "heartbeat",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Gossip Protocol",
+              "slug": "gossip-protocol",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Phi Accrual Failure Detection",
+              "slug": "phi-accrual-failure-detection",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Split Brain",
+              "slug": "split-brain",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Fencing",
+              "slug": "fencing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Checksum",
+              "slug": "checksum",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Vector Clocks",
+              "slug": "vector-clocks",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "CAP Theorem",
+              "slug": "cap-theorem-pattern",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "PACELC Theorem",
+              "slug": "pacelc-theorem",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Hinted Handoff",
+              "slug": "hinted-handoff",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Read Repair",
+              "slug": "read-repair",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Merkle Trees",
+              "slug": "merkle-trees",
+              "isPosted": false,
+              "isPremium": false
+            }
           ]
         }
       ]
     },
     {
-  "title": "Interview  Questions",
-  "slug": "interview-questions",
-  "icon": "Lightbulb",
-  "sections": [
-    {
-      "title": "Foundational and Warm-Up Questions",
-      "slug": "foundational-questions",
-      "lessons": [
-        { "title": "Design TinyURL", "slug": "design-tinyurl" },
-        { "title": "Design Rate Limiter", "slug": "design-rate-limiter" },
-        { "title": "Design Cache System", "slug": "design-cache-system" },
-        { "title": "Design Key-Value Store", "slug": "design-key-value-store" },
-        { "title": "Design Web Crawler", "slug": "design-web-crawler" },
-        { "title": "Design Notification System", "slug": "design-notification-system" }
+      "title": "Interview  Questions",
+      "slug": "interview-questions",
+      "icon": "Lightbulb",
+      "sections": [
+        {
+          "title": "Foundational and Warm-Up Questions",
+          "slug": "foundational-questions",
+          "lessons": [
+            {
+              "title": "Design TinyURL",
+              "slug": "design-tinyurl",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Rate Limiter",
+              "slug": "design-rate-limiter",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Cache System",
+              "slug": "design-cache-system",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Key-Value Store",
+              "slug": "design-key-value-store",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Web Crawler",
+              "slug": "design-web-crawler",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Notification System",
+              "slug": "design-notification-system",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Scalable Web Applications",
+          "slug": "scalable-web-applications",
+          "lessons": [
+            {
+              "title": "Design Instagram",
+              "slug": "design-instagram",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Twitter (Feed System)",
+              "slug": "design-twitter",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design YouTube",
+              "slug": "design-youtube",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design WhatsApp or Messenger",
+              "slug": "design-whatsapp",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design LinkedIn (Feed + Job Module)",
+              "slug": "design-linkedin",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Reddit or Quora",
+              "slug": "design-reddit-quora",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Storage and Data-Intensive Systems",
+          "slug": "storage-data-intensive-systems",
+          "lessons": [
+            {
+              "title": "Design Dropbox or Google Drive",
+              "slug": "design-dropbox",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Google Photos",
+              "slug": "design-google-photos",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design File Storage System (S3-like)",
+              "slug": "design-s3-system",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design YouTube Video Storage and CDN",
+              "slug": "design-youtube-storage-cdn",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Log Aggregation System",
+              "slug": "design-log-aggregation",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Search Autocomplete",
+              "slug": "design-search-autocomplete",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Real-Time and Streaming Systems",
+          "slug": "real-time-streaming-systems",
+          "lessons": [
+            {
+              "title": "Design Uber or Lyft",
+              "slug": "design-uber",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Food Delivery Platform (e.g., Swiggy, DoorDash)",
+              "slug": "design-food-delivery",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Real-Time Analytics Dashboard",
+              "slug": "design-real-time-analytics",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Stock Trading System",
+              "slug": "design-stock-trading",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Live Streaming System",
+              "slug": "design-live-streaming",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design IoT Data Ingestion System",
+              "slug": "design-iot-data-ingestion",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Search, Recommendation, and Analytics Systems",
+          "slug": "search-recommendation-analytics",
+          "lessons": [
+            {
+              "title": "Design Search Engine",
+              "slug": "design-search-engine",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Recommendation System (Netflix/YouTube)",
+              "slug": "design-recommendation-system",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Analytics Pipeline",
+              "slug": "design-analytics-pipeline",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design A/B Testing Framework",
+              "slug": "design-ab-testing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Logging and Metrics System",
+              "slug": "design-logging-metrics",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Enterprise and Backend Systems",
+          "slug": "enterprise-backend-systems",
+          "lessons": [
+            {
+              "title": "Design Payment System",
+              "slug": "design-payment-system",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Booking System (e.g., Expedia, Airbnb)",
+              "slug": "design-booking-system",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design E-Commerce Platform",
+              "slug": "design-ecommerce-platform",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Inventory Management System",
+              "slug": "design-inventory-system",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Order Tracking System",
+              "slug": "design-order-tracking",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design Retail Case Management System",
+              "slug": "design-retail-case-management",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "System Design Scenarios and Trade-Offs",
+          "slug": "system-design-scenarios-tradeoffs",
+          "lessons": [
+            {
+              "title": "Design a High-Availability System",
+              "slug": "design-high-availability",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design a Multi-Region Deployment",
+              "slug": "design-multi-region",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design System for Eventual Consistency",
+              "slug": "design-eventual-consistency",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design for Scale vs Performance Trade-Off",
+              "slug": "design-scale-performance-tradeoff",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Design with Fault Tolerance and Resilience",
+              "slug": "design-fault-tolerance",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        }
       ]
     },
     {
-      "title": "Scalable Web Applications",
-      "slug": "scalable-web-applications",
-      "lessons": [
-        { "title": "Design Instagram", "slug": "design-instagram" },
-        { "title": "Design Twitter (Feed System)", "slug": "design-twitter" },
-        { "title": "Design YouTube", "slug": "design-youtube" },
-        { "title": "Design WhatsApp or Messenger", "slug": "design-whatsapp" },
-        { "title": "Design LinkedIn (Feed + Job Module)", "slug": "design-linkedin" },
-        { "title": "Design Reddit or Quora", "slug": "design-reddit-quora" }
-      ]
-    },
-    {
-      "title": "Storage and Data-Intensive Systems",
-      "slug": "storage-data-intensive-systems",
-      "lessons": [
-        { "title": "Design Dropbox or Google Drive", "slug": "design-dropbox" },
-        { "title": "Design Google Photos", "slug": "design-google-photos" },
-        { "title": "Design File Storage System (S3-like)", "slug": "design-s3-system" },
-        { "title": "Design YouTube Video Storage and CDN", "slug": "design-youtube-storage-cdn" },
-        { "title": "Design Log Aggregation System", "slug": "design-log-aggregation" },
-        { "title": "Design Search Autocomplete", "slug": "design-search-autocomplete" }
-      ]
-    },
-    {
-      "title": "Real-Time and Streaming Systems",
-      "slug": "real-time-streaming-systems",
-      "lessons": [
-        { "title": "Design Uber or Lyft", "slug": "design-uber" },
-        { "title": "Design Food Delivery Platform (e.g., Swiggy, DoorDash)", "slug": "design-food-delivery" },
-        { "title": "Design Real-Time Analytics Dashboard", "slug": "design-real-time-analytics" },
-        { "title": "Design Stock Trading System", "slug": "design-stock-trading" },
-        { "title": "Design Live Streaming System", "slug": "design-live-streaming" },
-        { "title": "Design IoT Data Ingestion System", "slug": "design-iot-data-ingestion" }
-      ]
-    },
-    {
-      "title": "Search, Recommendation, and Analytics Systems",
-      "slug": "search-recommendation-analytics",
-      "lessons": [
-        { "title": "Design Search Engine", "slug": "design-search-engine" },
-        { "title": "Design Recommendation System (Netflix/YouTube)", "slug": "design-recommendation-system" },
-        { "title": "Design Analytics Pipeline", "slug": "design-analytics-pipeline" },
-        { "title": "Design A/B Testing Framework", "slug": "design-ab-testing" },
-        { "title": "Design Logging and Metrics System", "slug": "design-logging-metrics" }
-      ]
-    },
-    {
-      "title": "Enterprise and Backend Systems",
-      "slug": "enterprise-backend-systems",
-      "lessons": [
-        { "title": "Design Payment System", "slug": "design-payment-system" },
-        { "title": "Design Booking System (e.g., Expedia, Airbnb)", "slug": "design-booking-system" },
-        { "title": "Design E-Commerce Platform", "slug": "design-ecommerce-platform" },
-        { "title": "Design Inventory Management System", "slug": "design-inventory-system" },
-        { "title": "Design Order Tracking System", "slug": "design-order-tracking" },
-        { "title": "Design Retail Case Management System", "slug": "design-retail-case-management" }
-      ]
-    },
-    {
-      "title": "System Design Scenarios and Trade-Offs",
-      "slug": "system-design-scenarios-tradeoffs",
-      "lessons": [
-        { "title": "Design a High-Availability System", "slug": "design-high-availability" },
-        { "title": "Design a Multi-Region Deployment", "slug": "design-multi-region" },
-        { "title": "Design System for Eventual Consistency", "slug": "design-eventual-consistency" },
-        { "title": "Design for Scale vs Performance Trade-Off", "slug": "design-scale-performance-tradeoff" },
-        { "title": "Design with Fault Tolerance and Resilience", "slug": "design-fault-tolerance" }
+      "title": "Interview Practice and Frameworks",
+      "slug": "interview-practice-frameworks",
+      "icon": "Presentation",
+      "sections": [
+        {
+          "title": "System Design Interview Framework",
+          "slug": "system-design-interview-framework",
+          "lessons": [
+            {
+              "title": "System Design Interview Framework Overview",
+              "slug": "system-design-framework",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Clarifying Questions Checklist",
+              "slug": "clarifying-questions",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Functional vs Non-Functional Requirements",
+              "slug": "functional-vs-nonfunctional",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Capacity Estimation and Bottleneck Analysis",
+              "slug": "capacity-estimation",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Driving the Interview Like a Senior Engineer",
+          "slug": "driving-the-interview",
+          "lessons": [
+            {
+              "title": "How to Drive the Discussion Like a Senior Engineer",
+              "slug": "drive-discussion-senior",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Handling Ambiguity and Making Assumptions",
+              "slug": "handling-ambiguity-assumptions",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Trade-Off Narration and Decision Justification",
+              "slug": "tradeoff-narration-decision",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Structuring the Solution and Whiteboard Flow",
+              "slug": "structuring-solution-whiteboard",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Common Pitfalls and Best Practices",
+          "slug": "pitfalls-best-practices",
+          "lessons": [
+            {
+              "title": "Common Mistakes and Red Flags",
+              "slug": "system-design-mistakes",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Time Management in Interviews",
+              "slug": "time-management-interviews",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Communicating Trade-Offs Clearly",
+              "slug": "communicating-tradeoffs",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Checklist Before Ending the Interview",
+              "slug": "interview-end-checklist",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Mock Interview Preparation",
+          "slug": "mock-interview-preparation",
+          "lessons": [
+            {
+              "title": "How to Practice Mock System Design Interviews",
+              "slug": "mock-system-design-practice",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Evaluating Yourself Using Rubrics",
+              "slug": "self-evaluation-rubrics",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Sample Evaluation Rubric for Senior Engineers",
+              "slug": "sample-evaluation-rubric",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Resources and Practice Platforms",
+              "slug": "resources-practice-platforms",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        }
       ]
     }
-  ]
-},
-{
-  "title": "Interview Practice and Frameworks",
-  "slug": "interview-practice-frameworks",
-  "icon": "Presentation",
-  "sections": [
-    {
-      "title": "System Design Interview Framework",
-      "slug": "system-design-interview-framework",
-      "lessons": [
-        { "title": "System Design Interview Framework Overview", "slug": "system-design-framework" },
-        { "title": "Clarifying Questions Checklist", "slug": "clarifying-questions" },
-        { "title": "Functional vs Non-Functional Requirements", "slug": "functional-vs-nonfunctional" },
-        { "title": "Capacity Estimation and Bottleneck Analysis", "slug": "capacity-estimation" }
-      ]
-    },
-    {
-      "title": "Driving the Interview Like a Senior Engineer",
-      "slug": "driving-the-interview",
-      "lessons": [
-        { "title": "How to Drive the Discussion Like a Senior Engineer", "slug": "drive-discussion-senior" },
-        { "title": "Handling Ambiguity and Making Assumptions", "slug": "handling-ambiguity-assumptions" },
-        { "title": "Trade-Off Narration and Decision Justification", "slug": "tradeoff-narration-decision" },
-        { "title": "Structuring the Solution and Whiteboard Flow", "slug": "structuring-solution-whiteboard" }
-      ]
-    },
-    {
-      "title": "Common Pitfalls and Best Practices",
-      "slug": "pitfalls-best-practices",
-      "lessons": [
-        { "title": "Common Mistakes and Red Flags", "slug": "system-design-mistakes" },
-        { "title": "Time Management in Interviews", "slug": "time-management-interviews" },
-        { "title": "Communicating Trade-Offs Clearly", "slug": "communicating-tradeoffs" },
-        { "title": "Checklist Before Ending the Interview", "slug": "interview-end-checklist" }
-      ]
-    },
-    {
-      "title": "Mock Interview Preparation",
-      "slug": "mock-interview-preparation",
-      "lessons": [
-        { "title": "How to Practice Mock System Design Interviews", "slug": "mock-system-design-practice" },
-        { "title": "Evaluating Yourself Using Rubrics", "slug": "self-evaluation-rubrics" },
-        { "title": "Sample Evaluation Rubric for Senior Engineers", "slug": "sample-evaluation-rubric" },
-        { "title": "Resources and Practice Platforms", "slug": "resources-practice-platforms" }
-      ]
-    }
-  ]
-}
-
-
   ]
 }

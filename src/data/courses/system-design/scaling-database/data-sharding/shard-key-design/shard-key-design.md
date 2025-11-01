@@ -1,0 +1,3 @@
+# Shard Key Design and Anti-Patterns
+
+Content coming soon...

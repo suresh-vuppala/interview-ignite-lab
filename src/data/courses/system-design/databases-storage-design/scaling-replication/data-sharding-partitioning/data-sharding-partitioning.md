@@ -1,3 +1,0 @@
-# Data Sharding and Partitioning Strategies
-
-Content coming soon...

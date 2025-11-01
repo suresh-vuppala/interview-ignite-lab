@@ -1,4 +1,7 @@
 {
   "title": "Data Integrity & Caching",
-  "slug": "hdfs-data-integrity-caching"
+  "slug": "hdfs-data-integrity-caching",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "hdfs-data-integrity-caching.md"
 }

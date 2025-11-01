@@ -1,4 +1,7 @@
 {
   "title": "System APIs",
-  "slug": "bigtable-system-apis"
+  "slug": "bigtable-system-apis",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bigtable-system-apis.md"
 }

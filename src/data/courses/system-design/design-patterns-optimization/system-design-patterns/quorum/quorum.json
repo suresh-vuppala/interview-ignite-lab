@@ -1,4 +1,7 @@
 {
   "title": "Quorum",
-  "slug": "quorum"
+  "slug": "quorum",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "quorum.md"
 }

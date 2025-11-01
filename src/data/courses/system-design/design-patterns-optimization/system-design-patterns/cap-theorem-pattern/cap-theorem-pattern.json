@@ -1,4 +1,7 @@
 {
   "title": "CAP Theorem",
-  "slug": "cap-theorem-pattern"
+  "slug": "cap-theorem-pattern",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "cap-theorem-pattern.md"
 }

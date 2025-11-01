@@ -53,8 +53,12 @@ export function Layout({ children }: LayoutProps) {
                 
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2 font-bold text-lg hover:opacity-80 transition-opacity">
-                  <GraduationCap className="h-6 w-6 text-primary" />
-                  <span className="hidden sm:inline">InterviewSort</span>
+                <img
+                    src="/InterviewSortLogo.png"
+                    alt="InterviewSort Logo"
+                    className="h-10 w-60 object-contain"
+                  />
+                  {/* <span className="hidden sm:inline">InterviewSort</span> */}
                 </Link>
                 
                 <div className="h-6 w-px bg-border hidden lg:block" />

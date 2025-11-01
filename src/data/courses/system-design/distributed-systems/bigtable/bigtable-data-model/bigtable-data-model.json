@@ -1,4 +1,7 @@
 {
   "title": "BigTable Data Model",
-  "slug": "bigtable-data-model"
+  "slug": "bigtable-data-model",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bigtable-data-model.md"
 }

@@ -1,0 +1,7 @@
+{
+  "title": "MVCC (Multi-Version Concurrency Control) & Snapshot Isolation",
+  "slug": "mvcc-snapshot-isolation",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "mvcc-snapshot-isolation.md"
+}

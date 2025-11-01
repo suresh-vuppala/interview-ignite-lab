@@ -1,5 +1,7 @@
 {
   "title": "What, Why, How, When, and Where of System Design",
   "slug": "what-why-how-when-where-system-design",
-  "isPremium": true
+  "isPremium": true,
+  "isPosted": false,
+  "mdFile": "what-why-how-when-where-system-design.md"
 }

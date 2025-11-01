@@ -1,4 +1,7 @@
 {
   "title": "Quiz",
-  "slug": "gfs-quiz"
+  "slug": "gfs-quiz",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "gfs-quiz.md"
 }

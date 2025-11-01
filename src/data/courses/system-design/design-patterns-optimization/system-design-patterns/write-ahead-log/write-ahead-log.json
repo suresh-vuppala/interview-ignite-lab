@@ -1,4 +1,7 @@
 {
   "title": "Write-ahead Log",
-  "slug": "write-ahead-log"
+  "slug": "write-ahead-log",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "write-ahead-log.md"
 }

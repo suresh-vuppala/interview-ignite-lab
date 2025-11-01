@@ -1,4 +1,7 @@
 {
   "title": "Consistency Model and Snapshotting",
-  "slug": "gfs-consistency-snapshot"
+  "slug": "gfs-consistency-snapshot",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "gfs-consistency-snapshot.md"
 }

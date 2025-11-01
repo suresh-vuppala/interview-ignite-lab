@@ -1,4 +1,7 @@
 {
   "title": "Master Operations",
-  "slug": "gfs-master-operations"
+  "slug": "gfs-master-operations",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "gfs-master-operations.md"
 }

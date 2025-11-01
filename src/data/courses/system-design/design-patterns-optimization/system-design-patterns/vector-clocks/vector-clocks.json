@@ -1,4 +1,7 @@
 {
   "title": "Vector Clocks",
-  "slug": "vector-clocks"
+  "slug": "vector-clocks",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "vector-clocks.md"
 }

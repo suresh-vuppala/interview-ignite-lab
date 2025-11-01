@@ -1,3 +1,0 @@
-# Data Structures Behind Databases
-
-Content coming soon...

@@ -1,4 +1,7 @@
 {
   "title": "Quiz",
-  "slug": "hdfs-quiz"
+  "slug": "hdfs-quiz",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "hdfs-quiz.md"
 }

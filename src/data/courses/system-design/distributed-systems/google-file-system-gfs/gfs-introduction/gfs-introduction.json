@@ -1,4 +1,7 @@
 {
   "title": "Introduction",
-  "slug": "gfs-introduction"
+  "slug": "gfs-introduction",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "gfs-introduction.md"
 }

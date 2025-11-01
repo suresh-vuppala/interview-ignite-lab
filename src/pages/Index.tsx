@@ -263,12 +263,14 @@ const Index = () => {
       <footer className="py-12 px-4 border-t">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center">
-                  <BookOpen className="w-4 h-4 text-white" />
-                </div>
-                <span className="font-bold text-xl">InterviewSort</span>
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <img
+                    src="/InterviewSortLogo.png"
+                    alt="InterviewSort Logo"
+                    className="h-10 w-80 object-contain"
+                  />
+                {/* <span className="font-bold text-xl">InterviewSort</span> */}
               </div>
               <p className="text-muted-foreground">
                 The most structured way to prepare for coding interviews.

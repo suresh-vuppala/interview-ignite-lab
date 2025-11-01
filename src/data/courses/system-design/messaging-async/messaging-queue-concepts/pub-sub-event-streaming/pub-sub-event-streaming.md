@@ -1,3 +1,0 @@
-# Pub-Sub Model and Event Streaming
-
-Content coming soon...

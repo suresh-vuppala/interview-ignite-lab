@@ -1,4 +1,7 @@
 {
   "title": "Heartbeat",
-  "slug": "heartbeat"
+  "slug": "heartbeat",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "heartbeat.md"
 }

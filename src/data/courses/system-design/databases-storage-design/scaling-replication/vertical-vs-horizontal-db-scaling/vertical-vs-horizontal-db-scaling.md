@@ -1,3 +1,0 @@
-# Vertical vs Horizontal Scaling in Databases
-
-Content coming soon...

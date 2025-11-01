@@ -1,0 +1,3 @@
+# Common Mistakes and Red Flags
+
+Content coming soon...

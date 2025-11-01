@@ -1,4 +1,7 @@
 {
   "title": "Metadata",
-  "slug": "gfs-metadata"
+  "slug": "gfs-metadata",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "gfs-metadata.md"
 }

@@ -1,3 +1,0 @@
-# Scaling Cache (Redis)
-
-Content coming soon...

@@ -1,0 +1,7 @@
+{
+  "title": "Object Storage (S3, GCS, Azure Blob)",
+  "slug": "object-storage",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "object-storage.md"
+}

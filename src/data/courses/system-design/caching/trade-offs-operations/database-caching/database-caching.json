@@ -1,0 +1,7 @@
+{
+  "title": "Caching in Databases (MySQL Query Cache, Postgres, MongoDB)",
+  "slug": "database-caching",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "database-caching.md"
+}

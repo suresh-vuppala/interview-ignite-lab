@@ -1,4 +1,7 @@
 {
   "title": "Introduction",
-  "slug": "bigtable-introduction"
+  "slug": "bigtable-introduction",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "bigtable-introduction.md"
 }

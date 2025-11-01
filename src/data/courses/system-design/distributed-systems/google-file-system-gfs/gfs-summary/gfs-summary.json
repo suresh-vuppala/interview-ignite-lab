@@ -1,4 +1,7 @@
 {
   "title": "Summary",
-  "slug": "gfs-summary"
+  "slug": "gfs-summary",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "gfs-summary.md"
 }

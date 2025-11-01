@@ -1,4 +1,7 @@
 {
   "title": "Common Constraints: Too Many Users, Too Much Data, Low Latency Needs",
-  "slug": "common-constraints-system-design"
+  "slug": "common-constraints-system-design",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "common-constraints-system-design.md"
 }

@@ -1,4 +1,7 @@
 {
   "title": "Read Operation Anatomy",
-  "slug": "hdfs-read-anatomy"
+  "slug": "hdfs-read-anatomy",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "hdfs-read-anatomy.md"
 }

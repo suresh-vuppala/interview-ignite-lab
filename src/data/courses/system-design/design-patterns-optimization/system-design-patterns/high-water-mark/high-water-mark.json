@@ -1,4 +1,7 @@
 {
   "title": "High-Water Mark",
-  "slug": "high-water-mark"
+  "slug": "high-water-mark",
+  "isPremium": false,
+  "isPosted": false,
+  "mdFile": "high-water-mark.md"
 }
