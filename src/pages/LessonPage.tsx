@@ -117,7 +117,7 @@ export const fetchMarkdown = async (
 ) => {
   if (!lessonSlug || !mdFile) return 'Markdown not available';
 
-  const path = buildLessonPath(courseSlug, moduleSlug, sectionSlug, subsectionSlug, lessonSlug, mdFile);
+  const path = buildLessonPath(courseSlug, moduleSlug, sectionSlug, subsectionSlug, lessonSlug);
 
   const file = Object.keys(markdownFiles).find((key) => key.endsWith(mdFile));
   if (!file) {
