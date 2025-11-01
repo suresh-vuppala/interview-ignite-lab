@@ -27,19 +27,19 @@ const courses = [
     title: "System Design (HLD)",
     icon: Brain,
     description: "Learn high-level system architecture"
-  },
-  {
-    id: "lld",
-    title: "Low Level Design (LLD)",
-    icon: GitBranch,
-    description: "Object-oriented design patterns"
-  },
-  {
-    id: "behavioral",
-    title: "Behavioral",
-    icon: MessageSquare,
-    description: "Ace behavioral interviews"
   }
+  // {
+  //   id: "lld",
+  //   title: "Low Level Design (LLD)",
+  //   icon: GitBranch,
+  //   description: "Object-oriented design patterns"
+  // },
+  // {
+  //   id: "behavioral",
+  //   title: "Behavioral",
+  //   icon: MessageSquare,
+  //   description: "Ace behavioral interviews"
+  // }
 ];
 
 export function CourseSelector() {

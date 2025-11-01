@@ -34,21 +34,21 @@ const features = [
     description: "Learn to design scalable systems like a senior engineer",
     lessons: 18,
     color: "text-purple-500"
-  },
-  {
-    icon: Users,
-    title: "Behavioral Interviews",
-    description: "Perfect your soft skills and leadership stories",
-    lessons: 12,
-    color: "text-green-500"
-  },
-  {
-    icon: Target,
-    title: "Mock Interviews",
-    description: "Practice with real interview scenarios and get feedback",
-    lessons: 15,
-    color: "text-orange-500"
   }
+  // {
+  //   icon: Users,
+  //   title: "Behavioral Interviews",
+  //   description: "Perfect your soft skills and leadership stories",
+  //   lessons: 12,
+  //   color: "text-green-500"
+  // },
+  // {
+  //   icon: Target,
+  //   title: "Mock Interviews",
+  //   description: "Practice with real interview scenarios and get feedback",
+  //   lessons: 15,
+  //   color: "text-orange-500"
+  // }
 ];
 
 const stats = [
@@ -102,11 +102,11 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl">
           <Badge variant="secondary" className="mb-6">
             <Star className="w-3 h-3 mr-1" />
-            Trusted by 10,000+ developers
+            Trusted by top developers
           </Badge>
           
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            Master Coding Interviews in{' '}
+            Master Tech Interviews in{' '}
             <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
               60 Days
             </span>
@@ -119,18 +119,18 @@ const Index = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" className="text-lg px-8" asChild>
-              <Link to="/auth">
+              <Link to="/course/dsa/programming-essentials/getting-started/getting-started-with-easy-problems">
                 <Play className="w-5 h-5 mr-2" />
                 Start Learning Free
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8">
+            {/* <Button variant="outline" size="lg" className="text-lg px-8">
               <BookOpen className="w-5 h-5 mr-2" />
               View Curriculum
-            </Button>
+            </Button> */}
           </div>
           
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="flex justify-center mb-2">
@@ -140,7 +140,7 @@ const Index = () => {
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -171,7 +171,7 @@ const Index = () => {
                 <CardContent className="pt-0">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-muted-foreground">
-                      {feature.lessons} lessons
+                      {/* {feature.lessons} lessons */}
                     </span>
                     <Button variant="ghost" size="sm">
                       Learn More
@@ -186,7 +186,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-4 bg-muted/30">
+      {/* <section className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -218,7 +218,7 @@ const Index = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-primary to-blue-600 text-white">
@@ -228,23 +228,25 @@ const Index = () => {
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Join thousands of developers who've successfully prepared for and aced 
-            their coding interviews with InterviewBucket.
+            their Tech interviews with InterviewSort.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8" asChild>
-              <Link to="/auth">
+              <Link to="/course/dsa/programming-essentials/getting-started/getting-started-with-easy-problems">
                 <Crown className="w-5 h-5 mr-2" />
-                Start Free Trial
+                Coding
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 border-white text-white hover:bg-white hover:text-primary">
-              <BookOpen className="w-5 h-5 mr-2" />
-              View Pricing
+            <Button size="lg" variant="outline" className="text-lg px-8 border-white text-black hover:bg-white hover:text-primary">
+              <Link to="course/system-design/system-design-foundations/introduction-to-system-design/what-why-how-when-where-system-design">
+                {/* <Crown className="w-5 h-5 mr-2" /> */}
+                System Design
+              </Link>
             </Button>
           </div>
           
-          <div className="mt-8 flex items-center justify-center gap-8 text-sm opacity-80">
+          {/* <div className="mt-8 flex items-center justify-center gap-8 text-sm opacity-80">
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4" />
               No credit card required
@@ -253,7 +255,7 @@ const Index = () => {
               <CheckCircle className="w-4 h-4" />
               7-day money back guarantee
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -266,7 +268,7 @@ const Index = () => {
                 <div className="w-8 h-8 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center">
                   <BookOpen className="w-4 h-4 text-white" />
                 </div>
-                <span className="font-bold text-xl">InterviewBucket</span>
+                <span className="font-bold text-xl">InterviewSort</span>
               </div>
               <p className="text-muted-foreground">
                 The most structured way to prepare for coding interviews.
@@ -276,14 +278,14 @@ const Index = () => {
             <div>
               <h3 className="font-semibold mb-4">Courses</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li><Link to="/course/data-structures" className="hover:text-foreground">Data Structures</Link></li>
-                <li><Link to="/course/algorithms" className="hover:text-foreground">Algorithms</Link></li>
+                <li><Link to="/course/data-structures" className="hover:text-foreground">Data Structures & Algorithms</Link></li>
+                {/* <li><Link to="/course/algorithms" className="hover:text-foreground">Algorithms</Link></li> */}
                 <li><Link to="/course/system-design" className="hover:text-foreground">System Design</Link></li>
-                <li><Link to="/course/behavioral" className="hover:text-foreground">Behavioral</Link></li>
+                {/* <li><Link to="/course/behavioral" className="hover:text-foreground">Behavioral</Link></li> */}
               </ul>
             </div>
             
-            <div>
+            {/* <div>
               <h3 className="font-semibold mb-4">Company</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li><Link to="/about" className="hover:text-foreground">About</Link></li>
@@ -291,20 +293,20 @@ const Index = () => {
                 <li><Link to="/careers" className="hover:text-foreground">Careers</Link></li>
                 <li><Link to="/contact" className="hover:text-foreground">Contact</Link></li>
               </ul>
-            </div>
+            </div> */}
             
-            <div>
+            {/* <div>
               <h3 className="font-semibold mb-4">Support</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li><Link to="/help" className="hover:text-foreground">Help Center</Link></li>
                 <li><Link to="/privacy" className="hover:text-foreground">Privacy Policy</Link></li>
                 <li><Link to="/terms" className="hover:text-foreground">Terms of Service</Link></li>
               </ul>
-            </div>
+            </div> */}
           </div>
           
           <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2025 InterviewBucket. All rights reserved.</p>
+            <p>&copy; 2025 InterviewSort. All rights reserved.</p>
           </div>
         </div>
       </footer>

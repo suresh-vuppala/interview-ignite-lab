@@ -19,19 +19,19 @@ const courses = [
     title: "System Design (HLD)",
     icon: Brain,
     description: "Learn high-level system architecture"
-  },
-  {
-    id: "lld",
-    title: "Low Level Design (LLD)",
-    icon: GitBranch,
-    description: "Object-oriented design patterns"
-  },
-  {
-    id: "behavioral",
-    title: "Behavioral",
-    icon: MessageSquare,
-    description: "Ace behavioral interviews"
   }
+  // {
+  //   id: "lld",
+  //   title: "Low Level Design (LLD)",
+  //   icon: GitBranch,
+  //   description: "Object-oriented design patterns"
+  // },
+  // {
+  //   id: "behavioral",
+  //   title: "Behavioral",
+  //   icon: MessageSquare,
+  //   description: "Ace behavioral interviews"
+  // }
 ];
 
 export function Header() {
@@ -98,7 +98,7 @@ export function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
           
-          {menuItems.map((item) => (
+          {/* {menuItems.map((item) => (
             <Link
               key={item.href}
               to={item.href}
@@ -107,7 +107,7 @@ export function Header() {
               <item.icon className="h-4 w-4" />
               {item.label}
             </Link>
-          ))}
+          ))} */}
         </nav>
 
         {/* Desktop Actions */}
@@ -124,7 +124,7 @@ export function Header() {
             )}
           </Button>
           
-          {user ? (
+          {/* {user ? (
             <Button variant="outline" onClick={signOut}>
               Sign Out
             </Button>
@@ -137,7 +137,7 @@ export function Header() {
                 <Link to="/auth">Get Started</Link>
               </Button>
             </>
-          )}
+          )} */}
         </div>
 
         {/* Mobile Menu */}
@@ -167,7 +167,7 @@ export function Header() {
                 ))}
               </div>
               
-              <div className="border-t pt-2">
+              {/* <div className="border-t pt-2">
                 {menuItems.map((item) => (
                   <Link
                     key={item.href}
@@ -179,7 +179,7 @@ export function Header() {
                     {item.label}
                   </Link>
                 ))}
-              </div>
+              </div> */}
               
               <div className="border-t pt-4 mt-4 space-y-4">
                 <Button
@@ -200,7 +200,7 @@ export function Header() {
                   )}
                 </Button>
                 
-                {user ? (
+                {/* {user ? (
                   <Button 
                     variant="outline" 
                     className="w-full"
@@ -229,7 +229,7 @@ export function Header() {
                       <Link to="/auth">Get Started</Link>
                     </Button>
                   </>
-                )}
+                )} */}
               </div>
             </nav>
           </SheetContent>

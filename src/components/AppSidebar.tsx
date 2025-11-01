@@ -14,7 +14,7 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar';
 import {
-  Code,
+  BookOpen ,
   Lock,
   Database,
   Brain,
@@ -308,7 +308,7 @@ useEffect(() => {
                                 )}
                               >
                                 <div className="flex items-center gap-2 min-w-0 flex-1 overflow-hidden">
-                                  <Code className="h-4 w-4 flex-shrink-0 text-primary" />
+                                  <BookOpen   className="h-3 w-3 flex-shrink-0 text-primary" />
                                   <span className="text-[16px] font-bold break-words whitespace-normal leading-snug">
                                     {module.title}
                                   </span>

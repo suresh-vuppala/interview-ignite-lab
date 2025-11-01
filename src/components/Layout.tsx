@@ -81,7 +81,7 @@ export function Layout({ children }: LayoutProps) {
                               High Level Design
                             </p>
                           </Link>
-                          <Link className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground" to="/course/lld">
+                          {/* <Link className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground" to="/course/lld">
                             <div className="text-sm font-medium leading-none">LLD</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Low Level Design
@@ -92,11 +92,11 @@ export function Layout({ children }: LayoutProps) {
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Interview Skills
                             </p>
-                          </Link>
+                          </Link> */}
                         </div>
                       </NavigationMenuContent>
                     </NavigationMenuItem>
-                    <NavigationMenuItem>
+                    {/* <NavigationMenuItem>
                       <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50" href="/interviews">
                         <Briefcase className="w-4 h-4 mr-2" />
                         Interviews
@@ -113,7 +113,7 @@ export function Layout({ children }: LayoutProps) {
                         <Users className="w-4 h-4 mr-2" />
                         Social
                       </NavigationMenuLink>
-                    </NavigationMenuItem>
+                    </NavigationMenuItem> */}
                   </NavigationMenuList>
                 </NavigationMenu>
               </div>

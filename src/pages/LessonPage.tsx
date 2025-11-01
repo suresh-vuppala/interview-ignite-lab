@@ -255,138 +255,237 @@ setNextLesson(
 
   // 🔹 Inline Code Example Logic
   let exampleIndex = 0;
+ const renderInlineFormatting = (text: string, keyPrefix: string = '') => {
+    // Regex to detect [link text](url)
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
 
-  const renderMarkdown = () => {
-    const lines = markdown.split('\n');
-    const elements: JSX.Element[] = [];
+    const segments = [];
+    let lastIndex = 0;
+    let match;
 
-    lines.forEach((line, index) => {
-      // Inline code example insertion
-      if (line.trim() === '```code```' && lesson.codeExamples && lesson.codeExamples[exampleIndex]) {
-        let ex = lesson.codeExamples[exampleIndex++];
-        // let actualCode = '';
-        // try {
-        //   actualCode = require(`@/${ex.code}`);
-        // } catch (error) {
-        //   console.error('❌ Error loading code file:', ex.code, error);
-        //   actualCode = '// Error: Unable to load code file.';
-        // }
-        elements.push(
-          <div key={`code-${index}`} className="my-6">
-            <h4 className="text-lg font-semibold mb-2 flex items-center gap-2">
-              {/* <Code className="w-4 h-4" /> {ex.title} */}
-            </h4>
-            <CodeBlock
-              codes={ex.languages}
-              title={ex.title}
-              showLanguageSelector
-            />
-          </div>
-        );
-        return;
+    // Split text into link + plain segments
+    while ((match = linkRegex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        segments.push(text.slice(lastIndex, match.index));
       }
-      if (line.startsWith('---')) {
-        elements.push(<hr key={index} className="my-8 border-t  opacity-100" />);
-        return;
-      }
+      segments.push({ text: match[1], url: match[2] });
+      lastIndex = linkRegex.lastIndex;
+    }
+    if (lastIndex < text.length) segments.push(text.slice(lastIndex));
 
-      // Headings
-      if (line.startsWith('# ')) {
-        elements.push(<h2 key={index} className="text-3xl font-bold mt-6 mb-3 text-foreground">{line.slice(2)}</h2>);
-        return;
-      }
-      if (line.startsWith('## ')) {
-        elements.push(<h2 key={index} className="text-2xl font-bold mt-6 mb-3 text-foreground">{line.slice(3)}</h2>);
-        return;
-      }
-      if (line.startsWith('### ')) {
-        elements.push(<h3 key={index} className="text-xl font-semibold mt-5 mb-2 text-foreground">{line.slice(4)}</h3>);
-        return;
-      }
-
-      // Blockquote
-      if (line.startsWith('> ')) {
-        elements.push(
-          <blockquote key={index} className="border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-lg my-3">
-            <p className="text-muted-foreground italic m-0 leading-relaxed">{line.slice(2)}</p>
-          </blockquote>
-        );
-        return;
-      }
-
-      // Bullet list
-      if (line.startsWith('- ')) {
-        elements.push(
-          <li key={index} className="ml-4 mb-2 text-foreground leading-relaxed">
-            {line.slice(2).split('**').map((part, i) => 
-              i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part
-            ).map((part, i) => 
-              typeof part === 'string' && part.includes('`') 
-                ? part.split('`').map((code, j) => 
-                    j % 2 === 1 ? <code key={j} className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
-                  )
-                : part
-            )}
-          </li>
-        );
-        return;
-      }
-
-      // Numbered list
-      if (line.match(/^\d+\. /)) {
-        elements.push(
-          <li key={index} className="ml-4 mb-2 text-foreground leading-relaxed">
-            {line.replace(/^\d+\. /, '').split('**').map((part, i) => 
-              i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part
-            ).map((part, i) => 
-              typeof part === 'string' && part.includes('`') 
-                ? part.split('`').map((code, j) => 
-                    j % 2 === 1 ? <code key={j} className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
-                  )
-                : part
-            )}
-          </li>
-        );
-        return;
-      }
-
-      // Image
-      if (line.startsWith('![') && line.includes('](')) {
-        const altMatch = line.match(/!\[(.*?)\]/);
-        const urlMatch = line.match(/\((.*?)\)/);
-        if (altMatch && urlMatch) {
-          elements.push(
-            <img 
-              key={index} 
-              src={urlMatch[1]} 
-              alt={altMatch[1]} 
-              className="rounded-lg my-4 max-w-full h-auto"
-            />
+    // Render each segment with nested bold/code formatting
+    return segments.map((segment, i) => {
+      if (typeof segment === 'string') {
+        return segment
+          .split('**')
+          .map((part, j) =>
+            j % 2 === 1 ? (
+              <span key={`${keyPrefix}-bold-${i}-${j}`} className="font-semibold text-foreground">
+                {part}
+              </span>
+            ) : (
+              part
+            )
+          )
+          .map((part, j) =>
+            typeof part === 'string' && part.includes('`') ? (
+              part.split('`').map((code, k) =>
+                k % 2 === 1 ? (
+                  <span
+                    key={`${keyPrefix}-code-${i}-${j}-${k}`}
+                    className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm"
+                  >
+                    {code}
+                  </span>
+                ) : (
+                  code
+                )
+              )
+            ) : (
+              part
+            )
           );
-        }
-        return;
       }
 
-      // Paragraph or plain text
-      if (line.trim() && !line.startsWith('#') && !line.startsWith('>') && !line.startsWith('-') && !line.match(/^\d+\./) && !line.startsWith('![')) {
+      // Handle links
+      return (
+        <a
+          key={`${keyPrefix}-link-${i}`}
+          href={segment.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:underline"
+        >
+          {segment.text}
+        </a>
+      );
+    });
+  };
+const renderMarkdown = (markdown : string) => {
+ 
+
+  const lines = markdown.split('\n');
+  const elements: JSX.Element[] = [];
+  let isTable = false;
+  let tableLines: string[] = [];
+  let blockquoteBuffer: string[] = [];
+
+  lines.forEach((line, index) => {
+    const trimmedLine = line.trim();
+
+    // --- Detect start of table ---
+    if (trimmedLine.startsWith('|') && trimmedLine.endsWith('|')) {
+      isTable = true;
+      tableLines.push(trimmedLine);
+      return;
+    }
+
+    // --- Render table when it ends ---
+    if (isTable && (!trimmedLine.startsWith('|') || !trimmedLine.endsWith('|'))) {
+      elements.push(renderTable(tableLines, elements.length));
+      tableLines = [];
+      isTable = false;
+    }
+
+    // --- Blockquote handling ---
+    if (trimmedLine.startsWith('>')) {
+      const content = trimmedLine.slice(2).trimStart();
+      blockquoteBuffer.push(content === '' ? '\u00A0' : content);
+      return;
+    } else if (blockquoteBuffer.length > 0) {
+      elements.push(
+        <blockquote
+          key={index}
+          className="border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-lg my-3"
+        >
+          {blockquoteBuffer.map((text, i) => (
+            <p key={i} className="text-muted-foreground italic m-0 leading-relaxed">
+              {renderInlineFormatting(text, `bq-${index}-${i}`)}
+            </p>
+          ))}
+        </blockquote>
+      );
+      blockquoteBuffer = [];
+    }
+    if (line.startsWith('---')) { elements.push(<hr key={index} className="my-8 border-t opacity-100" />); return; }
+    // --- Headings ---
+    if (line.startsWith('# ')) {
+      elements.push(
+        <h2 key={index} className="text-3xl font-bold mt-6 mb-3 text-foreground">
+          {line.slice(2)}
+        </h2>
+      );
+      return;
+    }
+    if (line.startsWith('## ')) {
+      elements.push(
+        <h2 key={index} className="text-2xl font-bold mt-6 mb-3 text-foreground">
+          {line.slice(3)}
+        </h2>
+      );
+      return;
+    }
+    if (line.startsWith('### ')) {
+      elements.push(
+        <h3 key={index} className="text-xl font-semibold mt-5 mb-2 text-foreground">
+          {line.slice(4)}
+        </h3>
+      );
+      return;
+    }
+
+    // --- Bullet list ---
+    if (line.startsWith('- ')) {
+      elements.push(
+        <li key={index} className="ml-4 mb-2 text-foreground leading-relaxed">
+          {renderInlineFormatting(line.slice(2), `li-${index}`)}
+        </li>
+      );
+      return;
+    }
+
+    // --- Numbered list ---
+    if (line.match(/^\d+\. /)) {
+      elements.push(
+        <li key={index} className="ml-4 mb-2 text-foreground leading-relaxed">
+          {renderInlineFormatting(line.replace(/^\d+\. /, ''), `num-${index}`)}
+        </li>
+      );
+      return;
+    }
+
+    // --- Image ---
+    if (line.startsWith('![') && line.includes('](')) {
+      const altMatch = line.match(/!\[(.*?)\]/);
+      const urlMatch = line.match(/\((.*?)\)/);
+      if (altMatch && urlMatch) {
         elements.push(
-          <p key={index} className="mb-3 text-foreground leading-relaxed">
-            {line.split('**').map((part, i) => 
-              i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part
-            ).map((part, i) => 
-              typeof part === 'string' && part.includes('`') 
-                ? part.split('`').map((code, j) => 
-                    j % 2 === 1 ? <code key={j} className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm">{code}</code> : code
-                  )
-                : part
-            )}
-          </p>
+          <img
+            key={index}
+            src={urlMatch[1]}
+            alt={altMatch[1]}
+            className="rounded-lg my-4 max-w-full h-auto"
+          />
         );
       }
-    });
+      return;
+    }
 
-    return elements;
-  };
+    // --- Paragraph or plain text ---
+    if (
+      line.trim() &&
+      !line.startsWith('#') &&
+      !line.startsWith('>') &&
+      !line.startsWith('-') &&
+      !line.match(/^\d+\./) &&
+      !line.startsWith('![')
+    ) {
+      elements.push(
+        <p key={index} className="mb-3 text-foreground leading-relaxed">
+          {renderInlineFormatting(line, `p-${index}`)}
+        </p>
+      );
+    }
+  });
+
+  return elements;
+};
+
+// --- Updated table rendering ---
+const renderTable = (lines: string[], key: number) => {
+  if (lines.length < 2) return null;
+
+  const headers = lines[0].split('|').map(h => h.trim()).filter(Boolean);
+  const rows = lines.slice(2).map(line =>
+    line.split('|').map(cell => cell.trim()).filter(Boolean)
+  );
+
+  return (
+    <table key={`table-${key}`} className="table-auto border border-gray-300 my-4 w-full">
+      <thead>
+        <tr>
+          {headers.map((h, idx) => (
+            <th key={idx} className="border px-2 py-1 text-left bg-pink-100">
+              {renderInlineFormatting(h, `header-${idx}`)}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row, rIdx) => (
+          <tr key={rIdx}>
+            {row.map((cell, cIdx) => (
+              <td key={cIdx} className="border px-2 py-1 align-top">
+                {renderInlineFormatting(cell, `cell-${rIdx}-${cIdx}`)}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+};
+
 
   return (
     <Layout>
@@ -421,7 +520,7 @@ setNextLesson(
               </div>
             </div>
           ) : (
-            <div className="space-y-3 leading-relaxed">{renderMarkdown()}</div>
+            <div className="space-y-3 leading-relaxed">{renderMarkdown(markdown)}</div>
           )}
         </div>
 
