@@ -3,13 +3,14 @@
   "title": "Nth Fibonacci Number",
   "slug": "nth-fibonacci",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "nth-fibonacci.md",
   "codeExamples": [
     {
-      "title": "Example",
+      "title": "Recursive - Fibonacci",
       "languages": [
         {
-          "codeFile": "courses/dsa/dynamic-programming/dp-fundamentals/nth-fibonacci/code/java/Example.java",
+          "codeFile": "courses/dsa/dynamic-programming/dp-fundamentals/nth-fibonacci/code/java/Fibonacci.java",
           "language": "java"
         }
       ]

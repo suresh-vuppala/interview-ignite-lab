@@ -270,6 +270,20 @@
       ]
     },
     {
+      "title": "Trie",
+      "slug": "trie",
+      "icon": "GitBranch",
+      "sections": [
+        {
+          "title": "Trie",
+          "slug": "trie",
+          "lessons": [
+            { "title": "Trie Introduction", "slug": "trie-introduction" }
+          ]
+        }
+      ]
+    },
+    {
       "title": "Heaps",
       "slug": "heaps",
       "icon": "Triangle",

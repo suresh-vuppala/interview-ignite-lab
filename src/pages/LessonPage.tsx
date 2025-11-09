@@ -10,6 +10,7 @@ import { Crown, ChevronLeft, ChevronRight, Lock, Code } from 'lucide-react';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { CodeBlock } from '@/components/CodeBlock';
 import { useAuth } from '@/hooks/useAuth';
+import ImageCarousel from '@/components/ImageCarousel';
 
 // Preload all markdown files (bundled by Vite)
 const lessonJsonFiles = import.meta.glob('/src/data/courses/**/*.json', { eager: true });
@@ -247,73 +248,97 @@ setNextLesson(
   const isLockedContent = lesson.isPremium && !hasAccess;
 
   // 🔹 Inline Code Example Logic
-  let exampleIndex = 0;
- const renderInlineFormatting = (text: string, keyPrefix: string = '') => {
-    // Regex to detect [link text](url)
-    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+let exampleIndex = 0;
 
-    const segments = [];
-    let lastIndex = 0;
-    let match;
+const renderInlineFormatting = (text: string, keyPrefix: string = '') => {
+  // Regex to detect [link text](url)
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
 
-    // Split text into link + plain segments
-    while ((match = linkRegex.exec(text)) !== null) {
-      if (match.index > lastIndex) {
-        segments.push(text.slice(lastIndex, match.index));
-      }
-      segments.push({ text: match[1], url: match[2] });
-      lastIndex = linkRegex.lastIndex;
+  const segments = [];
+  let lastIndex = 0;
+  let match;
+
+  // Split text into link + plain segments
+  while ((match = linkRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      segments.push(text.slice(lastIndex, match.index));
     }
-    if (lastIndex < text.length) segments.push(text.slice(lastIndex));
+    segments.push({ text: match[1], url: match[2] });
+    lastIndex = linkRegex.lastIndex;
+  }
+  if (lastIndex < text.length) segments.push(text.slice(lastIndex));
 
-    // Render each segment with nested bold/code formatting
-    return segments.map((segment, i) => {
-      if (typeof segment === 'string') {
-        return segment
-          .split('**')
-          .map((part, j) =>
-            j % 2 === 1 ? (
-              <span key={`${keyPrefix}-bold-${i}-${j}`} className="font-semibold text-foreground">
-                {part}
+  // Render each segment with nested bold/code formatting
+  return segments.map((segment, i) => {
+    if (typeof segment === 'string') {
+      // Preserve whitespace by converting it to non-breaking spaces and regular spaces
+      const processTextWithWhitespace = (text: string) => {
+        return text.split('').map((char, idx) => {
+          if (char === ' ') {
+            return <span key={`${keyPrefix}-space-${i}-${idx}`} className="preserve-whitespace"> </span>;
+          } else if (char === '\t') {
+            return <span key={`${keyPrefix}-tab-${i}-${idx}`} className="preserve-whitespace tab-width">    </span>;
+          } else if (char === '\n') {
+            return <br key={`${keyPrefix}-br-${i}-${idx}`} />;
+          }
+          return char;
+        });
+      };
+
+      // First split by bold markers
+      const boldSegments = segment.split('**');
+      
+      return boldSegments.map((part, j) => {
+        const isBold = j % 2 === 1;
+        
+        // Then split by code markers within each bold segment
+        const codeSegments = part.split('`');
+        
+        const processedSegments = codeSegments.map((code, k) => {
+          const isCode = k % 2 === 1;
+          
+          if (isCode) {
+            return (
+              <span
+                key={`${keyPrefix}-code-${i}-${j}-${k}`}
+                className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm"
+              >
+                {processTextWithWhitespace(code)}
               </span>
-            ) : (
-              part
-            )
-          )
-          .map((part, j) =>
-            typeof part === 'string' && part.includes('`') ? (
-              part.split('`').map((code, k) =>
-                k % 2 === 1 ? (
-                  <span
-                    key={`${keyPrefix}-code-${i}-${j}-${k}`}
-                    className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm"
-                  >
-                    {code}
-                  </span>
-                ) : (
-                  code
-                )
-              )
-            ) : (
-              part
-            )
-          );
-      }
+            );
+          } else if (isBold) {
+            return (
+              <span key={`${keyPrefix}-bold-${i}-${j}-${k}`} className="font-semibold text-foreground">
+                {processTextWithWhitespace(code)}
+              </span>
+            );
+          } else {
+            return (
+              <span key={`${keyPrefix}-text-${i}-${j}-${k}`} className="whitespace-pre-wrap">
+                {processTextWithWhitespace(code)}
+              </span>
+            );
+          }
+        });
 
-      // Handle links
-      return (
-        <a
-          key={`${keyPrefix}-link-${i}`}
-          href={segment.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 hover:underline"
-        >
-          {segment.text}
-        </a>
-      );
-    });
-  };
+        return processedSegments;
+      }).flat();
+    }
+
+    // Handle links - preserve whitespace in link text too
+    return (
+      <a
+        key={`${keyPrefix}-link-${i}`}
+        href={segment.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-500 hover:underline whitespace-pre-wrap"
+      >
+        {segment.text}
+      </a>
+    );
+  }).flat();
+};
 const renderMarkdown = (markdown : string) => {
  
 
@@ -325,6 +350,31 @@ const renderMarkdown = (markdown : string) => {
 
   lines.forEach((line, index) => {
     const trimmedLine = line.trim();
+
+ // Inline code example insertion
+      if (trimmedLine === '```code```' && lesson.codeExamples && lesson.codeExamples[exampleIndex]) {
+        let ex = lesson.codeExamples[exampleIndex++];
+        // let actualCode = '';
+        // try {
+        //   actualCode = require(`@/${ex.code}`);
+        // } catch (error) {
+        //   console.error('❌ Error loading code file:', ex.code, error);
+        //   actualCode = '// Error: Unable to load code file.';
+        // }
+        elements.push(
+          <div key={`code-${index}`} className="my-6">
+            <h4 className="text-lg font-semibold mb-2 flex items-center gap-2">
+              {/* <Code className="w-4 h-4" /> {ex.title} */}
+            </h4>
+            <CodeBlock
+              codes={ex.languages}
+              title={ex.title}
+              showLanguageSelector
+            />
+          </div>
+        );
+        return;
+      }
 
     // --- Detect start of table ---
     if (trimmedLine.startsWith('|') && trimmedLine.endsWith('|')) {
@@ -342,7 +392,7 @@ const renderMarkdown = (markdown : string) => {
 
     // --- Blockquote handling ---
     if (trimmedLine.startsWith('>')) {
-      const content = trimmedLine.slice(2).trimStart();
+      const content = trimmedLine.slice(2);
       blockquoteBuffer.push(content === '' ? '\u00A0' : content);
       return;
     } else if (blockquoteBuffer.length > 0) {
@@ -396,33 +446,98 @@ const renderMarkdown = (markdown : string) => {
       );
       return;
     }
-
+    if (line.startsWith('<br>')) {
+      elements.push(
+       <br></br>
+      );
+      return;
+    }
     // --- Numbered list ---
     if (line.match(/^\d+\. /)) {
       elements.push(
-        <li key={index} className="ml-4 mb-2 text-foreground leading-relaxed">
-          {renderInlineFormatting(line.replace(/^\d+\. /, ''), `num-${index}`)}
-        </li>
+        <p key={index} className="ml-4 mb-2 text-foreground leading-relaxed">
+          {renderInlineFormatting(line, `num-${index}`)}
+        </p>
       );
       return;
     }
 
-    // --- Image ---
-    if (line.startsWith('![') && line.includes('](')) {
-      const altMatch = line.match(/!\[(.*?)\]/);
-      const urlMatch = line.match(/\((.*?)\)/);
-      if (altMatch && urlMatch) {
-        elements.push(
-          <img
-            key={index}
-            src={urlMatch[1]}
-            alt={altMatch[1]}
-            className="rounded-lg my-4 max-w-full h-auto"
-          />
-        );
+// --- Image Carousel ---
+if (trimmedLine.startsWith('![') && trimmedLine.includes('](') && trimmedLine.includes('/')) {
+  const altMatch = trimmedLine.match(/!\[(.*?)\]/);
+  const urlMatch = trimmedLine.match(/\((.*?)\)/);
+
+  if (altMatch && urlMatch) {
+    const folderPath = urlMatch[1]; // e.g. "FibonacciSolution" or "algorithms/FibonacciSolution"
+
+    // Check if this is a carousel folder reference (no file extension)
+    if (!folderPath.match(/\.(png|jpg|jpeg|gif|webp)$/i)) {
+      // This is a carousel folder
+      try {
+        // ✅ Base folder URL served from /public/Image/
+        // const folderUrl = `/Image/${folderPath}/`;
+
+        let jsonData: any[] = [];
+        let images: string[] = [];
+
+        // ✅ Derive JSON file name from folderPath
+        const fileName = `${folderPath.split('/').pop()}.json`; // e.g. "FibonacciSolution.json"
+
+        try {
+          // Load all JSON manifests eagerly (bundled)
+          const jsonModules = import.meta.glob('/public/Image/**/*.json', { eager: true });
+          const imageModules = import.meta.glob('/public/Image/**/*.{png,jpg,jpeg,gif,webp}', { eager: true });
+
+          // Find the JSON that matches the folder
+          const jsonKey = Object.keys(jsonModules).find((key) => key.includes(folderPath));
+          let jsonData: any[] = [];
+          let images: string[] = [];
+
+          if (jsonKey) {
+            const json = (jsonModules as Record<string, any>)[jsonKey];
+            jsonData = json.default || json;
+            images = jsonData.map((item: any) => `/Image/${folderPath}/${item.image}`);
+          } else {
+            // fallback to scanning image folder
+            images = Object.keys(imageModules)
+              .filter((key) => key.includes(folderPath))
+              .map((key) => key.replace('/public', ''));
+          }
+
+          if (images.length > 0) {
+            elements.push(
+              <ImageCarousel
+                key={`carousel-${index}`}
+                folder={`${folderPath}`}
+                images={images}
+                jsonData={jsonData}
+              />
+            );
+          }
+        } catch (err) {
+          console.error('Error loading carousel data:', err);
+        }
+
+        return; // ✅ Stop further processing
+      } catch (error) {
+        console.error('Error loading image carousel:', error);
       }
+    } else {
+      // Regular single image
+      elements.push(
+        <img
+          key={index}
+          src={urlMatch[1]}
+          alt={altMatch[1]}
+          className="rounded-lg my-4 max-w-full h-auto"
+        />
+      );
       return;
     }
+  }
+}
+
+
 
     // --- Paragraph or plain text ---
     if (

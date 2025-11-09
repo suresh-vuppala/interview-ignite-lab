@@ -3,6 +3,7 @@
   "title": "Dynamic Programming",
   "slug": "dynamic-programming",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "dynamic-programming.md",
   "codeExamples": [
     {

@@ -3,6 +3,7 @@
   "title": "Getting Started with Arrays",
   "slug": "getting-started-with-arrays",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "getting-started-with-arrays.md",
   "codeExamples": [
     {
@@ -11,6 +12,10 @@
         {
           "codeFile": "courses/dsa/programming-essentials/getting-started/getting-started-with-arrays/code/java/ArrayBasics.java",
           "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/programming-essentials/getting-started/getting-started-with-arrays/code/cpp/ArrayBasics.cpp",
+          "language": "cpp"
         }
       ]
     }
