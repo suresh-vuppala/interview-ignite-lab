@@ -21,7 +21,7 @@ F(n) =F(n-1)+F(n-2), where F(0) = 0 and F(1)=1
 <br>
 ## Solution #1: Brute Force - Recursive
 
-![Fibonacci](/public/Image/FibonacciSeries.png)
+![Fibonacci](/src/assets/Image/FibonacciSeries.png)
 
 
 
@@ -75,4 +75,6 @@ We encounter the same subproblems which, without memoization, are computed repea
 
 <br>
 <br>
-![Fibonacci Carousel](/public/Image/FibonacciSolution)
+
+![Fibonacci Carousel](/src/assets/Image/FibonacciSolution)
+

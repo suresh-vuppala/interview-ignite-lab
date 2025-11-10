@@ -485,8 +485,9 @@ if (trimmedLine.startsWith('![') && trimmedLine.includes('](') && trimmedLine.in
 
         try {
           // Load all JSON manifests eagerly (bundled)
-          const jsonModules = import.meta.glob('/public/Image/**/*.json', { eager: true });
-          const imageModules = import.meta.glob('/public/Image/**/*.{png,jpg,jpeg,gif,webp}', { eager: true });
+
+          const jsonModules = import.meta.glob('@/assets/Image/**/*.json', { eager: true });
+          const imageModules = import.meta.glob('@/assets/Image/**/*.{png,jpg,jpeg,gif,webp}', { eager: true });
 
           // Find the JSON that matches the folder
           const jsonKey = Object.keys(jsonModules).find((key) => key.includes(folderPath));
