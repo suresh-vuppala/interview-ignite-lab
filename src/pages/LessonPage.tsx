@@ -136,7 +136,6 @@ export default function LessonPage() {
     subsectionSlug?: string;
     lessonSlug: string;
   }>();
-  console.log({ courseSlug, moduleSlug, sectionSlug, subsectionSlug, lessonSlug });
 
   const { user } = useAuth();
 
@@ -160,24 +159,24 @@ useEffect(() => {
       return;
     }
 
-   // 🧩 Step 1: Flatten all lessons — including subsection lessons
-const flattenLessons = moduleData.sections.flatMap((section: any) =>
-  section.lessons.flatMap((lesson: any) => {
-    // Case 1️⃣: Subsection (lesson.type === 'subHeader')
-    if (lesson.lessons) {
-      return lesson.lessons.map((sub: any) => ({
-        ...sub,
-        sectionSlug: section.slug,
-        subSectionSlug: lesson.slug, // ✅ store subsection slug
-      }));
-    }
+    // 🧩 Step 1: Flatten all lessons — including subsection lessons
+    const flattenLessons = moduleData.sections.flatMap((section: any) =>
+    section.lessons.flatMap((lesson: any) => {
+      // Case 1️⃣: Subsection (lesson.type === 'subHeader')
+      if (lesson.lessons) {
+        return lesson.lessons.map((sub: any) => ({
+          ...sub,
+          sectionSlug: section.slug,
+          subSectionSlug: lesson.slug, // ✅ store subsection slug
+        }));
+      }
 
-    // Case 2️⃣: Normal lesson under section
-    return {
-      ...lesson,
-      sectionSlug: section.slug,
-      subSectionSlug: null,
-    };
+      // Case 2️⃣: Normal lesson under section
+      return {
+        ...lesson,
+        sectionSlug: section.slug,
+        subSectionSlug: null,
+      };
   })
 );
 
@@ -486,8 +485,8 @@ if (trimmedLine.startsWith('![') && trimmedLine.includes('](') && trimmedLine.in
         try {
           // Load all JSON manifests eagerly (bundled)
 
-          const jsonModules = import.meta.glob('@/assets/Image/**/*.json', { eager: true });
-          const imageModules = import.meta.glob('@/assets/Image/**/*.{png,jpg,jpeg,gif,webp}', { eager: true });
+          const jsonModules = import.meta.glob('/src/assets/Image/**/*.json', { eager: true });
+          const imageModules = import.meta.glob('/src/assets/Image/**/*.{png,jpg,jpeg,gif,webp}', { eager: true });
 
           // Find the JSON that matches the folder
           const jsonKey = Object.keys(jsonModules).find((key) => key.includes(folderPath));
@@ -502,7 +501,7 @@ if (trimmedLine.startsWith('![') && trimmedLine.includes('](') && trimmedLine.in
             // fallback to scanning image folder
             images = Object.keys(imageModules)
               .filter((key) => key.includes(folderPath))
-              .map((key) => key.replace('/public', ''));
+              .map((key) => key.replace('/src/assets', ''));
           }
 
           if (images.length > 0) {
@@ -519,9 +518,9 @@ if (trimmedLine.startsWith('![') && trimmedLine.includes('](') && trimmedLine.in
           console.error('Error loading carousel data:', err);
         }
 
-        return; // ✅ Stop further processing
-      } catch (error) {
-        console.error('Error loading image carousel:', error);
+          return; // ✅ Stop further processing
+        } catch (error) {
+          console.error('Error loading image carousel:', error);
       }
     } else {
       // Regular single image
