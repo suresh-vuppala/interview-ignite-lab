@@ -11,6 +11,7 @@ import { ScrollToTop } from '@/components/ScrollToTop';
 import { CodeBlock } from '@/components/CodeBlock';
 import { useAuth } from '@/hooks/useAuth';
 import ImageCarousel from '@/components/ImageCarousel';
+import { lessonData } from '@/data/courses';
 
 // Preload all markdown files (bundled by Vite)
 const lessonJsonFiles = import.meta.glob('/src/data/courses/**/*.json', { eager: true });
@@ -31,6 +32,7 @@ interface Lesson {
     title: string;
     languages: [];
   }[];
+  imageDetails?:[]
 }
 
 interface Section {
@@ -462,80 +464,53 @@ const renderMarkdown = (markdown : string) => {
     }
 
 // --- Image Carousel ---
-if (trimmedLine.startsWith('![') && trimmedLine.includes('](') && trimmedLine.includes('/')) {
+if (
+  trimmedLine.startsWith("![") &&
+  trimmedLine.includes("](") &&
+  trimmedLine.includes("/")
+) {
   const altMatch = trimmedLine.match(/!\[(.*?)\]/);
   const urlMatch = trimmedLine.match(/\((.*?)\)/);
 
-  if (altMatch && urlMatch) {
-    const folderPath = urlMatch[1]; // e.g. "FibonacciSolution" or "algorithms/FibonacciSolution"
+  if (!altMatch || !urlMatch) return;
 
-    // Check if this is a carousel folder reference (no file extension)
-    if (!folderPath.match(/\.(png|jpg|jpeg|gif|webp)$/i)) {
-      // This is a carousel folder
-      try {
-        // ✅ Base folder URL served from /public/Image/
-        // const folderUrl = `/Image/${folderPath}/`;
+  const folderPath = urlMatch[1]; // ex: "FibonacciSolution"
 
-        let jsonData: any[] = [];
-        let images: string[] = [];
+  // If no extension → treat as folder for carousel
+  if (!folderPath.match(/\.(png|jpg|jpeg|gif|webp)$/i)) {
+    
+    const folderName = folderPath.split("/").pop();
+    const jsonUrl = `${folderPath}/${folderName}.json`;
 
-        // ✅ Derive JSON file name from folderPath
-        const fileName = `${folderPath.split('/').pop()}.json`; // e.g. "FibonacciSolution.json"
+    console.log("📁 Loading carousel from:", jsonUrl);
 
-        try {
-          // Load all JSON manifests eagerly (bundled)
-
-          const jsonModules = import.meta.glob('/src/assets/Image/**/*.json', { eager: true });
-          const imageModules = import.meta.glob('/src/assets/Image/**/*.{png,jpg,jpeg,gif,webp}', { eager: true });
-
-          // Find the JSON that matches the folder
-          const jsonKey = Object.keys(jsonModules).find((key) => key.includes(folderPath));
-          let jsonData: any[] = [];
-          let images: string[] = [];
-
-          if (jsonKey) {
-            const json = (jsonModules as Record<string, any>)[jsonKey];
-            jsonData = json.default || json;
-            images = jsonData.map((item: any) => `/Image/${folderPath}/${item.image}`);
-          } else {
-            // fallback to scanning image folder
-            images = Object.keys(imageModules)
-              .filter((key) => key.includes(folderPath))
-              .map((key) => key.replace('/src/assets', ''));
-          }
-
-          if (images.length > 0) {
-            elements.push(
-              <ImageCarousel
-                key={`carousel-${index}`}
-                folder={`${folderPath}`}
-                images={images}
-                jsonData={jsonData}
-              />
-            );
-          }
-        } catch (err) {
-          console.error('Error loading carousel data:', err);
-        }
-
-          return; // ✅ Stop further processing
-        } catch (error) {
-          console.error('Error loading image carousel:', error);
-      }
-    } else {
-      // Regular single image
+    const jsonData = lesson.imageDetails?.find(detail => detail[folderName])?.[folderName] || [];
+    if (jsonData) {
       elements.push(
-        <img
-          key={index}
-          src={urlMatch[1]}
-          alt={altMatch[1]}
-          className="rounded-lg my-4 max-w-full h-auto"
+        <ImageCarousel
+          key={`carousel-${index}`}
+          folder={folderPath}
+          jsonData={jsonData}
         />
       );
-      return;
     }
+
+    return;
   }
+
+  // --- Regular Image ---
+  elements.push(
+    <img
+      key={index}
+      src={urlMatch[1]}
+      alt={altMatch[1]}
+      className="rounded-lg my-4 max-w-full h-auto"
+    />
+  );
+
+  return;
 }
+
 
 
 
