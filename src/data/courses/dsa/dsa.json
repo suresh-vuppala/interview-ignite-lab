@@ -311,8 +311,18 @@
           "lessons": [
             { "title": "Dynamic Programming", "slug": "dynamic-programming" },
             { "title": "Nth Fibonacci Number", "slug": "nth-fibonacci" },
-            { "title": "Memoization", "slug": "memoization" },
-            { "title": "Tabulation", "slug": "tabulation" },
+            { "title": "Memoization - Nth Fibonacci", "slug": "memoization" },
+            { "title": "Tabulation - Nth Fibonacci", "slug": "tabulation" }
+          ]
+        },
+        {
+          "title": "DP Problems",
+          "slug": "dp-problems",
+          "lessons": [
+            { "title": "Tile Problem", "slug": "tile-problem" },
+            { "title": "Maximum  Subarray Sum", "slug": "max-subarray-sum" },
+            { "title": "Paths in a Matrix", "slug": "paths-in-a-matrix" },
+            { "title": "String Problem", "slug": "memoization" },
             { "title": "Classic DP Problems", "slug": "classic-dp-problems" }
           ]
         }

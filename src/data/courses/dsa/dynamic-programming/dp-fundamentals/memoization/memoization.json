@@ -4,6 +4,7 @@
   "slug": "memoization",
   "isPremium": false,
   "mdFile": "memoization.md",
+  "isPosted": true,
   "codeExamples": [
     {
       "title": "Example",
@@ -14,5 +15,60 @@
         }
       ]
     }
+  ],
+      "imageDetails":[
+    {
+       "FibonacciSolution": [
+      {
+        "title": "Recursive Fibonacci",
+        "image": "FibonacciSolution (1).PNG",
+        "description": "The classic recursive implementation of Fibonacci sequence <b>where</b> each number is the sum of the two preceding ones. \n This solution directly follows the mathematical definition with base cases F(0) = 0 and F(1) = 1. However, it suffers from exponential time complexity O(2^n) due to repeated calculations of the same subproblems, making it highly inefficient for larger values of n despite its elegant and intuitive recursive structure."
+      },
+      {
+        "image": "FibonacciSolution (2).PNG",
+        "description": " "
+      },
+      {
+      
+        "image": "FibonacciSolution (3).PNG",
+        "description": "An iterative dynamic programming solution that builds the Fibonacci sequence from the ground up. Instead of starting from the target value and breaking it down recursively, this approach starts with the base cases and systematically computes each subsequent Fibonacci number until reaching the desired value. This method has O(n) time complexity and O(n) space complexity, and completely avoids recursion stack overhead, making it more efficient for large inputs."
+      },
+      {
+        "title": "Space Optimized Fibonacci",
+        "image": "FibonacciSolution (4).PNG",
+        "description": "An optimized version of the bottom-up approach that reduces space complexity from O(n) to O(1) by recognizing that only the last two Fibonacci numbers are needed to compute the next one. Instead of storing the entire sequence in an array, this solution maintains just two variables that track the previous two values. This approach maintains O(n) time complexity while using constant space, making it ideal for memory-constrained environments."
+      },
+      {
+        "title": "Matrix Exponentiation Fibonacci",
+        "image": "FibonacciSolution (5).PNG",
+        "description": "A mathematical approach that uses matrix exponentiation to compute Fibonacci numbers in logarithmic time O(log n). This method leverages the property that Fibonacci sequence can be represented as power of a specific 2x2 matrix. By using exponentiation by squaring, this algorithm can compute very large Fibonacci numbers efficiently. While more complex to implement, it offers superior performance for extremely large values of n where linear time approaches become impractical."
+      },
+      {
+        "title": "Formula Based Fibonacci",
+        "image": "FibonacciSolution (6).PNG",
+        "description": "Utilizes Binet's formula, a closed-form mathematical expression derived from the golden ratio that allows direct computation of any Fibonacci number without iteration or recursion. The formula uses the golden ratio φ and its conjugate to calculate F(n) directly. However, due to floating-point precision limitations in computers, this method may produce inaccurate results for larger values of n and is primarily of theoretical interest rather than practical implementation."
+      },
+      {
+        "title": "Iterative Fibonacci",
+        "image": "FibonacciSolution (7).PNG",
+        "description": "A simple iterative approach that computes Fibonacci numbers using a loop structure. This method initializes the first two numbers of the sequence and then iteratively calculates subsequent numbers by summing the previous two values. With O(n) time complexity and O(1) space complexity, this solution strikes an excellent balance between efficiency, simplicity, and readability, making it one of the most practical implementations for most real-world applications."
+      },
+      {
+        "title": "Fibonacci with Cache",
+        "image": "FibonacciSolution (8).PNG",
+        "description": "An enhanced version that incorporates a persistent cache to store computed Fibonacci numbers across multiple function calls. This approach is particularly useful in scenarios where Fibonacci numbers need to be calculated repeatedly, as the cache persists between invocations. The implementation typically uses a dictionary or array that grows as new values are computed, providing O(1) access to previously calculated results and amortized O(1) time for new computations after initial calculation."
+      },
+      {
+        "title": "Fibonacci Generator",
+        "image": "FibonacciSolution (9).PNG",
+        "description": "A generator-based implementation that produces Fibonacci numbers on-demand using an infinite sequence. This lazy evaluation approach generates values only when requested, making it memory-efficient for scenarios where you need to iterate through the sequence without knowing the upper bound in advance. The generator maintains its state between calls, allowing it to resume from where it left off, and is particularly useful in streaming applications or when working with very large sequences."
+      },
+      {
+        "title": "Fibonacci Performance Comparison",
+        "image": "FibonacciSolution (10).PNG",
+        "description": "A comprehensive analysis comparing the time and space complexity, execution speed, and memory usage across different Fibonacci algorithms. This comparison typically includes benchmarks showing how each approach scales with input size, highlighting the exponential time complexity of naive recursion, the linear performance of DP approaches, and the logarithmic efficiency of matrix exponentiation. The visualization helps in understanding the trade-offs between code simplicity, time efficiency, and space requirements for different use cases."
+      }
+    ]
+  }
   ]
 }

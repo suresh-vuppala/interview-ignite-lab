@@ -19,6 +19,9 @@ F(n) =F(n-1)+F(n-2), where F(0) = 0 and F(1)=1
 > 	        =   3
 
 <br>
+
+---
+
 ## Solution #1: Brute Force - Recursive
 
 ![Fibonacci](/Image/FibonacciSeries.png)
@@ -31,7 +34,7 @@ F(n) =F(n-1)+F(n-2), where F(0) = 0 and F(1)=1
 
 ### Why Recursion algorithm to find the Fibonacci number is Slow?
 
-[Image]
+![Fibonacci](/Image/FibonacciRecursionTree.png)
 
 
 Here is a diagram which illustrates the reason. This is the visual representation of the recursive algorithm.
@@ -52,29 +55,8 @@ So, despite calculating the result of the same problem, again and again, we can 
 
 <br>
 <br>
-
-## Solution #2: Top-Down Approach(Memoization)
-Why are we adding memoization to our recursion? 
-We encounter the same subproblems which, without memoization, are computed repeatedly. Those repetitions very often lead to exponential time complexities.
-
-**Steps:**
-
-**1. Use a global array or a lookup table of size N+1 to store solution of the different subproblems.**
->            Let’s say N=5
->            cache[N+1]
-
-**2. Initialize all the values in the array to -1 (Since the value of Fibonacci can’t be negative)**
->            cache[6] = {-1,-1,-1,-1,-1,-1}
-
-**3. Recurrence relation**
->            F(n) =F(n-1)+(n-2), 
-
-**4. Base Condition**
->            F(0) = 0 and F(1)=1
+---
 
 
-<br>
-<br>
 
-
-![Fibonacci Carousel](/Image/FibonacciSolution)
+-

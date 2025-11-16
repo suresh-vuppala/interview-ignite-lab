@@ -4,6 +4,7 @@
   "slug": "tabulation",
   "isPremium": false,
   "mdFile": "tabulation.md",
+  "isPosted": true,
   "codeExamples": [
     {
       "title": "Example",
