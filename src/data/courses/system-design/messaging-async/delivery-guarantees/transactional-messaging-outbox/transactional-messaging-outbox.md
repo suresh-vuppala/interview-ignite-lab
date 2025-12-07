@@ -1,3 +1,9 @@
-# Transactional Messaging and Outbox Pattern
+Need for atomicity
 
-Content coming soon...
+Double-write problem
+
+Outbox table design
+
+Transactional producers
+
+Change data capture (CDC)

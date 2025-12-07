@@ -1,3 +1,9 @@
-# Batching and Windowing
+Batch processing
 
-Content coming soon...
+Time windows
+
+Count windows
+
+Micro-batching benefits
+
+Tradeoffs

@@ -1,3 +1,9 @@
-# Partitioning and Sharding Strategies
+Horizontal scaling
 
-Content coming soon...
+Key-based partitioning
+
+Random & round-robin partitioning
+
+Rebalancing
+
+Hot partitions

@@ -1,3 +1,11 @@
-# Schema Registry and Serialization (Avro, Protobuf, JSON)
+Need for schema versioning
 
-Content coming soon...
+Avro basics
+
+Protobuf basics
+
+JSON pros/cons
+
+Compatibility rules
+
+Schema validation

@@ -1549,8 +1549,29 @@
             {
               "title": "Kafka Architecture and Internals",
               "slug": "kafka-architecture-internals",
-              "isPosted": false,
-              "isPremium": false
+              "lessons": [
+                  {
+                  "title": "Kafka Introduction",
+                  "slug": "kafka-intro",
+                  "isPosted": false,
+                  "isPremium": false
+                  },{
+                  "title": "Kafka Tiered Storage",
+                  "slug": "kafka-tiered-storage",
+                  "isPosted": false,
+                  "isPremium": false
+                  },{
+                  "title": "Kafka Connect",
+                  "slug": "kafka-tiered-storage",
+                  "isPosted": false,
+                  "isPremium": false
+                },{
+                  "title": "Why Kafka is so Fast",
+                  "slug": "kafka-tiered-storage",
+                  "isPosted": false,
+                  "isPremium": false
+                }
+              ]
             },
             {
               "title": "RabbitMQ Internals",

@@ -1,3 +1,9 @@
-# Consumer Groups and Parallel Consumption
+Parallelism model
 
-Content coming soon...
+Group coordination
+
+Partition assignment strategies
+
+Rebalancing
+
+Scale-out patterns

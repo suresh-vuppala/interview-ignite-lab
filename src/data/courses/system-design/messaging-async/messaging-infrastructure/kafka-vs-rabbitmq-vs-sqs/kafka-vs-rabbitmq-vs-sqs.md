@@ -1,3 +1,11 @@
-# Kafka vs RabbitMQ vs SQS: Choosing the Right Tool
+Architecture comparison
 
-Content coming soon...
+Performance differences
+
+Latency tradeoffs
+
+Delivery semantics
+
+Ecosystem integrations
+
+Best-fit use cases

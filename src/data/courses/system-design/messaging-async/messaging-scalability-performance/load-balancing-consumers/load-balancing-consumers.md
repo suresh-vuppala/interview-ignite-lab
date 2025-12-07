@@ -1,3 +1,7 @@
-# Load Balancing Consumers
+Consumer distribution
 
-Content coming soon...
+Static vs dynamic assignment
+
+Auto-scaling patterns
+
+Coordinated consumption

@@ -2,6 +2,6 @@
   "title": "Retries, Dead Letter Queues, and Poison Messages",
   "slug": "retries-dead-letter",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "retries-dead-letter.md"
 }

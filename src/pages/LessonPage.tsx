@@ -12,6 +12,8 @@ import { CodeBlock } from '@/components/CodeBlock';
 import { useAuth } from '@/hooks/useAuth';
 import ImageCarousel from '@/components/ImageCarousel';
 import { lessonData } from '@/data/courses';
+import { fetchMarkdown, importLessonJson } from '../utils/markdownFetcher';
+
 
 // Preload all markdown files (bundled by Vite)
 const lessonJsonFiles = import.meta.glob('/src/data/courses/**/*.json', { eager: true });
@@ -69,67 +71,6 @@ const importModuleJson = async (courseSlug: string, moduleSlug: string) => {
   }
 };
 
-// ✅ Build a safe dynamic path for the lesson JSON file
-const buildLessonPath = (
-  courseSlug: string,
-  moduleSlug: string,
-  sectionSlug?: string,
-  subsectionSlug?: string,
-  lessonSlug?: string
-): string => {
-  // 🧩 Build folder hierarchy safely
-  const parts = ['src', 'data', 'courses', courseSlug, moduleSlug];
-
-  if (sectionSlug) parts.push(sectionSlug);
-  if (subsectionSlug) parts.push(subsectionSlug);
-
-  // 🧠 The lesson folder always matches lessonSlug
-  return `/${parts.join('/')}/${lessonSlug}/${lessonSlug}.json`;
-};
-
-// ✅ Get JSON lesson dynamically
-export const importLessonJson = async (
-  courseSlug: string,
-  moduleSlug: string,
-  sectionSlug?: string,
-  subsectionSlug?: string,
-  lessonSlug?: string
-) => {
-  if (!lessonSlug) return null;
-
-  const path = buildLessonPath(courseSlug, moduleSlug, sectionSlug, subsectionSlug, lessonSlug);
-
-  const file = Object.keys(lessonJsonFiles).find((key) => key.endsWith(`${lessonSlug}.json`));
-  if (!file) {
-    console.warn(`⚠️ Lesson JSON not found: ${lessonSlug}`);
-    return null;
-  }
-
-  const lesson = (lessonJsonFiles[file] as any).default || lessonJsonFiles[file];
-  return lesson;
-};
-
-// ✅ Fetch Markdown content
-export const fetchMarkdown = async (
-  courseSlug: string,
-  moduleSlug: string,
-  sectionSlug?: string,
-  subsectionSlug?: string,
-  lessonSlug?: string,
-  mdFile?: string
-) => {
-  if (!lessonSlug || !mdFile) return 'Markdown not available';
-
-  const path = buildLessonPath(courseSlug, moduleSlug, sectionSlug, subsectionSlug, lessonSlug);
-
-  const file = Object.keys(markdownFiles).find((key) => key.endsWith(mdFile));
-  if (!file) {
-    console.warn(`⚠️ Markdown file not found: ${path}`);
-    return 'Content not available';
-  }
-
-  return await markdownFiles[file]();
-};
 export default function LessonPage() {
   const { courseSlug, moduleSlug, sectionSlug,subsectionSlug, lessonSlug } = useParams<{
     courseSlug: string;
@@ -225,7 +166,7 @@ setNextLesson(
 
     // 🪶 7. Load markdown content if available
     if (lessonData.mdFile) {
-      const md = await fetchMarkdown(courseSlug, moduleSlug, sectionSlug, subsectionSlug, lessonSlug, lessonData.mdFile);
+      const md = await fetchMarkdown(lessonSlug, lessonData.mdFile);
       setMarkdown(md);
     } else {
       setMarkdown(lessonData.content || '');
@@ -482,7 +423,6 @@ if (
     const folderName = folderPath.split("/").pop();
     const jsonUrl = `${folderPath}/${folderName}.json`;
 
-    console.log("📁 Loading carousel from:", jsonUrl);
 
     const jsonData = lesson.imageDetails?.find(detail => detail[folderName])?.[folderName] || [];
     if (jsonData) {

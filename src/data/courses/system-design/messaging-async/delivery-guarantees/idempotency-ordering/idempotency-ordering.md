@@ -1,3 +1,9 @@
-# Idempotency and Message Ordering
+Idempotent operations
 
-Content coming soon...
+Exactly-once with idempotency
+
+Ordering guarantees
+
+Partition-based ordering
+
+Out-of-order handling

@@ -1,0 +1,3 @@
+Multi Tenant
+Sega pattern
+ACID Props in Non Distributed and Distributed databases

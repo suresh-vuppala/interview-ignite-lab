@@ -1,3 +1,9 @@
-# Duplicate Message Handling
+Causes of duplicates
 
-Content coming soon...
+Deduplication techniques
+
+Idempotent consumers
+
+Sequence numbers
+
+Time-window dedupe

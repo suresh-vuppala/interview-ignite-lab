@@ -1,3 +1,9 @@
-# Message Delivery Semantics: At-Most-Once, At-Least-Once, Exactly-Once
+At-most-once
 
-Content coming soon...
+At-least-once
+
+Exactly-once
+
+Acknowledgements
+
+Offset handling

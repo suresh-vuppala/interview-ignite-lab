@@ -1,3 +1,9 @@
-# High Throughput and Low Latency Tuning
+Compression
 
-Content coming soon...
+Optimal batch sizes
+
+Network tuning
+
+Broker configuration
+
+Producer/consumer tuning

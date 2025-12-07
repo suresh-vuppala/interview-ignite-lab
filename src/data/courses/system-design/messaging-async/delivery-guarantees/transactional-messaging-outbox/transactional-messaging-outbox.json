@@ -2,6 +2,6 @@
   "title": "Transactional Messaging and Outbox Pattern",
   "slug": "transactional-messaging-outbox",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "transactional-messaging-outbox.md"
 }

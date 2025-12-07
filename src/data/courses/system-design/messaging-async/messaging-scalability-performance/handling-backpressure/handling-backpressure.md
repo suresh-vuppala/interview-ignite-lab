@@ -1,3 +1,7 @@
-# Handling Backpressure
+Understanding backpressure
 
-Content coming soon...
+Buffering strategies
+
+Flow control mechanisms
+
+Consumer throttling

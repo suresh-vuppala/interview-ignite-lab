@@ -2,6 +2,6 @@
   "title": "Core Messaging Concepts: Topics, Queues, Producers, Consumers",
   "slug": "core-messaging-concepts",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "core-messaging-concepts.md"
 }

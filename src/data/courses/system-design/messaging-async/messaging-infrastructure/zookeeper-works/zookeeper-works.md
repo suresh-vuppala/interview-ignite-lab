@@ -1,3 +1,9 @@
-# Zookeeper
+Purpose of Zookeeper
 
-Content coming soon...
+Distributed coordination basics
+
+Leader election
+
+Metadata management
+
+Role in Kafka

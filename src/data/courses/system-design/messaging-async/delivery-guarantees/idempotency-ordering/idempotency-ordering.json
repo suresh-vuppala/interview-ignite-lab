@@ -2,6 +2,6 @@
   "title": "Idempotency and Message Ordering",
   "slug": "idempotency-ordering",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "idempotency-ordering.md"
 }

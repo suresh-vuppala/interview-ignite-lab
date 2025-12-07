@@ -1,3 +1,15 @@
-# Kafka Architecture and Internals
+Brokers and clusters
 
-Content coming soon...
+Topics and partitions
+
+Producers & consumers
+
+Commit logs
+
+Replication
+
+Consumer groups
+
+Offset management
+
+Controller node

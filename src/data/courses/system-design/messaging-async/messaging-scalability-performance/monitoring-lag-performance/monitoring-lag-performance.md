@@ -1,3 +1,9 @@
-# Monitoring Consumer Lag and Performance
+What is consumer lag?
 
-Content coming soon...
+Monitoring tools
+
+Lag alerts
+
+Throughput metrics
+
+Bottleneck diagnosis
