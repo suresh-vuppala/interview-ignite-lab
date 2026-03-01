@@ -3,5 +3,17 @@
   "title": "Monotonic Function",
   "slug": "monotonic-function",
   "isPremium": false,
-  "mdFile": "monotonic-function.md"
+  "isPosted": true,
+  "mdFile": "monotonic-function.md",
+  "codeExamples": [
+    {
+      "title": "Check Monotonic",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/searching-algorithms/sorted-array/monotonic-function/code/java/MonotonicFunction.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
 }

@@ -44,23 +44,25 @@ const customStyle = {
     background: 'transparent',
     color: 'hsl(var(--foreground))',
   },
-  '.token.comment': { color: 'hsl(var(--muted-foreground))' },
-  '.token.keyword': { color: 'hsl(330 100% 70%)' },
-  '.token.string': { color: 'hsl(120 100% 70%)' },
-  '.token.function': { color: 'hsl(200 100% 70%)' },
-  '.token.number': { color: 'hsl(330 100% 80%)' },
-  '.token.operator': { color: 'hsl(330 100% 65%)' },
+  '.token.comment': { color: 'hsl(var(--muted-foreground))', fontStyle: 'italic' },
+  '.token.keyword': { color: 'hsl(330 100% 70%)', fontWeight: 'bold', fontSize: '1.05em' },
+  '.token.string': { color: 'hsl(120 100% 70%)', fontWeight: '600' },
+  '.token.function': { color: 'hsl(200 100% 70%)', fontWeight: 'bold', fontSize: '1.05em' },
+  '.token.number': { color: 'hsl(330 100% 80%)', fontWeight: '600' },
+  '.token.operator': { color: 'hsl(330 100% 65%)', fontWeight: '600' },
   '.token.punctuation': { color: 'hsl(var(--muted-foreground))' },
-  '.token.class-name': { color: 'hsl(330 100% 75%)' },
-  '.token.variable': { color: 'hsl(var(--foreground))' },
+  '.token.class-name': { color: 'hsl(330 100% 75%)', fontWeight: 'bold', fontSize: '1.05em' },
+  '.token.variable': { color: 'hsl(var(--foreground))', fontWeight: '500' },
 };
 
 export function CodeBlock({ title, codes, showLanguageSelector = true }: CodeBlockProps) {
-  const [selectedLanguage, setSelectedLanguage] = useState(codes[0]?.language || 'cpp');
+  // default to C++ if available, otherwise first language in list
+  const defaultLang = codes.find((c) => c.language === 'cpp')?.language || codes[0]?.language || 'cpp';
+  const [selectedLanguage, setSelectedLanguage] = useState(defaultLang);
   const [loadedCodes, setLoadedCodes] = useState<{ [lang: string]: string }>({});
   const [copied, setCopied] = useState(false);
 
-  // 🧠 Load all available code files on mount
+  // 🧠 Load all available code files on mount / when codes list changes
   useEffect(() => {
     const loadAllCodes = async () => {
       const loaded: { [lang: string]: string } = {};
@@ -79,6 +81,9 @@ export function CodeBlock({ title, codes, showLanguageSelector = true }: CodeBlo
       setLoadedCodes(loaded);
     };
     loadAllCodes();
+    // if codes update, reset selected language to cpp if present
+    const newDefault = codes.find((c) => c.language === 'cpp')?.language || codes[0]?.language;
+    if (newDefault) setSelectedLanguage(newDefault);
   }, [codes]);
 
   const currentCode = loadedCodes[selectedLanguage] || '// Loading code...';

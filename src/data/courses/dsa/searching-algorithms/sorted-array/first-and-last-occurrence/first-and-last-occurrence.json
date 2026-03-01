@@ -5,4 +5,23 @@
   "isPremium": false,
   "isPosted": true,
   "mdFile": "first-and-last-occurrence.md"
+  ,"codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/searching-algorithms/sorted-array/first-and-last-occurrence/code/java/FirstLastOccurrence.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/sorted-array/first-and-last-occurrence/code/cpp/FirstLastOccurrence.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/sorted-array/first-and-last-occurrence/code/python/first_last_occurrence.py",
+          "language": "python"
+        }
+      ]
+    }
+  ]
 }

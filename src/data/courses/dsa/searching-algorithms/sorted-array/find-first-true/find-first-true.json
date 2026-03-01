@@ -3,5 +3,25 @@
   "title": "Find the First True in a Sorted Boolean Array",
   "slug": "find-first-true",
   "isPremium": false,
-  "mdFile": "find-first-true.md"
+  "isPosted": true,
+  "mdFile": "find-first-true.md",
+  "codeExamples": [
+    {
+      "title": "Find First True",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/searching-algorithms/sorted-array/find-first-true/code/java/FindFirstTrue.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/sorted-array/find-first-true/code/cpp/FindFirstTrue.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/sorted-array/find-first-true/code/python/find_first_true.py",
+          "language": "python"
+        }
+      ]
+    }
+  ]
 }

@@ -102,10 +102,10 @@
           "title": "CONCEPT",
           "slug": "search-fundamentals",
           "lessons": [
-            { "title": "Introduction to Searching Algorithms", "slug": "intro-searching" },
-            { "title": "Linear Search", "slug": "linear-search" },
-            { "title": "Binary Search", "slug": "binary-search" },
-            { "title": "Applications of Binary Search", "slug": "binary-search-applications" }
+            { "title": "Introduction to Searching Algorithms", "slug": "intro-searching", "isPosted": true },
+            { "title": "Linear Search", "slug": "linear-search", "isPosted": true },
+            { "title": "Binary Search", "slug": "binary-search", "isPosted": true },
+            { "title": "Applications of Binary Search", "slug": "binary-search-applications", "isPosted": true }
           ]
         },
         {
@@ -117,19 +117,19 @@
           "title": "SORTED ARRAY",
           "slug": "sorted-array",
           "lessons": [
-            { "title": "Monotonic Function", "slug": "monotonic-function" },
-            { "title": "Find the First True in a Sorted Boolean Array", "slug": "find-first-true" },
-            { "title": "First Element Not Smaller Than Target", "slug": "first-not-smaller-than-target" },
-            { "title": "First and Last Occurrence", "slug": "first-and-last-occurrence" },
-            { "title": "Square Root Estimation", "slug": "square-root-estimation" }
+            { "title": "Monotonic Function", "slug": "monotonic-function", "isPosted": true },
+            { "title": "Find the First True in a Sorted Boolean Array", "slug": "find-first-true", "isPosted": true },
+            { "title": "First Element Not Smaller Than Target", "slug": "first-not-smaller-than-target", "isPosted": true },
+            { "title": "First and Last Occurrence", "slug": "first-and-last-occurrence", "isPosted": true },
+            { "title": "Square Root Estimation", "slug": "square-root-estimation", "isPosted": true }
           ]
         },
         {
           "title": "Implicitly Sorted Array",
           "slug": "implicitly-sorted-array",
           "lessons": [
-            { "title": "Minimum in Rotated Sorted Array", "slug": "minimum-in-rotated-sorted-array" },
-            { "title": "Peak of Mountain Array", "slug": "peak-of-mountain-array" }
+            { "title": "Minimum in Rotated Sorted Array", "slug": "minimum-in-rotated-sorted-array", "isPosted": true },
+            { "title": "Peak of Mountain Array", "slug": "peak-of-mountain-array", "isPosted": true }
           ]
         }
       ]

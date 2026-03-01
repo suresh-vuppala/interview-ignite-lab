@@ -3,14 +3,23 @@
   "title": "Linear Search",
   "slug": "linear-search",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "linear-search.md",
   "codeExamples": [
     {
-      "title": "Example",
+      "title": "Linear Search",
       "languages": [
         {
-          "codeFile": "courses/dsa/searching-algorithms/search-fundamentals/linear-search/code/java/Example.java",
+          "codeFile": "courses/dsa/searching-algorithms/search-fundamentals/linear-search/code/java/LinearSearch.java",
           "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/search-fundamentals/linear-search/code/cpp/LinearSearch.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/search-fundamentals/linear-search/code/python/linear_search.py",
+          "language": "python"
         }
       ]
     }

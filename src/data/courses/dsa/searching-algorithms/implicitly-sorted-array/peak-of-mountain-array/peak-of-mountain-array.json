@@ -3,5 +3,25 @@
   "title": "Peak of Mountain Array",
   "slug": "peak-of-mountain-array",
   "isPremium": false,
-  "mdFile": "peak-of-mountain-array.md"
+  "isPosted": true,
+  "mdFile": "peak-of-mountain-array.md",
+  "codeExamples": [
+    {
+      "title": "Peak of Mountain",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/searching-algorithms/implicitly-sorted-array/peak-of-mountain-array/code/java/PeakOfMountain.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/implicitly-sorted-array/peak-of-mountain-array/code/cpp/PeakOfMountain.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/implicitly-sorted-array/peak-of-mountain-array/code/python/peak_of_mountain.py",
+          "language": "python"
+        }
+      ]
+    }
+  ]
 }

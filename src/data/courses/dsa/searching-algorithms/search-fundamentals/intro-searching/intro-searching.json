@@ -3,16 +3,6 @@
   "title": "Introduction to Searching Algorithms",
   "slug": "intro-searching",
   "isPremium": false,
-  "mdFile": "intro-searching.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/searching-algorithms/search-fundamentals/intro-searching/code/java/Example.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "isPosted": true,
+  "mdFile": "intro-searching.md"
 }

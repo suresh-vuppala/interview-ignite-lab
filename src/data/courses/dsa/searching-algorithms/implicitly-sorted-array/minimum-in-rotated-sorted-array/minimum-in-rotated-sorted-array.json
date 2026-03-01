@@ -3,5 +3,17 @@
   "title": "Minimum in Rotated Sorted Array",
   "slug": "minimum-in-rotated-sorted-array",
   "isPremium": false,
-  "mdFile": "minimum-in-rotated-sorted-array.md"
+  "isPosted": true,
+  "mdFile": "minimum-in-rotated-sorted-array.md",
+  "codeExamples": [
+    {
+      "title": "Find Minimum",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/searching-algorithms/implicitly-sorted-array/minimum-in-rotated-sorted-array/code/java/MinimumRotated.java",
+          "language": "java"
+        }
+      ]
+    }
+  ]
 }

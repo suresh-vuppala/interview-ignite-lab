@@ -3,14 +3,23 @@
   "title": "Binary Search",
   "slug": "binary-search",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "binary-search.md",
   "codeExamples": [
     {
-      "title": "Example",
+      "title": "Binary Search",
       "languages": [
         {
-          "codeFile": "courses/dsa/searching-algorithms/search-fundamentals/binary-search/code/java/Example.java",
+          "codeFile": "courses/dsa/searching-algorithms/search-fundamentals/binary-search/code/java/BinarySearch.java",
           "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/search-fundamentals/binary-search/code/cpp/BinarySearch.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/search-fundamentals/binary-search/code/python/binary_search.py",
+          "language": "python"
         }
       ]
     }

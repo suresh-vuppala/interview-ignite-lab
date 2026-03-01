@@ -3,5 +3,25 @@
   "title": "First Element Not Smaller Than Target",
   "slug": "first-not-smaller-than-target",
   "isPremium": false,
-  "mdFile": "first-not-smaller-than-target.md"
+  "isPosted": true,
+  "mdFile": "first-not-smaller-than-target.md",
+  "codeExamples": [
+    {
+      "title": "First Not Smaller",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/searching-algorithms/sorted-array/first-not-smaller-than-target/code/java/FirstNotSmaller.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/sorted-array/first-not-smaller-than-target/code/cpp/FirstNotSmaller.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/sorted-array/first-not-smaller-than-target/code/python/first_not_smaller.py",
+          "language": "python"
+        }
+      ]
+    }
+  ]
 }

@@ -3,5 +3,25 @@
   "title": "Square Root Estimation",
   "slug": "square-root-estimation",
   "isPremium": false,
-  "mdFile": "square-root-estimation.md"
+  "isPosted": true,
+  "mdFile": "square-root-estimation.md",
+  "codeExamples": [
+    {
+      "title": "Square Root",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/searching-algorithms/sorted-array/square-root-estimation/code/java/SquareRoot.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/sorted-array/square-root-estimation/code/cpp/SquareRoot.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/searching-algorithms/sorted-array/square-root-estimation/code/python/square_root.py",
+          "language": "python"
+        }
+      ]
+    }
+  ]
 }
