@@ -1,3 +1,0 @@
-# Functional vs Non-Functional Requirements
-
-Content coming soon...

@@ -1,4 +1,3 @@
---
 ## Solution #3: Bottom-Up Approach(Tabulation)
 For the bottom-up dynamic programming, we want to start with subproblems first and work our way up to the main problem. This is normally done by filling up a table.
 Here, In the Fibonacci problem, we want to fill a one-dimensional table dp where each entry at index i represents value of the Fibonacci number at index i. The last element of the array is the answer we want to return.

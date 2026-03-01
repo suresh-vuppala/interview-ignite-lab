@@ -1,3 +1,6 @@
 Multi Tenant
 Sega pattern
 ACID Props in Non Distributed and Distributed databases
+Introduction to Relational databases/Non
+Places where we can cache in any systems
+Connection pooling
