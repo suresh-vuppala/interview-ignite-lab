@@ -1,0 +1,19 @@
+{
+  "order": 3,
+  "title": "Kth Largest Element in an Array",
+  "slug": "kth-largest-element-in-array",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "kth-largest-element-in-array.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/heaps/top-k/kth-largest-element-in-array/code/cpp/Example.cpp",
+          "language": "cpp"
+        }
+      ]
+    }
+  ]
+}

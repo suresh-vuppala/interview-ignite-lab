@@ -1,0 +1,27 @@
+{
+  "order": 6,
+  "title": "Longest Balanced Substring",
+  "slug": "longest-balanced-substring",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "longest-balanced-substring.md",
+  "codeExamples": [
+    {
+      "title": "Longest Balanced Substring Solution",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/longest-balanced-substring/code/cpp/LongestBalancedSubstring.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/longest-balanced-substring/code/java/LongestBalancedSubstring.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/longest-balanced-substring/code/python/LongestBalancedSubstring.py",
+          "language": "python"
+        }
+      ]
+    }
+  ]
+}

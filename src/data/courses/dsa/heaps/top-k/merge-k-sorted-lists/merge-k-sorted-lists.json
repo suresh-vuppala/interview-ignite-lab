@@ -1,0 +1,19 @@
+{
+  "order": 2,
+  "title": "Merge K Sorted Lists",
+  "slug": "merge-k-sorted-lists",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "merge-k-sorted-lists.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/heaps/top-k/merge-k-sorted-lists/code/cpp/Example.cpp",
+          "language": "cpp"
+        }
+      ]
+    }
+  ]
+}

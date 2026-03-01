@@ -1,0 +1,19 @@
+{
+  "order": 1,
+  "title": "Median of Data Stream",
+  "slug": "median-of-data-stream",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "median-of-data-stream.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/heaps/multiple-heaps/median-of-data-stream/code/cpp/Example.cpp",
+          "language": "cpp"
+        }
+      ]
+    }
+  ]
+}

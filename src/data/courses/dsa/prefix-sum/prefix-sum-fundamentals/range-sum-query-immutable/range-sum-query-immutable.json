@@ -1,0 +1,27 @@
+{
+  "order": 1,
+  "title": "Range Sum Query - Immutable",
+  "slug": "range-sum-query-immutable",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "range-sum-query-immutable.md",
+  "codeExamples": [
+    {
+      "title": "NumMatrix Class Implementation",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/range-sum-query-immutable/code/cpp/NumMatrix.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/range-sum-query-immutable/code/java/NumMatrix.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/range-sum-query-immutable/code/python/NumMatrix.py",
+          "language": "python"
+        }
+      ]
+    }
+  ]
+}

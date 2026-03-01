@@ -1,0 +1,19 @@
+{
+  "order": 1,
+  "title": "K Closest Points",
+  "slug": "k-closest-points",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "k-closest-points.md",
+  "codeExamples": [
+    {
+      "title": "Example",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/heaps/top-k/k-closest-points/code/cpp/Example.cpp",
+          "language": "cpp"
+        }
+      ]
+    }
+  ]
+}

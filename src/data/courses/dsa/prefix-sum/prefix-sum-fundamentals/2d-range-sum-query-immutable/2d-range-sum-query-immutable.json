@@ -1,0 +1,27 @@
+{
+  "order": 4,
+  "title": "2D Range Sum Query - Immutable",
+  "slug": "2d-range-sum-query-immutable",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "2d-range-sum-query-immutable.md",
+  "codeExamples": [
+    {
+      "title": "NumMatrix 2D Implementation",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/2d-range-sum-query-immutable/code/cpp/NumMatrix2D.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/2d-range-sum-query-immutable/code/java/NumMatrix2D.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/2d-range-sum-query-immutable/code/python/NumMatrix2D.py",
+          "language": "python"
+        }
+      ]
+    }
+  ]
+}

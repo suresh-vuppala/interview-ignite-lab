@@ -1,0 +1,27 @@
+{
+  "order": 5,
+  "title": "Longest Well-Performing Interval",
+  "slug": "longest-well-performing-interval",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "longest-well-performing-interval.md",
+  "codeExamples": [
+    {
+      "title": "Well-Performing Interval Solution",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/longest-well-performing-interval/code/cpp/WellPerformingInterval.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/longest-well-performing-interval/code/java/WellPerformingInterval.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/longest-well-performing-interval/code/python/WellPerformingInterval.py",
+          "language": "python"
+        }
+      ]
+    }
+  ]
+}

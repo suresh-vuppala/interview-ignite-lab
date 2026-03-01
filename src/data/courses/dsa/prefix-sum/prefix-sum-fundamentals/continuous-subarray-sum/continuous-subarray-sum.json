@@ -1,0 +1,27 @@
+{
+  "order": 3,
+  "title": "Continuous Subarray Sum",
+  "slug": "continuous-subarray-sum",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "continuous-subarray-sum.md",
+  "codeExamples": [
+    {
+      "title": "Continuous Subarray Sum Solution",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/continuous-subarray-sum/code/cpp/ContinuousSubarraySum.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/continuous-subarray-sum/code/java/ContinuousSubarraySum.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/continuous-subarray-sum/code/python/ContinuousSubarraySum.py",
+          "language": "python"
+        }
+      ]
+    }
+  ]
+}

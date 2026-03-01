@@ -1,0 +1,27 @@
+{
+  "order": 2,
+  "title": "Subarray Sum Equals K",
+  "slug": "subarray-sum-equals-k",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "subarray-sum-equals-k.md",
+  "codeExamples": [
+    {
+      "title": "Subarray Sum Solution",
+      "languages": [
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/subarray-sum-equals-k/code/cpp/SubarraySum.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/subarray-sum-equals-k/code/java/SubarraySum.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/subarray-sum-equals-k/code/python/SubarraySum.py",
+          "language": "python"
+        }
+      ]
+    }
+  ]
+}
