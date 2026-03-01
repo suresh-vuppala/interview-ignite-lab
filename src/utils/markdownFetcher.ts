@@ -44,14 +44,26 @@ export const importLessonJson = async (
 ) => {
   if (!lessonSlug) return null;
 
-  const path = buildLessonPath(courseSlug, moduleSlug, sectionSlug, subsectionSlug, lessonSlug);
-
+  // first attempt: use the glob-generated list (fast, static)
   const file = Object.keys(lessonJsonFiles).find((key) => key.endsWith(`${lessonSlug}.json`));
-  if (!file) {
-    console.warn(`⚠️ Lesson JSON not found: ${lessonSlug}`);
-    return null;
+  if (file) {
+    const lesson = (lessonJsonFiles[file] as any).default || lessonJsonFiles[file];
+    return lesson;
   }
 
-  const lesson = (lessonJsonFiles[file] as any).default || lessonJsonFiles[file];
-  return lesson;
+  // fallback: the file may have been added while the dev server was running
+  // (import.meta.glob won't always refresh dynamically-created files).
+  // We'll try a direct dynamic import based on the expected folder structure.
+  try {
+    let dynamicPath = `@/data/courses/${courseSlug}/${moduleSlug}/`;
+    if (sectionSlug) dynamicPath += `${sectionSlug}/`;
+    if (subsectionSlug) dynamicPath += `${subsectionSlug}/`;
+    dynamicPath += `${lessonSlug}/${lessonSlug}.json`;
+
+    const lessonModule = await import(/* @vite-ignore */ dynamicPath);
+    return lessonModule.default || lessonModule;
+  } catch (err) {
+    console.warn(`❌ Lesson JSON not found via dynamic import for slug: ${lessonSlug}`, err);
+    return null;
+  }
 };

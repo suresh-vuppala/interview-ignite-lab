@@ -1,3 +1,0 @@
-# Binary Search the Answer
-
-Content coming soon...

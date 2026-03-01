@@ -1,5 +1,5 @@
 // /components/AppSidebar.tsx
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate  } from 'react-router-dom';
 import {
   Sidebar,
@@ -51,6 +51,7 @@ export function AppSidebar() {
 
   const [searchQuery, setSearchQuery] = useState('');
   const [openModuleIndex, setOpenModuleIndex] = useState<number | null>(null);
+  const activeItemRef = useRef<HTMLLIElement>(null);
 
   // ✅ Helper to check if text matches the search
   const matchesSearch = (text: string) =>
@@ -82,7 +83,7 @@ useEffect(() => {
 
   // 🧭 3️⃣ Default to first module if none active
   const openIndex = activeModuleIndex >= 0 ? activeModuleIndex : 0;
-  if (openModuleIndex === null) setOpenModuleIndex(openIndex);
+  setOpenModuleIndex(openIndex);
 
   // 🚀 4️⃣ If at course root (like /course/system-design) → redirect to first lesson
   if (isCourseRoot) {
@@ -110,6 +111,52 @@ useEffect(() => {
   }
 }, [location.pathname, course]);
 
+// 🎯 Auto-scroll to active item when it's rendered
+useEffect(() => {
+  // Wait for the module to fully expand and DOM to render
+  // Using animation frame + extra delay to ensure Collapsible animation completes
+  const frame = requestAnimationFrame(() => {
+    const timer = setTimeout(() => {
+      if (activeItemRef.current) {
+        console.log('✅ Active item found, scrolling to:', {
+          element: activeItemRef.current,
+          pathname: location.pathname,
+          text: activeItemRef.current.textContent
+        });
+        
+        // Scroll the parent SidebarMenuItem into view
+        activeItemRef.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+      } else {
+        console.warn('⚠️ Active item ref not set. Checking DOM...', {
+          pathname: location.pathname,
+          openModuleIndex: openModuleIndex
+        });
+        
+        // Retry once more with longer delay
+        const retryTimer = setTimeout(() => {
+          if (activeItemRef.current) {
+            console.log('✅ Active item found on retry');
+            activeItemRef.current.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center'
+            });
+          } else {
+            console.error('❌ Active item still not found after retry');
+          }
+        }, 400);
+        
+        return () => clearTimeout(retryTimer);
+      }
+    }, 300); // Wait for Collapsible animation to complete
+    
+    return () => clearTimeout(timer);
+  });
+  
+  return () => cancelAnimationFrame(frame);
+}, [location.pathname, openModuleIndex]);
 
   const handleModuleToggle = (index: number) => {
     setOpenModuleIndex(openModuleIndex === index ? null : index);
@@ -169,8 +216,20 @@ useEffect(() => {
                           const subLessonPath = `/course/${courseSlug}/${module.slug}/${section.slug}/${lesson.slug}/${subLesson.slug}`;
                           const isActive = location.pathname === subLessonPath;
                           const isLocked = subLesson.isPremium;
+                          
+                          if (isActive) {
+                            console.log('🔍 Found active sub-lesson:', {
+                              title: subLesson.title,
+                              path: subLessonPath,
+                              currentPath: location.pathname
+                            });
+                          }
+                          
                           return (
-                            <SidebarMenuItem key={`${lessonIndex}-${subIdx}`}>
+                            <SidebarMenuItem 
+                              key={`${lessonIndex}-${subIdx}`}
+                              ref={isActive ? activeItemRef : null}
+                            >
                               <SidebarMenuButton
                                 asChild
                                 isActive={isActive}
@@ -209,8 +268,20 @@ useEffect(() => {
               const lessonPath = `/course/${courseSlug}/${module.slug}/${section.slug}/${lesson.slug}`;
               const isActive = location.pathname === lessonPath;
               const isLocked = lesson.isPremium;
+              
+              if (isActive) {
+                console.log('🔍 Found active normal lesson:', {
+                  title: lesson.title,
+                  path: lessonPath,
+                  currentPath: location.pathname
+                });
+              }
+              
               return (
-                <SidebarMenuItem key={lessonIndex}>
+                <SidebarMenuItem 
+                  key={lessonIndex}
+                  ref={isActive ? activeItemRef : null}
+                >
                   <SidebarMenuButton
                     asChild
                     isActive={isActive}
