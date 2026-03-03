@@ -1,4 +1,4 @@
-﻿# Max and Min Values
+# Max and Min Values
 
 ## Overview
 Find the maximum and minimum values in a binary tree by traversing all nodes.
@@ -17,5 +17,4 @@ Given a binary tree, find both the maximum and minimum node values.
 
 ## Code
 
-`code
-`
+```code```

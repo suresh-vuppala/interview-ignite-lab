@@ -1,4 +1,4 @@
-﻿# Count Leaf and Internal Nodes
+# Count Leaf and Internal Nodes
 
 ## Overview
 Leaf nodes have no children. Internal nodes have at least one child. This is a fundamental tree property counting problem.
@@ -17,5 +17,4 @@ Given a binary tree, count the number of leaf nodes and internal nodes.
 
 ## Code
 
-`code
-`
+```code```

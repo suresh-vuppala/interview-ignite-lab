@@ -10,7 +10,7 @@
       "title": "Example",
       "languages": [
         {
-          "codeFile": "courses/dsa/heaps/top-k/merge-k-sorted-lists/code/cpp/Example.cpp",
+          "codeFile": "courses/dsa/heaps/top-k/merge-k-sorted-lists/code/cpp/MergeKSortedLists.cpp",
           "language": "cpp"
         }
       ]

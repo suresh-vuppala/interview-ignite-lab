@@ -1,4 +1,4 @@
-﻿# LCA in BST
+# LCA in BST
 
 ## Overview
 Find the Lowest Common Ancestor (LCA) of two nodes in a Binary Search Tree using BST properties.
@@ -17,45 +17,4 @@ Given a BST and two node values, find their LCA.
 
 ## Code
 
-\\\code
-\\\
-"@
-
- = @"
-#include <iostream>
-using namespace std;
-
-struct TreeNode {
-    int val;
-    TreeNode *left, *right;
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-};
-
-TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-    if (!root) return nullptr;
-    
-    // Both p and q are in left subtree
-    if (p->val < root->val && q->val < root->val)
-        return lowestCommonAncestor(root->left, p, q);
-    
-    // Both p and q are in right subtree
-    if (p->val > root->val && q->val > root->val)
-        return lowestCommonAncestor(root->right, p, q);
-    
-    // They are on different sides or one is the root
-    return root;
-}
-
-int main() {
-    TreeNode* root = new TreeNode(6);
-    root->left = new TreeNode(2);
-    root->right = new TreeNode(8);
-    root->left->left = new TreeNode(0);
-    root->left->right = new TreeNode(4);
-    root->right->left = new TreeNode(7);
-    root->right->right = new TreeNode(9);
-    
-    TreeNode* lca = lowestCommonAncestor(root, root->left, root->right);
-    cout << "LCA: " << lca->val << endl;
-    return 0;
-}
+```code```

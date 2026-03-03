@@ -57,7 +57,7 @@ const customStyle = {
 
 export function CodeBlock({ title, codes, showLanguageSelector = true }: CodeBlockProps) {
   // default to C++ if available, otherwise first language in list
-  const defaultLang = codes.find((c) => c.language === 'cpp')?.language || codes[0]?.language || 'cpp';
+  const defaultLang = codes?.find((c) => c.language === 'cpp')?.language || codes?.[0]?.language || 'cpp';
   const [selectedLanguage, setSelectedLanguage] = useState(defaultLang);
   const [loadedCodes, setLoadedCodes] = useState<{ [lang: string]: string }>({});
   const [copied, setCopied] = useState(false);

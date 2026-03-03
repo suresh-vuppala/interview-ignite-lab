@@ -1,4 +1,4 @@
-﻿# Height of Tree
+# Height of Tree
 
 ## Overview
 The height of a tree is the longest path from root to any leaf node. Also called depth in some contexts.
@@ -17,5 +17,4 @@ Find the height of a binary tree.
 
 ## Code
 
-`code
-`
+```code```

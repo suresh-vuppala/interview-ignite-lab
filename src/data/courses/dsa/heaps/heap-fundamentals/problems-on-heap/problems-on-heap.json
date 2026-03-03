@@ -3,14 +3,23 @@
   "title": "Problems on Heap",
   "slug": "problems-on-heap",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "problems-on-heap.md",
   "codeExamples": [
     {
-      "title": "Example",
+      "title": "Problems on Heap Solution",
       "languages": [
         {
-          "codeFile": "courses/dsa/heaps/heap-fundamentals/problems-on-heap/code/java/Example.java",
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/problems-on-heap/code/java/ProblemsOnHeap.java",
           "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/problems-on-heap/code/cpp/ProblemsOnHeap.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/problems-on-heap/code/python/problems_on_heap.py",
+          "language": "python"
         }
       ]
     }

@@ -1,4 +1,4 @@
-﻿# Inorder Traversal
+# Inorder Traversal
 
 ## Overview
 Inorder traversal visits nodes in Left-Root-Right order. For BSTs, this produces sorted output.
@@ -16,5 +16,4 @@ Implement inorder traversal (recursive and iterative) for a binary tree.
 
 ## Code
 
-`code
-`
+```code```

@@ -3,14 +3,23 @@
   "title": "Heap Sort",
   "slug": "heap-sort",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "heap-sort.md",
   "codeExamples": [
     {
-      "title": "Example",
+      "title": "Heap Sort Solution",
       "languages": [
         {
-          "codeFile": "courses/dsa/heaps/heap-fundamentals/heap-sort/code/java/Example.java",
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/heap-sort/code/java/HeapSort.java",
           "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/heap-sort/code/cpp/HeapSort.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/heap-sort/code/python/heap_sort.py",
+          "language": "python"
         }
       ]
     }

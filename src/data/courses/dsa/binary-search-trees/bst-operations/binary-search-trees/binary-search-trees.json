@@ -9,7 +9,7 @@
       "title": "Example",
       "languages": [
         {
-          "codeFile": "courses/dsa/binary-search-trees/bst-operations/binary-search-trees/code/java/Example.java",
+          "codeFile": "courses/dsa/binary-search-trees/bst-operations/binary-search-trees/code/java/BinarySearchTrees.java",
           "language": "java"
         }
       ]

@@ -10,7 +10,7 @@
       "title": "Example",
       "languages": [
         {
-          "codeFile": "courses/dsa/heaps/top-k/kth-largest-element-in-array/code/cpp/Example.cpp",
+          "codeFile": "courses/dsa/heaps/top-k/kth-largest-element-in-array/code/cpp/KthLargestElementInArray.cpp",
           "language": "cpp"
         }
       ]

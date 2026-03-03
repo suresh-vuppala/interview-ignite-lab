@@ -9,7 +9,7 @@
       "title": "Example",
       "languages": [
         {
-          "codeFile": "courses/dsa/binary-search-trees/bst-operations/tree-traversals-recursive-iterative/code/java/Example.java",
+          "codeFile": "courses/dsa/binary-search-trees/bst-operations/tree-traversals-recursive-iterative/code/java/TreeTraversalsRecursiveIterative.java",
           "language": "java"
         }
       ]

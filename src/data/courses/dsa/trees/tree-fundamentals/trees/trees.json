@@ -9,7 +9,7 @@
       "title": "Example",
       "languages": [
         {
-          "codeFile": "courses/dsa/trees/tree-fundamentals/trees/code/java/Example.java",
+          "codeFile": "courses/dsa/trees/tree-fundamentals/trees/code/java/CountTotalNodes.java",
           "language": "java"
         }
       ]

@@ -3,13 +3,14 @@
   "title": "Heaps",
   "slug": "heaps",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "heaps.md",
   "codeExamples": [
     {
-      "title": "Example",
+      "title": "Heaps Solution",
       "languages": [
         {
-          "codeFile": "courses/dsa/heaps/heap-fundamentals/heaps/code/java/Example.java",
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/heaps/code/java/Heaps.java",
           "language": "java"
         }
       ]

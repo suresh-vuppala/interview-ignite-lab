@@ -1,4 +1,4 @@
-﻿# Preorder Traversal
+# Preorder Traversal
 
 ## Overview
 Preorder traversal visits nodes in Root-Left-Right order. Useful for copying trees and prefix expressions.
@@ -16,5 +16,4 @@ Implement preorder traversal (recursive and iterative).
 
 ## Code
 
-`code
-`
+```code```

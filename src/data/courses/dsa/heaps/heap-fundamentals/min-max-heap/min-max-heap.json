@@ -3,14 +3,23 @@
   "title": "Min/Max Heap",
   "slug": "min-max-heap",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "min-max-heap.md",
   "codeExamples": [
     {
-      "title": "Example",
+      "title": "Min/Max Heap Solution",
       "languages": [
         {
-          "codeFile": "courses/dsa/heaps/heap-fundamentals/min-max-heap/code/java/Example.java",
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/min-max-heap/code/java/MinMaxHeap.java",
           "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/min-max-heap/code/cpp/MinMaxHeap.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/min-max-heap/code/python/min_max_heap.py",
+          "language": "python"
         }
       ]
     }

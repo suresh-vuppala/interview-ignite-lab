@@ -39,5 +39,4 @@ Implement the four fundamental operations on a binary tree:
 
 ## Code
 
-```code
-```
+```code```
