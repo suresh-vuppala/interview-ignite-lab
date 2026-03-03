@@ -1,5 +1,3 @@
-# Maximum Product Subarray
-
 ## Problem Statement
 Solve Maximum Product Subarray using dynamic programming.
 

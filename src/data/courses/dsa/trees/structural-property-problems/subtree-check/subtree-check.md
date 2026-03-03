@@ -1,5 +1,3 @@
-# Subtree of Another Tree
-
 ## Overview
 Check if one tree is a subtree of another (exact match at some node).
 

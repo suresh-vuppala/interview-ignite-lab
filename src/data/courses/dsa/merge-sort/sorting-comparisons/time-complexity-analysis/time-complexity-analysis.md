@@ -1,5 +1,3 @@
-# Time Complexity Analysis
-
 ## Sorting Algorithms Comparison
 
 | Algorithm | Best | Average | Worst |

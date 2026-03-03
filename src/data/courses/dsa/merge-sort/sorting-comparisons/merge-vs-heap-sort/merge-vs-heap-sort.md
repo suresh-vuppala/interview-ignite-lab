@@ -1,5 +1,3 @@
-# Merge Sort vs Heap Sort
-
 ## Comparison
 
 | Aspect | Merge Sort | Heap Sort |

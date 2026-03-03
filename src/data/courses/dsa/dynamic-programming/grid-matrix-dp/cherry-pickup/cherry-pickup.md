@@ -1,5 +1,3 @@
-# Cherry Pickup
-
 ## Problem Statement
 Solve Cherry Pickup using dynamic programming.
 

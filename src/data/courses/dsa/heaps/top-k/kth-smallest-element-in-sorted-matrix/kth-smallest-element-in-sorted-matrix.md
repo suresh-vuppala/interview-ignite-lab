@@ -1,5 +1,3 @@
-# Kth Smallest Element in Sorted Matrix
-
 ## Problem Statement
 
 Find the kth smallest element in an n x n matrix where each row and column is sorted.

@@ -1,5 +1,3 @@
-# Check Prime Number
-
 ## Overview
 Check if a number is prime, count primes up to N, and find nth prime number.
 

@@ -1,5 +1,3 @@
-# Number of Islands
-
 ## Problem Statement
 
 Solve Number of Islands problem using graph algorithms.

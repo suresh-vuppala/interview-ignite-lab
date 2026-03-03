@@ -1,5 +1,3 @@
-# Continuous Subarray Sum
-
 ## Problem Statement
 
 Given an integer array `nums` and an integer `k`, return `true` if `nums` has a good subarray or `false` otherwise.

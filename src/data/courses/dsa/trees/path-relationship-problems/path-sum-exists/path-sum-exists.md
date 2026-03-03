@@ -1,5 +1,3 @@
-# Path Sum Exists
-
 ## Overview
 Comprehensive solution for Path Sum Exists
 

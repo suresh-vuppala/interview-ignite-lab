@@ -1,5 +1,3 @@
-# Paths with Sum
-
 ## Overview
 Comprehensive solution for Paths with Sum
 

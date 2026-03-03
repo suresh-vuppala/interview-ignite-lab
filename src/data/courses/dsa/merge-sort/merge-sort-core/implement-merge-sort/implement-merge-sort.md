@@ -1,5 +1,3 @@
-# Implement Merge Sort
-
 ## Problem Statement
 Implement the merge sort algorithm to sort an array in ascending order.
 

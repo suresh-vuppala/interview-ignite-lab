@@ -1,5 +1,3 @@
-# Rotting Oranges
-
 ## Problem Statement
 
 Solve Rotting Oranges problem using graph algorithms.

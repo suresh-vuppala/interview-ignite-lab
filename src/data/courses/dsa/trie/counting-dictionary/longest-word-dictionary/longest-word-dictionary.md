@@ -1,5 +1,3 @@
-# Longest Word in Dictionary
-
 ## Problem Statement
 Find longest word that can be built one character at a time by other words in the array.
 

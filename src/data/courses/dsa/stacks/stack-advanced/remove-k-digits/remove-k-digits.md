@@ -1,5 +1,3 @@
-# Remove K Digits
-
 ## Problem Statement
 Remove K Digits implementation.
 

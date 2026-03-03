@@ -1,5 +1,3 @@
-# Weighted Graph
-
 ## Problem Statement
 
 Solve Weighted Graph problem using graph algorithms.

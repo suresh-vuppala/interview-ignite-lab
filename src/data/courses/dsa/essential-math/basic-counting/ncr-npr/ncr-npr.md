@@ -1,5 +1,3 @@
-# nCr and nPr Calculations
-
 ## Overview
 Calculate combinations (nCr) and permutations (nPr) with and without modulo.
 

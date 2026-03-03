@@ -1,0 +1,26 @@
+{
+  "title": "Max Consecutive Ones III",
+  "slug": "max-consecutive-ones-iii",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "./max-consecutive-ones-iii.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "./code/java/MaxConsecutiveOnesIii.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "./code/cpp/max_consecutive_ones_iii.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "./code/python/max-consecutive-ones-iii.py"
+        }
+      ]
+    }
+  ]
+}

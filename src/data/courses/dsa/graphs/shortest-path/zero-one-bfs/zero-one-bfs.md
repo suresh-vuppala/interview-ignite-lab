@@ -1,5 +1,3 @@
-# Zero One BFS
-
 ## Problem Statement
 
 Solve Zero One BFS problem using graph algorithms.

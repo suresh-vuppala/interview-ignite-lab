@@ -1,5 +1,3 @@
-# Redundant Connection
-
 ## Problem Statement
 
 Solve Redundant Connection problem using graph algorithms.

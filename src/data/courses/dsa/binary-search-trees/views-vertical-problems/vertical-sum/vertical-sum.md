@@ -1,5 +1,3 @@
-# Vertical Sum
-
 ## Overview
 Comprehensive solution for Vertical Sum
 

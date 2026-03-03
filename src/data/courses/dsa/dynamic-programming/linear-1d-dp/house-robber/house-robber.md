@@ -1,5 +1,3 @@
-# House Robber
-
 ## Problem Statement
 Solve House Robber using dynamic programming.
 

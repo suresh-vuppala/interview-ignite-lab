@@ -1,5 +1,3 @@
-# BST Core Operations
-
 ## Overview
 Comprehensive solution for BST Core Operations
 

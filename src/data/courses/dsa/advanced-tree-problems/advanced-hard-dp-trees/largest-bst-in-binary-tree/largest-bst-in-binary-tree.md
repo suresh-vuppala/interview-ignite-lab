@@ -1,5 +1,3 @@
-# Largest BST in BT
-
 ## Overview
 Comprehensive solution for Largest BST in BT
 

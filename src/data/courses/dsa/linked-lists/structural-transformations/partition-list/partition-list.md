@@ -1,5 +1,3 @@
-# Partition List
-
 ## Overview
 Partition list around value x: nodes < x before nodes >= x.
 

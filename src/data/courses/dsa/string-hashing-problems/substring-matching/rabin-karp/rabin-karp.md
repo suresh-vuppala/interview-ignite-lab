@@ -1,5 +1,3 @@
-# Rabin-Karp Algorithm
-
 Pattern matching using rolling hash.
 
 ## Algorithm

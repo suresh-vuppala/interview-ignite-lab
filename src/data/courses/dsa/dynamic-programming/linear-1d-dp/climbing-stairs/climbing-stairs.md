@@ -1,5 +1,3 @@
-# Climbing Stairs
-
 ## Problem Statement
 Solve Climbing Stairs using dynamic programming.
 

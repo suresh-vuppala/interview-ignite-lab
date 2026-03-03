@@ -1,5 +1,3 @@
-# Detect Cycle DSU
-
 ## Problem Statement
 
 Solve Detect Cycle DSU problem using graph algorithms.

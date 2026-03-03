@@ -1,5 +1,3 @@
-# Top View
-
 ## Overview
 Comprehensive solution for Top View
 

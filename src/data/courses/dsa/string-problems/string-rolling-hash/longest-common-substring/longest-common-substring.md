@@ -1,3 +1,1 @@
-# Longest Common Substring
-
 Content coming soon...

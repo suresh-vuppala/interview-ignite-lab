@@ -1,5 +1,3 @@
-# Stock Buy Sell III
-
 ## Problem Statement
 Solve Stock Buy Sell III using dynamic programming.
 

@@ -1,5 +1,3 @@
-# Count Derangements
-
 ## Problem Statement
 Solve Count Derangements using dynamic programming.
 

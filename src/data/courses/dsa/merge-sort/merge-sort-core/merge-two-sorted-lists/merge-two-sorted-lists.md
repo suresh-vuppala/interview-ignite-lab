@@ -1,5 +1,3 @@
-# Merge Two Sorted Linked Lists
-
 ## Problem Statement
 Merge two sorted linked lists into one sorted linked list.
 

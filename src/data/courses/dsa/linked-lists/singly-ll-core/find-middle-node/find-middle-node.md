@@ -1,5 +1,3 @@
-# Find Middle Node
-
 ## Overview
 Learn multiple approaches to find the middle node of a linked list.
 

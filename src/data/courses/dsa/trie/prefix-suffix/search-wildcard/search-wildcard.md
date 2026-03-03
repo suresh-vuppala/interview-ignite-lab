@@ -1,5 +1,3 @@
-# Search with Wildcard
-
 ## Problem Statement
 Search words with wildcards where '.' matches any character and '*' matches any sequence.
 

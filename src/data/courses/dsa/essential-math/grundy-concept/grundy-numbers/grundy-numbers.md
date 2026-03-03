@@ -1,5 +1,3 @@
-# Grundy Numbers
-
 ## Overview
 Understand Grundy numbers (Sprague-Grundy theorem) for solving impartial games.
 

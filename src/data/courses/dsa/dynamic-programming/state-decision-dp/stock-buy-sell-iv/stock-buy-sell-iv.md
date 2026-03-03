@@ -1,5 +1,3 @@
-# Stock Buy Sell IV
-
 ## Problem Statement
 Solve Stock Buy Sell IV using dynamic programming.
 

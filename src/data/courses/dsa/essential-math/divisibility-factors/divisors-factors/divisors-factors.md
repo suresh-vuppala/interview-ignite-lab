@@ -1,5 +1,3 @@
-# Divisors and Factors
-
 ## Overview
 Efficiently find divisors, count divisors, and calculate sum of divisors using √n approach.
 

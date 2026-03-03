@@ -1,5 +1,3 @@
-# Decode Ways
-
 ## Problem Statement
 Solve Decode Ways using dynamic programming.
 

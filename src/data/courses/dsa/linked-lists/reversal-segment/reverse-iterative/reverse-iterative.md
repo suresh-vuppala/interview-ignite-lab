@@ -1,5 +1,3 @@
-# Reverse Iterative
-
 ## Overview
 Learn to reverse a linked list using iterative approach with pointer manipulation.
 

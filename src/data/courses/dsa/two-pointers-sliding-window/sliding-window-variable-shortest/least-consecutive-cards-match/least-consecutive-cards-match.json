@@ -1,0 +1,26 @@
+{
+  "title": "Least Consecutive Cards to Match",
+  "slug": "least-consecutive-cards-match",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "./least-consecutive-cards-match.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "./code/java/LeastConsecutiveCardsMatch.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "./code/cpp/least_consecutive_cards_match.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "./code/python/least-consecutive-cards-match.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,3 @@
-# Kth Smallest/Largest
-
 ## Overview
 Comprehensive solution for Kth Smallest/Largest
 

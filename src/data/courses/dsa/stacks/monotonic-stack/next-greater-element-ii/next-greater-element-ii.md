@@ -1,5 +1,3 @@
-# Next Greater Element II
-
 ## Problem Statement
 Next Greater Element II implementation.
 

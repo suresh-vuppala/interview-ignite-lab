@@ -1,5 +1,3 @@
-# Eventual Safe States
-
 ## Problem Statement
 
 Solve Eventual Safe States problem using graph algorithms.

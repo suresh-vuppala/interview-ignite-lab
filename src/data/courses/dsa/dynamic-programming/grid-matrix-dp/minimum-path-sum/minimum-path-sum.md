@@ -1,5 +1,3 @@
-# Minimum Path Sum
-
 ## Problem Statement
 Solve Minimum Path Sum using dynamic programming.
 

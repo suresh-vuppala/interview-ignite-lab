@@ -1,5 +1,3 @@
-# Tiling Dominoes Trominoes
-
 ## Problem Statement
 Solve Tiling Dominoes Trominoes using dynamic programming.
 

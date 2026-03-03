@@ -1,5 +1,3 @@
-# Offline XOR Queries
-
 ## Problem Statement
 Answer multiple queries for maximum XOR with elements up to index i.
 

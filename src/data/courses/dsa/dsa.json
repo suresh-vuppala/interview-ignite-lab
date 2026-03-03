@@ -52,29 +52,157 @@
                                      ]
                     },
                     {
-                        "title":  "Subarrays, Subsets \u0026 Recursion",
+                        "title":  "Subsets, Subarrays, Recursion \u0026 Bits",
                         "slug":  "subarrays-subsets-recursion",
                         "icon":  "Layers",
                         "sections":  [
                                          {
-                                             "title":  "Core Topics",
-                                             "slug":  "core-topics",
+                                             "title":  "Introduction",
+                                             "slug":  "introduction",
                                              "lessons":  [
                                                              {
-                                                                 "title":  "Subarrays vs Subsets vs Subsequences",
-                                                                 "slug":  "subarrays-vs-subsets-vs-subsequences"
+                                                                 "isPosted":  true,
+                                                                 "title":  "Subarrays vs Subsequences vs Subsets",
+                                                                 "slug":  "subarrays-vs-subsequences-vs-subsets"
+                                                             }
+                                                         ]
+                                         },
+                                         {
+                                             "title":  "Subarrays (Continuous Elements)",
+                                             "slug":  "subarrays",
+                                             "lessons":  [
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Generate All Subarrays",
+                                                                 "slug":  "generate-all-subarrays"
                                                              },
                                                              {
-                                                                 "title":  "Bit Manipulation",
-                                                                 "slug":  "bit-manipulation"
+                                                                 "isPosted":  true,
+                                                                 "title":  "Generate All Subsequences",
+                                                                 "slug":  "generate-all-subsequences"
                                                              },
                                                              {
-                                                                 "title":  "Recursion",
-                                                                 "slug":  "recursion"
+                                                                 "isPosted":  true,
+                                                                 "title":  "Generate All Subsets using Recursion",
+                                                                 "slug":  "generate-all-subsets-recursion"
+                                                             }
+                                                         ]
+                                         },
+                                         {
+                                             "title":  "Bit Manipulation (Subset Pattern)",
+                                             "slug":  "bit-manipulation",
+                                             "lessons":  [
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Bit Masking Basics",
+                                                                 "slug":  "bit-masking-basics"
                                                              },
                                                              {
-                                                                 "title":  "Backtracking",
-                                                                 "slug":  "backtracking"
+                                                                 "isPosted":  true,
+                                                                 "title":  "Check/Set/Unset/Toggle Bit",
+                                                                 "slug":  "check-set-unset-toggle-bit"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Count Set Bits",
+                                                                 "slug":  "count-set-bits"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Power of Two Check",
+                                                                 "slug":  "power-of-two-check"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Generate Subsets using Bitmask",
+                                                                 "slug":  "generate-subsets-bitmask"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Single Number (XOR Based)",
+                                                                 "slug":  "single-number"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Two Non-Repeating Numbers",
+                                                                 "slug":  "two-non-repeating-numbers"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Missing Number",
+                                                                 "slug":  "missing-number"
+                                                             }
+                                                         ]
+                                         },
+                                         {
+                                             "title":  "Recursion Fundamentals",
+                                             "slug":  "recursion-fundamentals",
+                                             "lessons":  [
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Recursion Tree Understanding",
+                                                                 "slug":  "recursion-tree-understanding"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Recurrence Relation Basics",
+                                                                 "slug":  "recurrence-relation-basics"
+                                                             }
+                                                         ]
+                                         },
+                                         {
+                                             "title":  "Backtracking",
+                                             "slug":  "backtracking",
+                                             "lessons":  [
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Generate All Permutations",
+                                                                 "slug":  "generate-all-permutations"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Permutations with Duplicates",
+                                                                 "slug":  "permutations-with-duplicates"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "N-Queens",
+                                                                 "slug":  "n-queens"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Rat in a Maze",
+                                                                 "slug":  "rat-in-maze"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Sudoku Solver",
+                                                                 "slug":  "sudoku-solver"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Combination Sum",
+                                                                 "slug":  "combination-sum"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Combination Sum II",
+                                                                 "slug":  "combination-sum-ii"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Letter Combinations of Phone Number",
+                                                                 "slug":  "letter-combinations-phone-number"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Palindrome Partitioning",
+                                                                 "slug":  "palindrome-partitioning"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Word Search",
+                                                                 "slug":  "word-search"
                                                              }
                                                          ]
                                          }
@@ -456,21 +584,167 @@
                     },
 
                     {
-                        "title":  "Sliding Window Technique",
-                        "slug":  "sliding-window-technique",
+                        "title":  "Two Pointers \u0026 Sliding Window",
+                        "slug":  "two-pointers-sliding-window",
                         "icon":  "Text",
                         "sections":  [
                                          {
-                                             "title":  "Sliding Window",
-                                             "slug":  "sliding-window",
+                                             "title":  "Two Pointers – Same Direction",
+                                             "slug":  "two-pointers-same-direction",
                                              "lessons":  [
                                                              {
-                                                                 "title":  "Introducing Sliding Window Technique",
-                                                                 "slug":  "introducing-sliding-window"
+                                                                 "isPosted":  true,
+                                                                 "title":  "Remove Duplicates (Sorted Array)",
+                                                                 "slug":  "remove-duplicates-sorted-array"
                                                              },
                                                              {
-                                                                 "title":  "Maximum Sum of K Consecutive Elements",
-                                                                 "slug":  "max-sum-k-elements"
+                                                                 "isPosted":  true,
+                                                                 "title":  "Move Zeros",
+                                                                 "slug":  "move-zeros"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Remove Element",
+                                                                 "slug":  "remove-element"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Squares of a Sorted Array",
+                                                                 "slug":  "squares-sorted-array"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Merge Two Sorted Arrays (in-place)",
+                                                                 "slug":  "merge-two-sorted-arrays"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Long Pressed Name",
+                                                                 "slug":  "long-pressed-name"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Backspace String Compare",
+                                                                 "slug":  "backspace-string-compare"
+                                                             }
+                                                         ]
+                                         },
+                                         {
+                                             "title":  "Two Pointers – Opposite Direction",
+                                             "slug":  "two-pointers-opposite-direction",
+                                             "lessons":  [
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Two Sum (Sorted Array)",
+                                                                 "slug":  "two-sum-sorted-array"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Valid Palindrome",
+                                                                 "slug":  "valid-palindrome"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Container With Most Water",
+                                                                 "slug":  "container-most-water"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "3Sum",
+                                                                 "slug":  "3sum"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "4Sum",
+                                                                 "slug":  "4sum"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Trapping Rain Water",
+                                                                 "slug":  "trapping-rain-water"
+                                                             }
+                                                         ]
+                                         },
+                                         {
+                                             "title":  "Sliding Window – Fixed Size",
+                                             "slug":  "sliding-window-fixed-size",
+                                             "lessons":  [
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Subarray Sum (Fixed Size K)",
+                                                                 "slug":  "subarray-sum-fixed-size-k"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Maximum Sum Subarray of Size K",
+                                                                 "slug":  "max-sum-subarray-size-k"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "First Negative Number in Every Window of Size K",
+                                                                 "slug":  "first-negative-window-k"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Find All Anagrams in a String",
+                                                                 "slug":  "find-all-anagrams"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Sliding Window Maximum",
+                                                                 "slug":  "sliding-window-maximum"
+                                                             }
+                                                         ]
+                                         },
+                                         {
+                                             "title":  "Sliding Window – Variable Size (Longest)",
+                                             "slug":  "sliding-window-variable-longest",
+                                             "lessons":  [
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Longest Substring Without Repeating Characters",
+                                                                 "slug":  "longest-substring-without-repeating"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Longest Subarray with Sum ≤ K",
+                                                                 "slug":  "longest-subarray-sum-k"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Longest Repeating Character Replacement",
+                                                                 "slug":  "longest-repeating-character-replacement"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Max Consecutive Ones III",
+                                                                 "slug":  "max-consecutive-ones-iii"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Fruits Into Baskets",
+                                                                 "slug":  "fruits-into-baskets"
+                                                             }
+                                                         ]
+                                         },
+                                         {
+                                             "title":  "Sliding Window – Variable Size (Shortest / Minimum)",
+                                             "slug":  "sliding-window-variable-shortest",
+                                             "lessons":  [
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Minimum Size Subarray Sum",
+                                                                 "slug":  "minimum-size-subarray-sum"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Minimum Window Substring",
+                                                                 "slug":  "minimum-window-substring"
+                                                             },
+                                                             {
+                                                                 "isPosted":  true,
+                                                                 "title":  "Least Consecutive Cards to Match",
+                                                                 "slug":  "least-consecutive-cards-match"
                                                              }
                                                          ]
                                          }

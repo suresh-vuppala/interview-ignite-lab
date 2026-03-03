@@ -1,5 +1,3 @@
-# Modular Inverse
-
 ## Overview
 Compute modular multiplicative inverse using Extended Euclidean and Fermat's Little Theorem.
 

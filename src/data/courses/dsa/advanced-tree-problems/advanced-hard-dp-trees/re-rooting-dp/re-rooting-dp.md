@@ -1,5 +1,3 @@
-# Re-rooting DP
-
 ## Overview
 Comprehensive solution for Re-rooting DP
 

@@ -1,5 +1,3 @@
-# Find Middle of Linked List
-
 ## Overview
 Use slow-fast pointer technique to find middle node efficiently.
 

@@ -1,0 +1,26 @@
+{
+    "title": "Permutations with Duplicates",
+    "slug": "permutations-with-duplicates",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "permutations-with-duplicates.md",
+    "codeExamples": [
+        {
+            "title": "Permutations with Duplicates",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/PermutationsWithDuplicates.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/permutations_with_duplicates.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/permutations-with-duplicates.py"
+                }
+            ]
+        }
+    ]
+}

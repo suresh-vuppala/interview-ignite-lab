@@ -1,5 +1,3 @@
-# Trim Tree
-
 ## Overview
 Comprehensive solution for Trim Tree
 

@@ -1,5 +1,3 @@
-# Stack using Queues
-
 ## Problem Statement
 Stack using Queues implementation.
 

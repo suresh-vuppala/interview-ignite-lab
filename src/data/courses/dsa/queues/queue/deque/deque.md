@@ -1,3 +1,1 @@
-# Queue and Deque
-
 Content coming soon...

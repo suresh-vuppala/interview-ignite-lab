@@ -1,5 +1,3 @@
-# Longest Common Prefix
-
 ## Problem Statement
 Find the longest common prefix string amongst an array of strings.
 

@@ -1,5 +1,3 @@
-# Sort Stack Recursion
-
 ## Problem Statement
 Sort Stack Recursion implementation.
 

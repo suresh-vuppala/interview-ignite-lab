@@ -1,5 +1,3 @@
-# Prime Factorization
-
 ## Overview
 Find prime factorization, count distinct and total prime factors, and use SPF array method.
 

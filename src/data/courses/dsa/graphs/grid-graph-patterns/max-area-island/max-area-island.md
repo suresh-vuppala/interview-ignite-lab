@@ -1,5 +1,3 @@
-# Max Area Island
-
 ## Problem Statement
 
 Solve Max Area Island problem using graph algorithms.

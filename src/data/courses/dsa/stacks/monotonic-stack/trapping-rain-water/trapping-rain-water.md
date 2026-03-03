@@ -1,5 +1,3 @@
-# Trapping Rain Water
-
 ## Problem Statement
 Trapping Rain Water implementation.
 

@@ -1,5 +1,3 @@
-# Find Nth Node from End
-
 ## Overview
 Find the nth node from the end using two-pointer technique in one pass.
 

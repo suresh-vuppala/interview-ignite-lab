@@ -1,0 +1,26 @@
+{
+  "title": "Maximum Sum Subarray of Size K",
+  "slug": "max-sum-subarray-size-k",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "./max-sum-subarray-size-k.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "./code/java/MaxSumSubarraySizeK.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "./code/cpp/max_sum_subarray_size_k.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "./code/python/max-sum-subarray-size-k.py"
+        }
+      ]
+    }
+  ]
+}

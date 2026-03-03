@@ -1,5 +1,3 @@
-# Subset Sum
-
 ## Problem Statement
 Solve Subset Sum using dynamic programming.
 

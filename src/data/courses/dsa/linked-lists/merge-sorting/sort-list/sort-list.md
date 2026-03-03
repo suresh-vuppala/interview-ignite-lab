@@ -1,5 +1,3 @@
-# Sort Linked List
-
 ## Overview
 Sort a linked list using merge sort algorithm.
 

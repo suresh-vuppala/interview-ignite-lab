@@ -1,0 +1,26 @@
+{
+    "title": "Recurrence Relation Basics",
+    "slug": "recurrence-relation-basics",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "recurrence-relation-basics.md",
+    "codeExamples": [
+        {
+            "title": "Recurrence Relation Basics",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/RecurrenceRelationBasics.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/recurrence_relation_basics.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/recurrence-relation-basics.py"
+                }
+            ]
+        }
+    ]
+}

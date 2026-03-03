@@ -1,5 +1,3 @@
-# Symmetric Tree
-
 ## Overview
 Comprehensive solution for Symmetric Tree problem.
 

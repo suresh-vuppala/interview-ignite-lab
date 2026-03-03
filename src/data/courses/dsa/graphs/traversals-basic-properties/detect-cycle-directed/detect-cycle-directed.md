@@ -1,5 +1,3 @@
-# Detect Cycle Directed
-
 ## Problem Statement
 
 Solve Detect Cycle Directed problem using graph algorithms.

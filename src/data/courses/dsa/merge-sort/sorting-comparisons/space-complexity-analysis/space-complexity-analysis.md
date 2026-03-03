@@ -1,5 +1,3 @@
-# Space Complexity Analysis
-
 ## Sorting Algorithms Space Complexity
 
 | Algorithm | Space Complexity | In-place? |

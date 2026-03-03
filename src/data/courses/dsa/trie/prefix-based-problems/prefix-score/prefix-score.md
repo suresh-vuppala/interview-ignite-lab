@@ -1,5 +1,3 @@
-# Prefix Score Problems
-
 ## Problem Statement
 Calculate sum of scores where score of a string is the number of non-empty prefixes that are also present in the array.
 

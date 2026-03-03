@@ -1,5 +1,3 @@
-# Trie Operations
-
 ## Problem Statement
 Implement a Trie (prefix tree) data structure with the following operations:
 - **Insert**: Add a word to the trie

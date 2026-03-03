@@ -1,5 +1,3 @@
-# Sliding Window Maximum
-
 ## Problem Statement
 Sliding Window Maximum implementation.
 

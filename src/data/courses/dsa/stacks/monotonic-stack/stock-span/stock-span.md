@@ -1,5 +1,3 @@
-# Stock Span Problem
-
 ## Problem Statement
 Stock Span Problem implementation.
 

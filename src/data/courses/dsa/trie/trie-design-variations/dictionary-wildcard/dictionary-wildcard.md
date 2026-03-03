@@ -1,5 +1,3 @@
-# Dictionary with Wildcard Support
-
 ## Problem Statement
 Implement dictionary that supports adding words and searching with '.' wildcard matching any character.
 

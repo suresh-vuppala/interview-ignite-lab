@@ -1,5 +1,3 @@
-# Replace Words
-
 ## Problem Statement
 Replace words in sentence with their shortest root from dictionary.
 

@@ -1,5 +1,3 @@
-# Deletion Variations
-
 ## Overview
 Master all deletion operations in a singly linked list including deleting from beginning, end, specific position, and by value.
 

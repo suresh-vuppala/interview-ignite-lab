@@ -1,5 +1,3 @@
-# Java Hashing Internals
-
 Java uses `HashMap` and `HashSet` backed by hash tables.
 
 ## Hash Function

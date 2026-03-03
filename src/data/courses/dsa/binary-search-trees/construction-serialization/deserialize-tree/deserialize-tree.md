@@ -1,5 +1,3 @@
-# Deserialize Tree
-
 ## Overview
 Comprehensive solution for Deserialize Tree
 

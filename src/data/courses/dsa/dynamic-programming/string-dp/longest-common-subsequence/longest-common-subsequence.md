@@ -1,5 +1,3 @@
-# Longest Common Subsequence
-
 ## Problem Statement
 Solve Longest Common Subsequence using dynamic programming.
 

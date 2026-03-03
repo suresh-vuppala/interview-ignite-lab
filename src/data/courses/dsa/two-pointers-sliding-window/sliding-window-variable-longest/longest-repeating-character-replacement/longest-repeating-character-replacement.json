@@ -1,0 +1,26 @@
+{
+  "title": "Longest Repeating Character Replacement",
+  "slug": "longest-repeating-character-replacement",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "./longest-repeating-character-replacement.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "./code/java/LongestRepeatingCharacterReplacement.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "./code/cpp/longest_repeating_character_replacement.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "./code/python/longest-repeating-character-replacement.py"
+        }
+      ]
+    }
+  ]
+}

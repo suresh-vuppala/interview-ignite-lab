@@ -1,5 +1,3 @@
-# Level Order Construction
-
 ## Overview
 Comprehensive solution for Level Order Construction
 

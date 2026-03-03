@@ -1,0 +1,26 @@
+{
+  "title": "Longest Subarray with Sum \u2264 K",
+  "slug": "longest-subarray-sum-k",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "./longest-subarray-sum-k.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "./code/java/LongestSubarraySumK.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "./code/cpp/longest_subarray_sum_k.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "./code/python/longest-subarray-sum-k.py"
+        }
+      ]
+    }
+  ]
+}

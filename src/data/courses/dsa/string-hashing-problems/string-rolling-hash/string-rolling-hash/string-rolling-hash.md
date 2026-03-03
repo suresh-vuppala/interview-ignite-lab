@@ -1,5 +1,3 @@
-# String & Rolling Hash
-
 Rolling hash computes hash of substring in O(1) after O(n) preprocessing.
 
 ## Formula

@@ -1,5 +1,3 @@
-# Clone Linked List with Random Pointer
-
 ## Overview
 Create a deep copy of a linked list where each node has a next and random pointer.
 

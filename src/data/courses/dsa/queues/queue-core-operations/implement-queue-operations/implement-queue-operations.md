@@ -1,5 +1,3 @@
-# Implement Queue & Operations
-
 ## Problem Statement
 Implement Queue & Operations implementation.
 

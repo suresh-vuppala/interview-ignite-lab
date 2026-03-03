@@ -1,5 +1,3 @@
-# Min Cost Climbing Stairs
-
 ## Problem Statement
 Solve Min Cost Climbing Stairs using dynamic programming.
 

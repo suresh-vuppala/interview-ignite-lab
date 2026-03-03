@@ -1,5 +1,3 @@
-# External Sorting
-
 ## Problem Statement
 Sort large files that don't fit in memory using external merge sort.
 

@@ -1,5 +1,3 @@
-# Edit Distance
-
 ## Problem Statement
 Solve Edit Distance using dynamic programming.
 

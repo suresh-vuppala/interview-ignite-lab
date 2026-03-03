@@ -1,5 +1,3 @@
-# WordFilter (Prefix + Suffix)
-
 ## Problem Statement
 Design WordFilter class that supports queries with prefix and suffix, returning word with maximum weight.
 

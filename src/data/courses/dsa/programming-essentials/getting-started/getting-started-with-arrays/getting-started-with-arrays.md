@@ -1,4 +1,3 @@
-# Arrays and Strings: The Fundamental Building Blocks
 ---
 
 Arrays and strings are the `fundamental building blocks` of programming. Mastering these data structures is crucial for succeeding in technical interviews at top tech companies like `Google`, `Facebook`, `Amazon`, and `Microsoft`.

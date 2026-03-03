@@ -1,5 +1,3 @@
-# LCA in BST
-
 ## Overview
 Find the Lowest Common Ancestor (LCA) of two nodes in a Binary Search Tree using BST properties.
 

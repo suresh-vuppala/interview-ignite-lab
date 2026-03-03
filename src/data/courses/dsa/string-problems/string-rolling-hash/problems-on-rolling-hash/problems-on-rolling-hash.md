@@ -1,3 +1,1 @@
-# Problems on Rolling Hash
-
 Content coming soon...

@@ -1,5 +1,3 @@
-# Palindrome Partitioning II
-
 ## Problem Statement
 Solve Palindrome Partitioning II using dynamic programming.
 

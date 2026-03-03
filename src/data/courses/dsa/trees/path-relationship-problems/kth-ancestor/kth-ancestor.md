@@ -1,5 +1,3 @@
-# Kth Ancestor
-
 ## Overview
 Comprehensive solution for Kth Ancestor
 

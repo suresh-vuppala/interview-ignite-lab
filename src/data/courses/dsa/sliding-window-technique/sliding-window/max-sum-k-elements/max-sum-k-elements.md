@@ -1,3 +1,1 @@
-# Maximum Sum of K Consecutive Elements
-
 Content coming soon...

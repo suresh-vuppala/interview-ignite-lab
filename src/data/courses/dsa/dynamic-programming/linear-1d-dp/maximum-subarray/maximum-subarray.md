@@ -1,5 +1,3 @@
-# Maximum Subarray Sum
-
 ## Problem Statement
 Solve Maximum Subarray Sum using dynamic programming.
 

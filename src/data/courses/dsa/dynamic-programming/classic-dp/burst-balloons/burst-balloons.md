@@ -1,5 +1,3 @@
-# Burst Balloons
-
 ## Problem Statement
 Solve Burst Balloons using dynamic programming.
 

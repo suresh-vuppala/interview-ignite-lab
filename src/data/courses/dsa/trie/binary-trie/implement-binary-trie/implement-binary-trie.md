@@ -1,5 +1,3 @@
-# Implement Binary Trie
-
 ## Problem Statement
 Implement a trie for binary representation of numbers to support XOR operations.
 

@@ -1,5 +1,3 @@
-# Tree Type Check
-
 ## Overview
 Comprehensive solution for Tree Type Check problem.
 

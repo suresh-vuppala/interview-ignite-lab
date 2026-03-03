@@ -1,5 +1,3 @@
-# Stable vs Unstable Sorting
-
 ## Stability Definition
 A sorting algorithm is **stable** if equal elements maintain their relative order after sorting.
 

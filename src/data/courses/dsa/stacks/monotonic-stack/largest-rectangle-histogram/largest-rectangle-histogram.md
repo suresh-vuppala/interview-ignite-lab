@@ -1,5 +1,3 @@
-# Largest Rectangle Histogram
-
 ## Problem Statement
 Largest Rectangle Histogram implementation.
 

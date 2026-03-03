@@ -1,5 +1,3 @@
-# Detect if List is Circular
-
 ## Overview
 Detect if a linked list is circular using Floyd's algorithm.
 

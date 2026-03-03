@@ -1,5 +1,3 @@
-# Insertion Sort
-
 ## Problem Statement
 Sort an array using insertion sort algorithm.
 

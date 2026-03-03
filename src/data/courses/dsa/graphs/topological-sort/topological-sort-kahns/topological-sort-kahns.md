@@ -1,5 +1,3 @@
-# Topological Sort Kahns
-
 ## Problem Statement
 
 Solve Topological Sort Kahns problem using graph algorithms.

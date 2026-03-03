@@ -1,5 +1,3 @@
-# Shortest Unique Prefix
-
 ## Problem Statement
 Find shortest unique prefix for each word that distinguishes it from all other words.
 

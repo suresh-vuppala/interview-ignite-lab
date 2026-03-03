@@ -1,0 +1,26 @@
+{
+  "title": "Backspace String Compare",
+  "slug": "backspace-string-compare",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "./backspace-string-compare.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "./code/java/BackspaceStringCompare.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "./code/cpp/backspace_string_compare.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "./code/python/backspace-string-compare.py"
+        }
+      ]
+    }
+  ]
+}

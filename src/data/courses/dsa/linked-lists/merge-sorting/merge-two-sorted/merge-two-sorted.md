@@ -1,5 +1,3 @@
-# Merge Two Sorted Lists
-
 ## Overview
 Merge two sorted linked lists into one sorted list.
 

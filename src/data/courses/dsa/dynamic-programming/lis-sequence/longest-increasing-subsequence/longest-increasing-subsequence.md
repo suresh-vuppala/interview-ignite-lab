@@ -1,5 +1,3 @@
-# Longest Increasing Subsequence
-
 ## Problem Statement
 Solve Longest Increasing Subsequence using dynamic programming.
 

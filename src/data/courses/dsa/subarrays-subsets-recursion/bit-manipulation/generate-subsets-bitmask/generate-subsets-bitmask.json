@@ -1,0 +1,26 @@
+{
+    "title": "Generate Subsets using Bitmask",
+    "slug": "generate-subsets-bitmask",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "generate-subsets-bitmask.md",
+    "codeExamples": [
+        {
+            "title": "Generate Subsets using Bitmask",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/GenerateSubsetsBitmask.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/generate_subsets_bitmask.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/generate-subsets-bitmask.py"
+                }
+            ]
+        }
+    ]
+}

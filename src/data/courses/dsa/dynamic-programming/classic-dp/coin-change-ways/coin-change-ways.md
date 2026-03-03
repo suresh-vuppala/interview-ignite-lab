@@ -1,5 +1,3 @@
-# Coin Change II Ways
-
 ## Problem Statement
 Solve Coin Change II Ways using dynamic programming.
 

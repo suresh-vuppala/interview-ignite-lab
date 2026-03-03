@@ -1,5 +1,3 @@
-# Two Sum in BST
-
 ## Overview
 Comprehensive solution for Two Sum in BST
 

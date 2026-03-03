@@ -1,5 +1,3 @@
-# Binary Tree Cameras
-
 ## Overview
 Comprehensive solution for Binary Tree Cameras
 

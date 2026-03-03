@@ -1,5 +1,3 @@
-# Palindrome Pairs
-
 ## Problem Statement
 Find all pairs of indices (i,j) where concatenation of words[i] + words[j] forms a palindrome.
 

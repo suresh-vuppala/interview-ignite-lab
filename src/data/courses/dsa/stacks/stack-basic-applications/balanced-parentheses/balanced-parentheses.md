@@ -1,5 +1,3 @@
-# Check Balanced Parentheses
-
 ## Problem Statement
 Check Balanced Parentheses implementation.
 

@@ -1,5 +1,3 @@
-# Recover Swapped BST
-
 ## Overview
 Comprehensive solution for Recover Swapped BST
 

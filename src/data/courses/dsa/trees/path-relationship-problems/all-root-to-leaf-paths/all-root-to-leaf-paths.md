@@ -1,5 +1,3 @@
-# All Root-to-Leaf Paths
-
 ## Overview
 Comprehensive solution for All Root-to-Leaf Paths
 

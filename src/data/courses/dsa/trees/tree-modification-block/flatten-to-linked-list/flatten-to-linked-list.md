@@ -1,5 +1,3 @@
-# Flatten to Linked List
-
 ## Overview
 Comprehensive solution for Flatten to Linked List
 

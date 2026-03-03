@@ -1,3 +1,1 @@
-# Stack
-
 Content coming soon...

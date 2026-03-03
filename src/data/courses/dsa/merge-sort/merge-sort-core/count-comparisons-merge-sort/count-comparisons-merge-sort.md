@@ -1,5 +1,3 @@
-# Count Comparisons in Merge Sort
-
 ## Problem Statement
 Count the number of comparisons made during merge sort execution.
 

@@ -1,5 +1,3 @@
-# BFS
-
 ## Problem Statement
 
 Solve BFS problem using graph algorithms.

@@ -1,0 +1,26 @@
+{
+    "title": "Single Number (XOR Based)",
+    "slug": "single-number",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "single-number.md",
+    "codeExamples": [
+        {
+            "title": "Single Number (XOR Based)",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/SingleNumber.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/single_number.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/single-number.py"
+                }
+            ]
+        }
+    ]
+}

@@ -1,5 +1,3 @@
-# Binary Lifting
-
 ## Overview
 Comprehensive solution for Binary Lifting
 

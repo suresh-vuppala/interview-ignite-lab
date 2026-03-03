@@ -1,5 +1,3 @@
-# Diagonal Traversal
-
 ## Overview
 Comprehensive solution for Diagonal Traversal problem.
 

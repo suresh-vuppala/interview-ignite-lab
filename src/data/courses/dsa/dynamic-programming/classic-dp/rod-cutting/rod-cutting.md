@@ -1,5 +1,3 @@
-# Rod Cutting
-
 ## Problem Statement
 Solve Rod Cutting using dynamic programming.
 

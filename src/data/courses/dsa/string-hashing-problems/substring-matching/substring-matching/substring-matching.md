@@ -1,5 +1,3 @@
-# Substring Matching
-
 Find if pattern exists in text.
 
 ## Approaches

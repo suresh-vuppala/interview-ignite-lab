@@ -1,5 +1,3 @@
-# Ways to Reach Nth Stair
-
 ## Problem Statement
 Solve Ways to Reach Nth Stair using dynamic programming.
 

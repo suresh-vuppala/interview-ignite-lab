@@ -1,5 +1,3 @@
-# Design Circular Queue
-
 ## Problem Statement
 Design Circular Queue implementation.
 

@@ -1,5 +1,3 @@
-# Problems on Rolling Hash
-
 Common problems using rolling hash technique.
 
 ## Problem Types

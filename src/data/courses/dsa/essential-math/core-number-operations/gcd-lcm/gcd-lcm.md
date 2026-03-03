@@ -1,5 +1,3 @@
-# GCD and LCM
-
 ## Overview
 Learn to compute Greatest Common Divisor (GCD) using Euclidean algorithm and Least Common Multiple (LCM) using GCD.
 

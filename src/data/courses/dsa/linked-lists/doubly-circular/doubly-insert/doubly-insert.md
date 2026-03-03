@@ -1,5 +1,3 @@
-# Doubly Linked List Insertion
-
 ## Overview
 Implement insertion operations in doubly linked list with prev and next pointers.
 

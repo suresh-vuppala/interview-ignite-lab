@@ -1,5 +1,3 @@
-# Longest Common Substring
-
 ## Problem Statement
 Solve Longest Common Substring using dynamic programming.
 

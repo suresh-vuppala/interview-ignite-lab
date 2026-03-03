@@ -1,5 +1,3 @@
-# Matrix Chain Multiplication
-
 ## Problem Statement
 Solve Matrix Chain Multiplication using dynamic programming.
 

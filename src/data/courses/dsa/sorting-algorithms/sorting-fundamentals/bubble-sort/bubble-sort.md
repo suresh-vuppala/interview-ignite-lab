@@ -1,5 +1,3 @@
-# Bubble Sort
-
 ## Problem Statement
 Sort an array using bubble sort algorithm.
 

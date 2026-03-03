@@ -1,5 +1,3 @@
-# Minimum Window Substring
-
 Find smallest substring containing all characters of pattern.
 
 ## Approach

@@ -1,3 +1,1 @@
-# Binary Search Trees
-
 Content coming soon...

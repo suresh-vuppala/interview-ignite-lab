@@ -1,0 +1,26 @@
+{
+    "title": "N-Queens",
+    "slug": "n-queens",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "n-queens.md",
+    "codeExamples": [
+        {
+            "title": "N-Queens",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/NQueens.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/n_queens.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/n-queens.py"
+                }
+            ]
+        }
+    ]
+}

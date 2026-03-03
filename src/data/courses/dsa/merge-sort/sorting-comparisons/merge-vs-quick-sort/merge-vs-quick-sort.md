@@ -1,5 +1,3 @@
-# Merge Sort vs Quick Sort
-
 ## Comparison
 
 | Aspect | Merge Sort | Quick Sort |

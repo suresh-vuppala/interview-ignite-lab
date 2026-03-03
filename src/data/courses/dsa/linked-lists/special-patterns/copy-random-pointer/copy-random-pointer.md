@@ -1,5 +1,3 @@
-# Copy List with Random Pointer
-
 ## Overview
 Deep copy a linked list where each node has a random pointer.
 

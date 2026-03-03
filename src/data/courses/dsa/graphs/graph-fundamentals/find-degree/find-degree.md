@@ -1,5 +1,3 @@
-# Find Degree
-
 ## Problem Statement
 
 Solve Find Degree problem using graph algorithms.

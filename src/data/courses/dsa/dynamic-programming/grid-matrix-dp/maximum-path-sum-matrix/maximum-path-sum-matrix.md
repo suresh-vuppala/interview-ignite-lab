@@ -1,5 +1,3 @@
-# Maximum Path Sum Matrix
-
 ## Problem Statement
 Solve Maximum Path Sum Matrix using dynamic programming.
 

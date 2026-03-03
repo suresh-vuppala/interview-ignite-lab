@@ -1,5 +1,3 @@
-# Distribute Coins
-
 ## Overview
 Comprehensive solution for Distribute Coins
 

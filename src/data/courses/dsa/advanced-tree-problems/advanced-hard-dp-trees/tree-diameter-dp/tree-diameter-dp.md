@@ -1,5 +1,3 @@
-# Tree Diameter DP
-
 ## Overview
 Comprehensive solution for Tree Diameter DP
 

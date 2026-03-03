@@ -1,5 +1,3 @@
-# Circular Linked List Deletion
-
 ## Overview
 Implement deletion in circular linked list maintaining circularity.
 

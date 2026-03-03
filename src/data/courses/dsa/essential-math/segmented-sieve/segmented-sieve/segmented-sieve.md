@@ -1,5 +1,3 @@
-# Segmented Sieve
-
 ## Overview
 Find primes in large range [L, R] where R can be up to 10^9 using segmented sieve technique.
 

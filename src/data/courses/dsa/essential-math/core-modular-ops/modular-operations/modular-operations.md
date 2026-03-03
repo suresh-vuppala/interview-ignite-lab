@@ -1,5 +1,3 @@
-# Modular Operations
-
 ## Overview
 Perform arithmetic operations under modulo including fast modular exponentiation.
 

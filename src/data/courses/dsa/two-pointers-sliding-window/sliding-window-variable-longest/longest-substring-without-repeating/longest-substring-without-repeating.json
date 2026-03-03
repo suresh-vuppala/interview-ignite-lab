@@ -1,0 +1,26 @@
+{
+  "title": "Longest Substring Without Repeating Characters",
+  "slug": "longest-substring-without-repeating",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "./longest-substring-without-repeating.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "./code/java/LongestSubstringWithoutRepeating.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "./code/cpp/longest_substring_without_repeating.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "./code/python/longest-substring-without-repeating.py"
+        }
+      ]
+    }
+  ]
+}

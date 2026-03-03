@@ -1,5 +1,3 @@
-# Binary Tree Core Operations
-
 ## Overview
 Core operations on binary trees include insertion, search, update, and deletion. These fundamental operations form the basis for all tree-based algorithms.
 

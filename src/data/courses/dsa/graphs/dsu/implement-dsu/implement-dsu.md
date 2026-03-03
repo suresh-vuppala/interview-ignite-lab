@@ -1,5 +1,3 @@
-# Implement DSU
-
 ## Problem Statement
 
 Solve Implement DSU problem using graph algorithms.

@@ -1,5 +1,3 @@
-# Max Path Sum
-
 ## Overview
 Find the maximum path sum in a binary tree. Path can start/end at any node (not necessarily root to leaf).
 

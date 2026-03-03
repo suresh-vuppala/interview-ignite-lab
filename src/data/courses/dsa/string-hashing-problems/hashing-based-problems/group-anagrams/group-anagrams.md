@@ -1,5 +1,3 @@
-# Group Anagrams
-
 Group strings that are anagrams of each other.
 
 ## Approach

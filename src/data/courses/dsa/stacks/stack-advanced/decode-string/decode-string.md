@@ -1,5 +1,3 @@
-# Decode String
-
 ## Problem Statement
 Decode String implementation.
 

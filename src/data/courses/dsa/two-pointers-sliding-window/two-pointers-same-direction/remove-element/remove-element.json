@@ -1,0 +1,26 @@
+{
+  "title": "Remove Element",
+  "slug": "remove-element",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "./remove-element.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "./code/java/RemoveElement.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "./code/cpp/remove_element.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "./code/python/remove-element.py"
+        }
+      ]
+    }
+  ]
+}

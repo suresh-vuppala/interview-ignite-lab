@@ -1,5 +1,3 @@
-# Zigzag Traversal
-
 ## Overview
 Comprehensive solution for Zigzag Traversal problem.
 

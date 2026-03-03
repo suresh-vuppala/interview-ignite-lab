@@ -1,5 +1,3 @@
-# Add Two Numbers
-
 ## Overview
 Add two numbers represented as linked lists (digits in reverse order).
 

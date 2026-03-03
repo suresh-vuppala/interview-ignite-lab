@@ -1,5 +1,3 @@
-# Reverse Nodes in K Groups
-
 ## Overview
 Learn to reverse linked list in groups of K nodes.
 

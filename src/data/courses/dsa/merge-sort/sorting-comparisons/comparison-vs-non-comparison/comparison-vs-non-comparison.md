@@ -1,5 +1,3 @@
-# Comparison vs Non-comparison Sorting
-
 ## Comparison-Based Sorting
 Uses comparisons to determine order. Lower bound: O(n log n)
 

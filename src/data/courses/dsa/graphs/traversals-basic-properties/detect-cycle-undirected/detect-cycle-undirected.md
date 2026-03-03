@@ -1,5 +1,3 @@
-# Detect Cycle Undirected
-
 ## Problem Statement
 
 Solve Detect Cycle Undirected problem using graph algorithms.

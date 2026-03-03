@@ -1,5 +1,3 @@
-# 0/1 Knapsack
-
 ## Problem Statement
 Solve 0/1 Knapsack using dynamic programming.
 

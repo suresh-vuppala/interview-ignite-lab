@@ -1,0 +1,26 @@
+{
+    "title": "Letter Combinations of Phone Number",
+    "slug": "letter-combinations-phone-number",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "letter-combinations-phone-number.md",
+    "codeExamples": [
+        {
+            "title": "Letter Combinations of Phone Number",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/LetterCombinationsPhoneNumber.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/letter_combinations_phone_number.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/letter-combinations-phone-number.py"
+                }
+            ]
+        }
+    ]
+}

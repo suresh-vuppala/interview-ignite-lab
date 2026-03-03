@@ -1,5 +1,3 @@
-# Internal vs External Sorting
-
 ## Internal Sorting
 Data fits entirely in main memory (RAM).
 

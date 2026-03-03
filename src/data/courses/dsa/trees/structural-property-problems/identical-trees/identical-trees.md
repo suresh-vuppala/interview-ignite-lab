@@ -1,5 +1,3 @@
-# Identical Binary Trees
-
 ## Overview
 Check if two binary trees are identical (same structure and values).
 

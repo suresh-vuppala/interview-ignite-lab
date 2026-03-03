@@ -1,5 +1,3 @@
-# Circular Linked List Insertion
-
 ## Overview
 Implement insertion in circular linked list where last node points to first.
 

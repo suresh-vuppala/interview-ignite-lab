@@ -1,5 +1,3 @@
-# Count Paths with Sum
-
 ## Overview
 Comprehensive solution for Count Paths with Sum
 

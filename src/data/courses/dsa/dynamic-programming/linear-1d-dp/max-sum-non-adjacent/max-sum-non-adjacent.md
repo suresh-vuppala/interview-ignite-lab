@@ -1,5 +1,3 @@
-# Maximum Sum Non-Adjacent
-
 ## Problem Statement
 Solve Maximum Sum Non-Adjacent using dynamic programming.
 

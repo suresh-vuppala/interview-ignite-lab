@@ -1,5 +1,3 @@
-# Sliding Window Minimum
-
 ## Problem Statement
 Sliding Window Minimum implementation.
 

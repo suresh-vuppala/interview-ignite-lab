@@ -1,3 +1,1 @@
-# Merge Sort and Its Applications
-
 Content coming soon...

@@ -1,5 +1,3 @@
-# BST from Postorder
-
 ## Overview
 Comprehensive solution for BST from Postorder
 

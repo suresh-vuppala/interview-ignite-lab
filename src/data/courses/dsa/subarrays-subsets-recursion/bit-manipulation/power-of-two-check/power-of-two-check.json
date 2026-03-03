@@ -1,0 +1,26 @@
+{
+    "title": "Power of Two Check",
+    "slug": "power-of-two-check",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "power-of-two-check.md",
+    "codeExamples": [
+        {
+            "title": "Power of Two Check",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/PowerOfTwoCheck.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/power_of_two_check.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/power-of-two-check.py"
+                }
+            ]
+        }
+    ]
+}

@@ -1,5 +1,3 @@
-# Inorder + Preorder
-
 ## Overview
 Comprehensive solution for Inorder + Preorder
 

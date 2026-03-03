@@ -1,5 +1,3 @@
-# Floor and Ceil
-
 ## Overview
 Comprehensive solution for Floor and Ceil
 

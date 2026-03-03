@@ -1,5 +1,3 @@
-# Previous Greater/Smaller
-
 ## Problem Statement
 Previous Greater/Smaller implementation.
 

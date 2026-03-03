@@ -1,5 +1,3 @@
-# Remove Outermost Parentheses
-
 ## Problem Statement
 Remove Outermost Parentheses implementation.
 

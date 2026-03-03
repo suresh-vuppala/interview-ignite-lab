@@ -1,5 +1,3 @@
-# Right View
-
 ## Overview
 Comprehensive solution for Right View
 

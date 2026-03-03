@@ -1,5 +1,3 @@
-# Boundary View
-
 ## Overview
 Comprehensive solution for Boundary View
 

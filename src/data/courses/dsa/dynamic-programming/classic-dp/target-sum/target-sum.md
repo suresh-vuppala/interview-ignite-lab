@@ -1,5 +1,3 @@
-# Target Sum
-
 ## Problem Statement
 Solve Target Sum using dynamic programming.
 

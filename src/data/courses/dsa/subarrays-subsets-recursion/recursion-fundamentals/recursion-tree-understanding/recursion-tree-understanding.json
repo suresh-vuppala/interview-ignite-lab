@@ -1,0 +1,26 @@
+{
+    "title": "Recursion Tree Understanding",
+    "slug": "recursion-tree-understanding",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "recursion-tree-understanding.md",
+    "codeExamples": [
+        {
+            "title": "Recursion Tree Understanding",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/RecursionTreeUnderstanding.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/recursion_tree_understanding.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/recursion-tree-understanding.py"
+                }
+            ]
+        }
+    ]
+}

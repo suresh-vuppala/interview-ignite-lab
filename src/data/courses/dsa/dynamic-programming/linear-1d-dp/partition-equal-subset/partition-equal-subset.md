@@ -1,5 +1,3 @@
-# Partition Equal Subset Sum
-
 ## Problem Statement
 Solve Partition Equal Subset Sum using dynamic programming.
 

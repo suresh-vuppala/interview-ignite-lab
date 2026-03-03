@@ -1,5 +1,3 @@
-# Provinces DSU
-
 ## Problem Statement
 
 Solve Provinces DSU problem using graph algorithms.

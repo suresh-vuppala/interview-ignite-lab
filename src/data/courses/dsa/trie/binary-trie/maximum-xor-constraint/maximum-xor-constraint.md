@@ -1,5 +1,3 @@
-# Maximum XOR with Constraint
-
 ## Problem Statement
 Find maximum XOR of two elements where one element is ≤ K.
 

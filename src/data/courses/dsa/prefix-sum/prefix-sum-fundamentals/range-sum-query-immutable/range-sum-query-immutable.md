@@ -1,5 +1,3 @@
-# Range Sum Query - Immutable
-
 ## Problem Statement
 
 Given an integer array `nums`, implement the NumMatrix class:

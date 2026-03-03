@@ -1,5 +1,3 @@
-# Check Bipartite
-
 ## Problem Statement
 
 Solve Check Bipartite problem using graph algorithms.

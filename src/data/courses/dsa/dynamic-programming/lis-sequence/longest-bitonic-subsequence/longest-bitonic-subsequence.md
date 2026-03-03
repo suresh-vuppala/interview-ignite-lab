@@ -1,5 +1,3 @@
-# Longest Bitonic Subsequence
-
 ## Problem Statement
 Solve Longest Bitonic Subsequence using dynamic programming.
 

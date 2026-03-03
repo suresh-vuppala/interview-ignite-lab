@@ -1,5 +1,3 @@
-# Sieve of Eratosthenes
-
 ## Overview
 Efficiently find all prime numbers up to N using Sieve of Eratosthenes algorithm.
 

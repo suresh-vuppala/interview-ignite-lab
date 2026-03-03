@@ -1,5 +1,3 @@
-# Intersection of Two Lists
-
 ## Overview
 Find the node where two linked lists intersect.
 

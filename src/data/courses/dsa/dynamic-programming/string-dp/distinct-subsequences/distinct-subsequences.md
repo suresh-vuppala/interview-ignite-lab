@@ -1,5 +1,3 @@
-# Distinct Subsequences
-
 ## Problem Statement
 Solve Distinct Subsequences using dynamic programming.
 

@@ -1,5 +1,3 @@
-# Diameter of Tree
-
 ## Overview
 Comprehensive solution for Diameter of Tree problem.
 

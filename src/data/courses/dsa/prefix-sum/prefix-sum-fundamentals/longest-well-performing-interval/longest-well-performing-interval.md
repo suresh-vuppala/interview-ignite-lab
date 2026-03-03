@@ -1,5 +1,3 @@
-# Longest Well-Performing Interval
-
 ## Problem Statement
 
 We are given `hours`, a list of the number of hours worked per day for a given employee.

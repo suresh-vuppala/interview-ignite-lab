@@ -1,5 +1,3 @@
-# Merge Two Sorted Arrays
-
 ## Problem Statement
 Given two sorted arrays, merge them into a single sorted array.
 

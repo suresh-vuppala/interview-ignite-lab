@@ -1,5 +1,3 @@
-# Unique Paths II
-
 ## Problem Statement
 Solve Unique Paths II using dynamic programming.
 

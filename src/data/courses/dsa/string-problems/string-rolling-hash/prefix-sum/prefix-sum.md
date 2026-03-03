@@ -1,3 +1,1 @@
-# Prefix Sum
-
 Content coming soon...

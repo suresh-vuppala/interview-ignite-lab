@@ -1,5 +1,3 @@
-# Find Cycle Start Node
-
 ## Overview
 Learn to find the node where the cycle begins in a linked list.
 

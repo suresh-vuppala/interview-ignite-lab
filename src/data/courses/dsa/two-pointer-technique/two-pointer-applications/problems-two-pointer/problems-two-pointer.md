@@ -1,3 +1,1 @@
-# Problems on Two Pointer Technique
-
 Content coming soon...

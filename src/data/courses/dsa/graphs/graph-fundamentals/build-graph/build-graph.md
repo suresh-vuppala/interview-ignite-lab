@@ -1,5 +1,3 @@
-# Build Graph
-
 ## Problem Statement
 
 Solve Build Graph problem using graph algorithms.

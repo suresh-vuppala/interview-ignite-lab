@@ -1,5 +1,3 @@
-# Tiling 2×N Board
-
 ## Problem Statement
 Solve Tiling 2×N Board using dynamic programming.
 

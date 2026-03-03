@@ -1,5 +1,3 @@
-# Detect Cycle in Linked List
-
 ## Overview
 Learn Floyd's Cycle Detection Algorithm (Tortoise and Hare) to detect if a linked list has a cycle.
 

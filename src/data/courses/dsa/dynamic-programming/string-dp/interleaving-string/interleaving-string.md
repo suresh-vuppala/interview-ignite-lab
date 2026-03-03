@@ -1,5 +1,3 @@
-# Interleaving String
-
 ## Problem Statement
 Solve Interleaving String using dynamic programming.
 

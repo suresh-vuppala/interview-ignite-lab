@@ -1,5 +1,3 @@
-# DFS
-
 ## Problem Statement
 
 Solve DFS problem using graph algorithms.

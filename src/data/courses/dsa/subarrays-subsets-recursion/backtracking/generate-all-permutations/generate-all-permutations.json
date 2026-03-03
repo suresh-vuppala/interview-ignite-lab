@@ -1,0 +1,26 @@
+{
+    "title": "Generate All Permutations",
+    "slug": "generate-all-permutations",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "generate-all-permutations.md",
+    "codeExamples": [
+        {
+            "title": "Generate All Permutations",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/GenerateAllPermutations.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/generate_all_permutations.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/generate-all-permutations.py"
+                }
+            ]
+        }
+    ]
+}

@@ -1,5 +1,3 @@
-# Evaluate Postfix/Prefix
-
 ## Problem Statement
 Evaluate Postfix/Prefix implementation.
 

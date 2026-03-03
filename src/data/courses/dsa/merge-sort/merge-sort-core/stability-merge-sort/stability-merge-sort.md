@@ -1,5 +1,3 @@
-# Stability of Merge Sort
-
 ## Problem Statement
 Understand and demonstrate that merge sort is a stable sorting algorithm.
 

@@ -1,5 +1,3 @@
-# Ternary Search Tree
-
 ## Problem Statement
 Understand Ternary Search Tree (TST) - a space-efficient alternative to trie.
 

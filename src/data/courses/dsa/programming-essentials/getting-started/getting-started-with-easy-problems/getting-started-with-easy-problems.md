@@ -1,3 +1,1 @@
-# Getting Started with Easy Problems
-
 Content coming soon...

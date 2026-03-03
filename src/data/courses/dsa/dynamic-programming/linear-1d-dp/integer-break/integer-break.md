@@ -1,5 +1,3 @@
-# Integer Break
-
 ## Problem Statement
 Solve Integer Break using dynamic programming.
 

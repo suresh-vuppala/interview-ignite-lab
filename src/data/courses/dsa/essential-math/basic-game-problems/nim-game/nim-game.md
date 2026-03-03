@@ -1,5 +1,3 @@
-# Nim Game and Basic Game Theory
-
 ## Overview
 Understand basic game theory concepts including Nim game and stone-taking games.
 

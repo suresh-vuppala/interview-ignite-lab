@@ -1,5 +1,3 @@
-# Odd Even Linked List
-
 ## Overview
 Group all odd-indexed nodes together followed by even-indexed nodes.
 

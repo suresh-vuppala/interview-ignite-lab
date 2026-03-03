@@ -1,5 +1,3 @@
-# Maximum Width
-
 ## Overview
 Comprehensive solution for Maximum Width problem.
 

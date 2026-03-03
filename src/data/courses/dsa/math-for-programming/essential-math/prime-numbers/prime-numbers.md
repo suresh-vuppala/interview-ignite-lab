@@ -1,3 +1,1 @@
-# Prime Numbers
-
 Content coming soon...

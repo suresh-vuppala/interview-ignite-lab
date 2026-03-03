@@ -1,5 +1,3 @@
-# Inorder Traversal
-
 ## Overview
 Inorder traversal visits nodes in Left-Root-Right order. For BSTs, this produces sorted output.
 

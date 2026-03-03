@@ -1,5 +1,3 @@
-# Validate BST
-
 ## Overview
 Determine if a binary tree is a valid Binary Search Tree (BST). A valid BST must satisfy: left subtree values < node < right subtree values.
 

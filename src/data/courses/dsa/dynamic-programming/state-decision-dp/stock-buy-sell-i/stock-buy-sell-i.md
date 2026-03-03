@@ -1,5 +1,3 @@
-# Stock Buy Sell I
-
 ## Problem Statement
 Solve Stock Buy Sell I using dynamic programming.
 

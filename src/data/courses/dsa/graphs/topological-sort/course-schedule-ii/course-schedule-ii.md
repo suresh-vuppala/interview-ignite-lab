@@ -1,5 +1,3 @@
-# Course Schedule II
-
 ## Problem Statement
 
 Solve Course Schedule II problem using graph algorithms.

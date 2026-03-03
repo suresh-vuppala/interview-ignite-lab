@@ -1,5 +1,3 @@
-# Word Break
-
 ## Problem Statement
 Solve Word Break using dynamic programming.
 

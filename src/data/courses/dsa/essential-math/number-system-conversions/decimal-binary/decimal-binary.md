@@ -1,5 +1,3 @@
-# Decimal Binary Conversion
-
 ## Overview
 Convert between decimal and binary number systems, check power of two, count set bits, and perform fast exponentiation.
 

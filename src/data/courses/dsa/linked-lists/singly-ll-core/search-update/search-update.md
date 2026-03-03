@@ -1,5 +1,3 @@
-# Search & Update
-
 ## Overview
 Learn to search for elements and update node values in a linked list.
 

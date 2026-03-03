@@ -1,5 +1,3 @@
-# Number of Provinces
-
 ## Problem Statement
 
 Solve Number of Provinces problem using graph algorithms.

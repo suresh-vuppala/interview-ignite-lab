@@ -1,5 +1,3 @@
-# Creation & Traversal
-
 ## Overview
 Learn the fundamental operations of creating a linked list from scratch and traversing through its nodes. This lesson covers three essential operations that form the foundation of linked list manipulation.
 

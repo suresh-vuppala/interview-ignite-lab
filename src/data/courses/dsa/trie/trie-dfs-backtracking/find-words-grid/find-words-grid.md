@@ -1,5 +1,3 @@
-# Find Words in Grid
-
 ## Problem Statement
 Given a grid of characters and a dictionary, find all words that can be formed in the grid.
 

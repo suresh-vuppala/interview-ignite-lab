@@ -1,5 +1,3 @@
-# Celebrity Problem
-
 ## Problem Statement
 Celebrity Problem implementation.
 

@@ -1,5 +1,3 @@
-# Count Leaf and Internal Nodes
-
 ## Overview
 Leaf nodes have no children. Internal nodes have at least one child. This is a fundamental tree property counting problem.
 

@@ -1,0 +1,26 @@
+{
+  "title": "Valid Palindrome",
+  "slug": "valid-palindrome",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "./valid-palindrome.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "./code/java/ValidPalindrome.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "./code/cpp/valid_palindrome.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "./code/python/valid-palindrome.py"
+        }
+      ]
+    }
+  ]
+}

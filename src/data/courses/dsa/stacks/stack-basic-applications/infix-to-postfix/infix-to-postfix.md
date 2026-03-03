@@ -1,5 +1,3 @@
-# Infix to Postfix
-
 ## Problem Statement
 Infix to Postfix implementation.
 

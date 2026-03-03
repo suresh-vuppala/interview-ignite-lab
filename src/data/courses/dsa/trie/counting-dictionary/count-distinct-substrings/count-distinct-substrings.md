@@ -1,5 +1,3 @@
-# Count Distinct Substrings
-
 ## Problem Statement
 Count number of distinct substrings in a given string.
 

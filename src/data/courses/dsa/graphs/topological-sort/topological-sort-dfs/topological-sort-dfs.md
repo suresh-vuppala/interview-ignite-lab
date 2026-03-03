@@ -1,5 +1,3 @@
-# Topological Sort DFS
-
 ## Problem Statement
 
 Solve Topological Sort DFS problem using graph algorithms.

@@ -1,5 +1,3 @@
-# Daily Temperatures
-
 ## Problem Statement
 Daily Temperatures implementation.
 

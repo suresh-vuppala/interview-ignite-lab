@@ -1,5 +1,3 @@
-# Max and Min Values
-
 ## Overview
 Find the maximum and minimum values in a binary tree by traversing all nodes.
 

@@ -1,5 +1,3 @@
-# Count Connected Components
-
 ## Problem Statement
 
 Solve Count Connected Components problem using graph algorithms.

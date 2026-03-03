@@ -1,5 +1,3 @@
-# Min-Max Heap
-
 ## Overview
 
 Min heap maintains smallest element at root. Max heap maintains largest at root.

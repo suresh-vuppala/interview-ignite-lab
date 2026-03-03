@@ -1,5 +1,3 @@
-# Boggle Board
-
 ## Problem Statement
 Find all valid words in a Boggle board. Similar to Word Search II but with different movement rules.
 

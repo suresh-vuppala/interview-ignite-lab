@@ -1,5 +1,3 @@
-# Search Suggestion System
-
 ## Problem Statement
 Design a system that suggests products after each character typed, returning top 3 lexicographically.
 

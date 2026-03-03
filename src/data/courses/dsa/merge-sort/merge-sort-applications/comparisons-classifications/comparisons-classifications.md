@@ -1,3 +1,1 @@
-# Comparisons and Classifications
-
 Content coming soon...

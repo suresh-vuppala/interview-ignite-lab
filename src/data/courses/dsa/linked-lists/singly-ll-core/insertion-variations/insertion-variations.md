@@ -1,5 +1,3 @@
-# Insertion Variations
-
 ## Overview
 Master all insertion operations in a singly linked list. This lesson covers inserting nodes at different positions to build and modify linked lists dynamically.
 

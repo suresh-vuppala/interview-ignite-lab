@@ -1,5 +1,3 @@
-# Paint Fence Problem
-
 ## Problem Statement
 Solve Paint Fence Problem using dynamic programming.
 

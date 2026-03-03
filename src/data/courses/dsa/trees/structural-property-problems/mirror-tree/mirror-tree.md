@@ -1,5 +1,3 @@
-# Mirror Tree
-
 ## Overview
 Comprehensive solution for Mirror Tree problem.
 

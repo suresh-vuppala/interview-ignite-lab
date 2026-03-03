@@ -1,5 +1,3 @@
-# Check if Linked List is Palindrome
-
 ## Overview
 Check if linked list is palindrome using slow-fast pointer and reversal.
 

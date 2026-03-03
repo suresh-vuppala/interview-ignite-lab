@@ -1,5 +1,3 @@
-# 2D Range Sum Query - Immutable
-
 ## Problem Statement
 
 Given a 2D matrix `matrix`, handle multiple queries of the following type:

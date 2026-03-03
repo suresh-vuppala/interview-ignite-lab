@@ -1,5 +1,3 @@
-# Implement Deque
-
 ## Problem Statement
 Implement Deque implementation.
 

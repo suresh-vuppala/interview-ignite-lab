@@ -1,5 +1,3 @@
-# Maximum XOR of Two Numbers
-
 ## Problem Statement
 Find maximum XOR of any two numbers in an array.
 

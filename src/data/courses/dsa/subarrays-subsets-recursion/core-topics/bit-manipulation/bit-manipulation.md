@@ -1,3 +1,1 @@
-# Bit Manipulation
-
 Content coming soon...

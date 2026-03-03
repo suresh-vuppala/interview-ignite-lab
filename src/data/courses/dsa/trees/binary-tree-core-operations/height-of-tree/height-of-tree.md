@@ -1,5 +1,3 @@
-# Height of Tree
-
 ## Overview
 The height of a tree is the longest path from root to any leaf node. Also called depth in some contexts.
 

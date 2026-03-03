@@ -1,5 +1,3 @@
-# Longest Balanced Substring
-
 ## Problem Statement
 
 You are given a string `s` consisting only of the characters `'a'`, `'b'`, and `'c'`.

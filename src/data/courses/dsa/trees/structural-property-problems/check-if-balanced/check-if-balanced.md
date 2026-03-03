@@ -1,5 +1,3 @@
-# Check if Balanced Tree
-
 ## Overview
 Determine if binary tree is height-balanced (height difference  1 for all subtrees).
 

@@ -1,5 +1,3 @@
-# Stock with Cooldown
-
 ## Problem Statement
 Solve Stock with Cooldown using dynamic programming.
 

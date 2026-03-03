@@ -1,5 +1,3 @@
-# Russian Doll Envelopes
-
 ## Problem Statement
 Solve Russian Doll Envelopes using dynamic programming.
 

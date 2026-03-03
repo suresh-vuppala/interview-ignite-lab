@@ -1,0 +1,26 @@
+{
+  "title": "Container With Most Water",
+  "slug": "container-most-water",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "./container-most-water.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "./code/java/ContainerMostWater.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "./code/cpp/container_most_water.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "./code/python/container-most-water.py"
+        }
+      ]
+    }
+  ]
+}

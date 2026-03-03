@@ -1,5 +1,3 @@
-# Selection Sort
-
 ## Problem Statement
 Sort an array using selection sort algorithm.
 

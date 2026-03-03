@@ -1,5 +1,3 @@
-# Count Prefix-Suffix Pairs
-
 ## Problem Statement
 Count pairs (i,j) where words[i] is both prefix and suffix of words[j].
 

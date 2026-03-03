@@ -1,3 +1,1 @@
-# Game Theory
-
 Content coming soon...

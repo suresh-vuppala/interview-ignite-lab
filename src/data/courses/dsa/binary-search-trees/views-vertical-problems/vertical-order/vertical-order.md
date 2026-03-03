@@ -1,5 +1,3 @@
-# Vertical Order
-
 ## Overview
 Comprehensive solution for Vertical Order
 

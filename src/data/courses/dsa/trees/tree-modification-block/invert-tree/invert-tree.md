@@ -1,5 +1,3 @@
-# Invert Binary Tree
-
 ## Overview
 Swap left and right subtrees for all nodes (mirror the tree).
 

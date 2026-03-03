@@ -1,5 +1,3 @@
-# Make String Valid
-
 ## Problem Statement
 Make String Valid implementation.
 

@@ -1,5 +1,3 @@
-# Binary Strings No Consecutive 1s
-
 ## Problem Statement
 Solve Binary Strings No Consecutive 1s using dynamic programming.
 

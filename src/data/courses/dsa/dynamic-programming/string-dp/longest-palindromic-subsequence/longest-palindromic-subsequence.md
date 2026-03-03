@@ -1,5 +1,3 @@
-# Longest Palindromic Subsequence
-
 ## Problem Statement
 Solve Longest Palindromic Subsequence using dynamic programming.
 

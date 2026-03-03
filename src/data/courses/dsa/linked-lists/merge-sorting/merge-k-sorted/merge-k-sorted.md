@@ -1,5 +1,3 @@
-# Merge K Sorted Lists
-
 ## Overview
 Merge K sorted linked lists into one sorted list.
 

@@ -1,5 +1,3 @@
-# LFU Cache
-
 ## Overview
 Design and implement a Least Frequently Used (LFU) cache with O(1) get and put operations.
 

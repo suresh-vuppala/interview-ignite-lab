@@ -1,5 +1,3 @@
-# Maximum Sum BST
-
 ## Overview
 Comprehensive solution for Maximum Sum BST
 

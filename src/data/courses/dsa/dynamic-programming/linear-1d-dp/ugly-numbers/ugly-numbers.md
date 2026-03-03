@@ -1,5 +1,3 @@
-# Ugly Numbers
-
 ## Problem Statement
 Solve Ugly Numbers using dynamic programming.
 

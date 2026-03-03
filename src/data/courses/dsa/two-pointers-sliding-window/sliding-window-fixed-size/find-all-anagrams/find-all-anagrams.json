@@ -1,0 +1,26 @@
+{
+  "title": "Find All Anagrams in a String",
+  "slug": "find-all-anagrams",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "./find-all-anagrams.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "./code/java/FindAllAnagrams.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "./code/cpp/find_all_anagrams.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "./code/python/find-all-anagrams.py"
+        }
+      ]
+    }
+  ]
+}

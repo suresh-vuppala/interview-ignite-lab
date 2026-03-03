@@ -1,5 +1,3 @@
-# Problems on Heap
-
 ## Common Heap Problems
 
 ### Top K Elements

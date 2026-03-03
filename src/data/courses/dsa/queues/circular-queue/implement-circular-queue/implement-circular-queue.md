@@ -1,5 +1,3 @@
-# Implement Circular Queue
-
 ## Problem Statement
 Implement Circular Queue implementation.
 

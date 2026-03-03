@@ -1,5 +1,3 @@
-# C++ Hashing Internals
-
 C++ uses `unordered_map` and `unordered_set` with hash tables.
 
 ## Hash Function

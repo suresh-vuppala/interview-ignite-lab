@@ -1,5 +1,3 @@
-# Boundary Traversal
-
 ## Overview
 Comprehensive solution for Boundary Traversal problem.
 

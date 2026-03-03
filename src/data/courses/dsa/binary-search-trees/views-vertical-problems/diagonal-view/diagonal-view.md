@@ -1,5 +1,3 @@
-# Diagonal View
-
 ## Overview
 Comprehensive solution for Diagonal View
 

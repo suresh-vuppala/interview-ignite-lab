@@ -1,5 +1,3 @@
-# Subarray Sum Equals K
-
 ## Problem Statement
 
 Given an integer array `nums` and an integer `k`, return the total number of subarrays whose sum equals `k`.

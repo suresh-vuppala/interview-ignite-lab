@@ -1,5 +1,3 @@
-# Dijkstra
-
 ## Problem Statement
 
 Solve Dijkstra problem using graph algorithms.

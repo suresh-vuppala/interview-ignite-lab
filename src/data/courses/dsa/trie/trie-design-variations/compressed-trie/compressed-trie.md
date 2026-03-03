@@ -1,5 +1,3 @@
-# Compressed Trie (Radix Tree)
-
 ## Problem Statement
 Implement a compressed trie where chains of single-child nodes are merged into one edge.
 

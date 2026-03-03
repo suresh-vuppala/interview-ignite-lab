@@ -1,0 +1,26 @@
+{
+    "title": "Bit Masking Basics",
+    "slug": "bit-masking-basics",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "bit-masking-basics.md",
+    "codeExamples": [
+        {
+            "title": "Bit Masking Basics",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/BitMaskingBasics.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/bit_masking_basics.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/bit-masking-basics.py"
+                }
+            ]
+        }
+    ]
+}

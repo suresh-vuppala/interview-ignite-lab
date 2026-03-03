@@ -1,5 +1,3 @@
-# Remove Nth Node from End
-
 ## Overview
 Remove the nth node from end using two-pointer technique.
 

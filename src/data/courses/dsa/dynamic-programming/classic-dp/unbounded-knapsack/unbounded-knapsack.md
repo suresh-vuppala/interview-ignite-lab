@@ -1,5 +1,3 @@
-# Unbounded Knapsack
-
 ## Problem Statement
 Solve Unbounded Knapsack using dynamic programming.
 

@@ -1,3 +1,1 @@
-# Segmented Sieve
-
 Content coming soon...

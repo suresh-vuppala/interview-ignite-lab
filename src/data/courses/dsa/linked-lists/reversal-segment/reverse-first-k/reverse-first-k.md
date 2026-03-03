@@ -1,5 +1,3 @@
-# Reverse First K Nodes
-
 ## Overview
 Learn to reverse only the first K nodes of a linked list.
 

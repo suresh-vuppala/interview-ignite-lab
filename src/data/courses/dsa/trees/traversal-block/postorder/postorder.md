@@ -1,5 +1,3 @@
-# Postorder Traversal
-
 ## Overview
 Postorder traversal visits nodes in Left-Right-Root order. Used for deletion and solving subproblem-based problems.
 

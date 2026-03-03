@@ -1,5 +1,3 @@
-# Shortest Path Weighted
-
 ## Problem Statement
 
 Solve Shortest Path Weighted problem using graph algorithms.

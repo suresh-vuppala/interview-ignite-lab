@@ -1,5 +1,3 @@
-# Number of LIS
-
 ## Problem Statement
 Solve Number of LIS using dynamic programming.
 

@@ -1,5 +1,3 @@
-# Implement Stack & Operations
-
 ## Problem Statement
 Implement Stack & Operations implementation.
 

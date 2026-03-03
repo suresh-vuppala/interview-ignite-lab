@@ -1,5 +1,3 @@
-# Word Search II
-
 ## Problem Statement
 Find all words from dictionary that exist in a 2D board. Words can be formed by sequentially adjacent cells.
 

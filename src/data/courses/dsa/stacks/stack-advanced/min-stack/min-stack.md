@@ -1,5 +1,3 @@
-# Min Stack
-
 ## Problem Statement
 Min Stack implementation.
 

@@ -1,5 +1,3 @@
-# House Robber III Tree
-
 ## Problem Statement
 Solve House Robber III Tree using dynamic programming.
 

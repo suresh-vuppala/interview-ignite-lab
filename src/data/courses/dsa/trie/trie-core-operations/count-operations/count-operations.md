@@ -1,5 +1,3 @@
-# Count Operations in Trie
-
 ## Problem Statement
 Extend Trie to support:
 - **countWordsEqualTo**: Count how many times exact word exists

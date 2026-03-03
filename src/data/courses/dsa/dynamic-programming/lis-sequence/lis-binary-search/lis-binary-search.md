@@ -1,5 +1,3 @@
-# LIS Binary Search
-
 ## Problem Statement
 Solve LIS Binary Search using dynamic programming.
 

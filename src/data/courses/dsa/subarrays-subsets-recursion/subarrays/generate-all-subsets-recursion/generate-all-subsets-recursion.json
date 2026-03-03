@@ -1,0 +1,26 @@
+{
+    "title": "Generate All Subsets using Recursion",
+    "slug": "generate-all-subsets-recursion",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "generate-all-subsets-recursion.md",
+    "codeExamples": [
+        {
+            "title": "Generate All Subsets using Recursion",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/GenerateAllSubsetsRecursion.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/generate_all_subsets_recursion.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/generate-all-subsets-recursion.py"
+                }
+            ]
+        }
+    ]
+}

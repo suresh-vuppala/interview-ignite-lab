@@ -1,5 +1,3 @@
-# Stock with Transaction Fee
-
 ## Problem Statement
 Solve Stock with Transaction Fee using dynamic programming.
 

@@ -1,5 +1,3 @@
-# House Robber III
-
 ## Overview
 Tree DP problem: rob houses on tree without robbing adjacent nodes.
 

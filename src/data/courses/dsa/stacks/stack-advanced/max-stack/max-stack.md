@@ -1,5 +1,3 @@
-# Max Stack
-
 ## Problem Statement
 Max Stack implementation.
 

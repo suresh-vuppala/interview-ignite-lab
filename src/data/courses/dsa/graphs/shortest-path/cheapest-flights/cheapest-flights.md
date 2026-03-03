@@ -1,5 +1,3 @@
-# Cheapest Flights
-
 ## Problem Statement
 
 Solve Cheapest Flights problem using graph algorithms.

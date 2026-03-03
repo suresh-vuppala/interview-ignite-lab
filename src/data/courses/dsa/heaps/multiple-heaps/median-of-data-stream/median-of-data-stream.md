@@ -1,5 +1,3 @@
-# Median of Data Stream
-
 ## Problem Statement
 
 Design a data structure that supports adding numbers and finding the median.

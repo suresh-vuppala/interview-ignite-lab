@@ -1,5 +1,3 @@
-# Egg Dropping Problem
-
 ## Problem Statement
 Solve Egg Dropping Problem using dynamic programming.
 

@@ -1,5 +1,3 @@
-# Bottom View
-
 ## Overview
 Comprehensive solution for Bottom View
 

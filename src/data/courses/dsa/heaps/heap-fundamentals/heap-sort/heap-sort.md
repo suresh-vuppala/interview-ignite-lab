@@ -1,5 +1,3 @@
-# Heap Sort
-
 ## Problem Statement
 
 Sort an array using heap sort algorithm.

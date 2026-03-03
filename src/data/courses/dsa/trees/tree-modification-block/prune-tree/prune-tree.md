@@ -1,5 +1,3 @@
-# Prune Tree
-
 ## Overview
 Comprehensive solution for Prune Tree
 

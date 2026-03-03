@@ -1,5 +1,3 @@
-# Max Root-to-Leaf Sum
-
 ## Overview
 Comprehensive solution for Max Root-to-Leaf Sum
 

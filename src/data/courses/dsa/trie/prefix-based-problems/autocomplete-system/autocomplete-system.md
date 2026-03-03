@@ -1,5 +1,3 @@
-# Autocomplete System
-
 ## Problem Statement
 Design a search autocomplete system that returns top 3 matching sentences based on input prefix.
 

@@ -1,5 +1,3 @@
-# Count Inversions
-
 ## Problem Statement
 Count the number of inversions in an array. An inversion is a pair (i, j) where i < j but arr[i] > arr[j].
 

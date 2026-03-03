@@ -1,0 +1,26 @@
+{
+  "title": "4Sum",
+  "slug": "4sum",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "./4sum.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "./code/java/4Sum.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "./code/cpp/4sum.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "./code/python/4sum.py"
+        }
+      ]
+    }
+  ]
+}

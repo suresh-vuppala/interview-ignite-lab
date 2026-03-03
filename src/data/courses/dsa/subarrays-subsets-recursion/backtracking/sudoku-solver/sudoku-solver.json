@@ -1,0 +1,26 @@
+{
+    "title": "Sudoku Solver",
+    "slug": "sudoku-solver",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "sudoku-solver.md",
+    "codeExamples": [
+        {
+            "title": "Sudoku Solver",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/SudokuSolver.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/sudoku_solver.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/sudoku-solver.py"
+                }
+            ]
+        }
+    ]
+}

@@ -1,5 +1,3 @@
-# Reverse Level Order
-
 ## Overview
 Comprehensive solution for Reverse Level Order problem.
 

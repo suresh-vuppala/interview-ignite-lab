@@ -1,5 +1,3 @@
-# Reverse String using Stack
-
 ## Problem Statement
 Reverse String using Stack implementation.
 

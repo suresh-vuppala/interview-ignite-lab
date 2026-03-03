@@ -1,0 +1,26 @@
+{
+  "title": "3Sum",
+  "slug": "3sum",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "./3sum.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "./code/java/3Sum.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "./code/cpp/3sum.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "./code/python/3sum.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+    "title": "Check/Set/Unset/Toggle Bit",
+    "slug": "check-set-unset-toggle-bit",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "check-set-unset-toggle-bit.md",
+    "codeExamples": [
+        {
+            "title": "Check/Set/Unset/Toggle Bit",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/CheckSetUnsetToggleBit.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/check_set_unset_toggle_bit.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/check-set-unset-toggle-bit.py"
+                }
+            ]
+        }
+    ]
+}

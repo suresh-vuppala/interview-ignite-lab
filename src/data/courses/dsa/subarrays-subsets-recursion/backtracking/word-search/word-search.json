@@ -1,0 +1,26 @@
+{
+    "title": "Word Search",
+    "slug": "word-search",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "word-search.md",
+    "codeExamples": [
+        {
+            "title": "Word Search",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/WordSearch.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/word_search.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/word-search.py"
+                }
+            ]
+        }
+    ]
+}

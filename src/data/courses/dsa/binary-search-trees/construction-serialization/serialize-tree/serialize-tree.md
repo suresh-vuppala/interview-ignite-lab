@@ -1,5 +1,3 @@
-# Serialize Tree
-
 ## Overview
 Comprehensive solution for Serialize Tree
 

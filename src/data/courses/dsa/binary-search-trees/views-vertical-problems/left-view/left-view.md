@@ -1,5 +1,3 @@
-# Left View
-
 ## Overview
 Comprehensive solution for Left View
 

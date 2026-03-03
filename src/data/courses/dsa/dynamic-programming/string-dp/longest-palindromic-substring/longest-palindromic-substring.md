@@ -1,5 +1,3 @@
-# Longest Palindromic Substring
-
 ## Problem Statement
 Solve Longest Palindromic Substring using dynamic programming.
 

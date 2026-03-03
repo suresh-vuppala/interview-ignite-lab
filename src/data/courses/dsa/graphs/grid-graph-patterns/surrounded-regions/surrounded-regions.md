@@ -1,5 +1,3 @@
-# Surrounded Regions
-
 ## Problem Statement
 
 Solve Surrounded Regions problem using graph algorithms.

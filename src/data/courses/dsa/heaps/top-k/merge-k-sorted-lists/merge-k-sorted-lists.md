@@ -1,5 +1,3 @@
-# Merge K Sorted Lists
-
 ## Problem Statement
 
 Merge k sorted linked lists into one sorted list.

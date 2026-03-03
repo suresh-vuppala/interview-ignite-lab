@@ -1,5 +1,3 @@
-# Flatten Multilevel Doubly Linked List
-
 ## Overview
 Flatten a multilevel doubly linked list where nodes can have child pointers.
 

@@ -1,5 +1,3 @@
-# Search by Prefix and Suffix
-
 ## Problem Statement
 Design data structure to search words by both prefix and suffix.
 

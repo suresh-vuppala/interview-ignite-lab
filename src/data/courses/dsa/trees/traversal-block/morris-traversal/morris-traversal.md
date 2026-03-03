@@ -1,5 +1,3 @@
-# Morris Traversal
-
 ## Overview
 Comprehensive solution for Morris Traversal problem.
 

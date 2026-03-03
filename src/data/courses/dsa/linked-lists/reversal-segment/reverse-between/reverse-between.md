@@ -1,5 +1,3 @@
-# Reverse Between Positions
-
 ## Overview
 Learn to reverse a segment of linked list between two positions.
 

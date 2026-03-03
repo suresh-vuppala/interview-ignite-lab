@@ -1,5 +1,3 @@
-# Delete Leaves
-
 ## Overview
 Comprehensive solution for Delete Leaves
 

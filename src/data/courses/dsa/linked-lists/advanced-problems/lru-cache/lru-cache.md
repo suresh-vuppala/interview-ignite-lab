@@ -1,5 +1,3 @@
-# LRU Cache
-
 ## Overview
 Design and implement a Least Recently Used (LRU) cache with O(1) get and put operations.
 

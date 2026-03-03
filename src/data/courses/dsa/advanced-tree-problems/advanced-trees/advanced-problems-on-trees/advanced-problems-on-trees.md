@@ -1,3 +1,1 @@
-# Advanced Problems on Trees
-
 Content coming soon...

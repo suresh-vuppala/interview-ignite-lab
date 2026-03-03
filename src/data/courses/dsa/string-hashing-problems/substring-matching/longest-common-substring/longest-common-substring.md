@@ -1,5 +1,3 @@
-# Longest Common Substring
-
 Find longest substring common to two strings.
 
 ## Approaches

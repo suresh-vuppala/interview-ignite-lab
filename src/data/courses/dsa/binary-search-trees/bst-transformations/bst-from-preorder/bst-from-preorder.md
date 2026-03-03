@@ -1,5 +1,3 @@
-# BST from Preorder
-
 ## Overview
 Comprehensive solution for BST from Preorder
 

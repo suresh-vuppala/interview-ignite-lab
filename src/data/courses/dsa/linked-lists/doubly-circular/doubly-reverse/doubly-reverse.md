@@ -1,5 +1,3 @@
-# Reverse Doubly Linked List
-
 ## Overview
 Reverse a doubly linked list by swapping next and prev pointers.
 

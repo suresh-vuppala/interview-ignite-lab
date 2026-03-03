@@ -1,5 +1,3 @@
-# Heaps
-
 ## Overview
 
 A heap is a complete binary tree that satisfies the heap property. In a max heap, parent nodes are greater than children. In a min heap, parent nodes are smaller than children.

@@ -1,5 +1,3 @@
-# Reverse Recursive
-
 ## Overview
 Learn to reverse a linked list using recursive approach.
 

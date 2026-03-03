@@ -1,5 +1,3 @@
-# Distance Between Nodes
-
 ## Overview
 Comprehensive solution for Distance Between Nodes
 

@@ -1,0 +1,26 @@
+{
+    "title": "Rat in a Maze",
+    "slug": "rat-in-maze",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "rat-in-maze.md",
+    "codeExamples": [
+        {
+            "title": "Rat in a Maze",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/RatInMaze.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/rat_in_maze.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/rat-in-maze.py"
+                }
+            ]
+        }
+    ]
+}

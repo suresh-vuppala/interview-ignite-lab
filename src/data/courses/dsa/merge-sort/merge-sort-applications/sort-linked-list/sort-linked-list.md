@@ -1,5 +1,3 @@
-# Sort Linked List
-
 ## Problem Statement
 Sort a linked list using merge sort algorithm.
 

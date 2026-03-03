@@ -1,5 +1,3 @@
-# BST to DLL
-
 ## Overview
 Comprehensive solution for BST to DLL
 

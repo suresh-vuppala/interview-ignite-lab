@@ -1,5 +1,3 @@
-# Network Delay Time
-
 ## Problem Statement
 
 Solve Network Delay Time problem using graph algorithms.

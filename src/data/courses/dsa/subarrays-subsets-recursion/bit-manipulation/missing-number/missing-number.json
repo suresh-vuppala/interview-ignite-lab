@@ -1,0 +1,26 @@
+{
+    "title": "Missing Number",
+    "slug": "missing-number",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "missing-number.md",
+    "codeExamples": [
+        {
+            "title": "Missing Number",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/MissingNumber.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/missing_number.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/missing-number.py"
+                }
+            ]
+        }
+    ]
+}

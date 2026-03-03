@@ -1,5 +1,3 @@
-# Rotate List
-
 ## Overview
 Rotate linked list to the right by k places.
 

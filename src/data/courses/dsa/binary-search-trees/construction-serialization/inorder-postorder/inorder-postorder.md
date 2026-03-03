@@ -1,5 +1,3 @@
-# Inorder + Postorder
-
 ## Overview
 Comprehensive solution for Inorder + Postorder
 

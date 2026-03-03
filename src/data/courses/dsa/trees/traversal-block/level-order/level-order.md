@@ -1,5 +1,3 @@
-# Level Order Traversal
-
 ## Overview
 BFS traversal visiting nodes level-by-level (breadth-first).
 

@@ -1,5 +1,3 @@
-# Course Schedule I
-
 ## Problem Statement
 
 Solve Course Schedule I problem using graph algorithms.

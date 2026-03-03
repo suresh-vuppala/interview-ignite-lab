@@ -1,5 +1,3 @@
-# Stock Buy Sell II
-
 ## Problem Statement
 Solve Stock Buy Sell II using dynamic programming.
 

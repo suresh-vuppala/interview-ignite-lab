@@ -1,5 +1,3 @@
-# Triangle Minimum Path Sum
-
 ## Problem Statement
 Solve Triangle Minimum Path Sum using dynamic programming.
 

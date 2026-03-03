@@ -1,5 +1,3 @@
-# LCA in Binary Tree
-
 ## Overview
 Find Lowest Common Ancestor in a general binary tree (not necessarily BST).
 

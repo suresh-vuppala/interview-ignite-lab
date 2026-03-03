@@ -1,5 +1,3 @@
-# Coin Change Minimum
-
 ## Problem Statement
 Solve Coin Change Minimum using dynamic programming.
 

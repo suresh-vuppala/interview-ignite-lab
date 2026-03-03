@@ -1,5 +1,3 @@
-# Word Break using Trie
-
 ## Problem Statement
 Determine if string can be segmented into words from dictionary.
 

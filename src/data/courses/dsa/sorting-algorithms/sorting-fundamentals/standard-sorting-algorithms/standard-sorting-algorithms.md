@@ -1,5 +1,3 @@
-# Standard Sorting Algorithms
-
 ## Overview
 Understanding different sorting algorithms and their characteristics.
 

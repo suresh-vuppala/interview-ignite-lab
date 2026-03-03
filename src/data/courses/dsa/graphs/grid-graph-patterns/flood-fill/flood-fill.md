@@ -1,5 +1,3 @@
-# Flood Fill
-
 ## Problem Statement
 
 Solve Flood Fill problem using graph algorithms.

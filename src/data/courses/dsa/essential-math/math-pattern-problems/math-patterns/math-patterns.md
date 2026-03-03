@@ -1,5 +1,3 @@
-# Math Pattern Problems
-
 ## Overview
 Solve common mathematical pattern problems including trailing zeros, Fibonacci, and perfect squares.
 

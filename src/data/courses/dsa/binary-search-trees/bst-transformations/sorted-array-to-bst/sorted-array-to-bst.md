@@ -1,5 +1,3 @@
-# Sorted Array to BST
-
 ## Overview
 Convert sorted array to height-balanced BST using divide-and-conquer.
 

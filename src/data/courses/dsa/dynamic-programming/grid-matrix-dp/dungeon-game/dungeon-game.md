@@ -1,5 +1,3 @@
-# Dungeon Game
-
 ## Problem Statement
 Solve Dungeon Game using dynamic programming.
 
