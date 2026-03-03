@@ -1,0 +1,26 @@
+{
+  "title": "Distinct Subsequences",
+  "slug": "distinct-subsequences",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "distinct-subsequences.md",
+  "codeExamples": [
+    {
+      "title": "Distinct Subsequences Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/distinct-subsequences/code/java/DistinctSubsequences.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/distinct-subsequences/code/cpp/DistinctSubsequences.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/distinct-subsequences/code/python/distinct_subsequences.py"
+        }
+      ]
+    }
+  ]
+}

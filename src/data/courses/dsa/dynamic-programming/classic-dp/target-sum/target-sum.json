@@ -1,0 +1,26 @@
+{
+  "title": "Target Sum",
+  "slug": "target-sum",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "target-sum.md",
+  "codeExamples": [
+    {
+      "title": "Target Sum Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/target-sum/code/java/TargetSum.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/target-sum/code/cpp/TargetSum.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/target-sum/code/python/target_sum.py"
+        }
+      ]
+    }
+  ]
+}

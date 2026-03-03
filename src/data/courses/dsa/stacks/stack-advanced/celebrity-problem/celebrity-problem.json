@@ -1,0 +1,26 @@
+{
+  "title": "Celebrity Problem",
+  "slug": "celebrity-problem",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "celebrity-problem.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/CelebrityProblem.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/CelebrityProblem.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/celebrity_problem.py"
+        }
+      ]
+    }
+  ]
+}

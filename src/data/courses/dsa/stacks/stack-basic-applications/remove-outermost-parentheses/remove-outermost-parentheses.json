@@ -1,0 +1,26 @@
+{
+  "title": "Remove Outermost Parentheses",
+  "slug": "remove-outermost-parentheses",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "remove-outermost-parentheses.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/RemoveOutermostParentheses.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/RemoveOutermostParentheses.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/remove_outermost_parentheses.py"
+        }
+      ]
+    }
+  ]
+}

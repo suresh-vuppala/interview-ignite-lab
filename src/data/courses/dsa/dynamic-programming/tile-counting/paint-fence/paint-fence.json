@@ -1,0 +1,26 @@
+{
+  "title": "Paint Fence Problem",
+  "slug": "paint-fence",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "paint-fence.md",
+  "codeExamples": [
+    {
+      "title": "Paint Fence Problem Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/paint-fence/code/java/PaintFence.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/paint-fence/code/cpp/PaintFence.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/paint-fence/code/python/paint_fence.py"
+        }
+      ]
+    }
+  ]
+}

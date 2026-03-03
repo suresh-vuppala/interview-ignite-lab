@@ -1,0 +1,26 @@
+{
+  "title": "Unique Paths II",
+  "slug": "unique-paths-ii",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "unique-paths-ii.md",
+  "codeExamples": [
+    {
+      "title": "Unique Paths II Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/unique-paths-ii/code/java/UniquePathsIi.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/unique-paths-ii/code/cpp/UniquePathsIi.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/unique-paths-ii/code/python/unique_paths_ii.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Implement Deque",
+  "slug": "implement-deque",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "implement-deque.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/ImplementDeque.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/ImplementDeque.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/implement_deque.py"
+        }
+      ]
+    }
+  ]
+}

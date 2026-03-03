@@ -1,16 +1,24 @@
 {
-  "order": 2,
   "title": "Bubble Sort",
   "slug": "bubble-sort",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "bubble-sort.md",
   "codeExamples": [
     {
-      "title": "Example",
+      "title": "Solution",
       "languages": [
         {
-          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/bubble-sort/code/java/Example.java",
-          "language": "java"
+          "language": "java",
+          "codeFile": "code/java/BubbleSort.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/BubbleSort.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/bubble_sort.py"
         }
       ]
     }

@@ -1,0 +1,26 @@
+{
+  "title": "Climbing Stairs",
+  "slug": "climbing-stairs",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "climbing-stairs.md",
+  "codeExamples": [
+    {
+      "title": "Climbing Stairs Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/climbing-stairs/code/java/ClimbingStairs.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/climbing-stairs/code/cpp/ClimbingStairs.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/climbing-stairs/code/python/climbing_stairs.py"
+        }
+      ]
+    }
+  ]
+}

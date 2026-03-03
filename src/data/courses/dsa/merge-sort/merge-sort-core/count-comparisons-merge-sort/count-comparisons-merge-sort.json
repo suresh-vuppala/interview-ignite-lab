@@ -1,0 +1,26 @@
+{
+  "title": "Count Comparisons in Merge Sort",
+  "slug": "count-comparisons-merge-sort",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "count-comparisons-merge-sort.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/CountComparisonsMergeSort.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/CountComparisonsMergeSort.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/count_comparisons_merge_sort.py"
+        }
+      ]
+    }
+  ]
+}

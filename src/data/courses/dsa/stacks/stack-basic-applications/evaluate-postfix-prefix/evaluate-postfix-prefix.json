@@ -1,0 +1,26 @@
+{
+  "title": "Evaluate Postfix/Prefix",
+  "slug": "evaluate-postfix-prefix",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "evaluate-postfix-prefix.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/EvaluatePostfixPrefix.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/EvaluatePostfixPrefix.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/evaluate_postfix_prefix.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "House Robber III Tree",
+  "slug": "house-robber-iii",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "house-robber-iii.md",
+  "codeExamples": [
+    {
+      "title": "House Robber III Tree Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/house-robber-iii/code/java/HouseRobberIii.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/house-robber-iii/code/cpp/HouseRobberIii.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/house-robber-iii/code/python/house_robber_iii.py"
+        }
+      ]
+    }
+  ]
+}

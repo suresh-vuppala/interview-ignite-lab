@@ -1,0 +1,26 @@
+{
+  "title": "Sort Stack Recursion",
+  "slug": "sort-stack-recursion",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "sort-stack-recursion.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/SortStackRecursion.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/SortStackRecursion.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/sort_stack_recursion.py"
+        }
+      ]
+    }
+  ]
+}

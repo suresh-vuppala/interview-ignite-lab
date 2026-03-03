@@ -1,0 +1,26 @@
+{
+  "title": "Burst Balloons",
+  "slug": "burst-balloons",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "burst-balloons.md",
+  "codeExamples": [
+    {
+      "title": "Burst Balloons Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/burst-balloons/code/java/BurstBalloons.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/burst-balloons/code/cpp/BurstBalloons.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/burst-balloons/code/python/burst_balloons.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+class TriangleMinPath {
+    // DP solution
+}

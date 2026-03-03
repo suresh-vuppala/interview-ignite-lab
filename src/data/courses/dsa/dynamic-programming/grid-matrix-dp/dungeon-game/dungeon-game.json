@@ -1,0 +1,26 @@
+{
+  "title": "Dungeon Game",
+  "slug": "dungeon-game",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "dungeon-game.md",
+  "codeExamples": [
+    {
+      "title": "Dungeon Game Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/dungeon-game/code/java/DungeonGame.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/dungeon-game/code/cpp/DungeonGame.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/dungeon-game/code/python/dungeon_game.py"
+        }
+      ]
+    }
+  ]
+}

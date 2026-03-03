@@ -1,0 +1,26 @@
+{
+  "title": "Coin Change II Ways",
+  "slug": "coin-change-ways",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "coin-change-ways.md",
+  "codeExamples": [
+    {
+      "title": "Coin Change II Ways Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-ways/code/java/CoinChangeWays.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-ways/code/cpp/CoinChangeWays.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-ways/code/python/coin_change_ways.py"
+        }
+      ]
+    }
+  ]
+}

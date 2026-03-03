@@ -1,0 +1,26 @@
+{
+  "title": "Matrix Chain Multiplication",
+  "slug": "matrix-chain-multiplication",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "matrix-chain-multiplication.md",
+  "codeExamples": [
+    {
+      "title": "Matrix Chain Multiplication Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/matrix-chain-multiplication/code/java/MatrixChainMultiplication.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/matrix-chain-multiplication/code/cpp/MatrixChainMultiplication.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/matrix-chain-multiplication/code/python/matrix_chain_multiplication.py"
+        }
+      ]
+    }
+  ]
+}

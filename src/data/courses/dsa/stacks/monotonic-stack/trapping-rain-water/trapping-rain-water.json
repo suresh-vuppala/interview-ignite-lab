@@ -1,0 +1,26 @@
+{
+  "title": "Trapping Rain Water",
+  "slug": "trapping-rain-water",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "trapping-rain-water.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/TrappingRainWater.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/TrappingRainWater.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/trapping_rain_water.py"
+        }
+      ]
+    }
+  ]
+}

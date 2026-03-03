@@ -1,0 +1,26 @@
+{
+  "title": "Next Greater Element",
+  "slug": "next-greater-element",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "next-greater-element.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/NextGreaterElement.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/NextGreaterElement.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/next_greater_element.py"
+        }
+      ]
+    }
+  ]
+}

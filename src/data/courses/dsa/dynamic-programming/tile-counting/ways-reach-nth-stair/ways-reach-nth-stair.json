@@ -1,0 +1,26 @@
+{
+  "title": "Ways to Reach Nth Stair",
+  "slug": "ways-reach-nth-stair",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "ways-reach-nth-stair.md",
+  "codeExamples": [
+    {
+      "title": "Ways to Reach Nth Stair Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/ways-reach-nth-stair/code/java/WaysReachNthStair.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/ways-reach-nth-stair/code/cpp/WaysReachNthStair.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/ways-reach-nth-stair/code/python/ways_reach_nth_stair.py"
+        }
+      ]
+    }
+  ]
+}

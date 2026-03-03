@@ -1,0 +1,26 @@
+{
+  "title": "Previous Greater/Smaller",
+  "slug": "previous-greater-smaller",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "previous-greater-smaller.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/PreviousGreaterSmaller.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/PreviousGreaterSmaller.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/previous_greater_smaller.py"
+        }
+      ]
+    }
+  ]
+}

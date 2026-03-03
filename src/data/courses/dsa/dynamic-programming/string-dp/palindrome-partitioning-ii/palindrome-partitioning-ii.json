@@ -1,0 +1,26 @@
+{
+  "title": "Palindrome Partitioning II",
+  "slug": "palindrome-partitioning-ii",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "palindrome-partitioning-ii.md",
+  "codeExamples": [
+    {
+      "title": "Palindrome Partitioning II Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/palindrome-partitioning-ii/code/java/PalindromePartitioningIi.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/palindrome-partitioning-ii/code/cpp/PalindromePartitioningIi.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/palindrome-partitioning-ii/code/python/palindrome_partitioning_ii.py"
+        }
+      ]
+    }
+  ]
+}

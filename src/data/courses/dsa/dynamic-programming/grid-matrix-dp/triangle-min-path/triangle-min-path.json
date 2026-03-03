@@ -1,0 +1,26 @@
+{
+  "title": "Triangle Minimum Path Sum",
+  "slug": "triangle-min-path",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "triangle-min-path.md",
+  "codeExamples": [
+    {
+      "title": "Triangle Minimum Path Sum Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/triangle-min-path/code/java/TriangleMinPath.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/triangle-min-path/code/cpp/TriangleMinPath.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/triangle-min-path/code/python/triangle_min_path.py"
+        }
+      ]
+    }
+  ]
+}

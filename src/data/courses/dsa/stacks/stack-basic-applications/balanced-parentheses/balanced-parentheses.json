@@ -1,0 +1,26 @@
+{
+  "title": "Check Balanced Parentheses",
+  "slug": "balanced-parentheses",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "balanced-parentheses.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/BalancedParentheses.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/BalancedParentheses.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/balanced_parentheses.py"
+        }
+      ]
+    }
+  ]
+}

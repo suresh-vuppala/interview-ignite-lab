@@ -1,0 +1,26 @@
+{
+  "title": "Sliding Window Minimum",
+  "slug": "sliding-window-minimum",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "sliding-window-minimum.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/SlidingWindowMinimum.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/SlidingWindowMinimum.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/sliding_window_minimum.py"
+        }
+      ]
+    }
+  ]
+}

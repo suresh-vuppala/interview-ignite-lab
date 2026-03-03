@@ -1,0 +1,26 @@
+{
+  "title": "Coin Change Minimum",
+  "slug": "coin-change-min",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "coin-change-min.md",
+  "codeExamples": [
+    {
+      "title": "Coin Change Minimum Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-min/code/java/CoinChangeMin.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-min/code/cpp/CoinChangeMin.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-min/code/python/coin_change_min.py"
+        }
+      ]
+    }
+  ]
+}

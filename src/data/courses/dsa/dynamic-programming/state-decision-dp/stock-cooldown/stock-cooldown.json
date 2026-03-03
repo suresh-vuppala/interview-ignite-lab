@@ -1,0 +1,26 @@
+{
+  "title": "Stock with Cooldown",
+  "slug": "stock-cooldown",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "stock-cooldown.md",
+  "codeExamples": [
+    {
+      "title": "Stock with Cooldown Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-cooldown/code/java/StockCooldown.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-cooldown/code/cpp/StockCooldown.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-cooldown/code/python/stock_cooldown.py"
+        }
+      ]
+    }
+  ]
+}

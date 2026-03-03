@@ -1,0 +1,26 @@
+{
+  "title": "Design Circular Queue",
+  "slug": "design-circular-queue",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "design-circular-queue.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/DesignCircularQueue.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/DesignCircularQueue.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/design_circular_queue.py"
+        }
+      ]
+    }
+  ]
+}

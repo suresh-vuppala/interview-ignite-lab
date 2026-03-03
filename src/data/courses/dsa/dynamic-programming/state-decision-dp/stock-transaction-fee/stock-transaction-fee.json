@@ -1,0 +1,26 @@
+{
+  "title": "Stock with Transaction Fee",
+  "slug": "stock-transaction-fee",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "stock-transaction-fee.md",
+  "codeExamples": [
+    {
+      "title": "Stock with Transaction Fee Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-transaction-fee/code/java/StockTransactionFee.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-transaction-fee/code/cpp/StockTransactionFee.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-transaction-fee/code/python/stock_transaction_fee.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Count Derangements",
+  "slug": "count-derangements",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "count-derangements.md",
+  "codeExamples": [
+    {
+      "title": "Count Derangements Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/count-derangements/code/java/CountDerangements.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/count-derangements/code/cpp/CountDerangements.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/count-derangements/code/python/count_derangements.py"
+        }
+      ]
+    }
+  ]
+}

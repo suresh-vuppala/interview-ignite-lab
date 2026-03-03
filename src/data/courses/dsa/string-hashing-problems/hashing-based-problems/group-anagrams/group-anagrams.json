@@ -1,0 +1,26 @@
+{
+    "title": "Group Anagrams",
+    "slug": "group-anagrams",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "group-anagrams.md",
+    "codeExamples": [
+        {
+            "title": "Group Anagrams",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/GroupAnagrams.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/group_anagrams.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/group-anagrams.py"
+                }
+            ]
+        }
+    ]
+}

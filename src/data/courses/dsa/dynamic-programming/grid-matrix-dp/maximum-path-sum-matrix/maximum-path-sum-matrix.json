@@ -1,0 +1,26 @@
+{
+  "title": "Maximum Path Sum Matrix",
+  "slug": "maximum-path-sum-matrix",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "maximum-path-sum-matrix.md",
+  "codeExamples": [
+    {
+      "title": "Maximum Path Sum Matrix Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-path-sum-matrix/code/java/MaximumPathSumMatrix.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-path-sum-matrix/code/cpp/MaximumPathSumMatrix.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-path-sum-matrix/code/python/maximum_path_sum_matrix.py"
+        }
+      ]
+    }
+  ]
+}

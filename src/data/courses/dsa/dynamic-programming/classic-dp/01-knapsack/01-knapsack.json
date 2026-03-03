@@ -1,0 +1,26 @@
+{
+  "title": "0/1 Knapsack",
+  "slug": "01-knapsack",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "01-knapsack.md",
+  "codeExamples": [
+    {
+      "title": "0/1 Knapsack Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/01-knapsack/code/java/01Knapsack.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/01-knapsack/code/cpp/01Knapsack.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/01-knapsack/code/python/01_knapsack.py"
+        }
+      ]
+    }
+  ]
+}

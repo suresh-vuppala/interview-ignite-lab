@@ -1,0 +1,26 @@
+{
+  "title": "Implement Queue & Operations",
+  "slug": "implement-queue-operations",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "implement-queue-operations.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/ImplementQueueOperations.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/ImplementQueueOperations.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/implement_queue_operations.py"
+        }
+      ]
+    }
+  ]
+}

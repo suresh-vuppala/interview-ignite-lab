@@ -1,0 +1,26 @@
+{
+  "title": "Number of LIS",
+  "slug": "number-of-lis",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "number-of-lis.md",
+  "codeExamples": [
+    {
+      "title": "Number of LIS Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/lis-sequence/number-of-lis/code/java/NumberOfLis.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/lis-sequence/number-of-lis/code/cpp/NumberOfLis.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/lis-sequence/number-of-lis/code/python/number_of_lis.py"
+        }
+      ]
+    }
+  ]
+}

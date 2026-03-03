@@ -1,0 +1,26 @@
+{
+  "title": "Merge Two Sorted Arrays",
+  "slug": "merge-two-sorted-arrays",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "merge-two-sorted-arrays.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/MergeTwoSortedArrays.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/MergeTwoSortedArrays.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/merge_two_sorted_arrays.py"
+        }
+      ]
+    }
+  ]
+}

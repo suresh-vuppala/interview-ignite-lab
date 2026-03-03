@@ -1,0 +1,26 @@
+{
+  "title": "Min Cost Climbing Stairs",
+  "slug": "min-cost-climbing-stairs",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "min-cost-climbing-stairs.md",
+  "codeExamples": [
+    {
+      "title": "Min Cost Climbing Stairs Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/min-cost-climbing-stairs/code/java/MinCostClimbingStairs.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/min-cost-climbing-stairs/code/cpp/MinCostClimbingStairs.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/min-cost-climbing-stairs/code/python/min_cost_climbing_stairs.py"
+        }
+      ]
+    }
+  ]
+}

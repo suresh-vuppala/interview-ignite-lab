@@ -1,16 +1,24 @@
 {
-  "order": 1,
   "title": "Standard Sorting Algorithms",
   "slug": "standard-sorting-algorithms",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "standard-sorting-algorithms.md",
   "codeExamples": [
     {
-      "title": "Example",
+      "title": "Solution",
       "languages": [
         {
-          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/standard-sorting-algorithms/code/java/Example.java",
-          "language": "java"
+          "language": "java",
+          "codeFile": "code/java/StandardSortingAlgorithms.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/StandardSortingAlgorithms.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/standard_sorting_algorithms.py"
         }
       ]
     }

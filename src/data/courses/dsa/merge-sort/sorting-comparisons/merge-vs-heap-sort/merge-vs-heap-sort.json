@@ -1,0 +1,26 @@
+{
+  "title": "Merge Sort vs Heap Sort",
+  "slug": "merge-vs-heap-sort",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "merge-vs-heap-sort.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/MergeVsHeapSort.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/MergeVsHeapSort.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/merge_vs_heap_sort.py"
+        }
+      ]
+    }
+  ]
+}

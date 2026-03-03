@@ -1,0 +1,26 @@
+{
+  "title": "Longest Increasing Subsequence",
+  "slug": "longest-increasing-subsequence",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "longest-increasing-subsequence.md",
+  "codeExamples": [
+    {
+      "title": "Longest Increasing Subsequence Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/lis-sequence/longest-increasing-subsequence/code/java/LongestIncreasingSubsequence.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/lis-sequence/longest-increasing-subsequence/code/cpp/LongestIncreasingSubsequence.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/lis-sequence/longest-increasing-subsequence/code/python/longest_increasing_subsequence.py"
+        }
+      ]
+    }
+  ]
+}

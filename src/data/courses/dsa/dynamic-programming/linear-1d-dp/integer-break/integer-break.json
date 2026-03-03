@@ -1,0 +1,26 @@
+{
+  "title": "Integer Break",
+  "slug": "integer-break",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "integer-break.md",
+  "codeExamples": [
+    {
+      "title": "Integer Break Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/integer-break/code/java/IntegerBreak.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/integer-break/code/cpp/IntegerBreak.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/integer-break/code/python/integer_break.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Make String Valid",
+  "slug": "make-string-valid",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "make-string-valid.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/MakeStringValid.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/MakeStringValid.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/make_string_valid.py"
+        }
+      ]
+    }
+  ]
+}

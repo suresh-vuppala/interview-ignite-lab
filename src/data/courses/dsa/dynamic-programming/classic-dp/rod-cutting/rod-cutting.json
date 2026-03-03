@@ -1,0 +1,26 @@
+{
+  "title": "Rod Cutting",
+  "slug": "rod-cutting",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "rod-cutting.md",
+  "codeExamples": [
+    {
+      "title": "Rod Cutting Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/rod-cutting/code/java/RodCutting.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/rod-cutting/code/cpp/RodCutting.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/rod-cutting/code/python/rod_cutting.py"
+        }
+      ]
+    }
+  ]
+}

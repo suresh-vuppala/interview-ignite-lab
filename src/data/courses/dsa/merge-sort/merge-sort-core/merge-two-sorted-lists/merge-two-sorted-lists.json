@@ -1,0 +1,26 @@
+{
+  "title": "Merge Two Sorted Linked Lists",
+  "slug": "merge-two-sorted-lists",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "merge-two-sorted-lists.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/MergeTwoSortedLists.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/MergeTwoSortedLists.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/merge_two_sorted_lists.py"
+        }
+      ]
+    }
+  ]
+}

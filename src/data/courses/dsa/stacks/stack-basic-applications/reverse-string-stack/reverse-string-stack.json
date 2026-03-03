@@ -1,0 +1,26 @@
+{
+  "title": "Reverse String using Stack",
+  "slug": "reverse-string-stack",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "reverse-string-stack.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/ReverseStringStack.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/ReverseStringStack.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/reverse_string_stack.py"
+        }
+      ]
+    }
+  ]
+}

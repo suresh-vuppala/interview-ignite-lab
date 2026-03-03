@@ -1,0 +1,26 @@
+{
+  "title": "Stock Buy Sell I",
+  "slug": "stock-buy-sell-i",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "stock-buy-sell-i.md",
+  "codeExamples": [
+    {
+      "title": "Stock Buy Sell I Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-i/code/java/StockBuySellI.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-i/code/cpp/StockBuySellI.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-i/code/python/stock_buy_sell_i.py"
+        }
+      ]
+    }
+  ]
+}

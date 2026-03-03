@@ -1,0 +1,26 @@
+{
+  "title": "Stack using Queue",
+  "slug": "stack-using-queue",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "stack-using-queue.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/StackUsingQueue.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/StackUsingQueue.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/stack_using_queue.py"
+        }
+      ]
+    }
+  ]
+}

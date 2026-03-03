@@ -1,0 +1,26 @@
+{
+  "title": "Max Stack",
+  "slug": "max-stack",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "max-stack.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/MaxStack.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/MaxStack.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/max_stack.py"
+        }
+      ]
+    }
+  ]
+}

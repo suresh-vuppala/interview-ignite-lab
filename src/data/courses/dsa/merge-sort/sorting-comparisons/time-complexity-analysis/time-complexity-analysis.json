@@ -1,0 +1,26 @@
+{
+  "title": "Time Complexity Analysis",
+  "slug": "time-complexity-analysis",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "time-complexity-analysis.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/TimeComplexityAnalysis.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/TimeComplexityAnalysis.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/time_complexity_analysis.py"
+        }
+      ]
+    }
+  ]
+}

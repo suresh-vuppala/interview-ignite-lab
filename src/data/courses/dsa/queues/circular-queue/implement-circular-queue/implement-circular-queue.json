@@ -1,0 +1,26 @@
+{
+  "title": "Implement Circular Queue",
+  "slug": "implement-circular-queue",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "implement-circular-queue.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/ImplementCircularQueue.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/ImplementCircularQueue.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/implement_circular_queue.py"
+        }
+      ]
+    }
+  ]
+}

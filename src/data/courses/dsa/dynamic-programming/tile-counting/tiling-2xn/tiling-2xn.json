@@ -1,0 +1,26 @@
+{
+  "title": "Tiling 2\u00d7N Board",
+  "slug": "tiling-2xn",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "tiling-2xn.md",
+  "codeExamples": [
+    {
+      "title": "Tiling 2\u00d7N Board Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/tiling-2xn/code/java/Tiling2xn.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/tiling-2xn/code/cpp/Tiling2xn.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/tiling-2xn/code/python/tiling_2xn.py"
+        }
+      ]
+    }
+  ]
+}

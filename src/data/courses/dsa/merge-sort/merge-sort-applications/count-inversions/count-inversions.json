@@ -1,0 +1,26 @@
+{
+  "title": "Count Inversions",
+  "slug": "count-inversions",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "count-inversions.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/CountInversions.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/CountInversions.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/count_inversions.py"
+        }
+      ]
+    }
+  ]
+}

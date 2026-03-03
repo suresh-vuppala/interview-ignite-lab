@@ -1,0 +1,26 @@
+{
+  "title": "Implement Merge Sort",
+  "slug": "implement-merge-sort",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "implement-merge-sort.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/ImplementMergeSort.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/ImplementMergeSort.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/implement_merge_sort.py"
+        }
+      ]
+    }
+  ]
+}

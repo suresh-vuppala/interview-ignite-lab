@@ -1,0 +1,26 @@
+{
+  "title": "Sort Linked List",
+  "slug": "sort-linked-list",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "sort-linked-list.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/SortLinkedList.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/SortLinkedList.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/sort_linked_list.py"
+        }
+      ]
+    }
+  ]
+}

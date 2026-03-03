@@ -1,0 +1,3 @@
+class MaxSumNonAdjacent {
+    // DP solution
+};

@@ -1,0 +1,26 @@
+{
+  "title": "Daily Temperatures",
+  "slug": "daily-temperatures",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "daily-temperatures.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/DailyTemperatures.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/DailyTemperatures.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/daily_temperatures.py"
+        }
+      ]
+    }
+  ]
+}

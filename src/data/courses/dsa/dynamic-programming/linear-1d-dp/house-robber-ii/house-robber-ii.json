@@ -1,0 +1,26 @@
+{
+  "title": "House Robber II",
+  "slug": "house-robber-ii",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "house-robber-ii.md",
+  "codeExamples": [
+    {
+      "title": "House Robber II Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/house-robber-ii/code/java/HouseRobberIi.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/house-robber-ii/code/cpp/HouseRobberIi.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/house-robber-ii/code/python/house_robber_ii.py"
+        }
+      ]
+    }
+  ]
+}

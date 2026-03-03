@@ -1,0 +1,3 @@
+class LongestPalindromicSubsequence {
+    // DP solution
+};

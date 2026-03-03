@@ -1,0 +1,26 @@
+{
+  "title": "Internal vs External Sorting",
+  "slug": "internal-vs-external",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "internal-vs-external.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/InternalVsExternal.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/InternalVsExternal.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/internal_vs_external.py"
+        }
+      ]
+    }
+  ]
+}

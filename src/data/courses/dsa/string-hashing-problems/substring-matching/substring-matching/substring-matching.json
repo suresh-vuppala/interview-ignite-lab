@@ -1,0 +1,26 @@
+{
+    "title": "Substring Matching",
+    "slug": "substring-matching",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "substring-matching.md",
+    "codeExamples": [
+        {
+            "title": "Substring Matching",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/SubstringMatching.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/substring_matching.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/substring-matching.py"
+                }
+            ]
+        }
+    ]
+}

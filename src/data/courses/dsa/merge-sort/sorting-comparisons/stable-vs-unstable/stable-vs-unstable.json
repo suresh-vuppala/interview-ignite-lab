@@ -1,0 +1,26 @@
+{
+  "title": "Stable vs Unstable Sorting",
+  "slug": "stable-vs-unstable",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "stable-vs-unstable.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/StableVsUnstable.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/StableVsUnstable.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/stable_vs_unstable.py"
+        }
+      ]
+    }
+  ]
+}

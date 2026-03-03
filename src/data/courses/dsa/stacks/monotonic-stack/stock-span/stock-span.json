@@ -1,0 +1,26 @@
+{
+  "title": "Stock Span Problem",
+  "slug": "stock-span",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "stock-span.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/StockSpan.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/StockSpan.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/stock_span.py"
+        }
+      ]
+    }
+  ]
+}

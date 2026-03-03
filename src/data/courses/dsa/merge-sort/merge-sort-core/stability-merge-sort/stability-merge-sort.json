@@ -1,0 +1,26 @@
+{
+  "title": "Stability of Merge Sort",
+  "slug": "stability-merge-sort",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "stability-merge-sort.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/StabilityMergeSort.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/StabilityMergeSort.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/stability_merge_sort.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+    "title": "C++ Hashing Internals",
+    "slug": "cpp-hashing-internals",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "cpp-hashing-internals.md",
+    "codeExamples": [
+        {
+            "title": "C++ Hashing Internals",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "code/java/CppHashingInternals.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "code/cpp/cpp_hashing_internals.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "code/python/cpp-hashing-internals.py"
+                }
+            ]
+        }
+    ]
+}

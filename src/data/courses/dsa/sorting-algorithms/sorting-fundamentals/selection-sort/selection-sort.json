@@ -1,16 +1,24 @@
 {
-  "order": 4,
   "title": "Selection Sort",
   "slug": "selection-sort",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "selection-sort.md",
   "codeExamples": [
     {
-      "title": "Example",
+      "title": "Solution",
       "languages": [
         {
-          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/selection-sort/code/java/Example.java",
-          "language": "java"
+          "language": "java",
+          "codeFile": "code/java/SelectionSort.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/SelectionSort.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/selection_sort.py"
         }
       ]
     }

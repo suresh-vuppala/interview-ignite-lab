@@ -1,0 +1,26 @@
+{
+  "title": "Unbounded Knapsack",
+  "slug": "unbounded-knapsack",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "unbounded-knapsack.md",
+  "codeExamples": [
+    {
+      "title": "Unbounded Knapsack Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/unbounded-knapsack/code/java/UnboundedKnapsack.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/unbounded-knapsack/code/cpp/UnboundedKnapsack.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/unbounded-knapsack/code/python/unbounded_knapsack.py"
+        }
+      ]
+    }
+  ]
+}

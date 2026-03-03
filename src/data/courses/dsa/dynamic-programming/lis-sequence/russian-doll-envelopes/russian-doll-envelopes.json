@@ -1,0 +1,26 @@
+{
+  "title": "Russian Doll Envelopes",
+  "slug": "russian-doll-envelopes",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "russian-doll-envelopes.md",
+  "codeExamples": [
+    {
+      "title": "Russian Doll Envelopes Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/lis-sequence/russian-doll-envelopes/code/java/RussianDollEnvelopes.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/lis-sequence/russian-doll-envelopes/code/cpp/RussianDollEnvelopes.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/lis-sequence/russian-doll-envelopes/code/python/russian_doll_envelopes.py"
+        }
+      ]
+    }
+  ]
+}

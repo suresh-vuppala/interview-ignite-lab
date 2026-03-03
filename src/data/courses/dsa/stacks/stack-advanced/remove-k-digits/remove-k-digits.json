@@ -1,0 +1,26 @@
+{
+  "title": "Remove K Digits",
+  "slug": "remove-k-digits",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "remove-k-digits.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/RemoveKDigits.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/RemoveKDigits.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/remove_k_digits.py"
+        }
+      ]
+    }
+  ]
+}

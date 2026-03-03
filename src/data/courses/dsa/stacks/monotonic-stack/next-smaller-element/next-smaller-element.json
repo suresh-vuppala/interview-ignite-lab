@@ -1,0 +1,26 @@
+{
+  "title": "Next Smaller Element",
+  "slug": "next-smaller-element",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "next-smaller-element.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/NextSmallerElement.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/NextSmallerElement.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/next_smaller_element.py"
+        }
+      ]
+    }
+  ]
+}

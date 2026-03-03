@@ -1,0 +1,26 @@
+{
+  "title": "Binary Strings No Consecutive 1s",
+  "slug": "binary-strings-no-consecutive-1s",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "binary-strings-no-consecutive-1s.md",
+  "codeExamples": [
+    {
+      "title": "Binary Strings No Consecutive 1s Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/binary-strings-no-consecutive-1s/code/java/BinaryStringsNoConsecutive1s.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/binary-strings-no-consecutive-1s/code/cpp/BinaryStringsNoConsecutive1s.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/binary-strings-no-consecutive-1s/code/python/binary_strings_no_consecutive_1s.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Stock Buy Sell III",
+  "slug": "stock-buy-sell-iii",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "stock-buy-sell-iii.md",
+  "codeExamples": [
+    {
+      "title": "Stock Buy Sell III Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-iii/code/java/StockBuySellIii.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-iii/code/cpp/StockBuySellIii.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-iii/code/python/stock_buy_sell_iii.py"
+        }
+      ]
+    }
+  ]
+}

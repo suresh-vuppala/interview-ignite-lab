@@ -1,0 +1,26 @@
+{
+  "title": "Decode String",
+  "slug": "decode-string",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "decode-string.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/DecodeString.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/DecodeString.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/decode_string.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Egg Dropping Problem",
+  "slug": "egg-dropping",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "egg-dropping.md",
+  "codeExamples": [
+    {
+      "title": "Egg Dropping Problem Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/egg-dropping/code/java/EggDropping.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/egg-dropping/code/cpp/EggDropping.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/egg-dropping/code/python/egg_dropping.py"
+        }
+      ]
+    }
+  ]
+}

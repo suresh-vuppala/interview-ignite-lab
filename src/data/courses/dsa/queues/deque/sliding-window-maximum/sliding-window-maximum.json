@@ -1,0 +1,26 @@
+{
+  "title": "Sliding Window Maximum",
+  "slug": "sliding-window-maximum",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "sliding-window-maximum.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/SlidingWindowMaximum.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/SlidingWindowMaximum.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/sliding_window_maximum.py"
+        }
+      ]
+    }
+  ]
+}

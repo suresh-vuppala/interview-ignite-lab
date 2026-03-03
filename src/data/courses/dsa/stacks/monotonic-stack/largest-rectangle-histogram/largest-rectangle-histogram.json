@@ -1,0 +1,26 @@
+{
+  "title": "Largest Rectangle Histogram",
+  "slug": "largest-rectangle-histogram",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "largest-rectangle-histogram.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/LargestRectangleHistogram.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/LargestRectangleHistogram.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/largest_rectangle_histogram.py"
+        }
+      ]
+    }
+  ]
+}

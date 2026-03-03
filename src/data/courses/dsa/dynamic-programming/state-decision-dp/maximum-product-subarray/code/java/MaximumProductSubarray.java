@@ -1,0 +1,3 @@
+class MaximumProductSubarray {
+    // DP solution
+}

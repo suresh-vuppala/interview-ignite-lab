@@ -1,0 +1,26 @@
+{
+  "title": "Infix to Postfix",
+  "slug": "infix-to-postfix",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "infix-to-postfix.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/InfixToPostfix.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/InfixToPostfix.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/infix_to_postfix.py"
+        }
+      ]
+    }
+  ]
+}

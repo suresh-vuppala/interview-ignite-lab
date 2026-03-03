@@ -1,0 +1,3 @@
+class WaysReachNthStair {
+    // DP solution
+}

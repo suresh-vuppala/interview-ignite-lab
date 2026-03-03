@@ -1,0 +1,26 @@
+{
+  "title": "External Sorting",
+  "slug": "external-sorting",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "external-sorting.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/ExternalSorting.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/ExternalSorting.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/external_sorting.py"
+        }
+      ]
+    }
+  ]
+}

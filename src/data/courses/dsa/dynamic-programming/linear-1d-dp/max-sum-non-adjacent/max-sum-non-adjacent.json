@@ -1,0 +1,26 @@
+{
+  "title": "Maximum Sum Non-Adjacent",
+  "slug": "max-sum-non-adjacent",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "max-sum-non-adjacent.md",
+  "codeExamples": [
+    {
+      "title": "Maximum Sum Non-Adjacent Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/max-sum-non-adjacent/code/java/MaxSumNonAdjacent.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/max-sum-non-adjacent/code/cpp/MaxSumNonAdjacent.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/max-sum-non-adjacent/code/python/max_sum_non_adjacent.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Min Stack",
+  "slug": "min-stack",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "min-stack.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/MinStack.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/MinStack.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/min_stack.py"
+        }
+      ]
+    }
+  ]
+}

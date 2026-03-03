@@ -1,0 +1,26 @@
+{
+  "title": "Longest Palindromic Subsequence",
+  "slug": "longest-palindromic-subsequence",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "longest-palindromic-subsequence.md",
+  "codeExamples": [
+    {
+      "title": "Longest Palindromic Subsequence Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/longest-palindromic-subsequence/code/java/LongestPalindromicSubsequence.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/longest-palindromic-subsequence/code/cpp/LongestPalindromicSubsequence.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/longest-palindromic-subsequence/code/python/longest_palindromic_subsequence.py"
+        }
+      ]
+    }
+  ]
+}

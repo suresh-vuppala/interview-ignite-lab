@@ -1,0 +1,26 @@
+{
+  "title": "Comparison vs Non-comparison Sorting",
+  "slug": "comparison-vs-non-comparison",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "comparison-vs-non-comparison.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "code/java/ComparisonVsNonComparison.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/ComparisonVsNonComparison.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/comparison_vs_non_comparison.py"
+        }
+      ]
+    }
+  ]
+}

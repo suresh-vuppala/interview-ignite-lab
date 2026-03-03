@@ -1,0 +1,26 @@
+{
+  "title": "Ugly Numbers",
+  "slug": "ugly-numbers",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "ugly-numbers.md",
+  "codeExamples": [
+    {
+      "title": "Ugly Numbers Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/ugly-numbers/code/java/UglyNumbers.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/ugly-numbers/code/cpp/UglyNumbers.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/ugly-numbers/code/python/ugly_numbers.py"
+        }
+      ]
+    }
+  ]
+}
