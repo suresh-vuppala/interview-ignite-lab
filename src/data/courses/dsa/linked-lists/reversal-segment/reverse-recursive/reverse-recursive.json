@@ -1,0 +1,26 @@
+{
+  "title": "Reverse List (Recursive)",
+  "slug": "reverse-recursive",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "reverse-recursive.md",
+  "codeExamples": [
+    {
+      "title": "Reverse List (Recursive) Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-recursive/code/cpp/ReverseRecursive.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-recursive/code/java/ReverseRecursive.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-recursive/code/python/reverse_recursive.py"
+        }
+      ]
+    }
+  ]
+}

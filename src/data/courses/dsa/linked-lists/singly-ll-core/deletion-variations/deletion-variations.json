@@ -1,0 +1,26 @@
+{
+  "title": "Deletion Variations",
+  "slug": "deletion-variations",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "deletion-variations.md",
+  "codeExamples": [
+    {
+      "title": "Deletion Variations Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/deletion-variations/code/cpp/DeletionVariations.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/deletion-variations/code/java/DeletionVariations.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/deletion-variations/code/python/deletion_variations.py"
+        }
+      ]
+    }
+  ]
+}

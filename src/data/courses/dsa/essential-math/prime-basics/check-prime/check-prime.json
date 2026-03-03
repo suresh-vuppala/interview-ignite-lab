@@ -1,0 +1,30 @@
+{
+  "title": "Check Prime Number",
+  "difficulty": "easy",
+  "tags": [
+    "math",
+    "prime",
+    "number-theory"
+  ],
+  "codeExamples": [
+    {
+      "title": "Prime Checking",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/essential-math/prime-basics/check-prime/code/java/CheckPrime.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/essential-math/prime-basics/check-prime/code/cpp/CheckPrime.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/essential-math/prime-basics/check-prime/code/python/check_prime.py"
+        }
+      ]
+    }
+  ],
+  "isPosted": true,
+  "isPremium": false
+}

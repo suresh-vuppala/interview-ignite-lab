@@ -1,0 +1,26 @@
+{
+  "title": "Max Area Island",
+  "slug": "max-area-island",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "max-area-island.md",
+  "codeExamples": [
+    {
+      "title": "Max Area Island Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/max-area-island/code/cpp/MaxAreaIsland.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/max-area-island/code/java/MaxAreaIsland.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/max-area-island/code/python/max_area_island.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Sieve of Eratosthenes",
+  "difficulty": "medium",
+  "tags": [
+    "math",
+    "prime",
+    "sieve"
+  ],
+  "codeExamples": [
+    {
+      "title": "Sieve Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/essential-math/standard-sieve/sieve-eratosthenes/code/java/SieveEratosthenes.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/essential-math/standard-sieve/sieve-eratosthenes/code/cpp/SieveEratosthenes.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/essential-math/standard-sieve/sieve-eratosthenes/code/python/sieve_eratosthenes.py"
+        }
+      ]
+    }
+  ],
+  "isPosted": true,
+  "isPremium": false
+}

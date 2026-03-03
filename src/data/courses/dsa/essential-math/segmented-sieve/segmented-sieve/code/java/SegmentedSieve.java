@@ -1,0 +1,5 @@
+import java.util.*;
+public class SegmentedSieve {
+    List<Integer> segmentedSieve(long L, long R) { int lim=(int)Math.sqrt(R); boolean[] p=new boolean[lim+1]; Arrays.fill(p,true); p[0]=p[1]=false; for(int i=2;i*i<=lim;i++) if(p[i]) for(int j=i*i;j<=lim;j+=i) p[j]=false; List<Integer> primes=new ArrayList<>(); for(int i=2;i<=lim;i++) if(p[i]) primes.add(i); boolean[] seg=new boolean[(int)(R-L+1)]; Arrays.fill(seg,true); for(int prime:primes) { long start=Math.max(prime*prime,(L+prime-1)/prime*prime); for(long j=start;j<=R;j+=prime) seg[(int)(j-L)]=false; } List<Integer> res=new ArrayList<>(); for(long i=L;i<=R;i++) if(seg[(int)(i-L)]&&i>1) res.add((int)i); return res; }
+    public static void main(String[] a) { SegmentedSieve s=new SegmentedSieve(); System.out.println("Primes in [10,30]: "+s.segmentedSieve(10,30)); }
+}

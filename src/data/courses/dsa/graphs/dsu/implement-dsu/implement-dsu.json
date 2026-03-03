@@ -1,0 +1,26 @@
+{
+  "title": "Implement DSU",
+  "slug": "implement-dsu",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "implement-dsu.md",
+  "codeExamples": [
+    {
+      "title": "Implement DSU Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/dsu/implement-dsu/code/cpp/ImplementDsu.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/dsu/implement-dsu/code/java/ImplementDsu.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/dsu/implement-dsu/code/python/implement_dsu.py"
+        }
+      ]
+    }
+  ]
+}

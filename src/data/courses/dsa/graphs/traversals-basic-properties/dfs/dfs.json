@@ -1,0 +1,26 @@
+{
+  "title": "DFS",
+  "slug": "dfs",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "dfs.md",
+  "codeExamples": [
+    {
+      "title": "DFS Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/dfs/code/cpp/Dfs.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/dfs/code/java/Dfs.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/dfs/code/python/dfs.py"
+        }
+      ]
+    }
+  ]
+}

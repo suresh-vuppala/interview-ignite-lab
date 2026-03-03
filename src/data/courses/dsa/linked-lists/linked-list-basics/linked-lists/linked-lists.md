@@ -1,3 +1,0 @@
-# Linked Lists
-
-Content coming soon...

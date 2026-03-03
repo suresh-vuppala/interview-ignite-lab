@@ -1,0 +1,26 @@
+{
+  "title": "Add Two Numbers",
+  "slug": "add-two-numbers",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "add-two-numbers.md",
+  "codeExamples": [
+    {
+      "title": "Add Two Numbers Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/special-patterns/add-two-numbers/code/cpp/AddTwoNumbers.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/special-patterns/add-two-numbers/code/java/AddTwoNumbers.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/special-patterns/add-two-numbers/code/python/add_two_numbers.py"
+        }
+      ]
+    }
+  ]
+}

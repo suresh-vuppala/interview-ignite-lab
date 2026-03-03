@@ -1,0 +1,26 @@
+{
+  "title": "Shortest Unique Prefix",
+  "slug": "shortest-unique-prefix",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "shortest-unique-prefix.md",
+  "codeExamples": [
+    {
+      "title": "Shortest Unique Prefix Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/shortest-unique-prefix/code/java/ShortestUniquePrefix.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/shortest-unique-prefix/code/cpp/ShortestUniquePrefix.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/shortest-unique-prefix/code/python/shortest_unique_prefix.py"
+        }
+      ]
+    }
+  ]
+}

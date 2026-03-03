@@ -1,0 +1,26 @@
+{
+  "title": "Reverse Between Positions",
+  "slug": "reverse-between",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "reverse-between.md",
+  "codeExamples": [
+    {
+      "title": "Reverse Between Positions Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-between/code/cpp/ReverseBetween.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-between/code/java/ReverseBetween.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-between/code/python/reverse_between.py"
+        }
+      ]
+    }
+  ]
+}

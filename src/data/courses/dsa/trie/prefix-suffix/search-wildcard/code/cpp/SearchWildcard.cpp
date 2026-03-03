@@ -1,0 +1,3 @@
+class SearchWildcard {
+    // Implementation
+};

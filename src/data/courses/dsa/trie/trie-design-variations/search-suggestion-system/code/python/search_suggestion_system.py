@@ -1,0 +1,3 @@
+class SearchSuggestionSystem:
+    # Implementation
+    pass

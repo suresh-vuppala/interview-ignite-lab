@@ -1,3 +1,0 @@
-# Problems on Linked Lists
-
-Content coming soon...

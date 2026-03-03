@@ -1,0 +1,30 @@
+{
+  "title": "Nim Game",
+  "difficulty": "medium",
+  "tags": [
+    "math",
+    "game-theory",
+    "nim"
+  ],
+  "codeExamples": [
+    {
+      "title": "Basic Game Theory",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/essential-math/basic-game-problems/nim-game/code/java/NimGame.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/essential-math/basic-game-problems/nim-game/code/cpp/NimGame.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/essential-math/basic-game-problems/nim-game/code/python/nim_game.py"
+        }
+      ]
+    }
+  ],
+  "isPosted": true,
+  "isPremium": false
+}

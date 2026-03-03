@@ -1,0 +1,4 @@
+def factorize(n): f=[]; i=2; [(f.append(i) or (n:=n//i)) for _ in iter(lambda:n%i==0,False) for i in range(2,int(n**0.5)+1)]; [f.append(n) for _ in [1] if n>1]; return f
+def count_distinct(n): s=set(); [s.add(i) or [(n:=n//i) for _ in iter(lambda:n%i==0,False)] for i in range(2,int(n**0.5)+1) if n%i==0]; [s.add(n) for _ in [1] if n>1]; return len(s)
+def count_total(n): c=0; [(c:=c+1) or (n:=n//i) for i in range(2,int(n**0.5)+1) for _ in iter(lambda:n%i==0,False)]; return c+1 if n>1 else c
+print(f"Factors of 60: {factorize(60)}"); print(f"Distinct: {count_distinct(60)}"); print(f"Total: {count_total(60)}")

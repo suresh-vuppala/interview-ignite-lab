@@ -1,0 +1,26 @@
+{
+  "title": "Redundant Connection",
+  "slug": "redundant-connection",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "redundant-connection.md",
+  "codeExamples": [
+    {
+      "title": "Redundant Connection Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/dsu/redundant-connection/code/cpp/RedundantConnection.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/dsu/redundant-connection/code/java/RedundantConnection.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/dsu/redundant-connection/code/python/redundant_connection.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Sort Linked List",
+  "slug": "sort-list",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "sort-list.md",
+  "codeExamples": [
+    {
+      "title": "Sort Linked List Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/merge-sorting/sort-list/code/cpp/SortList.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/merge-sorting/sort-list/code/java/SortList.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/merge-sorting/sort-list/code/python/sort_list.py"
+        }
+      ]
+    }
+  ]
+}

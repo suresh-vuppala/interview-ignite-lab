@@ -1,3 +1,0 @@
-# Graph Traversals
-
-Content coming soon...

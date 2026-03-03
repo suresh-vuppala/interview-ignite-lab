@@ -1,0 +1,3 @@
+class TrieOperations {
+    // Implementation
+};

@@ -1,0 +1,26 @@
+{
+  "title": "Eventual Safe States",
+  "slug": "eventual-safe-states",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "eventual-safe-states.md",
+  "codeExamples": [
+    {
+      "title": "Eventual Safe States Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/topological-sort/eventual-safe-states/code/cpp/EventualSafeStates.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/topological-sort/eventual-safe-states/code/java/EventualSafeStates.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/topological-sort/eventual-safe-states/code/python/eventual_safe_states.py"
+        }
+      ]
+    }
+  ]
+}

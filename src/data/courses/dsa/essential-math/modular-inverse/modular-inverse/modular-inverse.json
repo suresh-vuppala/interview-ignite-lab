@@ -1,0 +1,30 @@
+{
+  "title": "Modular Inverse",
+  "difficulty": "hard",
+  "tags": [
+    "math",
+    "modular-arithmetic",
+    "number-theory"
+  ],
+  "codeExamples": [
+    {
+      "title": "Modular Inverse Methods",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/essential-math/modular-inverse/modular-inverse/code/java/ModularInverse.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/essential-math/modular-inverse/modular-inverse/code/cpp/ModularInverse.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/essential-math/modular-inverse/modular-inverse/code/python/modular_inverse.py"
+        }
+      ]
+    }
+  ],
+  "isPosted": true,
+  "isPremium": false
+}

@@ -1,0 +1,533 @@
+{
+  "id": "dsa",
+  "title": "Data Structures & Algorithms",
+  "description": "Structured roadmap covering fundamentals to advanced concepts in DSA with hands-on problem solving.",
+  "modules": [
+    {
+      "title": "Programming Essentials",
+      "slug": "programming-essentials",
+      "icon": "Code",
+      "sections": [
+        {
+          "title": "Getting Started",
+          "slug": "getting-started",
+          "lessons": [
+            { "title": "Getting Started with Easy Problems", "slug": "getting-started-with-easy-problems" , "isPremium": true},
+            { "title": "Anatomy of Problem Statement", "slug": "anatomy-of-problem-statement" },
+            { "title": "Input/Output", "slug": "input-output" },
+            { "title": "Getting Started with Arrays", "slug": "getting-started-with-arrays" }
+          ]
+        },
+        {
+          "title": "Understanding Time and Space Complexity Analysis",
+          "slug": "complexity-analysis",
+          "lessons": [
+            { "title": "Time Complexity Analysis of Iterative Programs", "slug": "time-complexity-iterative" },
+            { "title": "Time Complexity Analysis of Recursive Programs", "slug": "time-complexity-recursive" },
+            { "title": "Common Complexities and Constraints", "slug": "common-complexities" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Subarrays, Subsets & Recursion",
+      "slug": "subarrays-subsets-recursion",
+      "icon": "Layers",
+      "sections": [
+        {
+          "title": "Core Topics",
+          "slug": "core-topics",
+          "lessons": [
+            { "title": "Subarrays vs Subsets vs Subsequences", "slug": "subarrays-vs-subsets-vs-subsequences" },
+            { "title": "Bit Manipulation", "slug": "bit-manipulation" },
+            { "title": "Recursion", "slug": "recursion" },
+            { "title": "Backtracking", "slug": "backtracking" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sorting Algorithms",
+      "slug": "sorting-algorithms",
+      "icon": "List",
+      "sections": [
+        {
+          "title": "Sorting Fundamentals",
+          "slug": "sorting-fundamentals",
+          "lessons": [
+            { "title": "Standard Sorting Algorithms", "slug": "standard-sorting-algorithms" },
+            { "title": "Bubble Sort", "slug": "bubble-sort" },
+            { "title": "Insertion Sort", "slug": "insertion-sort" },
+            { "title": "Selection Sort", "slug": "selection-sort" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Two Pointer Technique",
+      "slug": "two-pointer-technique",
+      "icon": "Code",
+      "sections": [
+        {
+          "title": "Two Pointer Applications",
+          "slug": "two-pointer-applications",
+          "lessons": [
+            { "title": "Introduction to Two Pointer Technique", "slug": "intro-two-pointer", "isPosted": true },
+            { "title": "Problems on Two Pointer Technique", "slug": "problems-two-pointer" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Merge Sort",
+      "slug": "merge-sort",
+      "icon": "List",
+      "sections": [
+        {
+          "title": "Merge Sort Applications",
+          "slug": "merge-sort-applications",
+          "lessons": [
+            { "title": "Merge Sort and Its Applications", "slug": "merge-sort-applications" },
+            { "title": "Comparisons and Classifications", "slug": "comparisons-classifications" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Searching Algorithms",
+      "slug": "searching-algorithms",
+      "icon": "Search",
+      "sections": [
+        {
+          "title": "CONCEPT",
+          "slug": "search-fundamentals",
+          "lessons": [
+            { "title": "Introduction to Searching Algorithms", "slug": "intro-searching", "isPosted": true },
+            { "title": "Linear Search", "slug": "linear-search", "isPosted": true },
+            { "title": "Binary Search", "slug": "binary-search", "isPosted": true },
+            { "title": "Applications of Binary Search", "slug": "binary-search-applications", "isPosted": true }
+          ]
+        },
+        {
+          "title": "Binary Search the Answer",
+          "slug": "binary-search-the-answer-section",
+          "lessons": []
+        },
+        {
+          "title": "SORTED ARRAY",
+          "slug": "sorted-array",
+          "lessons": [
+            { "title": "Monotonic Function", "slug": "monotonic-function", "isPosted": true },
+            { "title": "Find the First True in a Sorted Boolean Array", "slug": "find-first-true", "isPosted": true },
+            { "title": "First Element Not Smaller Than Target", "slug": "first-not-smaller-than-target", "isPosted": true },
+            { "title": "First and Last Occurrence", "slug": "first-and-last-occurrence", "isPosted": true },
+            { "title": "Square Root Estimation", "slug": "square-root-estimation", "isPosted": true }
+          ]
+        },
+        {
+          "title": "Implicitly Sorted Array",
+          "slug": "implicitly-sorted-array",
+          "lessons": [
+            { "title": "Minimum in Rotated Sorted Array", "slug": "minimum-in-rotated-sorted-array", "isPosted": true },
+            { "title": "Peak of Mountain Array", "slug": "peak-of-mountain-array", "isPosted": true }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Math for Programming",
+      "slug": "math-for-programming",
+      "icon": "Calculator",
+      "sections": [
+        {
+          "title": "Essential Math",
+          "slug": "essential-math",
+          "lessons": [
+            { "title": "Prime Numbers", "slug": "prime-numbers" },
+            { "title": "Sieve of Eratosthenes", "slug": "sieve-of-eratosthenes" },
+            { "title": "Segmented Sieve", "slug": "segmented-sieve" },
+            { "title": "Modular Arithmetic", "slug": "modular-arithmetic" },
+            { "title": "Game Theory", "slug": "game-theory" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Hashing",
+      "slug": "hashing",
+      "icon": "Database",
+      "sections": [
+        {
+          "title": "Hashing Basics",
+          "slug": "hashing-basics",
+          "lessons": [
+            { "title": "Introduction to Hashing", "slug": "intro-to-hashing" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sliding Window Technique",
+      "slug": "sliding-window-technique",
+      "icon": "Text",
+      "sections": [
+        {
+          "title": "Sliding Window",
+          "slug": "sliding-window",
+          "lessons": [
+            { "title": "Introducing Sliding Window Technique", "slug": "introducing-sliding-window" },
+            { "title": "Maximum Sum of K Consecutive Elements", "slug": "max-sum-k-elements" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Prefix Sum",
+      "slug": "prefix-sum",
+      "icon": "Plus",
+      "sections": [
+        {
+          "title": "Prefix Sum Fundamentals",
+          "slug": "prefix-sum-fundamentals",
+          "lessons": [
+            { "title": "Range Sum Query - Immutable", "slug": "range-sum-query-immutable", "isPosted": true },
+            { "title": "Subarray Sum Equals K", "slug": "subarray-sum-equals-k", "isPosted": true },
+            { "title": "Continuous Subarray Sum", "slug": "continuous-subarray-sum", "isPosted": true },
+            { "title": "2D Range Sum Query - Immutable", "slug": "2d-range-sum-query-immutable", "isPosted": true },
+            { "title": "Longest Well-Performing Interval", "slug": "longest-well-performing-interval", "isPosted": true },
+            { "title": "Longest Balanced Substring", "slug": "longest-balanced-substring", "isPosted": true }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "String Problems",
+      "slug": "string-problems",
+      "icon": "Text",
+      "sections": [
+        {
+          "title": "String & Rolling Hash",
+          "slug": "string-rolling-hash",
+          "lessons": [
+            { "title": "Getting Started with String Problems", "slug": "getting-started-with-strings" },
+            { "title": "Problems on Rolling Hash", "slug": "problems-on-rolling-hash" },
+            { "title": "Substring Matching", "slug": "substring-matching" },
+            { "title": "Rabin-Karp", "slug": "rabin-karp" },
+            { "title": "Longest Common Substring", "slug": "longest-common-substring" },
+            { "title": "Prefix Sum", "slug": "prefix-sum" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Stacks",
+      "slug": "stacks",
+      "icon": "Layers",
+      "sections": [
+        {
+          "title": "Stack",
+          "slug": "stack",
+          "lessons": [
+            { "title": "Stack", "slug": "stack-queue-deque" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Queues",
+      "slug": "queues",
+      "icon": "Layers",
+      "sections": [
+        {
+          "title": "Queue",
+          "slug": "queue",
+          "lessons": [
+            { "title": "Queue and Deque", "slug": "deque" },
+            { "title": "Circular Queue", "slug": "circular-queue" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Linked Lists",
+      "slug": "linked-lists",
+      "icon": "Link2",
+      "sections": [
+        {
+          "title": "Linked List Basics",
+          "slug": "linked-list-basics",
+          "lessons": [
+            { "title": "Linked Lists", "slug": "linked-lists" },
+            { "title": "Problems on Linked Lists", "slug": "problems-on-linked-lists" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Trees",
+      "slug": "trees",
+      "icon": "TreePine",
+      "sections": [
+        {
+          "title": "Binary Tree Core Operations",
+          "slug": "binary-tree-core-operations",
+          "lessons": [
+            { "title": "Insert/Update/Search/Delete BT", "slug": "bt-core-ops" },
+            { "title": "Create Binary Tree (manual + level order)", "slug": "create-binary-tree" },
+            { "title": "Count Total Nodes", "slug": "count-total-nodes" },
+            { "title": "Count Leaf & Internal Nodes", "slug": "count-leaf-internal-nodes" },
+            { "title": "Height of Tree", "slug": "height-of-tree" },
+            { "title": "Maximum / Minimum Value", "slug": "max-min-value" }
+          ]
+        },
+        {
+          "title": "Traversal Block",
+          "slug": "traversal-block",
+          "lessons": [
+            { "title": "Inorder (recursive + iterative)", "slug": "inorder" },
+            { "title": "Preorder (recursive + iterative)", "slug": "preorder" },
+            { "title": "Postorder (recursive + iterative)", "slug": "postorder" },
+            { "title": "Level Order Traversal", "slug": "level-order" },
+            { "title": "Reverse Level Order", "slug": "reverse-level-order" },
+            { "title": "Zigzag Traversal", "slug": "zigzag-traversal" },
+            { "title": "Boundary Traversal", "slug": "boundary-traversal" },
+            { "title": "Diagonal Traversal", "slug": "diagonal-traversal" },
+            { "title": "Morris Traversal", "slug": "morris-traversal" }
+          ]
+        },
+        {
+          "title": "Structural / Property Problems",
+          "slug": "structural-property-problems",
+          "lessons": [
+            { "title": "Check if Balanced", "slug": "check-if-balanced" },
+            { "title": "Diameter of Tree", "slug": "diameter-of-tree" },
+            { "title": "Maximum Width", "slug": "maximum-width" },
+            { "title": "Identical Trees", "slug": "identical-trees" },
+            { "title": "Symmetric Tree", "slug": "symmetric-tree" },
+            { "title": "Mirror Tree", "slug": "mirror-tree" },
+            { "title": "Subtree Check", "slug": "subtree-check" },
+            { "title": "Complete / Full / Perfect Tree Check", "slug": "tree-type-check" }
+          ]
+        },
+        {
+          "title": "Path & Relationship Problems",
+          "slug": "path-relationship-problems",
+          "lessons": [
+            { "title": "All Root-to-Leaf Paths", "slug": "all-root-to-leaf-paths" },
+            { "title": "Path Sum Exists", "slug": "path-sum-exists" },
+            { "title": "All Paths with Given Sum", "slug": "paths-with-sum" },
+            { "title": "Maximum Root-to-Leaf Sum", "slug": "max-root-to-leaf-sum" },
+            { "title": "Maximum Path Sum (any to any)", "slug": "max-path-sum" },
+            { "title": "Count Paths with Given Sum", "slug": "count-paths-with-sum" },
+            { "title": "Lowest Common Ancestor (BT)", "slug": "lca-bt" },
+            { "title": "Distance Between Two Nodes", "slug": "distance-between-nodes" },
+            { "title": "Kth Ancestor", "slug": "kth-ancestor" }
+          ]
+        },
+        {
+          "title": "Tree Modification Block",
+          "slug": "tree-modification-block",
+          "lessons": [
+            { "title": "Invert Tree", "slug": "invert-tree" },
+            { "title": "Flatten to Linked List", "slug": "flatten-to-linked-list" },
+            { "title": "Convert to Doubly Linked List", "slug": "convert-to-dll" },
+            { "title": "Delete Leaves with Given Value", "slug": "delete-leaves" },
+            { "title": "Prune Tree", "slug": "prune-tree" },
+            { "title": "Add Row at Depth", "slug": "add-row-at-depth" },
+            { "title": "Trim Tree", "slug": "trim-tree" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Binary Search Trees",
+      "slug": "binary-search-trees",
+      "icon": "TreePine",
+      "sections": [
+        {
+          "title": "BST Core Operations",
+          "slug": "bst-core-operations",
+          "lessons": [
+            { "title": "Insert/Search/Update/Delete BST", "slug": "bst-core-ops" },
+            { "title": "Validate BST", "slug": "validate-bst" },
+            { "title": "Floor & Ceil", "slug": "floor-ceil" },
+            { "title": "Kth Smallest / Largest", "slug": "kth-smallest-largest" },
+            { "title": "LCA in BST", "slug": "lca-bst" },
+            { "title": "Two Sum in BST", "slug": "two-sum-bst" }
+          ]
+        },
+        {
+          "title": "BST Transformations",
+          "slug": "bst-transformations",
+          "lessons": [
+            { "title": "Sorted Array → BST", "slug": "sorted-array-to-bst" },
+            { "title": "BST → Sorted DLL", "slug": "bst-to-dll" },
+            { "title": "Recover Swapped BST", "slug": "recover-swapped-bst" },
+            { "title": "Construct BST from Preorder", "slug": "bst-from-preorder" },
+            { "title": "Construct BST from Postorder", "slug": "bst-from-postorder" }
+          ]
+        },
+        {
+          "title": "Views & Vertical Problems",
+          "slug": "views-vertical-problems",
+          "lessons": [
+            { "title": "Left View", "slug": "left-view" },
+            { "title": "Right View", "slug": "right-view" },
+            { "title": "Top View", "slug": "top-view" },
+            { "title": "Bottom View", "slug": "bottom-view" },
+            { "title": "Vertical Order Traversal", "slug": "vertical-order" },
+            { "title": "Vertical Sum", "slug": "vertical-sum" },
+            { "title": "Boundary View", "slug": "boundary-view" },
+            { "title": "Diagonal View", "slug": "diagonal-view" }
+          ]
+        },
+        {
+          "title": "Construction + Serialization",
+          "slug": "construction-serialization",
+          "lessons": [
+            { "title": "Inorder + Preorder", "slug": "inorder-preorder" },
+            { "title": "Inorder + Postorder", "slug": "inorder-postorder" },
+            { "title": "Level Order Construction", "slug": "level-order-construction" },
+            { "title": "Serialize Tree", "slug": "serialize-tree" },
+            { "title": "Deserialize Tree", "slug": "deserialize-tree" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Advanced Tree Problems",
+      "slug": "advanced-tree-problems",
+      "icon": "GitBranch",
+      "sections": [
+        {
+          "title": "Advanced / Hard / DP on Trees",
+          "slug": "advanced-hard-dp-trees",
+          "lessons": [
+            { "title": "Binary Tree Cameras", "slug": "binary-tree-cameras" },
+            { "title": "House Robber III", "slug": "house-robber-iii" },
+            { "title": "Largest BST in Binary Tree", "slug": "largest-bst-in-binary-tree" },
+            { "title": "Maximum Sum BST", "slug": "maximum-sum-bst" },
+            { "title": "Distribute Coins", "slug": "distribute-coins" },
+            { "title": "Binary Lifting (kth ancestor optimized)", "slug": "binary-lifting" },
+            { "title": "Re-rooting DP", "slug": "re-rooting-dp" },
+            { "title": "Tree Diameter (DP style)", "slug": "tree-diameter-dp" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "title": "Trie",
+      "slug": "trie",
+      "icon": "GitBranch",
+      "sections": [
+        {
+          "title": "Trie",
+          "slug": "trie",
+          "lessons": [
+            { "title": "Trie Introduction", "slug": "trie-introduction" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Heaps",
+      "slug": "heaps",
+      "icon": "Triangle",
+      "sections": [
+        {
+          "title": "Heap Fundamentals",
+          "slug": "heap-fundamentals",
+          "lessons": [
+            { "title": "Heaps", "slug": "heaps" },
+            { "title": "Min/Max Heap", "slug": "min-max-heap" },
+            { "title": "Heap Sort", "slug": "heap-sort" },
+            { "title": "Problems on Heap", "slug": "problems-on-heap" }
+          ]
+        }
+        ,
+        {
+          "title": "Top K",
+          "slug": "top-k",
+          "lessons": [
+            { "title": "K Closest Points", "slug": "k-closest-points", "isPosted": true },
+            { "title": "Merge K Sorted Lists", "slug": "merge-k-sorted-lists", "isPosted": true },
+            { "title": "Kth Largest Element in an Array", "slug": "kth-largest-element-in-array", "isPosted": true },
+            { "title": "Kth Smallest Element in a Sorted Matrix", "slug": "kth-smallest-element-in-sorted-matrix", "isPosted": true }
+          ]
+        },
+        {
+          "title": "Multiple Heaps",
+          "slug": "multiple-heaps",
+          "lessons": [
+            { "title": "Median of Data Stream", "slug": "median-of-data-stream", "isPosted": true }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Dynamic Programming",
+      "slug": "dynamic-programming",
+      "icon": "Brain",
+      "sections": [
+        {
+          "title": "DP Fundamentals",
+          "slug": "dp-fundamentals",
+          "lessons": [
+            { "title": "Dynamic Programming", "slug": "dynamic-programming" },
+            { "title": "Nth Fibonacci Number", "slug": "nth-fibonacci" },
+            { "title": "Memoization - Nth Fibonacci", "slug": "memoization" },
+            { "title": "Tabulation - Nth Fibonacci", "slug": "tabulation" }
+          ]
+        },
+        {
+          "title": "DP Problems",
+          "slug": "dp-problems",
+          "lessons": [
+            { "title": "Tile Problem", "slug": "tile-problem" },
+            { "title": "Maximum  Subarray Sum", "slug": "max-subarray-sum" },
+            { "title": "Paths in a Matrix", "slug": "paths-in-a-matrix" },
+            { "title": "String Problem", "slug": "memoization" },
+            { "title": "Classic DP Problems", "slug": "classic-dp-problems" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Advanced DP",
+      "slug": "advanced-dp",
+      "icon": "Brain",
+      "sections": [
+        {
+          "title": "Advanced DP Problems",
+          "slug": "advanced-dp-problems",
+          "lessons": [
+            { "title": "Advanced DP Problems", "slug": "advanced-dp-problems" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Graphs",
+      "slug": "graphs",
+      "icon": "Network",
+      "sections": [
+        {
+          "title": "Graph Fundamentals",
+          "slug": "graph-fundamentals",
+          "lessons": [
+            { "title": "Introduction to Graphs", "slug": "introduction-to-graphs" },
+            { "title": "Graph Traversals", "slug": "graph-traversals" },
+            { "title": "Basics - BFS & DFS", "slug": "bfs-dfs-basics" },
+            { "title": "Problems", "slug": "graph-problems" },
+            { "title": "Dijkstra’s Algorithm", "slug": "dijkstra" },
+            { "title": "Topological Sorting", "slug": "topological-sorting" },
+            { "title": "Bipartite Graphs", "slug": "bipartite-graphs" },
+            { "title": "Kruskal's Algorithm", "slug": "kruskal" },
+            { "title": "Union-Find", "slug": "union-find" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Prime Factorization",
+  "difficulty": "medium",
+  "tags": [
+    "math",
+    "prime",
+    "factorization"
+  ],
+  "codeExamples": [
+    {
+      "title": "Factorization Methods",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/essential-math/prime-factorization/prime-factorization/code/java/PrimeFactorization.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/essential-math/prime-factorization/prime-factorization/code/cpp/PrimeFactorization.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/essential-math/prime-factorization/prime-factorization/code/python/prime_factorization.py"
+        }
+      ]
+    }
+  ],
+  "isPosted": true,
+  "isPremium": false
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Flatten Multilevel List",
+  "slug": "flatten-multilevel",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "flatten-multilevel.md",
+  "codeExamples": [
+    {
+      "title": "Flatten Multilevel List Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/special-patterns/flatten-multilevel/code/cpp/FlattenMultilevel.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/special-patterns/flatten-multilevel/code/java/FlattenMultilevel.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/special-patterns/flatten-multilevel/code/python/flatten_multilevel.py"
+        }
+      ]
+    }
+  ]
+}

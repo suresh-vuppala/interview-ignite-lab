@@ -1,0 +1,26 @@
+{
+  "title": "Reverse in K-Groups",
+  "slug": "reverse-k-groups",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "reverse-k-groups.md",
+  "codeExamples": [
+    {
+      "title": "Reverse in K-Groups Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-k-groups/code/cpp/ReverseKGroups.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-k-groups/code/java/ReverseKGroups.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-k-groups/code/python/reverse_k_groups.py"
+        }
+      ]
+    }
+  ]
+}

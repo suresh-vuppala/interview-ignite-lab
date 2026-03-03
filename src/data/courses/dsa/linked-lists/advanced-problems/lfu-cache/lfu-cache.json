@@ -1,0 +1,16 @@
+{
+  "title": "LFU Cache",
+  "description": "Design and implement a Least Frequently Used (LFU) cache with O(1) operations",
+  "difficulty": "hard",
+  "tags": ["linked-list", "hash-map", "design", "cache"],
+  "codeExamples": [
+    {
+      "title": "LFU Cache Implementation",
+      "languages": [
+        {"language": "java", "codeFile": "courses/dsa/linked-lists/advanced-problems/lfu-cache/code/java/LfuCache.java"},
+        {"language": "cpp", "codeFile": "courses/dsa/linked-lists/advanced-problems/lfu-cache/code/cpp/LfuCache.cpp"},
+        {"language": "python", "codeFile": "courses/dsa/linked-lists/advanced-problems/lfu-cache/code/python/lfu_cache.py"}
+      ]
+    }
+  ]
+}

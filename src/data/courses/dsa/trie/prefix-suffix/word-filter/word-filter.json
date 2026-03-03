@@ -1,0 +1,26 @@
+{
+  "title": "WordFilter",
+  "slug": "word-filter",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "word-filter.md",
+  "codeExamples": [
+    {
+      "title": "WordFilter Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/prefix-suffix/word-filter/code/java/WordFilter.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/prefix-suffix/word-filter/code/cpp/WordFilter.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/prefix-suffix/word-filter/code/python/word_filter.py"
+        }
+      ]
+    }
+  ]
+}

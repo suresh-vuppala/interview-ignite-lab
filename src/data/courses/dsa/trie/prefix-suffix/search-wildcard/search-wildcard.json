@@ -1,0 +1,26 @@
+{
+  "title": "Search with Wildcard",
+  "slug": "search-wildcard",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "search-wildcard.md",
+  "codeExamples": [
+    {
+      "title": "Search with Wildcard Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/prefix-suffix/search-wildcard/code/java/SearchWildcard.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/prefix-suffix/search-wildcard/code/cpp/SearchWildcard.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/prefix-suffix/search-wildcard/code/python/search_wildcard.py"
+        }
+      ]
+    }
+  ]
+}

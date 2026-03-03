@@ -1,0 +1,3 @@
+class CountDistinctSubstrings {
+    // Implementation
+}

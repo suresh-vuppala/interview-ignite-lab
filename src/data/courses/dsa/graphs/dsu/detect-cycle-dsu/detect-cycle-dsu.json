@@ -1,0 +1,26 @@
+{
+  "title": "Detect Cycle DSU",
+  "slug": "detect-cycle-dsu",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "detect-cycle-dsu.md",
+  "codeExamples": [
+    {
+      "title": "Detect Cycle DSU Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/dsu/detect-cycle-dsu/code/cpp/DetectCycleDsu.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/dsu/detect-cycle-dsu/code/java/DetectCycleDsu.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/dsu/detect-cycle-dsu/code/python/detect_cycle_dsu.py"
+        }
+      ]
+    }
+  ]
+}

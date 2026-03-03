@@ -1,0 +1,26 @@
+{
+  "title": "Find Words in Grid",
+  "slug": "find-words-grid",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "find-words-grid.md",
+  "codeExamples": [
+    {
+      "title": "Find Words in Grid Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/trie-dfs-backtracking/find-words-grid/code/java/FindWordsGrid.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/trie-dfs-backtracking/find-words-grid/code/cpp/FindWordsGrid.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/trie-dfs-backtracking/find-words-grid/code/python/find_words_grid.py"
+        }
+      ]
+    }
+  ]
+}

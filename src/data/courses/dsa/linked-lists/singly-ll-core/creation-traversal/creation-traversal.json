@@ -1,0 +1,26 @@
+{
+  "title": "Creation & Traversal",
+  "slug": "creation-traversal",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "creation-traversal.md",
+  "codeExamples": [
+    {
+      "title": "Creation & Traversal Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/creation-traversal/code/cpp/CreationTraversal.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/creation-traversal/code/java/CreationTraversal.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/creation-traversal/code/python/creation_traversal.py"
+        }
+      ]
+    }
+  ]
+}

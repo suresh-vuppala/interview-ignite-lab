@@ -1,0 +1,26 @@
+{
+  "title": "Merge Two Sorted Lists",
+  "slug": "merge-two-sorted",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "merge-two-sorted.md",
+  "codeExamples": [
+    {
+      "title": "Merge Two Sorted Lists Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/merge-sorting/merge-two-sorted/code/cpp/MergeTwoSorted.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/merge-sorting/merge-two-sorted/code/java/MergeTwoSorted.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/merge-sorting/merge-two-sorted/code/python/merge_two_sorted.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "GCD and LCM",
+  "difficulty": "easy",
+  "tags": [
+    "math",
+    "gcd",
+    "lcm"
+  ],
+  "codeExamples": [
+    {
+      "title": "GCD LCM Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/essential-math/core-number-operations/gcd-lcm/code/java/GcdLcm.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/essential-math/core-number-operations/gcd-lcm/code/cpp/GcdLcm.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/essential-math/core-number-operations/gcd-lcm/code/python/gcd_lcm.py"
+        }
+      ]
+    }
+  ],
+  "isPosted": true,
+  "isPremium": false
+}

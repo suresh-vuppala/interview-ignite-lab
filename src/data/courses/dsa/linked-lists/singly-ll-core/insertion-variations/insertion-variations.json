@@ -1,0 +1,26 @@
+{
+  "title": "Insertion Variations",
+  "slug": "insertion-variations",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "insertion-variations.md",
+  "codeExamples": [
+    {
+      "title": "Insertion Variations Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/insertion-variations/code/cpp/InsertionVariations.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/insertion-variations/code/java/InsertionVariations.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/insertion-variations/code/python/insertion_variations.py"
+        }
+      ]
+    }
+  ]
+}

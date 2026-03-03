@@ -1,0 +1,26 @@
+{
+  "title": "Offline XOR Queries",
+  "slug": "offline-xor-queries",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "offline-xor-queries.md",
+  "codeExamples": [
+    {
+      "title": "Offline XOR Queries Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/binary-trie/offline-xor-queries/code/java/OfflineXorQueries.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/binary-trie/offline-xor-queries/code/cpp/OfflineXorQueries.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/binary-trie/offline-xor-queries/code/python/offline_xor_queries.py"
+        }
+      ]
+    }
+  ]
+}

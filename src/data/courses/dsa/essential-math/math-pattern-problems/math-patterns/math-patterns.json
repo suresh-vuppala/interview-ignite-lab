@@ -1,0 +1,30 @@
+{
+  "title": "Math Pattern Problems",
+  "difficulty": "medium",
+  "tags": [
+    "math",
+    "patterns",
+    "fibonacci"
+  ],
+  "codeExamples": [
+    {
+      "title": "Common Math Patterns",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/essential-math/math-pattern-problems/math-patterns/code/java/MathPatterns.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/essential-math/math-pattern-problems/math-patterns/code/cpp/MathPatterns.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/essential-math/math-pattern-problems/math-patterns/code/python/math_patterns.py"
+        }
+      ]
+    }
+  ],
+  "isPosted": true,
+  "isPremium": false
+}

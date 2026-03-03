@@ -1,0 +1,16 @@
+{
+  "title": "LRU Cache",
+  "description": "Design and implement a Least Recently Used (LRU) cache with O(1) operations",
+  "difficulty": "medium",
+  "tags": ["linked-list", "hash-map", "design", "cache"],
+  "codeExamples": [
+    {
+      "title": "LRU Cache Implementation",
+      "languages": [
+        {"language": "java", "codeFile": "courses/dsa/linked-lists/advanced-problems/lru-cache/code/java/LruCache.java"},
+        {"language": "cpp", "codeFile": "courses/dsa/linked-lists/advanced-problems/lru-cache/code/cpp/LruCache.cpp"},
+        {"language": "python", "codeFile": "courses/dsa/linked-lists/advanced-problems/lru-cache/code/python/lru_cache.py"}
+      ]
+    }
+  ]
+}

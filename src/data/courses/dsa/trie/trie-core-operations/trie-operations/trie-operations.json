@@ -1,0 +1,26 @@
+{
+  "title": "Trie Operations",
+  "slug": "trie-operations",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "trie-operations.md",
+  "codeExamples": [
+    {
+      "title": "Trie Operations Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/trie-core-operations/trie-operations/code/java/TrieOperations.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/trie-core-operations/trie-operations/code/cpp/TrieOperations.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/trie-core-operations/trie-operations/code/python/trie_operations.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Search Suggestion System",
+  "slug": "search-suggestion-system",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "search-suggestion-system.md",
+  "codeExamples": [
+    {
+      "title": "Search Suggestion System Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/trie-design-variations/search-suggestion-system/code/java/SearchSuggestionSystem.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/trie-design-variations/search-suggestion-system/code/cpp/SearchSuggestionSystem.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/trie-design-variations/search-suggestion-system/code/python/search_suggestion_system.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+class PalindromePairs {
+    // Implementation
+};

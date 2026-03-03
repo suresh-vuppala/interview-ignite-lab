@@ -1,0 +1,26 @@
+{
+  "title": "Compressed Trie (Radix Tree)",
+  "slug": "compressed-trie",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "compressed-trie.md",
+  "codeExamples": [
+    {
+      "title": "Compressed Trie (Radix Tree) Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/trie-design-variations/compressed-trie/code/java/CompressedTrie.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/trie-design-variations/compressed-trie/code/cpp/CompressedTrie.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/trie-design-variations/compressed-trie/code/python/compressed_trie.py"
+        }
+      ]
+    }
+  ]
+}

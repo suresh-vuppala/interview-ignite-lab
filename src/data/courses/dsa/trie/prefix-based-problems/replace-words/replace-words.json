@@ -1,0 +1,26 @@
+{
+  "title": "Replace Words",
+  "slug": "replace-words",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "replace-words.md",
+  "codeExamples": [
+    {
+      "title": "Replace Words Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/replace-words/code/java/ReplaceWords.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/replace-words/code/cpp/ReplaceWords.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/replace-words/code/python/replace_words.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Count Prefix-Suffix Pairs",
+  "slug": "count-prefix-suffix-pairs",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "count-prefix-suffix-pairs.md",
+  "codeExamples": [
+    {
+      "title": "Count Prefix-Suffix Pairs Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/prefix-suffix/count-prefix-suffix-pairs/code/java/CountPrefixSuffixPairs.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/prefix-suffix/count-prefix-suffix-pairs/code/cpp/CountPrefixSuffixPairs.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/prefix-suffix/count-prefix-suffix-pairs/code/python/count_prefix_suffix_pairs.py"
+        }
+      ]
+    }
+  ]
+}

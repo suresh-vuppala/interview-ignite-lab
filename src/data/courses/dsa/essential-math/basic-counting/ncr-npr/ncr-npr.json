@@ -1,0 +1,30 @@
+{
+  "title": "nCr and nPr",
+  "difficulty": "medium",
+  "tags": [
+    "math",
+    "combinatorics",
+    "counting"
+  ],
+  "codeExamples": [
+    {
+      "title": "Combinations and Permutations",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/essential-math/basic-counting/ncr-npr/code/java/NcrNpr.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/essential-math/basic-counting/ncr-npr/code/cpp/NcrNpr.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/essential-math/basic-counting/ncr-npr/code/python/ncr_npr.py"
+        }
+      ]
+    }
+  ],
+  "isPosted": true,
+  "isPremium": false
+}

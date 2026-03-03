@@ -1,0 +1,3 @@
+class TernarySearchTree:
+    # Implementation
+    pass

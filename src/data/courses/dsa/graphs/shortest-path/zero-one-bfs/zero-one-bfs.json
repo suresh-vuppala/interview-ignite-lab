@@ -1,0 +1,26 @@
+{
+  "title": "Zero One BFS",
+  "slug": "zero-one-bfs",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "zero-one-bfs.md",
+  "codeExamples": [
+    {
+      "title": "Zero One BFS Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/shortest-path/zero-one-bfs/code/cpp/ZeroOneBfs.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/shortest-path/zero-one-bfs/code/java/ZeroOneBfs.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/shortest-path/zero-one-bfs/code/python/zero_one_bfs.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Ternary Search Tree",
+  "slug": "ternary-search-tree",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "ternary-search-tree.md",
+  "codeExamples": [
+    {
+      "title": "Ternary Search Tree Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/trie-design-variations/ternary-search-tree/code/java/TernarySearchTree.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/trie-design-variations/ternary-search-tree/code/cpp/TernarySearchTree.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/trie-design-variations/ternary-search-tree/code/python/ternary_search_tree.py"
+        }
+      ]
+    }
+  ]
+}

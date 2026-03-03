@@ -1,0 +1,26 @@
+{
+  "title": "Merge K Sorted Lists",
+  "slug": "merge-k-sorted",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "merge-k-sorted.md",
+  "codeExamples": [
+    {
+      "title": "Merge K Sorted Lists Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/merge-sorting/merge-k-sorted/code/cpp/MergeKSorted.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/merge-sorting/merge-k-sorted/code/java/MergeKSorted.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/merge-sorting/merge-k-sorted/code/python/merge_k_sorted.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Circular LL Delete",
+  "slug": "circular-delete",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "circular-delete.md",
+  "codeExamples": [
+    {
+      "title": "Circular LL Delete Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/circular-delete/code/cpp/CircularDelete.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/circular-delete/code/java/CircularDelete.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/circular-delete/code/python/circular_delete.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Course Schedule II",
+  "slug": "course-schedule-ii",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "course-schedule-ii.md",
+  "codeExamples": [
+    {
+      "title": "Course Schedule II Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/topological-sort/course-schedule-ii/code/cpp/CourseScheduleIi.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/topological-sort/course-schedule-ii/code/java/CourseScheduleIi.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/topological-sort/course-schedule-ii/code/python/course_schedule_ii.py"
+        }
+      ]
+    }
+  ]
+}

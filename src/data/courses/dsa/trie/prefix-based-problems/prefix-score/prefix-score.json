@@ -1,0 +1,26 @@
+{
+  "title": "Prefix Score",
+  "slug": "prefix-score",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "prefix-score.md",
+  "codeExamples": [
+    {
+      "title": "Prefix Score Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/prefix-score/code/java/PrefixScore.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/prefix-score/code/cpp/PrefixScore.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/prefix-score/code/python/prefix_score.py"
+        }
+      ]
+    }
+  ]
+}

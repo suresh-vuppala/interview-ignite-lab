@@ -1,0 +1,26 @@
+{
+  "title": "Check Bipartite",
+  "slug": "check-bipartite",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "check-bipartite.md",
+  "codeExamples": [
+    {
+      "title": "Check Bipartite Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/check-bipartite/code/cpp/CheckBipartite.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/check-bipartite/code/java/CheckBipartite.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/check-bipartite/code/python/check_bipartite.py"
+        }
+      ]
+    }
+  ]
+}

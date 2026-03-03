@@ -1,0 +1,26 @@
+{
+  "title": "Topological Sort Kahns",
+  "slug": "topological-sort-kahns",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "topological-sort-kahns.md",
+  "codeExamples": [
+    {
+      "title": "Topological Sort Kahns Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/topological-sort/topological-sort-kahns/code/cpp/TopologicalSortKahns.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/topological-sort/topological-sort-kahns/code/java/TopologicalSortKahns.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/topological-sort/topological-sort-kahns/code/python/topological_sort_kahns.py"
+        }
+      ]
+    }
+  ]
+}

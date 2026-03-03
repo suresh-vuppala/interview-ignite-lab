@@ -1,0 +1,26 @@
+{
+  "title": "Longest Common Prefix",
+  "slug": "longest-common-prefix",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "longest-common-prefix.md",
+  "codeExamples": [
+    {
+      "title": "Longest Common Prefix Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/longest-common-prefix/code/java/LongestCommonPrefix.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/longest-common-prefix/code/cpp/LongestCommonPrefix.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/longest-common-prefix/code/python/longest_common_prefix.py"
+        }
+      ]
+    }
+  ]
+}

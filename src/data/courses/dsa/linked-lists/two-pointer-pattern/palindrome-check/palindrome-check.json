@@ -1,0 +1,26 @@
+{
+  "title": "Check Palindrome",
+  "slug": "palindrome-check",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "palindrome-check.md",
+  "codeExamples": [
+    {
+      "title": "Check Palindrome Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/palindrome-check/code/cpp/PalindromeCheck.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/palindrome-check/code/java/PalindromeCheck.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/palindrome-check/code/python/palindrome_check.py"
+        }
+      ]
+    }
+  ]
+}

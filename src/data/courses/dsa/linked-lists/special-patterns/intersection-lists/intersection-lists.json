@@ -1,0 +1,26 @@
+{
+  "title": "Intersection of Lists",
+  "slug": "intersection-lists",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "intersection-lists.md",
+  "codeExamples": [
+    {
+      "title": "Intersection of Lists Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/special-patterns/intersection-lists/code/cpp/IntersectionLists.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/special-patterns/intersection-lists/code/java/IntersectionLists.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/special-patterns/intersection-lists/code/python/intersection_lists.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Palindrome Pairs",
+  "slug": "palindrome-pairs",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "palindrome-pairs.md",
+  "codeExamples": [
+    {
+      "title": "Palindrome Pairs Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/prefix-suffix/palindrome-pairs/code/java/PalindromePairs.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/prefix-suffix/palindrome-pairs/code/cpp/PalindromePairs.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/prefix-suffix/palindrome-pairs/code/python/palindrome_pairs.py"
+        }
+      ]
+    }
+  ]
+}

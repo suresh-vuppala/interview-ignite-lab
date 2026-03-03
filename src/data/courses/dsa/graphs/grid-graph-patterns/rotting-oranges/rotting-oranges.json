@@ -1,0 +1,26 @@
+{
+  "title": "Rotting Oranges",
+  "slug": "rotting-oranges",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "rotting-oranges.md",
+  "codeExamples": [
+    {
+      "title": "Rotting Oranges Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/rotting-oranges/code/cpp/RottingOranges.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/rotting-oranges/code/java/RottingOranges.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/rotting-oranges/code/python/rotting_oranges.py"
+        }
+      ]
+    }
+  ]
+}

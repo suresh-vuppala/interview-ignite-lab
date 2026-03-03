@@ -1,0 +1,26 @@
+{
+  "title": "Cheapest Flights",
+  "slug": "cheapest-flights",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "cheapest-flights.md",
+  "codeExamples": [
+    {
+      "title": "Cheapest Flights Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/shortest-path/cheapest-flights/code/cpp/CheapestFlights.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/shortest-path/cheapest-flights/code/java/CheapestFlights.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/shortest-path/cheapest-flights/code/python/cheapest_flights.py"
+        }
+      ]
+    }
+  ]
+}

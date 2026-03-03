@@ -1,0 +1,26 @@
+{
+  "title": "Surrounded Regions",
+  "slug": "surrounded-regions",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "surrounded-regions.md",
+  "codeExamples": [
+    {
+      "title": "Surrounded Regions Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/surrounded-regions/code/cpp/SurroundedRegions.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/surrounded-regions/code/java/SurroundedRegions.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/surrounded-regions/code/python/surrounded_regions.py"
+        }
+      ]
+    }
+  ]
+}

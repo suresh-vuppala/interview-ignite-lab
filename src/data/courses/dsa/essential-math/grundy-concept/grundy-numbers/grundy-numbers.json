@@ -1,0 +1,30 @@
+{
+  "title": "Grundy Numbers",
+  "difficulty": "hard",
+  "tags": [
+    "math",
+    "game-theory",
+    "grundy"
+  ],
+  "codeExamples": [
+    {
+      "title": "Grundy Number Calculation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/essential-math/grundy-concept/grundy-numbers/code/java/GrundyNumbers.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/essential-math/grundy-concept/grundy-numbers/code/cpp/GrundyNumbers.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/essential-math/grundy-concept/grundy-numbers/code/python/grundy_numbers.py"
+        }
+      ]
+    }
+  ],
+  "isPosted": true,
+  "isPremium": false
+}

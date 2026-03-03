@@ -1,0 +1,26 @@
+{
+  "title": "Maximum XOR of Two Numbers",
+  "slug": "maximum-xor-two-numbers",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "maximum-xor-two-numbers.md",
+  "codeExamples": [
+    {
+      "title": "Maximum XOR of Two Numbers Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-two-numbers/code/java/MaximumXorTwoNumbers.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-two-numbers/code/cpp/MaximumXorTwoNumbers.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-two-numbers/code/python/maximum_xor_two_numbers.py"
+        }
+      ]
+    }
+  ]
+}

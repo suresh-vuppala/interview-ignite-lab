@@ -1,0 +1,26 @@
+{
+  "title": "Doubly LL Delete",
+  "slug": "doubly-delete",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "doubly-delete.md",
+  "codeExamples": [
+    {
+      "title": "Doubly LL Delete Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-delete/code/cpp/DoublyDelete.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-delete/code/java/DoublyDelete.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-delete/code/python/doubly_delete.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Divisors and Factors",
+  "difficulty": "easy",
+  "tags": [
+    "math",
+    "divisors",
+    "factors"
+  ],
+  "codeExamples": [
+    {
+      "title": "Divisor Operations",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/essential-math/divisibility-factors/divisors-factors/code/java/DivisorsFactors.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/essential-math/divisibility-factors/divisors-factors/code/cpp/DivisorsFactors.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/essential-math/divisibility-factors/divisors-factors/code/python/divisors_factors.py"
+        }
+      ]
+    }
+  ],
+  "isPosted": true,
+  "isPremium": false
+}

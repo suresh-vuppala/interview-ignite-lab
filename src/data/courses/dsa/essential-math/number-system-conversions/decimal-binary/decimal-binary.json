@@ -1,0 +1,30 @@
+{
+  "title": "Decimal Binary Conversion",
+  "difficulty": "easy",
+  "tags": [
+    "math",
+    "binary",
+    "bit-manipulation"
+  ],
+  "codeExamples": [
+    {
+      "title": "Number System Operations",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/essential-math/number-system-conversions/decimal-binary/code/java/DecimalBinary.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/essential-math/number-system-conversions/decimal-binary/code/cpp/DecimalBinary.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/essential-math/number-system-conversions/decimal-binary/code/python/decimal_binary.py"
+        }
+      ]
+    }
+  ],
+  "isPosted": true,
+  "isPremium": false
+}

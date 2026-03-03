@@ -1,0 +1,26 @@
+{
+  "title": "Find Middle Node",
+  "slug": "find-middle-node",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "find-middle-node.md",
+  "codeExamples": [
+    {
+      "title": "Find Middle Node Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/find-middle-node/code/cpp/FindMiddleNode.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/find-middle-node/code/java/FindMiddleNode.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/find-middle-node/code/python/find_middle_node.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Circular LL Insert",
+  "slug": "circular-insert",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "circular-insert.md",
+  "codeExamples": [
+    {
+      "title": "Circular LL Insert Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/circular-insert/code/cpp/CircularInsert.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/circular-insert/code/java/CircularInsert.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/circular-insert/code/python/circular_insert.py"
+        }
+      ]
+    }
+  ]
+}

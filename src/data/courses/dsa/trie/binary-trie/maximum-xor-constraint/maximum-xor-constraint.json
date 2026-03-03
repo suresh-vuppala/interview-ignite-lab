@@ -1,0 +1,26 @@
+{
+  "title": "Maximum XOR with Constraint",
+  "slug": "maximum-xor-constraint",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "maximum-xor-constraint.md",
+  "codeExamples": [
+    {
+      "title": "Maximum XOR with Constraint Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-constraint/code/java/MaximumXorConstraint.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-constraint/code/cpp/MaximumXorConstraint.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-constraint/code/python/maximum_xor_constraint.py"
+        }
+      ]
+    }
+  ]
+}

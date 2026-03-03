@@ -1,0 +1,26 @@
+{
+  "title": "Partition List",
+  "slug": "partition-list",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "partition-list.md",
+  "codeExamples": [
+    {
+      "title": "Partition List Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/partition-list/code/cpp/PartitionList.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/partition-list/code/java/PartitionList.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/partition-list/code/python/partition_list.py"
+        }
+      ]
+    }
+  ]
+}

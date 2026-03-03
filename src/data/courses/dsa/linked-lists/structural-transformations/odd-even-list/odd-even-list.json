@@ -1,0 +1,26 @@
+{
+  "title": "Odd-Even Linked List",
+  "slug": "odd-even-list",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "odd-even-list.md",
+  "codeExamples": [
+    {
+      "title": "Odd-Even Linked List Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/odd-even-list/code/cpp/OddEvenList.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/odd-even-list/code/java/OddEvenList.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/odd-even-list/code/python/odd_even_list.py"
+        }
+      ]
+    }
+  ]
+}

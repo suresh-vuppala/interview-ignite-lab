@@ -1,0 +1,26 @@
+{
+  "title": "Shortest Path Weighted",
+  "slug": "shortest-path-weighted",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "shortest-path-weighted.md",
+  "codeExamples": [
+    {
+      "title": "Shortest Path Weighted Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/shortest-path/shortest-path-weighted/code/cpp/ShortestPathWeighted.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/shortest-path/shortest-path-weighted/code/java/ShortestPathWeighted.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/shortest-path/shortest-path-weighted/code/python/shortest_path_weighted.py"
+        }
+      ]
+    }
+  ]
+}

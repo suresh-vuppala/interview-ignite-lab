@@ -1,3 +1,0 @@
-# Kruskal's Algorithm
-
-Content coming soon...

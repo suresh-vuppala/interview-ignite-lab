@@ -1,0 +1,3 @@
+class ShortestUniquePrefix {
+    // Implementation
+}

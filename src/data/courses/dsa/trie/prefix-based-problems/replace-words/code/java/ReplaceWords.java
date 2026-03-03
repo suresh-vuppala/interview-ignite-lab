@@ -1,0 +1,3 @@
+class ReplaceWords {
+    // Implementation
+}

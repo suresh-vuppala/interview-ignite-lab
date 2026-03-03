@@ -1,0 +1,26 @@
+{
+  "title": "Detect Cycle Directed",
+  "slug": "detect-cycle-directed",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "detect-cycle-directed.md",
+  "codeExamples": [
+    {
+      "title": "Detect Cycle Directed Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/detect-cycle-directed/code/cpp/DetectCycleDirected.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/detect-cycle-directed/code/java/DetectCycleDirected.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/detect-cycle-directed/code/python/detect_cycle_directed.py"
+        }
+      ]
+    }
+  ]
+}

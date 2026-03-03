@@ -1,0 +1,26 @@
+{
+  "title": "Flood Fill",
+  "slug": "flood-fill",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "flood-fill.md",
+  "codeExamples": [
+    {
+      "title": "Flood Fill Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/flood-fill/code/cpp/FloodFill.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/flood-fill/code/java/FloodFill.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/flood-fill/code/python/flood_fill.py"
+        }
+      ]
+    }
+  ]
+}

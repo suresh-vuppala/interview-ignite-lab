@@ -1,0 +1,26 @@
+{
+  "title": "Count Connected Components",
+  "slug": "count-connected-components",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "count-connected-components.md",
+  "codeExamples": [
+    {
+      "title": "Count Connected Components Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/count-connected-components/code/cpp/CountConnectedComponents.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/count-connected-components/code/java/CountConnectedComponents.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/count-connected-components/code/python/count_connected_components.py"
+        }
+      ]
+    }
+  ]
+}

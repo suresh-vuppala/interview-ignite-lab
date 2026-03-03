@@ -1,0 +1,3 @@
+class MaximumXorConstraint {
+    // Implementation
+}

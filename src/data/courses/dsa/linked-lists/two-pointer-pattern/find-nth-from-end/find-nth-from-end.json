@@ -1,0 +1,26 @@
+{
+  "title": "Find Nth Node from End",
+  "slug": "find-nth-from-end",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "find-nth-from-end.md",
+  "codeExamples": [
+    {
+      "title": "Find Nth Node from End Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/find-nth-from-end/code/cpp/FindNthFromEnd.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/find-nth-from-end/code/java/FindNthFromEnd.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/find-nth-from-end/code/python/find_nth_from_end.py"
+        }
+      ]
+    }
+  ]
+}

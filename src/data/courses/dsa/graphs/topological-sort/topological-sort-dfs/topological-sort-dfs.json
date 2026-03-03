@@ -1,0 +1,26 @@
+{
+  "title": "Topological Sort DFS",
+  "slug": "topological-sort-dfs",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "topological-sort-dfs.md",
+  "codeExamples": [
+    {
+      "title": "Topological Sort DFS Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/topological-sort/topological-sort-dfs/code/cpp/TopologicalSortDfs.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/topological-sort/topological-sort-dfs/code/java/TopologicalSortDfs.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/topological-sort/topological-sort-dfs/code/python/topological_sort_dfs.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Find Middle Node",
+  "slug": "find-middle",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "find-middle.md",
+  "codeExamples": [
+    {
+      "title": "Find Middle Node Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/find-middle/code/cpp/FindMiddle.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/find-middle/code/java/FindMiddle.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/find-middle/code/python/find_middle.py"
+        }
+      ]
+    }
+  ]
+}

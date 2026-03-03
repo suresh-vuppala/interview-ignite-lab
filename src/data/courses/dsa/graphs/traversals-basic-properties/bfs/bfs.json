@@ -1,0 +1,26 @@
+{
+  "title": "BFS",
+  "slug": "bfs",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "bfs.md",
+  "codeExamples": [
+    {
+      "title": "BFS Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/bfs/code/cpp/Bfs.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/bfs/code/java/Bfs.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/bfs/code/python/bfs.py"
+        }
+      ]
+    }
+  ]
+}

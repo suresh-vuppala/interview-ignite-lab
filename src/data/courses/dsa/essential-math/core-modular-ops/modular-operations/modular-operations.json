@@ -1,0 +1,29 @@
+{
+  "title": "Modular Operations",
+  "difficulty": "medium",
+  "tags": [
+    "math",
+    "modular-arithmetic"
+  ],
+  "codeExamples": [
+    {
+      "title": "Modular Arithmetic",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/essential-math/core-modular-ops/modular-operations/code/java/ModularOperations.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/essential-math/core-modular-ops/modular-operations/code/cpp/ModularOperations.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/essential-math/core-modular-ops/modular-operations/code/python/modular_operations.py"
+        }
+      ]
+    }
+  ],
+  "isPosted": true,
+  "isPremium": false
+}

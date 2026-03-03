@@ -1,0 +1,26 @@
+{
+  "title": "Detect Circular LL",
+  "slug": "detect-circular",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "detect-circular.md",
+  "codeExamples": [
+    {
+      "title": "Detect Circular LL Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/detect-circular/code/cpp/DetectCircular.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/detect-circular/code/java/DetectCircular.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/detect-circular/code/python/detect_circular.py"
+        }
+      ]
+    }
+  ]
+}

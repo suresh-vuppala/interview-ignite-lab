@@ -1,0 +1,2 @@
+def segmented_sieve(L, R): lim=int(R**0.5); p=[True]*(lim+1); p[0]=p[1]=False; [[p.__setitem__(j,False) for j in range(i*i,lim+1,i)] for i in range(2,int(lim**0.5)+1) if p[i]]; primes=[i for i in range(2,lim+1) if p[i]]; seg=[True]*(R-L+1); [[(seg.__setitem__(j-L,False)) for j in range(max(pr*pr,(L+pr-1)//pr*pr),R+1,pr)] for pr in primes]; return [i for i in range(L,R+1) if seg[i-L] and i>1]
+print(f"Primes in [10,30]: {segmented_sieve(10,30)}")

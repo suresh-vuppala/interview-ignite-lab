@@ -1,0 +1,26 @@
+{
+  "title": "Reverse Doubly LL",
+  "slug": "doubly-reverse",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "doubly-reverse.md",
+  "codeExamples": [
+    {
+      "title": "Reverse Doubly LL Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-reverse/code/cpp/DoublyReverse.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-reverse/code/java/DoublyReverse.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-reverse/code/python/doubly_reverse.py"
+        }
+      ]
+    }
+  ]
+}

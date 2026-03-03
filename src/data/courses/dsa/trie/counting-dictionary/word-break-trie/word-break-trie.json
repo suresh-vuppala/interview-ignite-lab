@@ -1,0 +1,26 @@
+{
+  "title": "Word Break using Trie",
+  "slug": "word-break-trie",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "word-break-trie.md",
+  "codeExamples": [
+    {
+      "title": "Word Break using Trie Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/counting-dictionary/word-break-trie/code/java/WordBreakTrie.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/counting-dictionary/word-break-trie/code/cpp/WordBreakTrie.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/counting-dictionary/word-break-trie/code/python/word_break_trie.py"
+        }
+      ]
+    }
+  ]
+}

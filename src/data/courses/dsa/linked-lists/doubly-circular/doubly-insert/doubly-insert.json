@@ -1,0 +1,26 @@
+{
+  "title": "Doubly LL Insert",
+  "slug": "doubly-insert",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "doubly-insert.md",
+  "codeExamples": [
+    {
+      "title": "Doubly LL Insert Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-insert/code/cpp/DoublyInsert.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-insert/code/java/DoublyInsert.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-insert/code/python/doubly_insert.py"
+        }
+      ]
+    }
+  ]
+}

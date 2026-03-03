@@ -1,0 +1,3 @@
+class WordFilter:
+    # Implementation
+    pass

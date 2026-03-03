@@ -1,0 +1,26 @@
+{
+  "title": "Word Search II",
+  "slug": "word-search-ii",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "word-search-ii.md",
+  "codeExamples": [
+    {
+      "title": "Word Search II Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/trie-dfs-backtracking/word-search-ii/code/java/WordSearchIi.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/trie-dfs-backtracking/word-search-ii/code/cpp/WordSearchIi.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/trie-dfs-backtracking/word-search-ii/code/python/word_search_ii.py"
+        }
+      ]
+    }
+  ]
+}

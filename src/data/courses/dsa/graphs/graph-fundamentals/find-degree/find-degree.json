@@ -1,0 +1,26 @@
+{
+  "title": "Find Degree",
+  "slug": "find-degree",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "find-degree.md",
+  "codeExamples": [
+    {
+      "title": "Find Degree Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/find-degree/code/cpp/FindDegree.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/find-degree/code/java/FindDegree.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/find-degree/code/python/find_degree.py"
+        }
+      ]
+    }
+  ]
+}

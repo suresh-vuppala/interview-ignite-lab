@@ -1,0 +1,26 @@
+{
+  "title": "Reorder List",
+  "slug": "reorder-list",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "reorder-list.md",
+  "codeExamples": [
+    {
+      "title": "Reorder List Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/reorder-list/code/cpp/ReorderList.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/reorder-list/code/java/ReorderList.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/reorder-list/code/python/reorder_list.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Weighted Graph",
+  "slug": "weighted-graph",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "weighted-graph.md",
+  "codeExamples": [
+    {
+      "title": "Weighted Graph Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/weighted-graph/code/cpp/WeightedGraph.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/weighted-graph/code/java/WeightedGraph.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/weighted-graph/code/python/weighted_graph.py"
+        }
+      ]
+    }
+  ]
+}

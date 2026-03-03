@@ -1,0 +1,26 @@
+{
+  "title": "Sum of Prefix Scores",
+  "slug": "sum-prefix-scores",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "sum-prefix-scores.md",
+  "codeExamples": [
+    {
+      "title": "Sum of Prefix Scores Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/counting-dictionary/sum-prefix-scores/code/java/SumPrefixScores.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/counting-dictionary/sum-prefix-scores/code/cpp/SumPrefixScores.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/counting-dictionary/sum-prefix-scores/code/python/sum_prefix_scores.py"
+        }
+      ]
+    }
+  ]
+}

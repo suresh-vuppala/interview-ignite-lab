@@ -1,0 +1,3 @@
+class CountOperations:
+    # Implementation
+    pass

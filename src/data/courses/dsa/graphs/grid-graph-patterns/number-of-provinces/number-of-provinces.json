@@ -1,0 +1,26 @@
+{
+  "title": "Number of Provinces",
+  "slug": "number-of-provinces",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "number-of-provinces.md",
+  "codeExamples": [
+    {
+      "title": "Number of Provinces Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/number-of-provinces/code/cpp/NumberOfProvinces.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/number-of-provinces/code/java/NumberOfProvinces.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/number-of-provinces/code/python/number_of_provinces.py"
+        }
+      ]
+    }
+  ]
+}

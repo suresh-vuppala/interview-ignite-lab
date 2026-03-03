@@ -1,0 +1,26 @@
+{
+  "title": "Network Delay Time",
+  "slug": "network-delay-time",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "network-delay-time.md",
+  "codeExamples": [
+    {
+      "title": "Network Delay Time Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/shortest-path/network-delay-time/code/cpp/NetworkDelayTime.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/shortest-path/network-delay-time/code/java/NetworkDelayTime.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/shortest-path/network-delay-time/code/python/network_delay_time.py"
+        }
+      ]
+    }
+  ]
+}

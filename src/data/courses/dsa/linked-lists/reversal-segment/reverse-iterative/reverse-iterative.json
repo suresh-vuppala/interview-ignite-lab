@@ -1,0 +1,26 @@
+{
+  "title": "Reverse List (Iterative)",
+  "slug": "reverse-iterative",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "reverse-iterative.md",
+  "codeExamples": [
+    {
+      "title": "Reverse List (Iterative) Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-iterative/code/cpp/ReverseIterative.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-iterative/code/java/ReverseIterative.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-iterative/code/python/reverse_iterative.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Longest Word in Dictionary",
+  "slug": "longest-word-dictionary",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "longest-word-dictionary.md",
+  "codeExamples": [
+    {
+      "title": "Longest Word in Dictionary Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/counting-dictionary/longest-word-dictionary/code/java/LongestWordDictionary.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/counting-dictionary/longest-word-dictionary/code/cpp/LongestWordDictionary.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/counting-dictionary/longest-word-dictionary/code/python/longest_word_dictionary.py"
+        }
+      ]
+    }
+  ]
+}

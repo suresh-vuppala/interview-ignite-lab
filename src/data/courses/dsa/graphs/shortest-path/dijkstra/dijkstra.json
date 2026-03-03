@@ -1,0 +1,26 @@
+{
+  "title": "Dijkstra",
+  "slug": "dijkstra",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "dijkstra.md",
+  "codeExamples": [
+    {
+      "title": "Dijkstra Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/shortest-path/dijkstra/code/cpp/Dijkstra.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/shortest-path/dijkstra/code/java/Dijkstra.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/shortest-path/dijkstra/code/python/dijkstra.py"
+        }
+      ]
+    }
+  ]
+}

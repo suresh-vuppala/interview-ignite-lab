@@ -1,0 +1,26 @@
+{
+  "title": "Boggle Board",
+  "slug": "boggle-board",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "boggle-board.md",
+  "codeExamples": [
+    {
+      "title": "Boggle Board Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/trie-dfs-backtracking/boggle-board/code/java/BoggleBoard.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/trie-dfs-backtracking/boggle-board/code/cpp/BoggleBoard.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/trie-dfs-backtracking/boggle-board/code/python/boggle_board.py"
+        }
+      ]
+    }
+  ]
+}

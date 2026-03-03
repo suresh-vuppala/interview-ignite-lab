@@ -1,0 +1,26 @@
+{
+  "title": "Build Graph",
+  "slug": "build-graph",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "build-graph.md",
+  "codeExamples": [
+    {
+      "title": "Build Graph Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/build-graph/code/cpp/BuildGraph.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/build-graph/code/java/BuildGraph.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/build-graph/code/python/build_graph.py"
+        }
+      ]
+    }
+  ]
+}

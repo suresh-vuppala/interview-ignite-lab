@@ -1,0 +1,26 @@
+{
+  "title": "Rotate Linked List",
+  "slug": "rotate-list",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "rotate-list.md",
+  "codeExamples": [
+    {
+      "title": "Rotate Linked List Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/rotate-list/code/cpp/RotateList.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/rotate-list/code/java/RotateList.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/rotate-list/code/python/rotate_list.py"
+        }
+      ]
+    }
+  ]
+}

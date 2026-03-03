@@ -1,3 +1,0 @@
-# Bipartite Graphs
-
-Content coming soon...

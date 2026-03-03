@@ -1,0 +1,26 @@
+{
+  "title": "Detect Cycle",
+  "slug": "detect-cycle",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "detect-cycle.md",
+  "codeExamples": [
+    {
+      "title": "Detect Cycle Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/detect-cycle/code/cpp/DetectCycle.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/detect-cycle/code/java/DetectCycle.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/detect-cycle/code/python/detect_cycle.py"
+        }
+      ]
+    }
+  ]
+}

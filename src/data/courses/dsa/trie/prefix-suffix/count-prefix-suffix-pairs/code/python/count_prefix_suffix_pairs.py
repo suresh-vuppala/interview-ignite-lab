@@ -1,0 +1,3 @@
+class CountPrefixSuffixPairs:
+    # Implementation
+    pass

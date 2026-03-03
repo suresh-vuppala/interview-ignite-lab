@@ -1,0 +1,31 @@
+{
+  "title": "Segmented Sieve",
+  "difficulty": "hard",
+  "tags": [
+    "math",
+    "prime",
+    "sieve",
+    "optimization"
+  ],
+  "codeExamples": [
+    {
+      "title": "Segmented Sieve for Large Ranges",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/essential-math/segmented-sieve/segmented-sieve/code/java/SegmentedSieve.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/essential-math/segmented-sieve/segmented-sieve/code/cpp/SegmentedSieve.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/essential-math/segmented-sieve/segmented-sieve/code/python/segmented_sieve.py"
+        }
+      ]
+    }
+  ],
+  "isPosted": true,
+  "isPremium": false
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Reverse First K Nodes",
+  "slug": "reverse-first-k",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "reverse-first-k.md",
+  "codeExamples": [
+    {
+      "title": "Reverse First K Nodes Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-first-k/code/cpp/ReverseFirstK.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-first-k/code/java/ReverseFirstK.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-first-k/code/python/reverse_first_k.py"
+        }
+      ]
+    }
+  ]
+}

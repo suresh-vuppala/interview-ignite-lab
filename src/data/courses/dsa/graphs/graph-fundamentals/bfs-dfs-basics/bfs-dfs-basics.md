@@ -1,3 +1,0 @@
-# Basics - BFS & DFS
-
-Content coming soon...

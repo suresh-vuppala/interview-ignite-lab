@@ -1,0 +1,26 @@
+{
+  "title": "Search & Update",
+  "slug": "search-update",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "search-update.md",
+  "codeExamples": [
+    {
+      "title": "Search & Update Solution",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/search-update/code/cpp/SearchUpdate.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/search-update/code/java/SearchUpdate.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/search-update/code/python/search_update.py"
+        }
+      ]
+    }
+  ]
+}

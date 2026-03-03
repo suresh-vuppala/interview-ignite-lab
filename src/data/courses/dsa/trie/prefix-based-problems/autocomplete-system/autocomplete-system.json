@@ -1,0 +1,26 @@
+{
+  "title": "Autocomplete System",
+  "slug": "autocomplete-system",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "autocomplete-system.md",
+  "codeExamples": [
+    {
+      "title": "Autocomplete System Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/autocomplete-system/code/java/AutocompleteSystem.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/autocomplete-system/code/cpp/AutocompleteSystem.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trie/prefix-based-problems/autocomplete-system/code/python/autocomplete_system.py"
+        }
+      ]
+    }
+  ]
+}
