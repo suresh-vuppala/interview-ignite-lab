@@ -3,16 +3,7 @@
   "title": "Anatomy of Problem Statement",
   "slug": "anatomy-of-problem-statement",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "anatomy-of-problem-statement.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/programming-essentials/getting-started/anatomy-of-problem-statement/code/java/Example.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "codeExamples": []
 }

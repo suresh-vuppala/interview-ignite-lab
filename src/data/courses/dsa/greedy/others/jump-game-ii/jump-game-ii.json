@@ -1,0 +1,26 @@
+{
+    "title": "Jump Game II",
+    "description": "Jump Game II",
+    "difficulty": "medium",
+    "isPremium": false,
+    "isPosted": true,
+    "codeExamples": [
+        {
+            "title": "Solution",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "/src/data/courses/dsa/greedy/others/jump-game-ii/code/java/JumpGameII.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "/src/data/courses/dsa/greedy/others/jump-game-ii/code/cpp/JumpGameII.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "/src/data/courses/dsa/greedy/others/jump-game-ii/code/python/jump-game-ii.py"
+                }
+            ]
+        }
+    ]
+}

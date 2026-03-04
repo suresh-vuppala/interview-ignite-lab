@@ -1,0 +1,26 @@
+{
+    "title": "Design Twitter",
+    "description": "Design a simplified Twitter system",
+    "difficulty": "medium",
+    "isPremium": false,
+    "isPosted": true,
+    "codeExamples": [
+        {
+            "title": "Solution",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "/src/data/courses/dsa/miscellaneous/design-problems/design-twitter/code/java/Twitter.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "/src/data/courses/dsa/miscellaneous/design-problems/design-twitter/code/cpp/Twitter.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "/src/data/courses/dsa/miscellaneous/design-problems/design-twitter/code/python/design-twitter.py"
+                }
+            ]
+        }
+    ]
+}

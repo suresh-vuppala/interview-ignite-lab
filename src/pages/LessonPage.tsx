@@ -13,6 +13,14 @@ import { useAuth } from '@/hooks/useAuth';
 import ImageCarousel from '@/components/ImageCarousel';
 import { lessonData } from '@/data/courses';
 import { fetchMarkdown, importLessonJson } from '../utils/markdownFetcher';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism-tomorrow.css';
+import 'prismjs/components/prism-java';
+import 'prismjs/components/prism-c';
+import 'prismjs/components/prism-cpp';
+import 'prismjs/components/prism-python';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-typescript';
 
 
 // Preload all markdown files (bundled by Vite)
@@ -289,34 +297,67 @@ const renderMarkdown = (markdown : string) => {
   let isTable = false;
   let tableLines: string[] = [];
   let blockquoteBuffer: string[] = [];
+  let codeBlockBuffer: string[] = [];
+  let codeBlockLanguage = '';
+  let isInCodeBlock = false;
 
   lines.forEach((line, index) => {
     const trimmedLine = line.trim();
 
- // Inline code example insertion
-      if (trimmedLine === '```code```' && lesson.codeExamples && lesson.codeExamples[exampleIndex]) {
-        let ex = lesson.codeExamples[exampleIndex++];
-        // let actualCode = '';
-        // try {
-        //   actualCode = require(`@/${ex.code}`);
-        // } catch (error) {
-        //   console.error('❌ Error loading code file:', ex.code, error);
-        //   actualCode = '// Error: Unable to load code file.';
-        // }
-        elements.push(
-          <div key={`code-${index}`} className="my-6">
-            <h4 className="text-lg font-semibold mb-2 flex items-center gap-2">
-              {/* <Code className="w-4 h-4" /> {ex.title} */}
-            </h4>
-            <CodeBlock
-              codes={ex.languages}
-              title={ex.title}
-              showLanguageSelector
+    // --- Inline code example insertion (check BEFORE code block detection) ---
+    if (trimmedLine === '```code```' && lesson.codeExamples && lesson.codeExamples[exampleIndex]) {
+      let ex = lesson.codeExamples[exampleIndex++];
+      elements.push(
+        <div key={`code-${index}`} className="my-6">
+          <h4 className="text-lg font-semibold mb-2 flex items-center gap-2">
+            {/* <Code className="w-4 h-4" /> {ex.title} */}
+          </h4>
+          <CodeBlock
+            codes={ex.languages}
+            title={ex.title}
+            showLanguageSelector
+          />
+        </div>
+      );
+      return;
+    }
+
+    // --- Detect code block start ---
+    if (trimmedLine.startsWith('```') && !isInCodeBlock) {
+      isInCodeBlock = true;
+      codeBlockLanguage = trimmedLine.slice(3).trim() || 'java';
+      codeBlockBuffer = [];
+      return;
+    }
+
+    // --- Detect code block end ---
+    if (trimmedLine === '```' && isInCodeBlock) {
+      isInCodeBlock = false;
+      const codeContent = codeBlockBuffer.join('\n');
+      
+      // Highlight code with Prism
+      const grammar = Prism.languages[codeBlockLanguage] || Prism.languages.java;
+      const highlightedCode = Prism.highlight(codeContent, grammar, codeBlockLanguage);
+      
+      elements.push(
+        <div key={`codeblock-${index}`} className="my-4 rounded-lg overflow-hidden border border-border">
+          <pre className="!bg-[#2d2d2d] !m-0 p-4 overflow-x-auto">
+            <code 
+              className={`language-${codeBlockLanguage}`}
+              dangerouslySetInnerHTML={{ __html: highlightedCode }}
             />
-          </div>
-        );
-        return;
-      }
+          </pre>
+        </div>
+      );
+      codeBlockBuffer = [];
+      return;
+    }
+
+    // --- Collect code block lines ---
+    if (isInCodeBlock) {
+      codeBlockBuffer.push(line);
+      return;
+    }
 
     // --- Detect start of table ---
     if (trimmedLine.startsWith('|') && trimmedLine.endsWith('|')) {

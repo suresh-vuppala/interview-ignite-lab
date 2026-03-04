@@ -2,17 +2,8 @@
   "order": 1,
   "title": "Getting Started with Easy Problems",
   "slug": "getting-started-with-easy-problems",
-  "isPremium": true,
+  "isPremium": false,
+  "isPosted": true,
   "mdFile": "getting-started-with-easy-problems.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/programming-essentials/getting-started/getting-started-with-easy-problems/code/java/Example.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "codeExamples": []
 }

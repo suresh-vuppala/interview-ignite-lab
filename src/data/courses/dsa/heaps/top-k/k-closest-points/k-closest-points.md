@@ -1,49 +1,91 @@
-## Problem Statement
+Given an array of points on a 2D plane and an integer k, find the k closest points to the origin (0, 0). Distance is calculated using Euclidean distance.
 
-Given an array of points where `points[i] = [xi, yi]` represents a point on the X-Y plane and an integer `k`, return the `k` closest points to the origin `(0, 0)`.
+<br>
 
-The distance between two points on the X-Y plane is the Euclidean distance: `√(x² + y²)`.
+> Input:
+> points = [[1,3], [-2,2], [5,8], [0,1]], k = 2
 
-### Example
+> Output:
+> [[0,1], [-2,2]]
 
-```
-Input: points = [[1,3],[-2,2]], k = 1
-Output: [[-2,2]]
-Explanation: Distance from origin: (1,3) = √10, (-2,2) = √8
+> Explanation:
+> Calculate distances from origin:
+> - [1,3]: distance = √(1²+3²) = √10 ≈ 3.16
+> - [-2,2]: distance = √(4+4) = √8 ≈ 2.83
+> - [5,8]: distance = √(25+64) = √89 ≈ 9.43
+> - [0,1]: distance = √(0+1) = 1
+> 
+> Sorted by distance: [0,1] (1), [-2,2] (2.83), [1,3] (3.16), [5,8] (9.43)
+> K=2 closest: [[0,1], [-2,2]]
+> 
+> Max heap process (size k=2):
+> - Add [1,3] (dist=10): heap = [[1,3]]
+> - Add [-2,2] (dist=8): heap = [[1,3], [-2,2]]
+> - Add [5,8] (dist=89): 89 > 10 (top), skip
+> - Add [0,1] (dist=1): 1 < 10 (top), remove [1,3], add [0,1]: heap = [[-2,2], [0,1]]
 
-Input: points = [[3,3],[5,-1],[-2,4]], k = 2
-Output: [[3,3],[-2,4]]
-```
+<br>
 
-## Approach
+---
 
-### Max Heap Approach
-- Use a max heap of size k
-- For each point, calculate distance and add to heap
-- If heap size > k, remove the farthest point
-- Time: O(n log k), Space: O(k)
+## Solution: Max Heap of Size K
 
-### Quick Select Approach
-- Partition array based on distance
-- Find kth smallest distance
-- Time: O(n) average, Space: O(1)
+Use max heap to maintain k closest points:
+1. **Build max heap** of size k (stores farthest among k closest)
+2. **For each point**:
+   - Calculate squared distance (avoid sqrt for efficiency)
+   - If heap size < k: add point
+   - If distance < heap top: remove top, add current point
+3. **Result**: All points in heap are k closest
 
-## Complexity Analysis
-
-### Time Complexity: O(n log k)
-- Process n points: O(n)
-- Each heap operation: O(log k)
-- Overall: O(n log k)
-
-### Space Complexity: O(k)
-- Max heap stores k points
-
-## Key Insights
-
-- Use max heap to maintain k closest points
-- No need to calculate actual square root (compare squared distances)
-- Heap automatically maintains k smallest elements
-
-## Code
+**Key insight:** Max heap keeps farthest of k closest points at top, easy to compare and replace.
 
 ```code```
+
+<br>
+
+### Time Complexity Analysis
+
+**Heap Operations: O(n log k)**
+- Process n points: n iterations
+- For each point:
+  - Calculate distance: O(1)
+  - Heap operations (insert/remove): O(log k)
+- Total: n × O(log k) = O(n log k)
+
+**Why not O(n log n)?**
+- Sorting all points: O(n log n)
+- Max heap of size k: O(n log k)
+- When k << n, O(n log k) much better
+- Example: n=1,000,000, k=10 → O(n log 10) vs O(n log 1,000,000)
+
+**Space Complexity: O(k)**
+- Max heap stores exactly k points
+- No need to store all n points
+- Optimal space usage
+
+**Why max heap (not min heap)?**
+- Max heap: Top = farthest among k closest
+- Easy to compare new point with farthest
+- If new point closer, replace top
+- Min heap would have closest at top (hard to decide what to remove)
+
+**Optimization: Squared distance**
+- Use x²+y² instead of √(x²+y²)
+- Avoids expensive sqrt operation
+- Comparison order preserved (if a² < b², then a < b for positive values)
+- Significant performance improvement
+
+**Alternative: QuickSelect**
+- Partition-based selection: O(n) average
+- But modifies input array
+- Heap approach: O(n log k), doesn't modify input
+- Heap better when k is small
+
+> **Time Complexity:** O(n log k) - process n points with O(log k) heap operations
+> **Space Complexity:** O(k) - heap stores k points
+
+<br>
+<br>
+
+---

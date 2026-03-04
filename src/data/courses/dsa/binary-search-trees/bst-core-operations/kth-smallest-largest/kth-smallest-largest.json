@@ -1,1 +1,44 @@
-{"title":"Kth Smallest and Largest","slug":"kth-smallest-largest","isPremium":false,"isPosted":true,"description":"Find kth smallest and largest element in BST","mdFile":"dsa/binary-search-trees/bst-core-operations/kth-smallest-largest/kth-smallest-largest.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/kth-smallest-largest/code/cpp/KthSmallestLargest.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/kth-smallest-largest/code/java/KthSmallestLargest.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/kth-smallest-largest/code/python/kth_smallest_largest.py","language":"python"}],"title":"Kth Smallest and Largest Solution"}]}
+{
+  "title": "Kth Smallest and Largest",
+  "slug": "kth-smallest-largest",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find kth smallest and largest element in BST",
+  "mdFile": "dsa/binary-search-trees/bst-core-operations/kth-smallest-largest/kth-smallest-largest.md",
+  "codeExamples": [
+    {
+      "title": "Kth Smallest Solution",
+      "languages": [
+        {
+          "codeFile": "/src/data/courses/dsa/binary-search-trees/bst-core-operations/kth-smallest-largest/code/cpp/KthSmallestLargest.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "/src/data/courses/dsa/binary-search-trees/bst-core-operations/kth-smallest-largest/code/java/KthSmallestLargest.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "/src/data/courses/dsa/binary-search-trees/bst-core-operations/kth-smallest-largest/code/python/kth_smallest_largest.py",
+          "language": "python"
+        }
+      ]
+    },
+    {
+      "title": "Kth Largest Solution",
+      "languages": [
+        {
+          "codeFile": "/src/data/courses/dsa/binary-search-trees/bst-core-operations/kth-smallest-largest/code/cpp/KthSmallestLargest.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "/src/data/courses/dsa/binary-search-trees/bst-core-operations/kth-smallest-largest/code/java/KthSmallestLargest.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "/src/data/courses/dsa/binary-search-trees/bst-core-operations/kth-smallest-largest/code/python/kth_smallest_largest.py",
+          "language": "python"
+        }
+      ]
+    }
+  ]
+}

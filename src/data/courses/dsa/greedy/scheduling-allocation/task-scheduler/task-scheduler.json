@@ -1,0 +1,26 @@
+{
+    "title": "Task Scheduler",
+    "description": "Task Scheduler",
+    "difficulty": "medium",
+    "isPremium": false,
+    "isPosted": true,
+    "codeExamples": [
+        {
+            "title": "Solution",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "/src/data/courses/dsa/greedy/scheduling-allocation/task-scheduler/code/java/TaskScheduler.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "/src/data/courses/dsa/greedy/scheduling-allocation/task-scheduler/code/cpp/TaskScheduler.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "/src/data/courses/dsa/greedy/scheduling-allocation/task-scheduler/code/python/task-scheduler.py"
+                }
+            ]
+        }
+    ]
+}

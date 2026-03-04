@@ -1,0 +1,26 @@
+{
+    "title": "Meeting Rooms II",
+    "description": "Meeting Rooms II",
+    "difficulty": "medium",
+    "isPremium": false,
+    "isPosted": true,
+    "codeExamples": [
+        {
+            "title": "Solution",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "/src/data/courses/dsa/greedy/interval-based/meeting-rooms-ii/code/java/MeetingRoomsII.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "/src/data/courses/dsa/greedy/interval-based/meeting-rooms-ii/code/cpp/MeetingRoomsII.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "/src/data/courses/dsa/greedy/interval-based/meeting-rooms-ii/code/python/meeting-rooms-ii.py"
+                }
+            ]
+        }
+    ]
+}

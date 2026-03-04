@@ -1,0 +1,26 @@
+{
+    "title": "Kth Largest Element",
+    "description": "Kth Largest Element",
+    "difficulty": "medium",
+    "isPremium": false,
+    "isPosted": true,
+    "codeExamples": [
+        {
+            "title": "Solution",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "/src/data/courses/dsa/sorting-algorithms/quick-sort/kth-largest-element/code/java/KthLargestElement.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "/src/data/courses/dsa/sorting-algorithms/quick-sort/kth-largest-element/code/cpp/KthLargestElement.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "/src/data/courses/dsa/sorting-algorithms/quick-sort/kth-largest-element/code/python/kth-largest-element.py"
+                }
+            ]
+        }
+    ]
+}
