@@ -3,14 +3,23 @@
   "title": "Circular Queue",
   "slug": "circular-queue",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "circular-queue.md",
   "codeExamples": [
     {
-      "title": "Example",
+      "title": "Solution",
       "languages": [
         {
-          "codeFile": "courses/dsa/queues/queue/circular-queue/code/java/Example.java",
-          "language": "java"
+          "language": "java",
+          "codeFile": "/src/data/courses/dsa/queues/queue/circular-queue/code/java/CircularQueue.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "/src/data/courses/dsa/queues/queue/circular-queue/code/cpp/CircularQueue.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "/src/data/courses/dsa/queues/queue/circular-queue/code/python/circular_queue.py"
         }
       ]
     }

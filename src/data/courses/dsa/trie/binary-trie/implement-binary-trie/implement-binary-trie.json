@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/binary-trie/implement-binary-trie/code/java/ImplementBinaryTrie.java"
+          "codeFile": "/src/data/courses/dsa/trie/binary-trie/implement-binary-trie/code/java/ImplementBinaryTrie.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/binary-trie/implement-binary-trie/code/cpp/ImplementBinaryTrie.cpp"
+          "codeFile": "/src/data/courses/dsa/trie/binary-trie/implement-binary-trie/code/cpp/ImplementBinaryTrie.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/binary-trie/implement-binary-trie/code/python/implement_binary_trie.py"
+          "codeFile": "/src/data/courses/dsa/trie/binary-trie/implement-binary-trie/code/python/implement_binary_trie.py"
         }
       ]
     }

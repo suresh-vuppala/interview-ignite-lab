@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/NextGreaterElement.java"
+          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/next-greater-element/code/java/NextGreaterElement.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/NextGreaterElement.cpp"
+          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/next-greater-element/code/cpp/NextGreaterElement.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/next_greater_element.py"
+          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/next-greater-element/code/python/next_greater_element.py"
         }
       ]
     }

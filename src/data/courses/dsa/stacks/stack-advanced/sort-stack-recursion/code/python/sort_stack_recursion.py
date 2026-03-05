@@ -1,14 +1,17 @@
-def insert(st, x):
-    if not st or st[-1] <= x:
-        st.append(x)
-        return
-    top = st.pop()
-    insert(st, x)
-    st.append(top)
-
-def sort_stack(st):
-    if not st:
-        return
-    top = st.pop()
-    sort_stack(st)
-    insert(st, top)
+class SortStackRecursion:
+    def sortStack(self, stack: list[int]) -> None:
+        if not stack:
+            return
+        
+        top = stack.pop()
+        self.sortStack(stack)  # Sort remaining
+        self.insertSorted(stack, top)  # Insert in sorted position
+    
+    def insertSorted(self, stack: list[int], element: int) -> None:
+        if not stack or stack[-1] < element:
+            stack.append(element)
+            return
+        
+        top = stack.pop()
+        self.insertSorted(stack, element)
+        stack.append(top)

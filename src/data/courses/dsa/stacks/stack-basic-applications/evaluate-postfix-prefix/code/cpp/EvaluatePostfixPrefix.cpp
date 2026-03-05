@@ -1,17 +1,54 @@
-int evalPostfix(string s) {
-    stack<int> st;
-    stringstream ss(s);
-    string token;
-    while (ss >> token) {
-        if (isdigit(token[0]) || (token.size() > 1)) st.push(stoi(token));
-        else {
-            int b = st.top(); st.pop();
-            int a = st.top(); st.pop();
-            if (token == "+") st.push(a + b);
-            else if (token == "-") st.push(a - b);
-            else if (token == "*") st.push(a * b);
-            else st.push(a / b);
+#include <stack>
+#include <string>
+#include <vector>
+using namespace std;
+
+class EvaluatePostfixPrefix {
+public:
+    int evalPostfix(vector<string>& tokens) {
+        stack<int> st;
+        
+        for (string& token : tokens) {
+            if (isOperator(token)) {
+                int b = st.top(); st.pop();
+                int a = st.top(); st.pop();
+                st.push(applyOp(a, b, token));
+            } else {
+                st.push(stoi(token));
+            }
         }
+        
+        return st.top();
     }
-    return st.top();
-}
+    
+    int evalPrefix(vector<string>& tokens) {
+        stack<int> st;
+        
+        // Process from right to left
+        for (int i = tokens.size() - 1; i >= 0; i--) {
+            string token = tokens[i];
+            if (isOperator(token)) {
+                int a = st.top(); st.pop();
+                int b = st.top(); st.pop();
+                st.push(applyOp(a, b, token));
+            } else {
+                st.push(stoi(token));
+            }
+        }
+        
+        return st.top();
+    }
+    
+private:
+    bool isOperator(string s) {
+        return s == "+" || s == "-" || s == "*" || s == "/";
+    }
+    
+    int applyOp(int a, int b, string op) {
+        if (op == "+") return a + b;
+        if (op == "-") return a - b;
+        if (op == "*") return a * b;
+        if (op == "/") return a / b;
+        return 0;
+    }
+};

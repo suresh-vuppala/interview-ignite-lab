@@ -1,22 +1,34 @@
-string decodeString(string s) {
-    stack<int> numSt;
-    stack<string> strSt;
-    string curr = "";
-    int num = 0;
-    for (char c : s) {
-        if (isdigit(c)) num = num * 10 + (c - '0');
-        else if (c == '[') {
-            numSt.push(num);
-            strSt.push(curr);
-            num = 0;
-            curr = "";
-        } else if (c == ']') {
-            int k = numSt.top(); numSt.pop();
-            string prev = strSt.top(); strSt.pop();
-            string temp = "";
-            while (k--) temp += curr;
-            curr = prev + temp;
-        } else curr += c;
+#include <string>
+#include <stack>
+using namespace std;
+
+class DecodeString {
+public:
+    string decodeString(string s) {
+        stack<int> countStack;
+        stack<string> stringStack;
+        string current = "";
+        int k = 0;
+        
+        for (char c : s) {
+            if (isdigit(c)) {
+                k = k * 10 + (c - '0'); // Build multi-digit number
+            } else if (c == '[') {
+                countStack.push(k);
+                stringStack.push(current);
+                current = "";
+                k = 0;
+            } else if (c == ']') {
+                int count = countStack.top(); countStack.pop();
+                string prev = stringStack.top(); stringStack.pop();
+                string temp = "";
+                for (int i = 0; i < count; i++) temp += current;
+                current = prev + temp;
+            } else {
+                current += c;
+            }
+        }
+        
+        return current;
     }
-    return curr;
-}
+};

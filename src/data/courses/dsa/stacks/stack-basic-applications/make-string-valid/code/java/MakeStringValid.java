@@ -1,12 +1,16 @@
-int minRemove(String s) {
-    Stack<Integer> st = new Stack<>();
-    int remove = 0;
-    for (char c : s.toCharArray()) {
-        if (c == '(') st.push(c);
-        else if (c == ')') {
-            if (!st.isEmpty()) st.pop();
-            else remove++;
+class MakeStringValid {
+    public int minAddToMakeValid(String s) {
+        int open = 0, close = 0;
+        
+        for (char c : s.toCharArray()) {
+            if (c == '(') {
+                open++;
+            } else {
+                if (open > 0) open--; // Match with opening
+                else close++; // Unmatched closing
+            }
         }
+        
+        return open + close; // Total additions needed
     }
-    return remove + st.size();
 }

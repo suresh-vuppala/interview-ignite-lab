@@ -1,22 +1,38 @@
-String infixToPostfix(String s) {
-    Stack<Character> st = new Stack<>();
-    StringBuilder res = new StringBuilder();
-    for (char c : s.toCharArray()) {
-        if (Character.isLetterOrDigit(c)) res.append(c);
-        else if (c == '(') st.push(c);
-        else if (c == ')') {
-            while (!st.isEmpty() && st.peek() != '(') res.append(st.pop());
-            st.pop();
-        } else {
-            while (!st.isEmpty() && prec(st.peek()) >= prec(c)) res.append(st.pop());
-            st.push(c);
+import java.util.*;
+
+class InfixToPostfix {
+    public String infixToPostfix(String infix) {
+        StringBuilder result = new StringBuilder();
+        Stack<Character> stack = new Stack<>();
+        
+        for (char c : infix.toCharArray()) {
+            if (Character.isLetterOrDigit(c)) {
+                result.append(c); // Operand
+            } else if (c == '(') {
+                stack.push(c);
+            } else if (c == ')') {
+                while (!stack.isEmpty() && stack.peek() != '(') {
+                    result.append(stack.pop());
+                }
+                stack.pop(); // Remove '('
+            } else { // Operator
+                while (!stack.isEmpty() && precedence(stack.peek()) >= precedence(c)) {
+                    result.append(stack.pop());
+                }
+                stack.push(c);
+            }
         }
+        
+        while (!stack.isEmpty()) {
+            result.append(stack.pop());
+        }
+        
+        return result.toString();
     }
-    while (!st.isEmpty()) res.append(st.pop());
-    return res.toString();
-}
-int prec(char c) {
-    if (c == '+' || c == '-') return 1;
-    if (c == '*' || c == '/') return 2;
-    return 0;
+    
+    private int precedence(char op) {
+        if (op == '+' || op == '-') return 1;
+        if (op == '*' || op == '/') return 2;
+        return 0;
+    }
 }

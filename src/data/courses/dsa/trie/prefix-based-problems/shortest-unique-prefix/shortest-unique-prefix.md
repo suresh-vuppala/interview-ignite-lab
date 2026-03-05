@@ -1,20 +1,72 @@
-## Problem Statement
 Find shortest unique prefix for each word that distinguishes it from all other words.
 
-**Example**: ["zebra","dog","duck","dove"] → ["z","dog","du","dov"]
+<br>
 
-## Approach
+> Input:
+> words = ["zebra", "dog", "duck", "dove"]
 
-### Trie with Prefix Count
-- Build trie with prefix counts
-- For each word:
-  - Traverse until prefixCount = 1
-  - That's the shortest unique prefix
-- Time: O(N*L) for N words
+> Output:
+> ["z", "dog", "du", "dov"]
 
-## Complexity
-- Build: O(N*L)
-- Find prefixes: O(N*L)
-- Total: O(N*L)
+> Explanation:
+> - "zebra": "z" is unique (no other word starts with 'z')
+> - "dog": "dog" needed ("do" shared with "dove" and "duck")
+> - "duck": "du" is unique ("dove" has "dov")
+> - "dove": "dov" is unique ("duck" has "duc")
+> 
+> **Key insight:** Unique prefix = first prefix with count = 1.
+
+<br>
+
+---
+
+## Solution: Trie with Prefix Count
+
+Use trie with prefix counting:
+1. Build trie, increment prefixCount at each node
+2. For each word:
+   - Traverse trie character by character
+   - Stop when prefixCount = 1 (unique prefix found)
+   - Return prefix up to that point
+
+**Key insight:** prefixCount = 1 means only this word uses this prefix.
 
 ```code```
+
+<br>
+
+### Time Complexity Analysis
+
+**Overall: O(N×L)**
+
+**Build Trie: O(N×L)**
+- Insert N words
+- Each word length L
+- Increment prefixCount at each node
+
+**Find Prefixes: O(N×L)**
+- Traverse each word until prefixCount = 1
+- Worst case: traverse entire word
+- Total: N words × L length
+
+**Why Trie is optimal?**
+- Brute force: Compare each word with all others O(N²×L)
+- Trie: Single pass O(N×L)
+- Prefix counts maintained during insertion
+
+**Space Complexity: O(N×L)**
+- Trie stores N words
+- Each node has prefixCount
+
+**Applications:**
+- Command-line completion
+- Variable name suggestions
+- DNS resolution
+
+> **Time Complexity:** O(N×L) for N words of length L
+> **Space Complexity:** O(N×L) for trie storage
+
+<br>
+<br>
+
+---

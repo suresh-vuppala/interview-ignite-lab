@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/CelebrityProblem.java"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/celebrity-problem/code/java/CelebrityProblem.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/CelebrityProblem.cpp"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/celebrity-problem/code/cpp/CelebrityProblem.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/celebrity_problem.py"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/celebrity-problem/code/python/celebrity_problem.py"
         }
       ]
     }

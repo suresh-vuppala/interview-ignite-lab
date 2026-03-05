@@ -1,23 +1,69 @@
-## Problem Statement
-Design data structure to search words by both prefix and suffix.
+Design a data structure to search words by both prefix and suffix.
 
-## Approach
+<br>
 
-### Two Tries
-- Forward trie for prefix search
-- Reverse trie for suffix search
-- Intersect results from both
-- Time: O(L) per search
+> Input:
+> words = ["apple", "application", "apply", "maple", "sample"]
+> prefix = "app", suffix = "le"
 
-### Combined Trie
-- Store word indices at nodes
-- Search prefix in forward trie
-- Search suffix in reverse trie
-- Find common indices
+> Output:
+> ["apple", "application"]
 
-## Complexity
-- Build: O(N*L)
-- Query: O(L + K) where K=results
-- Space: O(N*L)
+> Explanation:
+> Words starting with "app": ["apple", "application", "apply"]
+> Words ending with "le": ["apple", "maple", "sample"]
+> Intersection: ["apple", "application"]
+> 
+> Process:
+> 1. Forward trie finds prefix matches
+> 2. Reverse trie finds suffix matches
+> 3. Return common word indices
+
+<br>
+
+---
+
+## Solution: Two Tries with Index Intersection
+
+Use two separate tries:
+1. Forward trie for prefix matching
+2. Reverse trie for suffix matching
+3. Store word indices at end nodes
+4. Intersect results from both tries
+
+**Key insight:** Maintain two tries and intersect word indices for efficient dual-condition search.
 
 ```code```
+
+<br>
+
+### Time Complexity Analysis
+
+**Build Phase: O(N * L)**
+- Insert each word into forward trie: O(L)
+- Insert reversed word into reverse trie: O(L)
+- Total for N words: O(N * L)
+
+**Query Phase: O(L + K)**
+- Search prefix in forward trie: O(L)
+- Search suffix in reverse trie: O(L)
+- Intersect K matching indices: O(K)
+- Total: O(L + K)
+
+**Space Complexity: O(N * L)**
+- Forward trie: O(N * L)
+- Reverse trie: O(N * L)
+- Total: O(N * L)
+
+**Why Two Tries?**
+- Single trie cannot efficiently match suffix
+- Reverse trie converts suffix to prefix problem
+- Index intersection ensures both conditions met
+
+> **Time Complexity:** O(N * L) build, O(L + K) query
+> **Space Complexity:** O(N * L) for two tries
+
+<br>
+<br>
+
+---

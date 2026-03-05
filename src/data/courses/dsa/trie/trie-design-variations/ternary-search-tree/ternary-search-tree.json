@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/trie-design-variations/ternary-search-tree/code/java/TernarySearchTree.java"
+          "codeFile": "/src/data/courses/dsa/trie/trie-design-variations/ternary-search-tree/code/java/TernarySearchTree.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/trie-design-variations/ternary-search-tree/code/cpp/TernarySearchTree.cpp"
+          "codeFile": "/src/data/courses/dsa/trie/trie-design-variations/ternary-search-tree/code/cpp/TernarySearchTree.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/trie-design-variations/ternary-search-tree/code/python/ternary_search_tree.py"
+          "codeFile": "/src/data/courses/dsa/trie/trie-design-variations/ternary-search-tree/code/python/ternary_search_tree.py"
         }
       ]
     }

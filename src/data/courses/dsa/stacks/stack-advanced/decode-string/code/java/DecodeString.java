@@ -1,20 +1,29 @@
-String decodeString(String s) {
-    Stack<Integer> numSt = new Stack<>();
-    Stack<String> strSt = new Stack<>();
-    String curr = "";
-    int num = 0;
-    for (char c : s.toCharArray()) {
-        if (Character.isDigit(c)) num = num * 10 + (c - '0');
-        else if (c == '[') {
-            numSt.push(num);
-            strSt.push(curr);
-            num = 0;
-            curr = "";
-        } else if (c == ']') {
-            int k = numSt.pop();
-            String prev = strSt.pop();
-            curr = prev + curr.repeat(k);
-        } else curr += c;
+import java.util.*;
+
+class DecodeString {
+    public String decodeString(String s) {
+        Stack<Integer> countStack = new Stack<>();
+        Stack<String> stringStack = new Stack<>();
+        String current = "";
+        int k = 0;
+        
+        for (char c : s.toCharArray()) {
+            if (Character.isDigit(c)) {
+                k = k * 10 + (c - '0'); // Build multi-digit number
+            } else if (c == '[') {
+                countStack.push(k);
+                stringStack.push(current);
+                current = "";
+                k = 0;
+            } else if (c == ']') {
+                int count = countStack.pop();
+                String prev = stringStack.pop();
+                current = prev + current.repeat(count);
+            } else {
+                current += c;
+            }
+        }
+        
+        return current;
     }
-    return curr;
 }

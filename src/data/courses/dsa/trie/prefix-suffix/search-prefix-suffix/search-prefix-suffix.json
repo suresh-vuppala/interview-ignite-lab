@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/prefix-suffix/search-prefix-suffix/code/java/SearchPrefixSuffix.java"
+          "codeFile": "/src/data/courses/dsa/trie/prefix-suffix/search-prefix-suffix/code/java/SearchPrefixSuffix.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/prefix-suffix/search-prefix-suffix/code/cpp/SearchPrefixSuffix.cpp"
+          "codeFile": "/src/data/courses/dsa/trie/prefix-suffix/search-prefix-suffix/code/cpp/SearchPrefixSuffix.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/prefix-suffix/search-prefix-suffix/code/python/search_prefix_suffix.py"
+          "codeFile": "/src/data/courses/dsa/trie/prefix-suffix/search-prefix-suffix/code/python/search_prefix_suffix.py"
         }
       ]
     }

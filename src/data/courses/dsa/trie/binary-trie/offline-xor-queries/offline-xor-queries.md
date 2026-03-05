@@ -1,21 +1,78 @@
-## Problem Statement
-Answer multiple queries for maximum XOR with elements up to index i.
+Answer Q queries where query[i] = [xi, mi]: find maximum XOR of xi with any element nums[j] where j ≤ mi.
 
-## Approach
+<br>
 
-### Offline Processing
-- Sort queries by index
-- Build trie incrementally
-- Answer queries as we add elements
-- Time: O((N+Q)*32)
+> Input:
+> nums = [0, 1, 2, 3, 4]
+> queries = [[3, 1], [1, 3], [5, 6]]
 
-### Online with Persistent Trie
-- Create version of trie at each index
-- Answer queries using appropriate version
-- Time: O(N*32), Query: O(32)
+> Output:
+> [3, 3, 7]
 
-## Complexity
-- Offline: O((N+Q)*32)
-- Persistent: O(N*32) build, O(32) query
+> Explanation:
+> - Query [3, 1]: max XOR of 3 with nums[0..1] = max(3^0, 3^1) = 3
+> - Query [1, 3]: max XOR of 1 with nums[0..3] = max(1^0, 1^1, 1^2, 1^3) = 3
+> - Query [5, 6]: max XOR of 5 with nums[0..4] = max(5^0, 5^1, 5^2, 5^3, 5^4) = 7
+> 
+> **Key insight:** Sort queries by index, build trie incrementally to answer offline.
+
+<br>
+
+---
+
+## Solution: Offline Query Processing with Binary Trie
+
+**Algorithm:**
+1. Sort queries by index mi (offline processing)
+2. Maintain pointer in nums array
+3. For each query in sorted order:
+   - Insert nums elements up to index mi into trie
+   - Query trie for maximum XOR with xi
+   - Store result at original query position
+4. Return results in original query order
+
+**Key insight:** Process queries offline to build trie incrementally, avoiding rebuilds.
 
 ```code```
+
+<br>
+
+### Time Complexity Analysis
+
+**Overall: O((N+Q)×32 + Q log Q)**
+
+**Sort Queries: O(Q log Q)**
+- Sort Q queries by index: O(Q log Q)
+
+**Build Trie Incrementally: O(N×32)**
+- Insert each of N numbers once: O(N)
+- Each insertion: O(32) bits
+- Total: O(N×32)
+
+**Answer Queries: O(Q×32)**
+- Process Q queries: O(Q)
+- Each query: O(32) bits traversal
+- Total: O(Q×32)
+
+**Why offline processing is efficient?**
+- Online: O(Q×N×32) - rebuild trie for each query
+- Offline: O((N+Q)×32) - build trie once incrementally
+- Sorting overhead: O(Q log Q) is negligible
+
+**Space Complexity: O(N×32 + Q)**
+- Trie storage: O(N×32)
+- Query storage with indices: O(Q)
+- Result array: O(Q)
+
+**Applications:**
+- Range query optimization
+> Batch processing systems
+- Historical data analysis
+
+> **Time Complexity:** O((N+Q) + Q log Q) where N is array length, Q is queries
+> **Space Complexity:** O(N + Q) for trie and query storage
+
+<br>
+<br>
+
+---

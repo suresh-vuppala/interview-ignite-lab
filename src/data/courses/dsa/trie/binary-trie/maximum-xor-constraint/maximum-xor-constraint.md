@@ -1,19 +1,74 @@
-## Problem Statement
-Find maximum XOR of two elements where one element is ≤ K.
+Find the maximum XOR of two elements where one element must be ≤ K.
 
-## Approach
+<br>
 
-### Binary Trie with Constraint
-- Insert numbers into binary trie
-- For query with constraint K:
-  - Traverse trie respecting K's bits
-  - Choose opposite bit when possible
-  - Backtrack if constraint violated
-- Time: O(N*32)
+> Input:
+> nums = [0, 1, 2, 3, 4], K = 3
 
-## Complexity
-- Build: O(N*32)
-- Query: O(32)
-- Space: O(N*32)
+> Output:
+> 3
+
+> Explanation:
+> - We need one element ≤ 3
+> - Maximum XOR: 0 XOR 3 = 3
+> - Binary: 00 XOR 11 = 11 = 3
+> - Other valid pairs: (1,2)=3, but not better
+> 
+> **Key insight:** Traverse trie while respecting constraint K's bit pattern.
+
+<br>
+
+---
+
+## Solution: Binary Trie with Constraint Checking
+
+**Algorithm:**
+1. Insert all numbers ≤ K into binary trie
+2. For each number in array:
+   - Traverse trie choosing opposite bit when possible
+   - Check if path stays within constraint K
+   - If choosing opposite bit violates K, take other path
+3. Track maximum XOR found
+
+**Key insight:** Only insert numbers ≤ K, then find max XOR with any number.
 
 ```code```
+
+<br>
+
+### Time Complexity Analysis
+
+**Overall: O(N×32) = O(N)**
+
+**Build Trie: O(N×32)**
+- Filter and insert numbers ≤ K: O(N)
+- Each insertion: O(32) bits
+- Total: O(N×32)
+
+**Find Max XOR: O(N×32)**
+- Query with each number: O(N)
+- Each query: O(32) bits with constraint check
+- Total: O(N×32)
+
+**Why constraint checking works?**
+- Pre-filter numbers ≤ K during insertion
+- Guarantees one element in XOR pair is ≤ K
+- No backtracking needed during query
+
+**Space Complexity: O(N×32)**
+- Store numbers ≤ K in trie
+- Worst case: all numbers ≤ K
+- Shared prefixes reduce space
+
+**Applications:**
+- Constrained optimization problems
+- Range query problems
+- Network routing with constraints
+
+> **Time Complexity:** O(N) where N is array length
+> **Space Complexity:** O(N) for binary trie storage
+
+<br>
+<br>
+
+---

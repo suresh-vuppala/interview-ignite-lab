@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/DesignCircularQueue.java"
+          "codeFile": "/src/data/courses/dsa/queues/circular-queue/design-circular-queue/code/java/DesignCircularQueue.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/DesignCircularQueue.cpp"
+          "codeFile": "/src/data/courses/dsa/queues/circular-queue/design-circular-queue/code/cpp/DesignCircularQueue.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/design_circular_queue.py"
+          "codeFile": "/src/data/courses/dsa/queues/circular-queue/design-circular-queue/code/python/design_circular_queue.py"
         }
       ]
     }

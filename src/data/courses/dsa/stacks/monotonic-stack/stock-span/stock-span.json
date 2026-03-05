@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/StockSpan.java"
+          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/stock-span/code/java/StockSpan.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/StockSpan.cpp"
+          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/stock-span/code/cpp/StockSpan.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/stock_span.py"
+          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/stock-span/code/python/stock_span.py"
         }
       ]
     }

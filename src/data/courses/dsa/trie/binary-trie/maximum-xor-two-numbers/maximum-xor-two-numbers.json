@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-two-numbers/code/java/MaximumXorTwoNumbers.java"
+          "codeFile": "/src/data/courses/dsa/trie/binary-trie/maximum-xor-two-numbers/code/java/MaximumXorTwoNumbers.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-two-numbers/code/cpp/MaximumXorTwoNumbers.cpp"
+          "codeFile": "/src/data/courses/dsa/trie/binary-trie/maximum-xor-two-numbers/code/cpp/MaximumXorTwoNumbers.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-two-numbers/code/python/maximum_xor_two_numbers.py"
+          "codeFile": "/src/data/courses/dsa/trie/binary-trie/maximum-xor-two-numbers/code/python/maximum_xor_two_numbers.py"
         }
       ]
     }

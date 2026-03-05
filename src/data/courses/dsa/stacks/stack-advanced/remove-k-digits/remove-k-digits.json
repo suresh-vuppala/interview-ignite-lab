@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/RemoveKDigits.java"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/remove-k-digits/code/java/RemoveKDigits.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/RemoveKDigits.cpp"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/remove-k-digits/code/cpp/RemoveKDigits.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/remove_k_digits.py"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/remove-k-digits/code/python/remove_k_digits.py"
         }
       ]
     }

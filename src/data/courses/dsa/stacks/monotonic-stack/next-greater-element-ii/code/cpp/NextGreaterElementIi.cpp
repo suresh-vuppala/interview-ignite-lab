@@ -1,11 +1,24 @@
-vector<int> nextGreaterCircular(vector<int>& arr) {
-    int n = arr.size();
-    vector<int> res(n);
-    stack<int> st;
-    for (int i = 2 * n - 1; i >= 0; i--) {
-        while (!st.empty() && st.top() <= arr[i % n]) st.pop();
-        if (i < n) res[i] = st.empty() ? -1 : st.top();
-        st.push(arr[i % n]);
+#include <vector>
+#include <stack>
+using namespace std;
+
+class NextGreaterElementII {
+public:
+    vector<int> nextGreaterElements(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> result(n, -1);
+        stack<int> st;
+        
+        // Traverse twice for circular array
+        for (int i = 0; i < 2 * n; i++) {
+            int idx = i % n;
+            while (!st.empty() && nums[st.top()] < nums[idx]) {
+                result[st.top()] = nums[idx];
+                st.pop();
+            }
+            if (i < n) st.push(idx); // Push only in first pass
+        }
+        
+        return result;
     }
-    return res;
-}
+};

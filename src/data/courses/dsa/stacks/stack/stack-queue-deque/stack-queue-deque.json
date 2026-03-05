@@ -3,14 +3,23 @@
   "title": "Stack",
   "slug": "stack-queue-deque",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "stack-queue-deque.md",
   "codeExamples": [
     {
-      "title": "Example",
+      "title": "Solution",
       "languages": [
         {
-          "codeFile": "courses/dsa/stacks/stack/stack-queue-deque/code/java/Example.java",
-          "language": "java"
+          "language": "java",
+          "codeFile": "/src/data/courses/dsa/stacks/stack/stack-queue-deque/code/java/StackExample.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "/src/data/courses/dsa/stacks/stack/stack-queue-deque/code/cpp/StackExample.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "/src/data/courses/dsa/stacks/stack/stack-queue-deque/code/python/stack_example.py"
         }
       ]
     }

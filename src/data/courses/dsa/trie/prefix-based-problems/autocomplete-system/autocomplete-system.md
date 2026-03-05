@@ -1,25 +1,69 @@
-## Problem Statement
-Design a search autocomplete system that returns top 3 matching sentences based on input prefix.
+Design a search autocomplete system that returns top 3 matching sentences based on input prefix and frequency.
 
-## Approach
+<br>
 
-### Trie with Frequency
-- Each node stores:
-  - Children map
-  - List of (sentence, frequency) pairs
-- On input character:
-  - Traverse to current prefix node
-  - Return top 3 sentences by frequency
-- Time: O(L + K log K) where K=matching sentences
+> Input:
+> sentences = ["i love you", "island", "iroman", "i love leetcode"]
+> times = [5, 3, 2, 2]
+> input("i") → input(" ") → input("a")
 
-### Optimization
+> Output:
+> ["i love you", "island", "i love leetcode"] → ["i love you", "i love leetcode"] → []
+
+> Explanation:
+> - input("i"): All 4 sentences match, return top 3 by frequency
+> - input(" "): "i love you" and "i love leetcode" match
+> - input("a"): No sentence starts with "i a"
+> 
+> **Key insight:** Store sentences at each node, sort by frequency.
+
+<br>
+
+---
+
+## Solution: Trie with Sentence Storage
+
+Use trie to store sentences with frequencies:
+1. Each node stores list of (sentence, frequency) pairs
+2. On character input:
+   - Traverse to prefix node
+   - Return top 3 sentences sorted by frequency (then lexicographically)
+3. On '#' input: Save current sentence
+
+**Key insight:** Store complete sentences at each prefix node.
+
+```code```
+
+<br>
+
+### Time Complexity Analysis
+
+**Insert: O(L×K)** where L = sentence length, K = sentences per node
+
+**Query: O(L + K log K)**
+- Traverse to prefix: O(L)
+- Sort K matching sentences: O(K log K)
+- Return top 3: O(1)
+
+**Optimization:**
 - Store only top 3 at each node
 - Update during insertion
 - Query becomes O(L)
 
-## Complexity
-- Insert: O(L*K) where K=top sentences
-- Query: O(L)
-- Space: O(N*L*K)
+**Space Complexity: O(N×L×K)**
+- N sentences, length L
+- K sentences stored per node
+- Can be optimized to O(N×L×3) by storing only top 3
 
-```code```
+**Applications:**
+- Search engines
+- IDE code completion
+- Mobile keyboard suggestions
+
+> **Time Complexity:** O(L + K log K) per query
+> **Space Complexity:** O(N×L×K) for trie storage
+
+<br>
+<br>
+
+---

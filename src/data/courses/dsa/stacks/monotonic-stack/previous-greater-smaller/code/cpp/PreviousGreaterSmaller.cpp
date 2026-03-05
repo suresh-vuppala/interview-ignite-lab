@@ -1,11 +1,38 @@
-vector<int> prevGreater(vector<int>& arr) {
-    int n = arr.size();
-    vector<int> res(n);
-    stack<int> st;
-    for (int i = 0; i < n; i++) {
-        while (!st.empty() && st.top() <= arr[i]) st.pop();
-        res[i] = st.empty() ? -1 : st.top();
-        st.push(arr[i]);
+#include <vector>
+#include <stack>
+using namespace std;
+
+class PreviousGreaterSmaller {
+public:
+    vector<int> previousGreater(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> result(n);
+        stack<int> st;
+        
+        for (int i = 0; i < n; i++) {
+            while (!st.empty() && st.top() <= nums[i]) {
+                st.pop();
+            }
+            result[i] = st.empty() ? -1 : st.top();
+            st.push(nums[i]);
+        }
+        
+        return result;
     }
-    return res;
-}
+    
+    vector<int> previousSmaller(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> result(n);
+        stack<int> st;
+        
+        for (int i = 0; i < n; i++) {
+            while (!st.empty() && st.top() >= nums[i]) {
+                st.pop();
+            }
+            result[i] = st.empty() ? -1 : st.top();
+            st.push(nums[i]);
+        }
+        
+        return result;
+    }
+};

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/SortStackRecursion.java"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/sort-stack-recursion/code/java/SortStackRecursion.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/SortStackRecursion.cpp"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/sort-stack-recursion/code/cpp/SortStackRecursion.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/sort_stack_recursion.py"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/sort-stack-recursion/code/python/sort_stack_recursion.py"
         }
       ]
     }

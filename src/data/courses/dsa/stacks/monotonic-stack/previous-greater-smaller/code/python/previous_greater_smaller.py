@@ -1,10 +1,26 @@
-def prev_greater(arr):
-    n = len(arr)
-    res = [0] * n
-    st = []
-    for i in range(n):
-        while st and st[-1] <= arr[i]:
-            st.pop()
-        res[i] = -1 if not st else st[-1]
-        st.append(arr[i])
-    return res
+class PreviousGreaterSmaller:
+    def previousGreater(self, nums: list[int]) -> list[int]:
+        n = len(nums)
+        result = [0] * n
+        stack = []
+        
+        for i in range(n):
+            while stack and stack[-1] <= nums[i]:
+                stack.pop()
+            result[i] = -1 if not stack else stack[-1]
+            stack.append(nums[i])
+        
+        return result
+    
+    def previousSmaller(self, nums: list[int]) -> list[int]:
+        n = len(nums)
+        result = [0] * n
+        stack = []
+        
+        for i in range(n):
+            while stack and stack[-1] >= nums[i]:
+                stack.pop()
+            result[i] = -1 if not stack else stack[-1]
+            stack.append(nums[i])
+        
+        return result

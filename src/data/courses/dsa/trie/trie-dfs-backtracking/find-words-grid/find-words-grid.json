@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/trie-dfs-backtracking/find-words-grid/code/java/FindWordsGrid.java"
+          "codeFile": "/src/data/courses/dsa/trie/trie-dfs-backtracking/find-words-grid/code/java/FindWordsGrid.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/trie-dfs-backtracking/find-words-grid/code/cpp/FindWordsGrid.cpp"
+          "codeFile": "/src/data/courses/dsa/trie/trie-dfs-backtracking/find-words-grid/code/cpp/FindWordsGrid.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/trie-dfs-backtracking/find-words-grid/code/python/find_words_grid.py"
+          "codeFile": "/src/data/courses/dsa/trie/trie-dfs-backtracking/find-words-grid/code/python/find_words_grid.py"
         }
       ]
     }

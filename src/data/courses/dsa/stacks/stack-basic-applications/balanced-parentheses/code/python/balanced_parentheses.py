@@ -1,16 +1,12 @@
 def is_valid(s):
-    st = []
+    stack = []
+    pairs = {'(': ')', '{': '}', '[': ']'}
+    
     for c in s:
-        if c in '({[':
-            st.append(c)
+        if c in pairs:
+            stack.append(c)
         else:
-            if not st:
+            if not stack or pairs[stack.pop()] != c:
                 return False
-            top = st.pop()
-            if c == ')' and top != '(':
-                return False
-            if c == '}' and top != '{':
-                return False
-            if c == ']' and top != '[':
-                return False
-    return len(st) == 0
+    
+    return len(stack) == 0

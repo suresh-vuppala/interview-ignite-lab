@@ -1,10 +1,12 @@
 def stock_span(prices):
     n = len(prices)
-    res = [0] * n
-    st = []
+    span = [0] * n
+    stack = []
+    
     for i in range(n):
-        while st and prices[st[-1]] <= prices[i]:
-            st.pop()
-        res[i] = i + 1 if not st else i - st[-1]
-        st.append(i)
-    return res
+        while stack and prices[stack[-1]] <= prices[i]:
+            stack.pop()
+        span[i] = i + 1 if not stack else i - stack[-1]
+        stack.append(i)
+    
+    return span

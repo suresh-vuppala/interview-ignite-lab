@@ -1,26 +1,30 @@
-def prec(c):
-    if c in '+-':
-        return 1
-    if c in '*/':
-        return 2
-    return 0
-
-def infix_to_postfix(s):
-    st = []
-    res = ""
-    for c in s:
-        if c.isalnum():
-            res += c
-        elif c == '(':
-            st.append(c)
-        elif c == ')':
-            while st and st[-1] != '(':
-                res += st.pop()
-            st.pop()
-        else:
-            while st and prec(st[-1]) >= prec(c):
-                res += st.pop()
-            st.append(c)
-    while st:
-        res += st.pop()
-    return res
+class InfixToPostfix:
+    def infixToPostfix(self, infix: str) -> str:
+        result = []
+        stack = []
+        
+        for c in infix:
+            if c.isalnum():
+                result.append(c)  # Operand
+            elif c == '(':
+                stack.append(c)
+            elif c == ')':
+                while stack and stack[-1] != '(':
+                    result.append(stack.pop())
+                stack.pop()  # Remove '('
+            else:  # Operator
+                while stack and self.precedence(stack[-1]) >= self.precedence(c):
+                    result.append(stack.pop())
+                stack.append(c)
+        
+        while stack:
+            result.append(stack.pop())
+        
+        return ''.join(result)
+    
+    def precedence(self, op: str) -> int:
+        if op in ['+', '-']:
+            return 1
+        if op in ['*', '/']:
+            return 2
+        return 0

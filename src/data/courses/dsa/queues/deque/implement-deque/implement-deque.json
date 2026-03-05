@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/ImplementDeque.java"
+          "codeFile": "/src/data/courses/dsa/queues/deque/implement-deque/code/java/ImplementDeque.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/ImplementDeque.cpp"
+          "codeFile": "/src/data/courses/dsa/queues/deque/implement-deque/code/cpp/ImplementDeque.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/implement_deque.py"
+          "codeFile": "/src/data/courses/dsa/queues/deque/implement-deque/code/python/implement_deque.py"
         }
       ]
     }

@@ -1,3 +1,44 @@
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.sentences = {}  # sentence -> frequency
+
 class AutocompleteSystem:
-    # Implementation
-    pass
+    def __init__(self, sentences: list[str], times: list[int]):
+        self.root = TrieNode()
+        self.current = self.root
+        self.prefix = ""
+        
+        # Insert all sentences with frequencies
+        for sentence, freq in zip(sentences, times):
+            self.insert(sentence, freq)
+    
+    def insert(self, sentence: str, freq: int) -> None:
+        node = self.root
+        for c in sentence:
+            if c not in node.children:
+                node.children[c] = TrieNode()
+            node = node.children[c]
+            node.sentences[sentence] = node.sentences.get(sentence, 0) + freq
+    
+    def getTop3(self, sentences: dict) -> list[str]:
+        # Sort by frequency (desc), then lexicographically (asc)
+        sorted_sentences = sorted(sentences.items(), 
+                                 key=lambda x: (-x[1], x[0]))
+        return [s[0] for s in sorted_sentences[:3]]
+    
+    def input(self, c: str) -> list[str]:
+        if c == '#':
+            # Save current sentence
+            self.insert(self.prefix, 1)
+            self.prefix = ""
+            self.current = self.root
+            return []
+        
+        self.prefix += c
+        if c not in self.current.children:
+            self.current.children[c] = TrieNode()
+        self.current = self.current.children[c]
+        
+        # Get top 3 sentences
+        return self.getTop3(self.current.sentences)

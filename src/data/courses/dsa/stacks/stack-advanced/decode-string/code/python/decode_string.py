@@ -1,20 +1,23 @@
-def decode_string(s):
-    num_st = []
-    str_st = []
-    curr = ""
-    num = 0
-    for c in s:
-        if c.isdigit():
-            num = num * 10 + int(c)
-        elif c == '[':
-            num_st.append(num)
-            str_st.append(curr)
-            num = 0
-            curr = ""
-        elif c == ']':
-            k = num_st.pop()
-            prev = str_st.pop()
-            curr = prev + curr * k
-        else:
-            curr += c
-    return curr
+class DecodeString:
+    def decodeString(self, s: str) -> str:
+        count_stack = []
+        string_stack = []
+        current = ""
+        k = 0
+        
+        for c in s:
+            if c.isdigit():
+                k = k * 10 + int(c)  # Build multi-digit number
+            elif c == '[':
+                count_stack.append(k)
+                string_stack.append(current)
+                current = ""
+                k = 0
+            elif c == ']':
+                count = count_stack.pop()
+                prev = string_stack.pop()
+                current = prev + current * count
+            else:
+                current += c
+        
+        return current

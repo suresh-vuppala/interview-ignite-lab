@@ -1,3 +1,7 @@
 class CompressedTrie {
-    // Implementation
+    struct TrieNode {
+        TrieNode* children[26] = {};
+        bool isEnd = false;
+    };
+    // Minimal implementation
 };

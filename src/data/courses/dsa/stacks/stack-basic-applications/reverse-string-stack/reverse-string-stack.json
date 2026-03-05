@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/ReverseStringStack.java"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-basic-applications/reverse-string-stack/code/java/ReverseString.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/ReverseStringStack.cpp"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-basic-applications/reverse-string-stack/code/cpp/ReverseString.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/reverse_string_stack.py"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-basic-applications/reverse-string-stack/code/python/reverse_string.py"
         }
       ]
     }

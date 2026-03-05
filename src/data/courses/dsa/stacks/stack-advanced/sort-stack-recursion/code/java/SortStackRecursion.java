@@ -1,15 +1,22 @@
-void sortStack(Stack<Integer> st) {
-    if (st.isEmpty()) return;
-    int top = st.pop();
-    sortStack(st);
-    insert(st, top);
-}
-void insert(Stack<Integer> st, int x) {
-    if (st.isEmpty() || st.peek() <= x) {
-        st.push(x);
-        return;
+import java.util.*;
+
+class SortStackRecursion {
+    public void sortStack(Stack<Integer> stack) {
+        if (stack.isEmpty()) return;
+        
+        int top = stack.pop();
+        sortStack(stack); // Sort remaining
+        insertSorted(stack, top); // Insert in sorted position
     }
-    int top = st.pop();
-    insert(st, x);
-    st.push(top);
+    
+    private void insertSorted(Stack<Integer> stack, int element) {
+        if (stack.isEmpty() || stack.peek() < element) {
+            stack.push(element);
+            return;
+        }
+        
+        int top = stack.pop();
+        insertSorted(stack, element);
+        stack.push(top);
+    }
 }

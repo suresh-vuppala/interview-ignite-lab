@@ -1,11 +1,15 @@
-def next_greater_circular(arr):
-    n = len(arr)
-    res = [0] * n
-    st = []
-    for i in range(2 * n - 1, -1, -1):
-        while st and st[-1] <= arr[i % n]:
-            st.pop()
-        if i < n:
-            res[i] = -1 if not st else st[-1]
-        st.append(arr[i % n])
-    return res
+class NextGreaterElementII:
+    def nextGreaterElements(self, nums: list[int]) -> list[int]:
+        n = len(nums)
+        result = [-1] * n
+        stack = []
+        
+        # Traverse twice for circular array
+        for i in range(2 * n):
+            idx = i % n
+            while stack and nums[stack[-1]] < nums[idx]:
+                result[stack.pop()] = nums[idx]
+            if i < n:
+                stack.append(idx)  # Push only in first pass
+        
+        return result

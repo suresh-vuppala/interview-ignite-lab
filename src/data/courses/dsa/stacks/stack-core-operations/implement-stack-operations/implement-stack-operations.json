@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/ImplementStackOperations.java"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-core-operations/implement-stack-operations/code/java/ImplementStack.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/ImplementStackOperations.cpp"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-core-operations/implement-stack-operations/code/cpp/ImplementStack.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/implement_stack_operations.py"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-core-operations/implement-stack-operations/code/python/implement_stack.py"
         }
       ]
     }

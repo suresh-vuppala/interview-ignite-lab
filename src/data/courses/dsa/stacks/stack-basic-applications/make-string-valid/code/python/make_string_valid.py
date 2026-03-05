@@ -1,12 +1,15 @@
-def min_remove(s):
-    st = []
-    remove = 0
-    for c in s:
-        if c == '(':
-            st.append(c)
-        elif c == ')':
-            if st:
-                st.pop()
+class MakeStringValid:
+    def minAddToMakeValid(self, s: str) -> int:
+        open_count = 0
+        close_count = 0
+        
+        for c in s:
+            if c == '(':
+                open_count += 1
             else:
-                remove += 1
-    return remove + len(st)
+                if open_count > 0:
+                    open_count -= 1  # Match with opening
+                else:
+                    close_count += 1  # Unmatched closing
+        
+        return open_count + close_count  # Total additions needed

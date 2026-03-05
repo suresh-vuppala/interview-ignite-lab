@@ -1,12 +1,15 @@
 def remove_k_digits(num, k):
-    st = []
-    for c in num:
-        while st and k > 0 and st[-1] > c:
-            st.pop()
+    stack = []
+    
+    for digit in num:
+        while stack and k > 0 and stack[-1] > digit:
+            stack.pop()
             k -= 1
-        st.append(c)
+        stack.append(digit)
+    
     while k > 0:
-        st.pop()
+        stack.pop()
         k -= 1
-    res = ''.join(st).lstrip('0')
-    return res if res else '0'
+    
+    result = ''.join(stack).lstrip('0')
+    return result if result else '0'

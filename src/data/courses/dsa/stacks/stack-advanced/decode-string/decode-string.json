@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/DecodeString.java"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/decode-string/code/java/DecodeString.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/DecodeString.cpp"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/decode-string/code/cpp/DecodeString.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/decode_string.py"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/decode-string/code/python/decode_string.py"
         }
       ]
     }

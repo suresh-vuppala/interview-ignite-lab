@@ -3,16 +3,7 @@
   "title": "Time Complexity Analysis of Recursive Programs",
   "slug": "time-complexity-recursive",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "time-complexity-recursive.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/programming-essentials/complexity-analysis/time-complexity-recursive/code/java/Example.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "codeExamples": []
 }

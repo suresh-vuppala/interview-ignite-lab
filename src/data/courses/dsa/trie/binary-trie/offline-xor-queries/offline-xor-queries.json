@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/binary-trie/offline-xor-queries/code/java/OfflineXorQueries.java"
+          "codeFile": "/src/data/courses/dsa/trie/binary-trie/offline-xor-queries/code/java/OfflineXorQueries.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/binary-trie/offline-xor-queries/code/cpp/OfflineXorQueries.cpp"
+          "codeFile": "/src/data/courses/dsa/trie/binary-trie/offline-xor-queries/code/cpp/OfflineXorQueries.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/binary-trie/offline-xor-queries/code/python/offline_xor_queries.py"
+          "codeFile": "/src/data/courses/dsa/trie/binary-trie/offline-xor-queries/code/python/offline_xor_queries.py"
         }
       ]
     }

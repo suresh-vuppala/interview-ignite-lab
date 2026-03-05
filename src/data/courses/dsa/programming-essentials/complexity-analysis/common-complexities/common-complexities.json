@@ -3,16 +3,7 @@
   "title": "Common Complexities and Constraints",
   "slug": "common-complexities",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "common-complexities.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/programming-essentials/complexity-analysis/common-complexities/code/java/Example.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "codeExamples": []
 }

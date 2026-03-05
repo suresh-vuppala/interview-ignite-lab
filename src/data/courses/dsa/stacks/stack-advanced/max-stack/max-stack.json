@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/MaxStack.java"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/max-stack/code/java/MaxStack.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/MaxStack.cpp"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/max-stack/code/cpp/MaxStack.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/max_stack.py"
+          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/max-stack/code/python/max_stack.py"
         }
       ]
     }

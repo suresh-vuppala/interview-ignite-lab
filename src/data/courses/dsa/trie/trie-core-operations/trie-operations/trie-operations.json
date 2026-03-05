@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/trie-core-operations/trie-operations/code/java/TrieOperations.java"
+          "codeFile": "/src/data/courses/dsa/trie/trie-core-operations/trie-operations/code/java/TrieOperations.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/trie-core-operations/trie-operations/code/cpp/TrieOperations.cpp"
+          "codeFile": "/src/data/courses/dsa/trie/trie-core-operations/trie-operations/code/cpp/TrieOperations.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/trie-core-operations/trie-operations/code/python/trie_operations.py"
+          "codeFile": "/src/data/courses/dsa/trie/trie-core-operations/trie-operations/code/python/trie_operations.py"
         }
       ]
     }

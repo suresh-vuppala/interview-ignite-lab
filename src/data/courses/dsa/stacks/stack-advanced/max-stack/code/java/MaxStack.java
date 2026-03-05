@@ -1,21 +1,33 @@
+import java.util.*;
+
 class MaxStack {
-    Stack<Integer> st = new Stack<>();
-    Stack<Integer> maxSt = new Stack<>();
+    private Stack<Integer> stack;
+    private Stack<Integer> maxStack;
     
-    void push(int x) {
-        st.push(x);
-        if (maxSt.isEmpty() || x >= maxSt.peek()) maxSt.push(x);
+    public MaxStack() {
+        stack = new Stack<>();
+        maxStack = new Stack<>();
     }
     
-    void pop() {
-        if (st.pop().equals(maxSt.peek())) maxSt.pop();
+    public void push(int x) {
+        stack.push(x);
+        if (maxStack.isEmpty()) {
+            maxStack.push(x);
+        } else {
+            maxStack.push(Math.max(x, maxStack.peek()));
+        }
     }
     
-    int top() {
-        return st.peek();
+    public int pop() {
+        maxStack.pop();
+        return stack.pop();
     }
     
-    int getMax() {
-        return maxSt.peek();
+    public int top() {
+        return stack.peek();
+    }
+    
+    public int getMax() {
+        return maxStack.peek();
     }
 }

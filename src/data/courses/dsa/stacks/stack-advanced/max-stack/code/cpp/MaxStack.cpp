@@ -1,14 +1,29 @@
+#include <stack>
+#include <algorithm>
+using namespace std;
+
 class MaxStack {
-    stack<int> st, maxSt;
+private:
+    stack<int> st;
+    stack<int> maxSt;
+    
 public:
+    MaxStack() {}
+    
     void push(int x) {
         st.push(x);
-        if (maxSt.empty() || x >= maxSt.top()) maxSt.push(x);
+        if (maxSt.empty()) {
+            maxSt.push(x);
+        } else {
+            maxSt.push(max(x, maxSt.top()));
+        }
     }
     
-    void pop() {
-        if (st.top() == maxSt.top()) maxSt.pop();
+    int pop() {
+        maxSt.pop();
+        int val = st.top();
         st.pop();
+        return val;
     }
     
     int top() {

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/prefix-based-problems/prefix-score/code/java/PrefixScore.java"
+          "codeFile": "/src/data/courses/dsa/trie/prefix-based-problems/prefix-score/code/java/PrefixScore.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/prefix-based-problems/prefix-score/code/cpp/PrefixScore.cpp"
+          "codeFile": "/src/data/courses/dsa/trie/prefix-based-problems/prefix-score/code/cpp/PrefixScore.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/prefix-based-problems/prefix-score/code/python/prefix_score.py"
+          "codeFile": "/src/data/courses/dsa/trie/prefix-based-problems/prefix-score/code/python/prefix_score.py"
         }
       ]
     }

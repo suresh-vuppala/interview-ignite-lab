@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/StackUsingQueue.java"
+          "codeFile": "/src/data/courses/dsa/queues/queue-stack-conversion/stack-using-queue/code/java/StackUsingQueue.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/StackUsingQueue.cpp"
+          "codeFile": "/src/data/courses/dsa/queues/queue-stack-conversion/stack-using-queue/code/cpp/StackUsingQueue.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/stack_using_queue.py"
+          "codeFile": "/src/data/courses/dsa/queues/queue-stack-conversion/stack-using-queue/code/python/stack_using_queue.py"
         }
       ]
     }

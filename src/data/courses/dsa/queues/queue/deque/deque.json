@@ -1,16 +1,25 @@
 {
   "order": 1,
-  "title": "Queue and Deque",
+  "title": "Deque",
   "slug": "deque",
   "isPremium": false,
+  "isPosted": true,
   "mdFile": "deque.md",
   "codeExamples": [
     {
-      "title": "Example",
+      "title": "Solution",
       "languages": [
         {
-          "codeFile": "courses/dsa/queues/queue/deque/code/java/Example.java",
-          "language": "java"
+          "language": "java",
+          "codeFile": "/src/data/courses/dsa/queues/queue/deque/code/java/DequeExample.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "/src/data/courses/dsa/queues/queue/deque/code/cpp/DequeExample.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "/src/data/courses/dsa/queues/queue/deque/code/python/deque_example.py"
         }
       ]
     }

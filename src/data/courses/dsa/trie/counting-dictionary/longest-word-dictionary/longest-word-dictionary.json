@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/counting-dictionary/longest-word-dictionary/code/java/LongestWordDictionary.java"
+          "codeFile": "/src/data/courses/dsa/trie/counting-dictionary/longest-word-dictionary/code/java/LongestWordDictionary.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/counting-dictionary/longest-word-dictionary/code/cpp/LongestWordDictionary.cpp"
+          "codeFile": "/src/data/courses/dsa/trie/counting-dictionary/longest-word-dictionary/code/cpp/LongestWordDictionary.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/counting-dictionary/longest-word-dictionary/code/python/longest_word_dictionary.py"
+          "codeFile": "/src/data/courses/dsa/trie/counting-dictionary/longest-word-dictionary/code/python/longest_word_dictionary.py"
         }
       ]
     }
