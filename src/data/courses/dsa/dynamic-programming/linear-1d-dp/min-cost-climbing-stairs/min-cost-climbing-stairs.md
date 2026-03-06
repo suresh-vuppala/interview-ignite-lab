@@ -1,21 +1,46 @@
-## Problem Statement
-Solve Min Cost Climbing Stairs using dynamic programming.
+You are given an array cost where cost[i] is the cost of ith step. You can start from step 0 or 1. Find minimum cost to reach the top (beyond last step).
 
-## Approach
+<br>
 
-### DP Formula
+> Input:
+> cost = [10, 15, 20]
+
+> Output:
+> 15
+
+> Explanation:
+> Start at index 1 (cost 15), climb one step to top
+> Total cost: 15
+> Alternative: Start at 0 (10), climb to 1 (15), climb to top = 25
+> 
+> **Key insight:** At each step, choose minimum of previous two steps.
+
+<br>
+
+---
+
+## Solution 1: Memoization (Top-Down DP)
+
+**Recurrence:**
 ```
+minCost(i) = cost[i] + min(minCost(i-1), minCost(i-2))
+Base: minCost(0) = cost[0], minCost(1) = cost[1]
+```
+
+
+### Time: O(n) | Space: O(n)
+
+---
+
+## Solution 2: Tabulation (Bottom-Up DP)
+
+**DP State:**
+```
+dp[i] = min cost to reach step i
 dp[i] = cost[i] + min(dp[i-1], dp[i-2])
 ```
 
-### Steps
-1. Define DP state
-2. Initialize base cases
-3. Fill DP table using recurrence
-4. Return final result
 
-## Complexity
-- Time: O(n) or O(n²)
-- Space: O(n)
+### Time: O(n) | Space: O(n) or O(1) optimized
 
 ```code```

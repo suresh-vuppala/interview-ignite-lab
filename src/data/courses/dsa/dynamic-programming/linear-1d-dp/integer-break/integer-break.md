@@ -1,21 +1,45 @@
-## Problem Statement
-Solve Integer Break using dynamic programming.
+Break integer n into sum of at least two positive integers and maximize their product.
 
-## Approach
+<br>
 
-### DP Formula
+> Input:
+> n = 10
+
+> Output:
+> 36
+
+> Explanation:
+> 10 = 3 + 3 + 4, product = 3 × 3 × 4 = 36
+> 
+> **Key insight:** For each number, try all possible first breaks.
+
+<br>
+
+---
+
+## Solution 1: Memoization (Top-Down DP)
+
+**Recurrence:**
 ```
-dp[i] = max(j * (i-j), j * dp[i-j])
+maxProduct(n) = max(j * (n-j), j * maxProduct(n-j)) for all j
 ```
-
-### Steps
-1. Define DP state
-2. Initialize base cases
-3. Fill DP table using recurrence
-4. Return final result
-
-## Complexity
-- Time: O(n) or O(n²)
-- Space: O(n)
 
 ```code```
+
+### Time: O(n²) | Space: O(n)
+
+---
+
+## Solution 2: Tabulation (Bottom-Up DP)
+
+**DP State:**
+```
+dp[i] = max product for integer i
+dp[i] = max(j * (i-j), j * dp[i-j]) for j in 1..i-1
+```
+
+```code```
+
+### Time: O(n²) | Space: O(n)
+
+---

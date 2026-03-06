@@ -40,8 +40,6 @@ Base: ways(0) = 1, ways(1) = 1
 
 **Key insight:** Same as Fibonacci - each step depends on previous two.
 
-```code```
-
 <br>
 
 ### Time Complexity: O(n)
@@ -75,8 +73,6 @@ dp[i] = dp[i-1] + dp[i-2]
 3. Fill dp[i] for i from 2 to n
 4. Return dp[n]
 
-```code```
-
 <br>
 
 ### Time Complexity: O(n)
@@ -109,3 +105,122 @@ dp[i] = dp[i-1] + dp[i-2]
 <br>
 
 ---
+
+## Code Implementation
+
+```python
+class Solution:
+    # ============ MEMOIZATION (TOP-DOWN) ============
+    def climbStairsMemo(self, n):
+        memo = {}
+        def dp(i):
+            if i <= 1:
+                return 1
+            if i in memo:
+                return memo[i]
+            memo[i] = dp(i-1) + dp(i-2)
+            return memo[i]
+        return dp(n)
+    
+    # ============ TABULATION (BOTTOM-UP) ============
+    def climbStairsTab(self, n):
+        if n <= 1:
+            return 1
+        dp = [0] * (n + 1)
+        dp[0], dp[1] = 1, 1
+        for i in range(2, n + 1):
+            dp[i] = dp[i-1] + dp[i-2]
+        return dp[n]
+    
+    # ============ SPACE OPTIMIZED ============
+    def climbStairs(self, n):
+        if n <= 1:
+            return 1
+        prev2, prev1 = 1, 1
+        for i in range(2, n + 1):
+            curr = prev1 + prev2
+            prev2, prev1 = prev1, curr
+        return prev1
+```
+
+```cpp
+class Solution {
+public:
+    // ============ MEMOIZATION (TOP-DOWN) ============
+    int climbStairsMemo(int n) {
+        unordered_map<int, int> memo;
+        return dpMemo(n, memo);
+    }
+    
+    int dpMemo(int n, unordered_map<int, int>& memo) {
+        if (n <= 1) return 1;
+        if (memo.count(n)) return memo[n];
+        memo[n] = dpMemo(n-1, memo) + dpMemo(n-2, memo);
+        return memo[n];
+    }
+    
+    // ============ TABULATION (BOTTOM-UP) ============
+    int climbStairsTab(int n) {
+        if (n <= 1) return 1;
+        vector<int> dp(n + 1);
+        dp[0] = 1; dp[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            dp[i] = dp[i-1] + dp[i-2];
+        }
+        return dp[n];
+    }
+    
+    // ============ SPACE OPTIMIZED ============
+    int climbStairs(int n) {
+        if (n <= 1) return 1;
+        int prev2 = 1, prev1 = 1;
+        for (int i = 2; i <= n; i++) {
+            int curr = prev1 + prev2;
+            prev2 = prev1;
+            prev1 = curr;
+        }
+        return prev1;
+    }
+};
+```
+
+```java
+class Solution {
+    // ============ MEMOIZATION (TOP-DOWN) ============
+    public int climbStairsMemo(int n) {
+        HashMap<Integer, Integer> memo = new HashMap<>();
+        return dpMemo(n, memo);
+    }
+    
+    private int dpMemo(int n, HashMap<Integer, Integer> memo) {
+        if (n <= 1) return 1;
+        if (memo.containsKey(n)) return memo.get(n);
+        int result = dpMemo(n-1, memo) + dpMemo(n-2, memo);
+        memo.put(n, result);
+        return result;
+    }
+    
+    // ============ TABULATION (BOTTOM-UP) ============
+    public int climbStairsTab(int n) {
+        if (n <= 1) return 1;
+        int[] dp = new int[n + 1];
+        dp[0] = 1; dp[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            dp[i] = dp[i-1] + dp[i-2];
+        }
+        return dp[n];
+    }
+    
+    // ============ SPACE OPTIMIZED ============
+    public int climbStairs(int n) {
+        if (n <= 1) return 1;
+        int prev2 = 1, prev1 = 1;
+        for (int i = 2; i <= n; i++) {
+            int curr = prev1 + prev2;
+            prev2 = prev1;
+            prev1 = curr;
+        }
+        return prev1;
+    }
+}
+```

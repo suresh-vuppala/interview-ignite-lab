@@ -1,21 +1,47 @@
-## Problem Statement
-Solve Maximum Subarray Sum using dynamic programming.
+Find the contiguous subarray with the largest sum (Kadane's Algorithm).
 
-## Approach
+<br>
 
-### DP Formula
+> Input:
+> nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+
+> Output:
+> 6
+
+> Explanation:
+> Subarray [4, -1, 2, 1] has sum = 6
+> 
+> **Key insight:** At each position, either extend current subarray or start new.
+
+<br>
+
+---
+
+## Solution 1: Memoization (Top-Down DP)
+
+**Recurrence:**
 ```
-dp[i] = max(nums[i], dp[i-1] + nums[i])
+maxEndingHere(i) = max(nums[i], nums[i] + maxEndingHere(i-1))
+maxSoFar = max of all maxEndingHere(i)
 ```
-
-### Steps
-1. Define DP state
-2. Initialize base cases
-3. Fill DP table using recurrence
-4. Return final result
-
-## Complexity
-- Time: O(n) or O(n²)
-- Space: O(n)
 
 ```code```
+
+### Time: O(n) | Space: O(n)
+
+---
+
+## Solution 2: Tabulation (Bottom-Up DP)
+
+**DP State:**
+```
+dp[i] = max sum ending at index i
+dp[i] = max(nums[i], nums[i] + dp[i-1])
+result = max(dp)
+```
+
+```code```
+
+### Time: O(n) | Space: O(1) optimized (Kadane's)
+
+---
