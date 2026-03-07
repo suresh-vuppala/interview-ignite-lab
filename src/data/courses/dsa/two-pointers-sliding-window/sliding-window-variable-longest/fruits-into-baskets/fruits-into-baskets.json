@@ -3,10 +3,10 @@
   "slug": "fruits-into-baskets",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./fruits-into-baskets.md",
+  "mdFile": "fruits-into-baskets.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Fruits Into Baskets Solution",
       "languages": [
         {
           "language": "python",
@@ -18,7 +18,7 @@
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/fruits-into-baskets/code/cpp/fruits_into_baskets.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/fruits-into-baskets/code/cpp/FruitsIntoBaskets.cpp"
         }
       ]
     }

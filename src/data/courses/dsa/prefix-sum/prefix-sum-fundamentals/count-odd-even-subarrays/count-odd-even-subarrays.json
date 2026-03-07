@@ -1,0 +1,26 @@
+{
+  "title": "Count Odd-Even Subarrays",
+  "slug": "count-odd-even-subarrays",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "count-odd-even-subarrays.md",
+  "codeExamples": [
+    {
+      "title": "Count Odd-Even Subarrays Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/count-odd-even-subarrays/code/java/CountOddEvenSubarrays.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/count-odd-even-subarrays/code/cpp/CountOddEvenSubarrays.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/count-odd-even-subarrays/code/python/count_odd_even_subarrays.py"
+        }
+      ]
+    }
+  ]
+}

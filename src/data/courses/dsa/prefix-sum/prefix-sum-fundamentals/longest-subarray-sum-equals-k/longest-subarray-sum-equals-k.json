@@ -1,0 +1,26 @@
+{
+  "title": "Longest Subarray Sum Equals K",
+  "slug": "longest-subarray-sum-equals-k",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "longest-subarray-sum-equals-k.md",
+  "codeExamples": [
+    {
+      "title": "Longest Subarray Sum Equals K Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/longest-subarray-sum-equals-k/code/java/LongestSubarraySumEqualsK.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/longest-subarray-sum-equals-k/code/cpp/LongestSubarraySumEqualsK.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/longest-subarray-sum-equals-k/code/python/longest_subarray_sum_equals_k.py"
+        }
+      ]
+    }
+  ]
+}

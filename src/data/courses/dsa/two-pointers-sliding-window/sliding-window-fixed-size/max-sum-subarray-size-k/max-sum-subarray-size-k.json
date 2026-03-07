@@ -3,22 +3,22 @@
   "slug": "max-sum-subarray-size-k",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./max-sum-subarray-size-k.md",
+  "mdFile": "max-sum-subarray-size-k.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Maximum Sum Subarray Solution",
       "languages": [
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/max-sum-subarray-size-k/code/python/max_sum_subarray_size_k.py"
+        },
+        {
           "language": "java",
-          "codeFile": "./code/java/MaxSumSubarraySizeK.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/max-sum-subarray-size-k/code/java/MaxSumSubarraySizeK.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/max_sum_subarray_size_k.cpp"
-        },
-        {
-          "language": "python",
-          "codeFile": "./code/python/max-sum-subarray-size-k.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/max-sum-subarray-size-k/code/cpp/MaxSumSubarraySizeK.cpp"
         }
       ]
     }

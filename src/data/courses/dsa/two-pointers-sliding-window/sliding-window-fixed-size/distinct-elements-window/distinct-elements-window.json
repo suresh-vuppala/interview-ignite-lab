@@ -1,0 +1,26 @@
+{
+  "title": "Distinct Elements in Window",
+  "slug": "distinct-elements-window",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "distinct-elements-window.md",
+  "codeExamples": [
+    {
+      "title": "Distinct Elements in Window Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/java/DistinctElementsWindow.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/cpp/DistinctElementsWindow.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/python/distinct_elements_window.py"
+        }
+      ]
+    }
+  ]
+}

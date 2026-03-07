@@ -3,22 +3,22 @@
   "slug": "find-all-anagrams",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./find-all-anagrams.md",
+  "mdFile": "find-all-anagrams.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Find All Anagrams Solution",
       "languages": [
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/python/find_all_anagrams.py"
+        },
+        {
           "language": "java",
-          "codeFile": "./code/java/FindAllAnagrams.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/java/FindAllAnagrams.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/find_all_anagrams.cpp"
-        },
-        {
-          "language": "python",
-          "codeFile": "./code/python/find-all-anagrams.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/cpp/FindAllAnagrams.cpp"
         }
       ]
     }

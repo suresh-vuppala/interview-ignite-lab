@@ -1,0 +1,26 @@
+{
+  "title": "Subarrays Divisible by K",
+  "slug": "subarrays-divisible-by-k",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "subarrays-divisible-by-k.md",
+  "codeExamples": [
+    {
+      "title": "Subarrays Divisible by K Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/subarrays-divisible-by-k/code/java/SubarraysDivisibleByK.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/subarrays-divisible-by-k/code/cpp/SubarraysDivisibleByK.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/prefix-sum/prefix-sum-fundamentals/subarrays-divisible-by-k/code/python/subarrays_divisible_by_k.py"
+        }
+      ]
+    }
+  ]
+}

@@ -3,22 +3,22 @@
   "slug": "least-consecutive-cards-match",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./least-consecutive-cards-match.md",
+  "mdFile": "least-consecutive-cards-match.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Least Consecutive Cards Solution",
       "languages": [
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/least-consecutive-cards-match/code/python/least_consecutive_cards_match.py"
+        },
+        {
           "language": "java",
-          "codeFile": "./code/java/LeastConsecutiveCardsMatch.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/least-consecutive-cards-match/code/java/LeastConsecutiveCardsMatch.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/least_consecutive_cards_match.cpp"
-        },
-        {
-          "language": "python",
-          "codeFile": "./code/python/least-consecutive-cards-match.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/least-consecutive-cards-match/code/cpp/LeastConsecutiveCardsMatch.cpp"
         }
       ]
     }

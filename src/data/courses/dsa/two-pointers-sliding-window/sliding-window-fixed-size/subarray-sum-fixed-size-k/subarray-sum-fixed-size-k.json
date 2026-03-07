@@ -3,22 +3,22 @@
   "slug": "subarray-sum-fixed-size-k",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./subarray-sum-fixed-size-k.md",
+  "mdFile": "subarray-sum-fixed-size-k.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Subarray Sum Solution",
       "languages": [
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/python/subarray_sum_fixed_size_k.py"
+        },
+        {
           "language": "java",
-          "codeFile": "./code/java/SubarraySumFixedSizeK.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/java/SubarraySumFixedSizeK.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/subarray_sum_fixed_size_k.cpp"
-        },
-        {
-          "language": "python",
-          "codeFile": "./code/python/subarray-sum-fixed-size-k.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/cpp/SubarraySumFixedSizeK.cpp"
         }
       ]
     }

@@ -1,0 +1,26 @@
+{
+  "title": "Majority Element",
+  "slug": "majority-element",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "majority-element.md",
+  "codeExamples": [
+    {
+      "title": "Majority Element Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/miscellaneous/array-problems/majority-element/code/java/MajorityElement.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/miscellaneous/array-problems/majority-element/code/cpp/MajorityElement.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/miscellaneous/array-problems/majority-element/code/python/majority_element.py"
+        }
+      ]
+    }
+  ]
+}

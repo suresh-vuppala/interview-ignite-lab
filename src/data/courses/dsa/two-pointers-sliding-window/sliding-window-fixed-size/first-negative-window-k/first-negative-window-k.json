@@ -3,22 +3,22 @@
   "slug": "first-negative-window-k",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./first-negative-window-k.md",
+  "mdFile": "first-negative-window-k.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "First Negative Window Solution",
       "languages": [
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/python/first_negative_window_k.py"
+        },
+        {
           "language": "java",
-          "codeFile": "./code/java/FirstNegativeWindowK.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/java/FirstNegativeWindowK.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/first_negative_window_k.cpp"
-        },
-        {
-          "language": "python",
-          "codeFile": "./code/python/first-negative-window-k.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/cpp/FirstNegativeWindowK.cpp"
         }
       ]
     }

@@ -1,90 +1,99 @@
 import java.util.*;
 
-// Time: O(N³), Space: O(1)
-class LongestRepeatingCharacterReplacement {
+class Solution {
+    // ==================== SOLUTION 1: BRUTE FORCE ====================
+    // Time: O(n²) | Space: O(1)
     public int characterReplacementBruteForce(String s, int k) {
-        int n = s.length(), maxLen = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j < n; j++) {
-                int[] freq = new int[26];
-                int maxFreq = 0;
-                for (int p = i; p <= j; p++) {
-                    freq[s.charAt(p) - 'A']++;
-                    maxFreq = Math.max(maxFreq, freq[s.charAt(p) - 'A']);
-                }
-                if ((j - i + 1) - maxFreq <= k) maxLen = Math.max(maxLen, j - i + 1);
-            }
-        }
-        return maxLen;
-    }
-
-    // ============================================================
-
-    // Time: O(N² × 26), Space: O(26)
-    public int characterReplacementBruteOptimized(String s, int k) {
-        int n = s.length(), maxLen = 0;
+        int n = s.length();
+        int maxLen = 0;
+        
+        // Check all substrings
         for (int i = 0; i < n; i++) {
             int[] freq = new int[26];
-            int maxFreq = 0;
             for (int j = i; j < n; j++) {
+                // Update frequency
                 freq[s.charAt(j) - 'A']++;
-                maxFreq = Math.max(maxFreq, freq[s.charAt(j) - 'A']);
-                if ((j - i + 1) - maxFreq <= k) maxLen = Math.max(maxLen, j - i + 1);
+                
+                // Find max frequency
+                int maxFreq = 0;
+                for (int f : freq) {
+                    maxFreq = Math.max(maxFreq, f);
+                }
+                
+                int length = j - i + 1;
+                
+                // Check if valid
+                if (length - maxFreq <= k) {
+                    maxLen = Math.max(maxLen, length);
+                }
             }
         }
+        
         return maxLen;
     }
-
-    // ============================================================
-
-    // Time: O(N × 26), Space: O(26)
-    public int characterReplacementSlidingWindowRecalc(String s, int k) {
-        int left = 0, maxLen = 0;
-        int[] freq = new int[26];
-        for (int right = 0; right < s.length(); right++) {
-            freq[s.charAt(right) - 'A']++;
-            int maxFreq = 0;
-            for (int f : freq) maxFreq = Math.max(maxFreq, f);
-            while ((right - left + 1) - maxFreq > k) {
-                freq[s.charAt(left) - 'A']--;
-                left++;
-                maxFreq = 0;
-                for (int f : freq) maxFreq = Math.max(maxFreq, f);
-            }
-            maxLen = Math.max(maxLen, right - left + 1);
-        }
-        return maxLen;
-    }
-
-    // ============================================================
-
-    // Time: O(N), Space: O(26)
+    
+    // ==================== SOLUTION 2: SLIDING WINDOW WITH FREQUENCY MAP ====================
+    // Time: O(n×26) = O(n) | Space: O(1)
     public int characterReplacementSlidingWindow(String s, int k) {
-        int left = 0, maxLen = 0, maxFreq = 0;
+        int n = s.length();
         int[] freq = new int[26];
-        for (int right = 0; right < s.length(); right++) {
+        int left = 0;
+        int maxLen = 0;
+        
+        for (int right = 0; right < n; right++) {
+            // Add character to window
             freq[s.charAt(right) - 'A']++;
-            maxFreq = Math.max(maxFreq, freq[s.charAt(right) - 'A']);
+            
+            // Find max frequency
+            int maxFreq = 0;
+            for (int f : freq) {
+                maxFreq = Math.max(maxFreq, f);
+            }
+            
+            // Shrink window if invalid
             while ((right - left + 1) - maxFreq > k) {
                 freq[s.charAt(left) - 'A']--;
                 left++;
             }
+            
+            // Update max length
             maxLen = Math.max(maxLen, right - left + 1);
         }
+        
         return maxLen;
     }
-
-    // ============================================================
-
-    // Time: O(N), Space: O(26)
-    public int characterReplacementSlidingWindowOptimized(String s, int k) {
-        int left = 0, maxLen = 0, maxFreq = 0;
+    
+    // ==================== SOLUTION 3: OPTIMIZED SLIDING WINDOW ====================
+    // Time: O(n) | Space: O(1)
+    public int characterReplacementOptimized(String s, int k) {
+        int n = s.length();
         int[] freq = new int[26];
-        for (int right = 0; right < s.length(); right++) {
-            maxFreq = Math.max(maxFreq, ++freq[s.charAt(right) - 'A']);
-            if ((right - left + 1) - maxFreq > k) freq[s.charAt(left++) - 'A']--;
+        int left = 0;
+        int maxLen = 0;
+        int maxFreq = 0;
+        
+        for (int right = 0; right < n; right++) {
+            // Add character to window
+            freq[s.charAt(right) - 'A']++;
+            
+            // Update max frequency
+            maxFreq = Math.max(maxFreq, freq[s.charAt(right) - 'A']);
+            
+            // Shrink window if invalid
+            while ((right - left + 1) - maxFreq > k) {
+                freq[s.charAt(left) - 'A']--;
+                left++;
+            }
+            
+            // Update max length
             maxLen = Math.max(maxLen, right - left + 1);
         }
+        
         return maxLen;
+    }
+    
+    // ==================== MAIN SOLUTION (RECOMMENDED) ====================
+    public int characterReplacement(String s, int k) {
+        return characterReplacementOptimized(s, k);
     }
 }

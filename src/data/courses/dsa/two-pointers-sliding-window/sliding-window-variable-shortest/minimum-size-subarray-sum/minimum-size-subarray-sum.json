@@ -3,22 +3,22 @@
   "slug": "minimum-size-subarray-sum",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./minimum-size-subarray-sum.md",
+  "mdFile": "minimum-size-subarray-sum.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Minimum Size Subarray Sum Solution",
       "languages": [
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/python/minimum_size_subarray_sum.py"
+        },
+        {
           "language": "java",
-          "codeFile": "./code/java/MinimumSizeSubarraySum.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/java/MinimumSizeSubarraySum.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/minimum_size_subarray_sum.cpp"
-        },
-        {
-          "language": "python",
-          "codeFile": "./code/python/minimum-size-subarray-sum.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/cpp/MinimumSizeSubarraySum.cpp"
         }
       ]
     }

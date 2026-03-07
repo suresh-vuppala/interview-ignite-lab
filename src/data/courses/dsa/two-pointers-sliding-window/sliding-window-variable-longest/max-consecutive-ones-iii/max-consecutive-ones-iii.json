@@ -3,10 +3,10 @@
   "slug": "max-consecutive-ones-iii",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./max-consecutive-ones-iii.md",
+  "mdFile": "max-consecutive-ones-iii.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Max Consecutive Ones III Solution",
       "languages": [
         {
           "language": "python",
@@ -18,7 +18,7 @@
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-consecutive-ones-iii/code/cpp/max_consecutive_ones_iii.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-consecutive-ones-iii/code/cpp/MaxConsecutiveOnesIii.cpp"
         }
       ]
     }

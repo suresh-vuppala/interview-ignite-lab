@@ -1,0 +1,26 @@
+{
+  "title": "Word Ladder",
+  "slug": "word-ladder",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "word-ladder.md",
+  "codeExamples": [
+    {
+      "title": "Word Ladder Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/shortest-path-algorithms/word-ladder/code/java/WordLadder.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/shortest-path-algorithms/word-ladder/code/cpp/WordLadder.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/graphs/shortest-path-algorithms/word-ladder/code/python/word_ladder.py"
+        }
+      ]
+    }
+  ]
+}

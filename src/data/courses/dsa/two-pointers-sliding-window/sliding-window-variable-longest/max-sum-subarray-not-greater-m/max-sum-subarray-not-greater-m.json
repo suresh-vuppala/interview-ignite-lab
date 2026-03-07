@@ -1,0 +1,26 @@
+{
+  "title": "Maximum Sum Subarray Not Greater Than M",
+  "slug": "max-sum-subarray-not-greater-m",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "max-sum-subarray-not-greater-m.md",
+  "codeExamples": [
+    {
+      "title": "Maximum Sum Subarray Not Greater Than M Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-sum-subarray-not-greater-m/code/java/MaxSumNotGreaterM.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-sum-subarray-not-greater-m/code/cpp/MaxSumNotGreaterM.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-sum-subarray-not-greater-m/code/python/max_sum_not_greater_m.py"
+        }
+      ]
+    }
+  ]
+}

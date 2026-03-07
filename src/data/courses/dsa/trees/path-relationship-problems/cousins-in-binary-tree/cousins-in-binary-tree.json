@@ -1,0 +1,26 @@
+{
+  "title": "Cousins in Binary Tree",
+  "slug": "cousins-in-binary-tree",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "cousins-in-binary-tree.md",
+  "codeExamples": [
+    {
+      "title": "Cousins in Binary Tree Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/cousins-in-binary-tree/code/java/CousinsInBinaryTree.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/cousins-in-binary-tree/code/cpp/CousinsInBinaryTree.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/cousins-in-binary-tree/code/python/cousins_in_binary_tree.py"
+        }
+      ]
+    }
+  ]
+}

@@ -3,22 +3,22 @@
   "slug": "minimum-window-substring",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./minimum-window-substring.md",
+  "mdFile": "minimum-window-substring.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Minimum Window Substring Solution",
       "languages": [
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-window-substring/code/python/minimum_window_substring.py"
+        },
+        {
           "language": "java",
-          "codeFile": "./code/java/MinimumWindowSubstring.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-window-substring/code/java/MinimumWindowSubstring.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/minimum_window_substring.cpp"
-        },
-        {
-          "language": "python",
-          "codeFile": "./code/python/minimum-window-substring.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-window-substring/code/cpp/MinimumWindowSubstring.cpp"
         }
       ]
     }

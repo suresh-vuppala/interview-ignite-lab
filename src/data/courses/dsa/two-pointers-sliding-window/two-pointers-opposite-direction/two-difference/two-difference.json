@@ -1,0 +1,26 @@
+{
+  "title": "Two Difference",
+  "slug": "two-difference",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "two-difference.md",
+  "codeExamples": [
+    {
+      "title": "Two Difference Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-difference/code/java/TwoDifference.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-difference/code/cpp/TwoDifference.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-difference/code/python/two_difference.py"
+        }
+      ]
+    }
+  ]
+}
