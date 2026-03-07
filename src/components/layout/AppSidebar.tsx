@@ -50,39 +50,11 @@ export function AppSidebar() {
 
   const [searchQuery, setSearchQuery] = useState('');
   const [openModuleIndex, setOpenModuleIndex] = useState<number | null>(null);
-  const [openModuleIndices, setOpenModuleIndices] = useState<number[]>([]);
   const activeItemRef = useRef<HTMLLIElement>(null);
 
   // ✅ Helper to check if text matches the search
   const matchesSearch = (text: string) =>
     text?.toLowerCase().includes(searchQuery.toLowerCase());
-
-  // Auto-expand modules when searching
-  useEffect(() => {
-    if (searchQuery && course) {
-      // Expand all modules with matching content
-      const matchingIndices = course.modules
-        .map((module: any, index: number) => {
-          const hasMatch = matchesSearch(module.title) ||
-            module.sections?.some((section: any) =>
-              matchesSearch(section.title) ||
-              section.lessons?.some((lesson: any) => {
-                if (lesson.lessons) {
-                  return matchesSearch(lesson.title) || lesson.lessons.some((sl: any) => matchesSearch(sl.title));
-                }
-                return matchesSearch(lesson.title);
-              })
-            );
-          return hasMatch ? index : -1;
-        })
-        .filter((index: number) => index >= 0);
-      
-      console.log('Matching module indices:', matchingIndices);
-      setOpenModuleIndices(matchingIndices);
-    } else {
-      setOpenModuleIndices([]);
-    }
-  }, [searchQuery, course]);
 
 const navigate = useNavigate();
 
@@ -261,16 +233,16 @@ useEffect(() => {
                                 isActive={isActive}
                                 className={cn(
                                   'w-full py-1.5 px-2 h-auto rounded-md transition-colors',
-                                  isActive && 'bg-pink-100/60 dark:bg-pink-900/20 font-medium',
-                                  !isActive && 'hover:bg-accent/60 text-foreground/80 hover:text-pink-400 dark:hover:text-pink-300'
+                                  isActive && 'bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-semibold ring-2 ring-primary/20',
+                                  !isActive && 'hover:bg-accent/60 text-foreground/80'
                                 )}
                               >
                                 <Link to={subLessonPath} className="flex items-center gap-2 w-full">
                                   <FileText className={cn(
                                     "h-3.5 w-3.5 flex-shrink-0",
-                                    isActive ? "text-pink-600 dark:text-pink-400" : "text-muted-foreground"
+                                    isActive ? "text-primary-foreground" : "text-muted-foreground"
                                   )} />
-                                  <span className={cn("text-[13px] flex-1 min-w-0 break-words whitespace-normal", isActive && "text-pink-600 dark:text-pink-400 underline decoration-2 underline-offset-2")} title={subLesson.title}>
+                                  <span className="text-[13px] flex-1 min-w-0 break-words whitespace-normal" title={subLesson.title}>
                                     {subLesson.title}
                                   </span>
                                   {isLocked && (
@@ -309,8 +281,8 @@ useEffect(() => {
                     isActive={isActive}
                     className={cn(
                       'w-full py-1.5 px-2 h-auto rounded-md transition-colors',
-                      isActive && 'bg-pink-100/60 dark:bg-pink-900/20 font-medium',
-                      !isActive && 'hover:bg-accent/60 text-foreground/80 hover:text-pink-400 dark:hover:text-pink-300'
+                      isActive && 'bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-semibold ring-2 ring-primary/20',
+                      !isActive && 'hover:bg-accent/60 text-foreground/80'
                     )}
                   >
                     <Link to={lessonPath} 
@@ -320,9 +292,9 @@ useEffect(() => {
                       className="flex items-center gap-2 w-full">
                       <FileText className={cn(
                         "h-3.5 w-3.5 flex-shrink-0",
-                        isActive ? "text-pink-600 dark:text-pink-400" : "text-muted-foreground"
+                        isActive ? "text-primary-foreground" : "text-muted-foreground"
                       )} />
-                      <span className={cn("text-[13px] flex-1 min-w-0 break-words whitespace-normal", isActive && "text-pink-600 dark:text-pink-400")} title={lesson.title}>
+                      <span className="text-[13px] flex-1 min-w-0 break-words whitespace-normal" title={lesson.title}>
                         {lesson.title}
                       </span>
                       {isLocked && (
@@ -355,7 +327,7 @@ useEffect(() => {
           {course && (
             <SidebarGroup>
               <SidebarGroupLabel
-                className="text-base font-bold px-3 py-2 sticky top-0 bg-gradient-to-r from-pink-50 to-transparent dark:from-pink-950/20 dark:to-transparent z-10 border-b text-pink-600 dark:text-pink-400"
+                className="text-sm font-bold px-3 py-2 sticky top-0 bg-background z-10 border-b text-foreground"
                 title={course.title}
               >
                 {course.title}
@@ -364,9 +336,8 @@ useEffect(() => {
               <SidebarGroupContent>
                 <SidebarMenu className="space-y-1 p-2">
                   {course.modules
-                    .map((module: any, originalIndex: number) => ({ module, originalIndex }))
                     .filter(
-                      ({ module }: any) =>
+                      (module: any) =>
                         matchesSearch(module.title) ||
                         module.sections?.some((section: any) =>
                           matchesSearch(section.title) ||
@@ -381,25 +352,25 @@ useEffect(() => {
                           })
                         )
                     )
-                    .map(({ module, originalIndex }: any) => {
-                      const isOpen = searchQuery ? openModuleIndices.includes(originalIndex) : openModuleIndex === originalIndex;
+                    .map((module: any, moduleIndex: number) => {
+                      const isOpen = openModuleIndex === moduleIndex;
                       return (
                         <Collapsible
-                          key={originalIndex}
+                          key={moduleIndex}
                           open={isOpen}
-                          onOpenChange={() => !searchQuery && handleModuleToggle(originalIndex)}
+                          onOpenChange={() => handleModuleToggle(moduleIndex)}
                         >
                           <SidebarMenuItem>
                             <CollapsibleTrigger asChild>
                               <SidebarMenuButton
                                 className={cn(
-                                  'w-full justify-between py-2 px-2 rounded-md hover:bg-accent/70 transition-colors group/module',
+                                  'w-full justify-between py-2 px-2 rounded-md hover:bg-accent/70',
                                   isOpen && 'bg-accent/70'
                                 )}
                               >
                                 <div className="flex items-center gap-2 min-w-0 flex-1 max-w-[320px]">
                                   <FolderOpen className="h-4 w-4 flex-shrink-0 text-primary" />
-                                  <span className="text-sm font-bold break-words whitespace-normal text-foreground line-clamp-2 group-hover/module:text-pink-500 dark:group-hover/module:text-pink-300 transition-colors">
+                                  <span className="text-sm font-bold break-words whitespace-normal text-foreground line-clamp-2">
                                     {module.title}
                                   </span>
                                 </div>

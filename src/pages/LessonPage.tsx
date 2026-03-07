@@ -1,7 +1,7 @@
 // /pages/LessonPage.tsx
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Layout } from '@/components/Layout';
+import { Layout } from '@/components/layout';
 import  CountdownTimer  from '@/components/CountdownTimer';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
@@ -382,10 +382,10 @@ const renderMarkdown = (markdown : string) => {
       elements.push(
         <blockquote
           key={index}
-          className="border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-lg my-3"
+          className="border-l-4 border-primary pl-6 py-3 bg-gradient-to-r from-primary/10 to-transparent rounded-r-xl my-4 shadow-sm"
         >
           {blockquoteBuffer.map((text, i) => (
-            <p key={i} className="text-muted-foreground italic m-0 leading-relaxed">
+            <p key={i} className="text-muted-foreground italic m-0 leading-relaxed text-base">
               {renderInlineFormatting(text, `bq-${index}-${i}`)}
             </p>
           ))}
@@ -393,7 +393,7 @@ const renderMarkdown = (markdown : string) => {
       );
       blockquoteBuffer = [];
     }
-    if (line.startsWith('---')) { elements.push(<hr key={index} className="my-8 border-t opacity-100" />); return; }
+    if (line.startsWith('---')) { elements.push(<hr key={index} className="my-10 border-t-2 border-gradient-to-r from-transparent via-primary/30 to-transparent" />); return; }
     // --- Headings ---
     if (line.startsWith('# ')) {
       elements.push(
@@ -405,7 +405,8 @@ const renderMarkdown = (markdown : string) => {
     }
     if (line.startsWith('## ')) {
       elements.push(
-        <h2 key={index} className="text-2xl font-bold mt-6 mb-3 text-foreground">
+        <h2 key={index} className="text-2xl font-bold mt-8 mb-4 text-foreground flex items-center gap-3">
+          <span className="w-1 h-8 bg-gradient-to-b from-primary to-primary/50 rounded-full"></span>
           {line.slice(3)}
         </h2>
       );
@@ -413,7 +414,8 @@ const renderMarkdown = (markdown : string) => {
     }
     if (line.startsWith('### ')) {
       elements.push(
-        <h3 key={index} className="text-xl font-semibold mt-5 mb-2 text-foreground">
+        <h3 key={index} className="text-xl font-semibold mt-6 mb-3 text-foreground flex items-center gap-2">
+          <span className="w-2 h-2 bg-primary rounded-full"></span>
           {line.slice(4)}
         </h3>
       );
@@ -525,46 +527,52 @@ const renderTable = (lines: string[], key: number) => {
   );
 
   return (
-    <table key={`table-${key}`} className="table-auto border border-gray-300 my-4 w-full">
-      <thead>
-        <tr>
-          {headers.map((h, idx) => (
-            <th key={idx} className="border px-2 py-1 text-left bg-pink-100">
-              {renderInlineFormatting(h, `header-${idx}`)}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {rows.map((row, rIdx) => (
-          <tr key={rIdx}>
-            {row.map((cell, cIdx) => (
-              <td key={cIdx} className="border px-2 py-1 align-top">
-                {renderInlineFormatting(cell, `cell-${rIdx}-${cIdx}`)}
-              </td>
+    <div key={`table-wrapper-${key}`} className="my-6 overflow-x-auto rounded-xl border border-border shadow-md">
+      <table className="table-auto w-full">
+        <thead>
+          <tr className="bg-gradient-to-r from-primary/20 to-primary/10">
+            {headers.map((h, idx) => (
+              <th key={idx} className="border-b-2 border-primary/30 px-4 py-3 text-left font-semibold text-foreground">
+                {renderInlineFormatting(h, `header-${idx}`)}
+              </th>
             ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {rows.map((row, rIdx) => (
+            <tr key={rIdx} className="hover:bg-muted/50 transition-colors">
+              {row.map((cell, cIdx) => (
+                <td key={cIdx} className="border-b border-border px-4 py-3 align-top">
+                  {renderInlineFormatting(cell, `cell-${rIdx}-${cIdx}`)}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
 
 return (
   <Layout>
-    <div className="max-w-7xl mx-auto p-4 sm:p-6">
-      {/* Header */}
-      <div className="mb-6 flex items-center justify-between flex-wrap gap-3">
-        <h1 className="text-3xl font-bold">{lesson.title}</h1>
-        {lesson.isPremium && (
-          <Badge variant="secondary" className="gap-1 flex items-center">
-            <Crown className="w-3 h-3" /> PRO
-          </Badge>
-        )}
+    <div className="max-w-6xl mx-auto p-4 sm:p-6 lg:p-8">
+      {/* Header with gradient background */}
+      <div className="mb-8 p-6 rounded-2xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 animate-slide-in">
+        <div className="flex items-center justify-between flex-wrap gap-4">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+            {lesson.title}
+          </h1>
+          {lesson.isPremium && (
+            <Badge variant="secondary" className="gap-2 px-4 py-2 text-sm">
+              <Crown className="w-4 h-4" /> PRO
+            </Badge>
+          )}
+        </div>
       </div>
       {/* Lesson Content */}
-      <div className="space-y-4">
+      <div className="space-y-6 animate-fade-in">
         {/* Case 1: Coming Soon (Not Posted Yet) */}
         {!lesson.isPosted ? (
           <div className="relative p-10 min-h-[400px] bg-gradient-to-b from-pink-50 to-white dark:from-pink-950/40 dark:to-background rounded-lg flex flex-col items-center justify-center text-center border border-pink-200 dark:border-pink-900 shadow-sm">
@@ -612,36 +620,42 @@ return (
           </div>
         ) : (
           /* Case 3: Public Lesson Content */
-          <div className="space-y-3 leading-relaxed">
+          <div className="prose prose-lg max-w-none space-y-4 leading-relaxed">
             {renderMarkdown(markdown)}
           </div>
         )}
       </div>
 
       {/* Navigation */}
-      <div className="flex justify-between mt-8 pt-6 border-t">
+      <div className="flex justify-between items-center mt-12 pt-8 border-t border-border/50">
         {prevLesson ? (
-          <Button variant="outline" asChild>
+          <Button variant="outline" size="lg" className="hover-lift" asChild>
             <Link to={prevLesson.path}>
-              <ChevronLeft className="w-4 h-4 mr-2" />
-              <span className="truncate max-w-[150px]">{prevLesson.title}</span>
+              <ChevronLeft className="w-5 h-5 mr-2" />
+              <div className="flex flex-col items-start">
+                <span className="text-xs text-muted-foreground">Previous</span>
+                <span className="truncate max-w-[150px] font-medium">{prevLesson.title}</span>
+              </div>
             </Link>
           </Button>
         ) : (
-          <Button variant="outline" disabled>
-            <ChevronLeft className="w-4 h-4 mr-2" /> Previous
+          <Button variant="outline" size="lg" disabled>
+            <ChevronLeft className="w-5 h-5 mr-2" /> Previous
           </Button>
         )}
         {nextLesson ? (
-          <Button variant="outline" asChild>
+          <Button variant="outline" size="lg" className="hover-lift" asChild>
             <Link to={nextLesson.path}>
-              <span className="truncate max-w-[150px]">{nextLesson.title}</span>
-              <ChevronRight className="w-4 h-4 ml-2" />
+              <div className="flex flex-col items-end">
+                <span className="text-xs text-muted-foreground">Next</span>
+                <span className="truncate max-w-[150px] font-medium">{nextLesson.title}</span>
+              </div>
+              <ChevronRight className="w-5 h-5 ml-2" />
             </Link>
           </Button>
         ) : (
-          <Button variant="outline" disabled>
-            Next <ChevronRight className="w-4 h-4 ml-2" />
+          <Button variant="outline" size="lg" disabled>
+            Next <ChevronRight className="w-5 h-5 ml-2" />
           </Button>
         )}
       </div>

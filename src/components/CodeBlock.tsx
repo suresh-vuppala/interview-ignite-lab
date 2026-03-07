@@ -99,9 +99,9 @@ export function CodeBlock({ title, codes, showLanguageSelector = true }: CodeBlo
   };
 
   return (
-    <Card className="overflow-hidden border-2 border-primary/20 bg-gradient-to-br from-background to-muted/30">
+    <Card className="overflow-hidden border-2 border-primary/20 bg-gradient-to-br from-background to-muted/30 shadow-lg hover-lift code-block-wrapper">
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary/10 to-primary/5 border-b border-primary/20 px-4 py-3">
+      <div className="glass bg-gradient-to-r from-primary/10 to-primary/5 border-b border-primary/20 px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Title & Language Selector */}
           <div className="flex items-center gap-3">
@@ -141,7 +141,7 @@ export function CodeBlock({ title, codes, showLanguageSelector = true }: CodeBlo
 
       {/* Code Display */}
       <CardContent className="p-0">
-        <div className="relative max-h-[600px] overflow-auto">
+        <div className="relative max-h-[600px] overflow-auto custom-scrollbar">
           <SyntaxHighlighter
             language={selectedLanguage}
             style={customStyle}

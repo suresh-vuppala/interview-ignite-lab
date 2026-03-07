@@ -16,9 +16,9 @@ const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 
 // === UPDATED: responsive widths (only change) ===
-const SIDEBAR_WIDTH_MOBILE = "20rem";   // mobile base
-const SIDEBAR_WIDTH_TABLET = "22rem";   // tablet
-const SIDEBAR_WIDTH_DESKTOP = "22rem";  // desktop
+const SIDEBAR_WIDTH_MOBILE = "16rem";   // mobile: 256px
+const SIDEBAR_WIDTH_TABLET = "18rem";   // tablet: 288px
+const SIDEBAR_WIDTH_DESKTOP = "22rem";  // desktop: 352px
 const SIDEBAR_WIDTH_ICON = "3rem";
 // =================================================
 
@@ -183,11 +183,11 @@ const Sidebar = React.forwardRef<
       data-variant={variant}
       data-side={side}
     >
-      {/* This is what handles the sidebar gap on desktop */}
       <div
         className={cn(
-          "relative h-svh w-[--sidebar-width-desktop] bg-transparent transition-[width] duration-200 ease-linear",
-          "group-data-[collapsible=offcanvas]:w-0",
+          "relative h-svh bg-transparent transition-[width] duration-200 ease-linear",
+          "group-data-[state=expanded]:w-[--sidebar-width-desktop]",
+          "group-data-[state=collapsed]:w-0",
           "group-data-[side=right]:rotate-180",
           variant === "floating" || variant === "inset"
             ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]"
