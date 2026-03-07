@@ -6,19 +6,19 @@
   "mdFile": "./longest-subarray-sum-k.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Solution",
       "languages": [
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-subarray-sum-k/code/python/longest_subarray_sum_k.py"
+        },
+        {
           "language": "java",
-          "codeFile": "./code/java/LongestSubarraySumK.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-subarray-sum-k/code/java/LongestSubarraySumK.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/longest_subarray_sum_k.cpp"
-        },
-        {
-          "language": "python",
-          "codeFile": "./code/python/longest-subarray-sum-k.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-subarray-sum-k/code/cpp/longest_subarray_sum_k.cpp"
         }
       ]
     }

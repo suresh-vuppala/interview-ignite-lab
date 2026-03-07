@@ -1,5 +1,5 @@
 {
-  "title": "Sort Stack Recursion",
+  "title": "Sort Stack",
   "slug": "sort-stack-recursion",
   "isPremium": false,
   "isPosted": true,
@@ -9,16 +9,16 @@
       "title": "Solution",
       "languages": [
         {
+          "language": "python",
+          "codeFile": "courses/dsa/stacks/stack-advanced/sort-stack-recursion/code/python/sort_stack.py"
+        },
+        {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/sort-stack-recursion/code/java/SortStackRecursion.java"
+          "codeFile": "courses/dsa/stacks/stack-advanced/sort-stack-recursion/code/java/SortStack.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/sort-stack-recursion/code/cpp/SortStackRecursion.cpp"
-        },
-        {
-          "language": "python",
-          "codeFile": "/src/data/courses/dsa/stacks/stack-advanced/sort-stack-recursion/code/python/sort_stack_recursion.py"
+          "codeFile": "courses/dsa/stacks/stack-advanced/sort-stack-recursion/code/cpp/SortStack.cpp"
         }
       ]
     }

@@ -6,19 +6,19 @@
   "mdFile": "./longest-substring-without-repeating.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Solution",
       "languages": [
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/python/longest_substring_without_repeating.py"
+        },
+        {
           "language": "java",
-          "codeFile": "./code/java/LongestSubstringWithoutRepeating.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/java/LongestSubstringWithoutRepeating.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/longest_substring_without_repeating.cpp"
-        },
-        {
-          "language": "python",
-          "codeFile": "./code/python/longest-substring-without-repeating.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/cpp/longest_substring_without_repeating.cpp"
         }
       ]
     }

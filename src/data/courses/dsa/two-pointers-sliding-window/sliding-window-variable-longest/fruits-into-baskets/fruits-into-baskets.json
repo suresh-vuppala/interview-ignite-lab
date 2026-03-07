@@ -6,19 +6,19 @@
   "mdFile": "./fruits-into-baskets.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Solution",
       "languages": [
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/fruits-into-baskets/code/python/fruits_into_baskets.py"
+        },
+        {
           "language": "java",
-          "codeFile": "./code/java/FruitsIntoBaskets.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/fruits-into-baskets/code/java/FruitsIntoBaskets.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/fruits_into_baskets.cpp"
-        },
-        {
-          "language": "python",
-          "codeFile": "./code/python/fruits-into-baskets.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/fruits-into-baskets/code/cpp/fruits_into_baskets.cpp"
         }
       ]
     }
