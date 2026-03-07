@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/WordSearch.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/word-search/code/java/WordSearch.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/word_search.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/word-search/code/cpp/word_search.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/word-search.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/word-search/code/python/word-search.py"
                 }
             ]
         }

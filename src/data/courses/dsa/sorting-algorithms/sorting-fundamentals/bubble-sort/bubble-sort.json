@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/BubbleSort.java"
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/bubble-sort/code/java/BubbleSort.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/BubbleSort.cpp"
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/bubble-sort/code/cpp/bubble_sort.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/bubble_sort.py"
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/bubble-sort/code/python/bubble-sort.py"
         }
       ]
     }

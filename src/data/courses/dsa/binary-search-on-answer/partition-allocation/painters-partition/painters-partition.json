@@ -1,0 +1,26 @@
+{
+  "title": "Painter's Partition Problem",
+  "slug": "painters-partition",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "painters-partition.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/partition-allocation/painters-partition/code/python/painters-partition.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-on-answer/partition-allocation/painters-partition/code/java/PaintersPartition.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-on-answer/partition-allocation/painters-partition/code/cpp/painters-partition.cpp"
+        }
+      ]
+    }
+  ]
+}

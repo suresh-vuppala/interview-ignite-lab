@@ -1,20 +1,27 @@
+# Time: O(N × N!), Space: O(N)
+
 def permute_unique(nums):
     result = []
     nums.sort()
-    used = [False] * len(nums)
+    visited = [False] * len(nums)
     
-    def backtrack(curr):
-        if len(curr) == len(nums):
-            result.append(curr[:])
+    def backtrack(current):
+        if len(current) == len(nums):
+            result.append(current[:])
             return
+        
         for i in range(len(nums)):
-            if used[i] or (i > 0 and nums[i] == nums[i-1] and not used[i-1]):
+            if visited[i] or (i > 0 and nums[i] == nums[i-1] and not visited[i-1]):
                 continue
-            used[i] = True
-            curr.append(nums[i])
-            backtrack(curr)
-            curr.pop()
-            used[i] = False
+            
+            visited[i] = True
+            current.append(nums[i])
+            backtrack(current)
+            current.pop()
+            visited[i] = False
     
     backtrack([])
     return result
+
+nums = [1, 1, 2]
+print(permute_unique(nums))

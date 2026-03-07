@@ -1,8 +1,9 @@
-def single_number(nums):
+# Time: O(N) | Space: O(1)
+
+def two_non_repeating(nums):
     xor_all = 0
     for num in nums:
         xor_all ^= num
-    
     rightmost = xor_all & -xor_all
     a = b = 0
     for num in nums:

@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/PalindromePartitioning.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/palindrome-partitioning/code/java/PalindromePartitioning.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/palindrome_partitioning.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/palindrome-partitioning/code/cpp/palindrome_partitioning.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/palindrome-partitioning.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/palindrome-partitioning/code/python/palindrome-partitioning.py"
                 }
             ]
         }

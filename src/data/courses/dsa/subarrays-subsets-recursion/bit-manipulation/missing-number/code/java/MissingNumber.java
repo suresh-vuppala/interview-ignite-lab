@@ -1,3 +1,5 @@
+// Time: O(N) | Space: O(1)
+
 class Solution {
     public int missingNumber(int[] nums) {
         int result = nums.length;

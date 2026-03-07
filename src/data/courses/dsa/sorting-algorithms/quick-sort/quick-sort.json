@@ -1,24 +1,24 @@
 {
     "title": "Quick Sort",
-    "description": "Implement Quick Sort algorithm",
-    "difficulty": "medium",
+    "slug": "quick-sort",
     "isPremium": false,
     "isPosted": true,
+    "mdFile": "quick-sort.md",
     "codeExamples": [
         {
             "title": "Solution",
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "/src/data/courses/dsa/sorting-algorithms/quick-sort/code/java/QuickSort.java"
+                    "codeFile": "courses/dsa/sorting-algorithms/quick-sort/code/java/QuickSort.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "/src/data/courses/dsa/sorting-algorithms/quick-sort/code/cpp/QuickSort.cpp"
+                    "codeFile": "courses/dsa/sorting-algorithms/quick-sort/code/cpp/quick_sort.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "/src/data/courses/dsa/sorting-algorithms/quick-sort/code/python/quick-sort.py"
+                    "codeFile": "courses/dsa/sorting-algorithms/quick-sort/code/python/quick-sort.py"
                 }
             ]
         }

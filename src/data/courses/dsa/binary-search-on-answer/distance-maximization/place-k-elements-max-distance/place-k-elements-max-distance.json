@@ -1,0 +1,18 @@
+{
+  "title": "Place k Elements Such That Minimum Distance is Maximum",
+  "slug": "place-k-elements-max-distance",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "place-k-elements-max-distance.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/place-k-elements-max-distance/code/python/place-k-elements-max-distance.py"
+        }
+      ]
+    }
+  ]
+}

@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/SingleNumber.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/single-number/code/java/SingleNumber.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/single_number.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/single-number/code/cpp/single_number.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/single-number.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/single-number/code/python/single-number.py"
                 }
             ]
         }

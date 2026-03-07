@@ -1,0 +1,26 @@
+{
+  "title": "Minimum Speed to Arrive on Time",
+  "slug": "minimum-speed-arrive-time",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "minimum-speed-arrive-time.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-speed-arrive-time/minimum_speed_arrive_time.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-speed-arrive-time/MinimumSpeedArriveTime.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-speed-arrive-time/MinimumSpeedArriveTime.cpp"
+        }
+      ]
+    }
+  ]
+}

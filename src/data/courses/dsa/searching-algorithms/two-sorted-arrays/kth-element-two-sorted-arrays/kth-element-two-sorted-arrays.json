@@ -1,0 +1,26 @@
+{
+  "title": "Kth Element of Two Sorted Arrays",
+  "slug": "kth-element-two-sorted-arrays",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "kth-element-two-sorted-arrays.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/searching-algorithms/two-sorted-arrays/kth-element-two-sorted-arrays/code/python/kth_element_two_sorted_arrays.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/searching-algorithms/two-sorted-arrays/kth-element-two-sorted-arrays/code/java/KthElementTwoSortedArrays.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/searching-algorithms/two-sorted-arrays/kth-element-two-sorted-arrays/code/cpp/KthElementTwoSortedArrays.cpp"
+        }
+      ]
+    }
+  ]
+}

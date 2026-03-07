@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/MergeTwoSortedLists.java"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/merge-two-sorted-lists/code/java/MergeTwoSortedLists.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/MergeTwoSortedLists.cpp"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/merge-two-sorted-lists/code/cpp/merge-two-sorted-lists.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/merge_two_sorted_lists.py"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/merge-two-sorted-lists/code/python/merge-two-sorted-lists.py"
         }
       ]
     }

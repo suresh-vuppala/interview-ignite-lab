@@ -1,0 +1,26 @@
+{
+    "title": "Tower of Hanoi",
+    "slug": "tower-of-hanoi",
+    "isPremium": false,
+    "isPosted": true,
+    "mdFile": "tower-of-hanoi.md",
+    "codeExamples": [
+        {
+            "title": "Tower of Hanoi",
+            "languages": [
+                {
+                    "language": "java",
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/recursion-fundamentals/tower-of-hanoi/code/java/TowerOfHanoi.java"
+                },
+                {
+                    "language": "cpp",
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/recursion-fundamentals/tower-of-hanoi/code/cpp/tower_of_hanoi.cpp"
+                },
+                {
+                    "language": "python",
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/recursion-fundamentals/tower-of-hanoi/code/python/tower-of-hanoi.py"
+                }
+            ]
+        }
+    ]
+}

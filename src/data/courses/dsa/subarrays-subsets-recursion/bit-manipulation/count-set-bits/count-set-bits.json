@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/CountSetBits.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/count-set-bits/code/java/CountSetBits.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/count_set_bits.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/count-set-bits/code/cpp/count_set_bits.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/count-set-bits.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/count-set-bits/code/python/count-set-bits.py"
                 }
             ]
         }

@@ -1,32 +1,34 @@
+# Time: O(N!), Space: O(N)
+
 def solve_n_queens(n):
     result = []
-    board = [['.'] * n for _ in range(n)]
-    
-    def is_valid(row, col):
-        for i in range(row):
-            if board[i][col] == 'Q':
-                return False
-        i, j = row-1, col-1
-        while i >= 0 and j >= 0:
-            if board[i][j] == 'Q':
-                return False
-            i, j = i-1, j-1
-        i, j = row-1, col+1
-        while i >= 0 and j < n:
-            if board[i][j] == 'Q':
-                return False
-            i, j = i-1, j+1
-        return True
+    board = [['.' for _ in range(n)] for _ in range(n)]
+    cols = set()
+    diag = set()
+    anti_diag = set()
     
     def backtrack(row):
         if row == n:
-            result.append([''.join(row) for row in board])
+            result.append([''.join(r) for r in board])
             return
+        
         for col in range(n):
-            if is_valid(row, col):
-                board[row][col] = 'Q'
-                backtrack(row+1)
-                board[row][col] = '.'
+            if col in cols or (row - col) in diag or (row + col) in anti_diag:
+                continue
+            
+            board[row][col] = 'Q'
+            cols.add(col)
+            diag.add(row - col)
+            anti_diag.add(row + col)
+            
+            backtrack(row + 1)
+            
+            board[row][col] = '.'
+            cols.remove(col)
+            diag.remove(row - col)
+            anti_diag.remove(row + col)
     
     backtrack(0)
     return result
+
+print(solve_n_queens(4))

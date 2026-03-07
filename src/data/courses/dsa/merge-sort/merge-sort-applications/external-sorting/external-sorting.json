@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/ExternalSorting.java"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/external-sorting/code/java/ExternalSorting.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/ExternalSorting.cpp"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/external-sorting/code/cpp/external-sorting.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/external_sorting.py"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/external-sorting/code/python/external-sorting.py"
         }
       ]
     }

@@ -1,0 +1,26 @@
+{
+  "title": "Closest Subsequence Sum",
+  "slug": "closest-subsequence-sum",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "closest-subsequence-sum.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/closest-subsequence-sum/closest_subsequence_sum.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/closest-subsequence-sum/ClosestSubsequenceSum.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/closest-subsequence-sum/ClosestSubsequenceSum.cpp"
+        }
+      ]
+    }
+  ]
+}

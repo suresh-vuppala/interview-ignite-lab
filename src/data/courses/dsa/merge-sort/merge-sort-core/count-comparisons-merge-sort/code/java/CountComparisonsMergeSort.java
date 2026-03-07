@@ -1,21 +1,40 @@
-int mergeSort(int[] arr, int l, int r) {
-    if (l >= r) return 0;
-    int m = l + (r - l) / 2;
-    int count = mergeSort(arr, l, m) + mergeSort(arr, m + 1, r);
-    return count + merge(arr, l, m, r);
-}
+// Time: O(N log N), Space: O(N)
 
-int merge(int[] arr, int l, int m, int r) {
-    int n1 = m - l + 1, n2 = r - m, count = 0;
-    int[] L = new int[n1], R = new int[n2];
-    for (int i = 0; i < n1; i++) L[i] = arr[l + i];
-    for (int i = 0; i < n2; i++) R[i] = arr[m + 1 + i];
-    int i = 0, j = 0, k = l;
-    while (i < n1 && j < n2) {
-        count++;
-        arr[k++] = (L[i] <= R[j]) ? L[i++] : R[j++];
+public class CountComparisonsMergeSort {
+    static int count = 0;
+    
+    public static void mergeSort(int[] arr, int left, int right) {
+        if (left < right) {
+            int mid = left + (right - left) / 2;
+            mergeSort(arr, left, mid);
+            mergeSort(arr, mid + 1, right);
+            merge(arr, left, mid, right);
+        }
     }
-    while (i < n1) arr[k++] = L[i++];
-    while (j < n2) arr[k++] = R[j++];
-    return count;
+    
+    private static void merge(int[] arr, int left, int mid, int right) {
+        int n1 = mid - left + 1;
+        int n2 = right - mid;
+        int[] L = new int[n1];
+        int[] R = new int[n2];
+        
+        for (int i = 0; i < n1; i++) L[i] = arr[left + i];
+        for (int j = 0; j < n2; j++) R[j] = arr[mid + 1 + j];
+        
+        int i = 0, j = 0, k = left;
+        while (i < n1 && j < n2) {
+            count++;
+            if (L[i] <= R[j]) arr[k++] = L[i++];
+            else arr[k++] = R[j++];
+        }
+        
+        while (i < n1) arr[k++] = L[i++];
+        while (j < n2) arr[k++] = R[j++];
+    }
+    
+    public static void main(String[] args) {
+        int[] arr = {38, 27, 43, 3, 9, 82, 10};
+        mergeSort(arr, 0, arr.length - 1);
+        System.out.println("Comparisons: " + count);
+    }
 }

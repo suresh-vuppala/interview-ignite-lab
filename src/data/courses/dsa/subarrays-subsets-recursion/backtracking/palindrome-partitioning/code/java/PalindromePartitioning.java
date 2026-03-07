@@ -1,3 +1,5 @@
+// Time: O(N × 2^N), Space: O(N)
+
 import java.util.*;
 
 class Solution {
@@ -7,25 +9,32 @@ class Solution {
         return result;
     }
     
-    void backtrack(String s, int start, List<String> curr, List<List<String>> result) {
-        if (start == s.length()) {
-            result.add(new ArrayList<>(curr));
+    private void backtrack(String s, int index, List<String> current, List<List<String>> result) {
+        if (index == s.length()) {
+            result.add(new ArrayList<>(current));
             return;
         }
-        for (int end = start; end < s.length(); end++) {
-            if (isPalindrome(s, start, end)) {
-                curr.add(s.substring(start, end+1));
-                backtrack(s, end+1, curr, result);
-                curr.remove(curr.size()-1);
+        
+        for (int end = index; end < s.length(); end++) {
+            if (isPalindrome(s, index, end)) {
+                current.add(s.substring(index, end + 1));
+                backtrack(s, end + 1, current, result);
+                current.remove(current.size() - 1);
             }
         }
     }
     
-    boolean isPalindrome(String s, int left, int right) {
+    private boolean isPalindrome(String s, int left, int right) {
         while (left < right) {
-            if (s.charAt(left++) != s.charAt(right--))
-                return false;
+            if (s.charAt(left++) != s.charAt(right--)) return false;
         }
         return true;
+    }
+}
+
+public class PalindromePartitioning {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        System.out.println(sol.partition("aab"));
     }
 }

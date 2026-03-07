@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/LetterCombinationsPhoneNumber.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/letter-combinations-phone-number/code/java/LetterCombinationsPhoneNumber.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/letter_combinations_phone_number.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/letter-combinations-phone-number/code/cpp/letter_combinations_phone_number.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/letter-combinations-phone-number.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/letter-combinations-phone-number/code/python/letter-combinations-phone-number.py"
                 }
             ]
         }

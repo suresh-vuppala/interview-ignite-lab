@@ -1,0 +1,26 @@
+{
+  "title": "Find Row with Maximum Number of 1s",
+  "slug": "max-ones-in-row",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "max-ones-in-row.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/miscellaneous/matrix-search-problems/max-ones-in-row/code/python/max_ones_in_row.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/miscellaneous/matrix-search-problems/max-ones-in-row/code/java/MaxOnesInRow.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/miscellaneous/matrix-search-problems/max-ones-in-row/code/cpp/MaxOnesInRow.cpp"
+        }
+      ]
+    }
+  ]
+}

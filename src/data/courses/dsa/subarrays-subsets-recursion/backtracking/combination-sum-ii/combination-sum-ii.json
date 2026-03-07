@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/CombinationSumIi.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/combination-sum-ii/code/java/CombinationSumII.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/combination_sum_ii.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/combination-sum-ii/code/cpp/combination_sum_ii.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/combination-sum-ii.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/combination-sum-ii/code/python/combination-sum-ii.py"
                 }
             ]
         }

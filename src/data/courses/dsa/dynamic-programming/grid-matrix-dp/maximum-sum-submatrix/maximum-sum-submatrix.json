@@ -1,0 +1,26 @@
+{
+  "title": "Maximum Sum Submatrix",
+  "slug": "maximum-sum-submatrix",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "maximum-sum-submatrix.md",
+  "codeExamples": [
+    {
+      "title": "Maximum Sum Submatrix Solution",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-sum-submatrix/code/java/MaximumSumSubmatrix.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-sum-submatrix/code/cpp/MaximumSumSubmatrix.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-sum-submatrix/code/python/maximum_sum_submatrix.py"
+        }
+      ]
+    }
+  ]
+}

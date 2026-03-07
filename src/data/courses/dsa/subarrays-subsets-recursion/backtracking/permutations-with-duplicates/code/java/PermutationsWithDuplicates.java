@@ -1,3 +1,5 @@
+// Time: O(N × N!), Space: O(N)
+
 import java.util.*;
 
 class Solution {
@@ -8,19 +10,28 @@ class Solution {
         return result;
     }
     
-    void backtrack(int[] nums, boolean[] used, List<Integer> curr, List<List<Integer>> result) {
-        if (curr.size() == nums.length) {
-            result.add(new ArrayList<>(curr));
+    private void backtrack(int[] nums, boolean[] visited, List<Integer> current, List<List<Integer>> result) {
+        if (current.size() == nums.length) {
+            result.add(new ArrayList<>(current));
             return;
         }
+        
         for (int i = 0; i < nums.length; i++) {
-            if (used[i] || (i > 0 && nums[i] == nums[i-1] && !used[i-1]))
-                continue;
-            used[i] = true;
-            curr.add(nums[i]);
-            backtrack(nums, used, curr, result);
-            curr.remove(curr.size()-1);
-            used[i] = false;
+            if (visited[i] || (i > 0 && nums[i] == nums[i-1] && !visited[i-1])) continue;
+            
+            visited[i] = true;
+            current.add(nums[i]);
+            backtrack(nums, visited, current, result);
+            current.remove(current.size() - 1);
+            visited[i] = false;
         }
+    }
+}
+
+public class PermutationsWithDuplicates {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int[] nums = {1, 1, 2};
+        System.out.println(sol.permuteUnique(nums));
     }
 }

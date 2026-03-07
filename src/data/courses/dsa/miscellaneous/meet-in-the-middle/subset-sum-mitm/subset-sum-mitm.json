@@ -1,0 +1,26 @@
+{
+  "title": "Subset Sum (Meet in the Middle)",
+  "slug": "subset-sum-mitm",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "subset-sum-mitm.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/subset-sum-mitm/subset_sum_mitm.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/subset-sum-mitm/SubsetSumMITM.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/subset-sum-mitm/SubsetSumMITM.cpp"
+        }
+      ]
+    }
+  ]
+}

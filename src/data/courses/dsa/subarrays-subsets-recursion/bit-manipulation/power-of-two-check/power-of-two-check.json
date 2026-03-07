@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/PowerOfTwoCheck.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/power-of-two-check/code/java/PowerOfTwoCheck.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/power_of_two_check.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/power-of-two-check/code/cpp/power_of_two_check.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/power-of-two-check.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/power-of-two-check/code/python/power-of-two-check.py"
                 }
             ]
         }

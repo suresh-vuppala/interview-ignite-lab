@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/BitMaskingBasics.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/bit-masking-basics/code/java/BitMaskingBasics.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/bit_masking_basics.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/bit-masking-basics/code/cpp/bit_masking_basics.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/bit-masking-basics.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/bit-masking-basics/code/python/bit-masking-basics.py"
                 }
             ]
         }

@@ -1,0 +1,18 @@
+{
+  "title": "Aggressive Cows",
+  "slug": "aggressive-cows",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "aggressive-cows.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/aggressive-cows/code/python/aggressive-cows.py"
+        }
+      ]
+    }
+  ]
+}

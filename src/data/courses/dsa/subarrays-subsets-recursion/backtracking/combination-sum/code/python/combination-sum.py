@@ -1,16 +1,23 @@
+# Time: O(N^(T/M)), Space: O(T/M)
+
 def combination_sum(candidates, target):
     result = []
     
-    def backtrack(start, curr, total):
-        if total == 0:
-            result.append(curr[:])
+    def backtrack(index, current, total):
+        if total == target:
+            result.append(current[:])
             return
-        if total < 0:
+        if total > target:
             return
-        for i in range(start, len(candidates)):
-            curr.append(candidates[i])
-            backtrack(i, curr, total-candidates[i])
-            curr.pop()
+        
+        for i in range(index, len(candidates)):
+            current.append(candidates[i])
+            backtrack(i, current, total + candidates[i])
+            current.pop()
     
-    backtrack(0, [], target)
+    backtrack(0, [], 0)
     return result
+
+candidates = [2, 3, 6, 7]
+target = 7
+print(combination_sum(candidates, target))

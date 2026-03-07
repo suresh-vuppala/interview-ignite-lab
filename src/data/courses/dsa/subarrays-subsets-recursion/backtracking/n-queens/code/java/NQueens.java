@@ -1,43 +1,50 @@
+// Time: O(N!), Space: O(N)
+
 import java.util.*;
 
 class Solution {
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> result = new ArrayList<>();
         char[][] board = new char[n][n];
-        for (int i = 0; i < n; i++)
-            Arrays.fill(board[i], '.');
-        backtrack(board, 0, result);
+        for (int i = 0; i < n; i++) Arrays.fill(board[i], '.');
+        
+        Set<Integer> cols = new HashSet<>();
+        Set<Integer> diag = new HashSet<>();
+        Set<Integer> antiDiag = new HashSet<>();
+        
+        backtrack(0, n, board, cols, diag, antiDiag, result);
         return result;
     }
     
-    void backtrack(char[][] board, int row, List<List<String>> result) {
-        if (row == board.length) {
-            result.add(construct(board));
+    private void backtrack(int row, int n, char[][] board, Set<Integer> cols, Set<Integer> diag, Set<Integer> antiDiag, List<List<String>> result) {
+        if (row == n) {
+            List<String> solution = new ArrayList<>();
+            for (char[] r : board) solution.add(new String(r));
+            result.add(solution);
             return;
         }
-        for (int col = 0; col < board.length; col++) {
-            if (isValid(board, row, col)) {
-                board[row][col] = 'Q';
-                backtrack(board, row+1, result);
-                board[row][col] = '.';
-            }
+        
+        for (int col = 0; col < n; col++) {
+            if (cols.contains(col) || diag.contains(row - col) || antiDiag.contains(row + col)) continue;
+            
+            board[row][col] = 'Q';
+            cols.add(col);
+            diag.add(row - col);
+            antiDiag.add(row + col);
+            
+            backtrack(row + 1, n, board, cols, diag, antiDiag, result);
+            
+            board[row][col] = '.';
+            cols.remove(col);
+            diag.remove(row - col);
+            antiDiag.remove(row + col);
         }
     }
-    
-    boolean isValid(char[][] board, int row, int col) {
-        for (int i = 0; i < row; i++)
-            if (board[i][col] == 'Q') return false;
-        for (int i = row-1, j = col-1; i >= 0 && j >= 0; i--, j--)
-            if (board[i][j] == 'Q') return false;
-        for (int i = row-1, j = col+1; i >= 0 && j < board.length; i--, j++)
-            if (board[i][j] == 'Q') return false;
-        return true;
-    }
-    
-    List<String> construct(char[][] board) {
-        List<String> res = new ArrayList<>();
-        for (char[] row : board)
-            res.add(new String(row));
-        return res;
+}
+
+public class NQueens {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        System.out.println(sol.solveNQueens(4));
     }
 }

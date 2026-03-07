@@ -1,15 +1,20 @@
-bool checkBit(int n, int i) {
-    return (n & (1 << i)) != 0;
-}
+// Time: O(1) | Space: O(1)
 
-int setBit(int n, int i) {
-    return n | (1 << i);
-}
-
-int unsetBit(int n, int i) {
-    return n & ~(1 << i);
-}
-
-int toggleBit(int n, int i) {
-    return n ^ (1 << i);
-}
+class Solution {
+public:
+    bool checkBit(int n, int k) {
+        return (n & (1 << k)) != 0;
+    }
+    
+    int setBit(int n, int k) {
+        return n | (1 << k);
+    }
+    
+    int unsetBit(int n, int k) {
+        return n & ~(1 << k);
+    }
+    
+    int toggleBit(int n, int k) {
+        return n ^ (1 << k);
+    }
+};

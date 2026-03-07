@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/InsertionSort.java"
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/insertion-sort/code/java/InsertionSort.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/InsertionSort.cpp"
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/insertion-sort/code/cpp/insertion_sort.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/insertion_sort.py"
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/insertion-sort/code/python/insertion-sort.py"
         }
       ]
     }

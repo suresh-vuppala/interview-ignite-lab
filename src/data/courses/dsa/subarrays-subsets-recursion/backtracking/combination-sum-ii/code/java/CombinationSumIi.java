@@ -1,3 +1,5 @@
+// Time: O(2^N), Space: O(N)
+
 import java.util.*;
 
 class Solution {
@@ -8,17 +10,27 @@ class Solution {
         return result;
     }
     
-    void backtrack(int[] candidates, int target, int start, List<Integer> curr, List<List<Integer>> result) {
+    private void backtrack(int[] candidates, int target, int index, List<Integer> current, List<List<Integer>> result) {
         if (target == 0) {
-            result.add(new ArrayList<>(curr));
+            result.add(new ArrayList<>(current));
             return;
         }
         if (target < 0) return;
-        for (int i = start; i < candidates.length; i++) {
-            if (i > start && candidates[i] == candidates[i-1]) continue;
-            curr.add(candidates[i]);
-            backtrack(candidates, target-candidates[i], i+1, curr, result);
-            curr.remove(curr.size()-1);
+        
+        for (int i = index; i < candidates.length; i++) {
+            if (i > index && candidates[i] == candidates[i-1]) continue;
+            
+            current.add(candidates[i]);
+            backtrack(candidates, target - candidates[i], i + 1, current, result);
+            current.remove(current.size() - 1);
         }
+    }
+}
+
+public class CombinationSumII {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int[] candidates = {10, 1, 2, 7, 6, 1, 5};
+        System.out.println(sol.combinationSum2(candidates, 8));
     }
 }

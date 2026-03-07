@@ -1,0 +1,18 @@
+{
+  "title": "Minimum Days to Make M Bouquets",
+  "slug": "minimum-days-bouquets",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "minimum-days-bouquets.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/minimum-days-bouquets/code/python/minimum-days-bouquets.py"
+        }
+      ]
+    }
+  ]
+}

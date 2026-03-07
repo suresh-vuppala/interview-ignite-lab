@@ -1,0 +1,18 @@
+{
+  "title": "Capacity To Ship Packages Within D Days",
+  "slug": "capacity-ship-packages",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "capacity-ship-packages.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/capacity-ship-packages/code/python/capacity-ship-packages.py"
+        }
+      ]
+    }
+  ]
+}

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/SelectionSort.java"
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/selection-sort/code/java/SelectionSort.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/SelectionSort.cpp"
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/selection-sort/code/cpp/selection_sort.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/selection_sort.py"
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/selection-sort/code/python/selection-sort.py"
         }
       ]
     }

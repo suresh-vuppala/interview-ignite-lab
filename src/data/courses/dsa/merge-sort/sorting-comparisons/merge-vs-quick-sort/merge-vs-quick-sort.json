@@ -3,24 +3,5 @@
   "slug": "merge-vs-quick-sort",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "merge-vs-quick-sort.md",
-  "codeExamples": [
-    {
-      "title": "Solution",
-      "languages": [
-        {
-          "language": "java",
-          "codeFile": "code/java/MergeVsQuickSort.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "code/cpp/MergeVsQuickSort.cpp"
-        },
-        {
-          "language": "python",
-          "codeFile": "code/python/merge_vs_quick_sort.py"
-        }
-      ]
-    }
-  ]
+  "mdFile": "merge-vs-quick-sort.md"
 }

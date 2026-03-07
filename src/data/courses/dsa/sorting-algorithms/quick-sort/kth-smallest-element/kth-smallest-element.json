@@ -1,5 +1,7 @@
 {
     "title": "Kth Smallest Element",
+    "slug": "kth-smallest-element",
+    "mdFile": "kth-smallest-element.md",
     "description": "Kth Smallest Element",
     "difficulty": "medium",
     "isPremium": false,

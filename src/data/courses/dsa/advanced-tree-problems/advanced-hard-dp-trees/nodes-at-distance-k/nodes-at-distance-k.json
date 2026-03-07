@@ -1,0 +1,26 @@
+{
+  "title": "Nodes at Distance K",
+  "slug": "nodes-at-distance-k",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "nodes-at-distance-k.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/advanced-tree-problems/advanced-hard-dp-trees/nodes-at-distance-k/code/python/nodes_at_distance_k.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/advanced-tree-problems/advanced-hard-dp-trees/nodes-at-distance-k/code/java/NodesAtDistanceK.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/advanced-tree-problems/advanced-hard-dp-trees/nodes-at-distance-k/code/cpp/NodesAtDistanceK.cpp"
+        }
+      ]
+    }
+  ]
+}

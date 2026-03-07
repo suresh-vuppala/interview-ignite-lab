@@ -1,3 +1,5 @@
+# Time: O(N × 2^N), Space: O(N)
+
 def partition(s):
     result = []
     
@@ -5,18 +7,23 @@ def partition(s):
         while left < right:
             if s[left] != s[right]:
                 return False
-            left, right = left+1, right-1
+            left += 1
+            right -= 1
         return True
     
-    def backtrack(start, curr):
-        if start == len(s):
-            result.append(curr[:])
+    def backtrack(index, current):
+        if index == len(s):
+            result.append(current[:])
             return
-        for end in range(start, len(s)):
-            if is_palindrome(start, end):
-                curr.append(s[start:end+1])
-                backtrack(end+1, curr)
-                curr.pop()
+        
+        for end in range(index, len(s)):
+            if is_palindrome(index, end):
+                current.append(s[index:end+1])
+                backtrack(end + 1, current)
+                current.pop()
     
     backtrack(0, [])
     return result
+
+s = "aab"
+print(partition(s))

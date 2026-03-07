@@ -1,0 +1,26 @@
+{
+  "title": "Partition Array Into Two Equal Sums (MITM)",
+  "slug": "partition-array-equal-sums-mitm",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "partition-array-equal-sums-mitm.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/partition-array-equal-sums-mitm/partition_array_equal_sums_mitm.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/partition-array-equal-sums-mitm/PartitionArrayEqualSumsMITM.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/partition-array-equal-sums-mitm/PartitionArrayEqualSumsMITM.cpp"
+        }
+      ]
+    }
+  ]
+}

@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/SudokuSolver.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/sudoku-solver/code/java/SudokuSolver.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/sudoku_solver.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/sudoku-solver/code/cpp/sudoku_solver.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/sudoku-solver.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/sudoku-solver/code/python/sudoku-solver.py"
                 }
             ]
         }

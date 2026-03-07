@@ -1,17 +1,19 @@
-class BitOps {
-    boolean checkBit(int n, int i) {
-        return (n & (1 << i)) != 0;
+// Time: O(1) | Space: O(1)
+
+class Solution {
+    public boolean checkBit(int n, int k) {
+        return (n & (1 << k)) != 0;
     }
     
-    int setBit(int n, int i) {
-        return n | (1 << i);
+    public int setBit(int n, int k) {
+        return n | (1 << k);
     }
     
-    int unsetBit(int n, int i) {
-        return n & ~(1 << i);
+    public int unsetBit(int n, int k) {
+        return n & ~(1 << k);
     }
     
-    int toggleBit(int n, int i) {
-        return n ^ (1 << i);
+    public int toggleBit(int n, int k) {
+        return n ^ (1 << k);
     }
 }

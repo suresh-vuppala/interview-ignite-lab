@@ -1,0 +1,26 @@
+{
+  "title": "Minimum Time to Complete Trips",
+  "slug": "minimum-time-complete-trips",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "minimum-time-complete-trips.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-time-complete-trips/minimum_time_complete_trips.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-time-complete-trips/MinimumTimeCompleteTrips.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-time-complete-trips/MinimumTimeCompleteTrips.cpp"
+        }
+      ]
+    }
+  ]
+}

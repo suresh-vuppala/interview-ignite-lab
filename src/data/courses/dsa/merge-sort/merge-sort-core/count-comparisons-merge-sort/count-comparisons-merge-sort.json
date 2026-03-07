@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/CountComparisonsMergeSort.java"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/count-comparisons-merge-sort/code/java/CountComparisonsMergeSort.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/CountComparisonsMergeSort.cpp"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/count-comparisons-merge-sort/code/cpp/count-comparisons-merge-sort.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/count_comparisons_merge_sort.py"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/count-comparisons-merge-sort/code/python/count-comparisons-merge-sort.py"
         }
       ]
     }

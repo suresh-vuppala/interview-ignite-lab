@@ -1,0 +1,18 @@
+{
+  "title": "Minimum Time to Finish All Jobs",
+  "slug": "minimum-time-finish-jobs",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "minimum-time-finish-jobs.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/minimum-time-finish-jobs/code/python/minimum-time-finish-jobs.py"
+        }
+      ]
+    }
+  ]
+}

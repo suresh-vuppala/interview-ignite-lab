@@ -1,0 +1,26 @@
+{
+  "title": "Allocate Minimum Number of Pages (Book Problem)",
+  "slug": "allocate-minimum-pages",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "allocate-minimum-pages.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/partition-allocation/allocate-minimum-pages/code/python/allocate-minimum-pages.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-on-answer/partition-allocation/allocate-minimum-pages/code/java/AllocateMinimumPages.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-on-answer/partition-allocation/allocate-minimum-pages/code/cpp/allocate-minimum-pages.cpp"
+        }
+      ]
+    }
+  ]
+}

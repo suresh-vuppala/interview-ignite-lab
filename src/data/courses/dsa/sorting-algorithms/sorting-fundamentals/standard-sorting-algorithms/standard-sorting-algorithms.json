@@ -3,24 +3,5 @@
   "slug": "standard-sorting-algorithms",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "standard-sorting-algorithms.md",
-  "codeExamples": [
-    {
-      "title": "Solution",
-      "languages": [
-        {
-          "language": "java",
-          "codeFile": "code/java/StandardSortingAlgorithms.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "code/cpp/StandardSortingAlgorithms.cpp"
-        },
-        {
-          "language": "python",
-          "codeFile": "code/python/standard_sorting_algorithms.py"
-        }
-      ]
-    }
-  ]
+  "mdFile": "standard-sorting-algorithms.md"
 }

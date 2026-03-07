@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/TwoNonRepeatingNumbers.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/two-non-repeating-numbers/code/java/TwoNonRepeatingNumbers.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/two_non_repeating_numbers.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/two-non-repeating-numbers/code/cpp/two_non_repeating_numbers.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/two-non-repeating-numbers.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/two-non-repeating-numbers/code/python/two-non-repeating-numbers.py"
                 }
             ]
         }

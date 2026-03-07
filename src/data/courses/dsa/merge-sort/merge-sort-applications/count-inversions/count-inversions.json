@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/CountInversions.java"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/count-inversions/code/java/CountInversions.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/CountInversions.cpp"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/count-inversions/code/cpp/count-inversions.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/count_inversions.py"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/count-inversions/code/python/count-inversions.py"
         }
       ]
     }

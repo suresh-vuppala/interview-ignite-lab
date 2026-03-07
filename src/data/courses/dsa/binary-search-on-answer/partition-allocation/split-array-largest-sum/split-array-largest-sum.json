@@ -1,0 +1,26 @@
+{
+  "title": "Split Array Largest Sum",
+  "slug": "split-array-largest-sum",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "split-array-largest-sum.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/partition-allocation/split-array-largest-sum/code/python/split-array-largest-sum.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-on-answer/partition-allocation/split-array-largest-sum/code/java/SplitArrayLargestSum.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-on-answer/partition-allocation/split-array-largest-sum/code/cpp/split-array-largest-sum.cpp"
+        }
+      ]
+    }
+  ]
+}

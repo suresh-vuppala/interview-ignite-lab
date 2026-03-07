@@ -1,26 +1,42 @@
+// Time: O(4^N × N), Space: O(N)
+
+#include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
 
-vector<string> map = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-
-void backtrack(string& digits, int i, string& curr, vector<string>& result) {
-    if (i == digits.size()) {
-        result.push_back(curr);
-        return;
+class Solution {
+public:
+    vector<string> letterCombinations(string digits) {
+        vector<string> result;
+        if (digits.empty()) return result;
+        
+        vector<string> mapping = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        string current;
+        backtrack(digits, 0, current, mapping, result);
+        return result;
     }
-    string letters = map[digits[i] - '0'];
-    for (char c : letters) {
-        curr.push_back(c);
-        backtrack(digits, i+1, curr, result);
-        curr.pop_back();
+    
+private:
+    void backtrack(string& digits, int index, string& current, vector<string>& mapping, vector<string>& result) {
+        if (index == digits.size()) {
+            result.push_back(current);
+            return;
+        }
+        
+        string letters = mapping[digits[index] - '0'];
+        for (char letter : letters) {
+            current.push_back(letter);
+            backtrack(digits, index + 1, current, mapping, result);
+            current.pop_back();
+        }
     }
-}
+};
 
-vector<string> letterCombinations(string digits) {
-    vector<string> result;
-    if (digits.empty()) return result;
-    string curr;
-    backtrack(digits, 0, curr, result);
-    return result;
+int main() {
+    Solution sol;
+    vector<string> result = sol.letterCombinations("23");
+    for (string s : result) cout << s << " ";
+    cout << endl;
+    return 0;
 }

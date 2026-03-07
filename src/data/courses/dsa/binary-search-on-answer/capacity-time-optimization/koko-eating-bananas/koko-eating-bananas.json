@@ -1,0 +1,18 @@
+{
+  "title": "Koko Eating Bananas",
+  "slug": "koko-eating-bananas",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "koko-eating-bananas.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/koko-eating-bananas/code/python/koko-eating-bananas.py"
+        }
+      ]
+    }
+  ]
+}

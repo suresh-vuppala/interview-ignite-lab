@@ -7,7 +7,7 @@ export const fetchMarkdown = async (
 ) => {
   if (!lessonSlug || !mdFile) return 'Markdown not available';
 
-  const file = Object.keys(markdownFiles).find(key => key.endsWith(mdFile));
+  const file = Object.keys(markdownFiles).find(key => key.endsWith(`${lessonSlug}/${mdFile}`));
 
   if (!file) {
     console.warn(`⚠️ Markdown file not found: ${mdFile}`);
@@ -45,7 +45,7 @@ export const importLessonJson = async (
   if (!lessonSlug) return null;
 
   // first attempt: use the glob-generated list (fast, static)
-  const file = Object.keys(lessonJsonFiles).find((key) => key.endsWith(`${lessonSlug}.json`));
+  const file = Object.keys(lessonJsonFiles).find((key) => key.endsWith(`${lessonSlug}/${lessonSlug}.json`));
   if (file) {
     const lesson = (lessonJsonFiles[file] as any).default || lessonJsonFiles[file];
     return lesson;

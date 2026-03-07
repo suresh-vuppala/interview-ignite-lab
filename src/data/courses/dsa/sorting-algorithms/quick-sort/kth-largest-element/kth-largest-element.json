@@ -1,5 +1,7 @@
 {
     "title": "Kth Largest Element",
+    "slug": "kth-largest-element",
+    "mdFile": "kth-largest-element.md",
     "description": "Kth Largest Element",
     "difficulty": "medium",
     "isPremium": false,

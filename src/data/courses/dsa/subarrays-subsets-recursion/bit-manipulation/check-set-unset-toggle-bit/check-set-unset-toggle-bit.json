@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/CheckSetUnsetToggleBit.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/check-set-unset-toggle-bit/code/java/CheckSetUnsetToggleBit.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/check_set_unset_toggle_bit.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/check-set-unset-toggle-bit/code/cpp/check_set_unset_toggle_bit.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/check-set-unset-toggle-bit.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/check-set-unset-toggle-bit/code/python/check-set-unset-toggle-bit.py"
                 }
             ]
         }

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/StabilityMergeSort.java"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/stability-merge-sort/code/java/StabilityMergeSort.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/StabilityMergeSort.cpp"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/stability-merge-sort/code/cpp/stability-merge-sort.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/stability_merge_sort.py"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/stability-merge-sort/code/python/stability-merge-sort.py"
         }
       ]
     }

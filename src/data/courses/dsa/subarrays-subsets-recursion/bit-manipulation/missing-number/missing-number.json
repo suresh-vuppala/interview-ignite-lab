@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/MissingNumber.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/missing-number/code/java/MissingNumber.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/missing_number.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/missing-number/code/cpp/missing_number.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/missing-number.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/missing-number/code/python/missing-number.py"
                 }
             ]
         }

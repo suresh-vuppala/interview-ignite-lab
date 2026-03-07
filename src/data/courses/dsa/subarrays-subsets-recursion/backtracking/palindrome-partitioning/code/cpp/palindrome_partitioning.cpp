@@ -1,32 +1,49 @@
+// Time: O(N × 2^N), Space: O(N)
+
+#include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
 
-bool isPalindrome(string& s, int left, int right) {
-    while (left < right) {
-        if (s[left++] != s[right--])
-            return false;
+class Solution {
+public:
+    vector<vector<string>> partition(string s) {
+        vector<vector<string>> result;
+        vector<string> current;
+        backtrack(s, 0, current, result);
+        return result;
     }
-    return true;
-}
-
-void backtrack(string& s, int start, vector<string>& curr, vector<vector<string>>& result) {
-    if (start == s.size()) {
-        result.push_back(curr);
-        return;
-    }
-    for (int end = start; end < s.size(); end++) {
-        if (isPalindrome(s, start, end)) {
-            curr.push_back(s.substr(start, end-start+1));
-            backtrack(s, end+1, curr, result);
-            curr.pop_back();
+    
+private:
+    void backtrack(string& s, int index, vector<string>& current, vector<vector<string>>& result) {
+        if (index == s.size()) {
+            result.push_back(current);
+            return;
+        }
+        
+        for (int end = index; end < s.size(); end++) {
+            if (isPalindrome(s, index, end)) {
+                current.push_back(s.substr(index, end - index + 1));
+                backtrack(s, end + 1, current, result);
+                current.pop_back();
+            }
         }
     }
-}
+    
+    bool isPalindrome(string& s, int left, int right) {
+        while (left < right) {
+            if (s[left++] != s[right--]) return false;
+        }
+        return true;
+    }
+};
 
-vector<vector<string>> partition(string s) {
-    vector<vector<string>> result;
-    vector<string> curr;
-    backtrack(s, 0, curr, result);
-    return result;
+int main() {
+    Solution sol;
+    vector<vector<string>> result = sol.partition("aab");
+    for (auto& partition : result) {
+        for (string s : partition) cout << s << " ";
+        cout << endl;
+    }
+    return 0;
 }

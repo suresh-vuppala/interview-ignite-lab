@@ -1,0 +1,18 @@
+{
+  "title": "Minimum Limit of Balls in a Bag",
+  "slug": "minimum-limit-balls-bag",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "minimum-limit-balls-bag.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/partition-allocation/minimum-limit-balls-bag/code/python/minimum-limit-balls-bag.py"
+        }
+      ]
+    }
+  ]
+}

@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/NQueens.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/n-queens/code/java/NQueens.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/n_queens.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/n-queens/code/cpp/n_queens.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/n-queens.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/n-queens/code/python/n-queens.py"
                 }
             ]
         }

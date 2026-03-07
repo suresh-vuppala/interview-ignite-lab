@@ -1,15 +1,23 @@
+# Time: O(N log N) average, O(N²) worst, Space: O(log N)
+
 def quick_sort(arr, low, high):
     if low < high:
-        pi = partition(arr, low, high)  # Get partition index
-        quick_sort(arr, low, pi - 1)  # Sort left half
-        quick_sort(arr, pi + 1, high)  # Sort right half
+        pi = partition(arr, low, high)
+        quick_sort(arr, low, pi - 1)
+        quick_sort(arr, pi + 1, high)
 
 def partition(arr, low, high):
-    pivot = arr[high]  # Choose last element as pivot
-    i = low - 1  # Index of smaller element
+    pivot = arr[high]
+    i = low - 1
+    
     for j in range(low, high):
-        if arr[j] < pivot:  # If current element is smaller than pivot
+        if arr[j] < pivot:
             i += 1
             arr[i], arr[j] = arr[j], arr[i]
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]  # Place pivot in correct position
+    
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
     return i + 1
+
+arr = [10, 7, 8, 9, 1, 5]
+quick_sort(arr, 0, len(arr) - 1)
+print(arr)

@@ -1,0 +1,26 @@
+{
+  "title": "Search in 2D Sorted Matrix",
+  "slug": "search-2d-matrix",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "search-2d-matrix.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/miscellaneous/matrix-search-problems/search-2d-matrix/code/python/search-2d-matrix.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/miscellaneous/matrix-search-problems/search-2d-matrix/code/java/Search2DMatrix.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/miscellaneous/matrix-search-problems/search-2d-matrix/code/cpp/search-2d-matrix.cpp"
+        }
+      ]
+    }
+  ]
+}

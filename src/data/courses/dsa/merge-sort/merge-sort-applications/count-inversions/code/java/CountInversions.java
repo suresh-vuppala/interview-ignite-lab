@@ -1,23 +1,43 @@
-int mergeSort(int[] arr, int l, int r) {
-    if (l >= r) return 0;
-    int m = l + (r - l) / 2;
-    return mergeSort(arr, l, m) + mergeSort(arr, m + 1, r) + merge(arr, l, m, r);
-}
+// Time: O(N log N), Space: O(N)
 
-int merge(int[] arr, int l, int m, int r) {
-    int n1 = m - l + 1, n2 = r - m, inv = 0;
-    int[] L = new int[n1], R = new int[n2];
-    for (int i = 0; i < n1; i++) L[i] = arr[l + i];
-    for (int i = 0; i < n2; i++) R[i] = arr[m + 1 + i];
-    int i = 0, j = 0, k = l;
-    while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) arr[k++] = L[i++];
-        else {
-            arr[k++] = R[j++];
-            inv += n1 - i;
-        }
+public class CountInversions {
+    public static int countInversions(int[] arr) {
+        int[] temp = new int[arr.length];
+        return mergeSort(arr, temp, 0, arr.length - 1);
     }
-    while (i < n1) arr[k++] = L[i++];
-    while (j < n2) arr[k++] = R[j++];
-    return inv;
+    
+    private static int mergeSort(int[] arr, int[] temp, int left, int right) {
+        int count = 0;
+        if (left < right) {
+            int mid = left + (right - left) / 2;
+            count += mergeSort(arr, temp, left, mid);
+            count += mergeSort(arr, temp, mid + 1, right);
+            count += merge(arr, temp, left, mid, right);
+        }
+        return count;
+    }
+    
+    private static int merge(int[] arr, int[] temp, int left, int mid, int right) {
+        int i = left, j = mid + 1, k = left, inversions = 0;
+        
+        while (i <= mid && j <= right) {
+            if (arr[i] <= arr[j]) {
+                temp[k++] = arr[i++];
+            } else {
+                temp[k++] = arr[j++];
+                inversions += (mid - i + 1);
+            }
+        }
+        
+        while (i <= mid) temp[k++] = arr[i++];
+        while (j <= right) temp[k++] = arr[j++];
+        for (i = left; i <= right; i++) arr[i] = temp[i];
+        
+        return inversions;
+    }
+    
+    public static void main(String[] args) {
+        int[] arr = {8, 4, 2, 1};
+        System.out.println("Inversions: " + countInversions(arr));
+    }
 }

@@ -1,34 +1,51 @@
+// Time: O(N!), Space: O(N)
+
+#include <iostream>
 #include <vector>
-#include <string>
+#include <unordered_set>
 using namespace std;
 
-bool isValid(vector<string>& board, int row, int col) {
-    for (int i = 0; i < row; i++)
-        if (board[i][col] == 'Q') return false;
-    for (int i = row-1, j = col-1; i >= 0 && j >= 0; i--, j--)
-        if (board[i][j] == 'Q') return false;
-    for (int i = row-1, j = col+1; i >= 0 && j < board.size(); i--, j++)
-        if (board[i][j] == 'Q') return false;
-    return true;
-}
-
-void backtrack(vector<string>& board, int row, vector<vector<string>>& result) {
-    if (row == board.size()) {
-        result.push_back(board);
-        return;
+class Solution {
+public:
+    vector<vector<string>> solveNQueens(int n) {
+        vector<vector<string>> result;
+        vector<string> board(n, string(n, '.'));
+        unordered_set<int> cols, diag, antiDiag;
+        backtrack(0, n, board, cols, diag, antiDiag, result);
+        return result;
     }
-    for (int col = 0; col < board.size(); col++) {
-        if (isValid(board, row, col)) {
+    
+private:
+    void backtrack(int row, int n, vector<string>& board, unordered_set<int>& cols, unordered_set<int>& diag, unordered_set<int>& antiDiag, vector<vector<string>>& result) {
+        if (row == n) {
+            result.push_back(board);
+            return;
+        }
+        
+        for (int col = 0; col < n; col++) {
+            if (cols.count(col) || diag.count(row - col) || antiDiag.count(row + col)) continue;
+            
             board[row][col] = 'Q';
-            backtrack(board, row+1, result);
+            cols.insert(col);
+            diag.insert(row - col);
+            antiDiag.insert(row + col);
+            
+            backtrack(row + 1, n, board, cols, diag, antiDiag, result);
+            
             board[row][col] = '.';
+            cols.erase(col);
+            diag.erase(row - col);
+            antiDiag.erase(row + col);
         }
     }
-}
+};
 
-vector<vector<string>> solveNQueens(int n) {
-    vector<vector<string>> result;
-    vector<string> board(n, string(n, '.'));
-    backtrack(board, 0, result);
-    return result;
+int main() {
+    Solution sol;
+    vector<vector<string>> result = sol.solveNQueens(4);
+    for (auto& solution : result) {
+        for (auto& row : solution) cout << row << endl;
+        cout << endl;
+    }
+    return 0;
 }

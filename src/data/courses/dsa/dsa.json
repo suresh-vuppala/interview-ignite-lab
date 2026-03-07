@@ -153,6 +153,11 @@
                             "isPosted": true,
                             "title": "Recurrence Relation Basics",
                             "slug": "recurrence-relation-basics"
+                        },
+                        {
+                            "isPosted": true,
+                            "title": "Tower of Hanoi",
+                            "slug": "tower-of-hanoi"
                         }
                     ]
                 },
@@ -422,11 +427,6 @@
                     ]
                 },
                 {
-                    "title": "Binary Search the Answer",
-                    "slug": "binary-search-the-answer-section",
-                    "lessons": []
-                },
-                {
                     "title": "SORTED ARRAY",
                     "slug": "sorted-array",
                     "lessons": [
@@ -458,6 +458,22 @@
                     ]
                 },
                 {
+                    "title": "Two Sorted Arrays",
+                    "slug": "two-sorted-arrays",
+                    "lessons": [
+                        {
+                            "title": "Median of Two Sorted Arrays (Different Sizes)",
+                            "slug": "median-two-sorted-arrays",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Kth Element of Two Sorted Arrays",
+                            "slug": "kth-element-two-sorted-arrays",
+                            "isPosted": true
+                        }
+                    ]
+                },
+                {
                     "title": "Implicitly Sorted Array",
                     "slug": "implicitly-sorted-array",
                     "lessons": [
@@ -469,6 +485,107 @@
                         {
                             "title": "Peak of Mountain Array",
                             "slug": "peak-of-mountain-array",
+                            "isPosted": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Binary Search on Answer",
+            "slug": "binary-search-on-answer",
+            "icon": "Target",
+            "sections": [
+                {
+                    "title": "Partition / Allocation Type",
+                    "slug": "partition-allocation",
+                    "lessons": [
+                        {
+                            "title": "Allocate Minimum Number of Pages (Book Problem)",
+                            "slug": "allocate-minimum-pages",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Painter's Partition Problem",
+                            "slug": "painters-partition",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Split Array Largest Sum",
+                            "slug": "split-array-largest-sum",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Minimum Limit of Balls in a Bag",
+                            "slug": "minimum-limit-balls-bag",
+                            "isPosted": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Capacity / Time Optimization",
+                    "slug": "capacity-time-optimization",
+                    "lessons": [
+                        {
+                            "title": "Capacity To Ship Packages Within D Days",
+                            "slug": "capacity-ship-packages",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Minimum Time to Finish All Jobs",
+                            "slug": "minimum-time-finish-jobs",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Koko Eating Bananas",
+                            "slug": "koko-eating-bananas",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Minimum Days to Make M Bouquets",
+                            "slug": "minimum-days-bouquets",
+                            "isPosted": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Distance Maximization",
+                    "slug": "distance-maximization",
+                    "lessons": [
+                        {
+                            "title": "Aggressive Cows",
+                            "slug": "aggressive-cows",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Magnetic Force Between Two Balls",
+                            "slug": "magnetic-force-balls",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Place k Elements Such That Minimum Distance is Maximum",
+                            "slug": "place-k-elements-max-distance",
+                            "isPosted": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Rate / Speed Problems",
+                    "slug": "rate-speed-problems",
+                    "lessons": [
+                        {
+                            "title": "Minimum Eating Speed (Koko Bananas)",
+                            "slug": "minimum-eating-speed",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Minimum Speed to Arrive on Time",
+                            "slug": "minimum-speed-arrive-time",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Minimum Time to Complete Trips",
+                            "slug": "minimum-time-complete-trips",
                             "isPosted": true
                         }
                     ]
@@ -1700,6 +1817,11 @@
                         {
                             "title": "Tree Diameter (DP style)",
                             "slug": "tree-diameter-dp"
+                        },
+                        {
+                            "title": "Nodes at Distance K",
+                            "slug": "nodes-at-distance-k",
+                            "isPosted": true
                         }
                     ]
                 }
@@ -2189,6 +2311,11 @@
                         },
                         {
                             "isPosted": true,
+                            "title": "Maximum Sum Submatrix",
+                            "slug": "maximum-sum-submatrix"
+                        },
+                        {
+                            "isPosted": true,
                             "title": "Cherry Pickup",
                             "slug": "cherry-pickup"
                         },
@@ -2586,6 +2713,48 @@
                         }
                     ],
                     "slug": "design-problems"
+                },
+                {
+                    "title": "Meet in the Middle",
+                    "slug": "meet-in-the-middle",
+                    "lessons": [
+                        {
+                            "title": "Subset Sum (Meet in the Middle)",
+                            "slug": "subset-sum-mitm",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Closest Subsequence Sum",
+                            "slug": "closest-subsequence-sum",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Partition Array Into Two Equal Sums (MITM)",
+                            "slug": "partition-array-equal-sums-mitm",
+                            "isPosted": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Matrix Search Problems",
+                    "slug": "matrix-search-problems",
+                    "lessons": [
+                        {
+                            "title": "Search in 2D Sorted Matrix",
+                            "slug": "search-2d-matrix",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Search in Row and Column Sorted Matrix",
+                            "slug": "row-column-sorted-search",
+                            "isPosted": true
+                        },
+                        {
+                            "title": "Find Row with Maximum Number of 1s",
+                            "slug": "max-ones-in-row",
+                            "isPosted": true
+                        }
+                    ]
                 }
             ],
             "slug": "miscellaneous"

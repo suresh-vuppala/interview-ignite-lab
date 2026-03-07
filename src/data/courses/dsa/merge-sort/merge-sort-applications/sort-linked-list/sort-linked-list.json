@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/SortLinkedList.java"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/sort-linked-list/code/java/SortLinkedList.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/SortLinkedList.cpp"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/sort-linked-list/code/cpp/sort-linked-list.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/sort_linked_list.py"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/sort-linked-list/code/python/sort-linked-list.py"
         }
       ]
     }

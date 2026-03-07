@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/GenerateSubsetsBitmask.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/generate-subsets-bitmask/code/java/GenerateSubsetsBitmask.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/generate_subsets_bitmask.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/generate-subsets-bitmask/code/cpp/generate_subsets_bitmask.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/generate-subsets-bitmask.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/generate-subsets-bitmask/code/python/generate-subsets-bitmask.py"
                 }
             ]
         }

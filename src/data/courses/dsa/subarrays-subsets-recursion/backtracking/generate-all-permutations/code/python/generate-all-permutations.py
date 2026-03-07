@@ -1,14 +1,20 @@
+# Time: O(N × N!), Space: O(N)
+
 def permute(nums):
     result = []
     
-    def backtrack(start):
-        if start == len(nums):
+    def backtrack(index):
+        if index == len(nums):
             result.append(nums[:])
             return
-        for i in range(start, len(nums)):
-            nums[start], nums[i] = nums[i], nums[start]
-            backtrack(start+1)
-            nums[start], nums[i] = nums[i], nums[start]
+        
+        for i in range(index, len(nums)):
+            nums[index], nums[i] = nums[i], nums[index]
+            backtrack(index + 1)
+            nums[index], nums[i] = nums[i], nums[index]
     
     backtrack(0)
     return result
+
+nums = [1, 2, 3]
+print(permute(nums))

@@ -1,0 +1,26 @@
+{
+  "title": "Search in Row and Column Sorted Matrix",
+  "slug": "row-column-sorted-search",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "row-column-sorted-search.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/miscellaneous/matrix-search-problems/row-column-sorted-search/code/python/row_column_sorted_search.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/miscellaneous/matrix-search-problems/row-column-sorted-search/code/java/RowColumnSortedSearch.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/miscellaneous/matrix-search-problems/row-column-sorted-search/code/cpp/RowColumnSortedSearch.cpp"
+        }
+      ]
+    }
+  ]
+}

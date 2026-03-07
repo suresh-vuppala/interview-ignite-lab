@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/PermutationsWithDuplicates.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/permutations-with-duplicates/code/java/PermutationsWithDuplicates.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/permutations_with_duplicates.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/permutations-with-duplicates/code/cpp/permutations_with_duplicates.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/permutations-with-duplicates.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/permutations-with-duplicates/code/python/permutations-with-duplicates.py"
                 }
             ]
         }

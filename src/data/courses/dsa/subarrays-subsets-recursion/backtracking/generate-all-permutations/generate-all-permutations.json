@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/GenerateAllPermutations.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/generate-all-permutations/code/java/GenerateAllPermutations.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/generate_all_permutations.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/generate-all-permutations/code/cpp/generate_all_permutations.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/generate-all-permutations.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/generate-all-permutations/code/python/generate-all-permutations.py"
                 }
             ]
         }

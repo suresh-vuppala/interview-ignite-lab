@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/ImplementMergeSort.java"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/implement-merge-sort/code/java/ImplementMergeSort.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/ImplementMergeSort.cpp"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/implement-merge-sort/code/cpp/implement-merge-sort.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/implement_merge_sort.py"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/implement-merge-sort/code/python/implement-merge-sort.py"
         }
       ]
     }

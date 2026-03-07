@@ -1,0 +1,18 @@
+{
+  "title": "Magnetic Force Between Two Balls",
+  "slug": "magnetic-force-balls",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "magnetic-force-balls.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/magnetic-force-balls/code/python/magnetic-force-balls.py"
+        }
+      ]
+    }
+  ]
+}

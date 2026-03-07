@@ -1,0 +1,26 @@
+{
+  "title": "Minimum Eating Speed (Koko Bananas)",
+  "slug": "minimum-eating-speed",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "minimum-eating-speed.md",
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-eating-speed/minimum_eating_speed.py"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-eating-speed/MinimumEatingSpeed.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-eating-speed/MinimumEatingSpeed.cpp"
+        }
+      ]
+    }
+  ]
+}

@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/RatInMaze.java"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/rat-in-maze/code/java/RatInMaze.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/rat_in_maze.cpp"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/rat-in-maze/code/cpp/rat_in_maze.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/rat-in-maze.py"
+                    "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/rat-in-maze/code/python/rat-in-maze.py"
                 }
             ]
         }
