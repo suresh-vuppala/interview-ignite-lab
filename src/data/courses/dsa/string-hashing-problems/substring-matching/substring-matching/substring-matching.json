@@ -10,15 +10,15 @@
             "languages": [
                 {
                     "language": "java",
-                    "codeFile": "code/java/SubstringMatching.java"
+                    "codeFile": "courses/dsa/string-hashing-problems/substring-matching/substring-matching/code/java/SubstringMatching.java"
                 },
                 {
                     "language": "cpp",
-                    "codeFile": "code/cpp/substring_matching.cpp"
+                    "codeFile": "courses/dsa/string-hashing-problems/substring-matching/substring-matching/code/cpp/substring_matching.cpp"
                 },
                 {
                     "language": "python",
-                    "codeFile": "code/python/substring-matching.py"
+                    "codeFile": "courses/dsa/string-hashing-problems/substring-matching/substring-matching/code/python/substring_matching.py"
                 }
             ]
         }

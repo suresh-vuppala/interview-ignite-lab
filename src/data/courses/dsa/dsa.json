@@ -301,13 +301,13 @@
                     "lessons": [
                         {
                             "isPosted": true,
-                            "title": "Implement Merge Sort",
-                            "slug": "implement-merge-sort"
+                            "title": "Merge Two Sorted Arrays",
+                            "slug": "merge-two-sorted-arrays"
                         },
                         {
                             "isPosted": true,
-                            "title": "Merge Two Sorted Arrays",
-                            "slug": "merge-two-sorted-arrays"
+                            "title": "Implement Merge Sort",
+                            "slug": "implement-merge-sort"
                         },
                         {
                             "isPosted": true,
@@ -867,11 +867,6 @@
                             "isPosted": true,
                             "title": "Substring Matching",
                             "slug": "substring-matching"
-                        },
-                        {
-                            "isPosted": true,
-                            "title": "Rabin-Karp",
-                            "slug": "rabin-karp"
                         },
                         {
                             "isPosted": true,
@@ -2324,11 +2319,6 @@
                             "isPosted": true,
                             "title": "Longest Increasing Subsequence",
                             "slug": "longest-increasing-subsequence"
-                        },
-                        {
-                            "isPosted": true,
-                            "title": "LIS Binary Search",
-                            "slug": "lis-binary-search"
                         },
                         {
                             "isPosted": true,

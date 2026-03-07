@@ -1,28 +1,36 @@
+# Time: O(N+M) | Space: O(M)
+
 from collections import Counter
 
 def min_window(s, t):
-    need = Counter(t)
+    if not s or not t:
+        return ""
+    
+    target = Counter(t)
+    required = len(target)
+    formed = 0
     window = {}
-    left = right = valid = 0
-    start, length = 0, float('inf')
     
-    while right < len(s):
-        c = s[right]
-        right += 1
-        if c in need:
-            window[c] = window.get(c, 0) + 1
-            if window[c] == need[c]:
-                valid += 1
+    left = 0
+    min_len = float('inf')
+    min_left = 0
+    
+    for right in range(len(s)):
+        char = s[right]
+        window[char] = window.get(char, 0) + 1
         
-        while valid == len(need):
-            if right - left < length:
-                start = left
-                length = right - left
-            d = s[left]
+        if char in target and window[char] == target[char]:
+            formed += 1
+        
+        while formed == required and left <= right:
+            if right - left + 1 < min_len:
+                min_len = right - left + 1
+                min_left = left
+            
+            char = s[left]
+            window[char] -= 1
+            if char in target and window[char] < target[char]:
+                formed -= 1
             left += 1
-            if d in need:
-                if window[d] == need[d]:
-                    valid -= 1
-                window[d] -= 1
     
-    return "" if length == float('inf') else s[start:start+length]
+    return "" if min_len == float('inf') else s[min_left:min_left+min_len]

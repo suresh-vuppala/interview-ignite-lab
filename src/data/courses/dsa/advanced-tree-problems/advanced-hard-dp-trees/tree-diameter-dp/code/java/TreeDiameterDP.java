@@ -1,14 +1,26 @@
-import java.util.*;
+// Time: O(N) | Space: O(H)
 
-public class TreeDiameterDP {
-    static class TreeNode {
-        int val;
-        TreeNode left, right;
-        TreeNode(int x) { val = x; }
+class TreeNode {
+    int val;
+    TreeNode left, right;
+    TreeNode(int x) { val = x; }
+}
+
+class Solution {
+    private int diameter = 0;
+    
+    public int diameterOfBinaryTree(TreeNode root) {
+        dfs(root);
+        return diameter;
     }
     
-    // Solution
-    
-    public static void main(String[] args) {
+    private int dfs(TreeNode node) {
+        if (node == null) return 0;
+        
+        int left = dfs(node.left);
+        int right = dfs(node.right);
+        
+        diameter = Math.max(diameter, left + right);
+        return Math.max(left, right) + 1;
     }
 }

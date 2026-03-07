@@ -3,7 +3,7 @@
   "slug": "longest-common-substring",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "longest-common-substring.md",
+  "mdFile": "longest-common-substring-dp.md",
   "codeExamples": [
     {
       "title": "Longest Common Substring Solution",

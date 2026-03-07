@@ -1,7 +1,20 @@
-class CountPrefixSuffixPairs {
-    class TrieNode {
-        TrieNode[] children = new TrieNode[26];
-        boolean isEnd = false;
+// Time: O(N²*L) | Space: O(1)
+
+class Solution {
+    public int countPrefixSuffixPairs(String[] words) {
+        int count = 0;
+        for (int i = 0; i < words.length; i++) {
+            for (int j = i + 1; j < words.length; j++) {
+                if (isPrefixAndSuffix(words[i], words[j])) {
+                    count++;
+                }
+            }
+        }
+        return count;
     }
-    // Minimal implementation
+    
+    private boolean isPrefixAndSuffix(String str1, String str2) {
+        if (str1.length() > str2.length()) return false;
+        return str2.startsWith(str1) && str2.endsWith(str1);
+    }
 }

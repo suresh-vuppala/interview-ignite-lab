@@ -1,18 +1,38 @@
-void merge(vector<int>& arr, int l, int m, int r) {
-    vector<int> L(arr.begin() + l, arr.begin() + m + 1);
-    vector<int> R(arr.begin() + m + 1, arr.begin() + r + 1);
-    int i = 0, j = 0, k = l;
-    while (i < L.size() && j < R.size()) 
-        arr[k++] = (L[i] <= R[j]) ? L[i++] : R[j++];
-    while (i < L.size()) arr[k++] = L[i++];
-    while (j < R.size()) arr[k++] = R[j++];
-}
+#include <vector>
+using namespace std;
 
-void mergeSort(vector<int>& arr, int l, int r) {
-    if (l < r) {
-        int m = l + (r - l) / 2;
-        mergeSort(arr, l, m);
-        mergeSort(arr, m + 1, r);
-        merge(arr, l, m, r);
+class Solution {
+public:
+    void mergeSort(vector<int>& arr) {
+        if (arr.size() <= 1) return;
+        mergeSortHelper(arr, 0, arr.size() - 1);
     }
-}
+    
+private:
+    void mergeSortHelper(vector<int>& arr, int left, int right) {
+        if (left >= right) return;
+        
+        int mid = left + (right - left) / 2;
+        mergeSortHelper(arr, left, mid);
+        mergeSortHelper(arr, mid + 1, right);
+        merge(arr, left, mid, right);
+    }
+    
+    void merge(vector<int>& arr, int left, int mid, int right) {
+        vector<int> L(arr.begin() + left, arr.begin() + mid + 1);
+        vector<int> R(arr.begin() + mid + 1, arr.begin() + right + 1);
+        
+        int i = 0, j = 0, k = left;
+        
+        while (i < L.size() && j < R.size()) {
+            if (L[i] <= R[j]) {
+                arr[k++] = L[i++];
+            } else {
+                arr[k++] = R[j++];
+            }
+        }
+        
+        while (i < L.size()) arr[k++] = L[i++];
+        while (j < R.size()) arr[k++] = R[j++];
+    }
+};

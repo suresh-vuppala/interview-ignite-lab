@@ -1,10 +1,24 @@
-﻿class TreeNode:
+# Time: O(N) | Space: O(H)
+
+class TreeNode:
     def __init__(self, val=0):
         self.val = val
         self.left = None
         self.right = None
 
-# Solution
-
-if __name__ == "__main__":
-    pass
+class Solution:
+    def distributeCoins(self, root):
+        self.moves = 0
+        
+        def dfs(node):
+            if not node:
+                return 0
+            
+            left = dfs(node.left)
+            right = dfs(node.right)
+            
+            self.moves += abs(left) + abs(right)
+            return node.val + left + right - 1
+        
+        dfs(root)
+        return self.moves
