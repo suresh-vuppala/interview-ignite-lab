@@ -187,16 +187,12 @@ const Sidebar = React.forwardRef<
         className={cn(
           "relative h-svh bg-transparent transition-[width] duration-200 ease-linear",
           "group-data-[state=expanded]:w-[--sidebar-width-desktop]",
-          "group-data-[state=collapsed]:w-0",
-          "group-data-[side=right]:rotate-180",
-          variant === "floating" || variant === "inset"
-            ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]"
-            : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]",
+          "group-data-[state=collapsed]:w-0 group-data-[state=collapsed]:hidden",
         )}
       />
       <div
         className={cn(
-          "fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex",
+          "fixed inset-y-0 z-40 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex",
           // === UPDATED: responsive width for the visible fixed sidebar (only change) ===
           "w-[--sidebar-width-mobile] sm:w-[--sidebar-width-tablet] lg:w-[--sidebar-width-desktop]",
           // ============================================================================
@@ -209,8 +205,8 @@ const Sidebar = React.forwardRef<
 
           // Adjust the padding for floating and inset variants.
           variant === "floating" || variant === "inset"
-            ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]"
-            : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
+            ? "p-2"
+            : "group-data-[side=left]:border-r group-data-[side=right]:border-l",
           className,
         )}
         {...props}

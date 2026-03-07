@@ -41,10 +41,8 @@ export function Layout({ children }: LayoutProps) {
 
   return (
     <SidebarProvider defaultOpen={true}>
-      <div className="min-h-screen flex w-full bg-background">
-        <AppSidebar />
-        
-        <div className="flex-1 flex flex-col min-w-0">
+      <AppSidebar />
+      <div className="flex-1 flex flex-col min-w-0">
           {/* Header */}
           <header className="h-14 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
           <div className="flex items-center justify-between h-full px-4 lg:px-6">
@@ -210,7 +208,6 @@ export function Layout({ children }: LayoutProps) {
             {children}
           </main>
         </div>
-      </div>
     </SidebarProvider>
   );
 }

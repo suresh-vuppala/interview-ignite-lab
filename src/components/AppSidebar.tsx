@@ -270,7 +270,7 @@ useEffect(() => {
                                     "h-3.5 w-3.5 flex-shrink-0",
                                     isActive ? "text-pink-600 dark:text-pink-400" : "text-muted-foreground"
                                   )} />
-                                  <span className={cn("text-[13px] flex-1 min-w-0 break-words whitespace-normal", isActive && "text-pink-600 dark:text-pink-400 underline decoration-2 underline-offset-2")} title={subLesson.title}>
+                                  <span className={cn("text-[13px] flex-1 min-w-0 truncate max-w-[250px]", isActive && "text-pink-600 dark:text-pink-400 underline decoration-2 underline-offset-2")} title={subLesson.title}>
                                     {subLesson.title}
                                   </span>
                                   {isLocked && (
@@ -322,7 +322,7 @@ useEffect(() => {
                         "h-3.5 w-3.5 flex-shrink-0",
                         isActive ? "text-pink-600 dark:text-pink-400" : "text-muted-foreground"
                       )} />
-                      <span className={cn("text-[13px] flex-1 min-w-0 break-words whitespace-normal", isActive && "text-pink-600 dark:text-pink-400")} title={lesson.title}>
+                      <span className={cn("text-[13px] flex-1 min-w-0 truncate max-w-[250px]", isActive && "text-pink-600 dark:text-pink-400")} title={lesson.title}>
                         {lesson.title}
                       </span>
                       {isLocked && (
@@ -338,7 +338,7 @@ useEffect(() => {
   };
 
   return (
-    <Sidebar className="border-r w-full sm:w-96 lg:w-[420px]" collapsible="offcanvas">
+    <Sidebar className="border-r w-full sm:w-96 lg:w-[420px] z-40 [&_*]:text-xs sm:[&_*]:text-sm" collapsible="none">
       {/* 🔍 Search Bar */}
       <SidebarHeader className="border-b px-3 py-2.5">
         <Input
