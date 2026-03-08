@@ -337,6 +337,7 @@ useEffect(() => {
       ));
   };
 
+  
   return (
     <Sidebar className="border-r w-full sm:w-96 lg:w-[420px] z-40 text-xs sm:text-sm" collapsible="none">
       {/* 🔍 Search Bar */}
