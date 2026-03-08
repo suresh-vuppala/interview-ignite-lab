@@ -35,24 +35,22 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="h-14 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-      <div className="flex items-center justify-between h-full px-4 lg:px-6">
-        {/* Left Section */}
+    <>
+    {/* Desktop Floating Header */}
+    <header className="hidden lg:block fixed top-6 left-1/2 -translate-x-1/2 max-w-4xl w-[calc(100%-2rem)] h-12 border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-full shadow-lg z-50">
+      <div className="flex items-center justify-between h-full px-6">
         <div className="flex items-center gap-3 min-w-0 flex-1">
-          <SidebarTrigger className="-ml-1" />
-          
           <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
             <img
               src="/InterviewSortLogo.png"
               alt="InterviewSort"
-              className="h-7 w-auto object-contain max-w-[140px] lg:max-w-[160px]"
+              className="h-7 w-auto object-contain max-w-[160px]"
             />
           </Link>
           
-          <div className="h-6 w-px bg-border hidden lg:block" />
+          <div className="h-6 w-px bg-border" />
           
-          {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex">
+          <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-sm h-9">
@@ -78,7 +76,6 @@ export function Header() {
           </NavigationMenu>
         </div>
         
-        {/* Right Section */}
         <div className="flex items-center gap-2">
           <Button
             variant="ghost"
@@ -94,7 +91,7 @@ export function Header() {
           {user && (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="relative h-9 w-9 rounded-full hidden lg:flex">
+                <Button variant="ghost" className="relative h-9 w-9 rounded-full">
                   <Avatar className="h-8 w-8">
                     <AvatarFallback className="bg-primary text-primary-foreground text-sm">
                       {user.email?.charAt(0).toUpperCase()}
@@ -130,11 +127,39 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
           )}
+        </div>
+      </div>
+    </header>
 
-          {/* Mobile Menu */}
+    {/* Mobile Header */}
+    <header className="lg:hidden h-14 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+      <div className="flex items-center justify-between h-full px-4">
+        <div className="flex items-center gap-3">
+          <SidebarTrigger className="-ml-1" />
+          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <img
+              src="/InterviewSortLogo.png"
+              alt="InterviewSort"
+              className="h-7 w-auto object-contain max-w-[140px]"
+            />
+          </Link>
+        </div>
+        
+        <div className="flex items-center gap-2">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-9 w-9"
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          >
+            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            <span className="sr-only">Toggle theme</span>
+          </Button>
+
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="lg:hidden h-9 w-9">
+              <Button variant="ghost" size="icon" className="h-9 w-9">
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
@@ -193,5 +218,6 @@ export function Header() {
         </div>
       </div>
     </header>
+    </>
   );
 }

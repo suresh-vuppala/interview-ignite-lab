@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Layout } from '@/components/layout';
-import { Header } from '@/components/layout';
+import { SidebarProvider } from '@/components/ui/sidebar';
 import { 
   BookOpen, 
   Code, 
@@ -94,8 +94,19 @@ const Index = () => {
   }
 
   return (
+    <SidebarProvider>
     <div className="min-h-screen bg-background">
-      <Header />
+      <header className="h-14 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+        <div className="container flex items-center justify-between h-full px-4">
+          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <img
+              src="/InterviewSortLogo.png"
+              alt="InterviewSort"
+              className="h-7 w-auto object-contain max-w-[160px]"
+            />
+          </Link>
+        </div>
+      </header>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 text-center bg-gradient-to-br from-background via-primary/5 to-background">
@@ -313,6 +324,7 @@ const Index = () => {
         </div>
       </footer>
     </div>
+    </SidebarProvider>
   );
 };
 
