@@ -39,6 +39,7 @@ export function Layout({ children }: LayoutProps) {
   const { theme, setTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  
   return (
     <SidebarProvider defaultOpen={true}>
       <AppSidebar />
