@@ -557,7 +557,7 @@ const renderTable = (lines: string[], key: number) => {
 
 return (
   <Layout>
-    <div className="max-w-6xl mx-auto p-4 sm:p-6 lg:p-8">
+    <div className="p-4 sm:p-6 lg:p-8">
       {/* Header with gradient background */}
       <div className="mb-8 p-6 rounded-2xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 animate-slide-in">
         <div className="flex items-center justify-between flex-wrap gap-4">
