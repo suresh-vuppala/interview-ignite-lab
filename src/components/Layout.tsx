@@ -45,7 +45,7 @@ export function Layout({ children }: LayoutProps) {
       <AppSidebar />
       <div className="flex-1 flex flex-col min-h-screen overflow-hidden ml-0 lg:ml-[var(--sidebar-width-desktop)]">
           {/* Header */}
-          <header className="fixed top-4 left-1/2 -translate-x-1/2 max-w-3xl w-[calc(100%-2rem)] h-12 border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-full shadow-sm z-50">
+          <header className="fixed top-4 left-1/2 -translate-x-1/2 lg:left-[calc(50%+var(--sidebar-width-desktop)/2)] max-w-5xl w-[calc(100%-2rem)] h-12 border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-full shadow-sm z-50">
           <div className="flex items-center justify-between h-full px-4 lg:px-6">
             {/* Left Section */}
             <div className="flex items-center gap-2 min-w-0">
@@ -203,7 +203,7 @@ export function Layout({ children }: LayoutProps) {
         </header>
         
           {/* Main Content */}
-          <main className="flex-1 overflow-y-auto pt-20">
+          <main className="flex-1 overflow-y-auto pt-20 px-4 lg:px-8">
               {children}
           </main>
         </div>
