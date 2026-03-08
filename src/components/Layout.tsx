@@ -42,29 +42,27 @@ export function Layout({ children }: LayoutProps) {
   return (
     <SidebarProvider defaultOpen={true}>
       <AppSidebar />
-      <div className="flex-1 flex flex-col min-w-0">
+      <div className="flex-1 flex flex-col min-h-screen overflow-hidden ml-0 lg:ml-[var(--sidebar-width-desktop)]">
           {/* Header */}
-          <header className="h-14 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+          <header className="fixed top-4 left-1/2 -translate-x-1/2 max-w-3xl w-[calc(100%-2rem)] h-12 border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-full shadow-sm z-50">
           <div className="flex items-center justify-between h-full px-4 lg:px-6">
             {/* Left Section */}
-            <div className="flex items-center gap-3 min-w-0 flex-1">
-              <SidebarTrigger className="-ml-1" />
+            <div className="flex items-center gap-2 min-w-0">
+              <SidebarTrigger className="h-8 w-8 lg:hidden" />
               
               <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
                 <img
                   src="/InterviewSortLogo.png"
                   alt="InterviewSort"
-                  className="h-7 w-auto object-contain max-w-[140px] lg:max-w-[160px]"
+                  className="h-6 w-auto object-contain max-w-[100px] lg:max-w-[120px]"
                 />
               </Link>
               
-              <div className="h-6 w-px bg-border hidden lg:block" />
-              
               {/* Desktop Navigation */}
-              <NavigationMenu className="hidden lg:flex">
+              <NavigationMenu className="hidden lg:flex ml-4">
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-sm h-9">
+                    <NavigationMenuTrigger className="text-sm h-8">
                       <BookOpen className="w-4 h-4 mr-2" />
                       Courses
                     </NavigationMenuTrigger>
@@ -88,11 +86,11 @@ export function Layout({ children }: LayoutProps) {
             </div>
             
             {/* Right Section */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-9 w-9"
+                className="h-8 w-8"
                 onClick={() => setTheme(theme === "light" ? "dark" : "light")}
               >
                 <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
@@ -103,8 +101,8 @@ export function Layout({ children }: LayoutProps) {
               {user && (
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="relative h-9 w-9 rounded-full hidden lg:flex">
-                      <Avatar className="h-8 w-8">
+                    <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+                      <Avatar className="h-7 w-7">
                         <AvatarFallback className="bg-primary text-primary-foreground text-sm">
                           {user.email?.charAt(0).toUpperCase()}
                         </AvatarFallback>
@@ -143,8 +141,8 @@ export function Layout({ children }: LayoutProps) {
               {/* Mobile Menu */}
               <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="lg:hidden h-9 w-9">
-                    <Menu className="h-5 w-5" />
+                  <Button variant="ghost" size="icon" className="h-8 w-8 lg:hidden">
+                    <Menu className="h-4 w-4" />
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-[300px] sm:w-[350px]">
@@ -204,8 +202,8 @@ export function Layout({ children }: LayoutProps) {
         </header>
         
           {/* Main Content */}
-          <main className="flex-1 overflow-auto">
-            {children}
+          <main className="flex-1 overflow-y-auto pt-20">
+              {children}
           </main>
         </div>
     </SidebarProvider>

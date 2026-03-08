@@ -126,7 +126,7 @@ const SidebarProvider = React.forwardRef<
               ...style,
             } as React.CSSProperties
           }
-          className={cn("group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar", className)}
+          className={cn("group/sidebar-wrapper flex min-h-screen w-full has-[[data-variant=inset]]:bg-sidebar overflow-hidden", className)}
           ref={ref}
           {...props}
         >
@@ -151,7 +151,7 @@ const Sidebar = React.forwardRef<
   if (collapsible === "none") {
     return (
       <div
-        className={cn("flex h-full w-[--sidebar-width-desktop] flex-col bg-sidebar text-sidebar-foreground", className)}
+        className={cn("fixed left-0 top-0 flex h-screen w-[--sidebar-width-desktop] flex-col bg-sidebar text-sidebar-foreground overflow-hidden z-40", className)}
         ref={ref}
         {...props}
       >
@@ -166,7 +166,7 @@ const Sidebar = React.forwardRef<
         <SheetContent
           data-sidebar="sidebar"
           data-mobile="true"
-          className="w-[--sidebar-width-mobile] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
+          className="w-[280px] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
           side={side}
         >
           <div className="flex h-full w-full flex-col overflow-y-auto">{children}</div>
@@ -178,7 +178,7 @@ const Sidebar = React.forwardRef<
   return (
     <div
       ref={ref}
-      className="group peer hidden text-sidebar-foreground md:block"
+      className="group peer hidden text-sidebar-foreground lg:block"
       data-state={state}
       data-collapsible={state === "collapsed" ? collapsible : ""}
       data-variant={variant}
@@ -193,7 +193,7 @@ const Sidebar = React.forwardRef<
       />
       <div
         className={cn(
-          "fixed inset-y-0 z-40 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex",
+          "fixed inset-y-0 z-40 hidden h-svh transition-[left,right,width] duration-200 ease-linear lg:flex",
           // === UPDATED: responsive width for the visible fixed sidebar (only change) ===
           "w-[--sidebar-width-mobile] sm:w-[--sidebar-width-tablet] lg:w-[--sidebar-width-desktop]",
           // ============================================================================

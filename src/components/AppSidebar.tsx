@@ -265,7 +265,7 @@ useEffect(() => {
                                   !isActive && 'hover:bg-accent/60 text-foreground/80 hover:text-pink-400 dark:hover:text-pink-300'
                                 )}
                               >
-                                <Link to={subLessonPath} className="flex items-center gap-2 w-full">
+                                <Link to={subLessonPath} onClick={() => setOpenMobile(false)} className="flex items-center gap-2 w-full">
                                   <FileText className={cn(
                                     "h-3.5 w-3.5 flex-shrink-0",
                                     isActive ? "text-pink-600 dark:text-pink-400" : "text-muted-foreground"
@@ -314,9 +314,7 @@ useEffect(() => {
                     )}
                   >
                     <Link to={lessonPath} 
-                      onClick={() => {
-                        if (window.innerWidth < 768) setOpenMobile(false);
-                      }}
+                      onClick={() => setOpenMobile(false)}
                       className="flex items-center gap-2 w-full">
                       <FileText className={cn(
                         "h-3.5 w-3.5 flex-shrink-0",
@@ -339,9 +337,9 @@ useEffect(() => {
 
   
   return (
-    <Sidebar className="border-r w-full sm:w-96 lg:w-[420px] z-40 text-xs sm:text-sm" collapsible="none">
+    <Sidebar className="border-r w-full sm:w-96 lg:w-[420px] z-40 text-xs sm:text-sm h-screen flex flex-col" collapsible="offcanvas">
       {/* 🔍 Search Bar */}
-      <SidebarHeader className="border-b px-3 py-2.5">
+      <SidebarHeader className="border-b px-3 py-2.5 flex-shrink-0">
         <Input
           type="search"
           placeholder="Search..."
@@ -351,7 +349,7 @@ useEffect(() => {
         />
       </SidebarHeader>
 
-      <ScrollArea className="flex-1">
+      <div className="flex-1 overflow-y-auto">
         <SidebarContent>
           {course && (
             <SidebarGroup>
@@ -425,7 +423,7 @@ useEffect(() => {
             </SidebarGroup>
           )}
         </SidebarContent>
-      </ScrollArea>
+      </div>
     </Sidebar>
   );
 }
