@@ -4,7 +4,7 @@ Arrays and strings are the `fundamental building blocks` of programming. Masteri
 
 ![Array Data Structure Visualization](https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=400&fit=crop)
 
-## Why Arrays & Strings Matterr
+## Why Arrays & Strings Matter
 
 Arrays and strings appear in approximately `60%` of all coding interview questions. They serve as the foundation for more complex data structures and algorithms.
 ---
