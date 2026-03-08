@@ -1,8 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Layout } from '@/components/Layout';
-import { Header } from '@/components/Header';
+import { Layout } from '@/components/layout';
+import { Header } from '@/components/layout';
 import { 
   BookOpen, 
   Code, 
