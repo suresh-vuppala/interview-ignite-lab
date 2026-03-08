@@ -251,7 +251,7 @@ const renderInlineFormatting = (text: string, keyPrefix: string = '') => {
             return (
               <span
                 key={`${keyPrefix}-code-${i}-${j}-${k}`}
-                className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1.5 py-0.5 rounded text-sm"
+                className="font-mono text-[hsl(var(--accent-pink))] bg-primary/10 px-1 sm:px-1.5 py-0.5 rounded text-xs sm:text-sm"
               >
                 {processTextWithWhitespace(code)}
               </span>
@@ -341,7 +341,7 @@ const renderMarkdown = (markdown : string) => {
       
       elements.push(
         <div key={`codeblock-${index}`} className="my-4 rounded-lg overflow-hidden border border-border">
-          <pre className="!bg-[#2d2d2d] !m-0 p-4 overflow-x-auto">
+          <pre className="!bg-[#2d2d2d] !m-0 p-3 sm:p-4 overflow-x-auto text-xs sm:text-sm">
             <code 
               className={`language-${codeBlockLanguage}`}
               dangerouslySetInnerHTML={{ __html: highlightedCode }}
@@ -397,7 +397,7 @@ const renderMarkdown = (markdown : string) => {
     // --- Headings ---
     if (line.startsWith('# ')) {
       elements.push(
-        <h2 key={index} className="text-3xl font-bold mt-6 mb-3 text-foreground">
+        <h2 key={index} className="text-2xl sm:text-2xl lg:text-3xl font-bold mt-6 mb-3 text-foreground">
           {line.slice(2)}
         </h2>
       );
@@ -405,7 +405,7 @@ const renderMarkdown = (markdown : string) => {
     }
     if (line.startsWith('## ')) {
       elements.push(
-        <h2 key={index} className="text-2xl font-bold mt-8 mb-4 text-foreground flex items-center gap-3">
+        <h2 key={index} className="text-xl sm:text-xl lg:text-2xl font-bold mt-8 mb-4 text-foreground flex items-center gap-3">
           <span className="w-1 h-8 bg-gradient-to-b from-primary to-primary/50 rounded-full"></span>
           {line.slice(3)}
         </h2>
@@ -414,7 +414,7 @@ const renderMarkdown = (markdown : string) => {
     }
     if (line.startsWith('### ')) {
       elements.push(
-        <h3 key={index} className="text-xl font-semibold mt-6 mb-3 text-foreground flex items-center gap-2">
+        <h3 key={index} className="text-lg sm:text-lg lg:text-xl font-semibold mt-6 mb-3 text-foreground flex items-center gap-2">
           <span className="w-2 h-2 bg-primary rounded-full"></span>
           {line.slice(4)}
         </h3>
@@ -528,11 +528,11 @@ const renderTable = (lines: string[], key: number) => {
 
   return (
     <div key={`table-wrapper-${key}`} className="my-6 overflow-x-auto rounded-xl border border-border shadow-md">
-      <table className="table-auto w-full">
+      <table className="table-auto w-full min-w-[600px]">
         <thead>
           <tr className="bg-gradient-to-r from-primary/20 to-primary/10">
             {headers.map((h, idx) => (
-              <th key={idx} className="border-b-2 border-primary/30 px-4 py-3 text-left font-semibold text-foreground">
+              <th key={idx} className="border-b-2 border-primary/30 px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-foreground text-xs sm:text-sm">
                 {renderInlineFormatting(h, `header-${idx}`)}
               </th>
             ))}
@@ -542,7 +542,7 @@ const renderTable = (lines: string[], key: number) => {
           {rows.map((row, rIdx) => (
             <tr key={rIdx} className="hover:bg-muted/50 transition-colors">
               {row.map((cell, cIdx) => (
-                <td key={cIdx} className="border-b border-border px-4 py-3 align-top">
+                <td key={cIdx} className="border-b border-border px-3 sm:px-4 py-2 sm:py-3 align-top text-xs sm:text-sm">
                   {renderInlineFormatting(cell, `cell-${rIdx}-${cIdx}`)}
                 </td>
               ))}
@@ -561,7 +561,7 @@ return (
       {/* Header with gradient background */}
       <div className="mb-8 p-6 rounded-2xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 animate-slide-in">
         <div className="flex items-center justify-between flex-wrap gap-4">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             {lesson.title}
           </h1>
           {lesson.isPremium && (
@@ -629,33 +629,33 @@ return (
       {/* Navigation */}
       <div className="flex justify-between items-center mt-12 pt-8 border-t border-border/50">
         {prevLesson ? (
-          <Button variant="outline" size="lg" className="hover-lift" asChild>
+          <Button variant="outline" size="sm" className="hover-lift sm:size-lg" asChild>
             <Link to={prevLesson.path}>
-              <ChevronLeft className="w-5 h-5 mr-2" />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
               <div className="flex flex-col items-start">
-                <span className="text-xs text-muted-foreground">Previous</span>
-                <span className="truncate max-w-[150px] font-medium">{prevLesson.title}</span>
+                <span className="text-[10px] sm:text-xs text-muted-foreground">Previous</span>
+                <span className="truncate max-w-[80px] sm:max-w-[150px] font-medium text-xs sm:text-sm">{prevLesson.title}</span>
               </div>
             </Link>
           </Button>
         ) : (
-          <Button variant="outline" size="lg" disabled>
-            <ChevronLeft className="w-5 h-5 mr-2" /> Previous
+          <Button variant="outline" size="sm" className="sm:size-lg" disabled>
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" /> <span className="text-xs sm:text-sm">Previous</span>
           </Button>
         )}
         {nextLesson ? (
-          <Button variant="outline" size="lg" className="hover-lift" asChild>
+          <Button variant="outline" size="sm" className="hover-lift sm:size-lg" asChild>
             <Link to={nextLesson.path}>
               <div className="flex flex-col items-end">
-                <span className="text-xs text-muted-foreground">Next</span>
-                <span className="truncate max-w-[150px] font-medium">{nextLesson.title}</span>
+                <span className="text-[10px] sm:text-xs text-muted-foreground">Next</span>
+                <span className="truncate max-w-[80px] sm:max-w-[150px] font-medium text-xs sm:text-sm">{nextLesson.title}</span>
               </div>
-              <ChevronRight className="w-5 h-5 ml-2" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:ml-2" />
             </Link>
           </Button>
         ) : (
-          <Button variant="outline" size="lg" disabled>
-            Next <ChevronRight className="w-5 h-5 ml-2" />
+          <Button variant="outline" size="sm" className="sm:size-lg" disabled>
+            <span className="text-xs sm:text-sm">Next</span> <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:ml-2" />
           </Button>
         )}
       </div>

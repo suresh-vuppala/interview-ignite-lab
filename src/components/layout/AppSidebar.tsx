@@ -327,7 +327,7 @@ useEffect(() => {
           {course && (
             <SidebarGroup>
               <SidebarGroupLabel
-                className="text-sm font-bold px-3 py-2 sticky top-0 bg-background z-10 border-b text-foreground"
+                className="text-lg font-bold px-3 py-3 sticky top-0 bg-background z-10 border-b text-primary"
                 title={course.title}
               >
                 {course.title}
