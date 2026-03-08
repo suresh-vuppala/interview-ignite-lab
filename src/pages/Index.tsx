@@ -1,24 +1,42 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Layout } from '@/components/layout';
-import { SidebarProvider } from '@/components/ui/sidebar';
-import { 
-  BookOpen, 
-  Code, 
-  Brain, 
-  Users, 
-  CheckCircle, 
+import React from "react";
+import { Link } from "react-router-dom";
+import { Layout } from "@/components/layout";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+
+import {
+  BookOpen,
+  Code,
+  Brain,
+  Users,
   Star,
   TrendingUp,
   Clock,
-  Target,
-  Crown,
   ArrowRight,
-  Play
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
+  Play,
+  Menu,
+  Database,
+} from "lucide-react";
+
+import { useAuth } from "@/hooks/useAuth";
+
+const courses = [
+  { id: "dsa", title: "DSA", description: "Data Structures & Algorithms", icon: Database },
+  { id: "system-design", title: "System Design (HLD)", description: "High Level Design", icon: Brain },
+];
 
 const features = [
   {
@@ -26,29 +44,17 @@ const features = [
     title: "Data Structures & Algorithms",
     description: "Master the most important patterns that solve 80% of coding problems",
     lessons: 24,
-    color: "text-blue-500"
+    color: "text-blue-500",
+    link: "/course/dsa",
   },
   {
     icon: Brain,
     title: "System Design",
     description: "Learn to design scalable systems like a senior engineer",
     lessons: 18,
-    color: "text-purple-500"
-  }
-  // {
-  //   icon: Users,
-  //   title: "Behavioral Interviews",
-  //   description: "Perfect your soft skills and leadership stories",
-  //   lessons: 12,
-  //   color: "text-green-500"
-  // },
-  // {
-  //   icon: Target,
-  //   title: "Mock Interviews",
-  //   description: "Practice with real interview scenarios and get feedback",
-  //   lessons: 15,
-  //   color: "text-orange-500"
-  // }
+    color: "text-purple-500",
+    link: "/course/system-design",
+  },
 ];
 
 const stats = [
@@ -58,273 +64,283 @@ const stats = [
   { label: "Hours of Content", value: "50+", icon: Clock },
 ];
 
-const testimonials = [
-  {
-    name: "Sarah Chen",
-    role: "Software Engineer at Google",
-    content: "InterviewBucket helped me land my dream job at Google. The structured approach and real interview patterns made all the difference.",
-    rating: 5
-  },
-  {
-    name: "Michael Rodriguez",
-    role: "Senior SDE at Amazon",
-    content: "The system design course is incredible. I went from struggling with design questions to confidently architecting complex systems.",
-    rating: 5
-  },
-  {
-    name: "Emily Zhang",
-    role: "Frontend Engineer at Meta",
-    content: "The behavioral interview prep was a game-changer. I finally knew how to tell compelling stories about my experience.",
-    rating: 5
-  }
-];
-
 const Index = () => {
   const { user } = useAuth();
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   if (user) {
     return (
       <Layout>
-        <div className="container mx-auto px-4 py-12">
-          <h1 className="text-4xl font-bold mb-4">Welcome to InterviewBucket</h1>
-          <p className="text-muted-foreground">Select a course from the menu to get started.</p>
+        <div className="max-w-6xl mx-auto px-6 py-12">
+          <h1 className="text-4xl font-bold mb-4">
+            Welcome to InterviewSort
+          </h1>
+          <p className="text-muted-foreground">
+            Select a course from the menu to get started.
+          </p>
         </div>
       </Layout>
     );
   }
 
   return (
-    <SidebarProvider>
     <div className="min-h-screen bg-background">
-      <header className="h-14 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container flex items-center justify-between h-full px-4">
-          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+
+        {/* Desktop Header */}
+        <header className="hidden lg:flex fixed top-6 left-1/2 -translate-x-1/2 max-w-5xl w-[calc(100%-2rem)] h-14 border bg-background/95 backdrop-blur rounded-full shadow-lg z-50 items-center justify-between px-6">
+          
+          <Link to="/" className="flex items-center">
             <img
               src="/InterviewSortLogo.png"
               alt="InterviewSort"
-              className="h-7 w-auto object-contain max-w-[160px]"
+              className="h-7"
             />
           </Link>
-        </div>
-      </header>
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 text-center bg-gradient-to-br from-background via-primary/5 to-background">
-        <div className="container mx-auto max-w-4xl">
-          <Badge variant="secondary" className="mb-6">
-            <Star className="w-3 h-3 mr-1" />
-            Trusted by top developers
-          </Badge>
-          
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            Master Tech Interviews in{' '}
-            <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-              60 Days
-            </span>
-          </h1>
-          
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            The most structured way to prepare for coding interviews. Learn key patterns, 
-            master system design, and land your dream job at top tech companies.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="text-lg px-8" asChild>
+          <div className="flex items-center gap-4">
+
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm h-9">
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    Courses
+                  </NavigationMenuTrigger>
+
+                  <NavigationMenuContent>
+                    <div className="grid gap-3 p-6 w-[420px]">
+                      {courses.map((course) => (
+                        <Link
+                          key={course.id}
+                          to={`/course/${course.id}`}
+                          className="group flex items-start gap-4 select-none rounded-lg p-4 leading-none no-underline outline-none transition-all hover:bg-accent hover:shadow-md border border-transparent hover:border-border"
+                        >
+                          <div className="mt-1 p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                            <course.icon className="w-5 h-5 text-primary" />
+                          </div>
+                          <div className="flex-1 space-y-1">
+                            <div className="text-sm font-semibold leading-none group-hover:text-primary transition-colors">
+                              {course.title}
+                            </div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              {course.description}
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            <Button size="sm" asChild>
               <Link to="/course/dsa/programming-essentials/getting-started/getting-started-with-easy-problems">
-                <Play className="w-5 h-5 mr-2" />
-                Start Learning Free
+                Get Started
               </Link>
             </Button>
-            {/* <Button variant="outline" size="lg" className="text-lg px-8">
-              <BookOpen className="w-5 h-5 mr-2" />
-              View Curriculum
-            </Button> */}
+
           </div>
-          
-          {/* <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="flex justify-center mb-2">
-                  <stat.icon className="w-6 h-6 text-primary" />
+        </header>
+
+        {/* Mobile Header */}
+        <header className="lg:hidden fixed top-0 left-0 right-0 h-16 border-b bg-background z-50 flex items-center justify-between px-4">
+
+          <Link to="/" className="flex items-center">
+            <img
+              src="/InterviewSortLogo.png"
+              alt="InterviewSort"
+              className="h-7"
+            />
+          </Link>
+
+          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" aria-label="Menu">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+
+            <SheetContent side="right" className="w-[300px]">
+              <nav className="flex flex-col gap-6 mt-8">
+
+                <div>
+                  <h3 className="text-sm font-semibold text-muted-foreground mb-3">
+                    COURSES
+                  </h3>
+
+                  {courses.map((course) => (
+                    <Link
+                      key={course.id}
+                      to={`/course/${course.id}`}
+                      className="block px-3 py-3 rounded-md hover:bg-accent"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <div className="font-medium">{course.title}</div>
+                      <div className="text-sm text-muted-foreground">
+                        {course.description}
+                      </div>
+                    </Link>
+                  ))}
+
                 </div>
-                <div className="text-2xl font-bold">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div> */}
-        </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Everything You Need to Succeed
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Our comprehensive curriculum covers all aspects of technical interviews
+                <Button asChild>
+                  <Link
+                    to="/course/dsa/programming-essentials/getting-started/getting-started-with-easy-problems"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Get Started Free
+                  </Link>
+                </Button>
+
+              </nav>
+            </SheetContent>
+          </Sheet>
+
+        </header>
+
+        {/* Hero */}
+        <section className="pt-28 pb-20 text-center bg-gradient-to-b from-primary/5 to-background">
+
+          <div className="max-w-5xl mx-auto px-6">
+
+            <Badge variant="secondary" className="mb-6">
+              <Star className="w-3 h-3 mr-1 fill-yellow-500 text-yellow-500" />
+              Trusted by 10,000+ developers
+            </Badge>
+
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Master Tech Interviews in{" "}
+              <span className="bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+                60 Days
+              </span>
+            </h1>
+
+            <p className="text-lg text-muted-foreground mb-10 max-w-3xl mx-auto">
+              The most structured way to prepare for coding interviews.
+              Learn key patterns, master system design, and land your dream job.
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature) => (
-              <Card key={feature.title} className="p-6 hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <feature.icon className={`w-8 h-8 ${feature.color}`} />
-                    <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  </div>
-                  <CardDescription className="text-base">
-                    {feature.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">
-                      {/* {feature.lessons} lessons */}
-                    </span>
-                    <Button variant="ghost" size="sm">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Testimonials */}
-      {/* <section className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Success Stories
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Join thousands who've landed their dream jobs
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <Card key={testimonial.name} className="p-6">
-                <CardContent className="space-y-4">
-                  <div className="flex gap-1">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground italic">
-                    "{testimonial.content}"
-                  </p>
-                  <div>
-                    <p className="font-semibold">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section> */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-primary to-blue-600 text-white">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Land Your Dream Job?
-          </h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Join thousands of developers who've successfully prepared for and aced 
-            their Tech interviews with InterviewSort.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8" asChild>
-              <Link to="/course/dsa/programming-essentials/getting-started/getting-started-with-easy-problems">
-                <Crown className="w-5 h-5 mr-2" />
-                Coding
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 border-white text-black hover:bg-white hover:text-primary">
-              <Link to="course/system-design/system-design-foundations/introduction-to-system-design/what-why-how-when-where-system-design">
-                {/* <Crown className="w-5 h-5 mr-2" /> */}
-                System Design
-              </Link>
-            </Button>
-          </div>
-          
-          {/* <div className="mt-8 flex items-center justify-center gap-8 text-sm opacity-80">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4" />
-              No credit card required
+              <Button size="lg" className="h-14 px-10" asChild>
+                <Link to="/course/dsa/programming-essentials/getting-started/getting-started-with-easy-problems">
+                  <Play className="w-5 h-5 mr-2" />
+                  Start Learning Free
+                </Link>
+              </Button>
+
+              <Button size="lg" variant="outline" className="h-14 px-10" asChild>
+                <Link to="/course/system-design/system-design-foundations/introduction-to-system-design/what-why-how-when-where-system-design">
+                  <Brain className="w-5 h-5 mr-2" />
+                  System Design
+                </Link>
+              </Button>
+
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4" />
-              7-day money back guarantee
-            </div>
-          </div> */}
-        </div>
-      </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-4 border-t">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-1">
-              <div className="flex items-center gap-2">
-                <img
-                    src="/InterviewSortLogo.png"
-                    alt="InterviewSort Logo"
-                    className="h-10 w-80 object-contain"
-                  />
-                {/* <span className="font-bold text-xl">InterviewSort</span> */}
-              </div>
-              <p className="text-muted-foreground">
-                The most structured way to prepare for coding interviews.
+          </div>
+        </section>
+
+        {/* Features */}
+        <section className="py-20 bg-muted/30">
+          <div className="max-w-5xl mx-auto px-6">
+
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4">
+                Everything You Need to Succeed
+              </h2>
+
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Comprehensive curriculum covering all aspects of technical interviews
               </p>
             </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Courses</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><Link to="/course/data-structures" className="hover:text-foreground">Data Structures & Algorithms</Link></li>
-                {/* <li><Link to="/course/algorithms" className="hover:text-foreground">Algorithms</Link></li> */}
-                <li><Link to="/course/system-design" className="hover:text-foreground">System Design</Link></li>
-                {/* <li><Link to="/course/behavioral" className="hover:text-foreground">Behavioral</Link></li> */}
-              </ul>
+
+            <div className="grid md:grid-cols-2 gap-8">
+
+              {features.map((feature) => (
+                <Card key={feature.title} className="p-8 hover:shadow-xl transition">
+
+                  <CardHeader className="pb-6">
+                    <div className="flex gap-4">
+
+                      <div className="p-3 rounded-xl bg-muted">
+                        <feature.icon className={`w-8 h-8 ${feature.color}`} />
+                      </div>
+
+                      <div>
+                        <CardTitle className="text-2xl">
+                          {feature.title}
+                        </CardTitle>
+
+                        <CardDescription>
+                          {feature.description}
+                        </CardDescription>
+                      </div>
+
+                    </div>
+                  </CardHeader>
+
+                  <CardContent>
+                    <Button variant="ghost" size="sm" asChild>
+                      <Link to={feature.link}>
+                        Explore Course
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+
+                </Card>
+              ))}
+
             </div>
-            
-            {/* <div>
-              <h3 className="font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><Link to="/about" className="hover:text-foreground">About</Link></li>
-                <li><Link to="/blog" className="hover:text-foreground">Blog</Link></li>
-                <li><Link to="/careers" className="hover:text-foreground">Careers</Link></li>
-                <li><Link to="/contact" className="hover:text-foreground">Contact</Link></li>
-              </ul>
-            </div> */}
-            
-            {/* <div>
-              <h3 className="font-semibold mb-4">Support</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><Link to="/help" className="hover:text-foreground">Help Center</Link></li>
-                <li><Link to="/privacy" className="hover:text-foreground">Privacy Policy</Link></li>
-                <li><Link to="/terms" className="hover:text-foreground">Terms of Service</Link></li>
-              </ul>
-            </div> */}
+
           </div>
-          
-          <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2026 InterviewSort. All rights reserved.</p>
+        </section>
+
+        {/* CTA */}
+        <section className="py-20 bg-gradient-to-r from-primary via-blue-600 to-purple-600 text-white">
+
+          <div className="max-w-4xl mx-auto text-center px-6">
+
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Land Your Dream Job?
+            </h2>
+
+            <p className="text-lg opacity-90 mb-10">
+              Join thousands of developers who successfully prepared
+              for tech interviews with InterviewSort.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              <Button size="lg" variant="secondary" className="h-14 px-10" asChild>
+                <Link to="/course/dsa/programming-essentials/getting-started/getting-started-with-easy-problems">
+                  <Code className="w-5 h-5 mr-2" />
+                  Start Coding
+                </Link>
+              </Button>
+
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-14 px-10 border-white text-white hover:bg-white hover:text-primary"
+                asChild
+              >
+                <Link to="/course/system-design/system-design-foundations/introduction-to-system-design/what-why-how-when-where-system-design">
+                  <Brain className="w-5 h-5 mr-2" />
+                  System Design
+                </Link>
+              </Button>
+
+            </div>
+
           </div>
-        </div>
-      </footer>
-    </div>
-    </SidebarProvider>
+        </section>
+
+      </div>
   );
 };
 

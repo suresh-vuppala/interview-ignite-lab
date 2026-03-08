@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
-import { LogOut, Crown, Sun, Moon, BookOpen, Menu } from 'lucide-react';
+import { LogOut, Crown, Sun, Moon, BookOpen, Menu, Database, Brain } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import {
@@ -25,8 +25,8 @@ import { Link } from 'react-router-dom';
 import { useTheme } from "next-themes";
 
 const courses = [
-  { id: 'dsa', title: 'DSA', description: 'Data Structures & Algorithms' },
-  { id: 'system-design', title: 'System Design (HLD)', description: 'High Level Design' },
+  { id: 'dsa', title: 'DSA', description: 'Data Structures & Algorithms', icon: Database },
+  { id: 'system-design', title: 'System Design (HLD)', description: 'High Level Design', icon: Brain },
 ];
 
 export function Header() {
@@ -37,7 +37,7 @@ export function Header() {
   return (
     <>
     {/* Desktop Floating Header */}
-    <header className="hidden lg:block fixed top-6 left-1/2 -translate-x-1/2 max-w-4xl w-[calc(100%-2rem)] h-12 border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-full shadow-lg z-50">
+    <header className="hidden lg:block fixed top-6 left-1/2 -translate-x-1/2 lg:left-[calc(50%+var(--sidebar-width-desktop)/2)] max-w-4xl w-[calc(100%-2rem)] h-12 border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-full shadow-lg z-50">
       <div className="flex items-center justify-between h-full px-6">
         <div className="flex items-center gap-3 min-w-0 flex-1">
           <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
@@ -58,15 +58,20 @@ export function Header() {
                   Courses
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-2 p-4 w-[400px]">
+                  <div className="grid gap-3 p-6 w-[420px]">
                     {courses.map(course => (
                       <Link 
                         key={course.id}
                         to={`/course/${course.id}`}
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                        className="group flex items-start gap-4 select-none rounded-lg p-4 leading-none no-underline outline-none transition-all hover:bg-accent hover:shadow-md border border-transparent hover:border-border"
                       >
-                        <div className="text-sm font-medium">{course.title}</div>
-                        <p className="text-sm text-muted-foreground">{course.description}</p>
+                        <div className="mt-1 p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                          <course.icon className="w-5 h-5 text-primary" />
+                        </div>
+                        <div className="flex-1 space-y-1">
+                          <div className="text-sm font-semibold leading-none group-hover:text-primary transition-colors">{course.title}</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{course.description}</p>
+                        </div>
                       </Link>
                     ))}
                   </div>
