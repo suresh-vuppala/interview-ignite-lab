@@ -338,7 +338,7 @@ useEffect(() => {
   };
 
   return (
-    <Sidebar className="border-r w-full sm:w-96 lg:w-[420px] z-40 [&_*]:text-xs sm:[&_*]:text-sm" collapsible="none">
+    <Sidebar className="border-r w-full sm:w-96 lg:w-[420px] z-40 text-xs sm:text-sm" collapsible="none">
       {/* 🔍 Search Bar */}
       <SidebarHeader className="border-b px-3 py-2.5">
         <Input

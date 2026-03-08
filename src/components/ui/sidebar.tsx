@@ -16,7 +16,7 @@ const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 
 // === UPDATED: responsive widths (only change) ===
-const SIDEBAR_WIDTH_MOBILE = "16rem";   // mobile: 256px
+const SIDEBAR_WIDTH_MOBILE = "12rem";   // mobile: 192px
 const SIDEBAR_WIDTH_TABLET = "18rem";   // tablet: 288px
 const SIDEBAR_WIDTH_DESKTOP = "22rem";  // desktop: 352px
 const SIDEBAR_WIDTH_ICON = "3rem";
