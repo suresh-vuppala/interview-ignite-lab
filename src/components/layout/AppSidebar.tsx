@@ -310,9 +310,9 @@ useEffect(() => {
   };
 
   return (
-    <Sidebar className="border-r w-full sm:w-96 lg:w-[420px]" collapsible="offcanvas">
+    <Sidebar className="border-r w-full sm:w-96 lg:w-[420px] flex flex-col h-screen" collapsible="offcanvas">
       {/* 🔍 Search Bar */}
-      <SidebarHeader className="border-b px-3 py-2.5">
+      <SidebarHeader className="border-b px-3 py-2.5 flex-shrink-0">
         <Input
           type="search"
           placeholder="Search..."
@@ -322,7 +322,7 @@ useEffect(() => {
         />
       </SidebarHeader>
 
-      <ScrollArea className="flex-1">
+      <div className="flex-1 overflow-y-auto">
         <SidebarContent>
           {course && (
             <SidebarGroup>
@@ -395,7 +395,7 @@ useEffect(() => {
             </SidebarGroup>
           )}
         </SidebarContent>
-      </ScrollArea>
+      </div>
     </Sidebar>
   );
 }
