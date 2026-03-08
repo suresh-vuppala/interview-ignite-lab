@@ -107,7 +107,7 @@ export function CodeBlock({ title, codes, showLanguageSelector = true }: CodeBlo
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2">
               <Code2 className="w-4 h-4 text-primary" />
-              <h3 className="font-semibold text-foreground">{title}</h3>
+              <h3 className="font-semibold text-foreground text-sm sm:text-base truncate max-w-[200px] sm:max-w-none">{title}</h3>
             </div>
 
             {showLanguageSelector && codes.length > 1 && (
@@ -147,10 +147,10 @@ export function CodeBlock({ title, codes, showLanguageSelector = true }: CodeBlo
             style={customStyle}
             customStyle={{
               margin: 0,
-              padding: '1.5rem',
+              padding: '1rem',
               background: 'hsl(var(--card))',
-              fontSize: '0.875rem',
-              lineHeight: '1.5',
+              fontSize: '0.75rem',
+              lineHeight: '1.4',
             }}
             showLineNumbers
             lineNumberStyle={{
