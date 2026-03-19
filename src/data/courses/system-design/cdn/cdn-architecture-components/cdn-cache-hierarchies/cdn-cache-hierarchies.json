@@ -2,6 +2,6 @@
   "title": "Cache Hierarchies in CDN (Edge, Regional, Origin)",
   "slug": "cdn-cache-hierarchies",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "cdn-cache-hierarchies.md"
 }

@@ -2,6 +2,6 @@
   "title": "Rate Limiting",
   "slug": "rest-api-rate-limiting",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "rest-api-rate-limiting.md"
 }

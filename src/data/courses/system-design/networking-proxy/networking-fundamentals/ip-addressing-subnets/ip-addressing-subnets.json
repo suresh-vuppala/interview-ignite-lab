@@ -2,6 +2,6 @@
   "title": "IP Addressing, Subnets, and CIDR",
   "slug": "ip-addressing-subnets",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "ip-addressing-subnets.md"
 }

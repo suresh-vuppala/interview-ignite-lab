@@ -2,6 +2,6 @@
   "title": "NGINX Gateway Service",
   "slug": "nginx-gateway",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "nginx-gateway.md"
 }

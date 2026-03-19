@@ -159,7 +159,7 @@ N ^ mask = 0111 ^ 0010 = 0101 = 5
 | Operation | Formula | Use Case |
 |-----------|---------|----------|
 | Check | `(N & (1 << K)) != 0` | Test if bit is 1 |
-| Set | `N \| (1 << K)` | Force bit to 1 |
+| Set | `N \ (1 << K)` | Force bit to 1 |
 | Unset | `N & ~(1 << K)` | Force bit to 0 |
 | Toggle | `N ^ (1 << K)` | Flip bit (0↔1) |
 

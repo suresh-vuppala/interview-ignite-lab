@@ -2,6 +2,6 @@
   "title": "Time-To-Live (TTL) and Expiry Design",
   "slug": "cache-ttl-expiry",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "cache-ttl-expiry.md"
 }

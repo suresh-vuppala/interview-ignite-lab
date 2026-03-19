@@ -2,6 +2,6 @@
   "title": "Idempotent API",
   "slug": "api-idempotent",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "api-idempotent.md"
 }

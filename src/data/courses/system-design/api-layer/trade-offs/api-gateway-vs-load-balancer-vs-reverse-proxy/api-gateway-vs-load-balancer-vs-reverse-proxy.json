@@ -2,6 +2,6 @@
   "title": "API Gateway vs Load Balancer vs Reverse Proxy",
   "slug": "api-gateway-vs-load-balancer-vs-reverse-proxy",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "api-gateway-vs-load-balancer-vs-reverse-proxy.md"
 }

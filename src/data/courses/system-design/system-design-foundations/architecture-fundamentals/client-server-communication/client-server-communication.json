@@ -1,7 +1,7 @@
 {
-  "title": "Client-Server Communication Model",
+  "title": "Client-Server Communication",
   "slug": "client-server-communication",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "client-server-communication.md"
 }

@@ -39,7 +39,7 @@
             {
               "title": "Common Constraints: Too Many Users, Too Much Data, Low Latency Needs",
               "slug": "common-constraints-system-design",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             }
           ]
@@ -51,49 +51,50 @@
             {
               "title": "Horizontal vs Vertical Scaling",
               "slug": "horizontal-vs-vertical-scaling",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             },
             {
               "title": "Capacity Planning & Back-of-the-Envelope Estimation",
               "slug": "capacity-planning-estimation",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             },
             {
               "title": "Performance Metrics",
               "slug": "performance-metrics",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             },
             {
-              "title": "Latency",
+              "title": "Latency & Percentiles (P50, P95, P99)",
               "slug": "latency",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             },
             {
               "title": "Throughput",
               "slug": "throughput",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             },
             {
               "title": "Bandwidth",
               "slug": "bandwidth",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             },
             {
               "title": "Response Time",
               "slug": "response-time",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             },
+
             {
               "title": "Fault vs Failure - Understanding Reliability",
               "slug": "fault-vs-failure-reliability",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             }
           ]
@@ -105,31 +106,37 @@
             {
               "title": "Client-Server Communication Model",
               "slug": "client-server-communication",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             },
             {
               "title": "Monolithic vs Microservices Architecture",
               "slug": "monolithic-vs-microservices",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             },
             {
               "title": "Stateful vs Stateless Architectures",
               "slug": "stateful-vs-stateless",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             },
             {
               "title": "Serverless vs Traditional Architectures",
               "slug": "serverless-vs-traditional",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             },
             {
               "title": "Hybrid Cloud vs All-Cloud Storage",
               "slug": "hybrid-cloud-vs-all-cloud",
-              "isPosted": false,
+              "isPosted": true,
+              "isPremium": false
+            },
+            {
+              "title": "Event-Driven Architecture",
+              "slug": "event-driven-architecture",
+              "isPosted": true,
               "isPremium": false
             }
           ]
@@ -250,6 +257,42 @@
             {
               "title": "Service Discovery Mechanisms",
               "slug": "service-discovery-mechanisms",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Service Mesh and Microservices Infrastructure",
+          "slug": "service-mesh-microservices",
+          "lessons": [
+            {
+              "title": "Introduction to Service Mesh",
+              "slug": "intro-service-mesh",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Istio Architecture and Components",
+              "slug": "istio-architecture",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Linkerd and Envoy Proxy",
+              "slug": "linkerd-envoy",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Service-to-Service Communication Patterns",
+              "slug": "service-to-service-communication",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Traffic Management and Routing",
+              "slug": "traffic-management-routing",
               "isPosted": false,
               "isPremium": false
             }
@@ -557,6 +600,36 @@
           ]
         },
         {
+          "title": "API Security",
+          "slug": "api-security",
+          "lessons": [
+            {
+              "title": "API Security Best Practices",
+              "slug": "api-security-best-practices",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "CORS and Same-Origin Policy",
+              "slug": "cors-same-origin-policy",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "API Key Management and Rotation",
+              "slug": "api-key-management",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Encryption at Rest and in Transit",
+              "slug": "encryption-rest-transit",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
           "title": "Trade-Offs",
           "slug": "trade-offs",
           "lessons": [
@@ -636,6 +709,24 @@
             {
               "title": "Stateless vs Stateful Load Balancers",
               "slug": "stateless-vs-stateful-load-balancers",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Layer 4 vs Layer 7 Load Balancing",
+              "slug": "layer4-vs-layer7-load-balancing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Session Persistence and Sticky Sessions",
+              "slug": "session-persistence-sticky-sessions",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Health Checks and Failover Mechanisms",
+              "slug": "health-checks-failover",
               "isPosted": false,
               "isPremium": false
             },
@@ -1189,6 +1280,18 @@
               "slug": "autocomplete-suggestion-systems",
               "isPosted": false,
               "isPremium": false
+            },
+            {
+              "title": "Search Query Processing and Optimization",
+              "slug": "search-query-processing-optimization",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Ranking and Relevance Scoring",
+              "slug": "ranking-relevance-scoring",
+              "isPosted": false,
+              "isPremium": false
             }
           ]
         },
@@ -1562,12 +1665,12 @@
                   "isPremium": false
                   },{
                   "title": "Kafka Connect",
-                  "slug": "kafka-tiered-storage",
+                  "slug": "kafka-connect",
                   "isPosted": false,
                   "isPremium": false
                 },{
                   "title": "Why Kafka is so Fast",
-                  "slug": "kafka-tiered-storage",
+                  "slug": "why-kafka-fast",
                   "isPosted": false,
                   "isPremium": false
                 }
@@ -2034,6 +2137,42 @@
           ]
         },
         {
+          "title": "Consensus Algorithms",
+          "slug": "consensus-algorithms",
+          "lessons": [
+            {
+              "title": "Introduction to Consensus in Distributed Systems",
+              "slug": "intro-consensus",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Raft Consensus Algorithm",
+              "slug": "raft-consensus",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Paxos Algorithm",
+              "slug": "paxos-algorithm",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Byzantine Fault Tolerance (BFT)",
+              "slug": "byzantine-fault-tolerance",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Consensus in Practice: etcd, Consul, ZooKeeper",
+              "slug": "consensus-practice",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
           "title": "BigTable",
           "slug": "bigtable",
           "lessons": [
@@ -2124,6 +2263,127 @@
             {
               "title": "Mock Interview",
               "slug": "bigtable-mock-interview",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Observability and Monitoring",
+      "slug": "observability-monitoring",
+      "icon": "Activity",
+      "sections": [
+        {
+          "title": "Observability Fundamentals",
+          "slug": "observability-fundamentals",
+          "lessons": [
+            {
+              "title": "Introduction to Observability",
+              "slug": "intro-observability",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Three Pillars: Logs, Metrics, and Traces",
+              "slug": "logs-metrics-traces",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Observability vs Monitoring",
+              "slug": "observability-vs-monitoring",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Logging Systems",
+          "slug": "logging-systems",
+          "lessons": [
+            {
+              "title": "Structured Logging Best Practices",
+              "slug": "structured-logging",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Log Aggregation (ELK Stack, Splunk, Loki)",
+              "slug": "log-aggregation-tools",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Log Retention and Storage Strategies",
+              "slug": "log-retention-storage",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Metrics and Monitoring",
+          "slug": "metrics-monitoring",
+          "lessons": [
+            {
+              "title": "Metrics Collection and Aggregation",
+              "slug": "metrics-collection",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Prometheus and Grafana",
+              "slug": "prometheus-grafana",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "SLIs, SLOs, and SLAs",
+              "slug": "sli-slo-sla",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Availability Metrics: 99.9%, 99.99%, 99.999% and Error Budgets",
+              "slug": "availability-metrics-error-budgets",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Alerting Strategies and Alert Fatigue",
+              "slug": "alerting-strategies",
+              "isPosted": false,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Distributed Tracing",
+          "slug": "distributed-tracing",
+          "lessons": [
+            {
+              "title": "Introduction to Distributed Tracing",
+              "slug": "intro-distributed-tracing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "OpenTelemetry and Jaeger",
+              "slug": "opentelemetry-jaeger",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Trace Context Propagation",
+              "slug": "trace-context-propagation",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Performance Profiling and Bottleneck Detection",
+              "slug": "performance-profiling",
               "isPosted": false,
               "isPremium": false
             }
@@ -2257,6 +2517,24 @@
             {
               "title": "Merkle Trees",
               "slug": "merkle-trees",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Event Sourcing",
+              "slug": "event-sourcing",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "CQRS (Command Query Responsibility Segregation)",
+              "slug": "cqrs-pattern",
+              "isPosted": false,
+              "isPremium": false
+            },
+            {
+              "title": "Saga Pattern for Distributed Transactions",
+              "slug": "saga-pattern",
               "isPosted": false,
               "isPremium": false
             }

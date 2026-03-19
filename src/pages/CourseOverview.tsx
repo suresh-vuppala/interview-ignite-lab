@@ -183,7 +183,7 @@ export default function CourseOverview() {
       <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
         <div className="container mx-auto px-4 py-8">
           {/* Course Header */}
-          <div className="mb-8">
+          <div>
             <div className="flex items-center gap-4 mb-4">
               <div className="w-16 h-16 bg-gradient-to-br from-primary to-blue-600 rounded-xl flex items-center justify-center">
                 <course.icon className="w-8 h-8 text-white" />

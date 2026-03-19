@@ -2,6 +2,6 @@
   "title": "Monolithic vs Microservices Architecture",
   "slug": "monolithic-vs-microservices",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "monolithic-vs-microservices.md"
 }

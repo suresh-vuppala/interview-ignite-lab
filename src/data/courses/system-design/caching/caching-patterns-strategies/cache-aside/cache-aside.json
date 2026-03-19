@@ -2,6 +2,6 @@
   "title": "Cache-Aside Pattern",
   "slug": "cache-aside",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "cache-aside.md"
 }

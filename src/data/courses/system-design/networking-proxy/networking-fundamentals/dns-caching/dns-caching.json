@@ -2,6 +2,6 @@
   "title": "DNS Caching and TTL",
   "slug": "dns-caching",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "dns-caching.md"
 }

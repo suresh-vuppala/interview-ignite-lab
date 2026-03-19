@@ -2,6 +2,6 @@
   "title": "FastAPI",
   "slug": "fastapi-framework",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "fastapi-framework.md"
 }

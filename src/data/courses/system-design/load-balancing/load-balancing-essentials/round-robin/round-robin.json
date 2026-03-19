@@ -2,6 +2,6 @@
   "title": "Round Robin",
   "slug": "round-robin",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "round-robin.md"
 }

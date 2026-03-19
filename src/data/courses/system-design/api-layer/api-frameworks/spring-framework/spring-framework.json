@@ -2,6 +2,6 @@
   "title": "Spring Boot",
   "slug": "spring-framework",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "spring-framework.md"
 }

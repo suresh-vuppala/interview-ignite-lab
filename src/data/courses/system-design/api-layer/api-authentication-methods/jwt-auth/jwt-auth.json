@@ -2,6 +2,6 @@
   "title": "JWT (JSON Web Tokens)",
   "slug": "jwt-auth",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "jwt-auth.md"
 }

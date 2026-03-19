@@ -2,6 +2,6 @@
   "title": "Token-Based Authentication",
   "slug": "token-auth",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "token-auth.md"
 }

@@ -2,6 +2,6 @@
   "title": "Timeouts, Retries, Circuit Breakers, and Fallback Strategies",
   "slug": "timeouts-retries-circuit-breakers-fallback",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "timeouts-retries-circuit-breakers-fallback.md"
 }

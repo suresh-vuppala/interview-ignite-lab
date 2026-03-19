@@ -2,6 +2,6 @@
   "title": "Change Data Capture (CDC)",
   "slug": "change-data-capture",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "change-data-capture.md"
 }

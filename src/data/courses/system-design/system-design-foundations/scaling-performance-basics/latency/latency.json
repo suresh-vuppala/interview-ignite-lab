@@ -1,7 +1,7 @@
 {
-  "title": "Latency",
+  "title": "Latency & Percentiles (P50, P95, P99)",
   "slug": "latency",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "latency.md"
 }

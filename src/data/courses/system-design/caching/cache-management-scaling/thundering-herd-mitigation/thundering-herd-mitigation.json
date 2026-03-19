@@ -2,6 +2,6 @@
   "title": "Thundering Herd Problem and Mitigation",
   "slug": "thundering-herd-mitigation",
   "isPremium": false,
-  "isPosted": false,
+  "isPosted": true,
   "mdFile": "thundering-herd-mitigation.md"
 }

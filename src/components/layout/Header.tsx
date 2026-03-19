@@ -37,7 +37,7 @@ export function Header() {
   return (
     <>
     {/* Desktop Floating Header */}
-    <header className="hidden lg:block fixed top-6 left-1/2 -translate-x-1/2 lg:left-[calc(50%+var(--sidebar-width-desktop)/2)] max-w-4xl w-[calc(100%-2rem)] h-12 border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-full shadow-lg z-50">
+    <header className="hidden lg:block fixed top-1 left-1/2 -translate-x-1/2 lg:left-[calc(50%+var(--sidebar-width-desktop)/2)] max-w-4xl w-[calc(100%-2rem)] h-12 border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-full shadow-lg z-50">
       <div className="flex items-center justify-between h-full px-6">
         <div className="flex items-center gap-3 min-w-0 flex-1">
           <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
