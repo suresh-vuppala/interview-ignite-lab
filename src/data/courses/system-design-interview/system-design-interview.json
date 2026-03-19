@@ -1,0 +1,187 @@
+{
+  "id": "system-design-interview",
+  "title": "System Design Interview",
+  "description": "Master system design interviews with real-world scenarios, practice problems, and proven frameworks used by top tech companies.",
+  "modules": [
+    {
+      "title": "Interview Fundamentals",
+      "slug": "interview-fundamentals",
+      "icon": "Brain",
+      "sections": [
+        {
+          "title": "System Design Interview Framework",
+          "slug": "interview-framework",
+          "lessons": [
+            {
+              "title": "System Design Interview Template",
+              "slug": "interview-template",
+              "isPosted": true,
+              "isPremium": false
+            },
+            {
+              "title": "Requirements Gathering Techniques",
+              "slug": "requirements-gathering",
+              "isPosted": true,
+              "isPremium": false
+            },
+            {
+              "title": "Capacity Planning & Estimation",
+              "slug": "capacity-planning-interview",
+              "isPosted": true,
+              "isPremium": false
+            },
+            {
+              "title": "Trade-offs and Decision Making",
+              "slug": "tradeoffs-decisions",
+              "isPosted": true,
+              "isPremium": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "System Design Case Studies",
+      "slug": "system-design-case-studies",
+      "icon": "Globe",
+      "sections": [
+        {
+          "title": "Social Media Systems",
+          "slug": "social-media-systems",
+          "lessons": [
+            {
+              "title": "Twitter System Design",
+              "slug": "twitter",
+              "lessons": [
+                {
+                  "title": "Interview Framework & Approach",
+                  "slug": "framework",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Functional Requirements",
+                  "slug": "functional-requirements",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Non-Functional Requirements & Scale",
+                  "slug": "non-functional-requirements",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Entities & API Design",
+                  "slug": "entities-apis",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "High-Level Architecture",
+                  "slug": "high-level-design",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Deep Dive: Timeline Generation",
+                  "slug": "deep-dive-design",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Approaches & Trade-offs",
+                  "slug": "approaches-tradeoffs",
+                  "isPosted": true,
+                  "isPremium": false
+                }
+              ],
+              "isPosted": true,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Messaging Systems",
+          "slug": "messaging-systems",
+          "lessons": [
+            {
+              "title": "Design WhatsApp",
+              "slug": "design-whatsapp",
+              "isPosted": true,
+              "isPremium": false
+            },
+            {
+              "title": "Design Slack",
+              "slug": "design-slack",
+              "isPosted": true,
+              "isPremium": false
+            }
+          ]
+        },
+        {
+          "title": "Storage & Caching Systems",
+          "slug": "storage-caching-systems",
+          "lessons": [
+            {
+              "title": "Distributed Cache System (Redis-like)",
+              "slug": "distributed-cache-system",
+              "lessons": [
+                {
+                  "title": "Framework & Requirements Analysis",
+                  "slug": "framework-and-requirements",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Capacity Estimation & Scale Planning",
+                  "slug": "capacity-estimation",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "API Design & Protocol Selection",
+                  "slug": "api-design",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "High-Level System Architecture",
+                  "slug": "high-level-design",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Partitioning & Sharding Strategies",
+                  "slug": "partitioning-sharding",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Replication & Consistency Models",
+                  "slug": "replication-consistency",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Memory Management & Eviction",
+                  "slug": "memory-management",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Failure Modes & Recovery",
+                  "slug": "failure-recovery",
+                  "isPosted": true,
+                  "isPremium": false
+                }
+              ],
+              "isPosted": true,
+              "isPremium": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

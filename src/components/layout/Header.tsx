@@ -27,6 +27,7 @@ import { useTheme } from "next-themes";
 const courses = [
   { id: 'dsa', title: 'DSA', description: 'Data Structures & Algorithms', icon: Database },
   { id: 'system-design', title: 'System Design (HLD)', description: 'High Level Design', icon: Brain },
+  { id: 'system-design-interview', title: 'System Design Interview', description: 'Interview Questions & Case Studies', icon: Brain },
 ];
 
 export function Header() {

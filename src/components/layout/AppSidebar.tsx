@@ -31,12 +31,14 @@ import { cn } from '@/lib/utils';
 // Import courses
 import dsaCourseData from '@/data/courses/dsa/dsa.json';
 import systemDesignCourseData from '@/data/courses/system-design/system-design.json';
+import systemDesignInterviewCourseData from '@/data/courses/system-design-interview/system-design-interview.json';
 import lldCourseData from '@/data/courses/lldCourse.json';
 import behavioralCourseData from '@/data/courses/behavioralCourse.json';
 
 const courses: any[] = [
   { ...dsaCourseData, icon: Database },
   { ...systemDesignCourseData, icon: Brain },
+  { ...systemDesignInterviewCourseData, icon: Brain },
   { ...lldCourseData, icon: GitBranch },
   { ...behavioralCourseData, icon: MessageSquare },
 ];
