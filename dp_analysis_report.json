@@ -1,0 +1,298 @@
+{
+  "String DP": [
+    {
+      "name": "distinct-subsequences",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "edit-distance",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "interleaving-string",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "longest-common-subsequence",
+      "has_python": true,
+      "solutions": 3,
+      "has_cpp": true,
+      "has_java": true,
+      "markdown": "Complete",
+      "needs_work": false
+    },
+    {
+      "name": "longest-common-substring",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "longest-palindromic-subsequence",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "longest-palindromic-substring",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "palindrome-partitioning-ii",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "word-break",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    }
+  ],
+  "Classic DP": [
+    {
+      "name": "01-knapsack",
+      "has_python": true,
+      "solutions": 3,
+      "has_cpp": true,
+      "has_java": true,
+      "markdown": "Complete",
+      "needs_work": false
+    },
+    {
+      "name": "burst-balloons",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "coin-change-min",
+      "has_python": true,
+      "solutions": 2,
+      "has_cpp": true,
+      "has_java": true,
+      "markdown": "Complete",
+      "needs_work": false
+    },
+    {
+      "name": "coin-change-ways",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "egg-dropping",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "matrix-chain-multiplication",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "rod-cutting",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "subset-sum",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "target-sum",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "unbounded-knapsack",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    }
+  ],
+  "LIS & Sequence": [
+    {
+      "name": "lis-binary-search",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "longest-bitonic-subsequence",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "longest-increasing-subsequence",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "number-of-lis",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "russian-doll-envelopes",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    }
+  ],
+  "State/Decision DP": [
+    {
+      "name": "house-robber-iii",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "maximum-product-subarray",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "stock-buy-sell-i",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "stock-buy-sell-ii",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "stock-buy-sell-iii",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "stock-buy-sell-iv",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "stock-cooldown",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    },
+    {
+      "name": "stock-transaction-fee",
+      "has_python": false,
+      "solutions": 0,
+      "has_cpp": false,
+      "has_java": false,
+      "markdown": "Stub",
+      "needs_work": true
+    }
+  ]
+}
