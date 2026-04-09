@@ -1,4 +1,3 @@
-# Horizontal vs Vertical Scaling
 
 ## Interview Focus
 

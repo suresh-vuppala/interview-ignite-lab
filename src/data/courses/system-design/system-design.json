@@ -1489,7 +1489,7 @@
             {
               "title": "PACELC Theorem and Real-World Trade-offs",
               "slug": "pacelc-theorem",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             },
             {
@@ -2499,7 +2499,7 @@
             {
               "title": "PACELC Theorem",
               "slug": "pacelc-theorem",
-              "isPosted": false,
+              "isPosted": true,
               "isPremium": false
             },
             {

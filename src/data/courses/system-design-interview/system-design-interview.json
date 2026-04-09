@@ -180,6 +180,68 @@
               "isPremium": false
             }
           ]
+        },
+        {
+          "title": "Distributed Systems",
+          "slug": "distributed-systems",
+          "lessons": [
+            {
+              "title": "Job/Task Scheduler System",
+              "slug": "job-task-scheduler",
+              "lessons": [
+                {
+                  "title": "Framework & Requirements Analysis",
+                  "slug": "framework-and-requirements",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Capacity Estimation & Scale Planning",
+                  "slug": "capacity-estimation",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "API Design & Task Definition",
+                  "slug": "api-design",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "High-Level System Architecture",
+                  "slug": "high-level-design",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Task Queue & Priority Management",
+                  "slug": "task-queue-priority",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Task Execution & Worker Management",
+                  "slug": "task-execution-workers",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Scheduling Algorithms & Timing",
+                  "slug": "scheduling-algorithms",
+                  "isPosted": true,
+                  "isPremium": false
+                },
+                {
+                  "title": "Failure Handling & Retry Logic",
+                  "slug": "failure-handling-retry",
+                  "isPosted": true,
+                  "isPremium": false
+                }
+              ],
+              "isPosted": true,
+              "isPremium": false
+            }
+          ]
         }
       ]
     }

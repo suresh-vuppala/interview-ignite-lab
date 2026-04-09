@@ -610,16 +610,483 @@ class CacheWithBloomFilter:
         self.bloom_filter.add(key)
 ```
 
+## Data Persistence Strategies
+
+While caches are primarily in-memory, persistence is critical for:
+- **Crash recovery** - Restore data after process restart
+- **Warm cache startup** - Avoid cold start performance degradation
+- **Durability guarantees** - Some use cases require data persistence
+- **Backup and replication** - Transfer data between nodes
+
+### RDB (Redis Database) - Point-in-Time Snapshots
+
+**Concept**: Periodically save entire dataset to disk as a binary snapshot.
+
+**Implementation:**
+```python
+class RDBPersistence:
+    def __init__(self, snapshot_interval=300):  # 5 minutes
+        self.snapshot_interval = snapshot_interval
+        self.last_snapshot_time = time.time()
+        self.snapshot_path = "/var/lib/cache/dump.rdb"
+        self.temp_snapshot_path = "/var/lib/cache/dump.rdb.tmp"
+        
+        # Start background snapshot thread
+        self.start_snapshot_worker()
+    
+    def should_create_snapshot(self):
+        """Check if it's time for a snapshot"""
+        return time.time() - self.last_snapshot_time > self.snapshot_interval
+    
+    def create_snapshot(self, cache_data):
+        """
+        Create snapshot using fork() to avoid blocking main process
+        """
+        pid = os.fork()
+        
+        if pid == 0:
+            # Child process - create snapshot
+            try:
+                self.write_snapshot_to_disk(cache_data)
+                os._exit(0)
+            except Exception as e:
+                print(f"Snapshot failed: {e}")
+                os._exit(1)
+        else:
+            # Parent process - continue serving requests
+            self.last_snapshot_time = time.time()
+            return pid
+    
+    def write_snapshot_to_disk(self, cache_data):
+        """
+        Write binary snapshot to disk
+        
+        Format:
+        [MAGIC][VERSION][METADATA][KEY_VALUE_PAIRS][CHECKSUM]
+        """
+        with open(self.temp_snapshot_path, 'wb') as f:
+            # Write header
+            f.write(b'REDIS')  # Magic string
+            f.write(b'0009')   # Version
+            
+            # Write metadata
+            metadata = {
+                'created_at': time.time(),
+                'num_keys': len(cache_data),
+                'redis_version': '7.0.0'
+            }
+            self.write_metadata(f, metadata)
+            
+            # Write key-value pairs
+            for key, value_obj in cache_data.items():
+                self.write_key_value_pair(f, key, value_obj)
+            
+            # Write checksum
+            checksum = self.calculate_checksum(cache_data)
+            f.write(checksum.to_bytes(8, 'little'))
+        
+        # Atomic rename
+        os.rename(self.temp_snapshot_path, self.snapshot_path)
+    
+    def write_key_value_pair(self, file, key, value_obj):
+        """
+        Write single key-value pair with type information
+        
+        Format: [TYPE][EXPIRY][KEY_LEN][KEY][VALUE_LEN][VALUE]
+        """
+        # Type byte (string, list, hash, set, zset)
+        file.write(value_obj['type'].to_bytes(1, 'little'))
+        
+        # Expiry (0 if no expiry)
+        expiry = value_obj.get('expiry', 0)
+        file.write(int(expiry).to_bytes(8, 'little'))
+        
+        # Key
+        key_bytes = key.encode('utf-8')
+        file.write(len(key_bytes).to_bytes(4, 'little'))
+        file.write(key_bytes)
+        
+        # Value (encoding depends on type)
+        value_bytes = self.encode_value(value_obj)
+        file.write(len(value_bytes).to_bytes(4, 'little'))
+        file.write(value_bytes)
+    
+    def load_snapshot(self):
+        """
+        Load snapshot from disk into memory
+        """
+        if not os.path.exists(self.snapshot_path):
+            return {}
+        
+        cache_data = {}
+        
+        with open(self.snapshot_path, 'rb') as f:
+            # Verify magic and version
+            magic = f.read(5)
+            if magic != b'REDIS':
+                raise ValueError("Invalid RDB file")
+            
+            version = f.read(4)
+            
+            # Read metadata
+            metadata = self.read_metadata(f)
+            
+            # Read key-value pairs
+            for _ in range(metadata['num_keys']):
+                key, value_obj = self.read_key_value_pair(f)
+                
+                # Skip expired keys
+                if value_obj.get('expiry', 0) > 0 and value_obj['expiry'] < time.time():
+                    continue
+                
+                cache_data[key] = value_obj
+            
+            # Verify checksum
+            expected_checksum = int.from_bytes(f.read(8), 'little')
+            actual_checksum = self.calculate_checksum(cache_data)
+            
+            if expected_checksum != actual_checksum:
+                raise ValueError("Checksum mismatch - corrupted snapshot")
+        
+        return cache_data
+    
+    def start_snapshot_worker(self):
+        def snapshot_worker():
+            while True:
+                time.sleep(self.snapshot_interval)
+                if self.should_create_snapshot():
+                    self.create_snapshot(self.get_cache_data())
+        
+        thread = threading.Thread(target=snapshot_worker, daemon=True)
+        thread.start()
+```
+
+**RDB Pros:**
+- Compact single file - easy to backup/transfer
+- Fast restart - load entire dataset at once
+- Minimal performance impact - fork() uses copy-on-write
+- Good for disaster recovery
+
+**RDB Cons:**
+- Data loss window - lose data since last snapshot
+- Fork can be expensive with large datasets
+- Not suitable for durability-critical applications
+
+### AOF (Append-Only File) - Write-Ahead Log
+
+**Concept**: Log every write operation to disk before executing it.
+
+**Implementation:**
+```python
+class AOFPersistence:
+    def __init__(self, aof_path="/var/lib/cache/appendonly.aof"):
+        self.aof_path = aof_path
+        self.aof_file = open(aof_path, 'ab', buffering=0)  # Unbuffered
+        self.fsync_policy = 'everysec'  # 'always', 'everysec', 'no'
+        self.last_fsync_time = time.time()
+        self.pending_writes = []
+        
+        # Start fsync worker for 'everysec' policy
+        if self.fsync_policy == 'everysec':
+            self.start_fsync_worker()
+    
+    def log_command(self, command, key, value=None, ttl=None):
+        """
+        Log write command to AOF
+        
+        Format: *<num_args>\r\n$<len>\r\n<arg>\r\n...
+        (Redis RESP protocol)
+        """
+        # Build command in RESP format
+        parts = [command, key]
+        if value is not None:
+            parts.append(value)
+        if ttl is not None:
+            parts.extend(['EX', str(ttl)])
+        
+        # Encode as RESP
+        resp_command = self.encode_resp(parts)
+        
+        # Write to AOF
+        self.aof_file.write(resp_command)
+        
+        # Fsync based on policy
+        if self.fsync_policy == 'always':
+            os.fsync(self.aof_file.fileno())
+        elif self.fsync_policy == 'everysec':
+            self.pending_writes.append(time.time())
+    
+    def encode_resp(self, parts):
+        """
+        Encode command as RESP (Redis Serialization Protocol)
+        
+        Example: SET key value
+        *3\r\n$3\r\nSET\r\n$3\r\nkey\r\n$5\r\nvalue\r\n
+        """
+        result = f"*{len(parts)}\r\n"
+        
+        for part in parts:
+            part_str = str(part)
+            result += f"${len(part_str)}\r\n{part_str}\r\n"
+        
+        return result.encode('utf-8')
+    
+    def start_fsync_worker(self):
+        """Background thread to fsync every second"""
+        def fsync_worker():
+            while True:
+                time.sleep(1)
+                if self.pending_writes:
+                    os.fsync(self.aof_file.fileno())
+                    self.pending_writes.clear()
+                    self.last_fsync_time = time.time()
+        
+        thread = threading.Thread(target=fsync_worker, daemon=True)
+        thread.start()
+    
+    def replay_aof(self):
+        """
+        Replay AOF to rebuild cache state
+        """
+        if not os.path.exists(self.aof_path):
+            return {}
+        
+        cache_data = {}
+        
+        with open(self.aof_path, 'rb') as f:
+            while True:
+                command = self.read_resp_command(f)
+                if not command:
+                    break
+                
+                # Execute command to rebuild state
+                self.execute_command(cache_data, command)
+        
+        return cache_data
+    
+    def read_resp_command(self, file):
+        """
+        Read single RESP command from file
+        """
+        line = file.readline()
+        if not line:
+            return None
+        
+        # Parse array length
+        if not line.startswith(b'*'):
+            return None
+        
+        num_parts = int(line[1:].strip())
+        parts = []
+        
+        for _ in range(num_parts):
+            # Read bulk string length
+            length_line = file.readline()
+            if not length_line.startswith(b'$'):
+                return None
+            
+            length = int(length_line[1:].strip())
+            
+            # Read bulk string data
+            data = file.read(length)
+            file.read(2)  # Read \r\n
+            
+            parts.append(data.decode('utf-8'))
+        
+        return parts
+    
+    def execute_command(self, cache_data, command):
+        """
+        Execute command to rebuild cache state
+        """
+        cmd = command[0].upper()
+        
+        if cmd == 'SET':
+            key = command[1]
+            value = command[2]
+            ttl = None
+            
+            if len(command) > 3 and command[3] == 'EX':
+                ttl = int(command[4])
+            
+            cache_data[key] = {
+                'value': value,
+                'expiry': time.time() + ttl if ttl else 0
+            }
+        
+        elif cmd == 'DEL':
+            key = command[1]
+            cache_data.pop(key, None)
+        
+        elif cmd == 'EXPIRE':
+            key = command[1]
+            ttl = int(command[2])
+            if key in cache_data:
+                cache_data[key]['expiry'] = time.time() + ttl
+        
+        # Add more commands as needed
+    
+    def rewrite_aof(self, cache_data):
+        """
+        Rewrite AOF to compact it (remove redundant operations)
+        
+        Background process that creates new AOF with current state
+        """
+        temp_aof_path = self.aof_path + ".tmp"
+        
+        with open(temp_aof_path, 'wb') as f:
+            for key, value_obj in cache_data.items():
+                # Write SET command for each key
+                command = ['SET', key, value_obj['value']]
+                
+                if value_obj.get('expiry', 0) > 0:
+                    ttl = int(value_obj['expiry'] - time.time())
+                    if ttl > 0:
+                        command.extend(['EX', str(ttl)])
+                
+                resp_command = self.encode_resp(command)
+                f.write(resp_command)
+        
+        # Atomic rename
+        os.rename(temp_aof_path, self.aof_path)
+        
+        # Reopen file handle
+        self.aof_file.close()
+        self.aof_file = open(self.aof_path, 'ab', buffering=0)
+```
+
+**AOF Fsync Policies:**
+
+1. **always**: Fsync after every write
+   - Maximum durability (no data loss)
+   - Slowest (disk I/O on every write)
+   - ~1000 writes/sec
+
+2. **everysec**: Fsync every second
+   - Good balance (lose max 1 second of data)
+   - Fast (async fsync)
+   - ~50,000 writes/sec
+
+3. **no**: Let OS decide when to fsync
+   - Fastest (no explicit fsync)
+   - Least durable (lose up to 30 seconds)
+   - ~100,000 writes/sec
+
+**AOF Rewrite:**
+```python
+class AOFRewriter:
+    def __init__(self, aof_persistence):
+        self.aof = aof_persistence
+        self.rewrite_threshold_percentage = 100  # Rewrite when 100% larger
+        self.min_size_for_rewrite = 64 * 1024 * 1024  # 64MB
+    
+    def should_rewrite(self):
+        """Check if AOF needs rewriting"""
+        current_size = os.path.getsize(self.aof.aof_path)
+        
+        if current_size < self.min_size_for_rewrite:
+            return False
+        
+        # Estimate size after rewrite (one SET per key)
+        estimated_rewritten_size = self.estimate_rewritten_size()
+        
+        growth_percentage = ((current_size - estimated_rewritten_size) / 
+                           estimated_rewritten_size * 100)
+        
+        return growth_percentage > self.rewrite_threshold_percentage
+    
+    def background_rewrite(self, cache_data):
+        """Fork and rewrite AOF in background"""
+        pid = os.fork()
+        
+        if pid == 0:
+            # Child process
+            try:
+                self.aof.rewrite_aof(cache_data)
+                os._exit(0)
+            except Exception as e:
+                print(f"AOF rewrite failed: {e}")
+                os._exit(1)
+        else:
+            # Parent continues serving requests
+            # New writes go to both old and new AOF during rewrite
+            return pid
+```
+
+### Hybrid Persistence (RDB + AOF)
+
+**Best of both worlds:**
+```python
+class HybridPersistence:
+    def __init__(self):
+        self.rdb = RDBPersistence(snapshot_interval=3600)  # Hourly snapshots
+        self.aof = AOFPersistence()
+        self.aof.fsync_policy = 'everysec'
+    
+    def persist_write(self, command, key, value=None, ttl=None):
+        """Log write to AOF"""
+        self.aof.log_command(command, key, value, ttl)
+    
+    def create_snapshot(self, cache_data):
+        """Create RDB snapshot"""
+        self.rdb.create_snapshot(cache_data)
+    
+    def load_data(self):
+        """
+        Load data on startup:
+        1. Load RDB snapshot (fast, bulk load)
+        2. Replay AOF from snapshot time (recent changes)
+        """
+        # Load RDB snapshot
+        cache_data = self.rdb.load_snapshot()
+        snapshot_time = self.rdb.last_snapshot_time
+        
+        # Replay AOF commands after snapshot
+        aof_data = self.aof.replay_aof_from_time(snapshot_time)
+        cache_data.update(aof_data)
+        
+        return cache_data
+    
+    def get_recovery_time(self):
+        """Estimate recovery time"""
+        rdb_size = os.path.getsize(self.rdb.snapshot_path)
+        aof_size = os.path.getsize(self.aof.aof_path)
+        
+        # RDB loads at ~100 MB/s, AOF replays at ~50k ops/s
+        rdb_time = rdb_size / (100 * 1024 * 1024)
+        aof_ops = aof_size / 100  # Assume 100 bytes per operation
+        aof_time = aof_ops / 50000
+        
+        return rdb_time + aof_time
+```
+
+**Persistence Strategy Comparison:**
+
+| Strategy | Durability | Performance | Recovery Time | Disk Usage |
+|----------|-----------|-------------|---------------|------------|
+| RDB only | Low (5-15 min loss) | High | Fast (seconds) | Low |
+| AOF (always) | High (no loss) | Low | Slow (minutes) | High |
+| AOF (everysec) | Medium (1 sec loss) | Medium | Slow (minutes) | High |
+| Hybrid | Medium (1 sec loss) | Medium | Fast (seconds) | Medium |
+
+**Our Choice: Hybrid with AOF everysec**
+- Acceptable data loss (1 second)
+- Good write performance (50k ops/sec)
+- Fast recovery (RDB + recent AOF)
+- Reasonable disk usage
+
 ## Summary
 
-Our memory management strategy provides:
+Our memory management and persistence strategy provides:
 
 1. **Efficient Memory Usage**: Optimized encodings and data structures
 2. **Smart Eviction**: Multiple policies adapted to workload patterns  
 3. **Fragmentation Control**: Active defragmentation to reclaim wasted memory
 4. **Pressure Monitoring**: Proactive memory management before OOM
 5. **Performance Optimization**: Bloom filters and compressed structures
+6. **Durable Persistence**: Hybrid RDB+AOF for fast recovery with minimal data loss
+7. **Flexible Fsync Policies**: Balance between durability and performance
 
-The combination of approximate LRU eviction, active TTL expiration, and memory optimization techniques ensures our distributed cache maintains high performance even under memory pressure.
+The combination of approximate LRU eviction, active TTL expiration, memory optimization techniques, and hybrid persistence ensures our distributed cache maintains high performance even under memory pressure while providing durability guarantees.
 
 Next, we'll design the failure handling and recovery mechanisms that keep the system running during various failure scenarios.
