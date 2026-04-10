@@ -54,6 +54,63 @@
               "isPosted": true
             }
           ]
+        },
+        {
+          "title": "STL / Collections Internals",
+          "slug": "stl-internals",
+          "lessons": [
+            {
+              "title": "Vector / ArrayList Internals",
+              "slug": "vector-arraylist-internals",
+              "isPosted": true
+            },
+            {
+              "title": "String Internals & Operations",
+              "slug": "string-internals",
+              "isPosted": true
+            },
+            {
+              "title": "HashMap / HashSet Internals",
+              "slug": "hashmap-hashset-internals",
+              "isPosted": true
+            },
+            {
+              "title": "Ordered Set & Map (TreeSet / TreeMap) Internals",
+              "slug": "ordered-set-map-internals",
+              "isPosted": true
+            },
+            {
+              "title": "Stack, Queue, Deque & Priority Queue Internals",
+              "slug": "stack-queue-deque-pq-internals",
+              "isPosted": true
+            }
+          ]
+        },
+        {
+          "title": "Language Essentials for Interviews",
+          "slug": "language-essentials",
+          "lessons": [
+            {
+              "title": "Pass by Value vs Reference",
+              "slug": "pass-by-value-reference",
+              "isPosted": true
+            },
+            {
+              "title": "Comparators & Custom Sorting",
+              "slug": "comparators-custom-sorting",
+              "isPosted": true
+            },
+            {
+              "title": "Essential STL Algorithms & Built-in Functions",
+              "slug": "stl-algorithms-cheatsheet",
+              "isPosted": true
+            },
+            {
+              "title": "Iterators, Range Loops & Common Patterns",
+              "slug": "iterators-range-loops",
+              "isPosted": true
+            }
+          ]
         }
       ]
     },
