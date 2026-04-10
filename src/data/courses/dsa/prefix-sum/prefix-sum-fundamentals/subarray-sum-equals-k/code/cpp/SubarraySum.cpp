@@ -15,11 +15,11 @@ int subarraySum(vector<int>& nums, int k) {
         {
              PS[i]=PS[i-1]+nums[i-1];
         }
-          // Counter of each prefix sum 
+        // Counter of each prefix sum 
         unordered_map<int,int> mp;
         //To consider subarray Sum[0...i]
         mp[0]=1;
-       int count=0;
+        int count=0;
         for(int end=1;end<n+1;end++){
             //subarray sum k is possible for current prefix sum if sum-k exists
             // Sum in range[start, end] ==K
