@@ -1,1 +1,27 @@
-{"title":"Postorder Traversal","slug":"postorder","isPremium":false,"isPosted":true,"description":"Left-Right-Root traversal of binary tree","mdFile":"dsa/trees/traversal-block/postorder/postorder.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/traversal-block/postorder/code/cpp/PostorderTraversal.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/traversal-block/postorder/code/java/PostorderTraversal.java","language":"java"},{"codeFile":"courses/dsa/trees/traversal-block/postorder/code/python/postorder.py","language":"python"}],"title":"Postorder Traversal Solution"}]}
+{
+  "title": "Postorder Traversal",
+  "slug": "postorder",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Left-Right-Root traversal of binary tree",
+  "mdFile": "dsa/trees/traversal-block/postorder/postorder.md",
+  "codeExamples": [
+    {
+      "languages": [
+        {
+          "codeFile": "courses/dsa/trees/traversal-block/postorder/code/cpp/PostorderTraversal.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/trees/traversal-block/postorder/code/java/PostorderTraversal.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/trees/traversal-block/postorder/code/python/postorder_traversal.py",
+          "language": "python"
+        }
+      ],
+      "title": "Postorder Traversal Solution"
+    }
+  ]
+}

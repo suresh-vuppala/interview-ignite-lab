@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/infix-to-postfix/code//src/data/courses/dsa/stacks/stack-basic-applications/infix-to-postfix/code/java/InfixToPostfix.java"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/infix-to-postfix/code/java/InfixToPostfix.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/infix-to-postfix/code//src/data/courses/dsa/stacks/stack-basic-applications/infix-to-postfix/code/cpp/InfixToPostfix.cpp"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/infix-to-postfix/code/cpp/InfixToPostfix.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/infix-to-postfix/code//src/data/courses/dsa/stacks/stack-basic-applications/infix-to-postfix/code/python/infix_to_postfix.py"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/infix-to-postfix/code/python/infix_to_postfix.py"
         }
       ]
     }

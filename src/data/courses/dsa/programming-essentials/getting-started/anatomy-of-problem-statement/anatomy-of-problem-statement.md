@@ -194,7 +194,3 @@ Understanding this structure allows you to approach problems methodically, think
 3. **Large input:** Consider time complexity
 
 <br>
-
----
-
-```code```

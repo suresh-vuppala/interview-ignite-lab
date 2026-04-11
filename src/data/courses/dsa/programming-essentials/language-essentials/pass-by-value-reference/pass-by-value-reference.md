@@ -52,7 +52,3 @@ void reassign(int[] arr) {
 - Immutable objects (int, str, tuple) → reassignment creates new object
 
 <br>
-
----
-
-```code```

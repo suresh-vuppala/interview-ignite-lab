@@ -17,7 +17,3 @@ Content coming soon...
 3. **Delete cases:** 0, 1, or 2 children
 
 <br>
-
----
-
-```code```

@@ -286,7 +286,3 @@ After mastering easy problems:
 3. **Large input:** Consider time complexity
 
 <br>
-
----
-
-```code```

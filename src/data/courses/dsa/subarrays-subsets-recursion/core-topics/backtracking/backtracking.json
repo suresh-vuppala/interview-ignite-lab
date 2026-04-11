@@ -3,16 +3,5 @@
   "title": "Backtracking",
   "slug": "backtracking",
   "isPremium": false,
-  "mdFile": "backtracking.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/subarrays-subsets-recursion/core-topics/backtracking/code/java/Example.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "mdFile": "backtracking.md"
 }

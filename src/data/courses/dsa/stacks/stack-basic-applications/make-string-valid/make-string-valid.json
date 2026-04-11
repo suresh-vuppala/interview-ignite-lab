@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/make-string-valid/code//src/data/courses/dsa/stacks/stack-basic-applications/make-string-valid/code/java/MakeStringValid.java"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/make-string-valid/code/java/MakeStringValid.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/make-string-valid/code//src/data/courses/dsa/stacks/stack-basic-applications/make-string-valid/code/cpp/MakeStringValid.cpp"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/make-string-valid/code/cpp/MakeStringValid.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/make-string-valid/code//src/data/courses/dsa/stacks/stack-basic-applications/make-string-valid/code/python/make_string_valid.py"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/make-string-valid/code/python/make_string_valid.py"
         }
       ]
     }

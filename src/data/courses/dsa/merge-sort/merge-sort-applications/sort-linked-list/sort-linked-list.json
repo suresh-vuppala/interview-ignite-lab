@@ -14,7 +14,7 @@
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/sort-linked-list/code/cpp/sort-linked-list.cpp"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/sort-linked-list/code/cpp/SortLinkedList.cpp"
         },
         {
           "language": "python",

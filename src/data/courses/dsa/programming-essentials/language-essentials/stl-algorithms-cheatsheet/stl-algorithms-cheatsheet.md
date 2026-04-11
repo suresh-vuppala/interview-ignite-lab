@@ -94,7 +94,3 @@ collections.Counter(arr)             # Frequency map
 | `count` | O(n) |
 
 <br>
-
----
-
-```code```

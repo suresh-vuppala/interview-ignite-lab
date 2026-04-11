@@ -329,7 +329,3 @@ T(n) = O(log n) with O(1) space
 5. **Negative numbers:** Affects sum-based problems
 
 <br>
-
----
-
-```code```

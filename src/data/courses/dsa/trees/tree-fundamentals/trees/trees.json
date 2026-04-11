@@ -3,16 +3,5 @@
   "title": "Trees",
   "slug": "trees",
   "isPremium": false,
-  "mdFile": "trees.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/trees/tree-fundamentals/trees/code/java/CountTotalNodes.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "mdFile": "trees.md"
 }

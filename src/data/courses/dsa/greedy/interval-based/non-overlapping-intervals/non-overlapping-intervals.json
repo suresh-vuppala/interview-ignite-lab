@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/greedy/interval-based/non-overlapping-intervals/code//src/data/courses/dsa/greedy/interval-based/non-overlapping-intervals/code/java/NonOverlappingIntervals.java"
+          "codeFile": "courses/dsa/greedy/interval-based/non-overlapping-intervals/code/java/NonOverlappingIntervals.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/greedy/interval-based/non-overlapping-intervals/code//src/data/courses/dsa/greedy/interval-based/non-overlapping-intervals/code/cpp/NonOverlappingIntervals.cpp"
+          "codeFile": "courses/dsa/greedy/interval-based/non-overlapping-intervals/code/cpp/NonOverlappingIntervals.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/greedy/interval-based/non-overlapping-intervals/code//src/data/courses/dsa/greedy/interval-based/non-overlapping-intervals/code/python/non-overlapping-intervals.py"
+          "codeFile": "courses/dsa/greedy/interval-based/non-overlapping-intervals/code/python/non-overlapping-intervals.py"
         }
       ]
     }

@@ -3,16 +3,5 @@
   "title": "Prime Numbers",
   "slug": "prime-numbers",
   "isPremium": false,
-  "mdFile": "prime-numbers.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/math-for-programming/essential-math/prime-numbers/code/java/Example.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "mdFile": "prime-numbers.md"
 }

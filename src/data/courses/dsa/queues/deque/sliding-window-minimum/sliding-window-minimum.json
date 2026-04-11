@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/queues/deque/sliding-window-minimum/code//src/data/courses/dsa/queues/deque/sliding-window-minimum/code/java/SlidingWindowMinimum.java"
+          "codeFile": "courses/dsa/queues/deque/sliding-window-minimum/code/java/SlidingWindowMinimum.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/queues/deque/sliding-window-minimum/code//src/data/courses/dsa/queues/deque/sliding-window-minimum/code/cpp/SlidingWindowMinimum.cpp"
+          "codeFile": "courses/dsa/queues/deque/sliding-window-minimum/code/cpp/SlidingWindowMinimum.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/queues/deque/sliding-window-minimum/code//src/data/courses/dsa/queues/deque/sliding-window-minimum/code/python/sliding_window_minimum.py"
+          "codeFile": "courses/dsa/queues/deque/sliding-window-minimum/code/python/sliding_window_minimum.py"
         }
       ]
     }

@@ -3,16 +3,5 @@
   "title": "Merge Sort and Its Applications",
   "slug": "merge-sort-applications",
   "isPremium": false,
-  "mdFile": "merge-sort-applications.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/merge-sort-applications/code/java/Example.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "mdFile": "merge-sort-applications.md"
 }

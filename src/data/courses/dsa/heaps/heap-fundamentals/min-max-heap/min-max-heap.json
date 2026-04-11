@@ -10,15 +10,15 @@
       "title": "Min/Max Heap Solution",
       "languages": [
         {
-          "codeFile": "courses/dsa/heaps/heap-fundamentals/min-max-heap/code//src/data/courses/dsa/heaps/heap-fundamentals/min-max-heap/code/java/MinMaxHeap.java",
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/min-max-heap/code/java/MinMaxHeap.java",
           "language": "java"
         },
         {
-          "codeFile": "courses/dsa/heaps/heap-fundamentals/min-max-heap/code//src/data/courses/dsa/heaps/heap-fundamentals/min-max-heap/code/cpp/MinMaxHeap.cpp",
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/min-max-heap/code/cpp/MinMaxHeap.cpp",
           "language": "cpp"
         },
         {
-          "codeFile": "courses/dsa/heaps/heap-fundamentals/min-max-heap/code//src/data/courses/dsa/heaps/heap-fundamentals/min-max-heap/code/python/min_max_heap.py",
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/min-max-heap/code/python/min_max_heap.py",
           "language": "python"
         }
       ]

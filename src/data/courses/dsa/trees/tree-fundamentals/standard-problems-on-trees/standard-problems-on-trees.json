@@ -3,16 +3,5 @@
   "title": "Standard Problems on Trees",
   "slug": "standard-problems-on-trees",
   "isPremium": false,
-  "mdFile": "standard-problems-on-trees.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/trees/tree-fundamentals/standard-problems-on-trees/code/java/CountTotalNodes.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "mdFile": "standard-problems-on-trees.md"
 }

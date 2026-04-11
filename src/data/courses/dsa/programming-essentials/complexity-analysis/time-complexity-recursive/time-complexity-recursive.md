@@ -312,7 +312,3 @@ Space complexity = Maximum depth of recursion stack
 3. **Large input:** Consider time complexity
 
 <br>
-
----
-
-```code```

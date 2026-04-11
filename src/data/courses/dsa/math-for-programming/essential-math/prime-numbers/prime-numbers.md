@@ -18,7 +18,3 @@ Content coming soon...
 4. **Overflow potential:** Use modular arithmetic
 
 <br>
-
----
-
-```code```

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/greedy/scheduling-allocation/task-scheduler/code//src/data/courses/dsa/greedy/scheduling-allocation/task-scheduler/code/java/TaskScheduler.java"
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/task-scheduler/code/java/TaskScheduler.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/greedy/scheduling-allocation/task-scheduler/code//src/data/courses/dsa/greedy/scheduling-allocation/task-scheduler/code/cpp/TaskScheduler.cpp"
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/task-scheduler/code/cpp/TaskScheduler.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/greedy/scheduling-allocation/task-scheduler/code//src/data/courses/dsa/greedy/scheduling-allocation/task-scheduler/code/python/task-scheduler.py"
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/task-scheduler/code/python/task-scheduler.py"
         }
       ]
     }

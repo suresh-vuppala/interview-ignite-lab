@@ -55,7 +55,3 @@ We encounter the same subproblems which, without memoization, are computed repea
 > **Order of storing the results in the table:** F[0]-> F[1]-> F[2] ...-> F[i]-> F[i-1]-> F[i-2]    ...   -> F[n-2]-> F[n-1] ->F[n]
 
 [code]
-
----
-
-```code```

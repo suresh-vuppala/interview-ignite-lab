@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/counting-dictionary/sum-prefix-scores/code//src/data/courses/dsa/trie/counting-dictionary/sum-prefix-scores/code/java/SumPrefixScores.java"
+          "codeFile": "courses/dsa/trie/counting-dictionary/sum-prefix-scores/code/java/SumPrefixScores.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/counting-dictionary/sum-prefix-scores/code//src/data/courses/dsa/trie/counting-dictionary/sum-prefix-scores/code/cpp/SumPrefixScores.cpp"
+          "codeFile": "courses/dsa/trie/counting-dictionary/sum-prefix-scores/code/cpp/SumPrefixScores.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/counting-dictionary/sum-prefix-scores/code//src/data/courses/dsa/trie/counting-dictionary/sum-prefix-scores/code/python/sum_prefix_scores.py"
+          "codeFile": "courses/dsa/trie/counting-dictionary/sum-prefix-scores/code/python/sum_prefix_scores.py"
         }
       ]
     }

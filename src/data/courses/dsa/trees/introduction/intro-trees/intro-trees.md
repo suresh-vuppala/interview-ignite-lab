@@ -34,7 +34,3 @@ A tree is a connected, acyclic graph with a designated root. Binary trees (each 
 5. **Modifications** — Invert, flatten, prune, trim
 
 <br>
-
----
-
-```code```

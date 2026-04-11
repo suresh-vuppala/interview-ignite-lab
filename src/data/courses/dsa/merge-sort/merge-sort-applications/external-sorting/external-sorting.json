@@ -14,7 +14,7 @@
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/external-sorting/code/cpp/external-sorting.cpp"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/external-sorting/code/cpp/ExternalSorting.cpp"
         },
         {
           "language": "python",

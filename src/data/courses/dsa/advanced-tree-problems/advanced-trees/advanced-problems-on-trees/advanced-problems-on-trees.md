@@ -20,7 +20,3 @@ Content coming soon...
 5. **Large tree:** Must be O(n) or O(n log n)
 
 <br>
-
----
-
-```code```

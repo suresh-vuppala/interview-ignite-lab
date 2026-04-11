@@ -3,16 +3,5 @@
   "title": "Sieve of Eratosthenes",
   "slug": "sieve-of-eratosthenes",
   "isPremium": false,
-  "mdFile": "sieve-of-eratosthenes.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/math-for-programming/essential-math/sieve-of-eratosthenes/code/java/Example.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "mdFile": "sieve-of-eratosthenes.md"
 }

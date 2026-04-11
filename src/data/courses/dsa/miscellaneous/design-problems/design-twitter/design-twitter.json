@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/miscellaneous/design-problems/design-twitter/code//src/data/courses/dsa/miscellaneous/design-problems/design-twitter/code/java/Twitter.java"
+          "codeFile": "courses/dsa/miscellaneous/design-problems/design-twitter/code/java/Twitter.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/miscellaneous/design-problems/design-twitter/code//src/data/courses/dsa/miscellaneous/design-problems/design-twitter/code/cpp/Twitter.cpp"
+          "codeFile": "courses/dsa/miscellaneous/design-problems/design-twitter/code/cpp/Twitter.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/miscellaneous/design-problems/design-twitter/code//src/data/courses/dsa/miscellaneous/design-problems/design-twitter/code/python/design-twitter.py"
+          "codeFile": "courses/dsa/miscellaneous/design-problems/design-twitter/code/python/design-twitter.py"
         }
       ]
     }

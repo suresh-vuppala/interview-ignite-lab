@@ -78,7 +78,3 @@ list.trimToSize();          // Release unused capacity
 - **Don't use `vector<bool>`** in C++ — it's a bitfield, not a real vector
 
 <br>
-
----
-
-```code```

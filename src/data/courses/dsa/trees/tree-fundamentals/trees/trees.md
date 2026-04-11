@@ -17,7 +17,3 @@ Content coming soon...
 3. **BST:** Left < Root < Right property
 
 <br>
-
----
-
-```code```

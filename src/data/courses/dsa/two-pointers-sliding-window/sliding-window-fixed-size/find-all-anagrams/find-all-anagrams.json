@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/python/find_all_anagrams.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/python/find-all-anagrams.py"
         },
         {
           "language": "java",

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/counting-dictionary/count-distinct-substrings/code//src/data/courses/dsa/trie/counting-dictionary/count-distinct-substrings/code/java/CountDistinctSubstrings.java"
+          "codeFile": "courses/dsa/trie/counting-dictionary/count-distinct-substrings/code/java/CountDistinctSubstrings.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/counting-dictionary/count-distinct-substrings/code//src/data/courses/dsa/trie/counting-dictionary/count-distinct-substrings/code/cpp/CountDistinctSubstrings.cpp"
+          "codeFile": "courses/dsa/trie/counting-dictionary/count-distinct-substrings/code/cpp/CountDistinctSubstrings.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/counting-dictionary/count-distinct-substrings/code//src/data/courses/dsa/trie/counting-dictionary/count-distinct-substrings/code/python/count_distinct_substrings.py"
+          "codeFile": "courses/dsa/trie/counting-dictionary/count-distinct-substrings/code/python/count_distinct_substrings.py"
         }
       ]
     }

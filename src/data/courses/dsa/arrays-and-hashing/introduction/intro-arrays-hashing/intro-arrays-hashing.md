@@ -42,7 +42,3 @@ Arrays and hash maps are the **most fundamental data structures** in programming
 - **Apple:** Set Matrix Zeroes, Spiral Matrix, Pascal's Triangle
 
 <br>
-
----
-
-```code```

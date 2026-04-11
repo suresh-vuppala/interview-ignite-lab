@@ -22,7 +22,3 @@ Content coming soon...
 6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
 
 <br>
-
----
-
-```code```

@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-window-substring/code/python/minimum_window_substring.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-window-substring/code/python/minimum-window-substring.py"
         },
         {
           "language": "java",

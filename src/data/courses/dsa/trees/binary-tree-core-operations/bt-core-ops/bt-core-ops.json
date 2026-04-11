@@ -1,1 +1,27 @@
-{"title":"Binary Tree Core Operations","slug":"bt-core-ops","isPremium":false,"isPosted":true,"description":"Core operations on binary trees","mdFile":"dsa/trees/binary-tree-core-operations/bt-core-ops/bt-core-ops.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/binary-tree-core-operations/bt-core-ops/code/cpp/BinaryTreeOperations.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/binary-tree-core-operations/bt-core-ops/code/java/BinaryTreeOperations.java","language":"java"},{"codeFile":"courses/dsa/trees/binary-tree-core-operations/bt-core-ops/code/python/bt_core_ops.py","language":"python"}],"title":"Binary Tree Core Operations Solution"}]}
+{
+  "title": "Binary Tree Core Operations",
+  "slug": "bt-core-ops",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Core operations on binary trees",
+  "mdFile": "dsa/trees/binary-tree-core-operations/bt-core-ops/bt-core-ops.md",
+  "codeExamples": [
+    {
+      "languages": [
+        {
+          "codeFile": "courses/dsa/trees/binary-tree-core-operations/bt-core-ops/code/cpp/BinaryTreeOperations.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/trees/binary-tree-core-operations/bt-core-ops/code/java/BinaryTreeOperations.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/trees/binary-tree-core-operations/bt-core-ops/code/python/binary_tree_operations.py",
+          "language": "python"
+        }
+      ],
+      "title": "Binary Tree Core Operations Solution"
+    }
+  ]
+}

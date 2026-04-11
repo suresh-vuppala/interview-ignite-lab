@@ -3,16 +3,5 @@
   "title": "Advanced Problems on Trees",
   "slug": "advanced-problems-on-trees",
   "isPremium": false,
-  "mdFile": "advanced-problems-on-trees.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/advanced-tree-problems/advanced-trees/advanced-problems-on-trees/code/java/AdvancedProblemsOnTrees.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "mdFile": "advanced-problems-on-trees.md"
 }

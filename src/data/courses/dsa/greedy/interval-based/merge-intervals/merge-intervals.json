@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/greedy/interval-based/merge-intervals/code//src/data/courses/dsa/greedy/interval-based/merge-intervals/code/java/MergeIntervals.java"
+          "codeFile": "courses/dsa/greedy/interval-based/merge-intervals/code/java/MergeIntervals.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/greedy/interval-based/merge-intervals/code//src/data/courses/dsa/greedy/interval-based/merge-intervals/code/cpp/MergeIntervals.cpp"
+          "codeFile": "courses/dsa/greedy/interval-based/merge-intervals/code/cpp/MergeIntervals.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/greedy/interval-based/merge-intervals/code//src/data/courses/dsa/greedy/interval-based/merge-intervals/code/python/merge-intervals.py"
+          "codeFile": "courses/dsa/greedy/interval-based/merge-intervals/code/python/merge-intervals.py"
         }
       ]
     }

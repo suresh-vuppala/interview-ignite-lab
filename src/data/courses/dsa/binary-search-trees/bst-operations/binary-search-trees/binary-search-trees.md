@@ -16,7 +16,3 @@ Content coming soon...
 2. **Balanced vs unbalanced:** Height matters for performance
 
 <br>
-
----
-
-```code```

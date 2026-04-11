@@ -16,7 +16,3 @@ Content coming soon...
 2. **Range queries:** Efficient with BST structure
 
 <br>
-
----
-
-```code```

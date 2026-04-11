@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code//src/data/courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/java/TrappingRainWater.java"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/java/TrappingRainWater.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code//src/data/courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/cpp/TrappingRainWater.cpp"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/cpp/TrappingRainWater.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code//src/data/courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/python/trapping_rain_water.py"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/python/trapping_rain_water.py"
         }
       ]
     }

@@ -18,7 +18,3 @@ Content coming soon...
 3. **State transitions:** Verify all transitions are correct
 
 <br>
-
----
-
-```code```

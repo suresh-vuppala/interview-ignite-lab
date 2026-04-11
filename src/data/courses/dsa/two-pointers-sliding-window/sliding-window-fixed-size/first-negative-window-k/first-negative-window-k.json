@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/python/first_negative_window_k.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/python/first-negative-window-k.py"
         },
         {
           "language": "java",

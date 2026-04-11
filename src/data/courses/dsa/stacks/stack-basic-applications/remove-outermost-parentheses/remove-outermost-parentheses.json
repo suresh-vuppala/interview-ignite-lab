@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/remove-outermost-parentheses/code//src/data/courses/dsa/stacks/stack-basic-applications/remove-outermost-parentheses/code/java/RemoveOutermostParentheses.java"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/remove-outermost-parentheses/code/java/RemoveOutermostParentheses.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/remove-outermost-parentheses/code//src/data/courses/dsa/stacks/stack-basic-applications/remove-outermost-parentheses/code/cpp/RemoveOutermostParentheses.cpp"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/remove-outermost-parentheses/code/cpp/RemoveOutermostParentheses.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/remove-outermost-parentheses/code//src/data/courses/dsa/stacks/stack-basic-applications/remove-outermost-parentheses/code/python/remove_outermost_parentheses.py"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/remove-outermost-parentheses/code/python/remove_outermost_parentheses.py"
         }
       ]
     }

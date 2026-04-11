@@ -14,7 +14,7 @@
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/merge-sort/merge-sort-core/count-comparisons-merge-sort/code/cpp/count-comparisons-merge-sort.cpp"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/count-comparisons-merge-sort/code/cpp/CountComparisonsMergeSort.cpp"
         },
         {
           "language": "python",

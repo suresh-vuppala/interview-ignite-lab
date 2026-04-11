@@ -18,7 +18,3 @@ Content coming soon...
 3. **All same elements:** All windows produce same result
 
 <br>
-
----
-
-```code```

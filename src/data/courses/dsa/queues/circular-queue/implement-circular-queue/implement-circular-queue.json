@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/queues/circular-queue/implement-circular-queue/code//src/data/courses/dsa/queues/circular-queue/implement-circular-queue/code/java/ImplementCircularQueue.java"
+          "codeFile": "courses/dsa/queues/circular-queue/implement-circular-queue/code/java/ImplementCircularQueue.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/queues/circular-queue/implement-circular-queue/code//src/data/courses/dsa/queues/circular-queue/implement-circular-queue/code/cpp/ImplementCircularQueue.cpp"
+          "codeFile": "courses/dsa/queues/circular-queue/implement-circular-queue/code/cpp/ImplementCircularQueue.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/queues/circular-queue/implement-circular-queue/code//src/data/courses/dsa/queues/circular-queue/implement-circular-queue/code/python/implement_circular_queue.py"
+          "codeFile": "courses/dsa/queues/circular-queue/implement-circular-queue/code/python/implement_circular_queue.py"
         }
       ]
     }

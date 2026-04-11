@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/greedy/interval-based/activity-selection/code//src/data/courses/dsa/greedy/interval-based/activity-selection/code/java/ActivitySelection.java"
+          "codeFile": "courses/dsa/greedy/interval-based/activity-selection/code/java/ActivitySelection.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/greedy/interval-based/activity-selection/code//src/data/courses/dsa/greedy/interval-based/activity-selection/code/cpp/ActivitySelection.cpp"
+          "codeFile": "courses/dsa/greedy/interval-based/activity-selection/code/cpp/ActivitySelection.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/greedy/interval-based/activity-selection/code//src/data/courses/dsa/greedy/interval-based/activity-selection/code/python/activity-selection.py"
+          "codeFile": "courses/dsa/greedy/interval-based/activity-selection/code/python/activity-selection.py"
         }
       ]
     }

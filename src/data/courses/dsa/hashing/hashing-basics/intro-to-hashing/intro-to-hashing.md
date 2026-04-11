@@ -17,7 +17,3 @@ Content coming soon...
 3. **Empty hash table:** No elements to find
 
 <br>
-
----
-
-```code```

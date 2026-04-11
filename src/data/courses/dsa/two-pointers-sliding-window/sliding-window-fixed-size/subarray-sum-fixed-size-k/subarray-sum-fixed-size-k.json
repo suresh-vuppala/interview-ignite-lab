@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/python/subarray_sum_fixed_size_k.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/python/subarray-sum-fixed-size-k.py"
         },
         {
           "language": "java",

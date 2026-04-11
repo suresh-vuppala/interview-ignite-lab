@@ -17,7 +17,3 @@ Content coming soon...
 3. **All same elements:** Depends on problem target
 
 <br>
-
----
-
-```code```

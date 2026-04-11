@@ -516,7 +516,3 @@ while (sc.hasNext()) {
 3. **Large input:** Consider time complexity
 
 <br>
-
----
-
-```code```

@@ -325,7 +325,3 @@ public:
 6. **Very long string:** Need efficient O(n) algorithm
 
 <br>
-
----
-
-```code```

@@ -61,7 +61,3 @@ String result = sb.toString();
 | Substring | `s.substr(i, len)` | `s.substring(i, j)` | `s[i:j]` |
 
 <br>
-
----
-
-```code```

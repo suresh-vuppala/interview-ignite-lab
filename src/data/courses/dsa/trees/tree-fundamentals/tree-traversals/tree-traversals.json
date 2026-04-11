@@ -3,16 +3,5 @@
   "title": "Tree Traversals",
   "slug": "tree-traversals",
   "isPremium": false,
-  "mdFile": "tree-traversals.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/trees/tree-fundamentals/tree-traversals/code/java/CountTotalNodes.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "mdFile": "tree-traversals.md"
 }

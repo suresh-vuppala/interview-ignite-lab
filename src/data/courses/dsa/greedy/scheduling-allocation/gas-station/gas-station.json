@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/greedy/scheduling-allocation/gas-station/code//src/data/courses/dsa/greedy/scheduling-allocation/gas-station/code/java/GasStation.java"
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/gas-station/code/java/GasStation.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/greedy/scheduling-allocation/gas-station/code//src/data/courses/dsa/greedy/scheduling-allocation/gas-station/code/cpp/GasStation.cpp"
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/gas-station/code/cpp/GasStation.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/greedy/scheduling-allocation/gas-station/code//src/data/courses/dsa/greedy/scheduling-allocation/gas-station/code/python/gas-station.py"
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/gas-station/code/python/gas-station.py"
         }
       ]
     }

@@ -21,7 +21,3 @@ Content coming soon...
 6. **Two elements:** Single comparison
 
 <br>
-
----
-
-```code```

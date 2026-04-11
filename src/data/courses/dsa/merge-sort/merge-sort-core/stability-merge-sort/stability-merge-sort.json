@@ -14,7 +14,7 @@
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/merge-sort/merge-sort-core/stability-merge-sort/code/cpp/stability-merge-sort.cpp"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/stability-merge-sort/code/cpp/StabilityMergeSort.cpp"
         },
         {
           "language": "python",

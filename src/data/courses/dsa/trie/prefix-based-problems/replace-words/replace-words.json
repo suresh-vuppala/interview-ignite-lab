@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/prefix-based-problems/replace-words/code//src/data/courses/dsa/trie/prefix-based-problems/replace-words/code/java/ReplaceWords.java"
+          "codeFile": "courses/dsa/trie/prefix-based-problems/replace-words/code/java/ReplaceWords.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/prefix-based-problems/replace-words/code//src/data/courses/dsa/trie/prefix-based-problems/replace-words/code/cpp/ReplaceWords.cpp"
+          "codeFile": "courses/dsa/trie/prefix-based-problems/replace-words/code/cpp/ReplaceWords.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/prefix-based-problems/replace-words/code//src/data/courses/dsa/trie/prefix-based-problems/replace-words/code/python/replace_words.py"
+          "codeFile": "courses/dsa/trie/prefix-based-problems/replace-words/code/python/replace_words.py"
         }
       ]
     }

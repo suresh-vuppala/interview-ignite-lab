@@ -73,7 +73,3 @@ PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
 ```
 
 <br>
-
----
-
-```code```

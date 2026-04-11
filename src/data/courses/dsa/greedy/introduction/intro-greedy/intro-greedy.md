@@ -36,7 +36,3 @@ Greedy works when the problem has:
 | **Local Max/Min** | Partition Labels, Valid Parenthesis String |
 
 <br>
-
----
-
-```code```

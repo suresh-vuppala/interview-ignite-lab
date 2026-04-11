@@ -43,7 +43,3 @@ This makes two pointers a powerful optimization technique for array-based proble
 3. **All same elements:** Depends on problem target
 
 <br>
-
----
-
-```code```

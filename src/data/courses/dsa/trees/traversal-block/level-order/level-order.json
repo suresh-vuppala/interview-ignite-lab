@@ -1,1 +1,27 @@
-{"title":"Level Order Traversal","slug":"level-order","isPremium":false,"isPosted":true,"description":"BFS traversal of binary tree","mdFile":"dsa/trees/traversal-block/level-order/level-order.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/traversal-block/level-order/code/cpp/LevelOrderTraversal.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/traversal-block/level-order/code/java/LevelOrderTraversal.java","language":"java"},{"codeFile":"courses/dsa/trees/traversal-block/level-order/code/python/level_order.py","language":"python"}],"title":"Level Order Traversal Solution"}]}
+{
+  "title": "Level Order Traversal",
+  "slug": "level-order",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "BFS traversal of binary tree",
+  "mdFile": "dsa/trees/traversal-block/level-order/level-order.md",
+  "codeExamples": [
+    {
+      "languages": [
+        {
+          "codeFile": "courses/dsa/trees/traversal-block/level-order/code/cpp/LevelOrderTraversal.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/trees/traversal-block/level-order/code/java/LevelOrderTraversal.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/trees/traversal-block/level-order/code/python/level_order_traversal.py",
+          "language": "python"
+        }
+      ],
+      "title": "Level Order Traversal Solution"
+    }
+  ]
+}

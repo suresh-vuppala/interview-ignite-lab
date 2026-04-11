@@ -55,7 +55,3 @@ Searching is the process of finding a specific value (key) in a collection of da
 2. **Duplicate elements:** May affect which occurrence is found
 
 <br>
-
----
-
-```code```

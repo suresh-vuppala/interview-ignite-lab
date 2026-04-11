@@ -3,16 +3,5 @@
   "title": "Comparisons and Classifications",
   "slug": "comparisons-classifications",
   "isPremium": false,
-  "mdFile": "comparisons-classifications.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/comparisons-classifications/code/java/Example.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "mdFile": "comparisons-classifications.md"
 }

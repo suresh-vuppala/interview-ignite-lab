@@ -395,7 +395,3 @@ for (choice in choices) {
 5. **Negative numbers:** Affects sum-based problems
 
 <br>
-
----
-
-```code```

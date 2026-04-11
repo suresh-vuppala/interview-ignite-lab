@@ -46,7 +46,3 @@ for right in range(n):
 - **Counting:** Use `atMost(k) - atMost(k-1)` trick for "exactly K" problems
 
 <br>
-
----
-
-```code```

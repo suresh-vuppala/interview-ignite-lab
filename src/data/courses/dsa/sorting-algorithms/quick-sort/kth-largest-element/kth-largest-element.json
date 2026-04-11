@@ -12,15 +12,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/sorting-algorithms/quick-sort/kth-largest-element/code//src/data/courses/dsa/sorting-algorithms/quick-sort/kth-largest-element/code/java/KthLargestElement.java"
+          "codeFile": "courses/dsa/sorting-algorithms/quick-sort/kth-largest-element/code/java/KthLargestElement.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/sorting-algorithms/quick-sort/kth-largest-element/code//src/data/courses/dsa/sorting-algorithms/quick-sort/kth-largest-element/code/cpp/KthLargestElement.cpp"
+          "codeFile": "courses/dsa/sorting-algorithms/quick-sort/kth-largest-element/code/cpp/KthLargestElement.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/sorting-algorithms/quick-sort/kth-largest-element/code//src/data/courses/dsa/sorting-algorithms/quick-sort/kth-largest-element/code/python/kth-largest-element.py"
+          "codeFile": "courses/dsa/sorting-algorithms/quick-sort/kth-largest-element/code/python/kth-largest-element.py"
         }
       ]
     }

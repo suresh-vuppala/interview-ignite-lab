@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/trie-design-variations/search-suggestion-system/code//src/data/courses/dsa/trie/trie-design-variations/search-suggestion-system/code/java/SearchSuggestionSystem.java"
+          "codeFile": "courses/dsa/trie/trie-design-variations/search-suggestion-system/code/java/SearchSuggestionSystem.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/trie-design-variations/search-suggestion-system/code//src/data/courses/dsa/trie/trie-design-variations/search-suggestion-system/code/cpp/SearchSuggestionSystem.cpp"
+          "codeFile": "courses/dsa/trie/trie-design-variations/search-suggestion-system/code/cpp/SearchSuggestionSystem.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/trie-design-variations/search-suggestion-system/code//src/data/courses/dsa/trie/trie-design-variations/search-suggestion-system/code/python/search_suggestion_system.py"
+          "codeFile": "courses/dsa/trie/trie-design-variations/search-suggestion-system/code/python/search_suggestion_system.py"
         }
       ]
     }

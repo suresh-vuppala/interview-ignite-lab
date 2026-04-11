@@ -320,7 +320,3 @@ Total: O(n) stack space
 
 <br>
 <br>
-
----
-
-```code```

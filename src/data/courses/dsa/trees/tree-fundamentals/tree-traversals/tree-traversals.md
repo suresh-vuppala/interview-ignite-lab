@@ -18,7 +18,3 @@ Content coming soon...
 4. **Level-order:** BFS level by level
 
 <br>
-
----
-
-```code```

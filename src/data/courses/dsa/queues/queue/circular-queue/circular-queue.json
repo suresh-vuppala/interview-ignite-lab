@@ -11,15 +11,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/queues/queue/circular-queue/code//src/data/courses/dsa/queues/queue/circular-queue/code/java/CircularQueue.java"
+          "codeFile": "courses/dsa/queues/queue/circular-queue/code/java/CircularQueue.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/queues/queue/circular-queue/code//src/data/courses/dsa/queues/queue/circular-queue/code/cpp/CircularQueue.cpp"
+          "codeFile": "courses/dsa/queues/queue/circular-queue/code/cpp/CircularQueue.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/queues/queue/circular-queue/code//src/data/courses/dsa/queues/queue/circular-queue/code/python/circular_queue.py"
+          "codeFile": "courses/dsa/queues/queue/circular-queue/code/python/circular_queue.py"
         }
       ]
     }

@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/sliding-window-maximum/code/python/sliding_window_maximum.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/sliding-window-maximum/code/python/sliding-window-maximum.py"
         },
         {
           "language": "java",

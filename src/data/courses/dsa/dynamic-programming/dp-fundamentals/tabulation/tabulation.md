@@ -81,7 +81,3 @@ Note: Never look down upon the brute-force solution. the most difficult part of 
 | Top-down Approach        | O(N)                | O(N)                  |
 | Bottom-up Approach       | O(N)                | O(N)                  |
 | Space Optimization       | O(N)                | O(1)                  |
-
----
-
-```code```

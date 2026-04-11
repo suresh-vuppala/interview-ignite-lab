@@ -3,16 +3,5 @@
   "title": "Binary Search Trees",
   "slug": "binary-search-trees",
   "isPremium": false,
-  "mdFile": "binary-search-trees.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/binary-search-trees/bst-operations/binary-search-trees/code/java/BinarySearchTrees.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "mdFile": "binary-search-trees.md"
 }

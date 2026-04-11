@@ -333,7 +333,3 @@ Need stable sort?
 6. **Two elements:** Single comparison
 
 <br>
-
----
-
-```code```

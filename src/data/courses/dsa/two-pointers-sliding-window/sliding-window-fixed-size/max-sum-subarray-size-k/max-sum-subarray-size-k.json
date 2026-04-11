@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/max-sum-subarray-size-k/code/python/max_sum_subarray_size_k.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/max-sum-subarray-size-k/code/python/max-sum-subarray-size-k.py"
         },
         {
           "language": "java",

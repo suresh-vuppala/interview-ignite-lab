@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/greedy/others/jump-game/code//src/data/courses/dsa/greedy/others/jump-game/code/java/JumpGame.java"
+          "codeFile": "courses/dsa/greedy/others/jump-game/code/java/JumpGame.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/greedy/others/jump-game/code//src/data/courses/dsa/greedy/others/jump-game/code/cpp/JumpGame.cpp"
+          "codeFile": "courses/dsa/greedy/others/jump-game/code/cpp/JumpGame.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/greedy/others/jump-game/code//src/data/courses/dsa/greedy/others/jump-game/code/python/jump-game.py"
+          "codeFile": "courses/dsa/greedy/others/jump-game/code/python/jump-game.py"
         }
       ]
     }

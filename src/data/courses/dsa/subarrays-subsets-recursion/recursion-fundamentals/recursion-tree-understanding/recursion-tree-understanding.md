@@ -312,7 +312,3 @@ For recurrence: T(n) = aT(n/b) + f(n)
 5. **Negative numbers:** Affects sum-based problems
 
 <br>
-
----
-
-```code```

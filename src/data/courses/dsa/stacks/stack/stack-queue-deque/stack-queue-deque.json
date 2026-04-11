@@ -11,15 +11,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/stacks/stack/stack-queue-deque/code//src/data/courses/dsa/stacks/stack/stack-queue-deque/code/java/StackExample.java"
+          "codeFile": "courses/dsa/stacks/stack/stack-queue-deque/code/java/StackExample.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack/stack-queue-deque/code//src/data/courses/dsa/stacks/stack/stack-queue-deque/code/cpp/StackExample.cpp"
+          "codeFile": "courses/dsa/stacks/stack/stack-queue-deque/code/cpp/StackExample.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/stacks/stack/stack-queue-deque/code//src/data/courses/dsa/stacks/stack/stack-queue-deque/code/python/stack_example.py"
+          "codeFile": "courses/dsa/stacks/stack/stack-queue-deque/code/python/stack_example.py"
         }
       ]
     }

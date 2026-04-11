@@ -16,7 +16,3 @@ Content coming soon...
 2. **Tree properties:** Height, depth, diameter
 
 <br>
-
----
-
-```code```

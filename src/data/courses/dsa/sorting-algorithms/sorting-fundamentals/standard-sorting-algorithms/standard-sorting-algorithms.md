@@ -57,7 +57,3 @@ Understanding different sorting algorithms and their characteristics.
 5. **Stability required:** Merge sort or insertion sort
 
 <br>
-
----
-
-```code```

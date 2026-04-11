@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-constraint/code//src/data/courses/dsa/trie/binary-trie/maximum-xor-constraint/code/java/MaximumXorConstraint.java"
+          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-constraint/code/java/MaximumXorConstraint.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-constraint/code//src/data/courses/dsa/trie/binary-trie/maximum-xor-constraint/code/cpp/MaximumXorConstraint.cpp"
+          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-constraint/code/cpp/MaximumXorConstraint.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-constraint/code//src/data/courses/dsa/trie/binary-trie/maximum-xor-constraint/code/python/maximum_xor_constraint.py"
+          "codeFile": "courses/dsa/trie/binary-trie/maximum-xor-constraint/code/python/maximum_xor_constraint.py"
         }
       ]
     }

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/balanced-parentheses/code//src/data/courses/dsa/stacks/stack-basic-applications/balanced-parentheses/code/java/BalancedParentheses.java"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/balanced-parentheses/code/java/BalancedParentheses.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/balanced-parentheses/code//src/data/courses/dsa/stacks/stack-basic-applications/balanced-parentheses/code/cpp/BalancedParentheses.cpp"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/balanced-parentheses/code/cpp/BalancedParentheses.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/balanced-parentheses/code//src/data/courses/dsa/stacks/stack-basic-applications/balanced-parentheses/code/python/balanced_parentheses.py"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/balanced-parentheses/code/python/balanced_parentheses.py"
         }
       ]
     }

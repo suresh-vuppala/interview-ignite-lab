@@ -4,16 +4,5 @@
   "slug": "tabulation",
   "isPremium": false,
   "mdFile": "tabulation.md",
-  "isPosted": true,
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/dynamic-programming/dp-fundamentals/tabulation/code/java/Example.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "isPosted": true
 }

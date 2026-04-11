@@ -21,7 +21,3 @@ Content coming soon...
 5. **Negative numbers:** Affects sum-based problems
 
 <br>
-
----
-
-```code```

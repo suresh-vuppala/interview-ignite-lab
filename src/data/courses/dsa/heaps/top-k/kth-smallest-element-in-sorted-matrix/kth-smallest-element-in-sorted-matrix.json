@@ -10,7 +10,7 @@
       "title": "Example",
       "languages": [
         {
-          "codeFile": "courses/dsa/heaps/top-k/kth-smallest-element-in-sorted-matrix/code//src/data/courses/dsa/heaps/top-k/kth-smallest-element-in-sorted-matrix/code/cpp/KthSmallestElementInSortedMatrix.cpp",
+          "codeFile": "courses/dsa/heaps/top-k/kth-smallest-element-in-sorted-matrix/code/cpp/KthSmallestElementInSortedMatrix.cpp",
           "language": "cpp"
         }
       ]

@@ -17,7 +17,3 @@ Content coming soon...
 3. **Morris:** O(1) space but modifies tree temporarily
 
 <br>
-
----
-
-```code```

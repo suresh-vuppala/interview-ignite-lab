@@ -14,7 +14,7 @@
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/count-inversions/code/cpp/count-inversions.cpp"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-applications/count-inversions/code/cpp/CountInversions.cpp"
         },
         {
           "language": "python",

@@ -47,7 +47,3 @@ For "maximize minimum" problems, flip the condition.
 This pattern appears in **~15% of Google interviews** and is a favorite because it tests both binary search mastery and the ability to write a clean feasibility check function.
 
 <br>
-
----
-
-```code```

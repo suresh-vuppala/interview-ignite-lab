@@ -75,7 +75,3 @@
 2. **Rotated arrays:** Modified binary search with pivot detection
 
 <br>
-
----
-
-```code```

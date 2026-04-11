@@ -3,16 +3,5 @@
   "title": "Game Theory",
   "slug": "game-theory",
   "isPremium": false,
-  "mdFile": "game-theory.md",
-  "codeExamples": [
-    {
-      "title": "Example",
-      "languages": [
-        {
-          "codeFile": "courses/dsa/math-for-programming/essential-math/game-theory/code/java/Example.java",
-          "language": "java"
-        }
-      ]
-    }
-  ]
+  "mdFile": "game-theory.md"
 }

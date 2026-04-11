@@ -1,1 +1,27 @@
-{"title":"LCA in Binary Tree","slug":"lca-bt","isPremium":false,"isPosted":true,"description":"Find lowest common ancestor in binary tree","mdFile":"dsa/trees/path-relationship-problems/lca-bt/lca-bt.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/path-relationship-problems/lca-bt/code/cpp/LowestCommonAncestor.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/path-relationship-problems/lca-bt/code/java/LowestCommonAncestor.java","language":"java"},{"codeFile":"courses/dsa/trees/path-relationship-problems/lca-bt/code/python/lca_bt.py","language":"python"}],"title":"LCA in Binary Tree Solution"}]}
+{
+  "title": "LCA in Binary Tree",
+  "slug": "lca-bt",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find lowest common ancestor in binary tree",
+  "mdFile": "dsa/trees/path-relationship-problems/lca-bt/lca-bt.md",
+  "codeExamples": [
+    {
+      "languages": [
+        {
+          "codeFile": "courses/dsa/trees/path-relationship-problems/lca-bt/code/cpp/LowestCommonAncestor.cpp",
+          "language": "cpp"
+        },
+        {
+          "codeFile": "courses/dsa/trees/path-relationship-problems/lca-bt/code/java/LowestCommonAncestor.java",
+          "language": "java"
+        },
+        {
+          "codeFile": "courses/dsa/trees/path-relationship-problems/lca-bt/code/python/lowest_common_ancestor.py",
+          "language": "python"
+        }
+      ],
+      "title": "LCA in Binary Tree Solution"
+    }
+  ]
+}

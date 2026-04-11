@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/greedy/introduction/greedy-vs-dp/code//src/data/courses/dsa/greedy/introduction/greedy-vs-dp/code/java/GreedyVsDp.java"
+          "codeFile": "courses/dsa/greedy/introduction/greedy-vs-dp/code/java/GreedyVsDp.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/greedy/introduction/greedy-vs-dp/code//src/data/courses/dsa/greedy/introduction/greedy-vs-dp/code/cpp/GreedyVsDp.cpp"
+          "codeFile": "courses/dsa/greedy/introduction/greedy-vs-dp/code/cpp/GreedyVsDp.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/greedy/introduction/greedy-vs-dp/code//src/data/courses/dsa/greedy/introduction/greedy-vs-dp/code/python/greedy-vs-dp.py"
+          "codeFile": "courses/dsa/greedy/introduction/greedy-vs-dp/code/python/greedy-vs-dp.py"
         }
       ]
     }

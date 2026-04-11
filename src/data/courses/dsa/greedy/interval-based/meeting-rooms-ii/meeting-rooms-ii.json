@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "courses/dsa/greedy/interval-based/meeting-rooms-ii/code//src/data/courses/dsa/greedy/interval-based/meeting-rooms-ii/code/java/MeetingRoomsII.java"
+          "codeFile": "courses/dsa/greedy/interval-based/meeting-rooms-ii/code/java/MeetingRoomsIi.java"
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/greedy/interval-based/meeting-rooms-ii/code//src/data/courses/dsa/greedy/interval-based/meeting-rooms-ii/code/cpp/MeetingRoomsII.cpp"
+          "codeFile": "courses/dsa/greedy/interval-based/meeting-rooms-ii/code/cpp/MeetingRoomsIi.cpp"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/greedy/interval-based/meeting-rooms-ii/code//src/data/courses/dsa/greedy/interval-based/meeting-rooms-ii/code/python/meeting-rooms-ii.py"
+          "codeFile": "courses/dsa/greedy/interval-based/meeting-rooms-ii/code/python/meeting-rooms-ii.py"
         }
       ]
     }
