@@ -1,14 +1,18 @@
-import java.util.*;
+// ============================================================
+// Diameter of Binary Tree
+// ============================================================
 
-public class DiameterOfTree {
-    static class TreeNode {
-        int val;
-        TreeNode left, right;
-        TreeNode(int x) { val = x; }
+class Solution {
+    int diameter = 0;
+    public int diameterOfBinaryTree(TreeNode root) {
+        diameter = 0;
+        height(root);
+        return diameter;
     }
-    
-    // Solution implementation
-    public static void main(String[] args) {
-        // Example usage
+    int height(TreeNode node) {
+        if (node == null) return 0;
+        int l = height(node.left), r = height(node.right);
+        diameter = Math.max(diameter, l + r);
+        return 1 + Math.max(l, r);
     }
 }

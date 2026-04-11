@@ -1,28 +1,45 @@
-Check if a binary tree is symmetric (mirror of itself).
+Check whether a binary tree is a mirror of itself (symmetric around its center).
 
 <br>
 
-> Input: [1,2,2,3,4,4,3] → true
+> Input: root = [1,2,2,3,4,4,3]
+> Output: true
 
-<br>
-
----
-
-## Solution 1: Recursive
-
-**Intuition:** A tree is symmetric if left subtree is a mirror of right subtree. Mirror check: left.val == right.val AND isMirror(left.left, right.right) AND isMirror(left.right, right.left).
-
-### Time: O(n) | Space: O(h)
+> Explanation: Left subtree mirrors right subtree: 2↔2, 3↔3, 4↔4.
+> 
+> **Key insight:** A tree is symmetric if its left subtree is a mirror of its right subtree. Recursively check: left.val == right.val AND left.left mirrors right.right AND left.right mirrors right.left.
 
 <br>
 
 ---
 
-## Solution 2: Iterative (Queue)
+## Constraints
+- `1 ≤ N ≤ 1000`
 
-Enqueue pairs: (left.left, right.right) and (left.right, right.left). Compare pairs.
+<br>
 
-### Time: O(n) | Space: O(n)
+---
+
+## Solution 1: Recursive Mirror Check (Optimal)
+
+**Algorithm:**
+1. isMirror(left, right):
+   - Both null → true
+   - One null → false
+   - Values differ → false
+   - Return isMirror(left.left, right.right) AND isMirror(left.right, right.left)
+2. Return isMirror(root.left, root.right)
+
+### Time Complexity: O(N)
+**Why?** Each node visited once.
+
+**Detailed breakdown:** N = 1000 → 1000 comparisons
+
+### Space Complexity: O(H)
+
+> **Drawback:** Recursive. Iterative BFS alternative processes pairs level by level.
+
+> **Key Insight for Improvement:** Iterative: use queue of pairs (left, right). Enqueue (left.left, right.right) and (left.right, right.left). Same O(N) but no recursion stack risk.
 
 <br>
 
@@ -32,11 +49,15 @@ Enqueue pairs: (left.left, right.right) and (left.right, right.left). Compare pa
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Recursive | O(n) | O(h) | Mirror comparison |
-| Iterative | O(n) | O(n) | Queue pair comparison |
+| Recursive | O(N) | O(H) | Mirror comparison |
+| Iterative BFS | O(N) | O(W) | Queue of pairs |
 
-<br>
-<br>
+**Key Insights:**
+1. **Mirror comparison:** Compare outer children and inner children
+2. **Symmetric ≠ Identical:** Symmetric checks mirror, identical checks exact match
+3. **Cross-comparison:** left.left↔right.right and left.right↔right.left
+
+<br><br>
 
 ---
 

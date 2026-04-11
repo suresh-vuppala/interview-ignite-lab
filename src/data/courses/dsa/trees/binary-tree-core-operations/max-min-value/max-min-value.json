@@ -1,1 +1,27 @@
-{"title":"Max and Min Values","slug":"max-min-value","isPremium":false,"isPosted":true,"description":"Find maximum and minimum values in a binary tree","mdFile":"dsa/trees/binary-tree-core-operations/max-min-value/max-min-value.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/binary-tree-core-operations/max-min-value/code/cpp/MaxMinValue.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/binary-tree-core-operations/max-min-value/code/java/MaxMinValue.java","language":"java"},{"codeFile":"courses/dsa/trees/binary-tree-core-operations/max-min-value/code/python/max_min_value.py","language":"python"}],"title":"Max and Min Values Solution"}]}
+{
+  "title": "Max and Min Values",
+  "slug": "max-min-value",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find maximum and minimum values in a binary tree",
+  "mdFile": "dsa/trees/binary-tree-core-operations/max-min-value/max-min-value.md",
+  "codeExamples": [
+    {
+      "title": "Max and Min Values",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/binary-tree-core-operations/max-min-value/code/cpp/max_min_value.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/binary-tree-core-operations/max-min-value/code/java/MaxMinValue.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/binary-tree-core-operations/max-min-value/code/python/max_min_value.py"
+        }
+      ]
+    }
+  ]
+}

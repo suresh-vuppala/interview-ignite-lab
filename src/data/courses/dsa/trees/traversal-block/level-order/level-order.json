@@ -7,21 +7,21 @@
   "mdFile": "dsa/trees/traversal-block/level-order/level-order.md",
   "codeExamples": [
     {
+      "title": "Level Order Traversal",
       "languages": [
         {
-          "codeFile": "courses/dsa/trees/traversal-block/level-order/code/cpp/LevelOrderTraversal.cpp",
-          "language": "cpp"
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/traversal-block/level-order/code/cpp/level_order.cpp"
         },
         {
-          "codeFile": "courses/dsa/trees/traversal-block/level-order/code/java/LevelOrderTraversal.java",
-          "language": "java"
+          "language": "java",
+          "codeFile": "courses/dsa/trees/traversal-block/level-order/code/java/LevelOrder.java"
         },
         {
-          "codeFile": "courses/dsa/trees/traversal-block/level-order/code/python/level_order_traversal.py",
-          "language": "python"
+          "language": "python",
+          "codeFile": "courses/dsa/trees/traversal-block/level-order/code/python/level_order.py"
         }
-      ],
-      "title": "Level Order Traversal Solution"
+      ]
     }
   ]
 }

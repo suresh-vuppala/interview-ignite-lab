@@ -1,27 +1,82 @@
-## Binary Tree Core Operations
+Implement core binary tree operations: insert a node, search for a value, and delete a node.
 
-**Insert:** Add node at first available position (level order) — O(n) BFS.
-**Search:** Traverse entire tree (no ordering like BST) — O(n).
-**Delete:** Find node, replace with deepest rightmost node, delete that — O(n).
-**Update:** Search then modify — O(n).
+<br>
 
-Unlike BST where operations are O(log n), basic binary tree operations are all O(n) since there's no ordering property.
+> Input: Insert 5, 3, 7, 1, 4. Search 4. Delete 3.
+> Output: Search=true. After delete: tree restructured.
+
+> Explanation: Build BST by insertion rules. Search traverses left/right. Delete handles 3 cases: leaf, one child, two children.
+> 
+> **Key insight:** Insert/Search follow BST property (left < root < right). Delete with two children: replace with inorder successor (smallest in right subtree), then delete the successor.
 
 <br>
 
 ---
 
-## Complexity Summary
-
-| Operation | Time | Space |
-|-----------|------|-------|
-| Insert | O(n) | O(n) BFS |
-| Search | O(n) | O(h) DFS or O(n) BFS |
-| Delete | O(n) | O(n) |
-| Update | O(n) | O(h) |
+## Constraints
+- Nodes contain integer values
 
 <br>
+
+---
+
+## All Possible Edge Cases
+1. **Empty tree:** Insert creates root
+2. **Delete leaf:** Simply remove
+3. **Delete node with one child:** Replace with child
+4. **Delete node with two children:** Replace with inorder successor
+
 <br>
+
+---
+
+## Solution: Recursive BST Operations (Optimal)
+
+**Insert:** Compare with root → go left or right recursively. Create node at null position.
+
+**Search:** Compare → go left or right. Return true if found, false at null.
+
+**Delete (3 cases):**
+1. Leaf → return null
+2. One child → return that child
+3. Two children → find inorder successor, copy value, delete successor
+
+### Time Complexity: O(H) per operation
+**Why?**
+- H = height of tree
+- Balanced tree: H = log N → O(log N)
+- Skewed tree: H = N → O(N)
+
+**Detailed breakdown:**
+- Balanced BST with 1,000,000 nodes: H ≈ 20 → 20 comparisons per operation
+- Skewed (linked list): 1,000,000 comparisons — need self-balancing BST
+
+### Space Complexity: O(H) for recursion stack
+
+> **Drawback:**
+> Regular BST can degrade to O(N) if insertions are sorted. Height becomes N instead of log N.
+
+> **Key Insight for Improvement:**
+> Self-balancing BSTs (AVL, Red-Black) guarantee O(log N) height. But understanding the basic BST operations is essential before learning balanced variants.
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Operation | Balanced | Skewed |
+|-----------|----------|--------|
+| Insert | O(log N) | O(N) |
+| Search | O(log N) | O(N) |
+| Delete | O(log N) | O(N) |
+
+**Key Insights:**
+1. **BST property:** Left < Root < Right — enables binary search
+2. **Delete with 2 children:** Inorder successor preserves BST property
+3. **Height matters:** All ops are O(H) — motivation for balanced trees
+
+<br><br>
 
 ---
 

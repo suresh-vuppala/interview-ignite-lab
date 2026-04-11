@@ -1,14 +1,16 @@
+// ============================================================
+// Symmetric Tree
+// ============================================================
+
 import java.util.*;
 
-public class SymmetricTree {
-    static class TreeNode {
-        int val;
-        TreeNode left, right;
-        TreeNode(int x) { val = x; }
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        return root == null || isMirror(root.left, root.right);
     }
-    
-    // Solution implementation
-    public static void main(String[] args) {
-        // Example usage
+    boolean isMirror(TreeNode l, TreeNode r) {
+        if (l == null && r == null) return true;
+        if (l == null || r == null) return false;
+        return l.val == r.val && isMirror(l.left, r.right) && isMirror(l.right, r.left);
     }
 }

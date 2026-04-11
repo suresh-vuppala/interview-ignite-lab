@@ -1,1 +1,27 @@
-{"title":"Invert Tree","slug":"invert-tree","isPremium":false,"isPosted":true,"description":"Invert a binary tree","mdFile":"dsa/trees/tree-modification-block/invert-tree/invert-tree.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/tree-modification-block/invert-tree/code/cpp/InvertTree.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/tree-modification-block/invert-tree/code/java/InvertTree.java","language":"java"},{"codeFile":"courses/dsa/trees/tree-modification-block/invert-tree/code/python/invert_tree.py","language":"python"}],"title":"Invert Tree Solution"}]}
+{
+  "title": "Invert Tree",
+  "slug": "invert-tree",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Invert a binary tree",
+  "mdFile": "dsa/trees/tree-modification-block/invert-tree/invert-tree.md",
+  "codeExamples": [
+    {
+      "title": "Invert Tree",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/tree-modification-block/invert-tree/code/cpp/invert_tree.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/tree-modification-block/invert-tree/code/java/InvertTree.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/tree-modification-block/invert-tree/code/python/invert_tree.py"
+        }
+      ]
+    }
+  ]
+}

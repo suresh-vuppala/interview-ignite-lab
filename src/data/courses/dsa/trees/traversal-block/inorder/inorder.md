@@ -1,137 +1,111 @@
-Perform inorder traversal of a binary tree. Inorder visits nodes in Left-Root-Right order. For BSTs, this produces sorted output.
+Return the inorder traversal of a binary tree (Left → Root → Right).
 
 <br>
 
-> Input:
-> Tree structure:
->       1
->      / \
->     2   3
->    / \
->   4   5
+> Input: root = [1, null, 2, 3]
+> Output: [1, 3, 2]
 
-> Output:
-> [4, 2, 5, 1, 3]
-
-> Explanation:
-> Inorder traversal (Left-Root-Right):
-> 1. Visit left subtree of 1 → go to node 2
-> 2. Visit left subtree of 2 → go to node 4
-> 3. Node 4 is leaf, print 4
-> 4. Back to node 2, print 2
-> 5. Visit right subtree of 2 → go to node 5
-> 6. Node 5 is leaf, print 5
-> 7. Back to node 1, print 1
-> 8. Visit right subtree of 1 → go to node 3
-> 9. Node 3 is leaf, print 3
+> Explanation: Inorder visits left subtree first, then root, then right subtree. For BST, inorder gives sorted order.
 > 
-> Result: [4, 2, 5, 1, 3]
+> **Key insight:** Recursive is trivial. Iterative uses a stack: go as far left as possible, process node, then go right. Morris traversal achieves O(1) space using threaded pointers.
 
 <br>
-
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 100`
-- `-100 ≤ Node.val ≤ 100`
+- `0 ≤ N ≤ 100`
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-
 1. **Empty tree:** Return []
 2. **Single node:** Return [val]
-3. **Left-skewed tree:** Acts like descending list
-4. **Right-skewed tree:** Acts like ascending list
-5. **Complete binary tree:** Standard traversal
+3. **Left-skewed:** Processes bottom-up
+4. **Right-skewed:** Root first, then right chain
 
 <br>
 
 ---
 
-## Solution #1: Recursive Inorder
+## Solution 1: Recursive
 
-Recursive approach follows natural definition:
-1. Recursively traverse left subtree
-2. Process current node (print/store value)
-3. Recursively traverse right subtree
+**Intuition:** inorder(left) → visit root → inorder(right). Elegant but uses O(H) stack.
 
+### Time Complexity: O(N)
+### Space Complexity: O(H) recursion
 
+> **Drawback:** Uses O(H) implicit stack space. Can cause stack overflow on deep trees.
 
-<br>
+> **Key Insight for Improvement:** Iterative approach with explicit stack. Or Morris Traversal for O(1) space by temporarily modifying tree pointers.
 
-### Time Complexity Analysis (Recursive)
-
-**Visit Each Node Once: O(n)**
-- Each node is visited exactly once
-- At each node: O(1) work (print/store value)
-- Total: n × O(1) = O(n)
-
-**Recursion Tree:**
-- Each node makes 2 recursive calls (left, right)
-- Total function calls = n (one per node)
-- Work per call = O(1)
-
-> **Time Complexity:** O(n) - visit each node once
-> **Space Complexity:** O(h) - recursion stack depth, where h = height
-> - Best case (balanced): O(log n)
-> - Worst case (skewed): O(n)
-
-<br>
 <br>
 
 ---
 
-## Solution #2: Iterative Inorder (Using Stack)
+## Solution 2: Iterative with Stack
 
-Iterative approach simulates recursion using explicit stack:
-1. Push all left nodes to stack
-2. Pop node, process it
-3. Move to right child, repeat
+**Intuition:** Start at root, push all left descendants. Process top of stack, then move to right child. Repeat.
 
 **Algorithm:**
-- Start from root, go left as far as possible (push to stack)
-- Pop from stack, process node
-- Move to right child, repeat process
+1. stack = [], current = root
+2. While current or stack:
+   - While current: push current, go left
+   - Pop from stack → process (add to result)
+   - current = popped.right
 
+### Time Complexity: O(N)
+### Space Complexity: O(H)
 
+**Example walkthrough:**
+```
+Tree: [1, null, 2, 3]  (1→right→2→left→3)
 
-<br>
+current=1, push 1 → stack=[1], go left → null
+Pop 1 → result=[1], current=2
+Push 2 → stack=[2], go left → 3
+Push 3 → stack=[2,3], go left → null
+Pop 3 → result=[1,3], current=null (3 has no right)
+Pop 2 → result=[1,3,2], current=null
 
-### Time Complexity Analysis (Iterative)
+Result: [1, 3, 2] ✓
+```
 
-**Stack Operations: O(n)**
-- Each node pushed to stack exactly once: n pushes
-- Each node popped from stack exactly once: n pops
-- Total operations: 2n = O(n)
+> **Drawback:** Still O(H) space for the stack.
 
-**Why O(n)?**
-- Every node is processed exactly once
-- Stack operations are O(1) each
-- No node is revisited
+> **Key Insight for Improvement:** Morris Traversal: thread the rightmost node of left subtree to current node. Follow threads to return without a stack. O(1) space, O(N) time.
 
-**Space Complexity: O(h)**
-- Stack holds nodes along path from root to current
-- Maximum stack size = height of tree
-- Best case (balanced): O(log n)
-- Worst case (left-skewed): O(n)
-
-**Comparison:**
-- Recursive: Cleaner code, implicit stack
-- Iterative: Explicit control, same complexity
-- Both: O(n) time, O(h) space
-
-> **Time Complexity:** O(n) - each node pushed and popped once
-> **Space Complexity:** O(h) - explicit stack for tree height
-
-<br>
 <br>
 
 ---
+
+## Solution 3: Morris Traversal (O(1) Space)
+
+**Intuition:** For each node, find its inorder predecessor (rightmost in left subtree). If predecessor's right is null → create thread (point to current), go left. If predecessor's right is current → thread exists, process current, remove thread, go right.
+
+### Time Complexity: O(N) — each edge traversed at most 3 times
+### Space Complexity: O(1) — no stack, only pointer manipulation
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursive | O(N) | O(H) | Simple but uses stack |
+| Iterative Stack | O(N) | O(H) | Explicit stack, no recursion |
+| Morris | O(N) | O(1) | Thread pointers — no extra space |
+
+**Key Insights:**
+1. **Inorder on BST = sorted order:** Essential for BST validation
+2. **Iterative pattern:** Push lefts, process, go right
+3. **Morris:** Temporarily modifies tree (must restore) for O(1) space
+
+<br><br>
 
 ---
 

@@ -7,21 +7,21 @@
   "mdFile": "dsa/trees/traversal-block/preorder/preorder.md",
   "codeExamples": [
     {
+      "title": "Preorder Traversal",
       "languages": [
         {
-          "codeFile": "courses/dsa/trees/traversal-block/preorder/code/cpp/PreorderTraversal.cpp",
-          "language": "cpp"
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/traversal-block/preorder/code/cpp/preorder.cpp"
         },
         {
-          "codeFile": "courses/dsa/trees/traversal-block/preorder/code/java/PreorderTraversal.java",
-          "language": "java"
+          "language": "java",
+          "codeFile": "courses/dsa/trees/traversal-block/preorder/code/java/Preorder.java"
         },
         {
-          "codeFile": "courses/dsa/trees/traversal-block/preorder/code/python/preorder_traversal.py",
-          "language": "python"
+          "language": "python",
+          "codeFile": "courses/dsa/trees/traversal-block/preorder/code/python/preorder.py"
         }
-      ],
-      "title": "Preorder Traversal Solution"
+      ]
     }
   ]
 }

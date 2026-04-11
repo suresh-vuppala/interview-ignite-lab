@@ -1,1 +1,27 @@
-{"title":"Inorder Traversal","slug":"inorder","isPremium":false,"isPosted":true,"description":"Left-Root-Right traversal of binary tree","mdFile":"dsa/trees/traversal-block/inorder/inorder.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/traversal-block/inorder/code/cpp/InorderTraversal.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/traversal-block/inorder/code/java/InorderTraversal.java","language":"java"},{"codeFile":"courses/dsa/trees/traversal-block/inorder/code/python/inorder_traversal.py","language":"python"}],"title":"Inorder Traversal Solution"}]}
+{
+  "title": "Inorder Traversal",
+  "slug": "inorder",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Left-Root-Right traversal of binary tree",
+  "mdFile": "dsa/trees/traversal-block/inorder/inorder.md",
+  "codeExamples": [
+    {
+      "title": "Inorder Traversal",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/traversal-block/inorder/code/cpp/inorder.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/traversal-block/inorder/code/java/Inorder.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/traversal-block/inorder/code/python/inorder.py"
+        }
+      ]
+    }
+  ]
+}

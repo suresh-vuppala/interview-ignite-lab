@@ -1,32 +1,25 @@
-﻿class TreeNode:
-    def __init__(self, val=0):
-        self.val = val
-        self.left = None
-        self.right = None
+# ============================================================
+# Balanced Binary Tree
+# ============================================================
 
-def isBalanced(root):
-    def getHeight(node):
-        if not node:
-            return 0
-        
-        left = getHeight(node.left)
-        if left == -1:
-            return -1
-        
-        right = getHeight(node.right)
-        if right == -1:
-            return -1
-        
-        if abs(left - right) > 1:
-            return -1
-        
-        return 1 + max(left, right)
-    
-    return getHeight(root) != -1
+class Solution1:
+    def isBalanced(self, root) -> bool:
+        if not root: return True
+        lh = self.height(root.left)
+        rh = self.height(root.right)
+        return abs(lh-rh)<=1 and self.isBalanced(root.left) and self.isBalanced(root.right)
+    def height(self, node):
+        if not node: return 0
+        return 1 + max(self.height(node.left), self.height(node.right))
 
-if __name__ == "__main__":
-    root = TreeNode(3)
-    root.left = TreeNode(9)
-    root.right = TreeNode(20)
-    
-    print(f"Is Balanced: {isBalanced(root)}")
+class Solution2:
+    def isBalanced(self, root) -> bool:
+        return self.check(root) != -1
+    def check(self, node):
+        if not node: return 0
+        l = self.check(node.left)
+        if l == -1: return -1
+        r = self.check(node.right)
+        if r == -1: return -1
+        if abs(l - r) > 1: return -1
+        return 1 + max(l, r)

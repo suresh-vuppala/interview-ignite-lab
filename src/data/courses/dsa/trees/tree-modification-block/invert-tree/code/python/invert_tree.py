@@ -1,24 +1,16 @@
-﻿class TreeNode:
-    def __init__(self, val=0):
-        self.val = val
-        self.left = None
-        self.right = None
+# ============================================================
+# Invert Binary Tree
+# ============================================================
 
-def invertTree(root):
-    if not root:
-        return None
-    
-    root.left, root.right = root.right, root.left
-    
-    invertTree(root.left)
-    invertTree(root.right)
-    
-    return root
+class Solution:
+    def invertTree(self, root):
+        if not root: return None
 
-if __name__ == "__main__":
-    root = TreeNode(2)
-    root.left = TreeNode(1)
-    root.right = TreeNode(3)
-    
-    invertTree(root)
-    print("Tree inverted.")
+        # Swap children
+        root.left, root.right = root.right, root.left
+
+        # Recursively invert subtrees
+        self.invertTree(root.left)
+        self.invertTree(root.right)
+
+        return root

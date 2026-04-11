@@ -1,12 +1,20 @@
-Perform postorder traversal (Left → Right → Root) of a binary tree.
+Return the postorder traversal of a binary tree (Left → Right → Root).
+
+<br>
+
+> Input: root = [1, null, 2, 3]
+> Output: [3, 2, 1]
+
+> Explanation: Visit left subtree, right subtree, then root. Root is processed LAST.
+> 
+> **Key insight:** Iterative trick: Preorder is Root→Left→Right. If we do Root→Right→Left (push left before right) then REVERSE the result → Left→Right→Root = Postorder!
 
 <br>
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 100`
+- `0 ≤ N ≤ 100`
 
 <br>
 
@@ -14,29 +22,35 @@ Perform postorder traversal (Left → Right → Root) of a binary tree.
 
 ## Solution 1: Recursive
 
-Visit left, right, then root.
+### Time: O(N) | Space: O(H)
 
-### Time: O(n) | Space: O(h)
+> **Drawback:** O(H) stack space.
 
-<br>
-
----
-
-## Solution 2: Iterative (Two Stacks)
-
-**Intuition:** Modified preorder (Root→Right→Left) then reverse the result gives postorder (Left→Right→Root).
-
-### Time: O(n) | Space: O(n)
+> **Key Insight for Improvement:** Modified preorder: do Root→Right→Left, then reverse. Or use two stacks.
 
 <br>
 
 ---
 
-## Solution 3: Iterative (One Stack)
+## Solution 2: Modified Preorder + Reverse (Optimal trick)
 
-Track last visited node to determine whether to go left, right, or visit current.
+**Algorithm:**
+1. Same as preorder but push LEFT first, then RIGHT (so right processed next)
+2. This gives Root→Right→Left order
+3. Reverse → Left→Right→Root = Postorder
 
-### Time: O(n) | Space: O(h)
+### Time Complexity: O(N)
+### Space Complexity: O(N) (for result reversal)
+
+**Example walkthrough:**
+```
+Tree: [1, 2, 3]
+
+Pop 1 → [1], push 2, push 3 → stack=[2,3]
+Pop 3 → [1,3], push children...
+Pop 2 → [1,3,2]
+Reverse: [2,3,1] = postorder ✓
+```
 
 <br>
 
@@ -46,12 +60,15 @@ Track last visited node to determine whether to go left, right, or visit current
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Recursive | O(n) | O(h) | Natural recursion |
-| Two Stacks | O(n) | O(n) | Reverse modified preorder |
-| One Stack | O(n) | O(h) | Track last visited |
+| Recursive | O(N) | O(H) | Simple L→R→Root |
+| Modified Preorder | O(N) | O(N) | Root→R→L reversed = postorder |
 
-<br>
-<br>
+**Key Insights:**
+1. **Reverse trick:** Preorder(Root→R→L) reversed = Postorder
+2. **Push order:** Left before right → right processed first
+3. **Postorder use cases:** Delete tree, evaluate expression tree, dependency resolution
+
+<br><br>
 
 ---
 

@@ -1,1 +1,27 @@
-{"title":"Diameter of Tree","slug":"diameter-of-tree","isPremium":false,"isPosted":true,"description":"Find diameter of a binary tree","mdFile":"dsa/trees/structural-property-problems/diameter-of-tree/diameter-of-tree.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/structural-property-problems/diameter-of-tree/code/cpp/DiameterOfTree.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/structural-property-problems/diameter-of-tree/code/java/DiameterOfTree.java","language":"java"},{"codeFile":"courses/dsa/trees/structural-property-problems/diameter-of-tree/code/python/diameter_of_tree.py","language":"python"}],"title":"Diameter of Tree Solution"}]}
+{
+  "title": "Diameter of Tree",
+  "slug": "diameter-of-tree",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find diameter of a binary tree",
+  "mdFile": "dsa/trees/structural-property-problems/diameter-of-tree/diameter-of-tree.md",
+  "codeExamples": [
+    {
+      "title": "Diameter of Tree",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/structural-property-problems/diameter-of-tree/code/cpp/diameter_of_tree.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/structural-property-problems/diameter-of-tree/code/java/DiameterOfTree.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/structural-property-problems/diameter-of-tree/code/python/diameter_of_tree.py"
+        }
+      ]
+    }
+  ]
+}

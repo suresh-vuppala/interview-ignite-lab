@@ -1,1 +1,27 @@
-{"title":"Zigzag Traversal","slug":"zigzag-traversal","isPremium":false,"isPosted":true,"description":"Zigzag level order traversal of binary tree","mdFile":"dsa/trees/traversal-block/zigzag-traversal/zigzag-traversal.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/traversal-block/zigzag-traversal/code/cpp/ZigzagTraversal.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/traversal-block/zigzag-traversal/code/java/ZigzagTraversal.java","language":"java"},{"codeFile":"courses/dsa/trees/traversal-block/zigzag-traversal/code/python/zigzag_traversal.py","language":"python"}],"title":"Zigzag Traversal Solution"}]}
+{
+  "title": "Zigzag Traversal",
+  "slug": "zigzag-traversal",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Zigzag level order traversal of binary tree",
+  "mdFile": "dsa/trees/traversal-block/zigzag-traversal/zigzag-traversal.md",
+  "codeExamples": [
+    {
+      "title": "Zigzag Traversal",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/traversal-block/zigzag-traversal/code/cpp/zigzag_traversal.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/traversal-block/zigzag-traversal/code/java/ZigzagTraversal.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/traversal-block/zigzag-traversal/code/python/zigzag_traversal.py"
+        }
+      ]
+    }
+  ]
+}

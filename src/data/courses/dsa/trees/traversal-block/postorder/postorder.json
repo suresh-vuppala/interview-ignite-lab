@@ -7,21 +7,21 @@
   "mdFile": "dsa/trees/traversal-block/postorder/postorder.md",
   "codeExamples": [
     {
+      "title": "Postorder Traversal",
       "languages": [
         {
-          "codeFile": "courses/dsa/trees/traversal-block/postorder/code/cpp/PostorderTraversal.cpp",
-          "language": "cpp"
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/traversal-block/postorder/code/cpp/postorder.cpp"
         },
         {
-          "codeFile": "courses/dsa/trees/traversal-block/postorder/code/java/PostorderTraversal.java",
-          "language": "java"
+          "language": "java",
+          "codeFile": "courses/dsa/trees/traversal-block/postorder/code/java/Postorder.java"
         },
         {
-          "codeFile": "courses/dsa/trees/traversal-block/postorder/code/python/postorder_traversal.py",
-          "language": "python"
+          "language": "python",
+          "codeFile": "courses/dsa/trees/traversal-block/postorder/code/python/postorder.py"
         }
-      ],
-      "title": "Postorder Traversal Solution"
+      ]
     }
   ]
 }

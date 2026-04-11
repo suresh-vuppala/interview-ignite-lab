@@ -1,25 +1,17 @@
-public class CountLeafInternalNodes {
-    static class TreeNode {
-        int val;
-        TreeNode left, right;
-        TreeNode(int x) { val = x; }
-    }
-    
-    static int countLeafNodes(TreeNode root) {
+// ============================================================
+// Count Leaf and Internal Nodes
+// ============================================================
+
+class Solution {
+    public int countLeaves(TreeNode root) {
         if (root == null) return 0;
         if (root.left == null && root.right == null) return 1;
-        return countLeafNodes(root.left) + countLeafNodes(root.right);
+        return countLeaves(root.left) + countLeaves(root.right);
     }
-    
-    static int countInternalNodes(TreeNode root) {
-        if (root == null || (root.left == null && root.right == null)) return 0;
-        return 1 + countInternalNodes(root.left) + countInternalNodes(root.right);
-    }
-    
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        System.out.println("Leaf: " + countLeafNodes(root));
+
+    public int countInternal(TreeNode root) {
+        if (root == null) return 0;
+        if (root.left == null && root.right == null) return 0;
+        return 1 + countInternal(root.left) + countInternal(root.right);
     }
 }

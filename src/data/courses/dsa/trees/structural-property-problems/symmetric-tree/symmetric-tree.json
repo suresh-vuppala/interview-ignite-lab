@@ -1,1 +1,27 @@
-{"title":"Symmetric Tree","slug":"symmetric-tree","isPremium":false,"isPosted":true,"description":"Check if binary tree is symmetric","mdFile":"dsa/trees/structural-property-problems/symmetric-tree/symmetric-tree.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/structural-property-problems/symmetric-tree/code/cpp/SymmetricTree.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/structural-property-problems/symmetric-tree/code/java/SymmetricTree.java","language":"java"},{"codeFile":"courses/dsa/trees/structural-property-problems/symmetric-tree/code/python/symmetric_tree.py","language":"python"}],"title":"Symmetric Tree Solution"}]}
+{
+  "title": "Symmetric Tree",
+  "slug": "symmetric-tree",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Check if binary tree is symmetric",
+  "mdFile": "dsa/trees/structural-property-problems/symmetric-tree/symmetric-tree.md",
+  "codeExamples": [
+    {
+      "title": "Symmetric Tree",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/structural-property-problems/symmetric-tree/code/cpp/symmetric_tree.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/structural-property-problems/symmetric-tree/code/java/SymmetricTree.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/structural-property-problems/symmetric-tree/code/python/symmetric_tree.py"
+        }
+      ]
+    }
+  ]
+}

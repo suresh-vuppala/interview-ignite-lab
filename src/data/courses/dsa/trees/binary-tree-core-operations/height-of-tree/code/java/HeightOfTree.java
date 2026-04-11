@@ -1,19 +1,30 @@
-public class HeightOfTree {
-    static class TreeNode {
-        int val;
-        TreeNode left, right;
-        TreeNode(int x) { val = x; }
-    }
-    
-    static int getHeight(TreeNode root) {
+// ============================================================
+// Maximum Depth of Binary Tree
+// ============================================================
+
+import java.util.*;
+
+class Solution1 {
+    public int maxDepth(TreeNode root) {
         if (root == null) return 0;
-        return 1 + Math.max(getHeight(root.left), getHeight(root.right));
+        return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
     }
-    
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        System.out.println("Height: " + getHeight(root));
+}
+
+class Solution2 {
+    public int maxDepth(TreeNode root) {
+        if (root == null) return 0;
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root); int depth = 0;
+        while (!q.isEmpty()) {
+            int size = q.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = q.poll();
+                if (node.left != null) q.add(node.left);
+                if (node.right != null) q.add(node.right);
+            }
+            depth++;
+        }
+        return depth;
     }
 }

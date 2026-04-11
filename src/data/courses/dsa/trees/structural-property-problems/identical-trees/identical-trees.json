@@ -1,1 +1,27 @@
-{"title":"Identical Trees","slug":"identical-trees","isPremium":false,"isPosted":true,"description":"Check if two binary trees are identical","mdFile":"dsa/trees/structural-property-problems/identical-trees/identical-trees.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/structural-property-problems/identical-trees/code/cpp/IdenticalTrees.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/structural-property-problems/identical-trees/code/java/IdenticalTrees.java","language":"java"},{"codeFile":"courses/dsa/trees/structural-property-problems/identical-trees/code/python/identical_trees.py","language":"python"}],"title":"Identical Trees Solution"}]}
+{
+  "title": "Identical Trees",
+  "slug": "identical-trees",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Check if two binary trees are identical",
+  "mdFile": "dsa/trees/structural-property-problems/identical-trees/identical-trees.md",
+  "codeExamples": [
+    {
+      "title": "Identical Trees",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/structural-property-problems/identical-trees/code/cpp/identical_trees.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/structural-property-problems/identical-trees/code/java/IdenticalTrees.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/structural-property-problems/identical-trees/code/python/identical_trees.py"
+        }
+      ]
+    }
+  ]
+}
