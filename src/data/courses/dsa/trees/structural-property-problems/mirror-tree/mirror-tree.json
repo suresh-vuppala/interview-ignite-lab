@@ -1,1 +1,27 @@
-{"title":"Mirror Tree","slug":"mirror-tree","isPremium":false,"isPosted":true,"description":"Create mirror of a binary tree","mdFile":"dsa/trees/structural-property-problems/mirror-tree/mirror-tree.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/structural-property-problems/mirror-tree/code/cpp/MirrorTree.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/structural-property-problems/mirror-tree/code/java/MirrorTree.java","language":"java"},{"codeFile":"courses/dsa/trees/structural-property-problems/mirror-tree/code/python/mirror_tree.py","language":"python"}],"title":"Mirror Tree Solution"}]}
+{
+  "title": "Mirror Tree",
+  "slug": "mirror-tree",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Create mirror of a binary tree",
+  "mdFile": "dsa/trees/structural-property-problems/mirror-tree/mirror-tree.md",
+  "codeExamples": [
+    {
+      "title": "Mirror Tree",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/structural-property-problems/mirror-tree/code/cpp/mirror_tree.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/structural-property-problems/mirror-tree/code/java/MirrorTree.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/structural-property-problems/mirror-tree/code/python/mirror_tree.py"
+        }
+      ]
+    }
+  ]
+}

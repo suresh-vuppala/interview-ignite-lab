@@ -1,1 +1,27 @@
-{"title":"Path Sum Exists","slug":"path-sum-exists","isPremium":false,"isPosted":true,"description":"Check if path with given sum exists from root to leaf","mdFile":"dsa/trees/path-relationship-problems/path-sum-exists/path-sum-exists.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/path-relationship-problems/path-sum-exists/code/cpp/PathSumExists.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/path-relationship-problems/path-sum-exists/code/java/PathSumExists.java","language":"java"},{"codeFile":"courses/dsa/trees/path-relationship-problems/path-sum-exists/code/python/path_sum_exists.py","language":"python"}],"title":"Path Sum Exists Solution"}]}
+{
+  "title": "Path Sum Exists",
+  "slug": "path-sum-exists",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Check if path with given sum exists from root to leaf",
+  "mdFile": "dsa/trees/path-relationship-problems/path-sum-exists/path-sum-exists.md",
+  "codeExamples": [
+    {
+      "title": "Path Sum Exists",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/path-sum-exists/code/cpp/path_sum_exists.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/path-sum-exists/code/java/PathSumExists.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/path-sum-exists/code/python/path_sum_exists.py"
+        }
+      ]
+    }
+  ]
+}

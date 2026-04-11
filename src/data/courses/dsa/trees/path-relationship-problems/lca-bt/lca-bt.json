@@ -7,21 +7,21 @@
   "mdFile": "dsa/trees/path-relationship-problems/lca-bt/lca-bt.md",
   "codeExamples": [
     {
+      "title": "LCA in Binary Tree",
       "languages": [
         {
-          "codeFile": "courses/dsa/trees/path-relationship-problems/lca-bt/code/cpp/LowestCommonAncestor.cpp",
-          "language": "cpp"
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/lca-bt/code/cpp/lca_bt.cpp"
         },
         {
-          "codeFile": "courses/dsa/trees/path-relationship-problems/lca-bt/code/java/LowestCommonAncestor.java",
-          "language": "java"
+          "language": "java",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/lca-bt/code/java/LcaBt.java"
         },
         {
-          "codeFile": "courses/dsa/trees/path-relationship-problems/lca-bt/code/python/lowest_common_ancestor.py",
-          "language": "python"
+          "language": "python",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/lca-bt/code/python/lca_bt.py"
         }
-      ],
-      "title": "LCA in Binary Tree Solution"
+      ]
     }
   ]
 }

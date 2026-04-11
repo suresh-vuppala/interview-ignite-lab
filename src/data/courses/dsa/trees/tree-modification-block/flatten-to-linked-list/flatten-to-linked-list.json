@@ -1,1 +1,27 @@
-{"title":"Flatten to Linked List","slug":"flatten-to-linked-list","isPremium":false,"isPosted":true,"description":"Flatten binary tree to linked list","mdFile":"dsa/trees/tree-modification-block/flatten-to-linked-list/flatten-to-linked-list.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/tree-modification-block/flatten-to-linked-list/code/cpp/FlattenToLinkedList.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/tree-modification-block/flatten-to-linked-list/code/java/FlattenToLinkedList.java","language":"java"},{"codeFile":"courses/dsa/trees/tree-modification-block/flatten-to-linked-list/code/python/flatten_to_linked_list.py","language":"python"}],"title":"Flatten to Linked List Solution"}]}
+{
+  "title": "Flatten to Linked List",
+  "slug": "flatten-to-linked-list",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Flatten binary tree to linked list",
+  "mdFile": "dsa/trees/tree-modification-block/flatten-to-linked-list/flatten-to-linked-list.md",
+  "codeExamples": [
+    {
+      "title": "Flatten to Linked List",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/tree-modification-block/flatten-to-linked-list/code/cpp/flatten_to_linked_list.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/tree-modification-block/flatten-to-linked-list/code/java/FlattenToLinkedList.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/tree-modification-block/flatten-to-linked-list/code/python/flatten_to_linked_list.py"
+        }
+      ]
+    }
+  ]
+}

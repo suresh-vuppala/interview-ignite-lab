@@ -1,1 +1,27 @@
-{"title":"Tree Type Check","slug":"tree-type-check","isPremium":false,"isPosted":true,"description":"Check if tree is BST, complete, perfect, or full","mdFile":"dsa/trees/structural-property-problems/tree-type-check/tree-type-check.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/structural-property-problems/tree-type-check/code/cpp/TreeTypeCheck.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/structural-property-problems/tree-type-check/code/java/TreeTypeCheck.java","language":"java"},{"codeFile":"courses/dsa/trees/structural-property-problems/tree-type-check/code/python/tree_type_check.py","language":"python"}],"title":"Tree Type Check Solution"}]}
+{
+  "title": "Tree Type Check",
+  "slug": "tree-type-check",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Check if tree is BST, complete, perfect, or full",
+  "mdFile": "dsa/trees/structural-property-problems/tree-type-check/tree-type-check.md",
+  "codeExamples": [
+    {
+      "title": "Tree Type Check",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/structural-property-problems/tree-type-check/code/cpp/tree_type_check.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/structural-property-problems/tree-type-check/code/java/TreeTypeCheck.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/structural-property-problems/tree-type-check/code/python/tree_type_check.py"
+        }
+      ]
+    }
+  ]
+}

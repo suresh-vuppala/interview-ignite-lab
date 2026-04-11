@@ -1,24 +1,34 @@
-Add a row of nodes with value val at given depth.
+Add a row of nodes with a given value at a given depth in a binary tree.
+
+<br>
+
+> Input: root = [4,2,6,3,1,5], val = 1, depth = 2
+> Output: [4,1,1,2,null,null,6,3,1,5]
+> **Key insight:** Find all nodes at depth-1 using BFS or DFS. Insert new nodes between them and their children.
 
 <br>
 
 ---
 
-## Solution 1: BFS to Target Depth
-
-BFS to depth-1, insert new nodes between current and its children.
-
-### Time: O(n) | Space: O(n)
+## Constraints
+- `1 ≤ N ≤ 10⁴`, `1 ≤ depth ≤ N + 1`
 
 <br>
 
 ---
 
-## Solution 2: DFS
+## Solution: BFS to Depth-1, Insert (Optimal)
 
-Recurse to depth-1, insert new nodes.
+**Algorithm:**
+1. If depth == 1: new root with val, old root as left child
+2. BFS to level (depth-2). For each node at that level: create new left node (old left becomes its left), create new right node (old right becomes its right).
 
-### Time: O(n) | Space: O(h)
+### Time Complexity: O(N)
+### Space Complexity: O(W)
+
+> **Drawback:** None.
+
+> **Key Insight for Improvement:** DFS recursive approach: at depth-1, insert new nodes. Pass depth counter down.
 
 <br>
 
@@ -26,13 +36,16 @@ Recurse to depth-1, insert new nodes.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| BFS | O(n) | O(n) | Level-by-level to target |
-| DFS | O(n) | O(h) | Recursive insertion |
+| Solution | Time | Space |
+|----------|------|-------|
+| BFS/DFS | O(N) | O(W) or O(H) |
 
-<br>
-<br>
+**Key Insights:**
+1. **Insert = rewire:** New node takes the old child as ITS child
+2. **Depth 1 special case:** New node becomes root
+3. **Both children get new nodes:** Left and right independently
+
+<br><br>
 
 ---
 

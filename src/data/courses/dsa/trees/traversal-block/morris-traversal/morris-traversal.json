@@ -1,1 +1,27 @@
-{"title":"Morris Traversal","slug":"morris-traversal","isPremium":false,"isPosted":true,"description":"Morris inorder traversal with O(1) space","mdFile":"dsa/trees/traversal-block/morris-traversal/morris-traversal.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/traversal-block/morris-traversal/code/cpp/MorrisTraversal.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/traversal-block/morris-traversal/code/java/MorrisTraversal.java","language":"java"},{"codeFile":"courses/dsa/trees/traversal-block/morris-traversal/code/python/morris_traversal.py","language":"python"}],"title":"Morris Traversal Solution"}]}
+{
+  "title": "Morris Traversal",
+  "slug": "morris-traversal",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Morris inorder traversal with O(1) space",
+  "mdFile": "dsa/trees/traversal-block/morris-traversal/morris-traversal.md",
+  "codeExamples": [
+    {
+      "title": "Morris Traversal",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/traversal-block/morris-traversal/code/cpp/morris_traversal.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/traversal-block/morris-traversal/code/java/MorrisTraversal.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/traversal-block/morris-traversal/code/python/morris_traversal.py"
+        }
+      ]
+    }
+  ]
+}

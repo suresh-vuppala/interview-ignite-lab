@@ -1,30 +1,18 @@
-﻿class TreeNode:
-    def __init__(self, val=0):
-        self.val = val
-        self.left = None
-        self.right = None
+# ============================================================
+# Binary Tree Maximum Path Sum
+# ============================================================
+class Solution:
+    def maxPathSum(self, root) -> int:
+        self.global_max = float('-inf')
 
-def maxPathSum(root):
-    maxSum = [float('-inf')]
-    
-    def dfs(node):
-        if not node:
-            return 0
-        
-        leftSum = max(0, dfs(node.left))
-        rightSum = max(0, dfs(node.right))
-        
-        pathSum = node.val + leftSum + rightSum
-        maxSum[0] = max(maxSum[0], pathSum)
-        
-        return node.val + max(leftSum, rightSum)
-    
-    dfs(root)
-    return maxSum[0]
+        def max_gain(node):
+            if not node: return 0
+            left = max(0, max_gain(node.left))   # Ignore negative branches
+            right = max(0, max_gain(node.right))
+            # Path through this node (uses both sides)
+            self.global_max = max(self.global_max, node.val + left + right)
+            # Return to parent: can only extend ONE side
+            return node.val + max(left, right)
 
-if __name__ == "__main__":
-    root = TreeNode(1)
-    root.left = TreeNode(2)
-    root.right = TreeNode(3)
-    
-    print(f"Max Path Sum: {maxPathSum(root)}")
+        max_gain(root)
+        return self.global_max

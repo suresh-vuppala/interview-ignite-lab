@@ -1,10 +1,14 @@
-﻿class TreeNode:
-    def __init__(self, val=0):
-        self.val = val
-        self.left = None
-        self.right = None
-
-# Solution
-
-if __name__ == "__main__":
-    pass
+# ============================================================
+# Flatten Binary Tree to Linked List
+# ============================================================
+class Solution:
+    def flatten(self, root) -> None:
+        self.prev = None
+        def helper(node):
+            if not node: return
+            helper(node.right)
+            helper(node.left)
+            node.right = self.prev
+            node.left = None
+            self.prev = node
+        helper(root)

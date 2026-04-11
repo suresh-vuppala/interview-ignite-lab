@@ -1,14 +1,14 @@
-import java.util.*;
-
-public class FlattenToLinkedList {
-    static class TreeNode {
-        int val;
-        TreeNode left, right;
-        TreeNode(int x) { val = x; }
-    }
-    
-    // Solution
-    
-    public static void main(String[] args) {
+// ============================================================
+// Flatten Binary Tree to Linked List
+// ============================================================
+class Solution {
+    TreeNode prev = null;
+    public void flatten(TreeNode root) {
+        if (root == null) return;
+        flatten(root.right);
+        flatten(root.left);
+        root.right = prev;
+        root.left = null;
+        prev = root;
     }
 }

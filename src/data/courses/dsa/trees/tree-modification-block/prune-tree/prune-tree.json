@@ -1,1 +1,27 @@
-{"title":"Prune Tree","slug":"prune-tree","isPremium":false,"isPosted":true,"description":"Prune binary tree with 0 values","mdFile":"dsa/trees/tree-modification-block/prune-tree/prune-tree.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/tree-modification-block/prune-tree/code/cpp/PruneTree.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/tree-modification-block/prune-tree/code/java/PruneTree.java","language":"java"},{"codeFile":"courses/dsa/trees/tree-modification-block/prune-tree/code/python/prune_tree.py","language":"python"}],"title":"Prune Tree Solution"}]}
+{
+  "title": "Prune Tree",
+  "slug": "prune-tree",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Prune binary tree with 0 values",
+  "mdFile": "dsa/trees/tree-modification-block/prune-tree/prune-tree.md",
+  "codeExamples": [
+    {
+      "title": "Prune Tree",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/tree-modification-block/prune-tree/code/cpp/prune_tree.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/tree-modification-block/prune-tree/code/java/PruneTree.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/tree-modification-block/prune-tree/code/python/prune_tree.py"
+        }
+      ]
+    }
+  ]
+}

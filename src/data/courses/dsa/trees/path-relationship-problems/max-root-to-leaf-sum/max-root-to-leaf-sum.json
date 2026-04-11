@@ -1,1 +1,27 @@
-{"title":"Max Root to Leaf Sum","slug":"max-root-to-leaf-sum","isPremium":false,"isPosted":true,"description":"Find maximum sum from root to leaf","mdFile":"dsa/trees/path-relationship-problems/max-root-to-leaf-sum/max-root-to-leaf-sum.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/path-relationship-problems/max-root-to-leaf-sum/code/cpp/MaxRootToLeafSum.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/path-relationship-problems/max-root-to-leaf-sum/code/java/MaxRootToLeafSum.java","language":"java"},{"codeFile":"courses/dsa/trees/path-relationship-problems/max-root-to-leaf-sum/code/python/max_root_to_leaf_sum.py","language":"python"}],"title":"Max Root to Leaf Sum Solution"}]}
+{
+  "title": "Max Root to Leaf Sum",
+  "slug": "max-root-to-leaf-sum",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find maximum sum from root to leaf",
+  "mdFile": "dsa/trees/path-relationship-problems/max-root-to-leaf-sum/max-root-to-leaf-sum.md",
+  "codeExamples": [
+    {
+      "title": "Max Root to Leaf Sum",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/max-root-to-leaf-sum/code/cpp/max_root_to_leaf_sum.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/max-root-to-leaf-sum/code/java/MaxRootToLeafSum.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/max-root-to-leaf-sum/code/python/max_root_to_leaf_sum.py"
+        }
+      ]
+    }
+  ]
+}

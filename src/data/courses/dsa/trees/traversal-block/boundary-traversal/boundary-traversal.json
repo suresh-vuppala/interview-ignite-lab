@@ -1,1 +1,27 @@
-{"title":"Boundary Traversal","slug":"boundary-traversal","isPremium":false,"isPosted":true,"description":"Boundary traversal of binary tree","mdFile":"dsa/trees/traversal-block/boundary-traversal/boundary-traversal.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/traversal-block/boundary-traversal/code/cpp/BoundaryTraversal.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/traversal-block/boundary-traversal/code/java/BoundaryTraversal.java","language":"java"},{"codeFile":"courses/dsa/trees/traversal-block/boundary-traversal/code/python/boundary_traversal.py","language":"python"}],"title":"Boundary Traversal Solution"}]}
+{
+  "title": "Boundary Traversal",
+  "slug": "boundary-traversal",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Boundary traversal of binary tree",
+  "mdFile": "dsa/trees/traversal-block/boundary-traversal/boundary-traversal.md",
+  "codeExamples": [
+    {
+      "title": "Boundary Traversal",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/traversal-block/boundary-traversal/code/cpp/boundary_traversal.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/traversal-block/boundary-traversal/code/java/BoundaryTraversal.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/traversal-block/boundary-traversal/code/python/boundary_traversal.py"
+        }
+      ]
+    }
+  ]
+}

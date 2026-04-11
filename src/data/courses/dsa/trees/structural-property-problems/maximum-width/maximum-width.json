@@ -1,1 +1,27 @@
-{"title":"Maximum Width","slug":"maximum-width","isPremium":false,"isPosted":true,"description":"Find maximum width of a binary tree","mdFile":"dsa/trees/structural-property-problems/maximum-width/maximum-width.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/structural-property-problems/maximum-width/code/cpp/MaximumWidth.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/structural-property-problems/maximum-width/code/java/MaximumWidth.java","language":"java"},{"codeFile":"courses/dsa/trees/structural-property-problems/maximum-width/code/python/maximum_width.py","language":"python"}],"title":"Maximum Width Solution"}]}
+{
+  "title": "Maximum Width",
+  "slug": "maximum-width",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find maximum width of a binary tree",
+  "mdFile": "dsa/trees/structural-property-problems/maximum-width/maximum-width.md",
+  "codeExamples": [
+    {
+      "title": "Maximum Width",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/structural-property-problems/maximum-width/code/cpp/maximum_width.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/structural-property-problems/maximum-width/code/java/MaximumWidth.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/structural-property-problems/maximum-width/code/python/maximum_width.py"
+        }
+      ]
+    }
+  ]
+}

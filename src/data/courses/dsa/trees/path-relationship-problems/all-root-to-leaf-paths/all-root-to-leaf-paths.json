@@ -1,1 +1,27 @@
-{"title":"All Root to Leaf Paths","slug":"all-root-to-leaf-paths","isPremium":false,"isPosted":true,"description":"Find all root to leaf paths in binary tree","mdFile":"dsa/trees/path-relationship-problems/all-root-to-leaf-paths/all-root-to-leaf-paths.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/path-relationship-problems/all-root-to-leaf-paths/code/cpp/AllRootToLeafPaths.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/path-relationship-problems/all-root-to-leaf-paths/code/java/AllRootToLeafPaths.java","language":"java"},{"codeFile":"courses/dsa/trees/path-relationship-problems/all-root-to-leaf-paths/code/python/all_root_to_leaf_paths.py","language":"python"}],"title":"All Root to Leaf Paths Solution"}]}
+{
+  "title": "All Root to Leaf Paths",
+  "slug": "all-root-to-leaf-paths",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find all root to leaf paths in binary tree",
+  "mdFile": "dsa/trees/path-relationship-problems/all-root-to-leaf-paths/all-root-to-leaf-paths.md",
+  "codeExamples": [
+    {
+      "title": "All Root to Leaf Paths",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/all-root-to-leaf-paths/code/cpp/all_root_to_leaf_paths.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/all-root-to-leaf-paths/code/java/AllRootToLeafPaths.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/all-root-to-leaf-paths/code/python/all_root_to_leaf_paths.py"
+        }
+      ]
+    }
+  ]
+}

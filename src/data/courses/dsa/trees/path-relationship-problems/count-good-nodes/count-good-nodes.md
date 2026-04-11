@@ -1,38 +1,39 @@
-Count nodes where no ancestor has a greater value (node is "good").
+A node X in the tree is "good" if there are no nodes with a greater value on the path from root to X. Count all good nodes.
 
 <br>
 
-> Input: [3,1,4,3,null,1,5]
-> Output: 4 (nodes 3, 3, 4, 5)
+> Input: root = [3,1,4,3,null,1,5]
+> Output: 4 (good: 3, 3, 4, 5)
 
-<br>
-
----
-
-## Solution 1: DFS with Max Tracking (Optimal)
-
-**Intuition:** Track maximum value from root to current node. If node.val >= maxSoFar, it's a good node.
-
-**Algorithm:**
-```
-int dfs(node, maxSoFar):
-    if null: return 0
-    count = (node.val >= maxSoFar) ? 1 : 0
-    newMax = max(maxSoFar, node.val)
-    return count + dfs(left, newMax) + dfs(right, newMax)
-```
-
-### Time: O(n) | Space: O(h)
+> Explanation: Root 3 is always good. Node 4 > 3 = good. Node 5 > max(3,4) = good. Node 3 (left-left): 3 ≥ max(3,1) = good. Node 1: 1 < 3 = not good.
+> 
+> **Key insight:** DFS tracking the maximum value seen on the path from root. If node.val ≥ maxSoFar → good node. Pass updated max to children.
 
 <br>
 
 ---
 
-## Solution 2: BFS with Max Tracking
+## Constraints
+- `1 ≤ N ≤ 10⁵`
 
-Queue stores (node, maxSoFar). Same logic iteratively.
+<br>
 
-### Time: O(n) | Space: O(n)
+---
+
+## Solution: DFS with Max Tracking (Optimal)
+
+**Algorithm:** DFS passing maxSoFar. If node.val ≥ maxSoFar → count++, update maxSoFar. Recurse children.
+
+### Time Complexity: O(N)
+**Why?** Visit each node once.
+
+**Detailed breakdown:** N = 100,000 → 100,000 operations
+
+### Space Complexity: O(H)
+
+> **Drawback:** None — must visit all nodes.
+
+> **Key Insight for Improvement:** Already optimal. Simple DFS with one parameter.
 
 <br>
 
@@ -40,13 +41,16 @@ Queue stores (node, maxSoFar). Same logic iteratively.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| DFS + Max | O(n) | O(h) | Pass max down recursively |
-| BFS + Max | O(n) | O(n) | Queue with max tracking |
+| Solution | Time | Space |
+|----------|------|-------|
+| DFS + Max | O(N) | O(H) |
 
-<br>
-<br>
+**Key Insights:**
+1. **Good = no greater ancestor:** node.val ≥ max of all ancestors
+2. **Root is always good:** maxSoFar starts at -infinity (or root.val)
+3. **Update max when going down:** Children see the updated maximum
+
+<br><br>
 
 ---
 

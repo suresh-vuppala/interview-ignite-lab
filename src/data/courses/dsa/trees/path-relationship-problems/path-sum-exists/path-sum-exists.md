@@ -1,36 +1,36 @@
-Check if root-to-leaf path exists with given target sum.
+Given a binary tree and a target sum, determine if the tree has a root-to-leaf path where values sum to target.
 
 <br>
 
 > Input: root = [5,4,8,11,null,13,4,7,2,null,null,null,1], target = 22
-> Output: true (path: 5→4→11→2)
+> Output: true (path: 5→4→11→2 = 22)
+> **Key insight:** DFS subtracting current value from target. At leaf, check if remaining target == 0.
 
 <br>
 
 ---
 
-## Solution 1: DFS Recursive
-
-**Intuition:** Subtract current value from target. At leaf, check if remaining == 0.
-
-```
-bool hasPathSum(node, target):
-    if null: return false
-    if leaf and target == node.val: return true
-    return hasPathSum(left, target - node.val) || hasPathSum(right, target - node.val)
-```
-
-### Time: O(n) | Space: O(h)
+## Constraints
+- `-1000 ≤ Node.val ≤ 1000`, `-1000 ≤ targetSum ≤ 1000`
 
 <br>
 
 ---
 
-## Solution 2: BFS with Running Sum
+## Solution: DFS — Subtract and Check at Leaf (Optimal)
 
-Track (node, remaining_sum) pairs in queue.
+**Algorithm:** hasPathSum(node, remaining). Subtract node.val. At leaf: return remaining == 0. Else: recurse left OR right.
 
-### Time: O(n) | Space: O(n)
+### Time Complexity: O(N)
+**Why?** Visit each node at most once.
+
+**Detailed breakdown:** N = 5000 → at most 5000 operations
+
+### Space Complexity: O(H)
+
+> **Drawback:** None — O(N) is optimal. Must check all paths in worst case.
+
+> **Key Insight for Improvement:** Early termination when target found. But worst case still O(N).
 
 <br>
 
@@ -38,13 +38,16 @@ Track (node, remaining_sum) pairs in queue.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| DFS | O(n) | O(h) | Subtract as you go |
-| BFS | O(n) | O(n) | Iterative approach |
+| Solution | Time | Space |
+|----------|------|-------|
+| DFS subtract | O(N) | O(H) |
 
-<br>
-<br>
+**Key Insights:**
+1. **Subtract, don't accumulate:** Pass remaining = target - node.val down
+2. **Leaf check:** MUST be both children null — not just any null child
+3. **Foundation for Path Sum II:** Same pattern but collect all valid paths
+
+<br><br>
 
 ---
 

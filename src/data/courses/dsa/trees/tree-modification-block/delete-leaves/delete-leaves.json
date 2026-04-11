@@ -1,1 +1,27 @@
-{"title":"Delete Leaves","slug":"delete-leaves","isPremium":false,"isPosted":true,"description":"Delete leaves with specific value","mdFile":"dsa/trees/tree-modification-block/delete-leaves/delete-leaves.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/tree-modification-block/delete-leaves/code/cpp/DeleteLeaves.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/tree-modification-block/delete-leaves/code/java/DeleteLeaves.java","language":"java"},{"codeFile":"courses/dsa/trees/tree-modification-block/delete-leaves/code/python/delete_leaves.py","language":"python"}],"title":"Delete Leaves Solution"}]}
+{
+  "title": "Delete Leaves",
+  "slug": "delete-leaves",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Delete leaves with specific value",
+  "mdFile": "dsa/trees/tree-modification-block/delete-leaves/delete-leaves.md",
+  "codeExamples": [
+    {
+      "title": "Delete Leaves",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/tree-modification-block/delete-leaves/code/cpp/delete_leaves.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/tree-modification-block/delete-leaves/code/java/DeleteLeaves.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/tree-modification-block/delete-leaves/code/python/delete_leaves.py"
+        }
+      ]
+    }
+  ]
+}

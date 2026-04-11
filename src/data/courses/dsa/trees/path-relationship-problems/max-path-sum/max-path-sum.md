@@ -1,63 +1,59 @@
-Find the maximum path sum in a binary tree. Path can start and end at any node.
+Find the maximum path sum in a binary tree. A path can start and end at ANY node (not necessarily root-to-leaf).
 
 <br>
 
-> Input: [-10,9,20,null,null,15,7]
+> Input: root = [-10,9,20,null,null,15,7]
 > Output: 42 (path: 15→20→7)
+
+> Explanation: The path doesn't need to pass through root. Max = 15 + 20 + 7 = 42.
+> 
+> **Key insight:** For each node, the max path THROUGH it = node.val + max(0, leftGain) + max(0, rightGain). Track global max. Return node.val + max(0, max(leftGain, rightGain)) to parent (can only extend one side).
 
 <br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 3 × 10⁴`
-- `-1000 ≤ Node.val ≤ 1000`
+- `1 ≤ N ≤ 3 × 10⁴`, `-1000 ≤ Node.val ≤ 1000`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
-
-1. **All negative:** Pick least negative single node
-2. **Single node:** Return its value
-3. **Path doesn't pass root:** Entirely in one subtree
-
-<br>
-
----
-
-## Solution 1: Brute Force — All Paths Between All Pairs
-
-### Time: O(n³) | Space: O(n)
-
-<br>
-
----
-
-## Solution 2: DFS with Global Max (Optimal)
-
-**Intuition:** At each node, compute max "one-sided" path (node + best child). Track global max including "two-sided" path (left + node + right).
+## Solution: DFS — Track Global Max While Computing Gains (Optimal)
 
 **Algorithm:**
+1. Helper returns max gain from this node downward (single path)
+2. At each node: maxGainLeft = max(0, helper(left)), maxGainRight = max(0, helper(right))
+3. pathThroughNode = val + maxGainLeft + maxGainRight → update global max
+4. Return val + max(maxGainLeft, maxGainRight) to parent (can only pick one side)
+
+### Time Complexity: O(N)
+**Why?** Each node visited once during DFS.
+
+**Detailed breakdown:** N = 30,000 → 30,000 operations
+
+### Space Complexity: O(H)
+
+**Example walkthrough:**
 ```
-maxSum = -∞
-int maxGain(node):
-    if null: return 0
-    left = max(maxGain(node.left), 0)   // Ignore negative paths
-    right = max(maxGain(node.right), 0)
-    
-    // Path through this node (possibly using both sides)
-    maxSum = max(maxSum, left + node.val + right)
-    
-    // Return one-sided max to parent
-    return node.val + max(left, right)
+     -10
+    /    \
+   9     20
+        /  \
+       15   7
+
+helper(9) = 9 (leaf). pathThrough = 9. Return 9.
+helper(15) = 15. helper(7) = 7.
+helper(20) = 20+max(0,15)+max(0,7) → pathThrough = 42 ★. Return 20+15 = 35.
+helper(-10) = -10+max(0,9)+max(0,35) → pathThrough = -10+9+35 = 34. Return -10+35 = 25.
+
+Global max = 42 ✓
 ```
 
-**Key:** Return one-sided path to parent (can only go one direction), but track two-sided path globally.
+> **Drawback:** None — this is optimal.
 
-### Time: O(n) | Space: O(h)
+> **Key Insight for Improvement:** The max(0, ...) clipping is crucial — negative subtrees are ignored (we don't have to include them).
 
 <br>
 
@@ -67,11 +63,15 @@ int maxGain(node):
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| All Pairs | O(n³) | O(n) | Check all possible paths |
-| DFS + Global Max | O(n) | O(h) | One-sided vs two-sided path tracking |
+| DFS + Global Max | O(N) | O(H) | Compute gain, track global max path |
 
-<br>
-<br>
+**Key Insights:**
+1. **Two different computations:** pathThrough uses both sides, return to parent uses one side
+2. **max(0, gain):** Ignore negative branches — don't extend into them
+3. **Global tracking:** Path may not pass through root — track max across ALL nodes
+4. **FAANG critical:** Top-5 most asked tree problem at Google/Meta
+
+<br><br>
 
 ---
 

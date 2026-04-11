@@ -1,11 +1,18 @@
-﻿class TreeNode:
-    def __init__(self, val=0):
-        self.val = val
-        self.left = None
-        self.right = None
-
-# Solution implementation
-# Reference: LeetCode problems
-
-if __name__ == "__main__":
-    pass
+# ============================================================
+# Diagonal Traversal
+# ============================================================
+from collections import deque
+class Solution:
+    def diagonalTraversal(self, root):
+        if not root: return []
+        result, q = [], deque([root])
+        while q:
+            diagonal = []
+            for _ in range(len(q)):
+                node = q.popleft()
+                while node:
+                    diagonal.append(node.val)
+                    if node.left: q.append(node.left)
+                    node = node.right
+            result.append(diagonal)
+        return result

@@ -6,15 +6,15 @@
   "mdFile": "cousins-in-binary-tree.md",
   "codeExamples": [
     {
-      "title": "Cousins in Binary Tree Solution",
+      "title": "Cousins in Binary Tree",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/cousins-in-binary-tree/code/cpp/cousins_in_binary_tree.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/trees/path-relationship-problems/cousins-in-binary-tree/code/java/CousinsInBinaryTree.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/trees/path-relationship-problems/cousins-in-binary-tree/code/cpp/CousinsInBinaryTree.cpp"
         },
         {
           "language": "python",

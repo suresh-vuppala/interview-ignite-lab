@@ -1,1 +1,27 @@
-{"title":"Convert to Doubly Linked List","slug":"convert-to-dll","isPremium":false,"isPosted":true,"description":"Convert binary tree to doubly linked list","mdFile":"dsa/trees/tree-modification-block/convert-to-dll/convert-to-dll.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/tree-modification-block/convert-to-dll/code/cpp/ConvertToDLL.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/tree-modification-block/convert-to-dll/code/java/ConvertToDLL.java","language":"java"},{"codeFile":"courses/dsa/trees/tree-modification-block/convert-to-dll/code/python/convert_to_dll.py","language":"python"}],"title":"Convert to Doubly Linked List Solution"}]}
+{
+  "title": "Convert to Doubly Linked List",
+  "slug": "convert-to-dll",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Convert binary tree to doubly linked list",
+  "mdFile": "dsa/trees/tree-modification-block/convert-to-dll/convert-to-dll.md",
+  "codeExamples": [
+    {
+      "title": "Convert to Doubly Linked List",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/tree-modification-block/convert-to-dll/code/cpp/convert_to_dll.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/tree-modification-block/convert-to-dll/code/java/ConvertToDll.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/tree-modification-block/convert-to-dll/code/python/convert_to_dll.py"
+        }
+      ]
+    }
+  ]
+}

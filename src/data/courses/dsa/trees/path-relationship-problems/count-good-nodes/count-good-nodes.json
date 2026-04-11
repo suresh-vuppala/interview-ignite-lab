@@ -6,7 +6,7 @@
   "mdFile": "count-good-nodes.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Count Good Nodes in Binary Tree",
       "languages": [
         {
           "language": "cpp",

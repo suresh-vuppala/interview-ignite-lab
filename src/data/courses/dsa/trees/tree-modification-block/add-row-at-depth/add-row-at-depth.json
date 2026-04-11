@@ -1,1 +1,27 @@
-{"title":"Add Row at Depth","slug":"add-row-at-depth","isPremium":false,"isPosted":true,"description":"Add row of nodes at specific depth","mdFile":"dsa/trees/tree-modification-block/add-row-at-depth/add-row-at-depth.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/tree-modification-block/add-row-at-depth/code/cpp/AddRowAtDepth.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/tree-modification-block/add-row-at-depth/code/java/AddRowAtDepth.java","language":"java"},{"codeFile":"courses/dsa/trees/tree-modification-block/add-row-at-depth/code/python/add_row_at_depth.py","language":"python"}],"title":"Add Row at Depth Solution"}]}
+{
+  "title": "Add Row at Depth",
+  "slug": "add-row-at-depth",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Add row of nodes at specific depth",
+  "mdFile": "dsa/trees/tree-modification-block/add-row-at-depth/add-row-at-depth.md",
+  "codeExamples": [
+    {
+      "title": "Add Row at Depth",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/tree-modification-block/add-row-at-depth/code/cpp/add_row_at_depth.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/tree-modification-block/add-row-at-depth/code/java/AddRowAtDepth.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/tree-modification-block/add-row-at-depth/code/python/add_row_at_depth.py"
+        }
+      ]
+    }
+  ]
+}

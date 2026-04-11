@@ -1,1 +1,27 @@
-{"title":"Subtree Check","slug":"subtree-check","isPremium":false,"isPosted":true,"description":"Check if one tree is subtree of another","mdFile":"dsa/trees/structural-property-problems/subtree-check/subtree-check.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/structural-property-problems/subtree-check/code/cpp/SubtreeCheck.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/structural-property-problems/subtree-check/code/java/SubtreeCheck.java","language":"java"},{"codeFile":"courses/dsa/trees/structural-property-problems/subtree-check/code/python/subtree_check.py","language":"python"}],"title":"Subtree Check Solution"}]}
+{
+  "title": "Subtree Check",
+  "slug": "subtree-check",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Check if one tree is subtree of another",
+  "mdFile": "dsa/trees/structural-property-problems/subtree-check/subtree-check.md",
+  "codeExamples": [
+    {
+      "title": "Subtree Check",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/structural-property-problems/subtree-check/code/cpp/subtree_check.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/structural-property-problems/subtree-check/code/java/SubtreeCheck.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/structural-property-problems/subtree-check/code/python/subtree_check.py"
+        }
+      ]
+    }
+  ]
+}

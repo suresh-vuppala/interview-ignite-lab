@@ -1,11 +1,10 @@
-﻿class TreeNode:
-    def __init__(self, val=0):
-        self.val = val
-        self.left = None
-        self.right = None
-
-# Solution implementation
-# Reference: LeetCode problems
-
-if __name__ == "__main__":
-    pass
+# ============================================================
+# Mirror Binary Tree
+# ============================================================
+class Solution:
+    def mirror(self, root):
+        if not root: return None
+        root.left, root.right = root.right, root.left
+        self.mirror(root.left)
+        self.mirror(root.right)
+        return root

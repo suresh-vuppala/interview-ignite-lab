@@ -1,39 +1,59 @@
-Flatten binary tree to linked list (preorder) in-place using right pointers.
+Flatten a binary tree to a linked list in-place using preorder traversal. Use right pointers as next, set all left pointers to null.
 
 <br>
 
-> Input: [1,2,5,3,4,null,6]
-> Output: 1→2→3→4→5→6 (right pointers)
-
-<br>
-
----
-
-## Solution 1: Preorder → Array → Relink
-
-Collect preorder traversal, relink nodes.
-
-### Time: O(n) | Space: O(n)
+> Input: root = [1,2,5,3,4,null,6]
+> Output: [1,null,2,null,3,null,4,null,5,null,6]
+> **Key insight:** Process right-to-left postorder (right→left→root). Maintain a `prev` pointer. Each node's right points to prev, left to null.
 
 <br>
 
 ---
 
-## Solution 2: Reverse Postorder (Optimal)
-
-**Intuition:** Process right → left → root (reverse preorder). Maintain a `prev` pointer. Set current.right = prev, current.left = null.
-
-### Time: O(n) | Space: O(h)
+## Constraints
+- `0 ≤ N ≤ 2000`
 
 <br>
 
 ---
 
-## Solution 3: Morris-Style O(1) Space
+## Solution 1: Preorder to Array, Rebuild
 
-For each node with a left child: find rightmost node in left subtree, connect it to current.right. Move left subtree to right, set left to null.
+### Time: O(N) | Space: O(N) — stores all nodes
 
-### Time: O(n) | Space: O(1)
+> **Drawback:** Extra O(N) space. Can we do it in-place?
+
+> **Key Insight for Improvement:** Reverse postorder (right→left→root) with a prev pointer. Each node's right = prev, left = null. This modifies the tree in-place with O(H) stack space.
+
+<br>
+
+---
+
+## Solution 2: Reverse Postorder with Prev Pointer (Optimal)
+
+**Algorithm:** Process in reverse preorder (right→left→root). Each node: right = prev, left = null. Update prev = current.
+
+### Time Complexity: O(N)
+### Space Complexity: O(H)
+
+**Example walkthrough:**
+```
+Tree: [1,2,5,3,4,null,6]
+Reverse preorder: 6, 5, 4, 3, 2, 1
+
+Process 6: right=null(prev), prev=6
+Process 5: right=6(prev), prev=5
+Process 4: right=5(prev), prev=4
+Process 3: right=4(prev), prev=3
+Process 2: right=3(prev), prev=2
+Process 1: right=2(prev), prev=1
+
+Result: 1→2→3→4→5→6 ✓
+```
+
+> **Drawback:** Recursive O(H) space.
+
+> **Key Insight for Improvement:** Morris-style O(1) space: for each node, find rightmost of left subtree, point it to right child, then move left subtree to right.
 
 <br>
 
@@ -43,12 +63,15 @@ For each node with a left child: find rightmost node in left subtree, connect it
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Array | O(n) | O(n) | Preorder → relink |
-| Reverse Post | O(n) | O(h) | Process right-to-left |
-| Morris-Style | O(n) | O(1) | Thread left subtree to right |
+| Array rebuild | O(N) | O(N) | Preorder → array → linked list |
+| Reverse postorder | O(N) | O(H) | Prev pointer technique |
 
-<br>
-<br>
+**Key Insights:**
+1. **Reverse postorder:** right→left→root → processes last node first
+2. **Prev pointer:** Links nodes in preorder without extra storage
+3. **Morris variant:** O(1) space by threading left subtree's rightmost to right child
+
+<br><br>
 
 ---
 

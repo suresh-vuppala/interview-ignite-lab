@@ -1,10 +1,11 @@
-﻿class TreeNode:
-    def __init__(self, val=0):
-        self.val = val
-        self.left = None
-        self.right = None
-
-# Solution
-
-if __name__ == "__main__":
-    pass
+# ============================================================
+# Trim BST
+# ============================================================
+class Solution:
+    def trimBST(self, root, low: int, high: int):
+        if not root: return None
+        if root.val < low: return self.trimBST(root.right, low, high)
+        if root.val > high: return self.trimBST(root.left, low, high)
+        root.left = self.trimBST(root.left, low, high)
+        root.right = self.trimBST(root.right, low, high)
+        return root

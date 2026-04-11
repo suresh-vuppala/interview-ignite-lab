@@ -1,14 +1,11 @@
-import java.util.*;
-
-public class PathSumExists {
-    static class TreeNode {
-        int val;
-        TreeNode left, right;
-        TreeNode(int x) { val = x; }
-    }
-    
-    // Solution
-    
-    public static void main(String[] args) {
+// ============================================================
+// Path Sum
+// ============================================================
+class Solution {
+    public boolean hasPathSum(TreeNode root, int targetSum) {
+        if (root == null) return false;
+        targetSum -= root.val;
+        if (root.left == null && root.right == null) return targetSum == 0;
+        return hasPathSum(root.left, targetSum) || hasPathSum(root.right, targetSum);
     }
 }

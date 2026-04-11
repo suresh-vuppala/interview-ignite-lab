@@ -1,25 +1,36 @@
-Return all root-to-leaf paths.
+Return all root-to-leaf paths as strings.
+
+<br>
+
+> Input: root = [1,2,3,null,5]
+> Output: ["1->2->5", "1->3"]
+> **Key insight:** DFS with path tracking. At leaf nodes, add the current path to results.
 
 <br>
 
 ---
 
-## Solution 1: DFS Backtracking
-
-Build path string/list while traversing. At leaf, add current path to result. Backtrack.
-
-### Time: O(n × h) — h for path copy at each leaf
-### Space: O(h) recursion + O(n × h) result
+## Constraints
+- `1 ≤ N ≤ 100`
 
 <br>
 
 ---
 
-## Solution 2: BFS with Path Tracking
+## Solution: DFS with Path Tracking (Optimal)
 
-Queue stores (node, path_so_far). At leaf, add to result.
+**Algorithm:** DFS passing current path string. At leaf → add to result. Else → recurse left/right.
 
-### Time: O(n × h) | Space: O(n × h)
+### Time Complexity: O(N)
+**Why?** Visit each node once. String copying: O(H) per path, O(N×H) worst case.
+
+**Detailed breakdown:** N = 100 → 100 operations + path string building
+
+### Space Complexity: O(H) recursion + O(N×H) for result paths
+
+> **Drawback:** String concatenation can be expensive. Use vector<int> and join at leaf for efficiency.
+
+> **Key Insight for Improvement:** Pass path by reference and backtrack (remove last element after recursion) for less memory allocation.
 
 <br>
 
@@ -29,11 +40,15 @@ Queue stores (node, path_so_far). At leaf, add to result.
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| DFS Backtrack | O(n×h) | O(h) + result | Natural recursive path building |
-| BFS | O(n×h) | O(n×h) | Iterative alternative |
+| DFS + Path String | O(N×H) | O(N×H) | Concatenate path, add at leaf |
+| DFS + Backtrack | O(N×H) | O(H) | Reuse path vector |
 
-<br>
-<br>
+**Key Insights:**
+1. **Leaf check:** Both children null → complete path
+2. **Backtracking:** Remove last node after recursing both children
+3. **Foundation:** Template for path-sum, path-sum-II, all path problems
+
+<br><br>
 
 ---
 

@@ -1,14 +1,14 @@
-import java.util.*;
-
-public class MirrorTree {
-    static class TreeNode {
-        int val;
-        TreeNode left, right;
-        TreeNode(int x) { val = x; }
-    }
-    
-    // Solution implementation
-    public static void main(String[] args) {
-        // Example usage
+// ============================================================
+// Mirror Binary Tree
+// ============================================================
+class Solution {
+    public TreeNode mirror(TreeNode root) {
+        if (root == null) return null;
+        TreeNode temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+        mirror(root.left);
+        mirror(root.right);
+        return root;
     }
 }

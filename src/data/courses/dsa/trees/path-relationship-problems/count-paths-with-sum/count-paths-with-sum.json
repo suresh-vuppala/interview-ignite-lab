@@ -1,1 +1,27 @@
-{"title":"Count Paths with Sum","slug":"count-paths-with-sum","isPremium":false,"isPosted":true,"description":"Count number of paths with given sum","mdFile":"dsa/trees/path-relationship-problems/count-paths-with-sum/count-paths-with-sum.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/path-relationship-problems/count-paths-with-sum/code/cpp/CountPathsWithSum.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/path-relationship-problems/count-paths-with-sum/code/java/CountPathsWithSum.java","language":"java"},{"codeFile":"courses/dsa/trees/path-relationship-problems/count-paths-with-sum/code/python/count_paths_with_sum.py","language":"python"}],"title":"Count Paths with Sum Solution"}]}
+{
+  "title": "Count Paths with Sum",
+  "slug": "count-paths-with-sum",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Count number of paths with given sum",
+  "mdFile": "dsa/trees/path-relationship-problems/count-paths-with-sum/count-paths-with-sum.md",
+  "codeExamples": [
+    {
+      "title": "Count Paths with Sum",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/count-paths-with-sum/code/cpp/count_paths_with_sum.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/count-paths-with-sum/code/java/CountPathsWithSum.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/count-paths-with-sum/code/python/count_paths_with_sum.py"
+        }
+      ]
+    }
+  ]
+}

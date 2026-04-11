@@ -1,1 +1,27 @@
-{"title":"Reverse Level Order Traversal","slug":"reverse-level-order","isPremium":false,"isPosted":true,"description":"BFS traversal in reverse order","mdFile":"dsa/trees/traversal-block/reverse-level-order/reverse-level-order.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/traversal-block/reverse-level-order/code/cpp/ReverseLevelOrder.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/traversal-block/reverse-level-order/code/java/ReverseLevelOrder.java","language":"java"},{"codeFile":"courses/dsa/trees/traversal-block/reverse-level-order/code/python/reverse_level_order.py","language":"python"}],"title":"Reverse Level Order Traversal Solution"}]}
+{
+  "title": "Reverse Level Order Traversal",
+  "slug": "reverse-level-order",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "BFS traversal in reverse order",
+  "mdFile": "dsa/trees/traversal-block/reverse-level-order/reverse-level-order.md",
+  "codeExamples": [
+    {
+      "title": "Reverse Level Order Traversal",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/traversal-block/reverse-level-order/code/cpp/reverse_level_order.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/traversal-block/reverse-level-order/code/java/ReverseLevelOrder.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/traversal-block/reverse-level-order/code/python/reverse_level_order.py"
+        }
+      ]
+    }
+  ]
+}

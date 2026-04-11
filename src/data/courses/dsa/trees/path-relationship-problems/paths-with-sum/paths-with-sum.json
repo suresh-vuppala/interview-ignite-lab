@@ -1,1 +1,27 @@
-{"title":"Paths with Sum","slug":"paths-with-sum","isPremium":false,"isPosted":true,"description":"Find all paths with given sum in binary tree","mdFile":"dsa/trees/path-relationship-problems/paths-with-sum/paths-with-sum.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/path-relationship-problems/paths-with-sum/code/cpp/PathsWithSum.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/path-relationship-problems/paths-with-sum/code/java/PathsWithSum.java","language":"java"},{"codeFile":"courses/dsa/trees/path-relationship-problems/paths-with-sum/code/python/paths_with_sum.py","language":"python"}],"title":"Paths with Sum Solution"}]}
+{
+  "title": "Paths with Sum",
+  "slug": "paths-with-sum",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find all paths with given sum in binary tree",
+  "mdFile": "dsa/trees/path-relationship-problems/paths-with-sum/paths-with-sum.md",
+  "codeExamples": [
+    {
+      "title": "Paths with Sum",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/paths-with-sum/code/cpp/paths_with_sum.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/paths-with-sum/code/java/PathsWithSum.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/paths-with-sum/code/python/paths_with_sum.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,14 +1,24 @@
+// ============================================================
+// Reverse Level Order Traversal
+// ============================================================
 import java.util.*;
-
-public class ReverseLevelOrder {
-    static class TreeNode {
-        int val;
-        TreeNode left, right;
-        TreeNode(int x) { val = x; }
-    }
-    
-    // Solution implementation
-    public static void main(String[] args) {
-        // Example usage
+class Solution {
+    public List<List<Integer>> reverseLevelOrder(TreeNode root) {
+        LinkedList<List<Integer>> result = new LinkedList<>();
+        if (root == null) return result;
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            int size = q.size();
+            List<Integer> level = new ArrayList<>();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = q.poll();
+                level.add(node.val);
+                if (node.left != null) q.add(node.left);
+                if (node.right != null) q.add(node.right);
+            }
+            result.addFirst(level); // Insert at front = reverse
+        }
+        return result;
     }
 }

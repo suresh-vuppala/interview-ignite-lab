@@ -1,1 +1,27 @@
-{"title":"Max Path Sum","slug":"max-path-sum","isPremium":false,"isPosted":true,"description":"Find maximum path sum in binary tree","mdFile":"dsa/trees/path-relationship-problems/max-path-sum/max-path-sum.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/path-relationship-problems/max-path-sum/code/cpp/MaxPathSum.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/path-relationship-problems/max-path-sum/code/java/MaxPathSum.java","language":"java"},{"codeFile":"courses/dsa/trees/path-relationship-problems/max-path-sum/code/python/max_path_sum.py","language":"python"}],"title":"Max Path Sum Solution"}]}
+{
+  "title": "Max Path Sum",
+  "slug": "max-path-sum",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find maximum path sum in binary tree",
+  "mdFile": "dsa/trees/path-relationship-problems/max-path-sum/max-path-sum.md",
+  "codeExamples": [
+    {
+      "title": "Max Path Sum",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/max-path-sum/code/cpp/max_path_sum.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/max-path-sum/code/java/MaxPathSum.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/max-path-sum/code/python/max_path_sum.py"
+        }
+      ]
+    }
+  ]
+}

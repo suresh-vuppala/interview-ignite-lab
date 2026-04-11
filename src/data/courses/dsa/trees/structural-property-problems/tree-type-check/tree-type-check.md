@@ -1,18 +1,40 @@
-Check if tree is Full, Complete, or Perfect binary tree.
+Check if a binary tree is: (a) Full — every node has 0 or 2 children, (b) Complete — all levels filled except possibly the last (filled left to right), (c) Perfect — all internal nodes have 2 children and all leaves at same level.
+
+<br>
+
+> Input: root = [1,2,3,4,5,6,7]
+> Output: Full=true, Complete=true, Perfect=true
+
+> Explanation: All internal nodes have 2 children, all leaves at level 3, completely filled.
+> 
+> **Key insight:** Full: DFS check 0 or 2 children. Complete: BFS — once a non-full node is seen, all subsequent must be leaves. Perfect: leftHeight == rightHeight (both go all the way down).
 
 <br>
 
 ---
 
-## Solution 1: Recursive Checks
+## Constraints
+- `0 ≤ N ≤ 10⁴`
 
-- **Full:** Every node has 0 or 2 children
-- **Complete:** All levels full except possibly last (filled left to right)
-- **Perfect:** All internal nodes have 2 children, all leaves at same level
+<br>
 
-**Complete check:** BFS — once a non-full node is seen, all remaining must be leaves.
+---
 
-### Time: O(n) | Space: O(n)
+## Solution: Type-Specific Checks (Optimal)
+
+**Full Binary Tree:** DFS — each node has exactly 0 or 2 children.
+
+**Complete Binary Tree:** BFS — set flag when encountering a node with < 2 children. After flag, every node must be a leaf.
+
+**Perfect Binary Tree:** Count left-only depth and right-only depth. If equal → 2^h - 1 nodes (perfect).
+
+### Time Complexity: O(N) for each check
+
+### Space Complexity: O(H) or O(W)
+
+> **Drawback:** Separate functions for each type. But each is O(N).
+
+> **Key Insight for Improvement:** Perfect → Complete → any tree forms a hierarchy. Perfect trees are always complete. Complete trees are always binary.
 
 <br>
 
@@ -20,12 +42,18 @@ Check if tree is Full, Complete, or Perfect binary tree.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Recursive/BFS | O(n) | O(n) | Property-specific checks |
+| Check | Time | Space | Method |
+|-------|------|-------|--------|
+| Full | O(N) | O(H) | DFS: 0 or 2 children |
+| Complete | O(N) | O(W) | BFS: flag after non-full node |
+| Perfect | O(H) | O(1) | Compare left-only and right-only depths |
 
-<br>
-<br>
+**Key Insights:**
+1. **Perfect ⊂ Complete ⊂ Binary:** Hierarchy of tree types
+2. **Complete BFS trick:** After encountering non-full node, all remaining must be leaves
+3. **Perfect shortcut:** If leftH == rightH → perfect (O(H) instead of O(N))
+
+<br><br>
 
 ---
 

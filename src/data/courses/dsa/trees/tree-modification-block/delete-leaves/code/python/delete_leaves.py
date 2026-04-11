@@ -1,10 +1,11 @@
-﻿class TreeNode:
-    def __init__(self, val=0):
-        self.val = val
-        self.left = None
-        self.right = None
-
-# Solution
-
-if __name__ == "__main__":
-    pass
+# ============================================================
+# Remove Leaf Nodes
+# ============================================================
+class Solution:
+    def removeLeafNodes(self, root, target: int):
+        if not root: return None
+        root.left = self.removeLeafNodes(root.left, target)
+        root.right = self.removeLeafNodes(root.right, target)
+        if not root.left and not root.right and root.val == target:
+            return None  # Delete
+        return root

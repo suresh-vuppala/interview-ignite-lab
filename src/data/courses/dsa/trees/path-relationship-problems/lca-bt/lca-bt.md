@@ -1,50 +1,54 @@
-Find the Lowest Common Ancestor of two nodes in a binary tree.
+Find the Lowest Common Ancestor (LCA) of two nodes p and q in a binary tree.
 
 <br>
 
-> Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+> Input: root = [3,5,1,6,2,0,8,null,null,7,4], p=5, q=1
 > Output: 3
+
+> Explanation: LCA of 5 and 1 is 3 — the deepest ancestor containing both.
+> 
+> **Key insight:** If both p and q are in different subtrees of a node → that node is the LCA. If both are in the same subtree → LCA is deeper. Recursive: if current == p or q, return current. If left AND right return non-null → current is LCA.
 
 <br>
 
 ---
 
 ## Constraints
-
-- `2 ≤ n ≤ 10⁵`
-- `All values unique`
-- `Both p and q exist in the tree`
+- `2 ≤ N ≤ 10⁵`, all values unique, p ≠ q, both exist in tree
 
 <br>
 
 ---
 
-## Solution 1: Store Paths + Compare
-
-**Intuition:** Find path from root to p and root to q. Last common node in both paths is LCA.
-
-### Time: O(n) | Space: O(n) for paths
-
-<br>
-
----
-
-## Solution 2: DFS Recursive (Optimal)
-
-**Intuition:** If current node is p or q, return it. Recurse left and right. If both return non-null, current node is LCA. If only one returns non-null, propagate it up.
+## Solution: Recursive DFS (Optimal)
 
 **Algorithm:**
+1. If root is null or root == p or root == q → return root
+2. left = LCA(root.left, p, q)
+3. right = LCA(root.right, p, q)
+4. If both non-null → root is LCA (p and q in different subtrees)
+5. If one is null → return the non-null one (both p,q in that subtree)
+
+### Time Complexity: O(N)
+**Why?** Visit each node at most once.
+
+**Detailed breakdown:** N = 100,000 → at most 100,000 operations
+
+### Space Complexity: O(H)
+
+**Example walkthrough:**
 ```
-TreeNode lca(node, p, q):
-    if node is null or node == p or node == q: return node
-    left = lca(node.left, p, q)
-    right = lca(node.right, p, q)
-    if left and right: return node  // p and q in different subtrees
-    return left ?? right  // Both in same subtree
+Tree: [3,5,1,6,2,0,8], p=5, q=1
+
+LCA(3, 5, 1):
+  left = LCA(5, 5, 1) → returns 5 (matches p)
+  right = LCA(1, 5, 1) → returns 1 (matches q)
+  Both non-null → return 3 (LCA!) ✓
 ```
 
-### Time: O(n) — visit each node once
-### Space: O(h) — recursion stack
+> **Drawback:** Assumes both nodes exist. If one might not exist, need a modified version with found flags.
+
+> **Key Insight for Improvement:** For BST, LCA is simpler: compare values to determine direction. But for general BT, this DFS approach is optimal.
 
 <br>
 
@@ -54,11 +58,14 @@ TreeNode lca(node, p, q):
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Store Paths | O(n) | O(n) | Compare two root-to-node paths |
-| DFS Recursive | O(n) | O(h) | Propagate results up — no path storage |
+| Recursive DFS | O(N) | O(H) | Split determines LCA position |
 
-<br>
-<br>
+**Key Insights:**
+1. **Split point = LCA:** If p and q are in different subtrees, current node is LCA
+2. **Three base cases:** null → null, match p → return p, match q → return q
+3. **FAANG critical:** Asked at Google, Amazon, Meta very frequently
+
+<br><br>
 
 ---
 

@@ -1,10 +1,11 @@
-﻿class TreeNode:
-    def __init__(self, val=0):
-        self.val = val
-        self.left = None
-        self.right = None
-
-# Solution
-
-if __name__ == "__main__":
-    pass
+# ============================================================
+# Binary Tree Pruning
+# ============================================================
+class Solution:
+    def pruneTree(self, root):
+        if not root: return None
+        root.left = self.pruneTree(root.left)
+        root.right = self.pruneTree(root.right)
+        if not root.left and not root.right and root.val == 0:
+            return None
+        return root

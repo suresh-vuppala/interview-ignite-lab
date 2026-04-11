@@ -1,1 +1,27 @@
-{"title":"Distance Between Nodes","slug":"distance-between-nodes","isPremium":false,"isPosted":true,"description":"Find distance between two nodes in binary tree","mdFile":"dsa/trees/path-relationship-problems/distance-between-nodes/distance-between-nodes.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/path-relationship-problems/distance-between-nodes/code/cpp/DistanceBetweenNodes.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/path-relationship-problems/distance-between-nodes/code/java/DistanceBetweenNodes.java","language":"java"},{"codeFile":"courses/dsa/trees/path-relationship-problems/distance-between-nodes/code/python/distance_between_nodes.py","language":"python"}],"title":"Distance Between Nodes Solution"}]}
+{
+  "title": "Distance Between Nodes",
+  "slug": "distance-between-nodes",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find distance between two nodes in binary tree",
+  "mdFile": "dsa/trees/path-relationship-problems/distance-between-nodes/distance-between-nodes.md",
+  "codeExamples": [
+    {
+      "title": "Distance Between Nodes",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/distance-between-nodes/code/cpp/distance_between_nodes.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/distance-between-nodes/code/java/DistanceBetweenNodes.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/distance-between-nodes/code/python/distance_between_nodes.py"
+        }
+      ]
+    }
+  ]
+}

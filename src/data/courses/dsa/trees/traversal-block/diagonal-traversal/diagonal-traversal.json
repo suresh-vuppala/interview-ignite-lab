@@ -1,1 +1,27 @@
-{"title":"Diagonal Traversal","slug":"diagonal-traversal","isPremium":false,"isPosted":true,"description":"Diagonal traversal of binary tree","mdFile":"dsa/trees/traversal-block/diagonal-traversal/diagonal-traversal.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/traversal-block/diagonal-traversal/code/cpp/DiagonalTraversal.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/traversal-block/diagonal-traversal/code/java/DiagonalTraversal.java","language":"java"},{"codeFile":"courses/dsa/trees/traversal-block/diagonal-traversal/code/python/diagonal_traversal.py","language":"python"}],"title":"Diagonal Traversal Solution"}]}
+{
+  "title": "Diagonal Traversal",
+  "slug": "diagonal-traversal",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Diagonal traversal of binary tree",
+  "mdFile": "dsa/trees/traversal-block/diagonal-traversal/diagonal-traversal.md",
+  "codeExamples": [
+    {
+      "title": "Diagonal Traversal",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/traversal-block/diagonal-traversal/code/cpp/diagonal_traversal.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/traversal-block/diagonal-traversal/code/java/DiagonalTraversal.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/traversal-block/diagonal-traversal/code/python/diagonal_traversal.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,1 +1,27 @@
-{"title":"Kth Ancestor","slug":"kth-ancestor","isPremium":false,"isPosted":true,"description":"Find kth ancestor of a node in binary tree","mdFile":"dsa/trees/path-relationship-problems/kth-ancestor/kth-ancestor.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/path-relationship-problems/kth-ancestor/code/cpp/KthAncestor.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/path-relationship-problems/kth-ancestor/code/java/KthAncestor.java","language":"java"},{"codeFile":"courses/dsa/trees/path-relationship-problems/kth-ancestor/code/python/kth_ancestor.py","language":"python"}],"title":"Kth Ancestor Solution"}]}
+{
+  "title": "Kth Ancestor",
+  "slug": "kth-ancestor",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find kth ancestor of a node in binary tree",
+  "mdFile": "dsa/trees/path-relationship-problems/kth-ancestor/kth-ancestor.md",
+  "codeExamples": [
+    {
+      "title": "Kth Ancestor",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/kth-ancestor/code/cpp/kth_ancestor.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/kth-ancestor/code/java/KthAncestor.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/path-relationship-problems/kth-ancestor/code/python/kth_ancestor.py"
+        }
+      ]
+    }
+  ]
+}

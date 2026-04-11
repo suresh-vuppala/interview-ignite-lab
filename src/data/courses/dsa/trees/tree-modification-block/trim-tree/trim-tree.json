@@ -1,1 +1,27 @@
-{"title":"Trim Tree","slug":"trim-tree","isPremium":false,"isPosted":true,"description":"Trim binary tree to given range","mdFile":"dsa/trees/tree-modification-block/trim-tree/trim-tree.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/trees/tree-modification-block/trim-tree/code/cpp/TrimTree.cpp","language":"cpp"},{"codeFile":"courses/dsa/trees/tree-modification-block/trim-tree/code/java/TrimTree.java","language":"java"},{"codeFile":"courses/dsa/trees/tree-modification-block/trim-tree/code/python/trim_tree.py","language":"python"}],"title":"Trim Tree Solution"}]}
+{
+  "title": "Trim Tree",
+  "slug": "trim-tree",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Trim binary tree to given range",
+  "mdFile": "dsa/trees/tree-modification-block/trim-tree/trim-tree.md",
+  "codeExamples": [
+    {
+      "title": "Trim Tree",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/trees/tree-modification-block/trim-tree/code/cpp/trim_tree.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/trees/tree-modification-block/trim-tree/code/java/TrimTree.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/trees/tree-modification-block/trim-tree/code/python/trim_tree.py"
+        }
+      ]
+    }
+  ]
+}
