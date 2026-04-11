@@ -1,44 +1,18 @@
-Given an encoded string, decode it according to the pattern `k[encoded_string]`, where the `encoded_string` inside brackets is repeated exactly `k` times.
+Decode string with pattern k[encoded]: repeat encoded k times.
 
 <br>
 
-> Input:
-> s = "3[a2[c]]"
-
-> Output:
-> "accaccacc"
-
-> Explanation:
-> The encoded string is `"3[a2[c]]"`.
-> - Inner bracket: `2[c]` = `"cc"`
-> - Substitute: `3[acc]`
-> - Outer bracket: `3[acc]` = `"accaccacc"`
-> 
-> **Key insight:** Process nested brackets from inside out using stacks.
+> Input: "3[a2[c]]"
+> Output: "accaccacc"
 
 <br>
-
-> Input:
-> s = "2[abc]3[cd]ef"
-
-> Output:
-> "abcabccdcdcdef"
-
-> Explanation:
-> - `2[abc]` = `"abcabc"`
-> - `3[cd]` = `"cdcdcd"`
-> - Concatenate with "ef": `"abcabccdcdcdef"`
-
-<br>
-
 
 ---
 
 ## Constraints
 
 - `1 ≤ s.length ≤ 30`
-- `s consists of digits, lowercase English letters, '[' and ']'`
-- `1 ≤ k ≤ 300 (repetition count)`
+- `1 ≤ k ≤ 300`
 - `Nested brackets are valid`
 
 <br>
@@ -48,67 +22,54 @@ Given an encoded string, decode it according to the pattern `k[encoded_string]`,
 ## All Possible Edge Cases
 
 1. **No encoding:** 'abc' → 'abc'
-2. **Single level:** '3[a]' → 'aaa'
-3. **Nested brackets:** '2[a3[b]]' → 'abbbabbb'
-4. **Adjacent encoded groups:** '2[a]3[b]' → 'aabbb'
-5. **Mixed literal and encoded:** 'ab2[c]d' → 'abccd'
-6. **k = 1:** '1[abc]' → 'abc'
-7. **Large repetition:** '300[a]' → 300 a's
-8. **Deeply nested:** '2[2[2[a]]]' → 'aaaaaaaa'
+2. **Nested:** '2[a3[b]]' → 'abbbabbb'
+3. **Adjacent:** '2[a]3[b]' → 'aabbb'
+4. **k = 1:** '1[abc]' → 'abc'
 
 <br>
 
 ---
 
-## Solution: Two Stack Approach
+## Solution 1: Stack
 
-Use two stacks:
-1. **Count stack:** Store repeat counts
-2. **String stack:** Store strings before brackets
+**Intuition:**
+Use two stacks: one for counts, one for strings. On '[', push current string and count. On ']', pop and repeat.
 
 **Algorithm:**
-1. For each character:
-   - **Digit:** Build number (can be multi-digit)
-   - **`[`:** Push current count and string to stacks, reset both
-   - **`]`:** Pop count and previous string, repeat current string count times, append to previous
-   - **Letter:** Append to current string
-2. Return final string
+1. Iterate through characters:
+   - Digit → build multi-digit number
+   - '[' → push (currentString, count) to stacks, reset both
+   - ']' → pop, currentString = poppedString + currentString × count
+   - Letter → append to currentString
 
-**Key insight:** Stacks handle nested brackets naturally.
+### Time Complexity: O(maxK × n) where n = output length
+### Space Complexity: O(n)
 
-
-
-<br>
-
-### Time Complexity Analysis
-
-**Single Pass: O(maxK × n)**
-- Process each character once: O(n)
-- For each `]`, repeat string: O(k × length)
-- Worst case: Nested brackets multiply counts
-- Example: "3[2[a]]" → "aaaaaa" (3 × 2 = 6 operations)
-
-**Why two stacks?**
-- Count stack: Track how many times to repeat
-- String stack: Track what came before current bracket
-- Together: Handle arbitrary nesting depth
-
-**Space Complexity: O(n)**
-- Two stacks hold at most n/2 elements each
-- Current string and result string: O(n)
-- Decoded output can be larger than input
-
-**Handling multi-digit numbers:**
-- "10[a]" → k = 10, not k = 1
-- Build number: k = k × 10 + digit
-
-> **Time Complexity:** O(maxK × n) - depends on repeat counts
-> **Space Complexity:** O(n) - stack and string storage
-
-<br>
 <br>
 
 ---
+
+## Solution 2: Recursion
+
+**Intuition:**
+Recursively process: when '[' is found, recurse to get inner string, multiply by k.
+
+### Time Complexity: O(maxK × n)
+### Space Complexity: O(depth) recursion stack
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Stack | O(maxK × n) | O(n) | Iterative with two stacks |
+| Recursion | O(maxK × n) | O(depth) | Natural for nested structure |
+
+<br>
+<br>
 
 ---
 

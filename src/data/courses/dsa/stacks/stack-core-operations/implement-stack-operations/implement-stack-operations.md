@@ -1,87 +1,35 @@
-Implement a stack data structure with all core operations: push, pop, peek, isEmpty, and size.
-
-<br>
-
-> Input:
-> Operations: ["push", 5], ["push", 10], ["peek"], ["pop"], ["peek"]
-
-> Output:
-> [null, null, 10, 10, 5]
-
-> Explanation:
-> - push(5): Stack = [5]
-> - push(10): Stack = [5, 10]
-> - peek(): Returns 10 (top element)
-> - pop(): Removes and returns 10, Stack = [5]
-> - peek(): Returns 5 (new top element)
-
-<br>
-
-
----
-
-## Constraints
-
-- `At most 10⁴ operations`
-- `-10⁹ ≤ val ≤ 10⁹`
+Implement stack with push, pop, peek, isEmpty, size.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Array-Based
 
-1. **Pop on empty stack:** Should handle gracefully — return error or -1
-2. **Peek on empty stack:** Should handle gracefully
-3. **Push then immediate pop:** Returns the pushed value
-4. **Multiple pushes then size check:** Size matches push count
-5. **isEmpty on non-empty stack:** Returns false
+**Operations:**
+- Push: arr[++top] = val — O(1)
+- Pop: return arr[top--] — O(1)
+- Peek: return arr[top] — O(1)
+- isEmpty: top == -1 — O(1)
+- Size: top + 1 — O(1)
+
+## Solution 2: Linked List-Based
+
+**Operations:** All O(1) using head pointer. Push = prepend, Pop = remove head.
 
 <br>
 
 ---
 
-## Solution: Array-Based Stack Implementation
+## Complexity Progression Summary
 
-Use array with top pointer to track last element:
-1. Push: Add element at top+1, increment top
-2. Pop: Return element at top, decrement top
-3. Peek: Return element at top without removing
-4. isEmpty: Check if top == -1
-5. Size: Return top + 1
-
-**Key insight:** Stack follows LIFO (Last In First Out) principle.
-
-
-
-<br>
-
-### Time Complexity Analysis
-
-**All Operations: O(1)**
-- Push: Direct array access at index top+1
-- Pop: Direct array access at index top
-- Peek: Direct array access at index top
-- isEmpty: Simple comparison
-- Size: Return stored value
-
-**Why O(1)?**
-- No loops or iterations needed
-- Direct index-based access
-- Constant time operations only
-
-**Space Complexity: O(n)**
-- Array of size n to store elements
-- Additional O(1) for top pointer
-- Total: O(n) for n elements
-
-> **Time Complexity:** O(1) for all operations
-> **Space Complexity:** O(n) for storing n elements
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Array | O(1) all ops | O(n) | Fixed or dynamic array |
+| Linked List | O(1) all ops | O(n) | No resize needed, more overhead per node |
 
 <br>
 <br>
-
----
 
 ---
 

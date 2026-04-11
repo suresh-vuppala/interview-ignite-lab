@@ -1,32 +1,11 @@
-Find the largest rectangle area in a histogram where bars have width 1 and varying heights.
+Find the largest rectangle area in a histogram.
 
 <br>
 
-> Input:
-> heights = [2, 1, 5, 6, 2, 3]
-
-> Output:
-> 10
-
-> Explanation:
-> Largest rectangle: height=5, width=2 (bars at index 2 and 3)
-> Area = 5 × 2 = 10
-> 
-> Visualization:
->       6
->     5 █
->     █ █
->     █ █   3
-> 2   █ █ 2 █
-> █ 1 █ █ █ █
-> 
-> Stack process (find next smaller on both sides):
-> - For bar at index 2 (height=5): next smaller left=1, next smaller right=4
-> - Width = 4 - 1 - 1 = 2
-> - Area = 5 × 2 = 10
+> Input: heights = [2, 1, 5, 6, 2, 3]
+> Output: 10 (width=2, height=5 at indices 2-3)
 
 <br>
-
 
 ---
 
@@ -41,79 +20,58 @@ Find the largest rectangle area in a histogram where bars have width 1 and varyi
 
 ## All Possible Edge Cases
 
-1. **Single bar:** [5] → 5
-2. **All same height:** [3,3,3,3] → 12
-3. **Strictly increasing:** [1,2,3,4] → max rect uses middle bars
-4. **Strictly decreasing:** [4,3,2,1] → max rect uses middle bars
-5. **Contains zero:** [2,0,3] → 3 (zero splits the histogram)
-6. **All zeros:** [0,0,0] → 0
-7. **Spike in middle:** [1,1,100,1,1] → 100 (single tall bar)
-8. **Wide low bar vs tall narrow:** [2,2,2,2] vs [8] — compare area
+1. **Single bar:** Area = height
+2. **All same height:** Area = n × height
+3. **Strictly increasing/decreasing:** Check all partial widths
+4. **Contains zero:** Zero splits the histogram
 
 <br>
 
 ---
 
-## Solution: Monotonic Stack
+## Solution 1: Brute Force
 
-Use monotonic increasing stack to find next smaller elements:
-1. For each bar, find:
-   - Next smaller bar on left (NSL)
-   - Next smaller bar on right (NSR)
-2. Width for bar i = NSR - NSL - 1
-3. Area for bar i = height[i] × width
-4. Track maximum area
+**Intuition:** For each bar, expand left and right while height ≥ current.
 
-**Key insight:** For each bar as height, find maximum width where all bars ≥ current height.
+### Time Complexity: O(n²)
+### Space Complexity: O(1)
 
-
-
-<br>
-
-### Time Complexity Analysis
-
-**Single Pass with Stack: O(n)**
-- Traverse array once: n iterations
-- Each bar:
-  - Pushed to stack exactly once: n pushes
-  - Popped from stack at most once: n pops
-- Total operations: 2n = O(n)
-
-**Amortized Analysis:**
-- While loop may seem nested
-- But each element pushed and popped at most once
-- Amortized O(1) per element
-
-**Why monotonic stack?**
-- Need to find next smaller element efficiently
-- Monotonic increasing stack maintains potential NSL/NSR
-- Avoids O(n²) brute force (checking all pairs)
-
-**Space Complexity: O(n)**
-- Stack can hold all bars in worst case
-- Worst case: strictly increasing heights [1,2,3,4,5]
-- All bars pushed before any popped
-
-**Comparison with brute force:**
-- Brute force: For each bar, expand left and right O(n²)
-- Monotonic stack: Single pass O(n)
-- Huge improvement for large inputs
-
-**Algorithm steps:**
-1. Maintain increasing stack (indices)
-2. When current bar < stack top:
-   - Pop and calculate area using popped bar as height
-   - Width = current index - stack top after pop - 1
-3. Push current bar
-4. Process remaining stack at end
-
-> **Time Complexity:** O(n) - each bar pushed and popped once
-> **Space Complexity:** O(n) - stack holds indices
-
-<br>
 <br>
 
 ---
+
+## Solution 2: Monotonic Stack (Optimal)
+
+**Intuition:**
+Maintain increasing stack of indices. When a shorter bar appears, pop taller bars and calculate their area using the current position as right boundary and new stack top as left boundary.
+
+**Algorithm:**
+1. Push index 0
+2. For each i (including sentinel i=n with height 0):
+   - While stack not empty AND heights[i] < heights[stack.top()]:
+     - height = heights[stack.pop()]
+     - width = stack empty ? i : i - stack.top() - 1
+     - maxArea = max(maxArea, height × width)
+   - Push i
+
+**Why stack.top()-1 as left boundary?** After popping, the new stack top is the first bar shorter than the popped bar — so everything between is ≥ popped height.
+
+### Time Complexity: O(n) — each index pushed/popped once
+### Space Complexity: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute Force | O(n²) | O(1) | Expand from each bar |
+| Monotonic Stack | O(n) | O(n) | Stack tracks left/right boundaries |
+
+<br>
+<br>
 
 ---
 

@@ -1,39 +1,14 @@
-Check if a string containing parentheses is balanced. A string is balanced if every opening bracket has a corresponding closing bracket in the correct order.
+Check if a string containing parentheses '()', '{}', '[]' is balanced.
 
 <br>
 
-> Input:
-> s = "({[]})"
+> Input: s = "({[]})"
+> Output: true
 
-> Output:
-> true
-
-> Explanation:
-> Stack process:
-> - '(': push to stack → stack = ['(']
-> - '{': push to stack → stack = ['(', '{']
-> - '[': push to stack → stack = ['(', '{', '[']
-> - ']': matches '[' at top, pop → stack = ['(', '{']
-> - '}': matches '{' at top, pop → stack = ['(']
-> - ')': matches '(' at top, pop → stack = []
-> - Stack empty, all matched → balanced
+> Input: s = "([)]"
+> Output: false
 
 <br>
-
-> Input:
-> s = "([)]"
-
-> Output:
-> false
-
-> Explanation:
-> Stack process:
-> - '(': push → stack = ['(']
-> - '[': push → stack = ['(', '[']
-> - ')': top is '[', doesn't match ')' → unbalanced
-
-<br>
-
 
 ---
 
@@ -48,69 +23,56 @@ Check if a string containing parentheses is balanced. A string is balanced if ev
 
 ## All Possible Edge Cases
 
-1. **Empty string:** Considered balanced
-2. **Single character:** Always unbalanced
+1. **Empty string:** Balanced
+2. **Single character:** Unbalanced
 3. **Correctly nested:** '({[]})' → true
-4. **Wrong order close:** '(]' → false
+4. **Wrong order:** '(]' → false
 5. **Extra opening:** '(((' → false
-6. **Extra closing:** ')))' → false
-7. **Only one type:** '(())' → true
-8. **Interleaved types:** '([)]' → false
+6. **Interleaved:** '([)]' → false
 
 <br>
 
 ---
 
-## Solution: Stack-Based Matching
+## Solution 1: Brute Force — Repeated Removal
 
-Use stack to track opening brackets:
-1. For opening bracket: push to stack
-2. For closing bracket: check if matches top of stack
-3. If matches: pop from stack
-4. If doesn't match or stack empty: unbalanced
-5. At end: stack should be empty
+**Intuition:**
+Repeatedly remove matching adjacent pairs "()", "{}", "[]" until no more can be removed. If string is empty, it was balanced.
 
-**Key insight:** Last opened bracket must be first closed (LIFO - perfect for stack).
+### Time Complexity: O(n²) — each removal pass is O(n), up to n/2 passes
+### Space Complexity: O(n) — string copy
 
-
-
-<br>
-
-### Time Complexity Analysis
-
-**Single Pass: O(n)**
-- Traverse string once: n characters
-- For each character:
-  - Check if opening/closing: O(1)
-  - Push to stack: O(1)
-  - Pop from stack: O(1)
-  - Compare brackets: O(1)
-- Total: n × O(1) = O(n)
-
-**Why stack is optimal?**
-- Need to match most recent opening bracket
-- LIFO property of stack perfectly matches bracket pairing
-- No need to track all previous brackets, just most recent unmatched
-
-**Space Complexity: O(n)**
-- Worst case: all opening brackets, no closing
-- Example: "((((" requires stack of size n
-- Best case: balanced immediately, O(1) stack size
-- Average case: O(n/2) = O(n)
-
-**Why not other data structures?**
-- Array: Would need to track index, less efficient
-- Queue: FIFO doesn't match bracket pairing order
-- HashMap: Overkill, doesn't help with ordering
-- Stack: Perfect match for LIFO bracket matching
-
-> **Time Complexity:** O(n) - single pass through string
-> **Space Complexity:** O(n) - stack can hold all opening brackets in worst case
-
-<br>
 <br>
 
 ---
+
+## Solution 2: Stack (Optimal)
+
+**Intuition:**
+Push opening brackets onto stack. For closing brackets, check if stack top is the matching opener.
+
+**Algorithm:**
+1. For each char:
+   - If opening bracket → push
+   - If closing bracket → if stack empty or top doesn't match → false; else pop
+2. Return stack is empty
+
+### Time Complexity: O(n) — single pass
+### Space Complexity: O(n) — stack
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Repeated Removal | O(n²) | O(n) | Remove pairs iteratively |
+| Stack | O(n) | O(n) | Match with stack top — one pass |
+
+<br>
+<br>
 
 ---
 
