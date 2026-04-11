@@ -1,10 +1,9 @@
-Rearrange numbers into the lexicographically next greater permutation. If already the largest, wrap to smallest.
+Rearrange numbers into the lexicographically next greater permutation.
 
 <br>
 
-> Input: [1, 2, 3] → Output: [1, 3, 2]
-> Input: [3, 2, 1] → Output: [1, 2, 3] (wrap around)
-> Input: [1, 1, 5] → Output: [1, 5, 1]
+> Input: [1,2,3] → [1,3,2]
+> Input: [3,2,1] → [1,2,3] (wrap)
 
 <br>
 
@@ -13,56 +12,26 @@ Rearrange numbers into the lexicographically next greater permutation. If alread
 ## Constraints
 
 - `1 ≤ nums.length ≤ 100`
-- `0 ≤ nums[i] ≤ 100`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
-
-1. **Already largest:** [3,2,1] → [1,2,3]
-2. **Already smallest:** [1,2,3] → [1,3,2]
-3. **Single element:** No change
-4. **All same:** No change
-5. **Duplicates:** [1,1,5] → [1,5,1]
-
-<br>
-
----
-
-## Solution 1: Generate All Permutations
+## Solution 1: Three-Step Algorithm (Optimal)
 
 **Intuition:**
-Generate all permutations sorted, find current one, return next.
-
-### Time Complexity: O(n! × n)
-### Space Complexity: O(n!)
-
-<br>
-
----
-
-## Solution 2: Three-Step Algorithm (Optimal)
-
-**Intuition:**
-Find the rightmost "dip" (element smaller than its right neighbor). Swap it with the smallest element to its right that is larger than it. Reverse the suffix.
+Find rightmost "dip" (ascending pair). Swap with smallest-larger element to its right. Reverse suffix.
 
 **Algorithm:**
-1. Find largest i where nums[i] < nums[i+1] (rightmost ascent)
-2. Find largest j where nums[j] > nums[i] (rightmost element bigger than dip)
+1. Find largest i where nums[i] < nums[i+1] (rightmost ascent/dip)
+2. Find largest j > i where nums[j] > nums[i]
 3. Swap nums[i] and nums[j]
-4. Reverse nums[i+1..end] (make suffix smallest possible)
-5. If no dip found (step 1 fails) → reverse entire array (wrap to smallest)
+4. Reverse suffix nums[i+1..end]
+5. If no dip → reverse entire array (wrap to smallest)
 
-### Time Complexity: O(n) — at most 3 linear scans
-### Space Complexity: O(1) — in-place
+### Time: O(n) | Space: O(1)
 
-**Example: [1, 5, 8, 4, 7, 6, 5, 3, 1]**
-- Step 1: Dip at index 3 (nums[3]=4 < nums[4]=7)
-- Step 2: Rightmost > 4 is index 6 (nums[6]=5)
-- Step 3: Swap → [1, 5, 8, 5, 7, 6, 4, 3, 1]
-- Step 4: Reverse suffix → [1, 5, 8, 5, 1, 3, 4, 6, 7]
+```code```
 
 <br>
 
@@ -72,12 +41,10 @@ Find the rightmost "dip" (element smaller than its right neighbor). Swap it with
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| All Permutations | O(n! × n) | O(n!) | Generate and find |
+| All Permutations | O(n!) | O(n!) | Generate all, find next |
 | Three-Step | O(n) | O(1) | Find dip, swap, reverse |
 
+**Note:** This problem has one standard O(n) approach — the three-step algorithm is already optimal.
+
 <br>
 <br>
-
----
-
-```code```

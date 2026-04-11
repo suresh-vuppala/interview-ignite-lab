@@ -6,19 +6,36 @@
   "mdFile": "find-all-duplicates.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Solution 1: Hash Set",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/find-all-duplicates/code/cpp/find_all_duplicates.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/find-all-duplicates/code/cpp/find_all_duplicates_sol1.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/find-all-duplicates/code/java/FindAllDuplicates.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/find-all-duplicates/code/java/FindAllDuplicatesSol1.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/find-all-duplicates/code/python/find_all_duplicates.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/find-all-duplicates/code/python/find_all_duplicates_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Index Marking (Optimal)",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/find-all-duplicates/code/cpp/find_all_duplicates_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/find-all-duplicates/code/java/FindAllDuplicatesSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/find-all-duplicates/code/python/find_all_duplicates_sol2.py"
         }
       ]
     }

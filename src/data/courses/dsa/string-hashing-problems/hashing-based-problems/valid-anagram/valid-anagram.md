@@ -1,12 +1,9 @@
-Given two strings s and t, return true if t is an anagram of s, and false otherwise. An anagram uses the same characters with the same frequencies.
+Given two strings s and t, return true if t is an anagram of s.
 
 <br>
 
-> Input: s = "anagram", t = "nagaram"
-> Output: true
-
-> Input: s = "rat", t = "car"
-> Output: false
+> Input: s = "anagram", t = "nagaram" → Output: true
+> Input: s = "rat", t = "car" → Output: false
 
 <br>
 
@@ -15,7 +12,7 @@ Given two strings s and t, return true if t is an anagram of s, and false otherw
 ## Constraints
 
 - `1 ≤ s.length, t.length ≤ 5 × 10⁴`
-- `s and t consist of lowercase English letters`
+- Lowercase English letters only
 
 <br>
 
@@ -25,9 +22,7 @@ Given two strings s and t, return true if t is an anagram of s, and false otherw
 
 1. **Different lengths:** Immediately false
 2. **Same string:** Always true
-3. **Single character each:** Compare directly
-4. **All same character:** 'aaa' vs 'aaa' → true
-5. **Unicode follow-up:** Use hash map instead of array[26]
+3. **Single character:** Direct compare
 
 <br>
 
@@ -36,36 +31,44 @@ Given two strings s and t, return true if t is an anagram of s, and false otherw
 ## Solution 1: Sort Both Strings
 
 **Intuition:**
-If two strings are anagrams, sorting both produces the same string.
+If two strings are anagrams, sorting them produces the same string.
 
 **Algorithm:**
-1. If lengths differ → return false
+1. If lengths differ → false
 2. Sort both strings
 3. Compare character by character
 
 ### Time Complexity: O(n log n)
-### Space Complexity: O(n) for sorted copies
+### Space Complexity: O(n)
 
-> **Key Insight for Improvement:** Instead of sorting, count character frequencies — O(n).
+```code```
+
+> **Key Insight for Improvement:**
+>
+> **Drawback of current approach:** Sorting takes O(n log n) time and requires O(n) space for the sorted copies. We're rearranging entire strings when we only need to verify character frequencies match.
+>
+> **Insight:** Use a frequency count array of size 26. Increment for s, decrement for t. If all counts are 0, it's an anagram — O(n) time, O(1) space.
 
 <br>
 
 ---
 
-## Solution 2: Frequency Count (Array)
+## Solution 2: Frequency Count Array (Optimal)
 
 **Intuition:**
-Count frequency of each character in s. Decrement for each character in t. If all counts are 0, it's an anagram.
+Count frequency of each character in s. Decrement for each character in t. If all counts are zero → anagram.
 
 **Algorithm:**
-1. If lengths differ → return false
-2. Create int[26] frequency array
-3. For each char in s: freq[c - 'a']++
-4. For each char in t: freq[c - 'a']--
-5. If all freq values are 0 → return true
+1. If lengths differ → false
+2. Create int[26] array
+3. For each char in s: freq[c-'a']++
+4. For each char in t: freq[c-'a']--
+5. All zeros → true
 
 ### Time Complexity: O(n)
 ### Space Complexity: O(1) — fixed 26-element array
+
+```code```
 
 <br>
 
@@ -76,13 +79,7 @@ Count frequency of each character in s. Decrement for each character in t. If al
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
 | Sort | O(n log n) | O(n) | Sorted anagrams are identical |
-| Frequency Count | O(n) | O(1) | Count chars in fixed array |
-
-**Recommended:** Frequency Count — O(n) time, O(1) space.
+| Frequency Count | O(n) | O(1) | Count in fixed-size array |
 
 <br>
 <br>
-
----
-
-```code```

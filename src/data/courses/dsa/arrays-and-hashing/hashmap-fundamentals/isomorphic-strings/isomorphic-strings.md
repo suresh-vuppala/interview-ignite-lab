@@ -1,12 +1,9 @@
-Given two strings s and t, determine if they are isomorphic. Two strings are isomorphic if characters in s can be replaced to get t, preserving order and bijective mapping.
+Given two strings s and t, determine if they are isomorphic (bijective character mapping preserving order).
 
 <br>
 
-> Input: s = "egg", t = "add"
-> Output: true (e→a, g→d)
-
-> Input: s = "foo", t = "bar"
-> Output: false (o maps to both a and r)
+> Input: s = "egg", t = "add" → Output: true (e→a, g→d)
+> Input: s = "foo", t = "bar" → Output: false
 
 <br>
 
@@ -14,8 +11,7 @@ Given two strings s and t, determine if they are isomorphic. Two strings are iso
 
 ## Constraints
 
-- `1 ≤ s.length ≤ 5 × 10⁴`
-- `t.length == s.length`
+- `1 ≤ s.length ≤ 5 × 10⁴`, `t.length == s.length`
 
 <br>
 
@@ -24,28 +20,27 @@ Given two strings s and t, determine if they are isomorphic. Two strings are iso
 ## All Possible Edge Cases
 
 1. **Same string:** Always isomorphic
-2. **Different lengths:** Immediately false
-3. **Reverse mapping conflict:** 'badc' → 'baba' — d and c both map to a → false
+2. **Reverse mapping conflict:** 'badc'→'baba' — false
 
 <br>
 
 ---
 
-## Solution 1: Two Hash Maps (Bidirectional Mapping)
+## Solution 1: Two Hash Maps (Bidirectional)
 
 **Intuition:**
-Maintain two maps: s→t and t→s. For each position, both mappings must be consistent.
-
-**Algorithm:**
-1. Create maps s2t and t2s
-2. For each position i:
-   - If s[i] is mapped but to a different char than t[i] → false
-   - If t[i] is mapped but to a different char than s[i] → false
-   - Add both mappings
-3. Return true
+Maintain s→t and t→s mappings. Both must be consistent at every position.
 
 ### Time Complexity: O(n)
-### Space Complexity: O(1) — at most 256 character mappings
+### Space Complexity: O(1) — at most 256 mappings
+
+```code```
+
+> **Key Insight for Improvement:**
+>
+> **Drawback of current approach:** Two hash maps require managing two separate data structures and checking both directions. This is correct but slightly verbose.
+>
+> **Insight:** Encode each string by replacing characters with the index of their first occurrence. "egg"→[0,1,1], "add"→[0,1,1]. If patterns match, strings are isomorphic — single comparison, no maps needed.
 
 <br>
 
@@ -54,15 +49,12 @@ Maintain two maps: s→t and t→s. For each position, both mappings must be con
 ## Solution 2: Pattern Encoding
 
 **Intuition:**
-Encode each string by replacing characters with the index of their first occurrence. Isomorphic strings produce the same pattern.
-
-**Algorithm:**
-1. Encode s: "egg" → [0, 1, 1]
-2. Encode t: "add" → [0, 1, 1]
-3. Compare patterns
+Transform each string into a canonical pattern. Compare patterns.
 
 ### Time Complexity: O(n)
-### Space Complexity: O(n) for pattern arrays
+### Space Complexity: O(n)
+
+```code```
 
 <br>
 
@@ -72,14 +64,8 @@ Encode each string by replacing characters with the index of their first occurre
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Two Hash Maps | O(n) | O(1) | Bidirectional consistency check |
-| Pattern Encoding | O(n) | O(n) | Transform to canonical form |
-
-**Recommended:** Two Hash Maps — simpler, O(1) space.
+| Two Maps | O(n) | O(1) | Bidirectional consistency |
+| Pattern Encode | O(n) | O(n) | Transform to canonical form |
 
 <br>
 <br>
-
----
-
-```code```

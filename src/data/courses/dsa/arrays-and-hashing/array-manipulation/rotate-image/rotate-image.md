@@ -1,9 +1,8 @@
-Rotate an n×n matrix by 90° clockwise in-place.
+Rotate n×n matrix 90° clockwise in-place.
 
 <br>
 
-> Input: [[1,2,3],[4,5,6],[7,8,9]]
-> Output: [[7,4,1],[8,5,2],[9,6,3]]
+> Input: [[1,2,3],[4,5,6],[7,8,9]] → Output: [[7,4,1],[8,5,2],[9,6,3]]
 
 <br>
 
@@ -11,7 +10,6 @@ Rotate an n×n matrix by 90° clockwise in-place.
 
 ## Constraints
 
-- `n == matrix.length == matrix[i].length`
 - `1 ≤ n ≤ 20`
 
 <br>
@@ -21,8 +19,7 @@ Rotate an n×n matrix by 90° clockwise in-place.
 ## All Possible Edge Cases
 
 1. **1×1:** No change
-2. **2×2:** Simple 4-element swap
-3. **Odd n:** Center stays
+2. **2×2:** Simple swap
 
 <br>
 
@@ -30,44 +27,31 @@ Rotate an n×n matrix by 90° clockwise in-place.
 
 ## Solution 1: Extra Matrix
 
-**Intuition:**
-Create new matrix. For each cell (i,j), place it at (j, n-1-i).
+**Intuition:** Create new matrix. Place (i,j) at (j, n-1-i).
 
 ### Time Complexity: O(n²)
 ### Space Complexity: O(n²)
 
-<br>
+```code```
 
----
-
-## Solution 2: Rotate Layer by Layer
-
-**Intuition:**
-Process each concentric ring. Swap 4 cells at a time in a cycle.
-
-### Time Complexity: O(n²)
-### Space Complexity: O(1)
+> **Key Insight for Improvement:**
+>
+> **Drawback of current approach:** Uses O(n²) extra space for a copy. The problem asks for in-place rotation.
+>
+> **Insight:** 90° clockwise = Transpose + Reverse each row. Transpose swaps (i,j)→(j,i). Reversing rows maps (j,i)→(j,n-1-i). Combined: (i,j)→(j,n-1-i) which is exactly 90° clockwise.
 
 <br>
 
 ---
 
-## Solution 3: Transpose + Reverse Rows (Optimal)
+## Solution 2: Transpose + Reverse Rows (Optimal)
 
-**Intuition:**
-Step 1: Transpose (swap rows and columns). Step 2: Reverse each row. This achieves 90° clockwise rotation.
-
-**Algorithm:**
-1. Transpose: swap matrix[i][j] with matrix[j][i] for i < j
-2. Reverse each row
+**Intuition:** Step 1: Transpose. Step 2: Reverse each row.
 
 ### Time Complexity: O(n²)
 ### Space Complexity: O(1)
 
-**Why it works:**
-- Transpose: (i,j) → (j,i)
-- Reverse row: (j,i) → (j, n-1-i)
-- Combined: (i,j) → (j, n-1-i) = 90° clockwise rotation
+```code```
 
 <br>
 
@@ -78,12 +62,7 @@ Step 1: Transpose (swap rows and columns). Step 2: Reverse each row. This achiev
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
 | Extra Matrix | O(n²) | O(n²) | Direct placement |
-| Layer Rotation | O(n²) | O(1) | 4-way cycle swap |
-| Transpose + Reverse | O(n²) | O(1) | Two simple operations compose to rotation |
+| Transpose+Reverse | O(n²) | O(1) | Two simple in-place operations |
 
 <br>
 <br>
-
----
-
-```code```

@@ -6,19 +6,36 @@
   "mdFile": "valid-anagram.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Solution 1: Sort Both Strings",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/valid-anagram/code/cpp/valid_anagram.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/valid-anagram/code/cpp/valid_anagram_sol1.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/valid-anagram/code/java/ValidAnagram.java"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/valid-anagram/code/java/ValidAnagramSol1.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/valid-anagram/code/python/valid_anagram.py"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/valid-anagram/code/python/valid_anagram_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Frequency Count (Optimal)",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/valid-anagram/code/cpp/valid_anagram_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/valid-anagram/code/java/ValidAnagramSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/valid-anagram/code/python/valid_anagram_sol2.py"
         }
       ]
     }

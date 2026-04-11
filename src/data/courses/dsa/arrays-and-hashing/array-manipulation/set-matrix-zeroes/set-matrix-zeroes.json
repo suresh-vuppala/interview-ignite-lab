@@ -6,19 +6,36 @@
   "mdFile": "set-matrix-zeroes.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Solution 1: Extra Sets",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/set-matrix-zeroes/code/cpp/set_matrix_zeroes.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/set-matrix-zeroes/code/cpp/set_matrix_zeroes_sol1.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/set-matrix-zeroes/code/java/SetMatrixZeroes.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/set-matrix-zeroes/code/java/SetMatrixZeroesSol1.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/set-matrix-zeroes/code/python/set_matrix_zeroes.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/set-matrix-zeroes/code/python/set_matrix_zeroes_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: First Row/Col Markers (Optimal)",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/set-matrix-zeroes/code/cpp/set_matrix_zeroes_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/set-matrix-zeroes/code/java/SetMatrixZeroesSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/set-matrix-zeroes/code/python/set_matrix_zeroes_sol2.py"
         }
       ]
     }

@@ -6,19 +6,36 @@
   "mdFile": "isomorphic-strings.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Solution 1: Two Hash Maps",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/hashmap-fundamentals/isomorphic-strings/code/cpp/isomorphic_strings.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/hashmap-fundamentals/isomorphic-strings/code/cpp/isomorphic_strings_sol1.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/hashmap-fundamentals/isomorphic-strings/code/java/IsomorphicStrings.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/hashmap-fundamentals/isomorphic-strings/code/java/IsomorphicStringsSol1.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/hashmap-fundamentals/isomorphic-strings/code/python/isomorphic_strings.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/hashmap-fundamentals/isomorphic-strings/code/python/isomorphic_strings_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Pattern Encoding",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/arrays-and-hashing/hashmap-fundamentals/isomorphic-strings/code/cpp/isomorphic_strings_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/arrays-and-hashing/hashmap-fundamentals/isomorphic-strings/code/java/IsomorphicStringsSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/arrays-and-hashing/hashmap-fundamentals/isomorphic-strings/code/python/isomorphic_strings_sol2.py"
         }
       ]
     }
