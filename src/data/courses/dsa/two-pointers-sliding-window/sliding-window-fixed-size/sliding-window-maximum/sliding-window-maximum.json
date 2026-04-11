@@ -6,36 +6,19 @@
   "mdFile": "sliding-window-maximum.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Brute Force",
+      "title": "Sliding Window Maximum",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/sliding-window-maximum/code/cpp/sliding_window_maximum_sol1.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/sliding-window-maximum/code/cpp/sliding_window_maximum.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/sliding-window-maximum/code/java/SlidingWindowMaximumSol1.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/sliding-window-maximum/code/java/SlidingWindowMaximum.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/sliding-window-maximum/code/python/sliding_window_maximum_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Monotonic Deque (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/sliding-window-maximum/code/cpp/sliding_window_maximum_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/sliding-window-maximum/code/java/SlidingWindowMaximumSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/sliding-window-maximum/code/python/sliding_window_maximum_sol2.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/sliding-window-maximum/code/python/sliding_window_maximum.py"
         }
       ]
     }

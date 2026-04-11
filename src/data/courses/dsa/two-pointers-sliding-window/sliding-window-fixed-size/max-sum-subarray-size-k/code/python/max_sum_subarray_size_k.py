@@ -1,38 +1,31 @@
-class Solution:
-    # ==================== SOLUTION 1: BRUTE FORCE ====================
-    # Time: O(n×k) | Space: O(1)
-    def maxSumBruteForce(self, arr, k):
-        n = len(arr)
+# ============================================================
+# Maximum Sum Subarray of Size K
+# ============================================================
+
+from typing import List
+
+# ============================================================
+# Solution 1: Brute Force
+# Time: O(N×K) | Space: O(1)
+# ============================================================
+class Solution1:
+    def maxSumSubarray(self, nums: List[int], k: int) -> int:
         max_sum = float('-inf')
-        
-        # Check each window of size k
-        for i in range(n - k + 1):
-            # Calculate sum of current window
-            window_sum = 0
-            for j in range(i, i + k):
-                window_sum += arr[j]
-            # Update maximum
-            max_sum = max(max_sum, window_sum)
-        
+        for i in range(len(nums) - k + 1):
+            max_sum = max(max_sum, sum(nums[i:i+k]))
         return max_sum
-    
-    # ==================== SOLUTION 2: SLIDING WINDOW - OPTIMAL ====================
-    # Time: O(n) | Space: O(1)
-    def maxSumSlidingWindow(self, arr, k):
-        n = len(arr)
-        
-        # Calculate sum of first window
-        window_sum = sum(arr[:k])
+
+# ============================================================
+# Solution 2: Sliding Window — Running Max (Optimal)
+# Time: O(N) | Space: O(1)
+# ============================================================
+class Solution2:
+    def maxSumSubarray(self, nums: List[int], k: int) -> int:
+        window_sum = sum(nums[:k])
         max_sum = window_sum
-        
-        # Slide window and update max
-        for i in range(k, n):
-            # Remove leftmost, add rightmost
-            window_sum = window_sum - arr[i - k] + arr[i]
+
+        for i in range(k, len(nums)):
+            window_sum += nums[i] - nums[i - k]
             max_sum = max(max_sum, window_sum)
-        
+
         return max_sum
-    
-    # ==================== MAIN SOLUTION (RECOMMENDED) ====================
-    def maxSum(self, arr, k):
-        return self.maxSumSlidingWindow(arr, k)

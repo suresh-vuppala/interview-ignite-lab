@@ -1,88 +1,36 @@
-# ==================== SOLUTION 1: BRUTE FORCE ====================
-# Time: O(N×K) | Space: O(N)
-def distinct_elements_brute(arr, k):
-    n = len(arr)
-    result = []
-    
-    # For each window
-    for i in range(n - k + 1):
-        distinct = set()
-        # Add all elements in window to set
-        for j in range(i, i + k):
-            distinct.add(arr[j])
-        result.append(len(distinct))
-    
-    return result
+# ============================================================
+# Distinct Elements in Every Window of Size K
+# ============================================================
 
+from typing import List
+from collections import defaultdict
 
-# ==================== SOLUTION 2: SLIDING WINDOW WITH HASHMAP ====================
-# Time: O(N) | Space: O(N)
-def distinct_elements_sliding(arr, k):
-    n = len(arr)
-    if n < k:
-        return []
-    
-    freq = {}
-    result = []
-    
-    # Build first window
-    for i in range(k):
-        freq[arr[i]] = freq.get(arr[i], 0) + 1
-    result.append(len(freq))
-    
-    # Slide the window
-    for i in range(k, n):
-        # Remove leftmost element of previous window
-        left_elem = arr[i - k]
-        freq[left_elem] -= 1
-        if freq[left_elem] == 0:
-            del freq[left_elem]
-        
-        # Add new element to window
-        freq[arr[i]] = freq.get(arr[i], 0) + 1
-        
-        # Count distinct elements
-        result.append(len(freq))
-    
-    return result
+# ============================================================
+# Solution 1: Brute Force — Set per Window
+# Time: O(N×K) | Space: O(K)
+# ============================================================
+class Solution1:
+    def distinctInWindow(self, nums: List[int], k: int) -> List[int]:
+        return [len(set(nums[i:i+k])) for i in range(len(nums) - k + 1)]
 
+# ============================================================
+# Solution 2: Sliding Window + Frequency Map (Optimal)
+# Time: O(N) | Space: O(K)
+# ============================================================
+class Solution2:
+    def distinctInWindow(self, nums: List[int], k: int) -> List[int]:
+        freq = defaultdict(int)
+        result = []
 
-# ==================== SOLUTION 3: OPTIMIZED SLIDING WINDOW ====================
-# Time: O(N) | Space: O(N)
-def distinct_elements_optimized(arr, k):
-    n = len(arr)
-    
-    # Edge cases
-    if k <= 0 or k > n:
-        return []
-    
-    freq = {}
-    result = []
-    
-    # Process first window
-    for i in range(k):
-        freq[arr[i]] = freq.get(arr[i], 0) + 1
-    result.append(len(freq))
-    
-    # Slide window from k to n-1
-    for i in range(k, n):
-        # Remove element going out of window
-        out_elem = arr[i - k]
-        freq[out_elem] -= 1
-        if freq[out_elem] == 0:
-            del freq[out_elem]
-        
-        # Add element coming into window
-        in_elem = arr[i]
-        freq[in_elem] = freq.get(in_elem, 0) + 1
-        
-        # Record distinct count
-        result.append(len(freq))
-    
-    return result
+        for i in range(len(nums)):
+            freq[nums[i]] += 1          # Add entering
 
+            if i >= k:                   # Remove leaving
+                freq[nums[i - k]] -= 1
+                if freq[nums[i - k]] == 0:
+                    del freq[nums[i - k]]  # Delete key when count = 0
 
-# Main solution - recommended approach
-def distinct_elements_window(arr, k):
-    """Count distinct elements in every window of size k."""
-    return distinct_elements_sliding(arr, k)
+            if i >= k - 1:
+                result.append(len(freq)) # Map size = distinct count
+
+        return result

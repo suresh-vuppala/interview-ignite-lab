@@ -6,36 +6,19 @@
   "mdFile": "distinct-elements-window.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Brute Force",
+      "title": "Distinct Elements in Window",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/cpp/distinct_elements_window_sol1.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/cpp/distinct_elements_window.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/java/DistinctElementsWindowSol1.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/java/DistinctElementsWindow.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/python/distinct_elements_window_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Sliding Window + Freq Map (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/cpp/distinct_elements_window_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/java/DistinctElementsWindowSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/python/distinct_elements_window_sol2.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/python/distinct_elements_window.py"
         }
       ]
     }

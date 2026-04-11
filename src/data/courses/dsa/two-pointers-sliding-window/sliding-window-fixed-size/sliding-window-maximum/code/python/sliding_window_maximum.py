@@ -1,73 +1,40 @@
-from collections import deque
-import heapq
+# ============================================================
+# Sliding Window Maximum
+# ============================================================
 
-class Solution:
-    # ==================== SOLUTION 1: BRUTE FORCE ====================
-    # Time: O(n×k) | Space: O(1)
-    def maxSlidingWindowBruteForce(self, arr, k):
-        n = len(arr)
+from typing import List
+from collections import deque
+
+# ============================================================
+# Solution 1: Brute Force
+# Time: O(N×K) | Space: O(1)
+# ============================================================
+class Solution1:
+    def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
+        return [max(nums[i:i+k]) for i in range(len(nums) - k + 1)]
+
+# ============================================================
+# Solution 2: Monotonic Decreasing Deque (Optimal)
+# Time: O(N) | Space: O(K)
+# ============================================================
+class Solution2:
+    def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
+        dq = deque()  # Stores indices; front = current max
         result = []
-        
-        # For each window
-        for i in range(n - k + 1):
-            # Find max in window
-            window_max = max(arr[i:i + k])
-            result.append(window_max)
-        
-        return result
-    
-    # ==================== SOLUTION 2: MONOTONIC DEQUE - OPTIMAL ====================
-    # Time: O(n) | Space: O(k)
-    def maxSlidingWindowDeque(self, arr, k):
-        n = len(arr)
-        result = []
-        dq = deque()  # Store indices in decreasing order of values
-        
-        for i in range(n):
-            # Remove indices outside current window
-            while dq and dq[0] <= i - k:
+
+        for i in range(len(nums)):
+            # Remove expired indices from front
+            while dq and dq[0] < i - k + 1:
                 dq.popleft()
-            
-            # Remove indices with smaller values (can't be max)
-            while dq and arr[dq[-1]] < arr[i]:
+
+            # Remove smaller elements from back
+            while dq and nums[dq[-1]] <= nums[i]:
                 dq.pop()
-            
-            # Add current index
+
             dq.append(i)
-            
-            # Add max to result (after first window is complete)
+
+            # Window is full — front is the max
             if i >= k - 1:
-                result.append(arr[dq[0]])
-        
+                result.append(nums[dq[0]])
+
         return result
-    
-    # ==================== SOLUTION 3: USING MAX HEAP ====================
-    # Time: O(n log k) | Space: O(k)
-    def maxSlidingWindowHeap(self, arr, k):
-        n = len(arr)
-        result = []
-        heap = []  # Max heap: store (-value, index)
-        
-        # Add first k elements
-        for i in range(k):
-            heapq.heappush(heap, (-arr[i], i))
-        
-        result.append(-heap[0][0])
-        
-        # Process remaining elements
-        for i in range(k, n):
-            # Add new element
-            heapq.heappush(heap, (-arr[i], i))
-            
-            # Remove elements outside window
-            while heap and heap[0][1] <= i - k:
-                heapq.heappop(heap)
-            
-            # Top is maximum
-            result.append(-heap[0][0])
-        
-        return result
-    
-    # ==================== MAIN SOLUTION (RECOMMENDED) ====================
-    def maxSlidingWindow(self, arr, k):
-        return self.maxSlidingWindowDeque(arr, k)

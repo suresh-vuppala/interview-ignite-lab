@@ -1,54 +1,45 @@
+# ============================================================
+# First Negative in Every Window of Size K
+# ============================================================
+
+from typing import List
 from collections import deque
 
-class Solution:
-    # ==================== SOLUTION 1: BRUTE FORCE ====================
-    # Time: O(n×k) | Space: O(1)
-    def firstNegativeBruteForce(self, arr, k):
-        n = len(arr)
+# ============================================================
+# Solution 1: Brute Force
+# Time: O(N×K) | Space: O(1)
+# ============================================================
+class Solution1:
+    def firstNegative(self, nums: List[int], k: int) -> List[int]:
         result = []
-        
-        # For each window
-        for i in range(n - k + 1):
-            # Find first negative in window
-            first_neg = 0
+        for i in range(len(nums) - k + 1):
+            found = 0
             for j in range(i, i + k):
-                if arr[j] < 0:
-                    first_neg = arr[j]
+                if nums[j] < 0:
+                    found = nums[j]
                     break
-            result.append(first_neg)
-        
+            result.append(found)
         return result
-    
-    # ==================== SOLUTION 2: SLIDING WINDOW WITH DEQUE - OPTIMAL ====================
-    # Time: O(n) | Space: O(k)
-    def firstNegativeDeque(self, arr, k):
-        n = len(arr)
+
+# ============================================================
+# Solution 2: Deque of Negative Indices (Optimal)
+# Time: O(N) | Space: O(K)
+# ============================================================
+class Solution2:
+    def firstNegative(self, nums: List[int], k: int) -> List[int]:
+        neg_idx = deque()  # Indices of negative numbers
         result = []
-        dq = deque()  # Store indices of negative numbers
-        
-        # Process first window
-        for i in range(k):
-            if arr[i] < 0:
-                dq.append(i)
-        
-        # First window result
-        result.append(arr[dq[0]] if dq else 0)
-        
-        # Process remaining windows
-        for i in range(k, n):
-            # Remove indices outside current window
-            while dq and dq[0] <= i - k:
-                dq.popleft()
-            
-            # Add current element if negative
-            if arr[i] < 0:
-                dq.append(i)
-            
-            # First negative in current window
-            result.append(arr[dq[0]] if dq else 0)
-        
+
+        for i in range(len(nums)):
+            if nums[i] < 0:
+                neg_idx.append(i)
+
+            if i >= k - 1:
+                # Remove expired indices
+                while neg_idx and neg_idx[0] < i - k + 1:
+                    neg_idx.popleft()
+
+                # Front = first negative in window
+                result.append(nums[neg_idx[0]] if neg_idx else 0)
+
         return result
-    
-    # ==================== MAIN SOLUTION (RECOMMENDED) ====================
-    def firstNegative(self, arr, k):
-        return self.firstNegativeDeque(arr, k)

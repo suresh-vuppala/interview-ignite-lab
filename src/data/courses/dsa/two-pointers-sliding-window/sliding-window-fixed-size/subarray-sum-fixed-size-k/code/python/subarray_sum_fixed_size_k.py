@@ -1,40 +1,35 @@
-class Solution:
-    # ==================== SOLUTION 1: BRUTE FORCE ====================
-    # Time: O(n×k) | Space: O(1)
-    def subarraySumBruteForce(self, arr, k):
-        n = len(arr)
-        result = []
-        
-        # For each starting position
-        for i in range(n - k + 1):
-            # Calculate sum of k elements
-            window_sum = 0
-            window = []
-            for j in range(i, i + k):
-                window_sum += arr[j]
-                window.append(arr[j])
-            result.append([window, window_sum])
-        
-        return result
-    
-    # ==================== SOLUTION 2: SLIDING WINDOW - OPTIMAL ====================
-    # Time: O(n) | Space: O(1)
-    def subarraySumSlidingWindow(self, arr, k):
-        n = len(arr)
-        result = []
-        
-        # Calculate sum of first window
-        window_sum = sum(arr[:k])
-        result.append([arr[:k], window_sum])
-        
-        # Slide window
-        for i in range(k, n):
-            # Remove leftmost element, add rightmost element
-            window_sum = window_sum - arr[i - k] + arr[i]
-            result.append([arr[i - k + 1:i + 1], window_sum])
-        
-        return result
-    
-    # ==================== MAIN SOLUTION (RECOMMENDED) ====================
-    def subarraySum(self, arr, k):
-        return self.subarraySumSlidingWindow(arr, k)
+# ============================================================
+# Subarray Sum — Fixed Size K
+# ============================================================
+
+from typing import List
+
+# ============================================================
+# Solution 1: Brute Force — Recompute Each Window
+# Time: O(N×K) | Space: O(1)
+# ============================================================
+class Solution1:
+    def hasSubarraySum(self, nums: List[int], k: int, target: int) -> bool:
+        for i in range(len(nums) - k + 1):
+            if sum(nums[i:i+k]) == target:
+                return True
+        return False
+
+# ============================================================
+# Solution 2: Sliding Window — Running Sum (Optimal)
+# Time: O(N) | Space: O(1)
+# ============================================================
+class Solution2:
+    def hasSubarraySum(self, nums: List[int], k: int, target: int) -> bool:
+        # First window
+        window_sum = sum(nums[:k])
+        if window_sum == target:
+            return True
+
+        # Slide: subtract leaving, add entering
+        for i in range(k, len(nums)):
+            window_sum += nums[i] - nums[i - k]
+            if window_sum == target:
+                return True
+
+        return False
