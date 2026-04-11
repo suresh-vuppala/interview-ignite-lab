@@ -1,40 +1,51 @@
-## Overview
-Swap left and right subtrees for all nodes (mirror the tree).
+Invert a binary tree (swap all left and right children).
 
-## Problem Statement
-Invert a binary tree so left becomes right and right becomes left.
+<br>
 
-## Approach
-- DFS: swap children at each node
-- Base case: null nodes
-- Simple recursive solution
-
-## Complexity Analysis
-- **Time**: O(n)
-- **Space**: O(h)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 100`
-- `-100 ≤ Node.val ≤ 100`
+> Input: [4,2,7,1,3,6,9]
+> Output: [4,7,2,9,6,3,1]
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursive (DFS)
 
-1. **Empty tree:** Return null
-2. **Single node:** Return as-is
-3. **Already symmetric:** Inversion gives same tree
-4. **Skewed left:** Becomes skewed right
+**Intuition:** Swap left and right children, then recurse.
 
+```
+TreeNode invert(node):
+    if null: return null
+    swap(node.left, node.right)
+    invert(node.left)
+    invert(node.right)
+    return node
+```
+
+### Time: O(n) | Space: O(h)
+
+<br>
+
+---
+
+## Solution 2: Iterative (BFS)
+
+Use queue. For each node, swap its children, enqueue non-null children.
+
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursive DFS | O(n) | O(h) | Swap + recurse |
+| Iterative BFS | O(n) | O(n) | Queue-based swap |
+
+<br>
 <br>
 
 ---

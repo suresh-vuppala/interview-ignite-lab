@@ -1,39 +1,53 @@
-## Overview
-Comprehensive solution for Flatten to Linked List
+Flatten binary tree to linked list (preorder) in-place using right pointers.
 
-## Problem Statement
-Implement Flatten to Linked List
+<br>
 
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 2000`
-- `-100 ≤ Node.val ≤ 100`
+> Input: [1,2,5,3,4,null,6]
+> Output: 1→2→3→4→5→6 (right pointers)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Preorder → Array → Relink
 
-1. **Empty tree:** Nothing to flatten
-2. **Single node:** Already flat
-3. **Left-skewed:** Left subtree becomes right chain
-4. **Right-skewed:** Already a linked list
-5. **Complete tree:** All left children become right
+Collect preorder traversal, relink nodes.
 
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Solution 2: Reverse Postorder (Optimal)
+
+**Intuition:** Process right → left → root (reverse preorder). Maintain a `prev` pointer. Set current.right = prev, current.left = null.
+
+### Time: O(n) | Space: O(h)
+
+<br>
+
+---
+
+## Solution 3: Morris-Style O(1) Space
+
+For each node with a left child: find rightmost node in left subtree, connect it to current.right. Move left subtree to right, set left to null.
+
+### Time: O(n) | Space: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Array | O(n) | O(n) | Preorder → relink |
+| Reverse Post | O(n) | O(h) | Process right-to-left |
+| Morris-Style | O(n) | O(1) | Thread left subtree to right |
+
+<br>
 <br>
 
 ---

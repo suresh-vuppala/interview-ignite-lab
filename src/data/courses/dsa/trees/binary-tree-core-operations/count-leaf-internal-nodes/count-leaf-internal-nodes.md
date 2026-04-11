@@ -1,39 +1,26 @@
-## Overview
-Leaf nodes have no children. Internal nodes have at least one child. This is a fundamental tree property counting problem.
-
-## Problem Statement
-Given a binary tree, count the number of leaf nodes and internal nodes.
-
-## Approach
-- **Leaf Node**: Node with no left and right children
-- **Internal Node**: Node with at least one child
-- Use DFS/recursion to traverse and count
-
-## Complexity Analysis
-- **Time**: O(n) - visit each node once
-- **Space**: O(h) - recursion stack
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁵`
+Count leaf nodes (0 children) and internal nodes (1+ children).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS — Recurse, count based on children count
+## Solution 2: BFS — Level-by-level, classify each node
 
-1. **Single node:** 1 leaf, 0 internal
-2. **All leaves at same level:** Count at that level
-3. **Skewed tree:** 1 leaf, n-1 internal
-4. **Empty tree:** 0 leaves, 0 internal
+### Time: O(n) | Space: O(h) or O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS | O(n) | O(h) | Recursive classification |
+| BFS | O(n) | O(n) | Iterative classification |
+
+<br>
 <br>
 
 ---

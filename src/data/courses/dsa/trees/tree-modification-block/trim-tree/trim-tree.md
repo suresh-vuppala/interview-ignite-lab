@@ -1,40 +1,28 @@
-## Overview
-Comprehensive solution for Trim Tree
-
-## Problem Statement
-Implement Trim Tree
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁴`
-- `0 ≤ Node.val ≤ 10⁴`
-- `BST property holds`
+Trim BST to only contain values in [lo, hi].
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursive (Optimal)
 
-1. **All nodes in range:** Return unchanged
-2. **Root out of range:** Root changes
-3. **Entire left subtree out:** Left becomes null
-4. **Entire right subtree out:** Right becomes null
-5. **Single node in range:** Return single node
+If node.val < lo → trim(right) (left subtree all invalid).
+If node.val > hi → trim(left) (right subtree all invalid).
+Else → trim both children.
 
+### Time: O(n) | Space: O(h)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursive | O(n) | O(h) | BST property skips entire subtrees |
+
+<br>
 <br>
 
 ---

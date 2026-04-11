@@ -1,27 +1,51 @@
-A node X is good if in the path from root to X there are no nodes with value greater than X. Return the number of good nodes in the binary tree.
+Count nodes where no ancestor has a greater value (node is "good").
+
+<br>
+
+> Input: [3,1,4,3,null,1,5]
+> Output: 4 (nodes 3, 3, 4, 5)
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: DFS with Max Tracking (Optimal)
 
-- `1 ≤ n ≤ 10⁵`
-- `-10⁴ ≤ Node.val ≤ 10⁴`
+**Intuition:** Track maximum value from root to current node. If node.val >= maxSoFar, it's a good node.
+
+**Algorithm:**
+```
+int dfs(node, maxSoFar):
+    if null: return 0
+    count = (node.val >= maxSoFar) ? 1 : 0
+    newMax = max(maxSoFar, node.val)
+    return count + dfs(left, newMax) + dfs(right, newMax)
+```
+
+### Time: O(n) | Space: O(h)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 2: BFS with Max Tracking
 
-1. **Single node:** Root is always good → return 1
-2. **All same values:** Every node is good
-3. **Strictly decreasing path:** Only root is good
-4. **Strictly increasing path:** Every node is good
-5. **Negative values:** Good if ≥ max on path from root
-6. **Skewed tree:** Linear chain comparison
+Queue stores (node, maxSoFar). Same logic iteratively.
 
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS + Max | O(n) | O(h) | Pass max down recursively |
+| BFS + Max | O(n) | O(n) | Queue with max tracking |
+
+<br>
 <br>
 
 ---

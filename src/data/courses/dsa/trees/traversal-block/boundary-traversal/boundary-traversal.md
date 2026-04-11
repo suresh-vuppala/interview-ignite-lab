@@ -1,39 +1,28 @@
-## Overview
-Comprehensive solution for Boundary Traversal problem.
-
-## Problem Statement
-Implement Boundary Traversal.
-
-## Approach
-Use DFS/BFS traversal with appropriate data structures.
-
-## Complexity Analysis
-- **Time**: O(n)
-- **Space**: O(h)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `-1000 ≤ Node.val ≤ 1000`
+Print boundary nodes: left boundary + leaves + right boundary (reverse).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Three Separate Passes
 
-1. **Single node:** Return [val]
-2. **Left-skewed:** All nodes are boundary
-3. **Right-skewed:** All nodes are boundary
-4. **Complete tree:** Left boundary + leaves + right boundary
-5. **Only left child:** Left boundary includes all
+1. Left boundary (top-down, exclude leaf)
+2. Leaves (left-to-right)
+3. Right boundary (bottom-up, exclude leaf)
 
+### Time: O(n) | Space: O(h)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Three Passes | O(n) | O(h) | Separate left/leaves/right collection |
+
+<br>
 <br>
 
 ---

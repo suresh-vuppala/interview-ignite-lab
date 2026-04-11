@@ -1,38 +1,26 @@
-## Overview
-Comprehensive solution for Diagonal Traversal problem.
-
-## Problem Statement
-Implement Diagonal Traversal.
-
-## Approach
-Use DFS/BFS traversal with appropriate data structures.
-
-## Complexity Analysis
-- **Time**: O(n)
-- **Space**: O(h)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `-10⁵ ≤ Node.val ≤ 10⁵`
+Group nodes by diagonal (going right is same diagonal, going left is next diagonal).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS with Diagonal Index — Track diagonal level, group by it
+## Solution 2: BFS with Queue — Process diagonals level by level
 
-1. **Single node:** One diagonal with one element
-2. **Left-skewed:** Each diagonal has one element
-3. **Right-skewed:** All nodes in one diagonal
-4. **Complete tree:** Standard diagonal grouping
+### Time: O(n) | Space: O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS + Map | O(n) | O(n) | Map diagonal → nodes |
+| BFS | O(n) | O(n) | Level-by-level diagonal processing |
+
+<br>
 <br>
 
 ---

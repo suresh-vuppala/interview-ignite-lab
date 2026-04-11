@@ -1,24 +1,26 @@
-Content coming soon...
+## Count Total Nodes
 
+**General Tree:** DFS or BFS — O(n) time, O(h) space.
 
+**Complete Binary Tree (Optimal):**
+Use property: if leftmost depth == rightmost depth → perfect → nodes = 2^h - 1.
+Otherwise recurse on left and right.
 
----
-
-## Constraints
-
-- `0 ≤ n ≤ 5 × 10⁵`
+### Time: O(log²n) for complete binary tree
+### Space: O(log n)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **Empty tree:** Return 0
-2. **Single node:** Return 1
-3. **Complete binary tree:** Use O(log²n) algorithm
-4. **Skewed tree:** O(n) traversal
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS/BFS | O(n) | O(h) | Visit all nodes |
+| Complete BT trick | O(log²n) | O(log n) | Skip entire perfect subtrees |
 
+<br>
 <br>
 
 ---

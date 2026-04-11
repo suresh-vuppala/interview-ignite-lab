@@ -1,41 +1,37 @@
-## Overview
-Check if two binary trees are identical (same structure and values).
-
-## Problem Statement
-Determine if tree1 and tree2 are identical.
-
-## Approach
-- Base cases: both null (true), one null (false)
-- Check values match, then recursively check subtrees
-- Simple and elegant
-
-## Complexity Analysis
-- **Time**: O(min(n1, n2))
-- **Space**: O(h)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 100`
-- `-10⁴ ≤ Node.val ≤ 10⁴`
+Check if two binary trees are structurally identical with same values.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursive
 
-1. **Both empty:** true
-2. **One empty one not:** false
-3. **Same structure different values:** false
-4. **Same values different structure:** false
-5. **Single node both:** Compare values
+Same structure: both null → true, one null → false, vals differ → false, recurse on children.
 
+### Time: O(n) | Space: O(h)
+
+<br>
+
+---
+
+## Solution 2: Iterative (BFS with Two Queues)
+
+Pair nodes from both trees in queues, compare level by level.
+
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursive | O(n) | O(h) | Natural comparison |
+| Iterative BFS | O(n) | O(n) | Queue-based pairing |
+
+<br>
 <br>
 
 ---

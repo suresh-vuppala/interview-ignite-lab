@@ -1,38 +1,44 @@
-## Overview
-Comprehensive solution for Count Paths with Sum
-
-## Problem Statement
-Implement Count Paths with Sum
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 1000`
-- `-10⁹ ≤ Node.val ≤ 10⁹`
+Count paths summing to target. Path can start at any node but must go downward.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force — DFS from Every Node
 
-1. **No valid paths:** Return 0
-2. **Multiple overlapping paths:** Count each separately
-3. **Negative values:** Path can dip and recover
-4. **Single node path:** Valid if equals target
+For each node, count paths starting from it with target sum.
 
+### Time: O(n²) — DFS from each node
+### Space: O(h)
+
+<br>
+
+---
+
+## Solution 2: Prefix Sum + Hash Map (Optimal)
+
+**Intuition:** Like subarray sum = k. Track prefix sum from root. If prefixSum - target exists in map, there's a valid path.
+
+**Algorithm:**
+1. DFS tracking running prefix sum
+2. HashMap: prefixSum → count of nodes with that sum
+3. At each node: count += map[prefixSum - target]
+4. Add current prefixSum to map, recurse, then remove (backtrack)
+
+### Time: O(n) | Space: O(h)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS from every node | O(n²) | O(h) | Check all starting points |
+| Prefix Sum + Map | O(n) | O(h) | Subarray sum technique on tree |
+
+<br>
 <br>
 
 ---

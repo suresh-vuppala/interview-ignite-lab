@@ -1,38 +1,42 @@
-## Overview
-Comprehensive solution for Zigzag Traversal problem.
+Zigzag level order: left-to-right, then right-to-left, alternating.
 
-## Problem Statement
-Implement Zigzag Traversal.
+<br>
 
-## Approach
-Use DFS/BFS traversal with appropriate data structures.
-
-## Complexity Analysis
-- **Time**: O(n)
-- **Space**: O(h)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 2000`
-- `-1000 ≤ Node.val ≤ 1000`
+> Input: [3,9,20,null,null,15,7]
+> Output: [[3],[20,9],[15,7]]
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: BFS + Reverse Alternate Levels
 
-1. **Empty tree:** Return []
-2. **Single node:** Return [[val]]
-3. **Two levels:** Second level reversed
-4. **Skewed tree:** No visible zigzag effect
+Standard level order, reverse every odd level.
 
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Solution 2: BFS with Deque
+
+Use deque: even levels add to back, odd levels add to front. No reversal needed.
+
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| BFS + Reverse | O(n) | O(n) | Reverse alternate levels |
+| BFS + Deque | O(n) | O(n) | Deque avoids reversal |
+
+<br>
 <br>
 
 ---

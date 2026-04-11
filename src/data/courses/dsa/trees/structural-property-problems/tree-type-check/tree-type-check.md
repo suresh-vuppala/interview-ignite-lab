@@ -1,37 +1,30 @@
-## Overview
-Comprehensive solution for Tree Type Check problem.
-
-## Problem Statement
-Implement Tree Type Check.
-
-## Approach
-Use DFS/BFS traversal with appropriate data structures.
-
-## Complexity Analysis
-- **Time**: O(n)
-- **Space**: O(h)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁵`
+Check if tree is Full, Complete, or Perfect binary tree.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursive Checks
 
-1. **Full binary tree:** Every node has 0 or 2 children
-2. **Complete binary tree:** All levels full except possibly last
-3. **Perfect binary tree:** All internal nodes have 2 children, all leaves same level
-4. **Degenerate tree:** Every node has at most 1 child
+- **Full:** Every node has 0 or 2 children
+- **Complete:** All levels full except possibly last (filled left to right)
+- **Perfect:** All internal nodes have 2 children, all leaves at same level
 
+**Complete check:** BFS — once a non-full node is seen, all remaining must be leaves.
+
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursive/BFS | O(n) | O(n) | Property-specific checks |
+
+<br>
 <br>
 
 ---

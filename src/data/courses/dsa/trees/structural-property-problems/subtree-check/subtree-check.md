@@ -1,42 +1,39 @@
-## Overview
-Check if one tree is a subtree of another (exact match at some node).
-
-## Problem Statement
-Check if tree s is a subtree of tree t (starting at some node in t).
-
-## Approach
-- For each node in t, check if it matches s
-- Use isSameTree helper
-- DFS on t to find potential roots
-
-## Complexity Analysis
-- **Time**: O(n*m) where n=t.size, m=s.size
-- **Space**: O(h)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ root nodes ≤ 2000`
-- `1 ≤ subRoot nodes ≤ 1000`
-- `-10⁴ ≤ Node.val ≤ 10⁴`
+Check if subRoot is a subtree of root.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS + Compare at Each Node
 
-1. **subRoot is entire tree:** true
-2. **subRoot is leaf of tree:** true
-3. **Empty subRoot:** true (empty tree is subtree of any tree)
-4. **subRoot not found:** false
-5. **Multiple occurrences:** Match any one
+For each node in root, check if subtree rooted there equals subRoot (using identical tree check).
 
+### Time: O(m × n) — compare at each node
+### Space: O(h)
+
+<br>
+
+---
+
+## Solution 2: Serialize + String Matching
+
+Serialize both trees, check if subRoot's serialization is a substring of root's.
+
+### Time: O(m + n)
+### Space: O(m + n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS + Compare | O(m×n) | O(h) | Compare at every node |
+| Serialize | O(m+n) | O(m+n) | Substring matching |
+
+<br>
 <br>
 
 ---

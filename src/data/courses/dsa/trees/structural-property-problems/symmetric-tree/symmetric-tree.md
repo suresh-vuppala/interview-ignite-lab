@@ -1,38 +1,41 @@
-## Overview
-Comprehensive solution for Symmetric Tree problem.
+Check if a binary tree is symmetric (mirror of itself).
 
-## Problem Statement
-Implement Symmetric Tree.
+<br>
 
-## Approach
-Use DFS/BFS traversal with appropriate data structures.
-
-## Complexity Analysis
-- **Time**: O(n)
-- **Space**: O(h)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 1000`
-- `-100 ≤ Node.val ≤ 100`
+> Input: [1,2,2,3,4,4,3] → true
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursive
 
-1. **Single node:** Symmetric
-2. **Two-level symmetric:** Left and right mirror
-3. **Not symmetric — different values:** false
-4. **Not symmetric — different structure:** false
+**Intuition:** A tree is symmetric if left subtree is a mirror of right subtree. Mirror check: left.val == right.val AND isMirror(left.left, right.right) AND isMirror(left.right, right.left).
 
+### Time: O(n) | Space: O(h)
+
+<br>
+
+---
+
+## Solution 2: Iterative (Queue)
+
+Enqueue pairs: (left.left, right.right) and (left.right, right.left). Compare pairs.
+
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursive | O(n) | O(h) | Mirror comparison |
+| Iterative | O(n) | O(n) | Queue pair comparison |
+
+<br>
 <br>
 
 ---

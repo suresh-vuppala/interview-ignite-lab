@@ -1,37 +1,38 @@
-## Overview
-Comprehensive solution for All Root-to-Leaf Paths
-
-## Problem Statement
-Implement All Root-to-Leaf Paths
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 100`
+Return all root-to-leaf paths.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS Backtracking
 
-1. **Single node:** One path with one element
-2. **Skewed tree:** One long path
-3. **Complete tree:** Multiple paths of same length
-4. **Multiple leaf nodes:** One path per leaf
+Build path string/list while traversing. At leaf, add current path to result. Backtrack.
 
+### Time: O(n × h) — h for path copy at each leaf
+### Space: O(h) recursion + O(n × h) result
+
+<br>
+
+---
+
+## Solution 2: BFS with Path Tracking
+
+Queue stores (node, path_so_far). At leaf, add to result.
+
+### Time: O(n × h) | Space: O(n × h)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS Backtrack | O(n×h) | O(h) + result | Natural recursive path building |
+| BFS | O(n×h) | O(n×h) | Iterative alternative |
+
+<br>
 <br>
 
 ---

@@ -1,38 +1,26 @@
-## Overview
-Comprehensive solution for Max Root-to-Leaf Sum
-
-## Problem Statement
-Implement Max Root-to-Leaf Sum
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁴`
-- `-10⁴ ≤ Node.val ≤ 10⁴`
+Find the maximum sum among all root-to-leaf paths.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS — At each node: max(leftSum, rightSum) + node.val
+## Solution 2: BFS — Track sum per path, compare at leaves
 
-1. **All negative:** Least negative path
-2. **Single node:** Return its value
-3. **Skewed tree:** Only one path
-4. **Balanced tree:** Compare all paths to leaves
+### Time: O(n) | Space: O(h) or O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS | O(n) | O(h) | Return max child sum + val |
+| BFS | O(n) | O(n) | Track running sums |
+
+<br>
 <br>
 
 ---

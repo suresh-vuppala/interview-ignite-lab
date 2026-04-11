@@ -1,41 +1,57 @@
-## Overview
-BFS traversal visiting nodes level-by-level (breadth-first).
+Level order traversal — visit nodes level by level using BFS.
 
-## Problem Statement
-Perform level order traversal returning list of lists (each inner list is one level).
+<br>
 
-## Approach
-- Use queue: enqueue root, process level by level
-- For each level, process all current nodes
-- Add their children to queue
+> Input: [3,9,20,null,null,15,7]
+> Output: [[3],[9,20],[15,7]]
 
-## Complexity Analysis
-- **Time**: O(n)
-- **Space**: O(w) where w = max width
-
-## Code
-
-
+<br>
 
 ---
 
 ## Constraints
 
 - `0 ≤ n ≤ 2000`
-- `-1000 ≤ Node.val ≤ 1000`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: BFS with Queue (Standard)
 
-1. **Empty tree:** Return []
-2. **Single node:** Return [[val]]
-3. **Complete binary tree:** Each level fully populated
-4. **Skewed tree:** One node per level
-5. **Single level:** Only root
+**Intuition:** Use queue. Process one level at a time by tracking queue size at each level.
 
+**Algorithm:**
+1. Queue starts with root
+2. While queue not empty:
+   - levelSize = queue.size()
+   - Process levelSize nodes, adding their children
+   - Collect level values into a list
+
+### Time: O(n) | Space: O(n) — queue holds up to n/2 nodes at widest level
+
+<br>
+
+---
+
+## Solution 2: DFS with Level Tracking
+
+**Intuition:** DFS with depth parameter. Append node value to result[depth].
+
+### Time: O(n) | Space: O(h) recursion
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| BFS Queue | O(n) | O(n) | Natural level-by-level |
+| DFS + Level | O(n) | O(h) | Less space for narrow trees |
+
+<br>
 <br>
 
 ---

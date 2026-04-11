@@ -1,38 +1,38 @@
-## Overview
-Comprehensive solution for Kth Ancestor
-
-## Problem Statement
-Implement Kth Ancestor
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `1 ≤ k ≤ n`
+Find the kth ancestor of a given node.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Parent Pointer — Walk up k times
 
-1. **k = 0:** Return the node itself
-2. **k = depth:** Return root
-3. **k > depth:** No such ancestor — return null
-4. **Root node, k=1:** No parent — return null
+Store parent pointers (or find path from root). Walk up k steps.
 
+### Time: O(n + k) | Space: O(n)
+
+<br>
+
+---
+
+## Solution 2: Binary Lifting (for repeated queries)
+
+Preprocess: ancestor[i][j] = 2^j-th ancestor of node i. Answer query in O(log k).
+
+### Time: O(n log n) preprocess, O(log k) per query
+### Space: O(n log n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Parent Walk | O(n+k) | O(n) | Simple traversal |
+| Binary Lifting | O(log k) query | O(n log n) | Preprocessing for repeated queries |
+
+<br>
 <br>
 
 ---

@@ -1,39 +1,37 @@
-## Overview
-Comprehensive solution for Add Row at Depth
-
-## Problem Statement
-Implement Add Row at Depth
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁴`
-- `1 ≤ depth ≤ n + 1`
-- `-100 ≤ val ≤ 100`
+Add a row of nodes with value val at given depth.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: BFS to Target Depth
 
-1. **Depth = 1:** New root, old tree becomes left child
-2. **Depth = 2:** Insert below root
-3. **Leaf level:** Add as children of leaves
-4. **Beyond tree depth:** Add at the very bottom
+BFS to depth-1, insert new nodes between current and its children.
 
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Solution 2: DFS
+
+Recurse to depth-1, insert new nodes.
+
+### Time: O(n) | Space: O(h)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| BFS | O(n) | O(n) | Level-by-level to target |
+| DFS | O(n) | O(h) | Recursive insertion |
+
+<br>
 <br>
 
 ---

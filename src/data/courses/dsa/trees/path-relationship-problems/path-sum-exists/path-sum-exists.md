@@ -1,40 +1,49 @@
-## Overview
-Comprehensive solution for Path Sum Exists
+Check if root-to-leaf path exists with given target sum.
 
-## Problem Statement
-Implement Path Sum Exists
+<br>
 
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 5000`
-- `-1000 ≤ Node.val ≤ 1000`
-- `-1000 ≤ targetSum ≤ 1000`
+> Input: root = [5,4,8,11,null,13,4,7,2,null,null,null,1], target = 22
+> Output: true (path: 5→4→11→2)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS Recursive
 
-1. **Empty tree:** Return false
-2. **Single node equals target:** Return true
-3. **Path must end at leaf:** Internal node sum doesn't count
-4. **Negative values in path:** Sum can decrease then increase
-5. **All paths same sum:** true
+**Intuition:** Subtract current value from target. At leaf, check if remaining == 0.
 
+```
+bool hasPathSum(node, target):
+    if null: return false
+    if leaf and target == node.val: return true
+    return hasPathSum(left, target - node.val) || hasPathSum(right, target - node.val)
+```
+
+### Time: O(n) | Space: O(h)
+
+<br>
+
+---
+
+## Solution 2: BFS with Running Sum
+
+Track (node, remaining_sum) pairs in queue.
+
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS | O(n) | O(h) | Subtract as you go |
+| BFS | O(n) | O(n) | Iterative approach |
+
+<br>
 <br>
 
 ---

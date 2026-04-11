@@ -1,39 +1,56 @@
-## Overview
-Postorder traversal visits nodes in Left-Right-Root order. Used for deletion and solving subproblem-based problems.
+Perform postorder traversal (Left → Right → Root) of a binary tree.
 
-## Problem Statement
-Implement postorder traversal (recursive and iterative).
-
-## Approach
-**Recursive**: Visit left, visit right, process root
-**Iterative**: Use two stacks or one stack with tracking
-
-## Complexity Analysis
-- **Time**: O(n)
-- **Space**: O(h)
-
-## Code
-
-
+<br>
 
 ---
 
 ## Constraints
 
 - `0 ≤ n ≤ 100`
-- `-100 ≤ Node.val ≤ 100`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursive
 
-1. **Empty tree:** Return []
-2. **Single node:** Return [val]
-3. **Root is last:** Always the last element visited
-4. **Leaf nodes first:** All leaves before any internal node
+Visit left, right, then root.
 
+### Time: O(n) | Space: O(h)
+
+<br>
+
+---
+
+## Solution 2: Iterative (Two Stacks)
+
+**Intuition:** Modified preorder (Root→Right→Left) then reverse the result gives postorder (Left→Right→Root).
+
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Solution 3: Iterative (One Stack)
+
+Track last visited node to determine whether to go left, right, or visit current.
+
+### Time: O(n) | Space: O(h)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursive | O(n) | O(h) | Natural recursion |
+| Two Stacks | O(n) | O(n) | Reverse modified preorder |
+| One Stack | O(n) | O(h) | Track last visited |
+
+<br>
 <br>
 
 ---

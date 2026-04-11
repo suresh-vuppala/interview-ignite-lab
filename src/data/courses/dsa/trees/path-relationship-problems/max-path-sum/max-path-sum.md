@@ -1,22 +1,11 @@
-## Overview
-Find the maximum path sum in a binary tree. Path can start/end at any node (not necessarily root to leaf).
+Find the maximum path sum in a binary tree. Path can start and end at any node.
 
-## Problem Statement
-Return the maximum path sum where path can include any nodes.
+<br>
 
-## Approach
-- DFS postorder: calculate max path through each node
-- At each node, decide: continue path or start new
-- Track global max during traversal
-- Handle negative values: can ignore subtrees
+> Input: [-10,9,20,null,null,15,7]
+> Output: 42 (path: 15→20→7)
 
-## Complexity Analysis
-- **Time**: O(n) - visit each node
-- **Space**: O(h) - recursion stack
-
-## Code
-
-
+<br>
 
 ---
 
@@ -31,12 +20,57 @@ Return the maximum path sum where path can include any nodes.
 
 ## All Possible Edge Cases
 
-1. **All negative values:** Pick least negative single node
+1. **All negative:** Pick least negative single node
 2. **Single node:** Return its value
-3. **Path through root:** Sum of left path + root + right path
-4. **Path entirely in one subtree:** Don't include root
-5. **Negative child paths:** Exclude them (max with 0)
+3. **Path doesn't pass root:** Entirely in one subtree
 
+<br>
+
+---
+
+## Solution 1: Brute Force — All Paths Between All Pairs
+
+### Time: O(n³) | Space: O(n)
+
+<br>
+
+---
+
+## Solution 2: DFS with Global Max (Optimal)
+
+**Intuition:** At each node, compute max "one-sided" path (node + best child). Track global max including "two-sided" path (left + node + right).
+
+**Algorithm:**
+```
+maxSum = -∞
+int maxGain(node):
+    if null: return 0
+    left = max(maxGain(node.left), 0)   // Ignore negative paths
+    right = max(maxGain(node.right), 0)
+    
+    // Path through this node (possibly using both sides)
+    maxSum = max(maxSum, left + node.val + right)
+    
+    // Return one-sided max to parent
+    return node.val + max(left, right)
+```
+
+**Key:** Return one-sided path to parent (can only go one direction), but track two-sided path globally.
+
+### Time: O(n) | Space: O(h)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| All Pairs | O(n³) | O(n) | Check all possible paths |
+| DFS + Global Max | O(n) | O(h) | One-sided vs two-sided path tracking |
+
+<br>
 <br>
 
 ---

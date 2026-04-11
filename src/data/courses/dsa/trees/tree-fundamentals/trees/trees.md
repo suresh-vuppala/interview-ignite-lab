@@ -1,19 +1,14 @@
-Content coming soon...
+## Trees — Overview
 
----
+A tree is a connected acyclic graph with n nodes and n-1 edges.
 
-## Constraints
+**Binary Tree:** Each node has at most 2 children.
+**BST:** Left < Root < Right for all nodes.
+**Balanced:** Height difference ≤ 1 at every node.
+**Complete:** All levels full except possibly last (filled left).
+**Perfect:** All leaves at same depth, all internal nodes have 2 children.
 
-- `Conceptual lesson`
+**Key property:** Most tree problems are solved with DFS (recursion) or BFS (queue).
 
 <br>
-
----
-
-## All Possible Edge Cases
-
-1. **Binary tree:** At most 2 children per node
-2. **N-ary tree:** Any number of children
-3. **BST:** Left < Root < Right property
-
 <br>

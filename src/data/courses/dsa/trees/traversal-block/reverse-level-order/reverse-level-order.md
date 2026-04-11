@@ -1,37 +1,26 @@
-## Overview
-Comprehensive solution for Reverse Level Order problem.
-
-## Problem Statement
-Implement Reverse Level Order.
-
-## Approach
-Use DFS/BFS traversal with appropriate data structures.
-
-## Complexity Analysis
-- **Time**: O(n)
-- **Space**: O(h)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 2000`
-- `-1000 ≤ Node.val ≤ 1000`
+Level order traversal bottom-up.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: BFS then Reverse — Standard BFS, reverse result
+## Solution 2: BFS with Stack — Push levels to stack, pop gives bottom-up
 
-1. **Empty tree:** Return []
-2. **Single node:** Return [[val]]
-3. **Multiple levels:** Deepest level first
+### Time: O(n) | Space: O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| BFS + Reverse | O(n) | O(n) | Reverse final result |
+| BFS + Stack | O(n) | O(n) | Stack gives reverse order |
+
+<br>
 <br>
 
 ---
