@@ -6,19 +6,19 @@
   "mdFile": "pascals-triangle.md",
   "codeExamples": [
     {
-      "title": "Solution: Row-by-Row Construction",
+      "title": "Pascals Triangle",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/pascals-triangle/code/cpp/pascals_triangle_sol1.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/pascals-triangle/code/cpp/pascals_triangle.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/pascals-triangle/code/java/PascalsTriangleSol1.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/pascals-triangle/code/java/PascalsTriangle.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/pascals-triangle/code/python/pascals_triangle_sol1.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/pascals-triangle/code/python/pascals_triangle.py"
         }
       ]
     }

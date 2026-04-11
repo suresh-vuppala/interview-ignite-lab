@@ -6,19 +6,19 @@
   "mdFile": "encode-decode-strings.md",
   "codeExamples": [
     {
-      "title": "Solution: Length-Prefix Encoding",
+      "title": "Encode and Decode Strings",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/encode-decode-strings/code/cpp/encode_decode_strings_sol1.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/encode-decode-strings/code/cpp/encode_decode_strings.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/encode-decode-strings/code/java/EncodeDecodeStringsSol1.java"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/encode-decode-strings/code/java/EncodeDecodeStrings.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/encode-decode-strings/code/python/encode_decode_strings_sol1.py"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/encode-decode-strings/code/python/encode_decode_strings.py"
         }
       ]
     }

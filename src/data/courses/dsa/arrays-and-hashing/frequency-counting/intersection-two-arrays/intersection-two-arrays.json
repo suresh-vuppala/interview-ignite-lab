@@ -6,36 +6,19 @@
   "mdFile": "intersection-two-arrays.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Sort + Two Pointers",
+      "title": "Intersection Two Arrays",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/intersection-two-arrays/code/cpp/intersection_two_arrays_sol1.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/intersection-two-arrays/code/cpp/intersection_two_arrays.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/intersection-two-arrays/code/java/IntersectionTwoArraysSol1.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/intersection-two-arrays/code/java/IntersectionTwoArrays.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/intersection-two-arrays/code/python/intersection_two_arrays_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Hash Map (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/intersection-two-arrays/code/cpp/intersection_two_arrays_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/intersection-two-arrays/code/java/IntersectionTwoArraysSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/intersection-two-arrays/code/python/intersection_two_arrays_sol2.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/intersection-two-arrays/code/python/intersection_two_arrays.py"
         }
       ]
     }

@@ -6,36 +6,19 @@
   "mdFile": "spiral-matrix.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Simulation with Visited",
+      "title": "Spiral Matrix",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/spiral-matrix/code/cpp/spiral_matrix_sol1.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/spiral-matrix/code/cpp/spiral_matrix.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/spiral-matrix/code/java/SpiralMatrixSol1.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/spiral-matrix/code/java/SpiralMatrix.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/spiral-matrix/code/python/spiral_matrix_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Shrinking Boundaries (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/spiral-matrix/code/cpp/spiral_matrix_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/spiral-matrix/code/java/SpiralMatrixSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/spiral-matrix/code/python/spiral_matrix_sol2.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/spiral-matrix/code/python/spiral_matrix.py"
         }
       ]
     }

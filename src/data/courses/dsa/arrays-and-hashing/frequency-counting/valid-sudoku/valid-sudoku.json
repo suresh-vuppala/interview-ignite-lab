@@ -6,36 +6,19 @@
   "mdFile": "valid-sudoku.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Three Separate Checks",
+      "title": "Valid Sudoku",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/valid-sudoku/code/cpp/valid_sudoku_sol1.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/valid-sudoku/code/cpp/valid_sudoku.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/valid-sudoku/code/java/ValidSudokuSol1.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/valid-sudoku/code/java/ValidSudoku.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/valid-sudoku/code/python/valid_sudoku_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Single Pass Encoded Set",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/valid-sudoku/code/cpp/valid_sudoku_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/valid-sudoku/code/java/ValidSudokuSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/valid-sudoku/code/python/valid_sudoku_sol2.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/valid-sudoku/code/python/valid_sudoku.py"
         }
       ]
     }

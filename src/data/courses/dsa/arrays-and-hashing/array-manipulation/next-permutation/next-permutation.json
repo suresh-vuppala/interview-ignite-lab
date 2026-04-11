@@ -6,19 +6,19 @@
   "mdFile": "next-permutation.md",
   "codeExamples": [
     {
-      "title": "Solution: Three-Step Algorithm",
+      "title": "Next Permutation",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/next-permutation/code/cpp/next_permutation_sol1.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/next-permutation/code/cpp/next_permutation.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/next-permutation/code/java/NextPermutationSol1.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/next-permutation/code/java/NextPermutation.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/next-permutation/code/python/next_permutation_sol1.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/next-permutation/code/python/next_permutation.py"
         }
       ]
     }

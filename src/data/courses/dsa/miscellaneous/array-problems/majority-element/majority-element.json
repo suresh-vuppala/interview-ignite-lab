@@ -6,15 +6,15 @@
   "mdFile": "majority-element.md",
   "codeExamples": [
     {
-      "title": "Majority Element Solution",
+      "title": "Majority Element",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/miscellaneous/array-problems/majority-element/code/cpp/majority_element.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/miscellaneous/array-problems/majority-element/code/java/MajorityElement.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/miscellaneous/array-problems/majority-element/code/cpp/MajorityElement.cpp"
         },
         {
           "language": "python",

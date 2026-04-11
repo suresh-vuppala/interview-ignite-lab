@@ -6,36 +6,19 @@
   "mdFile": "rotate-image.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Extra Matrix",
+      "title": "Rotate Image",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/rotate-image/code/cpp/rotate_image_sol1.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/rotate-image/code/cpp/rotate_image.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/rotate-image/code/java/RotateImageSol1.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/rotate-image/code/java/RotateImage.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/rotate-image/code/python/rotate_image_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Transpose + Reverse (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/rotate-image/code/cpp/rotate_image_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/rotate-image/code/java/RotateImageSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/rotate-image/code/python/rotate_image_sol2.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/rotate-image/code/python/rotate_image.py"
         }
       ]
     }

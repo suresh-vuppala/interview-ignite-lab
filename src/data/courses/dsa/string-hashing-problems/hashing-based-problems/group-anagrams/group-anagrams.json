@@ -1,26 +1,26 @@
 {
-    "title": "Group Anagrams",
-    "slug": "group-anagrams",
-    "isPremium": false,
-    "isPosted": true,
-    "mdFile": "group-anagrams.md",
-    "codeExamples": [
+  "title": "Group Anagrams",
+  "slug": "group-anagrams",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "group-anagrams.md",
+  "codeExamples": [
+    {
+      "title": "Group Anagrams",
+      "languages": [
         {
-            "title": "Group Anagrams",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/group-anagrams/code/java/GroupAnagrams.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/group-anagrams/code/cpp/group_anagrams.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/group-anagrams/code/python/group-anagrams.py"
-                }
-            ]
+          "language": "cpp",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/group-anagrams/code/cpp/group_anagrams.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/group-anagrams/code/java/GroupAnagrams.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/group-anagrams/code/python/group_anagrams.py"
         }
-    ]
+      ]
+    }
+  ]
 }

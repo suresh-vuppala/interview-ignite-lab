@@ -1,25 +1,45 @@
+// ============================================================
+// Encode and Decode Strings
+// ============================================================
+
+#include <string>
+#include <vector>
+using namespace std;
+
+// ============================================================
+// Solution: Length-Prefix Encoding (Optimal)
+// Time: O(N) | Space: O(1) extra
+// ============================================================
 class Codec {
 public:
-    // Encode: prefix each string with its length followed by '#'
-    // e.g. ["hello","world"] -> "5#hello5#world"
+    // Encode: prefix each string with "length#"
     string encode(vector<string>& strs) {
-        string encoded = "";
+        string result;
         for (const string& s : strs) {
-            encoded += to_string(s.size()) + "#" + s;
+            result += to_string(s.size()) + "#" + s;
         }
-        return encoded;
+        return result;
     }
 
-    // Decode: read length, skip '#', extract substring
+    // Decode: read length, skip #, extract that many characters
     vector<string> decode(string s) {
         vector<string> result;
         int i = 0;
+
         while (i < s.size()) {
-            int j = s.find('#', i);           // Find the '#' delimiter
-            int len = stoi(s.substr(i, j - i)); // Parse the length
-            result.push_back(s.substr(j + 1, len)); // Extract the string
-            i = j + 1 + len;                  // Move past the string
+            // Find the '#' separator
+            int j = s.find('#', i);
+
+            // Parse the length
+            int length = stoi(s.substr(i, j - i));
+
+            // Extract the string (exactly 'length' characters after '#')
+            result.push_back(s.substr(j + 1, length));
+
+            // Move past this string
+            i = j + 1 + length;
         }
+
         return result;
     }
 };
