@@ -1,9 +1,8 @@
-Given a string, determine if it's a palindrome considering only alphanumeric characters and ignoring case.
+Check if string is palindrome considering only alphanumeric, ignoring case.
 
 <br>
 
-> Input: "A man, a plan, a canal: Panama"
-> Output: true
+> Input: "A man, a plan, a canal: Panama" → Output: true
 
 <br>
 
@@ -12,19 +11,6 @@ Given a string, determine if it's a palindrome considering only alphanumeric cha
 ## Constraints
 
 - `1 ≤ s.length ≤ 2 × 10⁵`
-- `s consists of printable ASCII characters`
-
-<br>
-
----
-
-## All Possible Edge Cases
-
-1. **Empty string:** True
-2. **Single character:** True
-3. **All non-alphanumeric:** ",.!!" → true (empty after filtering)
-4. **Mixed case:** "Aa" → true
-5. **Numbers:** "0P" → false
 
 <br>
 
@@ -32,31 +18,29 @@ Given a string, determine if it's a palindrome considering only alphanumeric cha
 
 ## Solution 1: Filter + Reverse
 
-**Intuition:** Clean the string (lowercase, alphanumeric only), then compare with its reverse.
+**Intuition:** Clean string (lowercase, alphanumeric only), compare with reverse.
 
-### Time Complexity: O(n)
-### Space Complexity: O(n) — cleaned string
+### Time: O(n) | Space: O(n)
+
+```code```
+
+> **Key Insight for Improvement:**
+>
+> **Drawback of current approach:** Creates a new cleaned string — O(n) extra space. We don't need to build the cleaned string at all.
+>
+> **Insight:** Two pointers from both ends. Skip non-alphanumeric characters. Compare lowercase characters in-place. No extra string needed.
 
 <br>
 
 ---
 
-## Solution 2: Two Pointers (Optimal)
+## Solution 2: Two Pointers In-Place (Optimal)
 
-**Intuition:**
-Pointers at both ends, skip non-alphanumeric, compare lowercase characters.
+**Intuition:** Left and right pointers. Skip junk. Compare toLower characters.
 
-**Algorithm:**
-1. left = 0, right = n-1
-2. While left < right:
-   - Skip non-alphanumeric from left
-   - Skip non-alphanumeric from right
-   - If toLower(s[left]) != toLower(s[right]) → false
-   - left++, right--
-3. Return true
+### Time: O(n) | Space: O(1)
 
-### Time Complexity: O(n)
-### Space Complexity: O(1) — no extra string
+```code```
 
 <br>
 
@@ -67,11 +51,7 @@ Pointers at both ends, skip non-alphanumeric, compare lowercase characters.
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
 | Filter + Reverse | O(n) | O(n) | Build clean string |
-| Two Pointers | O(n) | O(1) | Compare in-place, skip junk |
+| Two Pointers | O(n) | O(1) | Skip junk in-place |
 
 <br>
 <br>
-
----
-
-```code```

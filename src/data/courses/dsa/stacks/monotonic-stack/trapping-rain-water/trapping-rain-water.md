@@ -1,11 +1,10 @@
-Given elevation map, compute how much water can be trapped after raining.
+Compute water trapped between elevation bars after raining.
 
 <br>
 
-> Input: height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
-> Output: 6
-
-> **Key insight:** Water at position i = min(maxLeft, maxRight) - height[i]
+> Input: [0,1,0,2,1,0,1,3,2,1,2,1] → Output: 6
+>
+> **Key formula:** water[i] = min(maxLeft, maxRight) - height[i]
 
 <br>
 
@@ -13,31 +12,25 @@ Given elevation map, compute how much water can be trapped after raining.
 
 ## Constraints
 
-- `1 ≤ n ≤ 2 × 10⁴`
-- `0 ≤ height[i] ≤ 10⁵`
+- `1 ≤ n ≤ 2 × 10⁴`, `0 ≤ height[i] ≤ 10⁵`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force — Per-Position Scan
 
-1. **Less than 3 bars:** No water
-2. **Monotonically increasing/decreasing:** No water
-3. **All same height:** No water
-4. **V-shape:** [3,0,3] → 3 units
+**Intuition:** For each position, find max left and max right. Water = min(maxL, maxR) - h[i].
 
-<br>
+### Time: O(n²) | Space: O(1)
 
----
+```code```
 
-## Solution 1: Brute Force
-
-**Intuition:**
-For each position, find max height to its left and right. Water = min(maxLeft, maxRight) - height[i].
-
-### Time Complexity: O(n²) — scan left/right for each position
-### Space Complexity: O(1)
+> **Key Insight for Improvement:**
+>
+> **Drawback of current approach:** For each position, we scan left AND right to find max heights — O(n) per position × n positions = O(n²). We're recomputing the same maxLeft/maxRight values repeatedly.
+>
+> **Insight:** Precompute leftMax[i] and rightMax[i] arrays in O(n) each. Then water[i] = min(leftMax[i], rightMax[i]) - height[i] in one pass.
 
 <br>
 
@@ -45,11 +38,15 @@ For each position, find max height to its left and right. Water = min(maxLeft, m
 
 ## Solution 2: Prefix Max Arrays
 
-**Intuition:**
-Precompute leftMax[i] and rightMax[i] arrays. Water at i = min(leftMax[i], rightMax[i]) - height[i].
+### Time: O(n) | Space: O(n)
 
-### Time Complexity: O(n) — three passes
-### Space Complexity: O(n) — two extra arrays
+```code```
+
+> **Key Insight for Improvement:**
+>
+> **Drawback of current approach:** Uses O(n) space for two prefix arrays. Can we eliminate them?
+>
+> **Insight:** Two pointers from both ends. Track maxLeft and maxRight. Process from the SHORTER side — when height[left] < height[right], water at left depends only on maxLeft (since maxRight ≥ height[right] > height[left]). No arrays needed.
 
 <br>
 
@@ -57,34 +54,11 @@ Precompute leftMax[i] and rightMax[i] arrays. Water at i = min(leftMax[i], right
 
 ## Solution 3: Two Pointers (Optimal)
 
-**Intuition:**
-Use left and right pointers. Track maxLeft and maxRight. The shorter side determines water level — process from that side.
+**Intuition:** Process from shorter side. Water level determined by the shorter max.
 
-**Algorithm:**
-1. left = 0, right = n-1, maxLeft = 0, maxRight = 0, water = 0
-2. While left < right:
-   - If height[left] < height[right]:
-     - If height[left] >= maxLeft → update maxLeft
-     - Else → water += maxLeft - height[left]
-     - left++
-   - Else: mirror logic for right side
+### Time: O(n) | Space: O(1)
 
-**Why this works:** When height[left] < height[right], we know maxRight ≥ height[right] > height[left], so water at left depends only on maxLeft.
-
-### Time Complexity: O(n) — single pass
-### Space Complexity: O(1) — just pointers
-
-<br>
-
----
-
-## Solution 4: Monotonic Stack
-
-**Intuition:**
-Maintain decreasing stack of heights. When we find a bar taller than stack top, we can trap water between the current bar, the popped bar, and the new stack top.
-
-### Time Complexity: O(n)
-### Space Complexity: O(n) for stack
+```code```
 
 <br>
 
@@ -94,16 +68,9 @@ Maintain decreasing stack of heights. When we find a bar taller than stack top, 
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Brute Force | O(n²) | O(1) | Find max left/right per position |
+| Brute Force | O(n²) | O(1) | Scan left/right per position |
 | Prefix Max | O(n) | O(n) | Precompute max arrays |
-| Two Pointers | O(n) | O(1) | Shorter side determines water |
-| Monotonic Stack | O(n) | O(n) | Process horizontal layers |
-
-**Recommended:** Two Pointers — O(n) time, O(1) space.
+| Two Pointers | O(n) | O(1) | Process from shorter side |
 
 <br>
 <br>
-
----
-
-```code```

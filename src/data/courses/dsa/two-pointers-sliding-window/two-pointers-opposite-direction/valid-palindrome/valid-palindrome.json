@@ -6,19 +6,36 @@
   "mdFile": "valid-palindrome.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Solution 1: Filter + Reverse",
       "languages": [
         {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/valid-palindrome/code/java/ValidPalindrome.java"
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/valid-palindrome/code/cpp/valid_palindrome_sol1.cpp"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/valid-palindrome/code/cpp/valid_palindrome.cpp"
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/valid-palindrome/code/java/ValidPalindromeSol1.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/valid-palindrome/code/python/valid-palindrome.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/valid-palindrome/code/python/valid_palindrome_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Two Pointers (Optimal)",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/valid-palindrome/code/cpp/valid_palindrome_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/valid-palindrome/code/java/ValidPalindromeSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/valid-palindrome/code/python/valid_palindrome_sol2.py"
         }
       ]
     }

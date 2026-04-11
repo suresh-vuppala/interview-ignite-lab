@@ -1,9 +1,8 @@
-Given an integer array, move all zeros to the end while maintaining the relative order of non-zero elements. Must be done in-place.
+Move all zeros to the end while maintaining relative order of non-zero elements. In-place.
 
 <br>
 
-> Input: [0, 1, 0, 3, 12]
-> Output: [1, 3, 12, 0, 0]
+> Input: [0,1,0,3,12] → Output: [1,3,12,0,0]
 
 <br>
 
@@ -12,7 +11,6 @@ Given an integer array, move all zeros to the end while maintaining the relative
 ## Constraints
 
 - `1 ≤ nums.length ≤ 10⁴`
-- `-2³¹ ≤ nums[i] ≤ 2³¹ - 1`
 
 <br>
 
@@ -20,54 +18,41 @@ Given an integer array, move all zeros to the end while maintaining the relative
 
 ## All Possible Edge Cases
 
-1. **No zeros:** Array unchanged
-2. **All zeros:** Array unchanged
-3. **Single element:** Unchanged
-4. **Zeros at beginning:** All shift left
-5. **Zeros at end:** Already correct
+1. **No zeros:** Unchanged
+2. **All zeros:** Unchanged
+3. **Zeros at end:** Already correct
 
 <br>
 
 ---
 
-## Solution 1: Extra Array
+## Solution 1: Two-Pass (Copy then Fill)
 
-**Intuition:**
-Copy non-zeros to new array, fill rest with zeros.
-
-### Time Complexity: O(n)
-### Space Complexity: O(n)
-
-<br>
-
----
-
-## Solution 2: Two-Pass
-
-**Intuition:**
-Pass 1: Write all non-zero elements to the front. Pass 2: Fill remaining positions with zeros.
+**Intuition:** Pass 1: Copy all non-zeros to front. Pass 2: Fill remaining with zeros.
 
 ### Time Complexity: O(n)
 ### Space Complexity: O(1)
 
+```code```
+
+> **Key Insight for Improvement:**
+>
+> **Drawback of current approach:** Two passes over the array. Also, the second pass writes zeros even if they were already there.
+>
+> **Insight:** Use a single-pass swap approach. When we find a non-zero, swap it with the position at the slow pointer. Zeros naturally bubble to the right via swaps.
+
 <br>
 
 ---
 
-## Solution 3: Two Pointers — Swap (Optimal)
+## Solution 2: Single-Pass Swap (Optimal)
 
-**Intuition:**
-Slow pointer `j` marks next position for non-zero. Fast pointer `i` scans. When `nums[i] != 0`, swap `nums[i]` and `nums[j]`, advance both.
+**Intuition:** Slow pointer `j` = next non-zero position. When nums[i] != 0, swap nums[i] and nums[j], advance j.
 
-**Algorithm:**
-1. j = 0 (write position)
-2. For each i:
-   - If nums[i] != 0 → swap(nums[i], nums[j]), j++
+### Time Complexity: O(n)
+### Space Complexity: O(1)
 
-**Why this preserves order:** Non-zeros are placed in the order they appear. Zeros bubble to the right via swaps.
-
-### Time Complexity: O(n) — single pass
-### Space Complexity: O(1) — in-place
+```code```
 
 <br>
 
@@ -77,13 +62,8 @@ Slow pointer `j` marks next position for non-zero. Fast pointer `i` scans. When 
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Extra Array | O(n) | O(n) | Copy non-zeros |
-| Two-Pass | O(n) | O(1) | Write non-zeros, fill zeros |
-| Swap | O(n) | O(1) | Single pass with swap |
+| Two-Pass | O(n) | O(1) | Copy then fill zeros |
+| Single-Pass Swap | O(n) | O(1) | Swap in one pass |
 
 <br>
 <br>
-
----
-
-```code```

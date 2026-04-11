@@ -6,19 +6,36 @@
   "mdFile": "container-most-water.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Solution 1: Brute Force",
       "languages": [
         {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/container-most-water/code/java/ContainerMostWater.java"
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/container-most-water/code/cpp/container_most_water_sol1.cpp"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/container-most-water/code/cpp/container_most_water.cpp"
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/container-most-water/code/java/ContainerMostWaterSol1.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/container-most-water/code/python/container-most-water.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/container-most-water/code/python/container_most_water_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Two Pointers (Optimal)",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/container-most-water/code/cpp/container_most_water_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/container-most-water/code/java/ContainerMostWaterSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/container-most-water/code/python/container_most_water_sol2.py"
         }
       ]
     }

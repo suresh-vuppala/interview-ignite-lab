@@ -1,11 +1,10 @@
-Given a sorted array, remove duplicates in-place such that each element appears only once and return the new length.
+Given a sorted array, remove duplicates in-place. Return new length.
 
 <br>
 
-> Input: nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
-> Output: 5, nums = [0, 1, 2, 3, 4, ...]
+> Input: [0,0,1,1,1,2,2,3,3,4] → Output: 5, nums = [0,1,2,3,4,...]
 >
-> **Key insight:** Use a slow pointer for the write position and a fast pointer to scan for new unique values.
+> **Key insight:** Slow pointer marks write position, fast pointer scans for new unique values.
 
 <br>
 
@@ -14,7 +13,6 @@ Given a sorted array, remove duplicates in-place such that each element appears 
 ## Constraints
 
 - `1 ≤ nums.length ≤ 3 × 10⁴`
-- `-100 ≤ nums[i] ≤ 100`
 - `nums is sorted in non-decreasing order`
 
 <br>
@@ -23,57 +21,46 @@ Given a sorted array, remove duplicates in-place such that each element appears 
 
 ## All Possible Edge Cases
 
-1. **All unique:** No duplicates to remove — return n
+1. **All unique:** Return n
 2. **All same:** Return 1
 3. **Single element:** Return 1
-4. **Two elements, same:** Return 1
-5. **Two elements, different:** Return 2
 
 <br>
 
 ---
 
-## Solution 1: Extra Array (Not In-Place)
+## Solution 1: Extra Array
 
-**Intuition:**
-Create new array, copy unique elements.
-
-**Algorithm:**
-1. Create result array
-2. Scan original, add element only if different from last added
-3. Copy back
+**Intuition:** Copy unique elements to new array, then copy back.
 
 ### Time Complexity: O(n)
-### Space Complexity: O(n) — extra array
+### Space Complexity: O(n)
 
-> **Key Insight:** Since array is sorted, duplicates are adjacent. A two-pointer approach handles this in-place.
+```code```
+
+> **Key Insight for Improvement:**
+>
+> **Drawback of current approach:** Uses O(n) extra space. Since the array is already sorted, duplicates are adjacent — we can handle this in-place with two pointers.
+>
+> **Insight:** Use slow pointer `j` as write position. When fast pointer `i` finds a new value (nums[i] != nums[j]), write it to nums[++j]. Single pass, O(1) space.
 
 <br>
 
 ---
 
-## Solution 2: Two Pointers (Optimal)
+## Solution 2: Two Pointers — Slow/Fast (Optimal)
 
-**Intuition:**
-Slow pointer `j` marks the write position. Fast pointer `i` scans forward. When `nums[i] != nums[j]`, copy `nums[i]` to `nums[++j]`.
+**Intuition:** Slow pointer `j` marks last unique. Fast pointer `i` scans. On new value, advance j and copy.
 
 **Algorithm:**
-1. j = 0 (last unique position)
-2. For i = 1 to n-1:
-   - If nums[i] != nums[j] → j++, nums[j] = nums[i]
+1. j = 0
+2. For i = 1 to n-1: if nums[i] != nums[j] → j++, nums[j] = nums[i]
 3. Return j + 1
 
-**Example: [0, 0, 1, 1, 2]**
-```
-i=1: nums[1]=0 == nums[0]=0 → skip
-i=2: nums[2]=1 != nums[0]=0 → j=1, nums[1]=1 → [0,1,1,1,2]
-i=3: nums[3]=1 == nums[1]=1 → skip
-i=4: nums[4]=2 != nums[1]=1 → j=2, nums[2]=2 → [0,1,2,1,2]
-Return 3
-```
-
 ### Time Complexity: O(n) — single pass
-### Space Complexity: O(1) — in-place
+### Space Complexity: O(1)
+
+```code```
 
 <br>
 
@@ -84,13 +71,7 @@ Return 3
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
 | Extra Array | O(n) | O(n) | Copy uniques |
-| Two Pointers | O(n) | O(1) | Slow/fast pointer in-place |
-
-**Recommended:** Two Pointers — O(n) time, O(1) space.
+| Two Pointers | O(n) | O(1) | In-place with slow/fast |
 
 <br>
 <br>
-
----
-
-```code```

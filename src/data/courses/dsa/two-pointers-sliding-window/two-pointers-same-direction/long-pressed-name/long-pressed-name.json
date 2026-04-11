@@ -6,19 +6,19 @@
   "mdFile": "long-pressed-name.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Solution: Two Pointers",
       "languages": [
         {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/long-pressed-name/code/java/LongPressedName.java"
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/long-pressed-name/code/cpp/long_pressed_name_sol1.cpp"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/long-pressed-name/code/cpp/long_pressed_name.cpp"
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/long-pressed-name/code/java/LongPressedNameSol1.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/long-pressed-name/code/python/long-pressed-name.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/long-pressed-name/code/python/long_pressed_name_sol1.py"
         }
       ]
     }

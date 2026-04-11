@@ -1,9 +1,8 @@
-Find two numbers in a sorted array that add up to a target value. Return their 1-indexed indices.
+Find two numbers in a sorted array summing to target. Return 1-indexed.
 
 <br>
 
-> Input: numbers = [2, 7, 11, 15], target = 9
-> Output: [1, 2]
+> Input: [2,7,11,15], target = 9 → Output: [1,2]
 
 <br>
 
@@ -11,65 +10,35 @@ Find two numbers in a sorted array that add up to a target value. Return their 1
 
 ## Constraints
 
-- `2 ≤ numbers.length ≤ 3 × 10⁴`
-- `-1000 ≤ numbers[i] ≤ 1000`
-- `numbers is sorted in non-decreasing order`
-- `Exactly one solution exists`
+- Sorted non-decreasing, exactly one solution
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force — All Pairs
 
-1. **First and last elements:** Answer at extremes
-2. **Adjacent elements:** Answer is consecutive indices
-3. **Negative numbers:** Both negative, sum is negative
-4. **Zero in array:** One element could be zero
+### Time: O(n²) | Space: O(1)
 
-<br>
+```code```
 
----
-
-## Solution 1: Brute Force
-
-**Intuition:** Check all pairs.
-
-### Time Complexity: O(n²)
-### Space Complexity: O(1)
+> **Key Insight for Improvement:**
+>
+> **Drawback of current approach:** Checking all pairs ignores the sorted property entirely — O(n²) wasted comparisons.
+>
+> **Insight:** For each element, binary search for complement in remaining array. Or better: use two pointers from both ends — sum too large → move right left, sum too small → move left right. Converges in O(n).
 
 <br>
 
 ---
 
-## Solution 2: Binary Search for Complement
+## Solution 2: Two Pointers (Optimal)
 
-**Intuition:** For each element, binary search for (target - element) in the remaining array.
+**Intuition:** Left at start, right at end. If sum < target → left++. If sum > target → right--. Sorted order guarantees convergence.
 
-### Time Complexity: O(n log n)
-### Space Complexity: O(1)
+### Time: O(n) | Space: O(1)
 
-<br>
-
----
-
-## Solution 3: Two Pointers (Optimal)
-
-**Intuition:**
-Start with pointers at both ends. If sum too large, move right pointer left. If sum too small, move left pointer right.
-
-**Algorithm:**
-1. left = 0, right = n-1
-2. While left < right:
-   - sum = nums[left] + nums[right]
-   - If sum == target → return [left+1, right+1]
-   - If sum < target → left++ (need larger)
-   - If sum > target → right-- (need smaller)
-
-**Why this works:** The array is sorted. Moving left increases sum, moving right decreases it. We converge to the answer.
-
-### Time Complexity: O(n)
-### Space Complexity: O(1)
+```code```
 
 <br>
 
@@ -79,13 +48,8 @@ Start with pointers at both ends. If sum too large, move right pointer left. If 
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Brute Force | O(n²) | O(1) | Check all pairs |
-| Binary Search | O(n log n) | O(1) | Search for complement |
+| Brute Force | O(n²) | O(1) | All pairs |
 | Two Pointers | O(n) | O(1) | Sorted → converge from ends |
 
 <br>
 <br>
-
----
-
-```code```

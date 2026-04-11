@@ -6,19 +6,36 @@
   "mdFile": "sort-colors.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Solution 1: Counting Sort",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/sort-colors/code/cpp/sort_colors.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/sort-colors/code/cpp/sort_colors_sol1.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/sort-colors/code/java/SortColors.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/sort-colors/code/java/SortColorsSol1.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/sort-colors/code/python/sort_colors.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/sort-colors/code/python/sort_colors_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Dutch National Flag (Optimal)",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/sort-colors/code/cpp/sort_colors_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/sort-colors/code/java/SortColorsSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/sort-colors/code/python/sort_colors_sol2.py"
         }
       ]
     }

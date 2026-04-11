@@ -6,19 +6,53 @@
   "mdFile": "trapping-rain-water.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Solution 1: Brute Force",
       "languages": [
         {
-          "language": "java",
-          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/java/TrappingRainWater.java"
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/cpp/trapping_rain_water_sol1.cpp"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/cpp/TrappingRainWater.cpp"
+          "language": "java",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/java/TrappingRainWaterSol1.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/python/trapping_rain_water.py"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/python/trapping_rain_water_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Prefix Max Arrays",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/cpp/trapping_rain_water_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/java/TrappingRainWaterSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/python/trapping_rain_water_sol2.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 3: Two Pointers (Optimal)",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/cpp/trapping_rain_water_sol3.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/java/TrappingRainWaterSol3.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/trapping-rain-water/code/python/trapping_rain_water_sol3.py"
         }
       ]
     }

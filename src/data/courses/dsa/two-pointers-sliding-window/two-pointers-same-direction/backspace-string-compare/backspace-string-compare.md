@@ -1,41 +1,24 @@
-Given two strings with '#' as backspace, check if they are equal after processing.
+Compare two strings where '#' means backspace.
 
 <br>
 
-> Input: s = "ab#c", t = "ad#c"
-> Output: true (both become "ac")
-
-<br>
-
----
-
-## Constraints
-
-- `1 ≤ s.length, t.length ≤ 200`
-- `s and t contain lowercase letters and '#'`
+> Input: s="ab#c", t="ad#c" → true (both become "ac")
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Stack — Build Processed Strings
 
-1. **No backspaces:** Direct comparison
-2. **Backspace on empty:** '#a' → 'a' (backspace has no effect)
-3. **All backspaces:** "###" → ""
-4. **Multiple consecutive backspaces:** "abc###" → ""
+### Time: O(n+m) | Space: O(n+m)
 
-<br>
+```code```
 
----
-
-## Solution 1: Build String with Stack
-
-**Intuition:**
-Process each string: push non-'#' chars onto stack, pop on '#'. Compare final stacks.
-
-### Time Complexity: O(n + m)
-### Space Complexity: O(n + m)
+> **Key Insight for Improvement:**
+>
+> **Drawback of current approach:** O(n+m) space for stacks/strings. We're materializing the final strings unnecessarily.
+>
+> **Insight:** Process from RIGHT to LEFT. Count '#' characters to know how many to skip. Compare final characters without building strings.
 
 <br>
 
@@ -43,19 +26,11 @@ Process each string: push non-'#' chars onto stack, pop on '#'. Compare final st
 
 ## Solution 2: Two Pointers from End (Optimal)
 
-**Intuition:**
-Process both strings from right to left. Count '#' characters to know how many to skip. Compare characters after skipping.
+**Intuition:** Scan both strings from right. Count backspaces. Skip that many chars. Compare.
 
-**Algorithm:**
-1. i = len(s)-1, j = len(t)-1
-2. While i ≥ 0 or j ≥ 0:
-   - Count and skip backspaced chars in s (advance i)
-   - Count and skip backspaced chars in t (advance j)
-   - Compare s[i] and t[j]
-   - If mismatch → false
+### Time: O(n+m) | Space: O(1)
 
-### Time Complexity: O(n + m)
-### Space Complexity: O(1) — no extra data structures
+```code```
 
 <br>
 
@@ -66,11 +41,7 @@ Process both strings from right to left. Count '#' characters to know how many t
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
 | Stack | O(n+m) | O(n+m) | Build processed strings |
-| Two Pointers RTL | O(n+m) | O(1) | Process from right, skip in-place |
+| Two Ptr RTL | O(n+m) | O(1) | Count and skip from right |
 
 <br>
 <br>
-
----
-
-```code```

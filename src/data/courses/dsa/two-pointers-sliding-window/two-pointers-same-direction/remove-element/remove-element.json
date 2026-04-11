@@ -6,19 +6,36 @@
   "mdFile": "remove-element.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Solution 1: Fast/Slow Copy",
       "languages": [
         {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-element/code/java/RemoveElement.java"
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-element/code/cpp/remove_element_sol1.cpp"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-element/code/cpp/remove_element.cpp"
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-element/code/java/RemoveElementSol1.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-element/code/python/remove-element.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-element/code/python/remove_element_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Swap with End (Optimal)",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-element/code/cpp/remove_element_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-element/code/java/RemoveElementSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-element/code/python/remove_element_sol2.py"
         }
       ]
     }

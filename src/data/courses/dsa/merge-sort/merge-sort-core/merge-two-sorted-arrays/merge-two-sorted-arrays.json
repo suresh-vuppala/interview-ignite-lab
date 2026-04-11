@@ -6,19 +6,19 @@
   "mdFile": "merge-two-sorted-arrays.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Solution: Three Pointers from End",
       "languages": [
         {
-          "language": "java",
-          "codeFile": "courses/dsa/merge-sort/merge-sort-core/merge-two-sorted-arrays/code/java/MergeTwoSortedArrays.java"
+          "language": "cpp",
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/merge-two-sorted-arrays/code/cpp/merge_two_sorted_arrays_sol1.cpp"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/merge-sort/merge-sort-core/merge-two-sorted-arrays/code/cpp/MergeTwoSortedArrays.cpp"
+          "language": "java",
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/merge-two-sorted-arrays/code/java/MergeTwoSortedArraysSol1.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/merge-sort/merge-sort-core/merge-two-sorted-arrays/code/python/merge_two_sorted_arrays.py"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/merge-two-sorted-arrays/code/python/merge_two_sorted_arrays_sol1.py"
         }
       ]
     }

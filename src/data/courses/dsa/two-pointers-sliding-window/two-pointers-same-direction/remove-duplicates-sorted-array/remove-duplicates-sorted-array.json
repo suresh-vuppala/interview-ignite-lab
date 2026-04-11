@@ -6,19 +6,36 @@
   "mdFile": "remove-duplicates-sorted-array.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Solution 1: Extra Array",
       "languages": [
         {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-duplicates-sorted-array/code/java/RemoveDuplicatesSortedArray.java"
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-duplicates-sorted-array/code/cpp/remove_duplicates_sorted_array_sol1.cpp"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-duplicates-sorted-array/code/cpp/remove_duplicates_sorted_array.cpp"
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-duplicates-sorted-array/code/java/RemoveDuplicatesSortedArraySol1.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-duplicates-sorted-array/code/python/remove-duplicates-sorted-array.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-duplicates-sorted-array/code/python/remove_duplicates_sorted_array_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Two Pointers (Optimal)",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-duplicates-sorted-array/code/cpp/remove_duplicates_sorted_array_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-duplicates-sorted-array/code/java/RemoveDuplicatesSortedArraySol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-duplicates-sorted-array/code/python/remove_duplicates_sorted_array_sol2.py"
         }
       ]
     }
