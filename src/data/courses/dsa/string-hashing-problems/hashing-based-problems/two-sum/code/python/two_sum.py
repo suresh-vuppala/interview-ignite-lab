@@ -1,41 +1,44 @@
+# ============================================================
+# Two Sum
+# ============================================================
+
 from typing import List
 
-# ==================== SOLUTION 1: BRUTE FORCE ====================
+# ============================================================
+# Solution 1: Brute Force
 # Time: O(N²) | Space: O(1)
-# Check every pair of elements for the target sum
-def twoSumBrute(nums: List[int], target: int) -> List[int]:
-    n = len(nums)
-    
-    # Try all pairs (i, j) where i < j
-    for i in range(n - 1):
-        for j in range(i + 1, n):
-            # Check if this pair sums to target
-            if nums[i] + nums[j] == target:
-                return [i, j]
-    
-    return []
+# ============================================================
+class Solution1:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
 
+        # Try every possible pair (i, j) where i < j
+        for i in range(len(nums) - 1):
+            for j in range(i + 1, len(nums)):
 
-# ==================== SOLUTION 2: HASH MAP — ONE PASS ====================
+                # Check if this pair sums to target
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+
+        return []  # No solution found
+
+# ============================================================
+# Solution 2: Hash Map — One Pass (Optimal)
 # Time: O(N) | Space: O(N)
-# Store seen numbers in dict, look up complement in O(1)
-def twoSumHashMap(nums: List[int], target: int) -> List[int]:
-    seen = {}  # value -> index
-    
-    for i, num in enumerate(nums):
-        complement = target - num
-        
-        # Check if complement was already seen
-        if complement in seen:
-            return [seen[complement], i]
-        
-        # Store current number for future lookups
-        # (check BEFORE insert to avoid using same element twice)
-        seen[num] = i
-    
-    return []
+# ============================================================
+class Solution2:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # Dict stores: value → index (for O(1) complement lookup)
+        seen = {}
 
+        for i, num in enumerate(nums):
+            # For current number, compute what we need
+            complement = target - num
 
-# Main solution - recommended approach
-def twoSum(nums: List[int], target: int) -> List[int]:
-    return twoSumHashMap(nums, target)
+            # Check if complement was seen earlier
+            if complement in seen:
+                return [seen[complement], i]  # Found! Return both indices
+
+            # Store current number for future lookups
+            seen[num] = i
+
+        return []

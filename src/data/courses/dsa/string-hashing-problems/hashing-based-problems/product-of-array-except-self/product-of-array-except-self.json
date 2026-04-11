@@ -6,53 +6,19 @@
   "mdFile": "product-of-array-except-self.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Brute Force",
+      "title": "Product of Array Except Self",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/cpp/product_of_array_except_self_sol1.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/cpp/product_of_array_except_self.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/java/ProductOfArrayExceptSelfSol1.java"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/java/ProductOfArrayExceptSelf.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/python/product_of_array_except_self_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Prefix + Suffix Arrays",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/cpp/product_of_array_except_self_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/java/ProductOfArrayExceptSelfSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/python/product_of_array_except_self_sol2.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 3: Two-Pass Optimal",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/cpp/product_of_array_except_self_sol3.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/java/ProductOfArrayExceptSelfSol3.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/python/product_of_array_except_self_sol3.py"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/python/product_of_array_except_self.py"
         }
       ]
     }

@@ -6,36 +6,19 @@
   "mdFile": "first-missing-positive.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Hash Set",
+      "title": "First Missing Positive",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/advanced-hashing/first-missing-positive/code/cpp/first_missing_positive_sol1.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/advanced-hashing/first-missing-positive/code/cpp/first_missing_positive.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/advanced-hashing/first-missing-positive/code/java/FirstMissingPositiveSol1.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/advanced-hashing/first-missing-positive/code/java/FirstMissingPositive.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/advanced-hashing/first-missing-positive/code/python/first_missing_positive_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Cyclic Sort (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/arrays-and-hashing/advanced-hashing/first-missing-positive/code/cpp/first_missing_positive_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/arrays-and-hashing/advanced-hashing/first-missing-positive/code/java/FirstMissingPositiveSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/arrays-and-hashing/advanced-hashing/first-missing-positive/code/python/first_missing_positive_sol2.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/advanced-hashing/first-missing-positive/code/python/first_missing_positive.py"
         }
       ]
     }

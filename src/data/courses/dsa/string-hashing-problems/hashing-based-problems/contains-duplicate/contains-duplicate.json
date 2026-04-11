@@ -6,53 +6,19 @@
   "mdFile": "contains-duplicate.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Brute Force",
+      "title": "Contains Duplicate",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/cpp/contains_duplicate_sol1.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/cpp/contains_duplicate.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/java/ContainsDuplicateSol1.java"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/java/ContainsDuplicate.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/python/contains_duplicate_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Sort + Scan",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/cpp/contains_duplicate_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/java/ContainsDuplicateSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/python/contains_duplicate_sol2.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 3: Hash Set (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/cpp/contains_duplicate_sol3.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/java/ContainsDuplicateSol3.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/python/contains_duplicate_sol3.py"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/python/contains_duplicate.py"
         }
       ]
     }

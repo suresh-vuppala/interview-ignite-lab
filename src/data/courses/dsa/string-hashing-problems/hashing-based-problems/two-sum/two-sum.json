@@ -6,11 +6,11 @@
   "mdFile": "two-sum.md",
   "codeExamples": [
     {
-      "title": "Two Sum Solution",
+      "title": "Two Sum",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/cpp/TwoSum.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/cpp/two_sum.cpp"
         },
         {
           "language": "java",

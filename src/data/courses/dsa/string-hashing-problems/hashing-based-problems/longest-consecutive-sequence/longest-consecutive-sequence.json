@@ -6,36 +6,19 @@
   "mdFile": "longest-consecutive-sequence.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Sort + Scan",
+      "title": "Longest Consecutive Sequence",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/longest-consecutive-sequence/code/cpp/longest_consecutive_sequence_sol1.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/longest-consecutive-sequence/code/cpp/longest_consecutive_sequence.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/longest-consecutive-sequence/code/java/LongestConsecutiveSequenceSol1.java"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/longest-consecutive-sequence/code/java/LongestConsecutiveSequence.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/longest-consecutive-sequence/code/python/longest_consecutive_sequence_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Hash Set (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/longest-consecutive-sequence/code/cpp/longest_consecutive_sequence_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/longest-consecutive-sequence/code/java/LongestConsecutiveSequenceSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/longest-consecutive-sequence/code/python/longest_consecutive_sequence_sol2.py"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/longest-consecutive-sequence/code/python/longest_consecutive_sequence.py"
         }
       ]
     }
