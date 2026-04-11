@@ -6,15 +6,15 @@
   "mdFile": "largest-rectangle-histogram.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Largest Rectangle Histogram",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/largest-rectangle-histogram/code/cpp/largest_rectangle_histogram.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/monotonic-stack/largest-rectangle-histogram/code/java/LargestRectangleHistogram.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/monotonic-stack/largest-rectangle-histogram/code/cpp/LargestRectangleHistogram.cpp"
         },
         {
           "language": "python",

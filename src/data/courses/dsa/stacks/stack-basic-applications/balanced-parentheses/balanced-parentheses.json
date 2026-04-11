@@ -6,15 +6,15 @@
   "mdFile": "balanced-parentheses.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Check Balanced Parentheses",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/balanced-parentheses/code/cpp/balanced_parentheses.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/stack-basic-applications/balanced-parentheses/code/java/BalancedParentheses.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/balanced-parentheses/code/cpp/BalancedParentheses.cpp"
         },
         {
           "language": "python",

@@ -1,11 +1,21 @@
-Given daily temperatures, return array where each element is the number of days until a warmer temperature. If no warmer day, return 0.
+Given a list of daily temperatures, return how many days you have to wait until a warmer temperature. If no future warmer day, put 0.
 
 <br>
 
-> Input: [73, 74, 75, 71, 69, 72, 76, 73]
-> Output: [1, 1, 4, 2, 1, 1, 0, 0]
+> Input:
+> temperatures = [73, 74, 75, 71, 69, 72, 76, 73]
+
+> Output:
+> [1, 1, 4, 2, 1, 1, 0, 0]
+
+> Explanation:
+> Day 0 (73): next warmer = day 1 (74), wait 1 day. Day 2 (75): next warmer = day 6 (76), wait 4 days.
+> 
+> **Key insight:** This is "Next Greater Element" but returning the index DISTANCE instead of the value. Monotonic decreasing stack of indices — when a warmer day arrives, compute the distance.
 
 <br>
+
+
 
 ---
 
@@ -20,44 +30,77 @@ Given daily temperatures, return array where each element is the number of days 
 
 ## All Possible Edge Cases
 
-1. **Strictly increasing:** [1,1,1,...,0]
-2. **Strictly decreasing:** All zeros
-3. **All same:** All zeros
-4. **Single element:** [0]
+1. **Always increasing:** [1,2,3] → [1,1,0]
+2. **Always decreasing:** [3,2,1] → [0,0,0]
+3. **All same:** [73,73,73] → [0,0,0]
+4. **Single element:** [50] → [0]
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Brute Force — Scan Right for Each
 
-**Intuition:** For each day, scan forward until a warmer day.
+### Time Complexity: O(N²)
+**Why?**
+- For each day, scan all future days
+- N = 100,000 → up to 5 billion operations
 
-### Time Complexity: O(n²)
-### Space Complexity: O(1)
+### Space Complexity: O(1) extra
+
+> **Drawback:**
+> Same as NGE — scanning right from scratch for each position. The monotonic stack resolves all pending positions in one pass.
+
+> **Key Insight for Improvement:**
+> Monotonic decreasing stack of indices. When temp[i] > temp[stack.top()], day i is the answer for stack.top(). Distance = i - stack.top(). Pop and assign.
 
 <br>
 
 ---
 
-## Solution 2: Monotonic Stack (Optimal)
+## Solution 2: Monotonic Decreasing Stack (Optimal)
 
 **Intuition:**
-Maintain a decreasing stack of indices. When current temp is warmer than stack top, pop and record the difference.
+Identical to Next Greater Element, but instead of recording the value, record the index distance: result[idx] = i - idx.
 
 **Algorithm:**
-1. Stack stores indices (not values)
-2. For each i:
-   - While stack not empty AND temp[i] > temp[stack.top()]:
-     - j = stack.pop()
-     - result[j] = i - j
-   - Push i onto stack
-3. Remaining stack elements → result stays 0
+1. result = [0] * n, stack = []
+2. For i = 0 to n-1:
+   - While stack not empty and temps[i] > temps[stack.top()]:
+     - idx = stack.pop()
+     - result[idx] = i - idx (days to wait)
+   - stack.push(i)
 
-**Why O(n)?** Each index pushed once, popped at most once → 2n operations total.
+### Time Complexity: O(N)
+**Why?**
+- Each index pushed once, popped at most once
+- Total: ≤ 2N operations
 
-### Time Complexity: O(n)
-### Space Complexity: O(n)
+**Detailed breakdown:**
+- N = 100,000 → at most 200,000 stack operations
+
+**Example walkthrough:**
+```
+temps = [73, 74, 75, 71, 69, 72, 76, 73]
+
+i=0(73): push 0 → stack=[0]
+i=1(74): 74>73 → pop 0, result[0]=1-0=1 → stack=[1]
+i=2(75): 75>74 → pop 1, result[1]=2-1=1 → stack=[2]
+i=3(71): 71<75 → push → stack=[2,3]
+i=4(69): 69<71 → push → stack=[2,3,4]
+i=5(72): 72>69 → pop 4, result[4]=5-4=1
+         72>71 → pop 3, result[3]=5-3=2
+         72<75 → push → stack=[2,5]
+i=6(76): 76>72 → pop 5, result[5]=6-5=1
+         76>75 → pop 2, result[2]=6-2=4
+         push → stack=[6]
+i=7(73): 73<76 → push → stack=[6,7]
+
+Remaining: result[6]=0, result[7]=0
+Result: [1, 1, 4, 2, 1, 1, 0, 0] ✓
+```
+
+### Space Complexity: O(N)
 
 <br>
 
@@ -67,8 +110,16 @@ Maintain a decreasing stack of indices. When current temp is warmer than stack t
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Brute Force | O(n²) | O(1) | Scan forward for each |
-| Monotonic Stack | O(n) | O(n) | Decreasing stack resolves on warmer day |
+| Brute Force | O(N²) | O(1) | Scan right per day |
+| Monotonic Stack | O(N) | O(N) | Pop smaller, assign distance |
+
+**Recommended Solution:** Monotonic Stack (Solution 2) — O(N) time.
+
+**Key Insights:**
+1. **Same as NGE:** But record distance (i - idx) instead of value
+2. **Decreasing stack invariant:** Stack values always decrease from bottom to top
+3. **FAANG favorite:** Tests monotonic stack pattern recognition
+
 
 <br>
 <br>

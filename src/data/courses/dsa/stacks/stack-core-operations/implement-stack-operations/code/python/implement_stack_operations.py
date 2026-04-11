@@ -1,19 +1,26 @@
-class Stack:
-    def __init__(self, size):
-        self.arr = [0] * size
-        self.top = -1
-    
-    def push(self, x):
-        self.top += 1
-        self.arr[self.top] = x
-    
-    def pop(self):
-        val = self.arr[self.top]
-        self.top -= 1
-        return val
-    
-    def peek(self):
-        return self.arr[self.top]
-    
-    def is_empty(self):
-        return self.top == -1
+# ============================================================
+# Implement Stack Operations
+# ============================================================
+
+# ============================================================
+# Solution: Array-Based Stack
+# All operations O(1) amortized
+# ============================================================
+class MyStack:
+    def __init__(self):
+        self.data = []
+
+    def push(self, x: int) -> None:
+        self.data.append(x)  # O(1) amortized
+
+    def pop(self) -> int:
+        return self.data.pop()  # O(1)
+
+    def top(self) -> int:
+        return self.data[-1]  # O(1)
+
+    def is_empty(self) -> bool:
+        return len(self.data) == 0  # O(1)
+
+    def size(self) -> int:
+        return len(self.data)  # O(1)

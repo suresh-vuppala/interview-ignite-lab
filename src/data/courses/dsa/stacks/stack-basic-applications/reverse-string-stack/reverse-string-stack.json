@@ -6,19 +6,19 @@
   "mdFile": "reverse-string-stack.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Reverse String using Stack",
       "languages": [
         {
-          "language": "java",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/reverse-string-stack/code/java/ReverseString.java"
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/reverse-string-stack/code/cpp/reverse_string_stack.cpp"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/reverse-string-stack/code/cpp/ReverseString.cpp"
+          "language": "java",
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/reverse-string-stack/code/java/ReverseStringStack.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/reverse-string-stack/code/python/reverse_string.py"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/reverse-string-stack/code/python/reverse_string_stack.py"
         }
       ]
     }

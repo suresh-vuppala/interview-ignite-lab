@@ -6,15 +6,15 @@
   "mdFile": "stock-span.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Stock Span Problem",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/stock-span/code/cpp/stock_span.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/monotonic-stack/stock-span/code/java/StockSpan.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/monotonic-stack/stock-span/code/cpp/StockSpan.cpp"
         },
         {
           "language": "python",

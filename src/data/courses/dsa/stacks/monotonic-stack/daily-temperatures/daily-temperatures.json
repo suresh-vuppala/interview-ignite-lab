@@ -6,15 +6,15 @@
   "mdFile": "daily-temperatures.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Daily Temperatures",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/daily-temperatures/code/cpp/daily_temperatures.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/monotonic-stack/daily-temperatures/code/java/DailyTemperatures.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/monotonic-stack/daily-temperatures/code/cpp/DailyTemperatures.cpp"
         },
         {
           "language": "python",

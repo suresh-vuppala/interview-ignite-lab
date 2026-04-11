@@ -6,15 +6,15 @@
   "mdFile": "min-stack.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Min Stack",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-advanced/min-stack/code/cpp/min_stack.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/stack-advanced/min-stack/code/java/MinStack.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-advanced/min-stack/code/cpp/MinStack.cpp"
         },
         {
           "language": "python",

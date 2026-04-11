@@ -6,19 +6,19 @@
   "mdFile": "implement-stack-operations.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Implement Stack & Operations",
       "languages": [
         {
-          "language": "java",
-          "codeFile": "courses/dsa/stacks/stack-core-operations/implement-stack-operations/code/java/ImplementStack.java"
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-core-operations/implement-stack-operations/code/cpp/implement_stack_operations.cpp"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-core-operations/implement-stack-operations/code/cpp/ImplementStack.cpp"
+          "language": "java",
+          "codeFile": "courses/dsa/stacks/stack-core-operations/implement-stack-operations/code/java/ImplementStackOperations.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/stacks/stack-core-operations/implement-stack-operations/code/python/implement_stack.py"
+          "codeFile": "courses/dsa/stacks/stack-core-operations/implement-stack-operations/code/python/implement_stack_operations.py"
         }
       ]
     }

@@ -1,31 +1,45 @@
-class MinStack {
-    private Stack<Integer> stack;
-    private Stack<Integer> minStack;
-    
-    public MinStack() {
-        stack = new Stack<>();
-        minStack = new Stack<>();
-    }
-    
+// ============================================================
+// Min Stack
+// ============================================================
+
+import java.util.*;
+
+// ============================================================
+// Solution 1: Two Stacks
+// All operations O(1)
+// ============================================================
+class MinStack1 {
+    Deque<Integer> main = new ArrayDeque<>();
+    Deque<Integer> min = new ArrayDeque<>();
+
     public void push(int val) {
-        stack.push(val);
-        if (minStack.isEmpty() || val <= minStack.peek()) {
-            minStack.push(val);
-        } else {
-            minStack.push(minStack.peek());
-        }
+        main.push(val);
+        min.push(min.isEmpty() ? val : Math.min(val, min.peek()));
     }
-    
+
+    public void pop() { main.pop(); min.pop(); }
+    public int top() { return main.peek(); }
+    public int getMin() { return min.peek(); }
+}
+
+// ============================================================
+// Solution 2: Optimized Min Stack
+// All operations O(1)
+// ============================================================
+class MinStack2 {
+    Deque<Integer> main = new ArrayDeque<>();
+    Deque<Integer> min = new ArrayDeque<>();
+
+    public void push(int val) {
+        main.push(val);
+        if (min.isEmpty() || val <= min.peek()) min.push(val);
+    }
+
     public void pop() {
-        stack.pop();
-        minStack.pop();
+        if (main.peek().equals(min.peek())) min.pop();
+        main.pop();
     }
-    
-    public int top() {
-        return stack.peek();
-    }
-    
-    public int getMin() {
-        return minStack.peek();
-    }
+
+    public int top() { return main.peek(); }
+    public int getMin() { return min.peek(); }
 }

@@ -1,20 +1,41 @@
-class Solution {
-    public int[] nextGreaterElement(int[] arr) {
-        int n = arr.length;
-        int[] result = new int[n];
-        Stack<Integer> stack = new Stack<>();
-        
-        // Traverse from right to left
-        for (int i = n - 1; i >= 0; i--) {
-            // Pop elements smaller than or equal to current
-            while (!stack.isEmpty() && stack.peek() <= arr[i]) {
-                stack.pop();
+// ============================================================
+// Next Greater Element
+// ============================================================
+
+import java.util.*;
+
+// ============================================================
+// Solution 1: Brute Force
+// Time: O(N²) | Space: O(1)
+// ============================================================
+class Solution1 {
+    public int[] nextGreaterElement(int[] nums) {
+        int[] result = new int[nums.length];
+        Arrays.fill(result, -1);
+        for (int i = 0; i < nums.length; i++)
+            for (int j = i + 1; j < nums.length; j++)
+                if (nums[j] > nums[i]) { result[i] = nums[j]; break; }
+        return result;
+    }
+}
+
+// ============================================================
+// Solution 2: Monotonic Stack (Optimal)
+// Time: O(N) | Space: O(N)
+// ============================================================
+class Solution2 {
+    public int[] nextGreaterElement(int[] nums) {
+        int[] result = new int[nums.length];
+        Arrays.fill(result, -1);
+        Deque<Integer> stack = new ArrayDeque<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            while (!stack.isEmpty() && nums[i] > nums[stack.peek()]) {
+                result[stack.pop()] = nums[i];
             }
-            // Top of stack is next greater element
-            result[i] = stack.isEmpty() ? -1 : stack.peek();
-            // Push current element
-            stack.push(arr[i]);
+            stack.push(i);
         }
+
         return result;
     }
 }

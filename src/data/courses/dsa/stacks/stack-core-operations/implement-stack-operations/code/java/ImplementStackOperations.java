@@ -1,25 +1,33 @@
-class Stack {
-    int[] arr;
-    int top;
-    
-    Stack(int size) {
-        arr = new int[size];
-        top = -1;
+// ============================================================
+// Implement Stack Operations
+// ============================================================
+
+import java.util.*;
+
+// ============================================================
+// Solution: Array-Based Stack
+// All operations O(1) amortized
+// ============================================================
+class MyStack {
+    private List<Integer> data = new ArrayList<>();
+
+    public void push(int x) {
+        data.add(x); // O(1) amortized
     }
-    
-    void push(int x) {
-        arr[++top] = x;
+
+    public int pop() {
+        return data.remove(data.size() - 1); // O(1)
     }
-    
-    int pop() {
-        return arr[top--];
+
+    public int top() {
+        return data.get(data.size() - 1); // O(1)
     }
-    
-    int peek() {
-        return arr[top];
+
+    public boolean isEmpty() {
+        return data.isEmpty(); // O(1)
     }
-    
-    boolean isEmpty() {
-        return top == -1;
+
+    public int size() {
+        return data.size(); // O(1)
     }
 }
