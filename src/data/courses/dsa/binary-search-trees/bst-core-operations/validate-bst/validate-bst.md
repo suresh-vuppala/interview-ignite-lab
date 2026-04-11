@@ -72,7 +72,7 @@ Use recursive DFS with valid range tracking:
 
 **Key insight:** Not enough to check immediate children; must validate entire subtree ranges.
 
-```code```
+
 
 <br>
 
@@ -117,3 +117,7 @@ Use recursive DFS with valid range tracking:
 <br>
 
 ---
+
+---
+
+```code```

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/StableVsUnstable.java"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/stable-vs-unstable/code/java/StableVsUnstable.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/StableVsUnstable.cpp"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/stable-vs-unstable/code/cpp/StableVsUnstable.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/stable_vs_unstable.py"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/stable-vs-unstable/code/python/stable_vs_unstable.py"
         }
       ]
     }

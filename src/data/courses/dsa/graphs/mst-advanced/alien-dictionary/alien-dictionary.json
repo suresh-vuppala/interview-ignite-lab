@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/alien_dictionary.cpp"
+          "codeFile": "courses/dsa/graphs/mst-advanced/alien-dictionary/code/cpp/alien_dictionary.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/AlienDictionary.java"
+          "codeFile": "courses/dsa/graphs/mst-advanced/alien-dictionary/code/java/AlienDictionary.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/alien_dictionary.py"
+          "codeFile": "courses/dsa/graphs/mst-advanced/alien-dictionary/code/python/alien_dictionary.py"
         }
       ]
     }

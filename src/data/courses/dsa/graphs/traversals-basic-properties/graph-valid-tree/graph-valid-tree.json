@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/graph_valid_tree.cpp"
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/graph-valid-tree/code/cpp/graph_valid_tree.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/GraphValidTree.java"
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/graph-valid-tree/code/java/GraphValidTree.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/graph_valid_tree.py"
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/graph-valid-tree/code/python/graph_valid_tree.py"
         }
       ]
     }

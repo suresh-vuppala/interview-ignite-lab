@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/floyd_warshall.cpp"
+          "codeFile": "courses/dsa/graphs/mst-advanced/floyd-warshall/code/cpp/floyd_warshall.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/FloydWarshall.java"
+          "codeFile": "courses/dsa/graphs/mst-advanced/floyd-warshall/code/java/FloydWarshall.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/floyd_warshall.py"
+          "codeFile": "courses/dsa/graphs/mst-advanced/floyd-warshall/code/python/floyd_warshall.py"
         }
       ]
     }

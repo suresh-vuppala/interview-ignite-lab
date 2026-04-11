@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/fractional_knapsack.cpp"
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/fractional-knapsack/code/cpp/fractional_knapsack.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/FractionalKnapsack.java"
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/fractional-knapsack/code/java/FractionalKnapsack.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/fractional_knapsack.py"
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/fractional-knapsack/code/python/fractional_knapsack.py"
         }
       ]
     }

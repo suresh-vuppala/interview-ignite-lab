@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/top_k_frequent_elements.cpp"
+          "codeFile": "courses/dsa/heaps/top-k/top-k-frequent-elements/code/cpp/top_k_frequent_elements.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/TopKFrequentElements.java"
+          "codeFile": "courses/dsa/heaps/top-k/top-k-frequent-elements/code/java/TopKFrequentElements.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/top_k_frequent_elements.py"
+          "codeFile": "courses/dsa/heaps/top-k/top-k-frequent-elements/code/python/top_k_frequent_elements.py"
         }
       ]
     }

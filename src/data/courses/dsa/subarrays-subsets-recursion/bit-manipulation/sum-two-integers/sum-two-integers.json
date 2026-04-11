@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/sum_two_integers.cpp"
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/sum-two-integers/code/cpp/sum_two_integers.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/SumTwoIntegers.java"
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/sum-two-integers/code/java/SumTwoIntegers.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/sum_two_integers.py"
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/sum-two-integers/code/python/sum_two_integers.py"
         }
       ]
     }

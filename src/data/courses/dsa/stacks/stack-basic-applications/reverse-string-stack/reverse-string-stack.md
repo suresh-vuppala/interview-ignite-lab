@@ -53,7 +53,7 @@ Use stack's LIFO property to reverse:
 
 **Key insight:** Stack's LIFO (Last In First Out) automatically reverses order.
 
-```code```
+
 
 <br>
 
@@ -81,3 +81,7 @@ Use stack's LIFO property to reverse:
 <br>
 
 ---
+
+---
+
+```code```

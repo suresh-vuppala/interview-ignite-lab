@@ -55,7 +55,7 @@ Modified QuickSelect to find kth largest:
 3. If pivot index == n-k, return pivot
 4. Recurse on left or right based on position
 
-```code```
+
 
 <br>
 
@@ -88,3 +88,7 @@ Modified QuickSelect to find kth largest:
 <br>
 
 ---
+
+---
+
+```code```

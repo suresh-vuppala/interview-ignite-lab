@@ -1,26 +1,26 @@
 {
-    "title": "Non-overlapping Intervals",
-    "description": "Non-overlapping Intervals",
-    "difficulty": "medium",
-    "isPremium": false,
-    "isPosted": true,
-    "codeExamples": [
+  "title": "Non-overlapping Intervals",
+  "description": "Non-overlapping Intervals",
+  "difficulty": "medium",
+  "isPremium": false,
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
         {
-            "title": "Solution",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "/src/data/courses/dsa/greedy/interval-based/non-overlapping-intervals/code/java/NonOverlappingIntervals.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "/src/data/courses/dsa/greedy/interval-based/non-overlapping-intervals/code/cpp/NonOverlappingIntervals.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "/src/data/courses/dsa/greedy/interval-based/non-overlapping-intervals/code/python/non-overlapping-intervals.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/greedy/interval-based/non-overlapping-intervals/code//src/data/courses/dsa/greedy/interval-based/non-overlapping-intervals/code/java/NonOverlappingIntervals.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/greedy/interval-based/non-overlapping-intervals/code//src/data/courses/dsa/greedy/interval-based/non-overlapping-intervals/code/cpp/NonOverlappingIntervals.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/greedy/interval-based/non-overlapping-intervals/code//src/data/courses/dsa/greedy/interval-based/non-overlapping-intervals/code/python/non-overlapping-intervals.py"
         }
-    ]
+      ]
+    }
+  ]
 }

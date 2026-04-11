@@ -65,7 +65,7 @@ Use post-order DFS to calculate diameter efficiently:
 
 **Key insight:** Diameter at any node = sum of heights of left and right subtrees.
 
-```code```
+
 
 <br>
 
@@ -104,3 +104,7 @@ Use post-order DFS to calculate diameter efficiently:
 <br>
 
 ---
+
+---
+
+```code```

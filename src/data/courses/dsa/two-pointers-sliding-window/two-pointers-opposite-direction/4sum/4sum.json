@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/4Sum.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/4sum/code/java/4Sum.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/4sum.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/4sum/code/cpp/4sum.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/4sum.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/4sum/code/python/4sum.py"
         }
       ]
     }

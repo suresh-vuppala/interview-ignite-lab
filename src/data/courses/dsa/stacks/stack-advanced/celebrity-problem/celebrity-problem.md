@@ -70,7 +70,7 @@ Return the celebrity's index, or -1 if no celebrity exists.
 
 **Key insight:** Each comparison eliminates one non-celebrity.
 
-```code```
+
 
 <br>
 
@@ -108,3 +108,7 @@ Return the celebrity's index, or -1 if no celebrity exists.
 <br>
 
 ---
+
+---
+
+```code```

@@ -52,7 +52,7 @@ Use array with top pointer to track last element:
 
 **Key insight:** Stack follows LIFO (Last In First Out) principle.
 
-```code```
+
 
 <br>
 
@@ -82,3 +82,7 @@ Use array with top pointer to track last element:
 <br>
 
 ---
+
+---
+
+```code```

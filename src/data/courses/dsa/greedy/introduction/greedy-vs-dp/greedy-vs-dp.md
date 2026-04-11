@@ -120,7 +120,7 @@ A problem has greedy choice property if:
 - Overlapping subproblems present
 - Correctness > speed
 
-```code```
+
 
 <br>
 
@@ -148,3 +148,7 @@ A problem has greedy choice property if:
 <br>
 
 ---
+
+---
+
+```code```

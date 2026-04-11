@@ -65,7 +65,7 @@ ans[child] = ans[parent] - count[child] + (n - count[child])
 1. DFS1: Compute count[node] and ans[0] (root)
 2. DFS2: Re-root from parent to each child
 
-```code```
+
 
 <br>
 
@@ -112,3 +112,7 @@ ans[child] = ans[parent] - count[child] + (n - count[child])
 <br>
 
 ---
+
+---
+
+```code```

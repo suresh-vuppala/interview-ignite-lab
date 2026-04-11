@@ -1,26 +1,26 @@
 {
-    "title": "String & Rolling Hash",
-    "slug": "string-rolling-hash",
-    "isPremium": false,
-    "isPosted": true,
-    "mdFile": "string-rolling-hash.md",
-    "codeExamples": [
+  "title": "String & Rolling Hash",
+  "slug": "string-rolling-hash",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "string-rolling-hash.md",
+  "codeExamples": [
+    {
+      "title": "String & Rolling Hash",
+      "languages": [
         {
-            "title": "String & Rolling Hash",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "code/java/StringRollingHash.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "code/cpp/string_rolling_hash.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "code/python/string-rolling-hash.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/string-hashing-problems/string-rolling-hash/string-rolling-hash/code/java/StringRollingHash.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/string-hashing-problems/string-rolling-hash/string-rolling-hash/code/cpp/string_rolling_hash.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/string-hashing-problems/string-rolling-hash/string-rolling-hash/code/python/string-rolling-hash.py"
         }
-    ]
+      ]
+    }
+  ]
 }

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/TrappingRainWater.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/java/TrappingRainWater.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/trapping_rain_water.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/cpp/trapping_rain_water.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/trapping-rain-water.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/python/trapping-rain-water.py"
         }
       ]
     }

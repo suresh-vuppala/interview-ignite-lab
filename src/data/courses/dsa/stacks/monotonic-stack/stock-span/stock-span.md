@@ -53,7 +53,7 @@ Use stack to find previous greater element:
 
 **Key insight:** Span = distance to previous greater price.
 
-```code```
+
 
 <br>
 
@@ -83,3 +83,7 @@ Use stack to find previous greater element:
 <br>
 
 ---
+
+---
+
+```code```

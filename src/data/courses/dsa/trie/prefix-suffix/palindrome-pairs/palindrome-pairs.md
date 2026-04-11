@@ -56,7 +56,7 @@ Find all pairs (i,j) where i ≠ j and words[i] + words[j] forms a palindrome.
 
 **Key insight:** Reversing words converts suffix matching to prefix matching in trie.
 
-```code```
+
 
 <br>
 
@@ -96,3 +96,7 @@ Find all pairs (i,j) where i ≠ j and words[i] + words[j] forms a palindrome.
 <br>
 
 ---
+
+---
+
+```code```

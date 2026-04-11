@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/trie/counting-dictionary/word-break-trie/code/java/WordBreakTrie.java"
+          "codeFile": "courses/dsa/trie/counting-dictionary/word-break-trie/code//src/data/courses/dsa/trie/counting-dictionary/word-break-trie/code/java/WordBreakTrie.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/trie/counting-dictionary/word-break-trie/code/cpp/WordBreakTrie.cpp"
+          "codeFile": "courses/dsa/trie/counting-dictionary/word-break-trie/code//src/data/courses/dsa/trie/counting-dictionary/word-break-trie/code/cpp/WordBreakTrie.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/trie/counting-dictionary/word-break-trie/code/python/word_break_trie.py"
+          "codeFile": "courses/dsa/trie/counting-dictionary/word-break-trie/code//src/data/courses/dsa/trie/counting-dictionary/word-break-trie/code/python/word_break_trie.py"
         }
       ]
     }

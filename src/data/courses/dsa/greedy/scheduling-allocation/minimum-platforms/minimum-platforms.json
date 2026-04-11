@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/minimum_platforms.cpp"
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/minimum-platforms/code/cpp/minimum_platforms.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/MinimumPlatforms.java"
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/minimum-platforms/code/java/MinimumPlatforms.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/minimum_platforms.py"
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/minimum-platforms/code/python/minimum_platforms.py"
         }
       ]
     }

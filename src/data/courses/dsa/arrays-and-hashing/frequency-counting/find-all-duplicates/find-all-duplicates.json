@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/find_all_duplicates.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/find-all-duplicates/code/cpp/find_all_duplicates.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/FindAllDuplicates.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/find-all-duplicates/code/java/FindAllDuplicates.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/find_all_duplicates.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/find-all-duplicates/code/python/find_all_duplicates.py"
         }
       ]
     }

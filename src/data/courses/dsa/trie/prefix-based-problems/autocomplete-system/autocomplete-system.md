@@ -56,7 +56,7 @@ Use trie to store sentences with frequencies:
 
 **Key insight:** Store complete sentences at each prefix node.
 
-```code```
+
 
 <br>
 
@@ -91,3 +91,7 @@ Use trie to store sentences with frequencies:
 <br>
 
 ---
+
+---
+
+```code```

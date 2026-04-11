@@ -1,26 +1,26 @@
 {
-    "title": "Job Sequencing with Deadlines",
-    "description": "Job Sequencing with Deadlines",
-    "difficulty": "medium",
-    "isPremium": false,
-    "isPosted": true,
-    "codeExamples": [
+  "title": "Job Sequencing with Deadlines",
+  "description": "Job Sequencing with Deadlines",
+  "difficulty": "medium",
+  "isPremium": false,
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
         {
-            "title": "Solution",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "/src/data/courses/dsa/greedy/scheduling-allocation/job-sequencing/code/java/JobSequencing.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "/src/data/courses/dsa/greedy/scheduling-allocation/job-sequencing/code/cpp/JobSequencing.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "/src/data/courses/dsa/greedy/scheduling-allocation/job-sequencing/code/python/job-sequencing.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/job-sequencing/code//src/data/courses/dsa/greedy/scheduling-allocation/job-sequencing/code/java/JobSequencing.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/job-sequencing/code//src/data/courses/dsa/greedy/scheduling-allocation/job-sequencing/code/cpp/JobSequencing.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/greedy/scheduling-allocation/job-sequencing/code//src/data/courses/dsa/greedy/scheduling-allocation/job-sequencing/code/python/job-sequencing.py"
         }
-    ]
+      ]
+    }
+  ]
 }

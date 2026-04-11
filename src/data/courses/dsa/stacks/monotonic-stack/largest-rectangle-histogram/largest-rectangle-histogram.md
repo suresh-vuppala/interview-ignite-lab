@@ -66,7 +66,7 @@ Use monotonic increasing stack to find next smaller elements:
 
 **Key insight:** For each bar as height, find maximum width where all bars ≥ current height.
 
-```code```
+
 
 <br>
 
@@ -114,3 +114,7 @@ Use monotonic increasing stack to find next smaller elements:
 <br>
 
 ---
+
+---
+
+```code```

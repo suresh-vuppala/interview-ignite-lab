@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/BackspaceStringCompare.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/backspace-string-compare/code/java/BackspaceStringCompare.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/backspace_string_compare.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/backspace-string-compare/code/cpp/backspace_string_compare.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/backspace-string-compare.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/backspace-string-compare/code/python/backspace-string-compare.py"
         }
       ]
     }

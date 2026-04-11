@@ -60,7 +60,7 @@ Use deque (double-ended queue) to maintain potential maximums:
 
 **Key insight:** Keep only elements that could be maximum in current or future windows.
 
-```code```
+
 
 <br>
 
@@ -109,3 +109,7 @@ Use deque (double-ended queue) to maintain potential maximums:
 <br>
 
 ---
+
+---
+
+```code```

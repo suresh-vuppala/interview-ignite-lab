@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/MergeTwoSortedArrays.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/merge-two-sorted-arrays/code/java/MergeTwoSortedArrays.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/merge_two_sorted_arrays.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/merge-two-sorted-arrays/code/cpp/merge_two_sorted_arrays.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/merge-two-sorted-arrays.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/merge-two-sorted-arrays/code/python/merge-two-sorted-arrays.py"
         }
       ]
     }

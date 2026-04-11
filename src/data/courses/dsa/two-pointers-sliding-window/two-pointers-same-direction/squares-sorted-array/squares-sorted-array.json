@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/SquaresSortedArray.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/squares-sorted-array/code/java/SquaresSortedArray.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/squares_sorted_array.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/squares-sorted-array/code/cpp/squares_sorted_array.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/squares-sorted-array.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/squares-sorted-array/code/python/squares-sorted-array.py"
         }
       ]
     }

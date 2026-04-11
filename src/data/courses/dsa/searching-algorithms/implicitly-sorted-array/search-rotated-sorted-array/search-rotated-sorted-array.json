@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/search_rotated_sorted_array.cpp"
+          "codeFile": "courses/dsa/searching-algorithms/implicitly-sorted-array/search-rotated-sorted-array/code/cpp/search_rotated_sorted_array.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/SearchRotatedSortedArray.java"
+          "codeFile": "courses/dsa/searching-algorithms/implicitly-sorted-array/search-rotated-sorted-array/code/java/SearchRotatedSortedArray.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/search_rotated_sorted_array.py"
+          "codeFile": "courses/dsa/searching-algorithms/implicitly-sorted-array/search-rotated-sorted-array/code/python/search_rotated_sorted_array.py"
         }
       ]
     }

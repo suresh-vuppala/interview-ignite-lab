@@ -60,7 +60,7 @@ Approach for getNewsFeed:
 2. Use max heap to merge these sorted lists
 3. Extract top 10 most recent tweets
 
-```code```
+
 
 <br>
 
@@ -107,3 +107,7 @@ Approach for getNewsFeed:
 <br>
 
 ---
+
+---
+
+```code```

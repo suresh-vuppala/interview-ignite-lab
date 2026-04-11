@@ -58,7 +58,7 @@ Search words with wildcards: '.' matches any single character, '*' matches any s
 
 **Key insight:** '*' requires trying multiple path lengths, backtracking handles this.
 
-```code```
+
 
 <br>
 
@@ -100,3 +100,7 @@ Search words with wildcards: '.' matches any single character, '*' matches any s
 <br>
 
 ---
+
+---
+
+```code```

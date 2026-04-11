@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/ComparisonVsNonComparison.java"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/comparison-vs-non-comparison/code/java/ComparisonVsNonComparison.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/ComparisonVsNonComparison.cpp"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/comparison-vs-non-comparison/code/cpp/ComparisonVsNonComparison.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/comparison_vs_non_comparison.py"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/comparison-vs-non-comparison/code/python/comparison_vs_non_comparison.py"
         }
       ]
     }

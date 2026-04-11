@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/MergeVsHeapSort.java"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/merge-vs-heap-sort/code/java/MergeVsHeapSort.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/MergeVsHeapSort.cpp"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/merge-vs-heap-sort/code/cpp/MergeVsHeapSort.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/merge_vs_heap_sort.py"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/merge-vs-heap-sort/code/python/merge_vs_heap_sort.py"
         }
       ]
     }

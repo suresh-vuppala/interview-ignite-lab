@@ -10,7 +10,7 @@
       "title": "Example",
       "languages": [
         {
-          "codeFile": "/src/data/courses/dsa/heaps/multiple-heaps/median-of-data-stream/code/cpp/MedianOfDataStream.cpp",
+          "codeFile": "courses/dsa/heaps/multiple-heaps/median-of-data-stream/code//src/data/courses/dsa/heaps/multiple-heaps/median-of-data-stream/code/cpp/MedianOfDataStream.cpp",
           "language": "cpp"
         }
       ]

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/trie/trie-design-variations/dictionary-wildcard/code/java/DictionaryWildcard.java"
+          "codeFile": "courses/dsa/trie/trie-design-variations/dictionary-wildcard/code//src/data/courses/dsa/trie/trie-design-variations/dictionary-wildcard/code/java/DictionaryWildcard.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/trie/trie-design-variations/dictionary-wildcard/code/cpp/DictionaryWildcard.cpp"
+          "codeFile": "courses/dsa/trie/trie-design-variations/dictionary-wildcard/code//src/data/courses/dsa/trie/trie-design-variations/dictionary-wildcard/code/cpp/DictionaryWildcard.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/trie/trie-design-variations/dictionary-wildcard/code/python/dictionary_wildcard.py"
+          "codeFile": "courses/dsa/trie/trie-design-variations/dictionary-wildcard/code//src/data/courses/dsa/trie/trie-design-variations/dictionary-wildcard/code/python/dictionary_wildcard.py"
         }
       ]
     }

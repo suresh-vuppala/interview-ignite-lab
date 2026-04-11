@@ -58,7 +58,7 @@ Greedy strategy: Always pick activity that finishes earliest
 
 **Why greedy works:** Choosing activity with earliest end time leaves maximum room for future activities.
 
-```code```
+
 
 <br>
 
@@ -84,3 +84,7 @@ Greedy strategy: Always pick activity that finishes earliest
 <br>
 
 ---
+
+---
+
+```code```

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/minimum_speed_arrive_time.cpp"
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-speed-arrive-time/code/cpp/minimum_speed_arrive_time.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/MinimumSpeedArriveTime.java"
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-speed-arrive-time/code/java/MinimumSpeedArriveTime.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/minimum_speed_arrive_time.py"
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-speed-arrive-time/code/python/minimum_speed_arrive_time.py"
         }
       ]
     }

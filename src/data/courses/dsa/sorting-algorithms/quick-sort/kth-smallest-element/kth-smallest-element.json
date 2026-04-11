@@ -1,28 +1,28 @@
 {
-    "title": "Kth Smallest Element",
-    "slug": "kth-smallest-element",
-    "mdFile": "kth-smallest-element.md",
-    "description": "Kth Smallest Element",
-    "difficulty": "medium",
-    "isPremium": false,
-    "isPosted": true,
-    "codeExamples": [
+  "title": "Kth Smallest Element",
+  "slug": "kth-smallest-element",
+  "mdFile": "kth-smallest-element.md",
+  "description": "Kth Smallest Element",
+  "difficulty": "medium",
+  "isPremium": false,
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
         {
-            "title": "Solution",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "/src/data/courses/dsa/sorting-algorithms/quick-sort/kth-smallest-element/code/java/KthSmallestElement.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "/src/data/courses/dsa/sorting-algorithms/quick-sort/kth-smallest-element/code/cpp/KthSmallestElement.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "/src/data/courses/dsa/sorting-algorithms/quick-sort/kth-smallest-element/code/python/kth-smallest-element.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/sorting-algorithms/quick-sort/kth-smallest-element/code//src/data/courses/dsa/sorting-algorithms/quick-sort/kth-smallest-element/code/java/KthSmallestElement.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/sorting-algorithms/quick-sort/kth-smallest-element/code//src/data/courses/dsa/sorting-algorithms/quick-sort/kth-smallest-element/code/cpp/KthSmallestElement.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/sorting-algorithms/quick-sort/kth-smallest-element/code//src/data/courses/dsa/sorting-algorithms/quick-sort/kth-smallest-element/code/python/kth-smallest-element.py"
         }
-    ]
+      ]
+    }
+  ]
 }

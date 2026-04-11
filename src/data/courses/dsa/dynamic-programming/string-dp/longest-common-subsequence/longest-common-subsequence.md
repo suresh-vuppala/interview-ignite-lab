@@ -64,7 +64,7 @@ Base: lcs(m, *) = 0, lcs(*, n) = 0
 
 **Key insight:** Match extends LCS, no match tries both options.
 
-```code```
+
 
 <br>
 
@@ -101,7 +101,7 @@ else:
 3. Fill table using transition
 4. Return dp[m][n]
 
-```code```
+
 
 <br>
 
@@ -140,3 +140,7 @@ else:
 <br>
 
 ---
+
+---
+
+```code```

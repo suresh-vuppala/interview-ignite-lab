@@ -58,7 +58,7 @@ Approach:
 
 **Think of it as BFS levels:** Each jump represents a level, find minimum levels to reach end.
 
-```code```
+
 
 <br>
 
@@ -95,3 +95,7 @@ Approach:
 <br>
 
 ---
+
+---
+
+```code```

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/bellman_ford.cpp"
+          "codeFile": "courses/dsa/graphs/mst-advanced/bellman-ford/code/cpp/bellman_ford.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/BellmanFord.java"
+          "codeFile": "courses/dsa/graphs/mst-advanced/bellman-ford/code/java/BellmanFord.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/bellman_ford.py"
+          "codeFile": "courses/dsa/graphs/mst-advanced/bellman-ford/code/python/bellman_ford.py"
         }
       ]
     }

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/accounts_merge.cpp"
+          "codeFile": "courses/dsa/graphs/dsu/accounts-merge/code/cpp/accounts_merge.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/AccountsMerge.java"
+          "codeFile": "courses/dsa/graphs/dsu/accounts-merge/code/java/AccountsMerge.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/accounts_merge.py"
+          "codeFile": "courses/dsa/graphs/dsu/accounts-merge/code/python/accounts_merge.py"
         }
       ]
     }

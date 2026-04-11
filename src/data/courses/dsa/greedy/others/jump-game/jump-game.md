@@ -71,7 +71,7 @@ Approach:
 
 **Greedy choice:** Always track furthest reachable position.
 
-```code```
+
 
 <br>
 
@@ -103,3 +103,7 @@ Approach:
 <br>
 
 ---
+
+---
+
+```code```

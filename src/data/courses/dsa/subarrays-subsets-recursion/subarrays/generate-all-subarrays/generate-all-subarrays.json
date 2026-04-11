@@ -1,26 +1,26 @@
 {
-    "title": "Generate All Subarrays",
-    "slug": "generate-all-subarrays",
-    "isPremium": false,
-    "isPosted": true,
-    "mdFile": "generate-all-subarrays.md",
-    "codeExamples": [
+  "title": "Generate All Subarrays",
+  "slug": "generate-all-subarrays",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "generate-all-subarrays.md",
+  "codeExamples": [
+    {
+      "title": "Generate All Subarrays",
+      "languages": [
         {
-            "title": "Generate All Subarrays",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "code/java/GenerateAllSubarrays.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "code/cpp/generate_all_subarrays.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "code/python/generate-all-subarrays.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/subarrays/generate-all-subarrays/code/java/GenerateAllSubarrays.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/subarrays/generate-all-subarrays/code/cpp/generate_all_subarrays.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/subarrays/generate-all-subarrays/code/python/generate-all-subarrays.py"
         }
-    ]
+      ]
+    }
+  ]
 }

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-suffix/search-wildcard/code/java/SearchWildcard.java"
+          "codeFile": "courses/dsa/trie/prefix-suffix/search-wildcard/code//src/data/courses/dsa/trie/prefix-suffix/search-wildcard/code/java/SearchWildcard.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-suffix/search-wildcard/code/cpp/SearchWildcard.cpp"
+          "codeFile": "courses/dsa/trie/prefix-suffix/search-wildcard/code//src/data/courses/dsa/trie/prefix-suffix/search-wildcard/code/cpp/SearchWildcard.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-suffix/search-wildcard/code/python/search_wildcard.py"
+          "codeFile": "courses/dsa/trie/prefix-suffix/search-wildcard/code//src/data/courses/dsa/trie/prefix-suffix/search-wildcard/code/python/search_wildcard.py"
         }
       ]
     }

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/intersection_two_arrays.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/intersection-two-arrays/code/cpp/intersection_two_arrays.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/IntersectionTwoArrays.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/intersection-two-arrays/code/java/IntersectionTwoArrays.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/intersection_two_arrays.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/intersection-two-arrays/code/python/intersection_two_arrays.py"
         }
       ]
     }

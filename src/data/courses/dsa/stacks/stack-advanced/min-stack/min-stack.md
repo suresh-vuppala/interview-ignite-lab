@@ -55,7 +55,7 @@ Maintain two stacks:
 
 **Key insight:** Track minimum at each stack level using auxiliary stack.
 
-```code```
+
 
 <br>
 
@@ -89,3 +89,7 @@ Maintain two stacks:
 <br>
 
 ---
+
+---
+
+```code```

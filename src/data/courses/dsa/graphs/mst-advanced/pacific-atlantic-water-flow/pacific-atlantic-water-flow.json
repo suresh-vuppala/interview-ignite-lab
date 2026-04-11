@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/pacific_atlantic_water_flow.cpp"
+          "codeFile": "courses/dsa/graphs/mst-advanced/pacific-atlantic-water-flow/code/cpp/pacific_atlantic_water_flow.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/PacificAtlanticWaterFlow.java"
+          "codeFile": "courses/dsa/graphs/mst-advanced/pacific-atlantic-water-flow/code/java/PacificAtlanticWaterFlow.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/pacific_atlantic_water_flow.py"
+          "codeFile": "courses/dsa/graphs/mst-advanced/pacific-atlantic-water-flow/code/python/pacific_atlantic_water_flow.py"
         }
       ]
     }

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/two_sum.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/cpp/two_sum.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/TwoSum.java"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/java/TwoSum.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/two_sum.py"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/python/two_sum.py"
         }
       ]
     }

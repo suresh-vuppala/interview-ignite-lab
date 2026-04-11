@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/TimeComplexityAnalysis.java"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/time-complexity-analysis/code/java/TimeComplexityAnalysis.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/TimeComplexityAnalysis.cpp"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/time-complexity-analysis/code/cpp/TimeComplexityAnalysis.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/time_complexity_analysis.py"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/time-complexity-analysis/code/python/time_complexity_analysis.py"
         }
       ]
     }

@@ -58,7 +58,7 @@ Count pairs (i,j) where i < j and words[i] is both a prefix and suffix of words[
 
 **Key insight:** Trie finds prefix matches quickly, then verify suffix condition.
 
-```code```
+
 
 <br>
 
@@ -97,3 +97,7 @@ Count pairs (i,j) where i < j and words[i] is both a prefix and suffix of words[
 <br>
 
 ---
+
+---
+
+```code```

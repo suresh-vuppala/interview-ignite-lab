@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/insert_interval.cpp"
+          "codeFile": "courses/dsa/greedy/interval-based/insert-interval/code/cpp/insert_interval.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/InsertInterval.java"
+          "codeFile": "courses/dsa/greedy/interval-based/insert-interval/code/java/InsertInterval.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/insert_interval.py"
+          "codeFile": "courses/dsa/greedy/interval-based/insert-interval/code/python/insert_interval.py"
         }
       ]
     }

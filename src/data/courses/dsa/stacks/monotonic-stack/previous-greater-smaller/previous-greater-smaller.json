@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/previous-greater-smaller/code/java/PreviousGreaterSmaller.java"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/previous-greater-smaller/code//src/data/courses/dsa/stacks/monotonic-stack/previous-greater-smaller/code/java/PreviousGreaterSmaller.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/previous-greater-smaller/code/cpp/PreviousGreaterSmaller.cpp"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/previous-greater-smaller/code//src/data/courses/dsa/stacks/monotonic-stack/previous-greater-smaller/code/cpp/PreviousGreaterSmaller.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/previous-greater-smaller/code/python/previous_greater_smaller.py"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/previous-greater-smaller/code//src/data/courses/dsa/stacks/monotonic-stack/previous-greater-smaller/code/python/previous_greater_smaller.py"
         }
       ]
     }

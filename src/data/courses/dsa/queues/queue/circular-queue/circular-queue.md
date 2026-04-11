@@ -59,7 +59,7 @@ Use array with front and rear pointers:
 
 **Key insight:** Modulo wraps indices to create circular behavior.
 
-```code```
+
 
 <br>
 
@@ -94,3 +94,7 @@ Use array with front and rear pointers:
 <br>
 
 ---
+
+---
+
+```code```

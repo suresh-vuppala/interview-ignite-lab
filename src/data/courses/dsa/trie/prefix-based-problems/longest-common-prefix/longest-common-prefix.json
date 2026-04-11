@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-based-problems/longest-common-prefix/code/java/LongestCommonPrefix.java"
+          "codeFile": "courses/dsa/trie/prefix-based-problems/longest-common-prefix/code//src/data/courses/dsa/trie/prefix-based-problems/longest-common-prefix/code/java/LongestCommonPrefix.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-based-problems/longest-common-prefix/code/cpp/LongestCommonPrefix.cpp"
+          "codeFile": "courses/dsa/trie/prefix-based-problems/longest-common-prefix/code//src/data/courses/dsa/trie/prefix-based-problems/longest-common-prefix/code/cpp/LongestCommonPrefix.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-based-problems/longest-common-prefix/code/python/longest_common_prefix.py"
+          "codeFile": "courses/dsa/trie/prefix-based-problems/longest-common-prefix/code//src/data/courses/dsa/trie/prefix-based-problems/longest-common-prefix/code/python/longest_common_prefix.py"
         }
       ]
     }

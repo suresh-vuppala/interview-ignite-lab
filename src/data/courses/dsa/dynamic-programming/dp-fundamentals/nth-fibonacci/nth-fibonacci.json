@@ -10,7 +10,7 @@
       "title": "Recursive - Fibonacci",
       "languages": [
         {
-          "codeFile": "/src/data/courses/dsa/dynamic-programming/dp-fundamentals/nth-fibonacci/code/java/Fibonacci.java",
+          "codeFile": "courses/dsa/dynamic-programming/dp-fundamentals/nth-fibonacci/code//src/data/courses/dsa/dynamic-programming/dp-fundamentals/nth-fibonacci/code/java/Fibonacci.java",
           "language": "java"
         }
       ]

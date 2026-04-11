@@ -59,7 +59,7 @@ Use a monotonic decreasing stack (traverse right to left):
 
 **Key insight:** Stack maintains elements in decreasing order from bottom to top.
 
-```code```
+
 
 <br>
 
@@ -95,3 +95,7 @@ Use a monotonic decreasing stack (traverse right to left):
 <br>
 
 ---
+
+---
+
+```code```

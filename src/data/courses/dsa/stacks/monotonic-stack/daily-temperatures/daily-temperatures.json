@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/daily-temperatures/code/java/DailyTemperatures.java"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/daily-temperatures/code//src/data/courses/dsa/stacks/monotonic-stack/daily-temperatures/code/java/DailyTemperatures.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/daily-temperatures/code/cpp/DailyTemperatures.cpp"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/daily-temperatures/code//src/data/courses/dsa/stacks/monotonic-stack/daily-temperatures/code/cpp/DailyTemperatures.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/daily-temperatures/code/python/daily_temperatures.py"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/daily-temperatures/code//src/data/courses/dsa/stacks/monotonic-stack/daily-temperatures/code/python/daily_temperatures.py"
         }
       ]
     }

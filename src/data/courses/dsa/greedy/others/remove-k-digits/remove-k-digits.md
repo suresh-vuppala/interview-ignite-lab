@@ -63,7 +63,7 @@ Approach:
 
 **Greedy choice:** Remove digit if next digit is smaller, to minimize number.
 
-```code```
+
 
 <br>
 
@@ -102,3 +102,7 @@ Approach:
 <br>
 
 ---
+
+---
+
+```code```

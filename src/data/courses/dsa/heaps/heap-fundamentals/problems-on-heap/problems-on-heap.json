@@ -10,15 +10,15 @@
       "title": "Problems on Heap Solution",
       "languages": [
         {
-          "codeFile": "/src/data/courses/dsa/heaps/heap-fundamentals/problems-on-heap/code/java/ProblemsOnHeap.java",
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/problems-on-heap/code//src/data/courses/dsa/heaps/heap-fundamentals/problems-on-heap/code/java/ProblemsOnHeap.java",
           "language": "java"
         },
         {
-          "codeFile": "/src/data/courses/dsa/heaps/heap-fundamentals/problems-on-heap/code/cpp/ProblemsOnHeap.cpp",
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/problems-on-heap/code//src/data/courses/dsa/heaps/heap-fundamentals/problems-on-heap/code/cpp/ProblemsOnHeap.cpp",
           "language": "cpp"
         },
         {
-          "codeFile": "/src/data/courses/dsa/heaps/heap-fundamentals/problems-on-heap/code/python/problems_on_heap.py",
+          "codeFile": "courses/dsa/heaps/heap-fundamentals/problems-on-heap/code//src/data/courses/dsa/heaps/heap-fundamentals/problems-on-heap/code/python/problems_on_heap.py",
           "language": "python"
         }
       ]

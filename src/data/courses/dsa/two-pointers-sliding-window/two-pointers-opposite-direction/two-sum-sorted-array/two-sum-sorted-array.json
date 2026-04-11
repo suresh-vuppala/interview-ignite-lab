@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/TwoSumSortedArray.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-sum-sorted-array/code/java/TwoSumSortedArray.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/two_sum_sorted_array.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-sum-sorted-array/code/cpp/two_sum_sorted_array.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/two-sum-sorted-array.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-sum-sorted-array/code/python/two-sum-sorted-array.py"
         }
       ]
     }

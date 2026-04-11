@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/ValidPalindrome.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/valid-palindrome/code/java/ValidPalindrome.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/valid_palindrome.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/valid-palindrome/code/cpp/valid_palindrome.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/valid-palindrome.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/valid-palindrome/code/python/valid-palindrome.py"
         }
       ]
     }

@@ -62,7 +62,7 @@ Use post-order DFS to calculate height bottom-up:
 
 **Convention:** Height in edges = -1 for null, 0 for leaf. Height in nodes = 0 for null, 1 for leaf.
 
-```code```
+
 
 <br>
 
@@ -99,3 +99,7 @@ Use post-order DFS to calculate height bottom-up:
 <br>
 
 ---
+
+---
+
+```code```

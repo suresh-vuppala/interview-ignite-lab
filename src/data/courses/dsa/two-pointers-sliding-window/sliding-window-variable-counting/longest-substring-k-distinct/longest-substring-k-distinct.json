@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/longest_substring_k_distinct.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-counting/longest-substring-k-distinct/code/cpp/longest_substring_k_distinct.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/LongestSubstringKDistinct.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-counting/longest-substring-k-distinct/code/java/LongestSubstringKDistinct.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/longest_substring_k_distinct.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-counting/longest-substring-k-distinct/code/python/longest_substring_k_distinct.py"
         }
       ]
     }

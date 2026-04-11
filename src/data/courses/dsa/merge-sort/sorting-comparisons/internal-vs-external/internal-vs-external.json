@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/InternalVsExternal.java"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/internal-vs-external/code/java/InternalVsExternal.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/InternalVsExternal.cpp"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/internal-vs-external/code/cpp/InternalVsExternal.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/internal_vs_external.py"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/internal-vs-external/code/python/internal_vs_external.py"
         }
       ]
     }

@@ -1,26 +1,26 @@
 {
-    "title": "C++ Hashing Internals",
-    "slug": "cpp-hashing-internals",
-    "isPremium": false,
-    "isPosted": true,
-    "mdFile": "cpp-hashing-internals.md",
-    "codeExamples": [
+  "title": "C++ Hashing Internals",
+  "slug": "cpp-hashing-internals",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "cpp-hashing-internals.md",
+  "codeExamples": [
+    {
+      "title": "C++ Hashing Internals",
+      "languages": [
         {
-            "title": "C++ Hashing Internals",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "code/java/CppHashingInternals.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "code/cpp/cpp_hashing_internals.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "code/python/cpp-hashing-internals.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing/cpp-hashing-internals/code/java/CppHashingInternals.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing/cpp-hashing-internals/code/cpp/cpp_hashing_internals.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing/cpp-hashing-internals/code/python/cpp-hashing-internals.py"
         }
-    ]
+      ]
+    }
+  ]
 }

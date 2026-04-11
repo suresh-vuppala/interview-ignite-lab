@@ -68,7 +68,7 @@ skip[node] = max(rob[left], skip[left]) + max(rob[right], skip[right])
 2. For each node, compute [rob, skip] from children
 3. Return max(rob[root], skip[root])
 
-```code```
+
 
 <br>
 
@@ -107,3 +107,7 @@ skip[node] = max(rob[left], skip[left]) + max(rob[right], skip[right])
 <br>
 
 ---
+
+---
+
+```code```

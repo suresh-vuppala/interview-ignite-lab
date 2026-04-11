@@ -55,7 +55,7 @@ Use stack to store indices of days waiting for warmer temperature:
 
 **Key insight:** Stack stores indices of days still waiting for warmer temperature.
 
-```code```
+
 
 <br>
 
@@ -89,3 +89,7 @@ Use stack to store indices of days waiting for warmer temperature:
 <br>
 
 ---
+
+---
+
+```code```

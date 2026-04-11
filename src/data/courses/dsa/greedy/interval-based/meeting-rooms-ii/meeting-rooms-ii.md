@@ -55,7 +55,7 @@ Approach:
 4. When meeting ends, decrement rooms needed
 5. Track maximum rooms needed
 
-```code```
+
 
 <br>
 
@@ -83,3 +83,7 @@ Approach:
 <br>
 
 ---
+
+---
+
+```code```

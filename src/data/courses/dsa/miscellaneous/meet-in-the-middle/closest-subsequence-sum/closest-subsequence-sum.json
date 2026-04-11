@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/closest_subsequence_sum.cpp"
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/closest-subsequence-sum/code/cpp/closest_subsequence_sum.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/ClosestSubsequenceSum.java"
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/closest-subsequence-sum/code/java/ClosestSubsequenceSum.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/closest_subsequence_sum.py"
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/closest-subsequence-sum/code/python/closest_subsequence_sum.py"
         }
       ]
     }

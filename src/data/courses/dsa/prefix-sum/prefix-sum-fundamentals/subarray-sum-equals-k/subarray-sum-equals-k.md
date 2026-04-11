@@ -84,7 +84,7 @@ Use prefix sum with hash map to count subarrays efficiently:
 
 **Key insight:** Convert subarray sum problem to prefix sum difference problem.
 
-```code```
+
 
 <br>
 
@@ -134,3 +134,7 @@ Use prefix sum with hash map to count subarrays efficiently:
 <br>
 
 ---
+
+---
+
+```code```

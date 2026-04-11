@@ -79,7 +79,7 @@ Use a stack for operators:
 
 **Key insight:** Higher precedence operators must appear first in postfix.
 
-```code```
+
 
 <br>
 
@@ -116,3 +116,7 @@ Use a stack for operators:
 <br>
 
 ---
+
+---
+
+```code```

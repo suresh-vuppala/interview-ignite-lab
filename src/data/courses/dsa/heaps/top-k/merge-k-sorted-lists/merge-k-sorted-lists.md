@@ -59,7 +59,7 @@ Merge k sorted linked lists into one sorted linked list.
 
 **Key insight:** Heap maintains smallest element across all k lists efficiently.
 
-```code```
+
 
 <br>
 
@@ -108,3 +108,7 @@ Merge k sorted linked lists into one sorted linked list.
 <br>
 
 ---
+
+---
+
+```code```

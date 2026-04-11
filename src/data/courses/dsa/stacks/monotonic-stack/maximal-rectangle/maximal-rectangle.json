@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/maximal_rectangle.cpp"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/maximal-rectangle/code/cpp/maximal_rectangle.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/MaximalRectangle.java"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/maximal-rectangle/code/java/MaximalRectangle.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/maximal_rectangle.py"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/maximal-rectangle/code/python/maximal_rectangle.py"
         }
       ]
     }

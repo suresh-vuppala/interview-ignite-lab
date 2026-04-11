@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-suffix/count-prefix-suffix-pairs/code/java/CountPrefixSuffixPairs.java"
+          "codeFile": "courses/dsa/trie/prefix-suffix/count-prefix-suffix-pairs/code//src/data/courses/dsa/trie/prefix-suffix/count-prefix-suffix-pairs/code/java/CountPrefixSuffixPairs.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-suffix/count-prefix-suffix-pairs/code/cpp/CountPrefixSuffixPairs.cpp"
+          "codeFile": "courses/dsa/trie/prefix-suffix/count-prefix-suffix-pairs/code//src/data/courses/dsa/trie/prefix-suffix/count-prefix-suffix-pairs/code/cpp/CountPrefixSuffixPairs.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-suffix/count-prefix-suffix-pairs/code/python/count_prefix_suffix_pairs.py"
+          "codeFile": "courses/dsa/trie/prefix-suffix/count-prefix-suffix-pairs/code//src/data/courses/dsa/trie/prefix-suffix/count-prefix-suffix-pairs/code/python/count_prefix_suffix_pairs.py"
         }
       ]
     }

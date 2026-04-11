@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/reverse_bits.cpp"
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/reverse-bits/code/cpp/reverse_bits.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/ReverseBits.java"
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/reverse-bits/code/java/ReverseBits.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/reverse_bits.py"
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/bit-manipulation/reverse-bits/code/python/reverse_bits.py"
         }
       ]
     }

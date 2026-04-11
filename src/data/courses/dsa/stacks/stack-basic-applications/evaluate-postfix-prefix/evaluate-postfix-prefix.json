@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code/java/EvaluatePostfixPrefix.java"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code//src/data/courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code/java/EvaluatePostfixPrefix.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code/cpp/EvaluatePostfixPrefix.cpp"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code//src/data/courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code/cpp/EvaluatePostfixPrefix.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code/python/evaluate_postfix_prefix.py"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code//src/data/courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code/python/evaluate_postfix_prefix.py"
         }
       ]
     }

@@ -65,7 +65,7 @@ Use trie to find longest common prefix:
 
 **Key insight:** Common prefix = path before first branch or word end.
 
-```code```
+
 
 <br>
 
@@ -104,3 +104,7 @@ Use trie to find longest common prefix:
 <br>
 
 ---
+
+---
+
+```code```

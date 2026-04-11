@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/trie/trie-core-operations/count-operations/code/java/CountOperations.java"
+          "codeFile": "courses/dsa/trie/trie-core-operations/count-operations/code//src/data/courses/dsa/trie/trie-core-operations/count-operations/code/java/CountOperations.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/trie/trie-core-operations/count-operations/code/cpp/CountOperations.cpp"
+          "codeFile": "courses/dsa/trie/trie-core-operations/count-operations/code//src/data/courses/dsa/trie/trie-core-operations/count-operations/code/cpp/CountOperations.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/trie/trie-core-operations/count-operations/code/python/count_operations.py"
+          "codeFile": "courses/dsa/trie/trie-core-operations/count-operations/code//src/data/courses/dsa/trie/trie-core-operations/count-operations/code/python/count_operations.py"
         }
       ]
     }

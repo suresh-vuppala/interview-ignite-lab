@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/encode_decode_strings.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/encode-decode-strings/code/cpp/encode_decode_strings.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/EncodeDecodeStrings.java"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/encode-decode-strings/code/java/EncodeDecodeStrings.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/encode_decode_strings.py"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/encode-decode-strings/code/python/encode_decode_strings.py"
         }
       ]
     }

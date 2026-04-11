@@ -57,7 +57,7 @@ Approach:
 
 **Greedy choice:** Always keep interval with earliest end time to maximize future selections.
 
-```code```
+
 
 <br>
 
@@ -88,3 +88,7 @@ Approach:
 <br>
 
 ---
+
+---
+
+```code```

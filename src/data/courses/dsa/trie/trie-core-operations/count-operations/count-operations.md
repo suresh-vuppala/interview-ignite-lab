@@ -62,7 +62,7 @@ Extend Trie to support counting operations:
 
 **Key insight:** Counters enable duplicate word tracking.
 
-```code```
+
 
 <br>
 
@@ -104,3 +104,7 @@ Extend Trie to support counting operations:
 <br>
 
 ---
+
+---
+
+```code```

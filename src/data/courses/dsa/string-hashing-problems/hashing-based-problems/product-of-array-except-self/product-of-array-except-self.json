@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/product_of_array_except_self.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/cpp/product_of_array_except_self.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/ProductOfArrayExceptSelf.java"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/java/ProductOfArrayExceptSelf.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/product_of_array_except_self.py"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/product-of-array-except-self/code/python/product_of_array_except_self.py"
         }
       ]
     }

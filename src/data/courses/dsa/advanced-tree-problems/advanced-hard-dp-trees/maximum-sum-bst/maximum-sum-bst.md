@@ -65,7 +65,7 @@ For each valid BST subtree, update global maximum sum.
 4. Update global max_sum if current sum is larger
 5. Return (isBST, sum, min, max)
 
-```code```
+
 
 <br>
 
@@ -108,3 +108,7 @@ For each valid BST subtree, update global maximum sum.
 <br>
 
 ---
+
+---
+
+```code```

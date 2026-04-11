@@ -48,7 +48,7 @@ Find maximum sum of non-adjacent elements in array (same as House Robber).
 maxSum(i) = max(arr[i] + maxSum(i-2), maxSum(i-1))
 ```
 
-```code```
+
 
 ### Time: O(n) | Space: O(n)
 
@@ -62,8 +62,12 @@ dp[i] = max sum using elements 0..i
 dp[i] = max(arr[i] + dp[i-2], dp[i-1])
 ```
 
-```code```
+
 
 ### Time: O(n) | Space: O(1) optimized
 
 ---
+
+---
+
+```code```

@@ -60,7 +60,7 @@ Recursive approach follows natural definition:
 2. Process current node (print/store value)
 3. Recursively traverse right subtree
 
-```code```
+
 
 <br>
 
@@ -98,7 +98,7 @@ Iterative approach simulates recursion using explicit stack:
 - Pop from stack, process node
 - Move to right child, repeat process
 
-```code```
+
 
 <br>
 
@@ -132,3 +132,7 @@ Iterative approach simulates recursion using explicit stack:
 <br>
 
 ---
+
+---
+
+```code```

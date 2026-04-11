@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/RemoveElement.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-element/code/java/RemoveElement.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/remove_element.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-element/code/cpp/remove_element.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/remove-element.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-element/code/python/remove-element.py"
         }
       ]
     }

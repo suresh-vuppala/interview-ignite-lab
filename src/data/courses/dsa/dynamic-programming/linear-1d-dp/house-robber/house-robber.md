@@ -60,7 +60,7 @@ Base: rob(0) = nums[0], rob(1) = max(nums[0], nums[1])
 
 **Key insight:** Can't rob adjacent, so if rob current, must skip previous.
 
-```code```
+
 
 <br>
 
@@ -95,7 +95,7 @@ dp[i] = max(nums[i] + dp[i-2], dp[i-1])
    - dp[i] = max(nums[i] + dp[i-2], dp[i-1])
 4. Return dp[n-1]
 
-```code```
+
 
 <br>
 
@@ -157,3 +157,7 @@ class Solution:
             dp[i] = max(nums[i] + dp[i-2], dp[i-1])
         return dp[-1]
 ```
+
+---
+
+```code```

@@ -56,7 +56,7 @@ Use trie to count prefix occurrences:
 
 **Key insight:** prefixCount at each node = how many words share this prefix.
 
-```code```
+
 
 <br>
 
@@ -95,3 +95,7 @@ Use trie to count prefix occurrences:
 <br>
 
 ---
+
+---
+
+```code```

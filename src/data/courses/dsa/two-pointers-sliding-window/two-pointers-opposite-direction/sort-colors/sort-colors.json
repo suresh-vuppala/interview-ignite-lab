@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/sort_colors.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/sort-colors/code/cpp/sort_colors.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/SortColors.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/sort-colors/code/java/SortColors.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/sort_colors.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/sort-colors/code/python/sort_colors.py"
         }
       ]
     }

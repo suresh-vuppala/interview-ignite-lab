@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/partition_labels.cpp"
+          "codeFile": "courses/dsa/greedy/others/partition-labels/code/cpp/partition_labels.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/PartitionLabels.java"
+          "codeFile": "courses/dsa/greedy/others/partition-labels/code/java/PartitionLabels.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/partition_labels.py"
+          "codeFile": "courses/dsa/greedy/others/partition-labels/code/python/partition_labels.py"
         }
       ]
     }

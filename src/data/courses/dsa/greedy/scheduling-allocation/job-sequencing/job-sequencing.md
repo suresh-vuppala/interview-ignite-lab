@@ -63,7 +63,7 @@ Approach:
 
 **Greedy choice:** Always pick highest profit job that can still meet its deadline.
 
-```code```
+
 
 <br>
 
@@ -94,3 +94,7 @@ Approach:
 <br>
 
 ---
+
+---
+
+```code```

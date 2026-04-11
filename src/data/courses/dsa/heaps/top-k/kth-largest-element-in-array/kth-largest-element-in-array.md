@@ -61,7 +61,7 @@ Find the kth largest element in an unsorted array.
 
 **Key insight:** Min heap maintains k largest elements, smallest of them is kth largest.
 
-```code```
+
 
 <br>
 
@@ -109,3 +109,7 @@ Find the kth largest element in an unsorted array.
 <br>
 
 ---
+
+---
+
+```code```

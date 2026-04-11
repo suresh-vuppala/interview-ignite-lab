@@ -56,7 +56,7 @@ Design WordFilter to find words by prefix and suffix, returning the one with max
 
 **Key insight:** Suffix#prefix format allows single trie to handle both conditions.
 
-```code```
+
 
 <br>
 
@@ -90,3 +90,7 @@ Design WordFilter to find words by prefix and suffix, returning the one with max
 <br>
 
 ---
+
+---
+
+```code```

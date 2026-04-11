@@ -63,7 +63,7 @@ Implement the MyStack class:
 
 **Key insight:** Queue is FIFO, stack is LIFO - rotate to reverse order.
 
-```code```
+
 
 <br>
 
@@ -101,3 +101,7 @@ Implement the MyStack class:
 <br>
 
 ---
+
+---
+
+```code```

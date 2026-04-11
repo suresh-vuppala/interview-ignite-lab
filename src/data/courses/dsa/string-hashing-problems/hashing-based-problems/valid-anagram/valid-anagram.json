@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/valid_anagram.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/valid-anagram/code/cpp/valid_anagram.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/ValidAnagram.java"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/valid-anagram/code/java/ValidAnagram.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/valid_anagram.py"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/valid-anagram/code/python/valid_anagram.py"
         }
       ]
     }

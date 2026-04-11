@@ -60,7 +60,7 @@ Use a depth counter:
 
 **Key insight:** Depth 0 indicates outermost parentheses.
 
-```code```
+
 
 <br>
 
@@ -90,3 +90,7 @@ Use a depth counter:
 <br>
 
 ---
+
+---
+
+```code```

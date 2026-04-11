@@ -57,8 +57,12 @@ Use 3 pointers (i2, i3, i5)
 dp[i] = min(dp[i2]*2, dp[i3]*3, dp[i5]*5)
 ```
 
-```code```
+
 
 ### Time: O(n) | Space: O(n)
 
 ---
+
+---
+
+```code```

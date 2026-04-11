@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/queues/queue-core-operations/implement-queue-operations/code/java/ImplementQueueOperations.java"
+          "codeFile": "courses/dsa/queues/queue-core-operations/implement-queue-operations/code//src/data/courses/dsa/queues/queue-core-operations/implement-queue-operations/code/java/ImplementQueueOperations.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/queues/queue-core-operations/implement-queue-operations/code/cpp/ImplementQueueOperations.cpp"
+          "codeFile": "courses/dsa/queues/queue-core-operations/implement-queue-operations/code//src/data/courses/dsa/queues/queue-core-operations/implement-queue-operations/code/cpp/ImplementQueueOperations.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/queues/queue-core-operations/implement-queue-operations/code/python/implement_queue_operations.py"
+          "codeFile": "courses/dsa/queues/queue-core-operations/implement-queue-operations/code//src/data/courses/dsa/queues/queue-core-operations/implement-queue-operations/code/python/implement_queue_operations.py"
         }
       ]
     }

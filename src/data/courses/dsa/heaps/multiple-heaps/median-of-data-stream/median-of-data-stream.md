@@ -62,7 +62,7 @@ Use two heaps to maintain median efficiently:
 
 **Key insight:** Median is at boundary between two halves; heaps maintain this boundary.
 
-```code```
+
 
 <br>
 
@@ -119,3 +119,7 @@ Use two heaps to maintain median efficiently:
 <br>
 
 ---
+
+---
+
+```code```

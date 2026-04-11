@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/ContainerMostWater.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/container-most-water/code/java/ContainerMostWater.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/container_most_water.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/container-most-water/code/cpp/container_most_water.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/container-most-water.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/container-most-water/code/python/container-most-water.py"
         }
       ]
     }

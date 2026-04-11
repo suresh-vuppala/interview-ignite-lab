@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/prims_mst.cpp"
+          "codeFile": "courses/dsa/graphs/mst-advanced/prims-mst/code/cpp/prims_mst.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/PrimsMst.java"
+          "codeFile": "courses/dsa/graphs/mst-advanced/prims-mst/code/java/PrimsMst.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/prims_mst.py"
+          "codeFile": "courses/dsa/graphs/mst-advanced/prims-mst/code/python/prims_mst.py"
         }
       ]
     }

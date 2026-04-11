@@ -78,7 +78,7 @@ Efficient for `range sum queries` and cumulative operations.
 
 ---
 
-```code```
+
 
 ## Practice Strategy
 
@@ -90,7 +90,11 @@ Efficient for `range sum queries` and cumulative operations.
 
 > **💡 Pro Tip:** Always draw out examples on paper or whiteboard. Visualization helps identify `patterns` and `edge cases`!
 
-```code```
+
 ## Next Steps
 
 In the following lessons, we'll dive deep into each pattern with **real interview questions** from top tech companies. You'll learn not just how to solve problems, but how to **think like an interviewer** and approach new problems systematically.
+
+---
+
+```code```

@@ -71,7 +71,7 @@ Use two counters:
 
 **Key insight:** Track unmatched brackets separately.
 
-```code```
+
 
 <br>
 
@@ -105,3 +105,7 @@ Use two counters:
 <br>
 
 ---
+
+---
+
+```code```

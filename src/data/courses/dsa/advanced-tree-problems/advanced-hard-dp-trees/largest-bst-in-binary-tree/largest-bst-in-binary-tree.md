@@ -66,7 +66,7 @@ Return (isBST, size, min, max) for each subtree.
 3. If valid BST: size = left_size + right_size + 1
 4. If not BST: return max(left_size, right_size)
 
-```code```
+
 
 <br>
 
@@ -106,3 +106,7 @@ Return (isBST, size, min, max) for each subtree.
 <br>
 
 ---
+
+---
+
+```code```

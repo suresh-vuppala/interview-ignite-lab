@@ -10,7 +10,7 @@
       "title": "Example",
       "languages": [
         {
-          "codeFile": "/src/data/courses/dsa/heaps/top-k/k-closest-points/code/cpp/KClosestPoints.cpp",
+          "codeFile": "courses/dsa/heaps/top-k/k-closest-points/code//src/data/courses/dsa/heaps/top-k/k-closest-points/code/cpp/KClosestPoints.cpp",
           "language": "cpp"
         }
       ]

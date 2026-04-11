@@ -65,7 +65,7 @@ A **Deque (Double-Ended Queue)** is a linear data structure that allows insertio
 
 **Key insight:** Need bidirectional access for both ends.
 
-```code```
+
 
 <br>
 
@@ -105,3 +105,7 @@ A **Deque (Double-Ended Queue)** is a linear data structure that allows insertio
 <br>
 
 ---
+
+---
+
+```code```

@@ -76,7 +76,7 @@ Use two stacks:
 
 **Key insight:** Stacks handle nested brackets naturally.
 
-```code```
+
 
 <br>
 
@@ -109,3 +109,7 @@ Use two stacks:
 <br>
 
 ---
+
+---
+
+```code```

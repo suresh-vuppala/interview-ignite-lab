@@ -61,7 +61,7 @@ Approach:
 
 **Formula:** max(tasks.length, (maxFreq - 1) × (n + 1) + countOfMaxFreqTasks)
 
-```code```
+
 
 <br>
 
@@ -96,3 +96,7 @@ Approach:
 <br>
 
 ---
+
+---
+
+```code```

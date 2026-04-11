@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/place_k_elements_max_distance.cpp"
+          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/place-k-elements-max-distance/code/cpp/place_k_elements_max_distance.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/PlaceKElementsMaxDistance.java"
+          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/place-k-elements-max-distance/code/java/PlaceKElementsMaxDistance.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/place_k_elements_max_distance.py"
+          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/place-k-elements-max-distance/code/python/place_k_elements_max_distance.py"
         }
       ]
     }

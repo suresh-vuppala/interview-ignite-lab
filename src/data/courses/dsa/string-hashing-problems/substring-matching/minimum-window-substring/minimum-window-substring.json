@@ -1,26 +1,26 @@
 {
-    "title": "Minimum Window Substring",
-    "slug": "minimum-window-substring",
-    "isPremium": false,
-    "isPosted": true,
-    "mdFile": "minimum-window-substring.md",
-    "codeExamples": [
+  "title": "Minimum Window Substring",
+  "slug": "minimum-window-substring",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "minimum-window-substring.md",
+  "codeExamples": [
+    {
+      "title": "Minimum Window Substring",
+      "languages": [
         {
-            "title": "Minimum Window Substring",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "code/java/MinimumWindowSubstring.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "code/cpp/minimum_window_substring.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "code/python/minimum-window-substring.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/minimum-window-substring/code/java/MinimumWindowSubstring.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/minimum-window-substring/code/cpp/minimum_window_substring.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/minimum-window-substring/code/python/minimum-window-substring.py"
         }
-    ]
+      ]
+    }
+  ]
 }

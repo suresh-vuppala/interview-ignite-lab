@@ -122,7 +122,7 @@ Below are the complete implementations of the longestBalancedSubstring function 
 
 Select a language above to view the implementation.
 
-```code```
+
 
 ## Key Insights
 
@@ -131,3 +131,7 @@ Select a language above to view the implementation.
 - **Balanced Condition**: When same state repeats, all characters between are equal
 - **Character Independence**: Works with any number of distinct characters
 - **Efficient State Space**: Using differences captures the essential information needed
+
+---
+
+```code```

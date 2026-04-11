@@ -63,7 +63,7 @@ Use max heap to maintain k closest points:
 
 **Key insight:** Max heap keeps farthest of k closest points at top, easy to compare and replace.
 
-```code```
+
 
 <br>
 
@@ -112,3 +112,7 @@ Use max heap to maintain k closest points:
 <br>
 
 ---
+
+---
+
+```code```

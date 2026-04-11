@@ -69,7 +69,7 @@ class TSTNode:
 
 **Key insight:** Combines benefits of BST (space) and Trie (prefix matching).
 
-```code```
+
 
 <br>
 
@@ -121,3 +121,7 @@ class TSTNode:
 <br>
 
 ---
+
+---
+
+```code```

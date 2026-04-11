@@ -66,7 +66,7 @@ Find the kth smallest element in an n × n matrix where each row and column is s
 
 **Key insight:** Treat each row as sorted list, merge using heap like merge k sorted lists.
 
-```code```
+
 
 <br>
 
@@ -118,3 +118,7 @@ Find the kth smallest element in an n × n matrix where each row and column is s
 <br>
 
 ---
+
+---
+
+```code```

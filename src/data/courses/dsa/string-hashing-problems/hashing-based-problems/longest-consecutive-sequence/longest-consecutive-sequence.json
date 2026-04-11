@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/longest_consecutive_sequence.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/longest-consecutive-sequence/code/cpp/longest_consecutive_sequence.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/LongestConsecutiveSequence.java"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/longest-consecutive-sequence/code/java/LongestConsecutiveSequence.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/longest_consecutive_sequence.py"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/longest-consecutive-sequence/code/python/longest_consecutive_sequence.py"
         }
       ]
     }

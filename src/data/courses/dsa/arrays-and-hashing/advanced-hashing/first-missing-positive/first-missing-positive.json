@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/first_missing_positive.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/advanced-hashing/first-missing-positive/code/cpp/first_missing_positive.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/FirstMissingPositive.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/advanced-hashing/first-missing-positive/code/java/FirstMissingPositive.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/first_missing_positive.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/advanced-hashing/first-missing-positive/code/python/first_missing_positive.py"
         }
       ]
     }

@@ -55,7 +55,7 @@ Find the maximum XOR of any two numbers in an array.
 
 **Key insight:** Greedy choice of opposite bit at each level maximizes XOR.
 
-```code```
+
 
 <br>
 
@@ -95,3 +95,7 @@ Find the maximum XOR of any two numbers in an array.
 <br>
 
 ---
+
+---
+
+```code```

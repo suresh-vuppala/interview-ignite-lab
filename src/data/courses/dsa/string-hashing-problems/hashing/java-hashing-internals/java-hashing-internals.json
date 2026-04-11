@@ -1,26 +1,26 @@
 {
-    "title": "Java Hashing Internals",
-    "slug": "java-hashing-internals",
-    "isPremium": false,
-    "isPosted": true,
-    "mdFile": "java-hashing-internals.md",
-    "codeExamples": [
+  "title": "Java Hashing Internals",
+  "slug": "java-hashing-internals",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "java-hashing-internals.md",
+  "codeExamples": [
+    {
+      "title": "Java Hashing Internals",
+      "languages": [
         {
-            "title": "Java Hashing Internals",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "code/java/JavaHashingInternals.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "code/cpp/java_hashing_internals.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "code/python/java-hashing-internals.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing/java-hashing-internals/code/java/JavaHashingInternals.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing/java-hashing-internals/code/cpp/java_hashing_internals.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing/java-hashing-internals/code/python/java-hashing-internals.py"
         }
-    ]
+      ]
+    }
+  ]
 }

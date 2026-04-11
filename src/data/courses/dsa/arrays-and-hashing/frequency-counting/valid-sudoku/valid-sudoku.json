@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/valid_sudoku.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/valid-sudoku/code/cpp/valid_sudoku.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/ValidSudoku.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/valid-sudoku/code/java/ValidSudoku.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/valid_sudoku.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/frequency-counting/valid-sudoku/code/python/valid_sudoku.py"
         }
       ]
     }

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/valid_parenthesis_string.cpp"
+          "codeFile": "courses/dsa/greedy/others/valid-parenthesis-string/code/cpp/valid_parenthesis_string.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/ValidParenthesisString.java"
+          "codeFile": "courses/dsa/greedy/others/valid-parenthesis-string/code/java/ValidParenthesisString.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/valid_parenthesis_string.py"
+          "codeFile": "courses/dsa/greedy/others/valid-parenthesis-string/code/python/valid_parenthesis_string.py"
         }
       ]
     }

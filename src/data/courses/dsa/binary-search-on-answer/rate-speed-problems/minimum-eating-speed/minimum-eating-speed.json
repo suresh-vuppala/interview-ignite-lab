@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/minimum_eating_speed.cpp"
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-eating-speed/code/cpp/minimum_eating_speed.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/MinimumEatingSpeed.java"
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-eating-speed/code/java/MinimumEatingSpeed.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/minimum_eating_speed.py"
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-eating-speed/code/python/minimum_eating_speed.py"
         }
       ]
     }

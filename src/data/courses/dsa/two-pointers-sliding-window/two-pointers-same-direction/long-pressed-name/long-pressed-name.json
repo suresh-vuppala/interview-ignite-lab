@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/LongPressedName.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/long-pressed-name/code/java/LongPressedName.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/long_pressed_name.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/long-pressed-name/code/cpp/long_pressed_name.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/long-pressed-name.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/long-pressed-name/code/python/long-pressed-name.py"
         }
       ]
     }

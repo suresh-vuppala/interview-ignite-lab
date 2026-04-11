@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/partition_array_equal_sums_mitm.cpp"
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/partition-array-equal-sums-mitm/code/cpp/partition_array_equal_sums_mitm.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/PartitionArrayEqualSumsMitm.java"
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/partition-array-equal-sums-mitm/code/java/PartitionArrayEqualSumsMitm.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/partition_array_equal_sums_mitm.py"
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/partition-array-equal-sums-mitm/code/python/partition_array_equal_sums_mitm.py"
         }
       ]
     }

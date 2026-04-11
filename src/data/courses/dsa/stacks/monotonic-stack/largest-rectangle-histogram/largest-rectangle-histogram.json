@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/largest-rectangle-histogram/code/java/LargestRectangleHistogram.java"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/largest-rectangle-histogram/code//src/data/courses/dsa/stacks/monotonic-stack/largest-rectangle-histogram/code/java/LargestRectangleHistogram.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/largest-rectangle-histogram/code/cpp/LargestRectangleHistogram.cpp"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/largest-rectangle-histogram/code//src/data/courses/dsa/stacks/monotonic-stack/largest-rectangle-histogram/code/cpp/LargestRectangleHistogram.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/largest-rectangle-histogram/code/python/largest_rectangle_histogram.py"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/largest-rectangle-histogram/code//src/data/courses/dsa/stacks/monotonic-stack/largest-rectangle-histogram/code/python/largest_rectangle_histogram.py"
         }
       ]
     }

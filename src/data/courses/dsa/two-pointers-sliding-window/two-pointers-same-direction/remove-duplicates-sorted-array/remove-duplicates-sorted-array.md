@@ -64,7 +64,7 @@ Use two pointers moving in same direction:
 3. When read finds new unique element, copy to write position
 4. Return write + 1 as new length
 
-```code```
+
 
 <br>
 
@@ -94,3 +94,7 @@ Use two pointers moving in same direction:
 <br>
 
 ---
+
+---
+
+```code```

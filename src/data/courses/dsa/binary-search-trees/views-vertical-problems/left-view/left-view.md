@@ -56,7 +56,7 @@ Use level-order traversal and pick first node at each level:
 3. First node at each level is part of left view
 4. Add to result
 
-```code```
+
 
 <br>
 
@@ -92,7 +92,7 @@ Use DFS with level tracking:
 
 **Key insight:** Pre-order with left-first traversal ensures leftmost node at each level is visited first.
 
-```code```
+
 
 <br>
 
@@ -133,3 +133,7 @@ Use DFS with level tracking:
 <br>
 
 ---
+
+---
+
+```code```

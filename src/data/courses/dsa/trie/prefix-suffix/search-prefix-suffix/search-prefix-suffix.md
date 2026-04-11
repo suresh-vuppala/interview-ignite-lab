@@ -57,7 +57,7 @@ Use two separate tries:
 
 **Key insight:** Maintain two tries and intersect word indices for efficient dual-condition search.
 
-```code```
+
 
 <br>
 
@@ -91,3 +91,7 @@ Use two separate tries:
 <br>
 
 ---
+
+---
+
+```code```

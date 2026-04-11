@@ -57,7 +57,7 @@ Answer Q queries where query[i] = [xi, mi]: find maximum XOR of xi with any elem
 
 **Key insight:** Process queries offline to build trie incrementally, avoiding rebuilds.
 
-```code```
+
 
 <br>
 
@@ -100,3 +100,7 @@ Answer Q queries where query[i] = [xi, mi]: find maximum XOR of xi with any elem
 <br>
 
 ---
+
+---
+
+```code```

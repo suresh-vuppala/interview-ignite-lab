@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/set_matrix_zeroes.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/set-matrix-zeroes/code/cpp/set_matrix_zeroes.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/SetMatrixZeroes.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/set-matrix-zeroes/code/java/SetMatrixZeroes.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/set_matrix_zeroes.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/set-matrix-zeroes/code/python/set_matrix_zeroes.py"
         }
       ]
     }

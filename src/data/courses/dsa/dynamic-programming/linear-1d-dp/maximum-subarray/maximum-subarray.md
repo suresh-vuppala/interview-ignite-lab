@@ -49,7 +49,7 @@ maxEndingHere(i) = max(nums[i], nums[i] + maxEndingHere(i-1))
 maxSoFar = max of all maxEndingHere(i)
 ```
 
-```code```
+
 
 ### Time: O(n) | Space: O(n)
 
@@ -64,8 +64,12 @@ dp[i] = max(nums[i], nums[i] + dp[i-1])
 result = max(dp)
 ```
 
-```code```
+
 
 ### Time: O(n) | Space: O(1) optimized (Kadane's)
 
 ---
+
+---
+
+```code```

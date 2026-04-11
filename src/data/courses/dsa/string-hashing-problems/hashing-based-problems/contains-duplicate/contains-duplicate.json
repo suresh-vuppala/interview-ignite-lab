@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/contains_duplicate.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/cpp/contains_duplicate.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/ContainsDuplicate.java"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/java/ContainsDuplicate.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/contains_duplicate.py"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/contains-duplicate/code/python/contains_duplicate.py"
         }
       ]
     }

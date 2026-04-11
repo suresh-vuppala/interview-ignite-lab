@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/minimum_limit_balls_bag.cpp"
+          "codeFile": "courses/dsa/binary-search-on-answer/partition-allocation/minimum-limit-balls-bag/code/cpp/minimum_limit_balls_bag.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/MinimumLimitBallsBag.java"
+          "codeFile": "courses/dsa/binary-search-on-answer/partition-allocation/minimum-limit-balls-bag/code/java/MinimumLimitBallsBag.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/minimum_limit_balls_bag.py"
+          "codeFile": "courses/dsa/binary-search-on-answer/partition-allocation/minimum-limit-balls-bag/code/python/minimum_limit_balls_bag.py"
         }
       ]
     }

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/reorganize_string.cpp"
+          "codeFile": "courses/dsa/heaps/top-k/reorganize-string/code/cpp/reorganize_string.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/ReorganizeString.java"
+          "codeFile": "courses/dsa/heaps/top-k/reorganize-string/code/java/ReorganizeString.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/reorganize_string.py"
+          "codeFile": "courses/dsa/heaps/top-k/reorganize-string/code/python/reorganize_string.py"
         }
       ]
     }

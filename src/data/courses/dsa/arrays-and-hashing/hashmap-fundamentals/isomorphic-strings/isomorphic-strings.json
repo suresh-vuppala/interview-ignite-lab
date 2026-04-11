@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/isomorphic_strings.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/hashmap-fundamentals/isomorphic-strings/code/cpp/isomorphic_strings.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/IsomorphicStrings.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/hashmap-fundamentals/isomorphic-strings/code/java/IsomorphicStrings.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/isomorphic_strings.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/hashmap-fundamentals/isomorphic-strings/code/python/isomorphic_strings.py"
         }
       ]
     }

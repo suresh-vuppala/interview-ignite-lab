@@ -59,7 +59,7 @@ Base: minCoins(0) = 0, minCoins(negative) = infinity
 
 **Key insight:** Build solution from target amount down to 0.
 
-```code```
+
 
 <br>
 
@@ -96,7 +96,7 @@ dp[i] = min(dp[i], 1 + dp[i - coin]) for all coins where coin ≤ i
    - Update dp[amount] with minimum
 4. Return dp[target]
 
-```code```
+
 
 <br>
 
@@ -136,3 +136,7 @@ dp[i] = min(dp[i], 1 + dp[i - coin]) for all coins where coin ≤ i
 <br>
 
 ---
+
+---
+
+```code```

@@ -57,7 +57,7 @@ Use trie to find shortest roots:
 
 **Key insight:** First isEnd encountered = shortest root.
 
-```code```
+
 
 <br>
 
@@ -95,3 +95,7 @@ Use trie to find shortest roots:
 <br>
 
 ---
+
+---
+
+```code```

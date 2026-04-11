@@ -52,7 +52,7 @@ F(n) =F(n-1)+F(n-2), where F(0) = 0 and F(1)=1
 
 
 
-```code```
+
 
 <br>
 
@@ -84,3 +84,7 @@ So, despite calculating the result of the same problem, again and again, we can 
 
 
 -
+
+---
+
+```code```

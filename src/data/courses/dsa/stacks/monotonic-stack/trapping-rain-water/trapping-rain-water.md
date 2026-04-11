@@ -57,7 +57,7 @@ Use two pointers to track max heights:
 
 **Key insight:** Water level determined by minimum of max heights on both sides.
 
-```code```
+
 
 <br>
 
@@ -85,3 +85,7 @@ Use two pointers to track max heights:
 <br>
 
 ---
+
+---
+
+```code```

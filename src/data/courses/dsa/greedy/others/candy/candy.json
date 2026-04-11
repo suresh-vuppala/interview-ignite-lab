@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/candy.cpp"
+          "codeFile": "courses/dsa/greedy/others/candy/code/cpp/candy.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/Candy.java"
+          "codeFile": "courses/dsa/greedy/others/candy/code/java/Candy.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/candy.py"
+          "codeFile": "courses/dsa/greedy/others/candy/code/python/candy.py"
         }
       ]
     }

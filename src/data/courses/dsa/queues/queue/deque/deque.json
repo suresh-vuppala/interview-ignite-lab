@@ -11,15 +11,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/queues/queue/deque/code/java/DequeExample.java"
+          "codeFile": "courses/dsa/queues/queue/deque/code//src/data/courses/dsa/queues/queue/deque/code/java/DequeExample.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/queues/queue/deque/code/cpp/DequeExample.cpp"
+          "codeFile": "courses/dsa/queues/queue/deque/code//src/data/courses/dsa/queues/queue/deque/code/cpp/DequeExample.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/queues/queue/deque/code/python/deque_example.py"
+          "codeFile": "courses/dsa/queues/queue/deque/code//src/data/courses/dsa/queues/queue/deque/code/python/deque_example.py"
         }
       ]
     }

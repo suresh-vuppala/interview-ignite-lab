@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/minimum_time_complete_trips.cpp"
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-time-complete-trips/code/cpp/minimum_time_complete_trips.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/MinimumTimeCompleteTrips.java"
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-time-complete-trips/code/java/MinimumTimeCompleteTrips.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/minimum_time_complete_trips.py"
+          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-time-complete-trips/code/python/minimum_time_complete_trips.py"
         }
       ]
     }

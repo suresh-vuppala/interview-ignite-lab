@@ -1,26 +1,26 @@
 {
-    "title": "Introduction",
-    "slug": "introduction",
-    "isPremium": false,
-    "isPosted": true,
-    "mdFile": "introduction.md",
-    "codeExamples": [
+  "title": "Introduction",
+  "slug": "introduction",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "introduction.md",
+  "codeExamples": [
+    {
+      "title": "Introduction",
+      "languages": [
         {
-            "title": "Introduction",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "code/java/Introduction.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "code/cpp/introduction.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "code/python/introduction.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing/introduction/code/java/Introduction.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing/introduction/code/cpp/introduction.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing/introduction/code/python/introduction.py"
         }
-    ]
+      ]
+    }
+  ]
 }

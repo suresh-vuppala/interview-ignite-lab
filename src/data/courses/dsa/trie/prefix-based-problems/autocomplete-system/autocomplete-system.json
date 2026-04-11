@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-based-problems/autocomplete-system/code/java/AutocompleteSystem.java"
+          "codeFile": "courses/dsa/trie/prefix-based-problems/autocomplete-system/code//src/data/courses/dsa/trie/prefix-based-problems/autocomplete-system/code/java/AutocompleteSystem.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-based-problems/autocomplete-system/code/cpp/AutocompleteSystem.cpp"
+          "codeFile": "courses/dsa/trie/prefix-based-problems/autocomplete-system/code//src/data/courses/dsa/trie/prefix-based-problems/autocomplete-system/code/cpp/AutocompleteSystem.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-based-problems/autocomplete-system/code/python/autocomplete_system.py"
+          "codeFile": "courses/dsa/trie/prefix-based-problems/autocomplete-system/code//src/data/courses/dsa/trie/prefix-based-problems/autocomplete-system/code/python/autocomplete_system.py"
         }
       ]
     }

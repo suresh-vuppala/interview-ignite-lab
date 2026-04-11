@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/pascals_triangle.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/pascals-triangle/code/cpp/pascals_triangle.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/PascalsTriangle.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/pascals-triangle/code/java/PascalsTriangle.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/pascals_triangle.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/pascals-triangle/code/python/pascals_triangle.py"
         }
       ]
     }

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/count_good_nodes.cpp"
+          "codeFile": "courses/dsa/trees/path-relationship-problems/count-good-nodes/code/cpp/count_good_nodes.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/CountGoodNodes.java"
+          "codeFile": "courses/dsa/trees/path-relationship-problems/count-good-nodes/code/java/CountGoodNodes.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/count_good_nodes.py"
+          "codeFile": "courses/dsa/trees/path-relationship-problems/count-good-nodes/code/python/count_good_nodes.py"
         }
       ]
     }

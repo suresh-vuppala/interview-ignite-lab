@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/clone_graph.cpp"
+          "codeFile": "courses/dsa/graphs/mst-advanced/clone-graph/code/cpp/clone_graph.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/CloneGraph.java"
+          "codeFile": "courses/dsa/graphs/mst-advanced/clone-graph/code/java/CloneGraph.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/clone_graph.py"
+          "codeFile": "courses/dsa/graphs/mst-advanced/clone-graph/code/python/clone_graph.py"
         }
       ]
     }

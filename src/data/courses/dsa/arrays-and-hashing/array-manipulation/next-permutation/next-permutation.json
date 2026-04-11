@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/next_permutation.cpp"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/next-permutation/code/cpp/next_permutation.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/NextPermutation.java"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/next-permutation/code/java/NextPermutation.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/next_permutation.py"
+          "codeFile": "courses/dsa/arrays-and-hashing/array-manipulation/next-permutation/code/python/next_permutation.py"
         }
       ]
     }

@@ -56,7 +56,7 @@ Find the maximum XOR of two elements where one element must be ≤ K.
 
 **Key insight:** Only insert numbers ≤ K, then find max XOR with any number.
 
-```code```
+
 
 <br>
 
@@ -96,3 +96,7 @@ Find the maximum XOR of two elements where one element must be ≤ K.
 <br>
 
 ---
+
+---
+
+```code```

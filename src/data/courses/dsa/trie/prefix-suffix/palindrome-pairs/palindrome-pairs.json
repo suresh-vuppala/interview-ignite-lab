@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-suffix/palindrome-pairs/code/java/PalindromePairs.java"
+          "codeFile": "courses/dsa/trie/prefix-suffix/palindrome-pairs/code//src/data/courses/dsa/trie/prefix-suffix/palindrome-pairs/code/java/PalindromePairs.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-suffix/palindrome-pairs/code/cpp/PalindromePairs.cpp"
+          "codeFile": "courses/dsa/trie/prefix-suffix/palindrome-pairs/code//src/data/courses/dsa/trie/prefix-suffix/palindrome-pairs/code/cpp/PalindromePairs.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-suffix/palindrome-pairs/code/python/palindrome_pairs.py"
+          "codeFile": "courses/dsa/trie/prefix-suffix/palindrome-pairs/code//src/data/courses/dsa/trie/prefix-suffix/palindrome-pairs/code/python/palindrome_pairs.py"
         }
       ]
     }

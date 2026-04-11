@@ -73,7 +73,7 @@ Use inorder traversal (Left-Root-Right) which visits BST nodes in ascending orde
 
 **Key insight:** Inorder traversal of BST produces sorted sequence.
 
-```code```
+
 
 <br>
 
@@ -111,7 +111,7 @@ Use reverse inorder traversal (Right-Root-Left) for descending order:
 
 **Key insight:** Reverse inorder visits nodes in descending order.
 
-```code```
+
 
 <br>
 
@@ -144,3 +144,7 @@ Use reverse inorder traversal (Right-Root-Left) for descending order:
 <br>
 
 ---
+
+---
+
+```code```

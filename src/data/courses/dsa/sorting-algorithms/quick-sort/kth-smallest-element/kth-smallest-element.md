@@ -54,7 +54,7 @@ QuickSelect is an optimization of QuickSort for finding kth element:
 3. If pivot index > k-1, recurse on left subarray
 4. If pivot index < k-1, recurse on right subarray
 
-```code```
+
 
 <br>
 
@@ -83,3 +83,7 @@ QuickSelect is an optimization of QuickSort for finding kth element:
 <br>
 
 ---
+
+---
+
+```code```

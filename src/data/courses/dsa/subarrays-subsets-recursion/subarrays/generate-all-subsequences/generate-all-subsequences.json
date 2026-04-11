@@ -1,26 +1,26 @@
 {
-    "title": "Generate All Subsequences",
-    "slug": "generate-all-subsequences",
-    "isPremium": false,
-    "isPosted": true,
-    "mdFile": "generate-all-subsequences.md",
-    "codeExamples": [
+  "title": "Generate All Subsequences",
+  "slug": "generate-all-subsequences",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "generate-all-subsequences.md",
+  "codeExamples": [
+    {
+      "title": "Generate All Subsequences",
+      "languages": [
         {
-            "title": "Generate All Subsequences",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "code/java/GenerateAllSubsequences.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "code/cpp/generate_all_subsequences.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "code/python/generate-all-subsequences.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/subarrays/generate-all-subsequences/code/java/GenerateAllSubsequences.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/subarrays/generate-all-subsequences/code/cpp/generate_all_subsequences.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/subarrays/generate-all-subsequences/code/python/generate-all-subsequences.py"
         }
-    ]
+      ]
+    }
+  ]
 }

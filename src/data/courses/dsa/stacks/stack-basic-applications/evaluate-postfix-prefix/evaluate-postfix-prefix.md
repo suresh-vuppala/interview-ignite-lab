@@ -86,7 +86,7 @@ Given a postfix or prefix expression, evaluate it and return the result.
 
 **Key insight:** Stack naturally handles operand order for expression evaluation.
 
-```code```
+
 
 <br>
 
@@ -122,3 +122,7 @@ Given a postfix or prefix expression, evaluate it and return the result.
 <br>
 
 ---
+
+---
+
+```code```

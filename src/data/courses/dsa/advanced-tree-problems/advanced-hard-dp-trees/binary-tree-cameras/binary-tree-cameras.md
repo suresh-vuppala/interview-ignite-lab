@@ -68,7 +68,7 @@ Use post-order DFS with 3 states for each node:
 
 **Key insight:** Never place camera at leaf; place at leaf's parent to cover more nodes.
 
-```code```
+
 
 <br>
 
@@ -117,3 +117,7 @@ Use post-order DFS with 3 states for each node:
 <br>
 
 ---
+
+---
+
+```code```

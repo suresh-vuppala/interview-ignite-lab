@@ -1,26 +1,26 @@
 {
-    "title": "Problems on Rolling Hash",
-    "slug": "problems-on-rolling-hash",
-    "isPremium": false,
-    "isPosted": true,
-    "mdFile": "problems-on-rolling-hash.md",
-    "codeExamples": [
+  "title": "Problems on Rolling Hash",
+  "slug": "problems-on-rolling-hash",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "problems-on-rolling-hash.md",
+  "codeExamples": [
+    {
+      "title": "Problems on Rolling Hash",
+      "languages": [
         {
-            "title": "Problems on Rolling Hash",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "code/java/ProblemsOnRollingHash.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "code/cpp/problems_on_rolling_hash.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "code/python/problems-on-rolling-hash.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/string-hashing-problems/string-rolling-hash/problems-on-rolling-hash/code/java/ProblemsOnRollingHash.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/string-hashing-problems/string-rolling-hash/problems-on-rolling-hash/code/cpp/problems_on_rolling_hash.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/string-hashing-problems/string-rolling-hash/problems-on-rolling-hash/code/python/problems-on-rolling-hash.py"
         }
-    ]
+      ]
+    }
+  ]
 }

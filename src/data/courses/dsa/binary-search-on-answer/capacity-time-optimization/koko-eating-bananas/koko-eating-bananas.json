@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/koko_eating_bananas.cpp"
+          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/koko-eating-bananas/code/cpp/koko_eating_bananas.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/KokoEatingBananas.java"
+          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/koko-eating-bananas/code/java/KokoEatingBananas.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/koko_eating_bananas.py"
+          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/koko-eating-bananas/code/python/koko_eating_bananas.py"
         }
       ]
     }

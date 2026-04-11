@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/aggressive_cows.cpp"
+          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/aggressive-cows/code/cpp/aggressive_cows.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/AggressiveCows.java"
+          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/aggressive-cows/code/java/AggressiveCows.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/aggressive_cows.py"
+          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/aggressive-cows/code/python/aggressive_cows.py"
         }
       ]
     }

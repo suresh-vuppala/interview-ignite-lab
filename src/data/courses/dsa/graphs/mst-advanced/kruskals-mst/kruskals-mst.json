@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/kruskals_mst.cpp"
+          "codeFile": "courses/dsa/graphs/mst-advanced/kruskals-mst/code/cpp/kruskals_mst.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/KruskalsMst.java"
+          "codeFile": "courses/dsa/graphs/mst-advanced/kruskals-mst/code/java/KruskalsMst.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/kruskals_mst.py"
+          "codeFile": "courses/dsa/graphs/mst-advanced/kruskals-mst/code/python/kruskals_mst.py"
         }
       ]
     }

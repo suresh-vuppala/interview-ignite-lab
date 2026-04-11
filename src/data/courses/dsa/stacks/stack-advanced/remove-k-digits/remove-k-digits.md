@@ -69,7 +69,7 @@ Use monotonic increasing stack:
 
 **Key insight:** Keep digits in increasing order to minimize number.
 
-```code```
+
 
 <br>
 
@@ -104,3 +104,7 @@ Use monotonic increasing stack:
 <br>
 
 ---
+
+---
+
+```code```

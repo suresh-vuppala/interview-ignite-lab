@@ -59,7 +59,7 @@ Design a dictionary that supports search with '.' wildcard matching any single c
 
 **Key insight:** Wildcard requires exploring multiple paths, DFS handles this naturally.
 
-```code```
+
 
 <br>
 
@@ -100,3 +100,7 @@ Design a dictionary that supports search with '.' wildcard matching any single c
 <br>
 
 ---
+
+---
+
+```code```

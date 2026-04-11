@@ -62,7 +62,7 @@ Base: knapsack(0, *) = 0, knapsack(*, 0) = 0
 
 **Key insight:** Each item has binary choice - take or leave.
 
-```code```
+
 
 <br>
 
@@ -99,7 +99,7 @@ else:
 3. Fill table using transition
 4. Return dp[n][W]
 
-```code```
+
 
 <br>
 
@@ -140,3 +140,7 @@ else:
 <br>
 
 ---
+
+---
+
+```code```

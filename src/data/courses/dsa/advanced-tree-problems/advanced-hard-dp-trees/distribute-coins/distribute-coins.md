@@ -64,7 +64,7 @@ Return excess/deficit for each subtree.
 3. Moves += |left_excess| + |right_excess|
 4. Return excess to parent
 
-```code```
+
 
 <br>
 
@@ -106,3 +106,7 @@ Return excess/deficit for each subtree.
 <br>
 
 ---
+
+---
+
+```code```

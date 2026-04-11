@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/minimum_time_finish_jobs.cpp"
+          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/minimum-time-finish-jobs/code/cpp/minimum_time_finish_jobs.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/MinimumTimeFinishJobs.java"
+          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/minimum-time-finish-jobs/code/java/MinimumTimeFinishJobs.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/minimum_time_finish_jobs.py"
+          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/minimum-time-finish-jobs/code/python/minimum_time_finish_jobs.py"
         }
       ]
     }

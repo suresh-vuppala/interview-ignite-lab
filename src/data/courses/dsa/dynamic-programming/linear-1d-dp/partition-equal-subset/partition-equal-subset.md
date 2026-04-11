@@ -48,7 +48,7 @@ Determine if array can be partitioned into two subsets with equal sum (Subset Su
 canPartition(i, sum) = canPartition(i-1, sum) || canPartition(i-1, sum-nums[i])
 ```
 
-```code```
+
 
 ### Time: O(n × sum) | Space: O(n × sum)
 
@@ -62,8 +62,12 @@ dp[i][j] = can make sum j using first i elements
 dp[i][j] = dp[i-1][j] || dp[i-1][j-nums[i]]
 ```
 
-```code```
+
 
 ### Time: O(n × sum) | Space: O(sum) optimized
 
 ---
+
+---
+
+```code```

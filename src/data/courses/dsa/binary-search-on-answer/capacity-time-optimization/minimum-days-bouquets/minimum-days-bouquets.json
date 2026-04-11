@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/minimum_days_bouquets.cpp"
+          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/minimum-days-bouquets/code/cpp/minimum_days_bouquets.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/MinimumDaysBouquets.java"
+          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/minimum-days-bouquets/code/java/MinimumDaysBouquets.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/minimum_days_bouquets.py"
+          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/minimum-days-bouquets/code/python/minimum_days_bouquets.py"
         }
       ]
     }

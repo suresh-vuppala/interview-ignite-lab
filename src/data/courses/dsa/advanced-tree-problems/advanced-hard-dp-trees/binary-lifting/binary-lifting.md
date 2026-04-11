@@ -71,7 +71,7 @@ For each bit i in k:
   if bit i is set: node = up[node][i]
 ```
 
-```code```
+
 
 <br>
 
@@ -116,3 +116,7 @@ For each bit i in k:
 <br>
 
 ---
+
+---
+
+```code```

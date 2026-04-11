@@ -48,7 +48,7 @@ Break integer n into sum of at least two positive integers and maximize their pr
 maxProduct(n) = max(j * (n-j), j * maxProduct(n-j)) for all j
 ```
 
-```code```
+
 
 ### Time: O(n²) | Space: O(n)
 
@@ -62,8 +62,12 @@ dp[i] = max product for integer i
 dp[i] = max(j * (i-j), j * dp[i-j]) for j in 1..i-1
 ```
 
-```code```
+
 
 ### Time: O(n²) | Space: O(n)
 
 ---
+
+---
+
+```code```

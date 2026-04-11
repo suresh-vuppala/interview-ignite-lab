@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/SpaceComplexityAnalysis.java"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/space-complexity-analysis/code/java/SpaceComplexityAnalysis.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/SpaceComplexityAnalysis.cpp"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/space-complexity-analysis/code/cpp/SpaceComplexityAnalysis.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/space_complexity_analysis.py"
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/space-complexity-analysis/code/python/space_complexity_analysis.py"
         }
       ]
     }

@@ -54,7 +54,7 @@ Combine trie with DFS:
 
 **Key insight:** Trie prunes invalid paths early.
 
-```code```
+
 
 <br>
 
@@ -83,3 +83,7 @@ Combine trie with DFS:
 <br>
 
 ---
+
+---
+
+```code```

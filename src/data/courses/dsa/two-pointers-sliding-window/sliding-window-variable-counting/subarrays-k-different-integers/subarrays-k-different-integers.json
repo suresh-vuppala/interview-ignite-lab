@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/subarrays_k_different_integers.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-counting/subarrays-k-different-integers/code/cpp/subarrays_k_different_integers.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/SubarraysKDifferentIntegers.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-counting/subarrays-k-different-integers/code/java/SubarraysKDifferentIntegers.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/subarrays_k_different_integers.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-counting/subarrays-k-different-integers/code/python/subarrays_k_different_integers.py"
         }
       ]
     }

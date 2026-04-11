@@ -61,7 +61,7 @@ Implement a trie for binary representation of numbers to support XOR operations 
 
 **Key insight:** Greedy choice of opposite bit maximizes XOR.
 
-```code```
+
 
 <br>
 
@@ -101,3 +101,7 @@ Implement a trie for binary representation of numbers to support XOR operations 
 <br>
 
 ---
+
+---
+
+```code```

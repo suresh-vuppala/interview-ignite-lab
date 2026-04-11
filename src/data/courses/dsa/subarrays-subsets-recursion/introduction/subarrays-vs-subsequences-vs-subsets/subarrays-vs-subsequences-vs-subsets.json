@@ -1,26 +1,26 @@
 {
-    "title": "Subarrays vs Subsequences vs Subsets",
-    "slug": "subarrays-vs-subsequences-vs-subsets",
-    "isPremium": false,
-    "isPosted": true,
-    "mdFile": "subarrays-vs-subsequences-vs-subsets.md",
-    "codeExamples": [
+  "title": "Subarrays vs Subsequences vs Subsets",
+  "slug": "subarrays-vs-subsequences-vs-subsets",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "subarrays-vs-subsequences-vs-subsets.md",
+  "codeExamples": [
+    {
+      "title": "Subarrays vs Subsequences vs Subsets",
+      "languages": [
         {
-            "title": "Subarrays vs Subsequences vs Subsets",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "code/java/SubarraysVsSubsequencesVsSubsets.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "code/cpp/subarrays_vs_subsequences_vs_subsets.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "code/python/subarrays-vs-subsequences-vs-subsets.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/introduction/subarrays-vs-subsequences-vs-subsets/code/java/SubarraysVsSubsequencesVsSubsets.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/introduction/subarrays-vs-subsequences-vs-subsets/code/cpp/subarrays_vs_subsequences_vs_subsets.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/introduction/subarrays-vs-subsequences-vs-subsets/code/python/subarrays-vs-subsequences-vs-subsets.py"
         }
-    ]
+      ]
+    }
+  ]
 }

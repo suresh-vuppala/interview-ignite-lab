@@ -53,7 +53,7 @@ Use array with front and rear pointers:
 
 **Issue:** Array space not reused after dequeue (front moves forward).
 
-```code```
+
 
 <br>
 
@@ -85,7 +85,7 @@ Use linked list with head (front) and tail (rear) pointers:
 
 **Advantage:** No wasted space, dynamic size.
 
-```code```
+
 
 <br>
 
@@ -119,3 +119,7 @@ Use linked list with head (front) and tail (rear) pointers:
 <br>
 
 ---
+
+---
+
+```code```

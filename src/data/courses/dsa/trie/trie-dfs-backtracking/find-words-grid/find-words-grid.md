@@ -52,7 +52,7 @@ Combine trie with DFS:
 
 **Key insight:** Same as Word Search II.
 
-```code```
+
 
 <br>
 
@@ -79,3 +79,7 @@ Combine trie with DFS:
 <br>
 
 ---
+
+---
+
+```code```

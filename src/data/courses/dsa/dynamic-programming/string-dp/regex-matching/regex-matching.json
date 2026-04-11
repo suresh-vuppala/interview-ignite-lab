@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/regex_matching.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/regex-matching/code/cpp/regex_matching.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/RegexMatching.java"
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/regex-matching/code/java/RegexMatching.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/regex_matching.py"
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/regex-matching/code/python/regex_matching.py"
         }
       ]
     }

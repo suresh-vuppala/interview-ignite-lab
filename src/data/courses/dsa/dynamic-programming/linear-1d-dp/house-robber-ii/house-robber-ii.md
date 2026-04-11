@@ -50,7 +50,7 @@ rob(nums) = max(robLinear(0, n-2), robLinear(1, n-1))
 robLinear(i) = max(nums[i] + rob(i-2), rob(i-1))
 ```
 
-```code```
+
 
 ### Time: O(n) | Space: O(n)
 
@@ -66,8 +66,12 @@ Run House Robber I twice:
 Return max of both
 ```
 
-```code```
+
 
 ### Time: O(n) | Space: O(1) optimized
 
 ---
+
+---
+
+```code```

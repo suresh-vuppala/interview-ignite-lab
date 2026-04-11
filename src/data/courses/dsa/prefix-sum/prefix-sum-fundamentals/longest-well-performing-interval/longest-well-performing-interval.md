@@ -113,7 +113,7 @@ Below are the complete implementations of the longestWPI function in different p
 
 Select a language above to view the implementation.
 
-```code```
+
 
 ## Key Insights
 
@@ -122,3 +122,7 @@ Select a language above to view the implementation.
 - **HashMap Trick**: Instead of checking all previous positions, use map to instantly find relevant positions
 - **Target Difference**: Look for prefix differences of exactly 1 (to ensure sum > 0)
 - **Early Occurrence**: Store first occurrence to maximize the interval length
+
+---
+
+```code```

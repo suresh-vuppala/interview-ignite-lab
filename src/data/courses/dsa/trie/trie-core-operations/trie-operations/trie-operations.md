@@ -62,7 +62,7 @@ Implement a Trie (prefix tree) data structure with the following operations:
 
 **Key insight:** Each path from root to node represents a prefix.
 
-```code```
+
 
 <br>
 
@@ -106,3 +106,7 @@ Implement a Trie (prefix tree) data structure with the following operations:
 <br>
 
 ---
+
+---
+
+```code```

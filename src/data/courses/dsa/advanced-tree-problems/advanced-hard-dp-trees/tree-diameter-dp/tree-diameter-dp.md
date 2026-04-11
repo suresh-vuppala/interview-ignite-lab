@@ -61,7 +61,7 @@ Check all nodes, track maximum.
    - Update diameter = max(diameter, left + right)
    - Return height = max(left, right) + 1
 
-```code```
+
 
 <br>
 
@@ -105,3 +105,7 @@ Check all nodes, track maximum.
 <br>
 
 ---
+
+---
+
+```code```

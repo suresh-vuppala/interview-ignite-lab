@@ -65,7 +65,7 @@ Use two stacks:
 
 **Key insight:** Track maximum at each stack level using auxiliary stack.
 
-```code```
+
 
 <br>
 
@@ -99,3 +99,7 @@ Use two stacks:
 <br>
 
 ---
+
+---
+
+```code```

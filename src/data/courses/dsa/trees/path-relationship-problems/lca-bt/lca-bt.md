@@ -76,7 +76,7 @@ Use post-order DFS to find LCA bottom-up:
 
 **Key insight:** First node where paths to p and q diverge is the LCA.
 
-```code```
+
 
 <br>
 
@@ -119,3 +119,7 @@ Use post-order DFS to find LCA bottom-up:
 <br>
 
 ---
+
+---
+
+```code```

@@ -55,7 +55,7 @@ Use trie with prefix counting:
 
 **Key insight:** prefixCount = 1 means only this word uses this prefix.
 
-```code```
+
 
 <br>
 
@@ -94,3 +94,7 @@ Use trie with prefix counting:
 <br>
 
 ---
+
+---
+
+```code```

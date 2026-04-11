@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/RemoveDuplicatesSortedArray.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-duplicates-sorted-array/code/java/RemoveDuplicatesSortedArray.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/remove_duplicates_sorted_array.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-duplicates-sorted-array/code/cpp/remove_duplicates_sorted_array.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/remove-duplicates-sorted-array.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/remove-duplicates-sorted-array/code/python/remove-duplicates-sorted-array.py"
         }
       ]
     }

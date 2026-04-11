@@ -72,7 +72,7 @@ Use stack to track opening brackets:
 
 **Key insight:** Last opened bracket must be first closed (LIFO - perfect for stack).
 
-```code```
+
 
 <br>
 
@@ -111,3 +111,7 @@ Use stack to track opening brackets:
 <br>
 
 ---
+
+---
+
+```code```

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/next-smaller-element/code/java/NextSmallerElement.java"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/next-smaller-element/code//src/data/courses/dsa/stacks/monotonic-stack/next-smaller-element/code/java/NextSmallerElement.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/next-smaller-element/code/cpp/NextSmallerElement.cpp"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/next-smaller-element/code//src/data/courses/dsa/stacks/monotonic-stack/next-smaller-element/code/cpp/NextSmallerElement.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/stacks/monotonic-stack/next-smaller-element/code/python/next_smaller_element.py"
+          "codeFile": "courses/dsa/stacks/monotonic-stack/next-smaller-element/code//src/data/courses/dsa/stacks/monotonic-stack/next-smaller-element/code/python/next_smaller_element.py"
         }
       ]
     }

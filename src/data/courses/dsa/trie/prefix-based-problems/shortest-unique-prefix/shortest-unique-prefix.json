@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-based-problems/shortest-unique-prefix/code/java/ShortestUniquePrefix.java"
+          "codeFile": "courses/dsa/trie/prefix-based-problems/shortest-unique-prefix/code//src/data/courses/dsa/trie/prefix-based-problems/shortest-unique-prefix/code/java/ShortestUniquePrefix.java"
         },
         {
           "language": "cpp",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-based-problems/shortest-unique-prefix/code/cpp/ShortestUniquePrefix.cpp"
+          "codeFile": "courses/dsa/trie/prefix-based-problems/shortest-unique-prefix/code//src/data/courses/dsa/trie/prefix-based-problems/shortest-unique-prefix/code/cpp/ShortestUniquePrefix.cpp"
         },
         {
           "language": "python",
-          "codeFile": "/src/data/courses/dsa/trie/prefix-based-problems/shortest-unique-prefix/code/python/shortest_unique_prefix.py"
+          "codeFile": "courses/dsa/trie/prefix-based-problems/shortest-unique-prefix/code//src/data/courses/dsa/trie/prefix-based-problems/shortest-unique-prefix/code/python/shortest_unique_prefix.py"
         }
       ]
     }

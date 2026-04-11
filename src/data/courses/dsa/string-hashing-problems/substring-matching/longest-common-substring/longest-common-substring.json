@@ -1,26 +1,26 @@
 {
-    "title": "Longest Common Substring",
-    "slug": "longest-common-substring",
-    "isPremium": false,
-    "isPosted": true,
-    "mdFile": "longest-common-substring.md",
-    "codeExamples": [
+  "title": "Longest Common Substring",
+  "slug": "longest-common-substring",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "longest-common-substring.md",
+  "codeExamples": [
+    {
+      "title": "Longest Common Substring",
+      "languages": [
         {
-            "title": "Longest Common Substring",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "code/java/LongestCommonSubstring.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "code/cpp/longest_common_substring.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "code/python/longest-common-substring.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/longest-common-substring/code/java/LongestCommonSubstring.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/longest-common-substring/code/cpp/longest_common_substring.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/longest-common-substring/code/python/longest-common-substring.py"
         }
-    ]
+      ]
+    }
+  ]
 }

@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/subset_sum_mitm.cpp"
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/subset-sum-mitm/code/cpp/subset_sum_mitm.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/SubsetSumMitm.java"
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/subset-sum-mitm/code/java/SubsetSumMitm.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/subset_sum_mitm.py"
+          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/subset-sum-mitm/code/python/subset_sum_mitm.py"
         }
       ]
     }

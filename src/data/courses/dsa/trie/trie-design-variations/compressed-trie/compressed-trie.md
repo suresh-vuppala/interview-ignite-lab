@@ -65,7 +65,7 @@ Implement a Compressed Trie (Radix Tree) where chains of single-child nodes are 
 
 **Key insight:** Trade insertion complexity for space efficiency.
 
-```code```
+
 
 <br>
 
@@ -113,3 +113,7 @@ Implement a Compressed Trie (Radix Tree) where chains of single-child nodes are 
 <br>
 
 ---
+
+---
+
+```code```

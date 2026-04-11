@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/subsets_with_duplicates.cpp"
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/subsets-with-duplicates/code/cpp/subsets_with_duplicates.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/SubsetsWithDuplicates.java"
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/subsets-with-duplicates/code/java/SubsetsWithDuplicates.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/subsets_with_duplicates.py"
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/backtracking/subsets-with-duplicates/code/python/subsets_with_duplicates.py"
         }
       ]
     }

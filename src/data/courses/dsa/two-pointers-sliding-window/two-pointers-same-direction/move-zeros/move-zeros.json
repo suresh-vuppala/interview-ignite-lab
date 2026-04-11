@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "java",
-          "codeFile": "code/java/MoveZeros.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/move-zeros/code/java/MoveZeros.java"
         },
         {
           "language": "cpp",
-          "codeFile": "code/cpp/move_zeros.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/move-zeros/code/cpp/move_zeros.cpp"
         },
         {
           "language": "python",
-          "codeFile": "code/python/move-zeros.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/move-zeros/code/python/move-zeros.py"
         }
       ]
     }

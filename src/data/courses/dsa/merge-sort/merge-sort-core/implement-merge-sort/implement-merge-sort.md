@@ -59,7 +59,7 @@ Merge sort is a divide-and-conquer algorithm:
 2. **Conquer**: Recursively sort both halves
 3. **Combine**: Merge the two sorted halves into one sorted array
 
-```code```
+
 
 <br>
 
@@ -97,3 +97,7 @@ Merge sort is a divide-and-conquer algorithm:
 <br>
 
 ---
+
+---
+
+```code```

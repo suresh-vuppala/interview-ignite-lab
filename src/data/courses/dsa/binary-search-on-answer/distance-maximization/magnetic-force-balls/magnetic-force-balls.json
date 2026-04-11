@@ -10,15 +10,15 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "code/cpp/magnetic_force_balls.cpp"
+          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/magnetic-force-balls/code/cpp/magnetic_force_balls.cpp"
         },
         {
           "language": "java",
-          "codeFile": "code/java/MagneticForceBalls.java"
+          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/magnetic-force-balls/code/java/MagneticForceBalls.java"
         },
         {
           "language": "python",
-          "codeFile": "code/python/magnetic_force_balls.py"
+          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/magnetic-force-balls/code/python/magnetic_force_balls.py"
         }
       ]
     }

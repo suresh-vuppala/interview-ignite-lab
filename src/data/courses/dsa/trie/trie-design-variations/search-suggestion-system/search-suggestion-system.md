@@ -63,7 +63,7 @@ Design a search suggestion system that returns top 3 lexicographically smallest 
 
 **Key insight:** Pre-compute and store results during build for O(1) query.
 
-```code```
+
 
 <br>
 
@@ -113,3 +113,7 @@ Design a search suggestion system that returns top 3 lexicographically smallest 
 <br>
 
 ---
+
+---
+
+```code```

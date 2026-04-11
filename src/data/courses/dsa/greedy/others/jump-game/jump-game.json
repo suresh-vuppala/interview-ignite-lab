@@ -1,26 +1,26 @@
 {
-    "title": "Jump Game",
-    "description": "Jump Game",
-    "difficulty": "medium",
-    "isPremium": false,
-    "isPosted": true,
-    "codeExamples": [
+  "title": "Jump Game",
+  "description": "Jump Game",
+  "difficulty": "medium",
+  "isPremium": false,
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Solution",
+      "languages": [
         {
-            "title": "Solution",
-            "languages": [
-                {
-                    "language": "java",
-                    "codeFile": "/src/data/courses/dsa/greedy/others/jump-game/code/java/JumpGame.java"
-                },
-                {
-                    "language": "cpp",
-                    "codeFile": "/src/data/courses/dsa/greedy/others/jump-game/code/cpp/JumpGame.cpp"
-                },
-                {
-                    "language": "python",
-                    "codeFile": "/src/data/courses/dsa/greedy/others/jump-game/code/python/jump-game.py"
-                }
-            ]
+          "language": "java",
+          "codeFile": "courses/dsa/greedy/others/jump-game/code//src/data/courses/dsa/greedy/others/jump-game/code/java/JumpGame.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/greedy/others/jump-game/code//src/data/courses/dsa/greedy/others/jump-game/code/cpp/JumpGame.cpp"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/greedy/others/jump-game/code//src/data/courses/dsa/greedy/others/jump-game/code/python/jump-game.py"
         }
-    ]
+      ]
+    }
+  ]
 }

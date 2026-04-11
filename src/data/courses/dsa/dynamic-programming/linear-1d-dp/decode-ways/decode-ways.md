@@ -51,7 +51,7 @@ A message containing letters A-Z is encoded as "1"=A, "2"=B, ..., "26"=Z. Count 
 ways(i) = ways(i-1) [if s[i] valid] + ways(i-2) [if s[i-1:i+1] valid]
 ```
 
-```code```
+
 
 ### Time: O(n) | Space: O(n)
 
@@ -65,8 +65,12 @@ dp[i] = ways to decode s[0..i-1]
 dp[i] = dp[i-1] [1 digit] + dp[i-2] [2 digits]
 ```
 
-```code```
+
 
 ### Time: O(n) | Space: O(1) optimized
 
 ---
+
+---
+
+```code```

@@ -76,7 +76,7 @@ Use two pointers starting from both ends:
 
 **Key insight:** Sorted array allows greedy pointer movement based on sum comparison.
 
-```code```
+
 
 <br>
 
@@ -123,3 +123,7 @@ Use two pointers starting from both ends:
 <br>
 
 ---
+
+---
+
+```code```
