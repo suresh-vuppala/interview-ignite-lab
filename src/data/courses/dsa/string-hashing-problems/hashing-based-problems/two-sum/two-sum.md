@@ -46,7 +46,10 @@ Check every pair of elements. For each element, scan all elements after it to fi
 ```code```
 
 > **Key Insight for Improvement:**
-> For each number, we're scanning the entire array to find its complement. Can we look up the complement in O(1)? Yes — use a hash map!
+> 
+> **Drawback of current approach:** For every element, we scan the remaining array to find its complement — this nested scan creates O(n²) redundant comparisons. Most of these comparisons are wasted since we're looking for one specific value.
+> 
+> **Insight:** Instead of scanning, we can look up the complement in O(1) using a hash map. Store each number's index as we iterate — when we encounter a new number, check if `target - num` already exists in the map. This eliminates the inner loop entirely.
 
 <br>
 
@@ -78,11 +81,11 @@ As we iterate, store each number and its index in a hash map. For each new numbe
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
 | Brute Force | O(n²) | O(1) | Check all pairs |
-| Hash Map | O(n) | O(n) | O(1) complement lookup |
+| Hash Map | O(n) | O(n) | O(1) complement lookup via hash map |
 
 **Key Insights:**
-1. **Brute → Hash Map:** Trade O(n) space for O(n²) → O(n) time
-2. **One-pass trick:** Check complement BEFORE inserting — avoids using same element twice
+1. **Brute → Hash Map:** Trade O(n) space for O(n²) → O(n) time improvement
+2. **One-pass trick:** Check complement BEFORE inserting current element — avoids using same element twice
 
 <br>
 <br>
