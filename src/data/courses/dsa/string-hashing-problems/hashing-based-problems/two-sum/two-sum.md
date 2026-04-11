@@ -72,8 +72,11 @@ The most straightforward approach — check every pair of elements. For each ele
 - Only loop variables i, j
 - No extra data structures
 
+> **Drawback:**
+> For each number, we're scanning the rest of the array to find its complement — this linear scan inside a loop creates O(N²) redundant work. Most of these comparisons are wasted since we're looking for one specific value each time.
+
 > **Key Insight for Improvement:**
-> For each number, we're scanning the rest of the array to find its complement — this linear scan inside a loop creates O(N²) redundant work. The key observation: we're looking for one specific value (target - nums[i]). Can we look it up in O(1) instead of O(N)? Yes — use a hash map to store numbers we've already seen.
+> Instead of scanning O(N) elements to find the complement, we can look it up in O(1) using a hash map. Store each number's index as we iterate — when we encounter a new number, check if `target - num` already exists in the map. This eliminates the inner loop entirely, reducing O(N²) → O(N).
 
 <br>
 
