@@ -1,158 +1,55 @@
-Given a string s and a pattern p, find all starting indices of p's anagrams in s. An anagram is a rearrangement of letters.
+Find all start indices where an anagram of p occurs in s.
 
 <br>
 
-> Input:
-> s = "cbaebabacd", p = "abc"
-
-> Output:
-> [0, 6]
-
-> Explanation:
-> Anagrams of "abc" are "abc", "acb", "bac", "bca", "cab", "cba"
-> - Index 0: "cba" is an anagram of "abc"
-> - Index 6: "bac" is an anagram of "abc"
-> 
-> **Key insight:** Use frequency map and sliding window to match character counts.
+> Input: s="cbaebabacd", p="abc" → Output: [0,6]
 
 <br>
-
-
 
 ---
 
 ## Constraints
 
 - `1 ≤ s.length, p.length ≤ 3 × 10⁴`
-- `s and p consist of lowercase English letters`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force — Check every substring of length |p|
 
-1. **p longer than s:** No anagrams possible — return []
-2. **s equals p:** Return [0]
-3. **No anagrams exist:** Return []
-4. **Entire string is one big anagram:** s is a permutation of p repeated
-5. **Single character pattern:** Find all occurrences of that character
-6. **All same characters:** 'aaaa' pattern 'aa' → [0, 1, 2]
-7. **Overlapping anagrams:** Anagram windows can overlap
-
-<br>
-
----
-
-## Solution 1: Brute Force with Sorting
-
-**Intuition:**
-For each window of size len(p), sort it and compare with sorted p.
-
-**Algorithm:**
-1. Sort pattern p
-2. For each window of size len(p) in s:
-   - Sort window
-   - If sorted window == sorted p, add index
-
-### Time Complexity: O(n×k log k)
-**Why?**
-- n-k+1 windows (n = len(s), k = len(p))
-- Each window: sort k characters → O(k log k)
-- Total: O((n-k)×k log k) ≈ O(n×k log k)
-
-### Space Complexity: O(k)
-**Why?**
-- Sorting requires O(k) space
-- Storing sorted pattern: O(k)
-
-**Problem:** Sorting each window is expensive.
-
-> **Key Insight for Improvement:**
-> Instead of sorting, use frequency maps. Two strings are anagrams if they have same character frequencies.
-
-<br>
-
----
-
-## Solution 2: Sliding Window with Frequency Map
-
-**Intuition:**
-Maintain frequency map of current window. Compare with pattern's frequency map.
-
-**Algorithm:**
-1. Create frequency map for pattern
-2. Create frequency map for first window
-3. Compare maps, add index if match
-4. Slide window: decrement left char, increment right char
-5. Compare and add if match
-
-### Time Complexity: O(n×26) = O(n)
-**Why?**
-- Build pattern map: O(k)
-- Process each character once: O(n)
-- Map comparison: O(26) for lowercase letters
-- Total: O(n) since 26 is constant
-
-**Improvement:**
-- Before: O(n×k log k)
-- After: O(n)
-- Example: n=10000, k=100
-  - Brute: ~6,000,000 operations
-  - Optimized: ~10,000 operations (600× faster!)
-
-### Space Complexity: O(1)
-**Why?**
-- Two frequency maps of size 26 (constant)
-- Total: O(26) = O(1)
-
-> **Key Insight for Improvement:**
-> Instead of comparing entire maps, track count of matching characters. Only update when frequencies change.
-
-<br>
-
----
-
-## Solution 3: Optimized Sliding Window with Match Count
-
-**Intuition:**
-Track how many characters have matching frequencies. When match count equals 26, we have an anagram.
-
-**Algorithm:**
-1. Build frequency maps for pattern and first window
-2. Count initial matches
-3. Slide window:
-   - Update match count when adding/removing characters
-   - If matches == 26, add index
-
-### Time Complexity: O(n)
-**Why?**
-- Single pass through string
-- Constant time per character
-- No map comparisons needed
-
-### Space Complexity: O(1)
-**Why?**
-- Two arrays of size 26
-- Constant space
-
-<br>
-
----
-
-## Complexity Summary
-
-| Solution | Time | Space | Notes |
-|----------|------|-------|-------|
-| Brute Force | O(n×k log k) | O(k) | Sorts each window |
-| Frequency Map | O(n) | O(1) | Compares maps each slide |
-| Match Count | O(n) | O(1) | Optimal - tracks matches |
-
-> **Recommended Solution:** Match Count - O(n) time, O(1) space
-
-<br>
-<br>
-
----
+### Time: O(n × m)  |  Space: O(m)
 
 ```code```
+
+> **Key Insight for Improvement:**
+>
+> **Drawback of current approach:** For each starting position, we rebuild the frequency count from scratch — O(m) per window.
+>
+> **Insight:** Maintain a frequency count of the current window. As we slide, decrement the leaving char and increment the entering char. Compare with p's frequency — O(1) per slide if we track matches.
+
+<br>
+
+---
+
+## Solution 2: Sliding Window + Frequency Match (Optimal)
+
+**Intuition:** Fixed-size window of |p|. Track how many character frequencies match p's.
+
+### Time: O(n)  |  Space: O(1) — fixed 26-char arrays
+
+```code```
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute Force | O(n×m) | O(m) | Rebuild freq per window |
+| Sliding Freq | O(n) | O(1) | Slide freq counts, track matches |
+
+<br>
+<br>

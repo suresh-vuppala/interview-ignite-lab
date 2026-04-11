@@ -6,19 +6,36 @@
   "mdFile": "subarray-sum-fixed-size-k.md",
   "codeExamples": [
     {
-      "title": "Subarray Sum Solution",
+      "title": "Solution 1: Brute Force",
       "languages": [
         {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/python/subarray-sum-fixed-size-k.py"
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/cpp/subarray_sum_fixed_size_k_sol1.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/java/SubarraySumFixedSizeK.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/java/SubarraySumFixedSizeKSol1.java"
         },
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/python/subarray_sum_fixed_size_k_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Sliding Window (Optimal)",
+      "languages": [
+        {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/cpp/SubarraySumFixedSizeK.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/cpp/subarray_sum_fixed_size_k_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/java/SubarraySumFixedSizeKSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/python/subarray_sum_fixed_size_k_sol2.py"
         }
       ]
     }

@@ -6,19 +6,36 @@
   "mdFile": "find-all-anagrams.md",
   "codeExamples": [
     {
-      "title": "Find All Anagrams Solution",
+      "title": "Solution 1: Brute Force",
       "languages": [
         {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/python/find-all-anagrams.py"
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/cpp/find_all_anagrams_sol1.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/java/FindAllAnagrams.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/java/FindAllAnagramsSol1.java"
         },
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/python/find_all_anagrams_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Sliding Window (Optimal)",
+      "languages": [
+        {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/cpp/FindAllAnagrams.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/cpp/find_all_anagrams_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/java/FindAllAnagramsSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/python/find_all_anagrams_sol2.py"
         }
       ]
     }

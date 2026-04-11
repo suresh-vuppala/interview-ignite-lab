@@ -6,19 +6,36 @@
   "mdFile": "first-negative-window-k.md",
   "codeExamples": [
     {
-      "title": "First Negative Window Solution",
+      "title": "Solution 1: Brute Force",
       "languages": [
         {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/python/first-negative-window-k.py"
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/cpp/first_negative_window_k_sol1.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/java/FirstNegativeWindowK.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/java/FirstNegativeWindowKSol1.java"
         },
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/python/first_negative_window_k_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Deque Tracking (Optimal)",
+      "languages": [
+        {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/cpp/FirstNegativeWindowK.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/cpp/first_negative_window_k_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/java/FirstNegativeWindowKSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/python/first_negative_window_k_sol2.py"
         }
       ]
     }

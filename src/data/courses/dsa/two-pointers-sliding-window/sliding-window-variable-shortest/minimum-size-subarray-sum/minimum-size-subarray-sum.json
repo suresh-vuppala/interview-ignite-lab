@@ -6,19 +6,36 @@
   "mdFile": "minimum-size-subarray-sum.md",
   "codeExamples": [
     {
-      "title": "Minimum Size Subarray Sum Solution",
+      "title": "Solution 1: Brute Force",
       "languages": [
         {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/python/minimum-size-subarray-sum.py"
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/cpp/minimum_size_subarray_sum_sol1.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/java/MinimumSizeSubarraySum.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/java/MinimumSizeSubarraySumSol1.java"
         },
         {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/python/minimum_size_subarray_sum_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Sliding Window (Optimal)",
+      "languages": [
+        {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/cpp/MinimumSizeSubarraySum.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/cpp/minimum_size_subarray_sum_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/java/MinimumSizeSubarraySumSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/python/minimum_size_subarray_sum_sol2.py"
         }
       ]
     }
