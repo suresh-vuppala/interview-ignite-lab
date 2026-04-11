@@ -9,16 +9,16 @@
       "title": "Solution",
       "languages": [
         {
-          "language": "python",
-          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/subset-sum-mitm/subset_sum_mitm.py"
+          "language": "cpp",
+          "codeFile": "code/cpp/subset_sum_mitm.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/subset-sum-mitm/SubsetSumMITM.java"
+          "codeFile": "code/java/SubsetSumMitm.java"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/subset-sum-mitm/SubsetSumMITM.cpp"
+          "language": "python",
+          "codeFile": "code/python/subset_sum_mitm.py"
         }
       ]
     }

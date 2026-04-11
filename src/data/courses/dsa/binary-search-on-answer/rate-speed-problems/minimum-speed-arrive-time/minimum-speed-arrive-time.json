@@ -9,16 +9,16 @@
       "title": "Solution",
       "languages": [
         {
-          "language": "python",
-          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-speed-arrive-time/minimum_speed_arrive_time.py"
+          "language": "cpp",
+          "codeFile": "code/cpp/minimum_speed_arrive_time.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-speed-arrive-time/MinimumSpeedArriveTime.java"
+          "codeFile": "code/java/MinimumSpeedArriveTime.java"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-speed-arrive-time/MinimumSpeedArriveTime.cpp"
+          "language": "python",
+          "codeFile": "code/python/minimum_speed_arrive_time.py"
         }
       ]
     }

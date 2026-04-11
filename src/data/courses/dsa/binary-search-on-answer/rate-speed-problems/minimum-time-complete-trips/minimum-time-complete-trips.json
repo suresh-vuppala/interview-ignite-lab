@@ -9,16 +9,16 @@
       "title": "Solution",
       "languages": [
         {
-          "language": "python",
-          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-time-complete-trips/minimum_time_complete_trips.py"
+          "language": "cpp",
+          "codeFile": "code/cpp/minimum_time_complete_trips.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-time-complete-trips/MinimumTimeCompleteTrips.java"
+          "codeFile": "code/java/MinimumTimeCompleteTrips.java"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-time-complete-trips/MinimumTimeCompleteTrips.cpp"
+          "language": "python",
+          "codeFile": "code/python/minimum_time_complete_trips.py"
         }
       ]
     }

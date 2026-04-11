@@ -6,7 +6,7 @@
   "mdFile": "prims-mst.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Solution",
       "languages": [
         {
           "language": "cpp",

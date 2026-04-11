@@ -9,8 +9,16 @@
       "title": "Solution",
       "languages": [
         {
+          "language": "cpp",
+          "codeFile": "code/cpp/aggressive_cows.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/AggressiveCows.java"
+        },
+        {
           "language": "python",
-          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/aggressive-cows/code/python/aggressive-cows.py"
+          "codeFile": "code/python/aggressive_cows.py"
         }
       ]
     }

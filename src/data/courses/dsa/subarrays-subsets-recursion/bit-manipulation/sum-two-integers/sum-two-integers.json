@@ -6,7 +6,7 @@
   "mdFile": "sum-two-integers.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Solution",
       "languages": [
         {
           "language": "cpp",

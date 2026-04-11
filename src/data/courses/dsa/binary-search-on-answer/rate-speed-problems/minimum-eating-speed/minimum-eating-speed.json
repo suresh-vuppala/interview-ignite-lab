@@ -9,16 +9,16 @@
       "title": "Solution",
       "languages": [
         {
-          "language": "python",
-          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-eating-speed/minimum_eating_speed.py"
+          "language": "cpp",
+          "codeFile": "code/cpp/minimum_eating_speed.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-eating-speed/MinimumEatingSpeed.java"
+          "codeFile": "code/java/MinimumEatingSpeed.java"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/binary-search-on-answer/rate-speed-problems/minimum-eating-speed/MinimumEatingSpeed.cpp"
+          "language": "python",
+          "codeFile": "code/python/minimum_eating_speed.py"
         }
       ]
     }

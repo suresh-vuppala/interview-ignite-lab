@@ -9,8 +9,16 @@
       "title": "Solution",
       "languages": [
         {
+          "language": "cpp",
+          "codeFile": "code/cpp/capacity_ship_packages.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/CapacityShipPackages.java"
+        },
+        {
           "language": "python",
-          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/capacity-ship-packages/code/python/capacity-ship-packages.py"
+          "codeFile": "code/python/capacity_ship_packages.py"
         }
       ]
     }

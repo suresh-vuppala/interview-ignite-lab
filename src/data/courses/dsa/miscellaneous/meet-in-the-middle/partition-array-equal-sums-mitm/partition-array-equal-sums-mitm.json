@@ -9,16 +9,16 @@
       "title": "Solution",
       "languages": [
         {
-          "language": "python",
-          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/partition-array-equal-sums-mitm/partition_array_equal_sums_mitm.py"
+          "language": "cpp",
+          "codeFile": "code/cpp/partition_array_equal_sums_mitm.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/partition-array-equal-sums-mitm/PartitionArrayEqualSumsMITM.java"
+          "codeFile": "code/java/PartitionArrayEqualSumsMitm.java"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/partition-array-equal-sums-mitm/PartitionArrayEqualSumsMITM.cpp"
+          "language": "python",
+          "codeFile": "code/python/partition_array_equal_sums_mitm.py"
         }
       ]
     }

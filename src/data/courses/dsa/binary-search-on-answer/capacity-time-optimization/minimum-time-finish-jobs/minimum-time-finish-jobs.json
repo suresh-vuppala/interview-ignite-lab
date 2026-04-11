@@ -9,8 +9,16 @@
       "title": "Solution",
       "languages": [
         {
+          "language": "cpp",
+          "codeFile": "code/cpp/minimum_time_finish_jobs.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/MinimumTimeFinishJobs.java"
+        },
+        {
           "language": "python",
-          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/minimum-time-finish-jobs/code/python/minimum-time-finish-jobs.py"
+          "codeFile": "code/python/minimum_time_finish_jobs.py"
         }
       ]
     }

@@ -6,7 +6,7 @@
   "mdFile": "maximal-rectangle.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Solution",
       "languages": [
         {
           "language": "cpp",

@@ -6,7 +6,7 @@
   "mdFile": "reorganize-string.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Solution",
       "languages": [
         {
           "language": "cpp",

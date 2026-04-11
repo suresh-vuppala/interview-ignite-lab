@@ -9,8 +9,16 @@
       "title": "Solution",
       "languages": [
         {
+          "language": "cpp",
+          "codeFile": "code/cpp/place_k_elements_max_distance.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/PlaceKElementsMaxDistance.java"
+        },
+        {
           "language": "python",
-          "codeFile": "courses/dsa/binary-search-on-answer/distance-maximization/place-k-elements-max-distance/code/python/place-k-elements-max-distance.py"
+          "codeFile": "code/python/place_k_elements_max_distance.py"
         }
       ]
     }

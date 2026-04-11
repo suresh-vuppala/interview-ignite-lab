@@ -9,8 +9,16 @@
       "title": "Solution",
       "languages": [
         {
+          "language": "cpp",
+          "codeFile": "code/cpp/koko_eating_bananas.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/KokoEatingBananas.java"
+        },
+        {
           "language": "python",
-          "codeFile": "courses/dsa/binary-search-on-answer/capacity-time-optimization/koko-eating-bananas/code/python/koko-eating-bananas.py"
+          "codeFile": "code/python/koko_eating_bananas.py"
         }
       ]
     }

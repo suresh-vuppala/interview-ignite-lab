@@ -6,7 +6,7 @@
   "mdFile": "insert-interval.md",
   "codeExamples": [
     {
-      "title": "Implementation",
+      "title": "Solution",
       "languages": [
         {
           "language": "cpp",

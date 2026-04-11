@@ -7,11 +7,19 @@
   "mdFile": "minimum-in-rotated-sorted-array.md",
   "codeExamples": [
     {
-      "title": "Find Minimum",
+      "title": "Solution",
       "languages": [
         {
-          "codeFile": "courses/dsa/searching-algorithms/implicitly-sorted-array/minimum-in-rotated-sorted-array/code/java/MinimumRotated.java",
-          "language": "java"
+          "language": "cpp",
+          "codeFile": "code/cpp/minimum_in_rotated_sorted_array.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/MinimumInRotatedSortedArray.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/minimum_in_rotated_sorted_array.py"
         }
       ]
     }

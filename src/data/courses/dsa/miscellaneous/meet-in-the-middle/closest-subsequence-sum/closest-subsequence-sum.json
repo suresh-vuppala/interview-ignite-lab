@@ -9,16 +9,16 @@
       "title": "Solution",
       "languages": [
         {
-          "language": "python",
-          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/closest-subsequence-sum/closest_subsequence_sum.py"
+          "language": "cpp",
+          "codeFile": "code/cpp/closest_subsequence_sum.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/closest-subsequence-sum/ClosestSubsequenceSum.java"
+          "codeFile": "code/java/ClosestSubsequenceSum.java"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/miscellaneous/meet-in-the-middle/closest-subsequence-sum/ClosestSubsequenceSum.cpp"
+          "language": "python",
+          "codeFile": "code/python/closest_subsequence_sum.py"
         }
       ]
     }
