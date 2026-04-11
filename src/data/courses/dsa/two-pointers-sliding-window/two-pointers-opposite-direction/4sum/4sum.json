@@ -6,36 +6,19 @@
   "mdFile": "4sum.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Brute Force",
+      "title": "4Sum",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/4sum/code/cpp/4sum_sol1.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/4sum/code/cpp/4sum.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/4sum/code/java/4sumSol1.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/4sum/code/java/4sum.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/4sum/code/python/4sum_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Sort + Two Pointers (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/4sum/code/cpp/4sum_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/4sum/code/java/4sumSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/4sum/code/python/4sum_sol2.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/4sum/code/python/4sum.py"
         }
       ]
     }

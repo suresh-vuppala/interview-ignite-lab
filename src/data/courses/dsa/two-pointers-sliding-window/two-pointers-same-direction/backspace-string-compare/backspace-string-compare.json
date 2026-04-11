@@ -6,36 +6,19 @@
   "mdFile": "backspace-string-compare.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Stack",
+      "title": "Backspace String Compare",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/backspace-string-compare/code/cpp/backspace_string_compare_sol1.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/backspace-string-compare/code/cpp/backspace_string_compare.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/backspace-string-compare/code/java/BackspaceStringCompareSol1.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/backspace-string-compare/code/java/BackspaceStringCompare.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/backspace-string-compare/code/python/backspace_string_compare_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Two Pointers from End (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/backspace-string-compare/code/cpp/backspace_string_compare_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/backspace-string-compare/code/java/BackspaceStringCompareSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/backspace-string-compare/code/python/backspace_string_compare_sol2.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/backspace-string-compare/code/python/backspace_string_compare.py"
         }
       ]
     }

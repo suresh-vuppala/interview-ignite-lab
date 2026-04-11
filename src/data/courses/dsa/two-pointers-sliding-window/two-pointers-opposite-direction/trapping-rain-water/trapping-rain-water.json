@@ -6,53 +6,19 @@
   "mdFile": "trapping-rain-water.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Brute Force",
+      "title": "Trapping Rain Water",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/cpp/trapping_rain_water_sol1.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/cpp/trapping_rain_water.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/java/TrappingRainWaterSol1.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/java/TrappingRainWater.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/python/trapping_rain_water_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Prefix Max Arrays",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/cpp/trapping_rain_water_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/java/TrappingRainWaterSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/python/trapping_rain_water_sol2.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 3: Two Pointers (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/cpp/trapping_rain_water_sol3.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/java/TrappingRainWaterSol3.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/python/trapping_rain_water_sol3.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/trapping-rain-water/code/python/trapping_rain_water.py"
         }
       ]
     }

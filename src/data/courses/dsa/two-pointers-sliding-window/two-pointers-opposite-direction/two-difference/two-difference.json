@@ -6,36 +6,19 @@
   "mdFile": "two-difference.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Brute Force",
+      "title": "Two Difference",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-difference/code/cpp/two_difference_sol1.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-difference/code/cpp/two_difference.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-difference/code/java/TwoDifferenceSol1.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-difference/code/java/TwoDifference.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-difference/code/python/two_difference_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Sort + Two Pointers",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-difference/code/cpp/two_difference_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-difference/code/java/TwoDifferenceSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-difference/code/python/two_difference_sol2.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-difference/code/python/two_difference.py"
         }
       ]
     }

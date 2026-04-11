@@ -6,19 +6,19 @@
   "mdFile": "merge-two-sorted-arrays.md",
   "codeExamples": [
     {
-      "title": "Solution: Three Pointers from End",
+      "title": "Merge Two Sorted Arrays (in-place)",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/merge-two-sorted-arrays/code/cpp/merge_two_sorted_arrays_sol1.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/merge-two-sorted-arrays/code/cpp/merge_two_sorted_arrays.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/merge-two-sorted-arrays/code/java/MergeTwoSortedArraysSol1.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/merge-two-sorted-arrays/code/java/MergeTwoSortedArrays.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/merge-two-sorted-arrays/code/python/merge_two_sorted_arrays_sol1.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/merge-two-sorted-arrays/code/python/merge_two_sorted_arrays.py"
         }
       ]
     }
