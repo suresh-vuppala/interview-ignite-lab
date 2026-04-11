@@ -6,15 +6,15 @@
   "mdFile": "max-stack.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Max Stack",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-advanced/max-stack/code/cpp/max_stack.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/stack-advanced/max-stack/code/java/MaxStack.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-advanced/max-stack/code/cpp/MaxStack.cpp"
         },
         {
           "language": "python",

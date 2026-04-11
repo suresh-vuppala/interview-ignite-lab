@@ -6,15 +6,15 @@
   "mdFile": "remove-k-digits.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Remove K Digits",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-advanced/remove-k-digits/code/cpp/remove_k_digits.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/stack-advanced/remove-k-digits/code/java/RemoveKDigits.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-advanced/remove-k-digits/code/cpp/RemoveKDigits.cpp"
         },
         {
           "language": "python",

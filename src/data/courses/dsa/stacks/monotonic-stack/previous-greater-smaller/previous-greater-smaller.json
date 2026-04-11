@@ -6,15 +6,15 @@
   "mdFile": "previous-greater-smaller.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Previous Greater/Smaller",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/previous-greater-smaller/code/cpp/previous_greater_smaller.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/monotonic-stack/previous-greater-smaller/code/java/PreviousGreaterSmaller.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/monotonic-stack/previous-greater-smaller/code/cpp/PreviousGreaterSmaller.cpp"
         },
         {
           "language": "python",

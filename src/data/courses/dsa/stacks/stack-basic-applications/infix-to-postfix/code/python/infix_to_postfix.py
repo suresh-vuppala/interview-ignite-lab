@@ -1,30 +1,29 @@
-class InfixToPostfix:
-    def infixToPostfix(self, infix: str) -> str:
+# ============================================================
+# Infix to Postfix (Shunting-Yard)
+# ============================================================
+
+class Solution:
+    def infixToPostfix(self, s: str) -> str:
+        prec = {'+': 1, '-': 1, '*': 2, '/': 2}
+        ops = []
         result = []
-        stack = []
-        
-        for c in infix:
+
+        for c in s:
             if c.isalnum():
-                result.append(c)  # Operand
+                result.append(c)  # Operand → output
             elif c == '(':
-                stack.append(c)
+                ops.append(c)
             elif c == ')':
-                while stack and stack[-1] != '(':
-                    result.append(stack.pop())
-                stack.pop()  # Remove '('
-            else:  # Operator
-                while stack and self.precedence(stack[-1]) >= self.precedence(c):
-                    result.append(stack.pop())
-                stack.append(c)
-        
-        while stack:
-            result.append(stack.pop())
-        
+                while ops[-1] != '(':
+                    result.append(ops.pop())
+                ops.pop()  # Discard '('
+            else:
+                # Pop higher/equal precedence operators
+                while ops and ops[-1] != '(' and prec.get(ops[-1], 0) >= prec.get(c, 0):
+                    result.append(ops.pop())
+                ops.append(c)
+
+        while ops:
+            result.append(ops.pop())
+
         return ''.join(result)
-    
-    def precedence(self, op: str) -> int:
-        if op in ['+', '-']:
-            return 1
-        if op in ['*', '/']:
-            return 2
-        return 0

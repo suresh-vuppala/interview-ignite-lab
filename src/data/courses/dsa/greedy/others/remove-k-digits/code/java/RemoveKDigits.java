@@ -1,20 +1,21 @@
-class RemoveKDigits {
+// ============================================================
+// Remove K Digits
+// ============================================================
+
+class Solution {
     public String removeKdigits(String num, int k) {
-        Stack<Character> stack = new Stack<>();
-        for (char c : num.toCharArray()) {
-            while (!stack.isEmpty() && k > 0 && stack.peek() > c) {
-                stack.pop(); // Remove larger digit
-                k--;
+        StringBuilder stack = new StringBuilder();
+        for (char d : num.toCharArray()) {
+            while (k > 0 && stack.length() > 0 && stack.charAt(stack.length()-1) > d) {
+                stack.deleteCharAt(stack.length()-1); k--;
             }
-            stack.push(c);
+            stack.append(d);
         }
-        while (k-- > 0) stack.pop(); // Remove remaining k digits
-        
-        StringBuilder sb = new StringBuilder();
-        while (!stack.isEmpty()) sb.append(stack.pop());
-        sb.reverse();
-        
-        while (sb.length() > 1 && sb.charAt(0) == '0') sb.deleteCharAt(0); // Remove leading zeros
-        return sb.length() == 0 ? "0" : sb.toString();
+        while (k > 0) { stack.deleteCharAt(stack.length()-1); k--; }
+        // Strip leading zeros
+        int start = 0;
+        while (start < stack.length() && stack.charAt(start) == '0') start++;
+        String result = stack.substring(start);
+        return result.isEmpty() ? "0" : result;
     }
 }

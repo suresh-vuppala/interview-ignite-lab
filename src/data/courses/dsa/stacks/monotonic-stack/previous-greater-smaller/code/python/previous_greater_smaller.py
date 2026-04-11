@@ -1,26 +1,24 @@
-class PreviousGreaterSmaller:
-    def previousGreater(self, nums: list[int]) -> list[int]:
-        n = len(nums)
-        result = [0] * n
-        stack = []
-        
-        for i in range(n):
-            while stack and stack[-1] <= nums[i]:
-                stack.pop()
-            result[i] = -1 if not stack else stack[-1]
-            stack.append(nums[i])
-        
+# ============================================================
+# Previous Greater and Previous Smaller
+# ============================================================
+
+from typing import List
+
+class Solution:
+    def previousGreater(self, nums: List[int]) -> List[int]:
+        result = [-1] * len(nums)
+        stack = []  # Decreasing
+        for i in range(len(nums)):
+            while stack and nums[stack[-1]] <= nums[i]: stack.pop()
+            if stack: result[i] = nums[stack[-1]]
+            stack.append(i)
         return result
-    
-    def previousSmaller(self, nums: list[int]) -> list[int]:
-        n = len(nums)
-        result = [0] * n
-        stack = []
-        
-        for i in range(n):
-            while stack and stack[-1] >= nums[i]:
-                stack.pop()
-            result[i] = -1 if not stack else stack[-1]
-            stack.append(nums[i])
-        
+
+    def previousSmaller(self, nums: List[int]) -> List[int]:
+        result = [-1] * len(nums)
+        stack = []  # Increasing
+        for i in range(len(nums)):
+            while stack and nums[stack[-1]] >= nums[i]: stack.pop()
+            if stack: result[i] = nums[stack[-1]]
+            stack.append(i)
         return result

@@ -1,21 +1,24 @@
+# ============================================================
+# Max Stack
+# ============================================================
+
 class MaxStack:
     def __init__(self):
-        self.stack = []
+        self.main = []
         self.max_stack = []
-    
-    def push(self, x: int) -> None:
-        self.stack.append(x)
-        if not self.max_stack:
-            self.max_stack.append(x)
-        else:
-            self.max_stack.append(max(x, self.max_stack[-1]))
-    
-    def pop(self) -> int:
+
+    def push(self, val: int) -> None:
+        self.main.append(val)
+        self.max_stack.append(
+            val if not self.max_stack else max(val, self.max_stack[-1])
+        )
+
+    def pop(self) -> None:
+        self.main.pop()
         self.max_stack.pop()
-        return self.stack.pop()
-    
+
     def top(self) -> int:
-        return self.stack[-1]
-    
-    def getMax(self) -> int:
+        return self.main[-1]
+
+    def get_max(self) -> int:
         return self.max_stack[-1]

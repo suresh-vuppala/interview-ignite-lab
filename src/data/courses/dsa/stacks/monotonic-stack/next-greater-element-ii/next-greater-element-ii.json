@@ -6,15 +6,15 @@
   "mdFile": "next-greater-element-ii.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Next Greater Element II",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/next-greater-element-ii/code/cpp/next_greater_element_ii.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/monotonic-stack/next-greater-element-ii/code/java/NextGreaterElementIi.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/monotonic-stack/next-greater-element-ii/code/cpp/NextGreaterElementIi.cpp"
         },
         {
           "language": "python",

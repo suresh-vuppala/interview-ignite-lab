@@ -1,23 +1,26 @@
-class DecodeString:
+# ============================================================
+# Decode String
+# ============================================================
+
+class Solution:
     def decodeString(self, s: str) -> str:
-        count_stack = []
-        string_stack = []
-        current = ""
-        k = 0
-        
+        stack = []  # (previous_string, repeat_count)
+        current_str = ""
+        current_num = 0
+
         for c in s:
             if c.isdigit():
-                k = k * 10 + int(c)  # Build multi-digit number
+                current_num = current_num * 10 + int(c)
             elif c == '[':
-                count_stack.append(k)
-                string_stack.append(current)
-                current = ""
-                k = 0
+                # Save state and reset
+                stack.append((current_str, current_num))
+                current_str = ""
+                current_num = 0
             elif c == ']':
-                count = count_stack.pop()
-                prev = string_stack.pop()
-                current = prev + current * count
+                # Pop and build
+                prev_str, count = stack.pop()
+                current_str = prev_str + current_str * count
             else:
-                current += c
-        
-        return current
+                current_str += c
+
+        return current_str

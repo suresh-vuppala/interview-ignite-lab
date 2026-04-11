@@ -6,19 +6,19 @@
   "mdFile": "sort-stack.md",
   "codeExamples": [
     {
-      "title": "Sort Stack Solution",
+      "title": "Sort Stack",
       "languages": [
         {
-          "language": "python",
-          "codeFile": "courses/dsa/stacks/stack-advanced/sort-stack/code/python/sort_stack.py"
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-advanced/sort-stack/code/cpp/sort_stack.cpp"
         },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/stack-advanced/sort-stack/code/java/SortStack.java"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-advanced/sort-stack/code/cpp/SortStack.cpp"
+          "language": "python",
+          "codeFile": "courses/dsa/stacks/stack-advanced/sort-stack/code/python/sort_stack.py"
         }
       ]
     }

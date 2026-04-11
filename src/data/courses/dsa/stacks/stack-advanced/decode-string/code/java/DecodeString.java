@@ -1,29 +1,35 @@
+// ============================================================
+// Decode String
+// ============================================================
+
 import java.util.*;
 
-class DecodeString {
+class Solution {
     public String decodeString(String s) {
-        Stack<Integer> countStack = new Stack<>();
-        Stack<String> stringStack = new Stack<>();
-        String current = "";
-        int k = 0;
-        
+        Deque<String> strStack = new ArrayDeque<>();
+        Deque<Integer> numStack = new ArrayDeque<>();
+        StringBuilder cur = new StringBuilder();
+        int num = 0;
+
         for (char c : s.toCharArray()) {
             if (Character.isDigit(c)) {
-                k = k * 10 + (c - '0'); // Build multi-digit number
+                num = num * 10 + (c - '0');
             } else if (c == '[') {
-                countStack.push(k);
-                stringStack.push(current);
-                current = "";
-                k = 0;
+                strStack.push(cur.toString());
+                numStack.push(num);
+                cur = new StringBuilder();
+                num = 0;
             } else if (c == ']') {
-                int count = countStack.pop();
-                String prev = stringStack.pop();
-                current = prev + current.repeat(count);
+                String prev = strStack.pop();
+                int count = numStack.pop();
+                StringBuilder temp = new StringBuilder(prev);
+                for (int i = 0; i < count; i++) temp.append(cur);
+                cur = temp;
             } else {
-                current += c;
+                cur.append(c);
             }
         }
-        
-        return current;
+
+        return cur.toString();
     }
 }

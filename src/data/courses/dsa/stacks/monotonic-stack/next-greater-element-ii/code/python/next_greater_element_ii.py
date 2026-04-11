@@ -1,15 +1,26 @@
-class NextGreaterElementII:
-    def nextGreaterElements(self, nums: list[int]) -> list[int]:
+# ============================================================
+# Next Greater Element II (Circular)
+# ============================================================
+
+from typing import List
+
+class Solution1:
+    def nextGreaterElements(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        result = [-1] * n
+        for i in range(n):
+            for j in range(1, n):
+                if nums[(i+j) % n] > nums[i]:
+                    result[i] = nums[(i+j) % n]; break
+        return result
+
+class Solution2:
+    def nextGreaterElements(self, nums: List[int]) -> List[int]:
         n = len(nums)
         result = [-1] * n
         stack = []
-        
-        # Traverse twice for circular array
         for i in range(2 * n):
-            idx = i % n
-            while stack and nums[stack[-1]] < nums[idx]:
-                result[stack.pop()] = nums[idx]
-            if i < n:
-                stack.append(idx)  # Push only in first pass
-        
+            while stack and nums[i % n] > nums[stack[-1]]:
+                result[stack.pop()] = nums[i % n]
+            if i < n: stack.append(i)
         return result

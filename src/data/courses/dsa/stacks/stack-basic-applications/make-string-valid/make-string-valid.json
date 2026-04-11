@@ -6,15 +6,15 @@
   "mdFile": "make-string-valid.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Make String Valid",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/make-string-valid/code/cpp/make_string_valid.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/stack-basic-applications/make-string-valid/code/java/MakeStringValid.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/make-string-valid/code/cpp/MakeStringValid.cpp"
         },
         {
           "language": "python",

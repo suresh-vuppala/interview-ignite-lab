@@ -6,15 +6,15 @@
   "mdFile": "decode-string.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Decode String",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-advanced/decode-string/code/cpp/decode_string.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/stack-advanced/decode-string/code/java/DecodeString.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-advanced/decode-string/code/cpp/DecodeString.cpp"
         },
         {
           "language": "python",

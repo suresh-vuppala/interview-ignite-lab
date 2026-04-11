@@ -1,20 +1,71 @@
-Convert infix expression to postfix using stack.
+Convert an infix expression (e.g., "a+b*c") to postfix notation (e.g., "abc*+") using operator precedence rules.
+
+<br>
+
+> Input: "a+b*c"
+> Output: "abc*+"
+
+> Explanation: * has higher precedence than +. So b*c evaluates first → postfix: bc*. Then a + (bc*) → abc*+.
+> 
+> **Key insight:** Use operator stack. Push operators, but first pop all operators with higher or equal precedence. '(' pushes unconditionally. ')' pops until '(' found.
 
 <br>
 
 ---
 
-## Solution 1: Shunting Yard Algorithm (Standard)
+## Constraints
+- Valid infix expression with +, -, *, /, (, )
+- Operands are single characters (a-z)
+
+<br>
+
+---
+
+## All Possible Edge Cases
+1. **No operators:** "a" → "a"
+2. **Parentheses override:** "a*(b+c)" → "abc+*"
+3. **Left-to-right associativity:** "a-b-c" → "ab-c-"
+
+<br>
+
+---
+
+## Solution 1: Operator Stack (Shunting-Yard Algorithm)
+
+**Intuition:** Operands go directly to output. Operators go to stack, but first pop higher/equal precedence operators. Parentheses: '(' pushes, ')' pops until '('.
 
 **Algorithm:**
 1. For each token:
    - Operand → output
    - '(' → push to stack
-   - ')' → pop to output until '('
-   - Operator → pop higher/equal precedence operators to output, then push
+   - ')' → pop to output until '(' found, discard '('
+   - Operator → pop stack while top has ≥ precedence, then push
+2. Pop remaining operators to output
 
-### Time Complexity: O(n)
-### Space Complexity: O(n)
+### Time Complexity: O(N)
+**Why?** Each token processed once. Each operator pushed/popped at most once.
+
+**Detailed breakdown:** N tokens → at most 2N operations
+
+**Example walkthrough:**
+```
+"a+b*c"
+
+'a' → output="a"
+'+' → stack=[+], output="a"
+'b' → output="ab"
+'*' → * > + precedence → push. stack=[+, *], output="ab"
+'c' → output="abc"
+End → pop: *, then + → output="abc*+"
+
+Result: "abc*+" ✓
+```
+
+### Space Complexity: O(N)
+
+> **Drawback:** None — Shunting-Yard is the standard O(N) algorithm.
+
+> **Key Insight for Improvement:** Already optimal. The precedence comparison is the key: pop while stack top has ≥ precedence (for left-associative operators).
 
 <br>
 
@@ -24,10 +75,14 @@ Convert infix expression to postfix using stack.
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Shunting Yard | O(n) | O(n) | Operator stack with precedence rules |
+| Shunting-Yard | O(N) | O(N) | Operator stack with precedence |
 
-<br>
-<br>
+**Key Insights:**
+1. **Precedence rule:** Pop higher/equal precedence operators before pushing
+2. **Parentheses:** '(' acts as a barrier — operators don't pop past it
+3. **Right-associative (^):** Pop only strictly higher precedence, not equal
+
+<br><br>
 
 ---
 

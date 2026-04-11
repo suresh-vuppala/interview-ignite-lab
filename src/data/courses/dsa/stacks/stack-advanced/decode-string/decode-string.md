@@ -1,61 +1,61 @@
-Decode string with pattern k[encoded]: repeat encoded k times.
+Given an encoded string like "3[a2[c]]", decode it. The pattern is k[encoded_string] where the encoded_string is repeated k times.
 
 <br>
 
-> Input: "3[a2[c]]"
+> Input: s = "3[a2[c]]"
 > Output: "accaccacc"
+
+> Explanation: 2[c] = "cc". a + "cc" = "acc". 3["acc"] = "accaccacc".
+> 
+> **Key insight:** Use a stack. Push current string and count when hitting '['. Pop and repeat when hitting ']'. The stack handles nesting naturally.
 
 <br>
 
 ---
 
 ## Constraints
-
 - `1 ≤ s.length ≤ 30`
-- `1 ≤ k ≤ 300`
-- `Nested brackets are valid`
+- Digits are for repeat counts only
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Stack (Optimal)
 
-1. **No encoding:** 'abc' → 'abc'
-2. **Nested:** '2[a3[b]]' → 'abbbabbb'
-3. **Adjacent:** '2[a]3[b]' → 'aabbb'
-4. **k = 1:** '1[abc]' → 'abc'
-
-<br>
-
----
-
-## Solution 1: Stack
-
-**Intuition:**
-Use two stacks: one for counts, one for strings. On '[', push current string and count. On ']', pop and repeat.
+**Intuition:** Build current string. When '[' encountered: save current state (string + count) on stack, reset. When ']': pop previous state, multiply current string by count, append to previous string.
 
 **Algorithm:**
-1. Iterate through characters:
-   - Digit → build multi-digit number
-   - '[' → push (currentString, count) to stacks, reset both
-   - ']' → pop, currentString = poppedString + currentString × count
-   - Letter → append to currentString
+1. stack = [], currentStr = "", currentNum = 0
+2. For each char:
+   - Digit: currentNum = currentNum * 10 + digit
+   - '[': push (currentStr, currentNum), reset both
+   - ']': pop (prevStr, count), currentStr = prevStr + currentStr × count
+   - Letter: currentStr += char
+3. Return currentStr
 
-### Time Complexity: O(maxK × n) where n = output length
-### Space Complexity: O(n)
+### Time Complexity: O(N × maxK)
+**Why?** Each character processed once. String repetition depends on the repeat factor.
 
-<br>
+**Detailed breakdown:** Output length can be up to ~10⁵ with nesting.
 
----
+**Example walkthrough:**
+```
+s = "3[a2[c]]"
 
-## Solution 2: Recursion
+'3' → num=3
+'[' → push("", 3), reset → str="", num=0
+'a' → str="a"
+'2' → num=2
+'[' → push("a", 2), reset → str="", num=0
+'c' → str="c"
+']' → pop("a", 2), str = "a" + "c"×2 = "acc"
+']' → pop("", 3), str = "" + "acc"×3 = "accaccacc"
 
-**Intuition:**
-Recursively process: when '[' is found, recurse to get inner string, multiply by k.
+Result: "accaccacc" ✓
+```
 
-### Time Complexity: O(maxK × n)
-### Space Complexity: O(depth) recursion stack
+### Space Complexity: O(N) for stack depth
 
 <br>
 
@@ -65,11 +65,14 @@ Recursively process: when '[' is found, recurse to get inner string, multiply by
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Stack | O(maxK × n) | O(n) | Iterative with two stacks |
-| Recursion | O(maxK × n) | O(depth) | Natural for nested structure |
+| Stack | O(output length) | O(N) | Stack handles nesting naturally |
 
-<br>
-<br>
+**Key Insights:**
+1. **Stack saves context:** '[' pushes current state, ']' restores it
+2. **Nesting handled naturally:** Inner brackets resolve first, outer uses the result
+3. **Alternative: Recursion:** Same logic but uses call stack instead of explicit stack
+
+<br><br>
 
 ---
 

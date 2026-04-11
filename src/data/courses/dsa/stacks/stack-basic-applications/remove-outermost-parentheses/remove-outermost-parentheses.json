@@ -6,15 +6,15 @@
   "mdFile": "remove-outermost-parentheses.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Remove Outermost Parentheses",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/remove-outermost-parentheses/code/cpp/remove_outermost_parentheses.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/stack-basic-applications/remove-outermost-parentheses/code/java/RemoveOutermostParentheses.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/remove-outermost-parentheses/code/cpp/RemoveOutermostParentheses.cpp"
         },
         {
           "language": "python",

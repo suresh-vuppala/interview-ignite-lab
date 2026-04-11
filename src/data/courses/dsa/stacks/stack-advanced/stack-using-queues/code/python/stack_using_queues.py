@@ -1,16 +1,24 @@
+# ============================================================
+# Implement Stack Using Queues
+# ============================================================
+
 from collections import deque
 
-class StackUsingQueues:
+class MyStack:
     def __init__(self):
         self.q = deque()
-    
-    def push(self, x):
+
+    def push(self, x: int) -> None:
         self.q.append(x)
+        # Rotate old elements behind the new one
         for _ in range(len(self.q) - 1):
             self.q.append(self.q.popleft())
-    
-    def pop(self):
+
+    def pop(self) -> int:
         return self.q.popleft()
-    
-    def top(self):
+
+    def top(self) -> int:
         return self.q[0]
+
+    def empty(self) -> bool:
+        return len(self.q) == 0

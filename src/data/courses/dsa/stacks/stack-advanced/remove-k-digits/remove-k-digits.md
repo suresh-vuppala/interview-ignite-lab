@@ -1,109 +1,89 @@
-Remove k digits from number to make it smallest possible. Return result as string without leading zeros.
+Given a non-negative integer represented as a string, remove k digits to make the number as small as possible.
 
 <br>
 
-> Input:
-> num = "1432219", k = 3
+> Input: num = "1432219", k = 3
+> Output: "1219"
 
-> Output:
-> "1219"
-
-> Explanation:
-> Remove digits 4, 3, 2 to get smallest number.
-> - Original: 1432219
-> - Remove 4: 132219 (4 > 3, remove it)
-> - Remove 3: 12219 (3 > 2, remove it)
-> - Remove 2: 1219 (first 2 > 2, remove it)
+> Explanation: Remove 4, 3, 2 → "1219". This is the smallest possible.
 > 
-> **Key insight:** Remove larger digits that appear before smaller digits.
+> **Key insight:** Greedy with monotonic increasing stack. When the current digit is smaller than the top of the stack, pop the top (remove that larger digit). This is optimal because removing a larger digit earlier has more impact on the final number.
 
 <br>
-
-> Input:
-> num = "10200", k = 1
-
-> Output:
-> "200"
-
-> Explanation:
-> Remove leading 1 to get smallest: 0200 → "200" (remove leading zeros)
-
-<br>
-
 
 ---
 
 ## Constraints
-
 - `1 ≤ k ≤ num.length ≤ 10⁵`
-- `num consists of digits 0-9`
-- `num does not have leading zeros`
+- num consists of digits only and has no leading zeros (except "0")
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force — Try All Combinations
 
-1. **k = num.length:** Remove all digits → '0'
-2. **k = 0:** Return original number
-3. **All same digits:** '1111' k=2 → '11'
-4. **Increasing digits:** '12345' k=1 → '1234' (remove last)
-5. **Decreasing digits:** '54321' k=1 → '4321' (remove first)
-6. **Leading zeros after removal:** '10200' k=1 → '200'
-7. **Result is '0':** '10' k=2 → '0'
+### Time Complexity: O(C(N,K)) — exponential
+
+> **Drawback:** Exponential. The greedy approach gives optimal result in O(N).
+
+> **Key Insight for Improvement:** Scan left to right. If digit[i] > digit[i+1], removing digit[i] is always better (reduces the leftmost position). Use a stack: push digits, but pop the top when it's larger than the current digit (and k > 0). After processing, if k > 0, remove from the end.
 
 <br>
 
 ---
 
-## Solution: Monotonic Increasing Stack
+## Solution 2: Monotonic Increasing Stack — Greedy (Optimal)
 
-Use monotonic increasing stack:
-1. For each digit:
-   - While stack top > current digit and k > 0: pop and decrement k
-   - Push current digit
-2. Remove remaining k digits from end
-3. Remove leading zeros
-4. Return result (or "0" if empty)
+**Algorithm:**
+1. stack = []
+2. For each digit d in num:
+   - While k > 0 and stack and stack.top() > d: stack.pop(), k--
+   - Push d
+3. While k > 0: stack.pop(), k-- (remove from end)
+4. Build result, strip leading zeros
+5. Return result or "0" if empty
 
-**Key insight:** Keep digits in increasing order to minimize number.
+### Time Complexity: O(N)
+**Why?** Each digit pushed/popped at most once.
 
+**Detailed breakdown:** N = 100,000 → at most 200,000 operations
 
+**Example walkthrough:**
+```
+num = "1432219", k = 3
 
-<br>
+'1': stack=[1]
+'4': 4>1 → push → [1,4]
+'3': 3<4 → pop 4, k=2 → [1,3]
+'2': 2<3 → pop 3, k=1 → [1,2]
+'2': 2==2 → push → [1,2,2]
+'1': 1<2 → pop 2, k=0 → [1,2,1]
+'9': push → [1,2,1,9]
 
-### Time Complexity Analysis
+k=0, no more removals.
+Result: "1219" ✓
+```
 
-**Single Pass: O(n)**
-- Iterate through n digits: O(n)
-- Each digit:
-  - Pushed once: O(1)
-  - Popped at most once: O(1)
-- Total operations: 2n (push + pop) = O(n)
+### Space Complexity: O(N)
 
-**Why monotonic stack works?**
-- Want smallest number → keep increasing sequence
-- When see smaller digit, remove larger digits before it
-- Greedy approach: Remove largest digits first
-
-**Space Complexity: O(n)**
-- Stack holds at most n digits
-- Result string: O(n-k)
-
-**Edge cases:**
-- All digits removed: Return "0"
-- Leading zeros: Must remove them
-- k = 0: Return original number
-- Increasing sequence: Remove from end
-
-> **Time Complexity:** O(n) - single pass with stack
-> **Space Complexity:** O(n) - stack storage
-
-<br>
 <br>
 
 ---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute Force | O(C(N,K)) | O(N) | Try all combinations |
+| Monotonic Stack | O(N) | O(N) | Greedy: remove larger digits first |
+
+**Key Insights:**
+1. **Greedy principle:** Removing a larger digit at an earlier position has the most impact
+2. **Monotonic increasing:** Stack maintains increasing order — pops create smaller numbers
+3. **Edge cases:** Leading zeros, k ≥ num.length → "0"
+
+<br><br>
 
 ---
 

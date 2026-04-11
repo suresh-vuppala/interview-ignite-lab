@@ -6,15 +6,15 @@
   "mdFile": "infix-to-postfix.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Infix to Postfix",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/infix-to-postfix/code/cpp/infix_to_postfix.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/stack-basic-applications/infix-to-postfix/code/java/InfixToPostfix.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/infix-to-postfix/code/cpp/InfixToPostfix.cpp"
         },
         {
           "language": "python",

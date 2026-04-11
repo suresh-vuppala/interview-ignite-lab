@@ -1,32 +1,61 @@
-class Solution {
+// ============================================================
+// Maximal Rectangle
+// ============================================================
+
+#include <vector>
+#include <stack>
+using namespace std;
+
+class Solution1 {
 public:
-    // O(m*n) — Build histogram per row, apply largest rectangle in histogram
     int maximalRectangle(vector<vector<char>>& matrix) {
         if (matrix.empty()) return 0;
-        int m = matrix.size(), n = matrix[0].size(), maxArea = 0;
-        vector<int> heights(n, 0);
-        
-        for (int i = 0; i < m; i++) {
-            // Build histogram heights
-            for (int j = 0; j < n; j++)
-                heights[j] = (matrix[i][j] == '1') ? heights[j] + 1 : 0;
-            maxArea = max(maxArea, largestRectangleArea(heights));
+        int R = matrix.size(), C = matrix[0].size(), maxArea = 0;
+        for (int r1 = 0; r1 < R; r1++) {
+            vector<int> minH(C, R);
+            for (int r2 = r1; r2 < R; r2++) {
+                for (int c = 0; c < C; c++)
+                    if (matrix[r2][c] == '0') minH[c] = 0;
+                int w = 0;
+                for (int c = 0; c < C; c++) {
+                    if (minH[c] > 0) { w++; maxArea = max(maxArea, w * (r2-r1+1)); }
+                    else w = 0;
+                }
+            }
         }
         return maxArea;
     }
-    
-    int largestRectangleArea(vector<int>& h) {
-        stack<int> st;
-        int maxArea = 0, n = h.size();
-        for (int i = 0; i <= n; i++) {
-            int cur = (i == n) ? 0 : h[i];
-            while (!st.empty() && cur < h[st.top()]) {
+};
+
+class Solution2 {
+public:
+    int maximalRectangle(vector<vector<char>>& matrix) {
+        if (matrix.empty()) return 0;
+        int C = matrix[0].size(), maxArea = 0;
+        vector<int> heights(C, 0);
+
+        for (auto& row : matrix) {
+            // Build histogram heights for this row
+            for (int j = 0; j < C; j++)
+                heights[j] = (row[j] == '1') ? heights[j] + 1 : 0;
+
+            // Apply Largest Rectangle in Histogram
+            maxArea = max(maxArea, largestRect(heights));
+        }
+        return maxArea;
+    }
+
+    int largestRect(vector<int>& h) {
+        stack<int> st; st.push(-1);
+        int maxA = 0;
+        for (int i = 0; i <= (int)h.size(); i++) {
+            int cur = (i == (int)h.size()) ? 0 : h[i];
+            while (st.top() != -1 && cur <= h[st.top()]) {
                 int height = h[st.top()]; st.pop();
-                int width = st.empty() ? i : i - st.top() - 1;
-                maxArea = max(maxArea, height * width);
+                maxA = max(maxA, height * (i - st.top() - 1));
             }
             st.push(i);
         }
-        return maxArea;
+        return maxA;
     }
 };

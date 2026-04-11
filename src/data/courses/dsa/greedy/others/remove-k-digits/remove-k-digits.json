@@ -6,19 +6,19 @@
   "isPosted": true,
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Remove K Digits",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/greedy/others/remove-k-digits/code/cpp/remove_k_digits.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/greedy/others/remove-k-digits/code/java/RemoveKDigits.java"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/greedy/others/remove-k-digits/code/cpp/RemoveKDigits.cpp"
-        },
-        {
           "language": "python",
-          "codeFile": "courses/dsa/greedy/others/remove-k-digits/code/python/remove-k-digits.py"
+          "codeFile": "courses/dsa/greedy/others/remove-k-digits/code/python/remove_k_digits.py"
         }
       ]
     }

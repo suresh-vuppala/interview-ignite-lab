@@ -1,11 +1,38 @@
-Design stack with push, pop, top, peekMax, popMax.
+Design a stack that supports push, pop, top, and retrieving the maximum element, all in O(1) time.
+
+<br>
+
+> Input: push(5), push(1), push(5), top(), popMax(), top(), popMax(), top()
+> Output: 5, 5, 1, 5, -1 (empty)
+
+> Explanation: Similar to Min Stack but tracking maximum. popMax removes the max element.
+> 
+> **Key insight:** Same pattern as Min Stack — maintain a parallel max stack tracking current max at each level.
 
 <br>
 
 ---
 
-## Solution 1: Two Stacks — O(1) for all except popMax O(n)
-## Solution 2: Doubly Linked List + TreeMap — O(log n) for all
+## Constraints
+- All ops called on non-empty stack (except push)
+
+<br>
+
+---
+
+## Solution 1: Two Stacks — Main + Max Stack (Optimal for getMax/push/pop)
+
+**Intuition:** Parallel stack where max[i] = max of all elements at level i and below.
+
+**Algorithm:** Same as Min Stack but track max instead of min.
+
+### Time Complexity: O(1) per push/pop/top/getMax
+
+### Space Complexity: O(N)
+
+> **Drawback:** popMax (remove the actual max element) requires O(N) — need to find and remove from middle of stack.
+
+> **Key Insight for Improvement:** For O(1) push/pop/getMax without popMax, two-stack approach is optimal. For popMax, need more complex data structure (doubly-linked list + TreeMap).
 
 <br>
 
@@ -13,13 +40,18 @@ Design stack with push, pop, top, peekMax, popMax.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Two Stacks | O(n) popMax | O(n) | Aux stack for max tracking |
-| DLL + TreeMap | O(log n) all | O(n) | Ordered map finds max, DLL removes |
+| Operation | Time |
+|-----------|------|
+| push | O(1) |
+| pop | O(1) |
+| top | O(1) |
+| getMax | O(1) |
 
-<br>
-<br>
+**Key Insights:**
+1. **Mirror of Min Stack:** Track max instead of min at each level
+2. **popMax is harder:** Requires finding and removing from middle — different problem class
+
+<br><br>
 
 ---
 

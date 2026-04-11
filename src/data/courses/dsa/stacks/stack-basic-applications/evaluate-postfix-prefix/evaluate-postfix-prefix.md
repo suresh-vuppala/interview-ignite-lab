@@ -1,21 +1,70 @@
-Evaluate postfix/prefix expression using stack.
+Evaluate a postfix (Reverse Polish Notation) expression. Tokens are integers and operators (+, -, *, /).
+
+<br>
+
+> Input: tokens = ["2", "1", "+", "3", "*"]
+> Output: 9
+
+> Explanation: ((2 + 1) * 3) = 9. In postfix: push 2, push 1, pop both and add (3), push 3, pop both and multiply (9).
+> 
+> **Key insight:** Push numbers onto stack. When operator appears, pop two operands, compute, push result. Stack naturally handles precedence and associativity.
 
 <br>
 
 ---
 
-## Solution 1: Stack (Standard)
+## Constraints
+- `1 ≤ tokens.length ≤ 10⁴`
+- Tokens are valid integers or "+", "-", "*", "/"
+- Division truncates toward zero
 
-**Algorithm (Postfix):**
+<br>
+
+---
+
+## All Possible Edge Cases
+1. **Single number:** ["3"] → 3
+2. **Negative numbers:** ["-2", "3", "+"] → 1
+3. **Division truncation:** ["7", "-2", "/"] → -3 (truncate toward zero)
+
+<br>
+
+---
+
+## Solution 1: Stack — Process Tokens (Optimal)
+
+**Intuition:** Scan left to right. Numbers: push. Operators: pop two operands (b then a), compute a op b, push result. Final stack element is the answer.
+
+**Algorithm:**
 1. For each token:
-   - Number → push
-   - Operator → pop two operands, compute, push result
-2. Return stack top
+   - If number → push to stack
+   - If operator → b = pop, a = pop, push(a op b)
+2. Return stack.top()
 
-### Time Complexity: O(n)
-### Space Complexity: O(n)
+### Time Complexity: O(N)
+**Why?** Single pass, O(1) per token.
 
-This is the standard and only practical approach — already optimal.
+**Detailed breakdown:** N = 10,000 → 10,000 operations
+
+**Example walkthrough:**
+```
+["2", "1", "+", "3", "*"]
+
+"2" → push → stack=[2]
+"1" → push → stack=[2, 1]
+"+" → b=1, a=2, push(2+1=3) → stack=[3]
+"3" → push → stack=[3, 3]
+"*" → b=3, a=3, push(3*3=9) → stack=[9]
+
+Result: 9 ✓
+```
+
+### Space Complexity: O(N)
+**Why?** Stack stores at most (N+1)/2 operands.
+
+> **Drawback:** None — this is the standard and optimal approach for RPN evaluation.
+
+> **Key Insight for Improvement:** Already optimal. Note: order matters — a = second pop, b = first pop. a op b (not b op a).
 
 <br>
 
@@ -25,10 +74,14 @@ This is the standard and only practical approach — already optimal.
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Stack | O(n) | O(n) | Standard stack-based evaluation |
+| Stack | O(N) | O(N) | Process tokens left to right |
 
-<br>
-<br>
+**Key Insights:**
+1. **Pop order:** b first, a second → compute a op b
+2. **Postfix eliminates precedence:** No need for parentheses or PEMDAS
+3. **Prefix (Polish):** Same idea but scan right to left
+
+<br><br>
 
 ---
 

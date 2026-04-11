@@ -1,38 +1,29 @@
+// ============================================================
+// Infix to Postfix
+// ============================================================
+
 import java.util.*;
 
-class InfixToPostfix {
-    public String infixToPostfix(String infix) {
+class Solution {
+    public String infixToPostfix(String s) {
+        Map<Character,Integer> prec = Map.of('+',1,'-',1,'*',2,'/',2);
+        Deque<Character> ops = new ArrayDeque<>();
         StringBuilder result = new StringBuilder();
-        Stack<Character> stack = new Stack<>();
-        
-        for (char c : infix.toCharArray()) {
-            if (Character.isLetterOrDigit(c)) {
-                result.append(c); // Operand
-            } else if (c == '(') {
-                stack.push(c);
-            } else if (c == ')') {
-                while (!stack.isEmpty() && stack.peek() != '(') {
-                    result.append(stack.pop());
-                }
-                stack.pop(); // Remove '('
-            } else { // Operator
-                while (!stack.isEmpty() && precedence(stack.peek()) >= precedence(c)) {
-                    result.append(stack.pop());
-                }
-                stack.push(c);
+
+        for (char c : s.toCharArray()) {
+            if (Character.isLetterOrDigit(c)) { result.append(c); }
+            else if (c == '(') { ops.push(c); }
+            else if (c == ')') {
+                while (ops.peek() != '(') result.append(ops.pop());
+                ops.pop();
+            } else {
+                while (!ops.isEmpty() && ops.peek() != '(' &&
+                       prec.getOrDefault(ops.peek(),0) >= prec.getOrDefault(c,0))
+                    result.append(ops.pop());
+                ops.push(c);
             }
         }
-        
-        while (!stack.isEmpty()) {
-            result.append(stack.pop());
-        }
-        
+        while (!ops.isEmpty()) result.append(ops.pop());
         return result.toString();
-    }
-    
-    private int precedence(char op) {
-        if (op == '+' || op == '-') return 1;
-        if (op == '*' || op == '/') return 2;
-        return 0;
     }
 }

@@ -6,15 +6,15 @@
   "mdFile": "celebrity-problem.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Celebrity Problem",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-advanced/celebrity-problem/code/cpp/celebrity_problem.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/stack-advanced/celebrity-problem/code/java/CelebrityProblem.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-advanced/celebrity-problem/code/cpp/CelebrityProblem.cpp"
         },
         {
           "language": "python",

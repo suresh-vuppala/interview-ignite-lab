@@ -1,27 +1,25 @@
-class CelebrityProblem:
-    def findCelebrity(self, M: list[list[int]]) -> int:
-        n = len(M)
-        stack = []
-        
-        # Push all people
-        for i in range(n):
-            stack.append(i)
-        
-        # Find candidate
+# ============================================================
+# Celebrity Problem
+# ============================================================
+
+# def knows(a, b) -> bool — provided
+
+class Solution:
+    def findCelebrity(self, n: int) -> int:
+        stack = list(range(n))
+
+        # Eliminate: each comparison removes one
         while len(stack) > 1:
-            a = stack.pop()
-            b = stack.pop()
-            if M[a][b] == 1:
-                stack.append(b)  # a knows b, so a is not celebrity
+            a, b = stack.pop(), stack.pop()
+            if knows(a, b):
+                stack.append(b)  # A knows B → A not celeb
             else:
-                stack.append(a)  # a doesn't know b, so b is not celebrity
-        
-        candidate = stack.pop()
-        
+                stack.append(a)  # A doesn't know B → B not celeb
+
         # Verify candidate
+        candidate = stack[0]
         for i in range(n):
-            if i != candidate:
-                if M[candidate][i] == 1 or M[i][candidate] == 0:
-                    return -1  # Not a celebrity
-        
+            if i == candidate: continue
+            if knows(candidate, i) or not knows(i, candidate):
+                return -1
         return candidate

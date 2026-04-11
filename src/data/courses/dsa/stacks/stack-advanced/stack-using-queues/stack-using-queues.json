@@ -6,19 +6,19 @@
   "mdFile": "stack-using-queues.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Stack using Queues",
       "languages": [
         {
-          "language": "java",
-          "codeFile": "courses/dsa/stacks/stack-advanced/stack-using-queues/code/java/MyStack.java"
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-advanced/stack-using-queues/code/cpp/stack_using_queues.cpp"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-advanced/stack-using-queues/code/cpp/MyStack.cpp"
+          "language": "java",
+          "codeFile": "courses/dsa/stacks/stack-advanced/stack-using-queues/code/java/StackUsingQueues.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/stacks/stack-advanced/stack-using-queues/code/python/my_stack.py"
+          "codeFile": "courses/dsa/stacks/stack-advanced/stack-using-queues/code/python/stack_using_queues.py"
         }
       ]
     }

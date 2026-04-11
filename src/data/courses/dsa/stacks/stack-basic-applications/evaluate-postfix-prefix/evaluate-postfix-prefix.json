@@ -6,15 +6,15 @@
   "mdFile": "evaluate-postfix-prefix.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Evaluate Postfix/Prefix",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code/cpp/evaluate_postfix_prefix.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code/java/EvaluatePostfixPrefix.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code/cpp/EvaluatePostfixPrefix.cpp"
         },
         {
           "language": "python",

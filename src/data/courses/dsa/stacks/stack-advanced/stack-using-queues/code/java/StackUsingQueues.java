@@ -1,16 +1,16 @@
-class StackUsingQueues {
+// ============================================================
+// Implement Stack Using Queues
+// ============================================================
+
+import java.util.*;
+
+class MyStack {
     Queue<Integer> q = new LinkedList<>();
-    
-    void push(int x) {
+    public void push(int x) {
         q.add(x);
-        for (int i = 0; i < q.size() - 1; i++) q.add(q.poll());
+        for (int i = 0; i < q.size() - 1; i++) q.add(q.remove());
     }
-    
-    int pop() {
-        return q.poll();
-    }
-    
-    int top() {
-        return q.peek();
-    }
+    public int pop() { return q.remove(); }
+    public int top() { return q.peek(); }
+    public boolean empty() { return q.isEmpty(); }
 }

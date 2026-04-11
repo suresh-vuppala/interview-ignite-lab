@@ -1,35 +1,29 @@
+// ============================================================
+// Previous Greater and Previous Smaller
+// ============================================================
+
 import java.util.*;
 
-class PreviousGreaterSmaller {
+class Solution {
     public int[] previousGreater(int[] nums) {
-        int n = nums.length;
-        int[] result = new int[n];
-        Stack<Integer> stack = new Stack<>();
-        
-        for (int i = 0; i < n; i++) {
-            while (!stack.isEmpty() && stack.peek() <= nums[i]) {
-                stack.pop();
-            }
-            result[i] = stack.isEmpty() ? -1 : stack.peek();
-            stack.push(nums[i]);
+        int[] res = new int[nums.length]; Arrays.fill(res, -1);
+        Deque<Integer> stack = new ArrayDeque<>();
+        for (int i = 0; i < nums.length; i++) {
+            while (!stack.isEmpty() && nums[stack.peek()] <= nums[i]) stack.pop();
+            if (!stack.isEmpty()) res[i] = nums[stack.peek()];
+            stack.push(i);
         }
-        
-        return result;
+        return res;
     }
-    
+
     public int[] previousSmaller(int[] nums) {
-        int n = nums.length;
-        int[] result = new int[n];
-        Stack<Integer> stack = new Stack<>();
-        
-        for (int i = 0; i < n; i++) {
-            while (!stack.isEmpty() && stack.peek() >= nums[i]) {
-                stack.pop();
-            }
-            result[i] = stack.isEmpty() ? -1 : stack.peek();
-            stack.push(nums[i]);
+        int[] res = new int[nums.length]; Arrays.fill(res, -1);
+        Deque<Integer> stack = new ArrayDeque<>();
+        for (int i = 0; i < nums.length; i++) {
+            while (!stack.isEmpty() && nums[stack.peek()] >= nums[i]) stack.pop();
+            if (!stack.isEmpty()) res[i] = nums[stack.peek()];
+            stack.push(i);
         }
-        
-        return result;
+        return res;
     }
 }

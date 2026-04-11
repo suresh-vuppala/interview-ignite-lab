@@ -6,15 +6,15 @@
   "mdFile": "next-smaller-element.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Next Smaller Element",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/monotonic-stack/next-smaller-element/code/cpp/next_smaller_element.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/stacks/monotonic-stack/next-smaller-element/code/java/NextSmallerElement.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/stacks/monotonic-stack/next-smaller-element/code/cpp/NextSmallerElement.cpp"
         },
         {
           "language": "python",
