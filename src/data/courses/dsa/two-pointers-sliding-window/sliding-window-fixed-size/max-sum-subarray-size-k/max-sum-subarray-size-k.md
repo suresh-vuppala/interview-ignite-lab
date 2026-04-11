@@ -19,6 +19,31 @@ Given an array of integers and a number k, find the maximum sum of any contiguou
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ k ≤ nums.length ≤ 10⁵`
+- `-10⁴ ≤ nums[i] ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k equals array length:** Only one window — return total sum
+2. **k = 1:** Return the maximum element
+3. **All negative:** Max sum is still the least negative window
+4. **All same elements:** All windows have equal sum
+5. **Single element array, k=1:** Return that element
+6. **Array with zeros:** Zeros don't contribute to sum
+7. **Large k with alternating pos/neg:** Must check all windows
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

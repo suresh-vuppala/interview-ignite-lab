@@ -14,4 +14,28 @@ Implement preorder traversal (recursive and iterative).
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 100`
+- `-100 ≤ Node.val ≤ 100`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty tree:** Return []
+2. **Single node:** Return [val]
+3. **Left-skewed:** Root first, then descending
+4. **Right-skewed:** Root first, then ascending
+
+<br>
+
+---
+
 ```code```

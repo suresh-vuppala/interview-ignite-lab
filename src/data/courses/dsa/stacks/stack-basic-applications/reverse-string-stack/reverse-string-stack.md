@@ -20,6 +20,28 @@ Reverse a string using stack data structure.
 
 <br>
 
+
+---
+
+## Constraints
+
+- `0 ≤ s.length ≤ 10⁵`
+- `s consists of printable ASCII characters`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty string:** '' → ''
+2. **Single character:** 'a' → 'a'
+3. **Palindrome:** 'racecar' → 'racecar'
+4. **Spaces:** 'hello world' → 'dlrow olleh'
+5. **All same characters:** 'aaaa' → 'aaaa'
+
+<br>
+
 ---
 
 ## Solution: Stack-Based Reversal

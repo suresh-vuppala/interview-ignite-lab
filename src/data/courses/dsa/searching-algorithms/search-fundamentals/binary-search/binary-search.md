@@ -39,6 +39,33 @@ Find the index of a target value in a **sorted** array. Return `-1` if the targe
 
 ---
 
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 10⁴`
+- `-10⁴ ≤ nums[i] ≤ 10⁴`
+- `All elements are unique`
+- `nums is sorted in ascending order`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Target at first position:** Found immediately on low side
+2. **Target at last position:** Found after converging to high side
+3. **Target at middle:** Found in first comparison
+4. **Target not in array:** Return -1
+5. **Single element, is target:** Return 0
+6. **Single element, not target:** Return -1
+7. **Two elements:** Test both boundary conditions
+8. **Integer overflow in mid calculation:** Use low + (high - low) / 2
+
+<br>
+
 ## Complexity Analysis
 
 ### Time Complexity: O(log n)

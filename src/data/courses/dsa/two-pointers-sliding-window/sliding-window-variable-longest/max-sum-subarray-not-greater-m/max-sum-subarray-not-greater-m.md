@@ -18,6 +18,33 @@ Given an array of positive integers and a target value M, find the maximum sum o
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 10⁵`
+- `-10⁴ ≤ nums[i] ≤ 10⁴`
+- `1 ≤ M ≤ sum of all positive elements`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **All elements positive, sum ≤ M:** Return total sum
+2. **Single element ≤ M:** Return that element
+3. **Single element > M:** Return 0 or -infinity (no valid subarray)
+4. **All negative:** Max sum ≤ M is the max single element
+5. **M = 0:** Need subarray with sum ≤ 0
+6. **Contains zeros:** Zeros extend subarray without adding to sum
+7. **M very large:** Return maximum subarray sum (Kadane's)
+8. **Mix positive and negative:** Negative elements in window can help stay under M
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

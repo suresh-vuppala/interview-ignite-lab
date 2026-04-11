@@ -54,343 +54,432 @@
               "isPosted": true
             }
           ]
+        },
+        {
+          "title": "STL / Collections Internals",
+          "slug": "stl-internals",
+          "lessons": [
+            {
+              "title": "Vector / ArrayList Internals",
+              "slug": "vector-arraylist-internals",
+              "isPosted": true
+            },
+            {
+              "title": "String Internals & Operations",
+              "slug": "string-internals",
+              "isPosted": true
+            },
+            {
+              "title": "HashMap / HashSet Internals",
+              "slug": "hashmap-hashset-internals",
+              "isPosted": true
+            },
+            {
+              "title": "Ordered Set & Map (TreeSet / TreeMap) Internals",
+              "slug": "ordered-set-map-internals",
+              "isPosted": true
+            },
+            {
+              "title": "Stack, Queue, Deque & Priority Queue Internals",
+              "slug": "stack-queue-deque-pq-internals",
+              "isPosted": true
+            }
+          ]
+        },
+        {
+          "title": "Language Essentials for Interviews",
+          "slug": "language-essentials",
+          "lessons": [
+            {
+              "title": "Pass by Value vs Reference",
+              "slug": "pass-by-value-reference",
+              "isPosted": true
+            },
+            {
+              "title": "Comparators & Custom Sorting",
+              "slug": "comparators-custom-sorting",
+              "isPosted": true
+            },
+            {
+              "title": "Essential STL Algorithms & Built-in Functions",
+              "slug": "stl-algorithms-cheatsheet",
+              "isPosted": true
+            },
+            {
+              "title": "Iterators, Range Loops & Common Patterns",
+              "slug": "iterators-range-loops",
+              "isPosted": true
+            }
+          ]
         }
       ]
     },
     {
-      "title": "Subsets, Subarrays, Recursion & Bits",
-      "slug": "subarrays-subsets-recursion",
-      "icon": "Layers",
+      "title": "Essential Programming Math",
+      "slug": "essential-math",
+      "icon": "Calculator",
+      "sections": [
+        {
+          "title": "Core Number Operations",
+          "slug": "core-number-operations",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "GCD and LCM",
+              "slug": "gcd-lcm"
+            }
+          ]
+        },
+        {
+          "title": "Number System & Conversions",
+          "slug": "number-system-conversions",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Decimal Binary Conversion",
+              "slug": "decimal-binary"
+            }
+          ]
+        },
+        {
+          "title": "Divisibility & Factors",
+          "slug": "divisibility-factors",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Divisors and Factors",
+              "slug": "divisors-factors"
+            }
+          ]
+        },
+        {
+          "title": "Prime Basics",
+          "slug": "prime-basics",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Check Prime Number",
+              "slug": "check-prime"
+            }
+          ]
+        },
+        {
+          "title": "Prime Factorization",
+          "slug": "prime-factorization",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Prime Factorization",
+              "slug": "prime-factorization"
+            }
+          ]
+        },
+        {
+          "title": "Sieve Techniques",
+          "slug": "standard-sieve",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Sieve of Eratosthenes",
+              "slug": "sieve-eratosthenes"
+            }
+          ]
+        },
+        {
+          "title": "Modular Arithmetic",
+          "slug": "core-modular-ops",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Modular Operations",
+              "slug": "modular-operations"
+            },
+            {
+              "isPosted": true,
+              "title": "Modular Inverse",
+              "slug": "modular-inverse"
+            }
+          ]
+        },
+        {
+          "title": "Combinatorics & Counting",
+          "slug": "basic-counting",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "nCr and nPr",
+              "slug": "ncr-npr"
+            }
+          ]
+        },
+        {
+          "title": "Game Theory",
+          "slug": "basic-game-problems",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Nim Game",
+              "slug": "nim-game"
+            },
+            {
+              "isPosted": true,
+              "title": "Grundy Numbers",
+              "slug": "grundy-numbers"
+            }
+          ]
+        },
+        {
+          "title": "Math Pattern Problems",
+          "slug": "math-pattern-problems",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Math Patterns",
+              "slug": "math-patterns"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Arrays & Hashing",
+      "slug": "arrays-and-hashing",
+      "icon": "Hash",
       "sections": [
         {
           "title": "Introduction",
           "slug": "introduction",
           "lessons": [
             {
-              "isPosted": true,
-              "title": "Subarrays vs Subsequences vs Subsets",
-              "slug": "subarrays-vs-subsequences-vs-subsets"
+              "title": "Introduction to Arrays & Hashing",
+              "slug": "intro-arrays-hashing",
+              "isPosted": true
             }
           ]
         },
         {
-          "title": "Subarrays (Continuous Elements)",
-          "slug": "subarrays",
+          "title": "Hash Map Fundamentals",
+          "slug": "hashmap-fundamentals",
           "lessons": [
             {
-              "isPosted": true,
-              "title": "Generate All Subarrays",
-              "slug": "generate-all-subarrays"
+              "title": "Two Sum",
+              "slug": "two-sum",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Generate All Subsequences",
-              "slug": "generate-all-subsequences"
+              "title": "Contains Duplicate",
+              "slug": "contains-duplicate",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Generate All Subsets using Recursion",
-              "slug": "generate-all-subsets-recursion"
+              "title": "Valid Anagram",
+              "slug": "valid-anagram",
+              "isPosted": true
+            },
+            {
+              "title": "Isomorphic Strings",
+              "slug": "isomorphic-strings",
+              "isPosted": true
             }
           ]
         },
         {
-          "title": "Bit Manipulation (Subset Pattern)",
-          "slug": "bit-manipulation",
+          "title": "Frequency Counting Patterns",
+          "slug": "frequency-counting",
           "lessons": [
             {
-              "isPosted": true,
-              "title": "Bit Masking Basics",
-              "slug": "bit-masking-basics"
+              "title": "Group Anagrams",
+              "slug": "group-anagrams",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Check/Set/Unset/Toggle Bit",
-              "slug": "check-set-unset-toggle-bit"
+              "title": "Majority Element",
+              "slug": "majority-element",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Count Set Bits",
-              "slug": "count-set-bits"
+              "title": "Valid Sudoku",
+              "slug": "valid-sudoku",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Power of Two Check",
-              "slug": "power-of-two-check"
+              "title": "Find All Duplicates in Array",
+              "slug": "find-all-duplicates",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Generate Subsets using Bitmask",
-              "slug": "generate-subsets-bitmask"
-            },
-            {
-              "isPosted": true,
-              "title": "Single Number (XOR Based)",
-              "slug": "single-number"
-            },
-            {
-              "isPosted": true,
-              "title": "Two Non-Repeating Numbers",
-              "slug": "two-non-repeating-numbers"
-            },
-            {
-              "isPosted": true,
-              "title": "Missing Number",
-              "slug": "missing-number"
+              "title": "Intersection of Two Arrays II",
+              "slug": "intersection-two-arrays",
+              "isPosted": true
             }
           ]
         },
         {
-          "title": "Recursion Fundamentals",
-          "slug": "recursion-fundamentals",
+          "title": "Array Manipulation & Matrix",
+          "slug": "array-manipulation",
           "lessons": [
             {
-              "isPosted": true,
-              "title": "Recursion Tree Understanding",
-              "slug": "recursion-tree-understanding"
+              "title": "Product of Array Except Self",
+              "slug": "product-of-array-except-self",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Recurrence Relation Basics",
-              "slug": "recurrence-relation-basics"
+              "title": "Set Matrix Zeroes",
+              "slug": "set-matrix-zeroes",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Tower of Hanoi",
-              "slug": "tower-of-hanoi"
+              "title": "Rotate Image (Matrix 90°)",
+              "slug": "rotate-image",
+              "isPosted": true
+            },
+            {
+              "title": "Spiral Matrix",
+              "slug": "spiral-matrix",
+              "isPosted": true
+            },
+            {
+              "title": "Next Permutation",
+              "slug": "next-permutation",
+              "isPosted": true
+            },
+            {
+              "title": "Pascal's Triangle",
+              "slug": "pascals-triangle",
+              "isPosted": true
             }
           ]
         },
         {
-          "title": "Backtracking",
-          "slug": "backtracking",
+          "title": "Advanced Hashing & Sequences",
+          "slug": "advanced-hashing",
           "lessons": [
             {
-              "isPosted": true,
-              "title": "Generate All Permutations",
-              "slug": "generate-all-permutations"
+              "title": "Longest Consecutive Sequence",
+              "slug": "longest-consecutive-sequence",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Permutations with Duplicates",
-              "slug": "permutations-with-duplicates"
+              "title": "First Missing Positive",
+              "slug": "first-missing-positive",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "N-Queens",
-              "slug": "n-queens"
-            },
-            {
-              "isPosted": true,
-              "title": "Rat in a Maze",
-              "slug": "rat-in-maze"
-            },
-            {
-              "isPosted": true,
-              "title": "Sudoku Solver",
-              "slug": "sudoku-solver"
-            },
-            {
-              "isPosted": true,
-              "title": "Combination Sum",
-              "slug": "combination-sum"
-            },
-            {
-              "isPosted": true,
-              "title": "Combination Sum II",
-              "slug": "combination-sum-ii"
-            },
-            {
-              "isPosted": true,
-              "title": "Letter Combinations of Phone Number",
-              "slug": "letter-combinations-phone-number"
-            },
-            {
-              "isPosted": true,
-              "title": "Palindrome Partitioning",
-              "slug": "palindrome-partitioning"
-            },
-            {
-              "isPosted": true,
-              "title": "Word Search",
-              "slug": "word-search"
+              "title": "Encode and Decode Strings",
+              "slug": "encode-decode-strings",
+              "isPosted": true
             }
           ]
         }
       ]
     },
     {
-      "title": "Sorting Algorithms",
-      "slug": "sorting-algorithms",
-      "icon": "List",
+      "title": "Sorting",
+      "slug": "sorting",
+      "icon": "ArrowUpDown",
       "sections": [
         {
-          "title": "Sorting Fundamentals",
-          "slug": "sorting-fundamentals",
+          "title": "Introduction",
+          "slug": "introduction",
           "lessons": [
             {
-              "isPosted": true,
-              "title": "Standard Sorting Algorithms",
-              "slug": "standard-sorting-algorithms"
-            },
+              "title": "Introduction to Sorting",
+              "slug": "intro-sorting",
+              "isPosted": true
+            }
+          ]
+        },
+        {
+          "title": "O(n²) Sorting Algorithms",
+          "slug": "quadratic-sorting",
+          "lessons": [
             {
-              "isPosted": true,
               "title": "Bubble Sort",
-              "slug": "bubble-sort"
+              "slug": "bubble-sort",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Insertion Sort",
-              "slug": "insertion-sort"
-            },
-            {
-              "isPosted": true,
               "title": "Selection Sort",
-              "slug": "selection-sort"
+              "slug": "selection-sort",
+              "isPosted": true
+            },
+            {
+              "title": "Insertion Sort",
+              "slug": "insertion-sort",
+              "isPosted": true
             }
           ]
         },
         {
-          "title": "Quick Sort",
-          "slug": "quick-sort",
+          "title": "Merge Sort",
+          "slug": "merge-sort-section",
           "lessons": [
             {
-              "isPosted": true,
-              "title": "Quick Sort",
-              "slug": "quick-sort"
-            },
-            {
-              "isPosted": true,
-              "title": "Kth Smallest Element",
-              "slug": "kth-smallest-element"
-            },
-            {
-              "isPosted": true,
-              "title": "Kth Largest Element",
-              "slug": "kth-largest-element"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Two Pointer Technique",
-      "slug": "two-pointer-technique",
-      "icon": "Code",
-      "sections": [
-        {
-          "title": "Two Pointer Applications",
-          "slug": "two-pointer-applications",
-          "lessons": [
-            {
-              "title": "Introduction to Two Pointer Technique",
-              "slug": "intro-two-pointer",
-              "isPosted": true
-            },
-            {
-              "title": "Problems on Two Pointer Technique",
-              "slug": "problems-two-pointer",
-              "isPosted": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Merge Sort",
-      "slug": "merge-sort",
-      "icon": "List",
-      "sections": [
-        {
-          "title": "Merge Sort - Core",
-          "slug": "merge-sort-core",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Merge Two Sorted Arrays",
-              "slug": "merge-two-sorted-arrays"
-            },
-            {
-              "isPosted": true,
               "title": "Implement Merge Sort",
-              "slug": "implement-merge-sort"
+              "slug": "implement-merge-sort",
+              "isPosted": true
             },
             {
-              "isPosted": true,
               "title": "Merge Two Sorted Linked Lists",
-              "slug": "merge-two-sorted-lists"
+              "slug": "merge-two-sorted-lists",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Count Comparisons in Merge Sort",
-              "slug": "count-comparisons-merge-sort"
+              "title": "Count Inversions (Merge Sort)",
+              "slug": "count-inversions",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Stability of Merge Sort",
-              "slug": "stability-merge-sort"
+              "title": "Sort Linked List (Merge Sort)",
+              "slug": "sort-linked-list",
+              "isPosted": true
             }
           ]
         },
         {
-          "title": "Merge Sort Applications",
-          "slug": "merge-sort-applications",
+          "title": "Quick Sort & QuickSelect",
+          "slug": "quick-sort-section",
           "lessons": [
             {
-              "isPosted": true,
-              "title": "Count Inversions",
-              "slug": "count-inversions"
+              "title": "Quick Sort",
+              "slug": "quick-sort",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Sort Linked List",
-              "slug": "sort-linked-list"
+              "title": "Kth Smallest Element (QuickSelect)",
+              "slug": "kth-smallest-element",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "External Sorting",
-              "slug": "external-sorting"
+              "title": "Kth Largest Element (QuickSelect)",
+              "slug": "kth-largest-element",
+              "isPosted": true
             }
           ]
         },
         {
-          "title": "Comparisons and Classification of Sorting",
-          "slug": "sorting-comparisons",
+          "title": "Sorting Theory & Comparisons",
+          "slug": "sorting-theory",
           "lessons": [
             {
-              "isPosted": true,
-              "title": "Merge Sort vs Quick Sort",
-              "slug": "merge-vs-quick-sort"
+              "title": "Sorting Algorithms Overview",
+              "slug": "standard-sorting-algorithms",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Merge Sort vs Heap Sort",
-              "slug": "merge-vs-heap-sort"
-            },
-            {
-              "isPosted": true,
               "title": "Stable vs Unstable Sorting",
-              "slug": "stable-vs-unstable"
+              "slug": "stable-vs-unstable",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Internal vs External Sorting",
-              "slug": "internal-vs-external"
+              "title": "Merge Sort vs Quick Sort",
+              "slug": "merge-vs-quick-sort",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Comparison vs Non-comparison Sorting",
-              "slug": "comparison-vs-non-comparison"
-            },
-            {
-              "isPosted": true,
-              "title": "Time Complexity Analysis",
-              "slug": "time-complexity-analysis"
-            },
-            {
-              "isPosted": true,
-              "title": "Space Complexity Analysis",
-              "slug": "space-complexity-analysis"
+              "title": "Time & Space Complexity Analysis",
+              "slug": "time-complexity-analysis",
+              "isPosted": true
             }
           ]
         }
@@ -487,6 +576,11 @@
               "title": "Peak of Mountain Array",
               "slug": "peak-of-mountain-array",
               "isPosted": true
+            },
+            {
+              "title": "Search in Rotated Sorted Array",
+              "slug": "search-rotated-sorted-array",
+              "isPosted": true
             }
           ]
         }
@@ -497,6 +591,17 @@
       "slug": "binary-search-on-answer",
       "icon": "Target",
       "sections": [
+        {
+          "title": "Introduction",
+          "slug": "introduction",
+          "lessons": [
+            {
+              "title": "Introduction to Binary Search on Answer",
+              "slug": "intro-binary-search-answer",
+              "isPosted": true
+            }
+          ]
+        },
         {
           "title": "Partition / Allocation Type",
           "slug": "partition-allocation",
@@ -569,167 +674,25 @@
               "isPosted": true
             }
           ]
-        },
-        {
-          "title": "Rate / Speed Problems",
-          "slug": "rate-speed-problems",
-          "lessons": [
-            {
-              "title": "Minimum Eating Speed (Koko Bananas)",
-              "slug": "minimum-eating-speed",
-              "isPosted": true
-            },
-            {
-              "title": "Minimum Speed to Arrive on Time",
-              "slug": "minimum-speed-arrive-time",
-              "isPosted": true
-            },
-            {
-              "title": "Minimum Time to Complete Trips",
-              "slug": "minimum-time-complete-trips",
-              "isPosted": true
-            }
-          ]
         }
       ]
     },
     {
-      "title": "Essential Programming Math",
-      "slug": "essential-math",
-      "icon": "Calculator",
+      "title": "Two Pointers",
+      "slug": "two-pointers",
+      "icon": "GitCompareArrows",
       "sections": [
         {
-          "title": "Core Number Operations",
-          "slug": "core-number-operations",
+          "title": "Two Pointer Applications",
+          "slug": "two-pointer-applications",
           "lessons": [
             {
-              "isPosted": true,
-              "title": "GCD and LCM",
-              "slug": "gcd-lcm"
+              "title": "Introduction to Two Pointer Technique",
+              "slug": "intro-two-pointer",
+              "isPosted": true
             }
           ]
         },
-        {
-          "title": "Number System & Conversions",
-          "slug": "number-system-conversions",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Decimal Binary Conversion",
-              "slug": "decimal-binary"
-            }
-          ]
-        },
-        {
-          "title": "Divisibility & Factors",
-          "slug": "divisibility-factors",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Divisors and Factors",
-              "slug": "divisors-factors"
-            }
-          ]
-        },
-        {
-          "title": "Prime Basics",
-          "slug": "prime-basics",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Check Prime Number",
-              "slug": "check-prime"
-            }
-          ]
-        },
-        {
-          "title": "Prime Factorization",
-          "slug": "prime-factorization",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Prime Factorization",
-              "slug": "prime-factorization"
-            }
-          ]
-        },
-        {
-          "title": "Sieve Techniques",
-          "slug": "standard-sieve",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Sieve of Eratosthenes",
-              "slug": "sieve-eratosthenes"
-            },
-            {
-              "isPosted": true,
-              "title": "Segmented Sieve",
-              "slug": "segmented-sieve"
-            }
-          ]
-        },
-        {
-          "title": "Modular Arithmetic",
-          "slug": "core-modular-ops",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Modular Operations",
-              "slug": "modular-operations"
-            },
-            {
-              "isPosted": true,
-              "title": "Modular Inverse",
-              "slug": "modular-inverse"
-            }
-          ]
-        },
-        {
-          "title": "Combinatorics & Counting",
-          "slug": "basic-counting",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "nCr and nPr",
-              "slug": "ncr-npr"
-            }
-          ]
-        },
-        {
-          "title": "Game Theory",
-          "slug": "basic-game-problems",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Nim Game",
-              "slug": "nim-game"
-            },
-            {
-              "isPosted": true,
-              "title": "Grundy Numbers",
-              "slug": "grundy-numbers"
-            }
-          ]
-        },
-        {
-          "title": "Math Pattern Problems",
-          "slug": "math-pattern-problems",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Math Patterns",
-              "slug": "math-patterns"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Two Pointers & Sliding Window",
-      "slug": "two-pointers-sliding-window",
-      "icon": "Text",
-      "sections": [
         {
           "title": "Two Pointers – Same Direction",
           "slug": "two-pointers-same-direction",
@@ -809,6 +772,29 @@
               "isPosted": true,
               "title": "Trapping Rain Water",
               "slug": "trapping-rain-water"
+            },
+            {
+              "title": "Sort Colors (Dutch National Flag)",
+              "slug": "sort-colors",
+              "isPosted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sliding Window",
+      "slug": "sliding-window",
+      "icon": "SlidersHorizontal",
+      "sections": [
+        {
+          "title": "Introduction",
+          "slug": "introduction",
+          "lessons": [
+            {
+              "title": "Introduction to Sliding Window",
+              "slug": "intro-sliding-window",
+              "isPosted": true
             }
           ]
         },
@@ -913,82 +899,16 @@
               "isPosted": true,
               "title": "Number of Subarrays with Product Less Than K",
               "slug": "subarray-product-less-than-k"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "String & Hashing Problems",
-      "slug": "string-hashing-problems",
-      "icon": "Text",
-      "sections": [
-        {
-          "title": "Hashing",
-          "slug": "hashing",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Introduction",
-              "slug": "introduction"
             },
             {
-              "isPosted": true,
-              "title": "C++ Hashing Internals",
-              "slug": "cpp-hashing-internals"
+              "title": "Subarrays with K Different Integers",
+              "slug": "subarrays-k-different-integers",
+              "isPosted": true
             },
             {
-              "isPosted": true,
-              "title": "Java Hashing Internals",
-              "slug": "java-hashing-internals"
-            }
-          ]
-        },
-        {
-          "title": "String & Rolling Hash",
-          "slug": "string-rolling-hash",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "String & Rolling Hash",
-              "slug": "string-rolling-hash"
-            },
-            {
-              "isPosted": true,
-              "title": "Problems on Rolling Hash",
-              "slug": "problems-on-rolling-hash"
-            }
-          ]
-        },
-        {
-          "title": "Substring Matching",
-          "slug": "substring-matching",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Substring Matching",
-              "slug": "substring-matching"
-            },
-            {
-              "isPosted": true,
-              "title": "Longest Common Substring",
-              "slug": "longest-common-substring"
-            },
-            {
-              "isPosted": true,
-              "title": "Minimum Window Substring",
-              "slug": "minimum-window-substring"
-            }
-          ]
-        },
-        {
-          "title": "Hashing Based Problems",
-          "slug": "hashing-based-problems",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Group Anagrams",
-              "slug": "group-anagrams"
+              "title": "Longest Substring with At Most K Distinct Characters",
+              "slug": "longest-substring-k-distinct",
+              "isPosted": true
             }
           ]
         }
@@ -999,6 +919,17 @@
       "slug": "prefix-sum",
       "icon": "Plus",
       "sections": [
+        {
+          "title": "Introduction",
+          "slug": "introduction",
+          "lessons": [
+            {
+              "title": "Introduction to Prefix Sum",
+              "slug": "intro-prefix-sum",
+              "isPosted": true
+            }
+          ]
+        },
         {
           "title": "Prefix Sum Fundamentals",
           "slug": "prefix-sum-fundamentals",
@@ -1053,10 +984,222 @@
       ]
     },
     {
+      "title": "Recursion & Backtracking",
+      "slug": "recursion-backtracking",
+      "icon": "Undo2",
+      "sections": [
+        {
+          "title": "Recursion Fundamentals",
+          "slug": "recursion-fundamentals",
+          "lessons": [
+            {
+              "title": "Subarrays vs Subsequences vs Subsets",
+              "slug": "subarrays-vs-subsequences-vs-subsets",
+              "isPosted": true
+            },
+            {
+              "title": "Recursion Tree Understanding",
+              "slug": "recursion-tree-understanding",
+              "isPosted": true
+            },
+            {
+              "title": "Recurrence Relation Basics",
+              "slug": "recurrence-relation-basics",
+              "isPosted": true
+            },
+            {
+              "title": "Tower of Hanoi",
+              "slug": "tower-of-hanoi",
+              "isPosted": true
+            }
+          ]
+        },
+        {
+          "title": "Generation Patterns",
+          "slug": "generation-patterns",
+          "lessons": [
+            {
+              "title": "Generate All Subarrays",
+              "slug": "generate-all-subarrays",
+              "isPosted": true
+            },
+            {
+              "title": "Generate All Subsequences",
+              "slug": "generate-all-subsequences",
+              "isPosted": true
+            },
+            {
+              "title": "Generate All Subsets (Recursion)",
+              "slug": "generate-all-subsets-recursion",
+              "isPosted": true
+            },
+            {
+              "title": "Generate All Permutations",
+              "slug": "generate-all-permutations",
+              "isPosted": true
+            },
+            {
+              "title": "Permutations with Duplicates",
+              "slug": "permutations-with-duplicates",
+              "isPosted": true
+            },
+            {
+              "title": "Subsets II (with Duplicates)",
+              "slug": "subsets-with-duplicates",
+              "isPosted": true
+            }
+          ]
+        },
+        {
+          "title": "Combination & Sum Patterns",
+          "slug": "combination-patterns",
+          "lessons": [
+            {
+              "title": "Combination Sum",
+              "slug": "combination-sum",
+              "isPosted": true
+            },
+            {
+              "title": "Combination Sum II",
+              "slug": "combination-sum-ii",
+              "isPosted": true
+            },
+            {
+              "title": "Letter Combinations of Phone Number",
+              "slug": "letter-combinations-phone-number",
+              "isPosted": true
+            },
+            {
+              "title": "Palindrome Partitioning",
+              "slug": "palindrome-partitioning",
+              "isPosted": true
+            }
+          ]
+        },
+        {
+          "title": "Constraint Satisfaction (Grid/Board)",
+          "slug": "constraint-satisfaction",
+          "lessons": [
+            {
+              "title": "N-Queens",
+              "slug": "n-queens",
+              "isPosted": true
+            },
+            {
+              "title": "Sudoku Solver",
+              "slug": "sudoku-solver",
+              "isPosted": true
+            },
+            {
+              "title": "Rat in a Maze",
+              "slug": "rat-in-maze",
+              "isPosted": true
+            },
+            {
+              "title": "Word Search",
+              "slug": "word-search",
+              "isPosted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Bit Manipulation",
+      "slug": "bit-manipulation",
+      "icon": "Binary",
+      "sections": [
+        {
+          "title": "Bit Fundamentals",
+          "slug": "bit-fundamentals",
+          "lessons": [
+            {
+              "title": "Bit Masking Basics",
+              "slug": "bit-masking-basics",
+              "isPosted": true
+            },
+            {
+              "title": "Check/Set/Unset/Toggle Bit",
+              "slug": "check-set-unset-toggle-bit",
+              "isPosted": true
+            },
+            {
+              "title": "Count Set Bits",
+              "slug": "count-set-bits",
+              "isPosted": true
+            },
+            {
+              "title": "Power of Two Check",
+              "slug": "power-of-two-check",
+              "isPosted": true
+            },
+            {
+              "title": "Reverse Bits",
+              "slug": "reverse-bits",
+              "isPosted": true
+            }
+          ]
+        },
+        {
+          "title": "XOR Patterns",
+          "slug": "xor-patterns",
+          "lessons": [
+            {
+              "title": "Single Number (XOR Based)",
+              "slug": "single-number",
+              "isPosted": true
+            },
+            {
+              "title": "Two Non-Repeating Numbers",
+              "slug": "two-non-repeating-numbers",
+              "isPosted": true
+            },
+            {
+              "title": "Missing Number",
+              "slug": "missing-number",
+              "isPosted": true
+            },
+            {
+              "title": "Sum of Two Integers (No +/-)",
+              "slug": "sum-two-integers",
+              "isPosted": true
+            }
+          ]
+        },
+        {
+          "title": "Bitmask Techniques",
+          "slug": "bitmask-techniques",
+          "lessons": [
+            {
+              "title": "Generate Subsets using Bitmask",
+              "slug": "generate-subsets-bitmask",
+              "isPosted": true
+            },
+            {
+              "title": "Counting Bits (0 to n)",
+              "slug": "counting-bits",
+              "isPosted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "Stacks",
       "slug": "stacks",
       "icon": "Layers",
       "sections": [
+        {
+          "title": "Introduction",
+          "slug": "introduction",
+          "lessons": [
+            {
+              "title": "Introduction to Stacks",
+              "slug": "intro-stacks",
+              "isPosted": true
+            }
+          ]
+        },
         {
           "title": "Stack - Core Operations",
           "slug": "stack-core-operations",
@@ -1144,9 +1287,9 @@
               "slug": "largest-rectangle-histogram"
             },
             {
-              "isPosted": true,
-              "title": "Trapping Rain Water",
-              "slug": "trapping-rain-water"
+              "title": "Maximal Rectangle",
+              "slug": "maximal-rectangle",
+              "isPosted": true
             }
           ]
         },
@@ -1199,6 +1342,17 @@
       "icon": "Layers",
       "sections": [
         {
+          "title": "Introduction",
+          "slug": "introduction",
+          "lessons": [
+            {
+              "title": "Introduction to Queues",
+              "slug": "intro-queues",
+              "isPosted": true
+            }
+          ]
+        },
+        {
           "title": "Queue - Core Operations",
           "slug": "queue-core-operations",
           "lessons": [
@@ -1236,11 +1390,6 @@
             },
             {
               "isPosted": true,
-              "title": "Sliding Window Maximum",
-              "slug": "sliding-window-maximum"
-            },
-            {
-              "isPosted": true,
               "title": "Sliding Window Minimum",
               "slug": "sliding-window-minimum"
             }
@@ -1268,6 +1417,17 @@
       "title": "Linked Lists",
       "icon": "Link2",
       "sections": [
+        {
+          "title": "Introduction",
+          "slug": "introduction",
+          "lessons": [
+            {
+              "title": "Introduction to Linked Lists",
+              "slug": "intro-linked-lists",
+              "isPosted": true
+            }
+          ]
+        },
         {
           "title": "Singly Linked List - Core Operations",
           "lessons": [
@@ -1505,22 +1665,23 @@
       "icon": "TreePine",
       "sections": [
         {
+          "title": "Introduction",
+          "slug": "introduction",
+          "lessons": [
+            {
+              "title": "Introduction to Trees",
+              "slug": "intro-trees",
+              "isPosted": true
+            }
+          ]
+        },
+        {
           "title": "Binary Tree Core Operations",
           "slug": "binary-tree-core-operations",
           "lessons": [
             {
               "title": "Insert/Update/Search/Delete BT",
               "slug": "bt-core-ops",
-              "isPosted": true
-            },
-            {
-              "title": "Create Binary Tree (manual + level order)",
-              "slug": "create-binary-tree",
-              "isPosted": true
-            },
-            {
-              "title": "Count Total Nodes",
-              "slug": "count-total-nodes",
               "isPosted": true
             },
             {
@@ -1690,6 +1851,11 @@
               "title": "Kth Ancestor",
               "slug": "kth-ancestor",
               "isPosted": true
+            },
+            {
+              "title": "Count Good Nodes in Binary Tree",
+              "slug": "count-good-nodes",
+              "isPosted": true
             }
           ]
         },
@@ -1741,6 +1907,17 @@
       "slug": "binary-search-trees",
       "icon": "TreePine",
       "sections": [
+        {
+          "title": "Introduction",
+          "slug": "introduction",
+          "lessons": [
+            {
+              "title": "Introduction to Binary Search Trees",
+              "slug": "intro-bst",
+              "isPosted": true
+            }
+          ]
+        },
         {
           "title": "BST Core Operations",
           "slug": "bst-core-operations",
@@ -1888,57 +2065,90 @@
       ]
     },
     {
-      "title": "Advanced Tree Problems",
-      "slug": "advanced-tree-problems",
-      "icon": "GitBranch",
+      "title": "Heaps",
+      "slug": "heaps",
+      "icon": "Triangle",
       "sections": [
         {
-          "title": "Advanced / Hard / DP on Trees",
-          "slug": "advanced-hard-dp-trees",
+          "title": "Introduction",
+          "slug": "introduction",
           "lessons": [
             {
-              "title": "Binary Tree Cameras",
-              "slug": "binary-tree-cameras",
+              "title": "Introduction to Heaps & Priority Queues",
+              "slug": "intro-heaps",
+              "isPosted": true
+            }
+          ]
+        },
+        {
+          "title": "Heap Fundamentals",
+          "slug": "heap-fundamentals",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Heaps",
+              "slug": "heaps"
+            },
+            {
+              "isPosted": true,
+              "title": "Min/Max Heap",
+              "slug": "min-max-heap"
+            },
+            {
+              "isPosted": true,
+              "title": "Heap Sort",
+              "slug": "heap-sort"
+            },
+            {
+              "isPosted": true,
+              "title": "Problems on Heap",
+              "slug": "problems-on-heap"
+            }
+          ]
+        },
+        {
+          "title": "Top K",
+          "slug": "top-k",
+          "lessons": [
+            {
+              "title": "K Closest Points",
+              "slug": "k-closest-points",
               "isPosted": true
             },
             {
-              "title": "House Robber III",
-              "slug": "house-robber-iii",
+              "title": "Merge K Sorted Lists",
+              "slug": "merge-k-sorted-lists",
               "isPosted": true
             },
             {
-              "title": "Largest BST in Binary Tree",
-              "slug": "largest-bst-in-binary-tree",
+              "title": "Kth Largest Element in an Array",
+              "slug": "kth-largest-element-in-array",
               "isPosted": true
             },
             {
-              "title": "Maximum Sum BST",
-              "slug": "maximum-sum-bst",
+              "title": "Kth Smallest Element in a Sorted Matrix",
+              "slug": "kth-smallest-element-in-sorted-matrix",
               "isPosted": true
             },
             {
-              "title": "Distribute Coins",
-              "slug": "distribute-coins",
+              "title": "Top K Frequent Elements",
+              "slug": "top-k-frequent-elements",
               "isPosted": true
             },
             {
-              "title": "Binary Lifting (kth ancestor optimized)",
-              "slug": "binary-lifting",
+              "title": "Reorganize String",
+              "slug": "reorganize-string",
               "isPosted": true
-            },
+            }
+          ]
+        },
+        {
+          "title": "Multiple Heaps",
+          "slug": "multiple-heaps",
+          "lessons": [
             {
-              "title": "Re-rooting DP",
-              "slug": "re-rooting-dp",
-              "isPosted": true
-            },
-            {
-              "title": "Tree Diameter (DP style)",
-              "slug": "tree-diameter-dp",
-              "isPosted": true
-            },
-            {
-              "title": "Nodes at Distance K",
-              "slug": "nodes-at-distance-k",
+              "title": "Median of Data Stream",
+              "slug": "median-of-data-stream",
               "isPosted": true
             }
           ]
@@ -1950,6 +2160,17 @@
       "slug": "trie",
       "icon": "GitBranch",
       "sections": [
+        {
+          "title": "Introduction",
+          "slug": "introduction",
+          "lessons": [
+            {
+              "title": "Introduction to Trie (Prefix Tree)",
+              "slug": "intro-trie",
+              "isPosted": true
+            }
+          ]
+        },
         {
           "title": "Trie Core Operations",
           "slug": "trie-core-operations",
@@ -2130,69 +2351,63 @@
       ]
     },
     {
-      "title": "Heaps",
-      "slug": "heaps",
-      "icon": "Triangle",
+      "title": "Advanced Tree Problems",
+      "slug": "advanced-tree-problems",
+      "icon": "GitBranch",
       "sections": [
         {
-          "title": "Heap Fundamentals",
-          "slug": "heap-fundamentals",
+          "title": "Introduction",
+          "slug": "introduction",
           "lessons": [
             {
-              "isPosted": true,
-              "title": "Heaps",
-              "slug": "heaps"
-            },
-            {
-              "isPosted": true,
-              "title": "Min/Max Heap",
-              "slug": "min-max-heap"
-            },
-            {
-              "isPosted": true,
-              "title": "Heap Sort",
-              "slug": "heap-sort"
-            },
-            {
-              "isPosted": true,
-              "title": "Problems on Heap",
-              "slug": "problems-on-heap"
-            }
-          ]
-        },
-        {
-          "title": "Top K",
-          "slug": "top-k",
-          "lessons": [
-            {
-              "title": "K Closest Points",
-              "slug": "k-closest-points",
-              "isPosted": true
-            },
-            {
-              "title": "Merge K Sorted Lists",
-              "slug": "merge-k-sorted-lists",
-              "isPosted": true
-            },
-            {
-              "title": "Kth Largest Element in an Array",
-              "slug": "kth-largest-element-in-array",
-              "isPosted": true
-            },
-            {
-              "title": "Kth Smallest Element in a Sorted Matrix",
-              "slug": "kth-smallest-element-in-sorted-matrix",
+              "title": "Introduction to Advanced Tree Problems",
+              "slug": "intro-advanced-trees",
               "isPosted": true
             }
           ]
         },
         {
-          "title": "Multiple Heaps",
-          "slug": "multiple-heaps",
+          "title": "Advanced / Hard / DP on Trees",
+          "slug": "advanced-hard-dp-trees",
           "lessons": [
             {
-              "title": "Median of Data Stream",
-              "slug": "median-of-data-stream",
+              "title": "Binary Tree Cameras",
+              "slug": "binary-tree-cameras",
+              "isPosted": true
+            },
+            {
+              "title": "Largest BST in Binary Tree",
+              "slug": "largest-bst-in-binary-tree",
+              "isPosted": true
+            },
+            {
+              "title": "Maximum Sum BST",
+              "slug": "maximum-sum-bst",
+              "isPosted": true
+            },
+            {
+              "title": "Distribute Coins",
+              "slug": "distribute-coins",
+              "isPosted": true
+            },
+            {
+              "title": "Binary Lifting (kth ancestor optimized)",
+              "slug": "binary-lifting",
+              "isPosted": true
+            },
+            {
+              "title": "Re-rooting DP",
+              "slug": "re-rooting-dp",
+              "isPosted": true
+            },
+            {
+              "title": "Tree Diameter (DP style)",
+              "slug": "tree-diameter-dp",
+              "isPosted": true
+            },
+            {
+              "title": "Nodes at Distance K",
+              "slug": "nodes-at-distance-k",
               "isPosted": true
             }
           ]
@@ -2200,8 +2415,279 @@
       ]
     },
     {
+      "title": "Graphs",
+      "icon": "Network",
+      "sections": [
+        {
+          "title": "Introduction",
+          "slug": "introduction",
+          "lessons": [
+            {
+              "title": "Introduction to Graphs",
+              "slug": "intro-graphs",
+              "isPosted": true
+            }
+          ]
+        },
+        {
+          "title": "Graph Fundamentals",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Build Graph (Adjacency List)",
+              "slug": "build-graph"
+            },
+            {
+              "isPosted": true,
+              "title": "Weighted Graph Representation",
+              "slug": "weighted-graph"
+            },
+            {
+              "isPosted": true,
+              "title": "Find Degree (In-degree / Out-degree)",
+              "slug": "find-degree"
+            }
+          ],
+          "slug": "graph-fundamentals"
+        },
+        {
+          "title": "Traversals & Basic Properties",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Breadth-First Search (BFS)",
+              "slug": "bfs"
+            },
+            {
+              "isPosted": true,
+              "title": "Depth-First Search (DFS)",
+              "slug": "dfs"
+            },
+            {
+              "isPosted": true,
+              "title": "Count Connected Components",
+              "slug": "count-connected-components"
+            },
+            {
+              "isPosted": true,
+              "title": "Detect Cycle (Undirected)",
+              "slug": "detect-cycle-undirected"
+            },
+            {
+              "isPosted": true,
+              "title": "Detect Cycle (Directed)",
+              "slug": "detect-cycle-directed"
+            },
+            {
+              "isPosted": true,
+              "title": "Check Bipartite Graph",
+              "slug": "check-bipartite"
+            },
+            {
+              "title": "Graph Valid Tree",
+              "slug": "graph-valid-tree",
+              "isPosted": true
+            }
+          ],
+          "slug": "traversals-basic-properties"
+        },
+        {
+          "title": "Grid & Graph Patterns",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Number of Islands",
+              "slug": "number-of-islands"
+            },
+            {
+              "isPosted": true,
+              "title": "Max Area of Island",
+              "slug": "max-area-island"
+            },
+            {
+              "isPosted": true,
+              "title": "Flood Fill Algorithm",
+              "slug": "flood-fill"
+            },
+            {
+              "isPosted": true,
+              "title": "Rotting Oranges",
+              "slug": "rotting-oranges"
+            },
+            {
+              "isPosted": true,
+              "title": "Surrounded Regions",
+              "slug": "surrounded-regions"
+            },
+            {
+              "isPosted": true,
+              "title": "Number of Provinces",
+              "slug": "number-of-provinces"
+            }
+          ],
+          "slug": "grid-graph-patterns"
+        },
+        {
+          "title": "Topological Sort",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Topological Sort (DFS)",
+              "slug": "topological-sort-dfs"
+            },
+            {
+              "isPosted": true,
+              "title": "Topological Sort (Kahn's BFS)",
+              "slug": "topological-sort-kahns"
+            },
+            {
+              "isPosted": true,
+              "title": "Course Schedule I",
+              "slug": "course-schedule-i"
+            },
+            {
+              "isPosted": true,
+              "title": "Course Schedule II",
+              "slug": "course-schedule-ii"
+            },
+            {
+              "isPosted": true,
+              "title": "Find Eventual Safe States",
+              "slug": "eventual-safe-states"
+            }
+          ],
+          "slug": "topological-sort"
+        },
+        {
+          "title": "Shortest Path Algorithms",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Dijkstra's Algorithm",
+              "slug": "dijkstra"
+            },
+            {
+              "isPosted": true,
+              "title": "Shortest Path in Weighted Graph",
+              "slug": "shortest-path-weighted"
+            },
+            {
+              "isPosted": true,
+              "title": "0-1 BFS",
+              "slug": "zero-one-bfs"
+            },
+            {
+              "title": "Word Ladder",
+              "slug": "word-ladder",
+              "isPosted": true
+            },
+            {
+              "title": "Word Ladder II",
+              "slug": "word-ladder-ii",
+              "isPosted": true
+            },
+            {
+              "isPosted": true,
+              "title": "Network Delay Time",
+              "slug": "network-delay-time"
+            },
+            {
+              "isPosted": true,
+              "title": "Cheapest Flights Within K Stops",
+              "slug": "cheapest-flights"
+            }
+          ],
+          "slug": "shortest-path"
+        },
+        {
+          "title": "Disjoint Set Union (DSU)",
+          "lessons": [
+            {
+              "isPosted": true,
+              "title": "Implement DSU",
+              "slug": "implement-dsu"
+            },
+            {
+              "isPosted": true,
+              "title": "Detect Cycle using DSU",
+              "slug": "detect-cycle-dsu"
+            },
+            {
+              "isPosted": true,
+              "title": "Number of Provinces (DSU)",
+              "slug": "provinces-dsu"
+            },
+            {
+              "isPosted": true,
+              "title": "Redundant Connection",
+              "slug": "redundant-connection"
+            },
+            {
+              "title": "Accounts Merge",
+              "slug": "accounts-merge",
+              "isPosted": true
+            }
+          ],
+          "slug": "dsu"
+        },
+        {
+          "title": "Minimum Spanning Tree & Advanced",
+          "slug": "mst-advanced",
+          "lessons": [
+            {
+              "title": "Bellman-Ford Algorithm",
+              "slug": "bellman-ford",
+              "isPosted": true
+            },
+            {
+              "title": "Floyd-Warshall Algorithm",
+              "slug": "floyd-warshall",
+              "isPosted": true
+            },
+            {
+              "title": "Kruskal's MST Algorithm",
+              "slug": "kruskals-mst",
+              "isPosted": true
+            },
+            {
+              "title": "Prim's MST Algorithm",
+              "slug": "prims-mst",
+              "isPosted": true
+            },
+            {
+              "title": "Clone Graph",
+              "slug": "clone-graph",
+              "isPosted": true
+            },
+            {
+              "title": "Pacific Atlantic Water Flow",
+              "slug": "pacific-atlantic-water-flow",
+              "isPosted": true
+            },
+            {
+              "title": "Alien Dictionary",
+              "slug": "alien-dictionary",
+              "isPosted": true
+            }
+          ]
+        }
+      ],
+      "slug": "graphs"
+    },
+    {
       "title": "Greedy Algorithms",
       "sections": [
+        {
+          "title": "Introduction",
+          "slug": "introduction",
+          "lessons": [
+            {
+              "title": "Introduction to Greedy Algorithms",
+              "slug": "intro-greedy",
+              "isPosted": true
+            }
+          ]
+        },
         {
           "title": "Introduction",
           "lessons": [
@@ -2235,6 +2721,11 @@
               "isPosted": true,
               "title": "Meeting Rooms II",
               "slug": "meeting-rooms-ii"
+            },
+            {
+              "title": "Insert Interval",
+              "slug": "insert-interval",
+              "isPosted": true
             }
           ],
           "slug": "interval-based"
@@ -2256,6 +2747,16 @@
               "isPosted": true,
               "title": "Gas Station",
               "slug": "gas-station"
+            },
+            {
+              "title": "Minimum Platforms",
+              "slug": "minimum-platforms",
+              "isPosted": true
+            },
+            {
+              "title": "Fractional Knapsack",
+              "slug": "fractional-knapsack",
+              "isPosted": true
             }
           ],
           "slug": "scheduling-allocation"
@@ -2274,9 +2775,19 @@
               "slug": "jump-game-ii"
             },
             {
-              "isPosted": true,
-              "title": "Remove K Digits",
-              "slug": "remove-k-digits"
+              "title": "Candy Distribution",
+              "slug": "candy",
+              "isPosted": true
+            },
+            {
+              "title": "Partition Labels",
+              "slug": "partition-labels",
+              "isPosted": true
+            },
+            {
+              "title": "Valid Parenthesis String",
+              "slug": "valid-parenthesis-string",
+              "isPosted": true
             }
           ],
           "slug": "others"
@@ -2501,6 +3012,16 @@
               "isPosted": true,
               "title": "Palindrome Partitioning II",
               "slug": "palindrome-partitioning-ii"
+            },
+            {
+              "title": "Wildcard Matching",
+              "slug": "wildcard-matching",
+              "isPosted": true
+            },
+            {
+              "title": "Regular Expression Matching",
+              "slug": "regex-matching",
+              "isPosted": true
             }
           ]
         },
@@ -2635,206 +3156,74 @@
       ]
     },
     {
-      "title": "Graphs",
-      "icon": "Network",
+      "title": "String & Hashing Problems",
+      "slug": "string-hashing-problems",
+      "icon": "Text",
       "sections": [
         {
-          "title": "Graph Fundamentals",
+          "title": "Hashing",
+          "slug": "hashing",
           "lessons": [
             {
               "isPosted": true,
-              "title": "Build Graph (Adjacency List)",
-              "slug": "build-graph"
+              "title": "Introduction",
+              "slug": "introduction"
             },
             {
               "isPosted": true,
-              "title": "Weighted Graph Representation",
-              "slug": "weighted-graph"
+              "title": "C++ Hashing Internals",
+              "slug": "cpp-hashing-internals"
             },
             {
               "isPosted": true,
-              "title": "Find Degree (In-degree / Out-degree)",
-              "slug": "find-degree"
+              "title": "Java Hashing Internals",
+              "slug": "java-hashing-internals"
             }
-          ],
-          "slug": "graph-fundamentals"
+          ]
         },
         {
-          "title": "Traversals & Basic Properties",
+          "title": "String & Rolling Hash",
+          "slug": "string-rolling-hash",
           "lessons": [
             {
               "isPosted": true,
-              "title": "Breadth-First Search (BFS)",
-              "slug": "bfs"
+              "title": "String & Rolling Hash",
+              "slug": "string-rolling-hash"
             },
             {
               "isPosted": true,
-              "title": "Depth-First Search (DFS)",
-              "slug": "dfs"
-            },
-            {
-              "isPosted": true,
-              "title": "Count Connected Components",
-              "slug": "count-connected-components"
-            },
-            {
-              "isPosted": true,
-              "title": "Detect Cycle (Undirected)",
-              "slug": "detect-cycle-undirected"
-            },
-            {
-              "isPosted": true,
-              "title": "Detect Cycle (Directed)",
-              "slug": "detect-cycle-directed"
-            },
-            {
-              "isPosted": true,
-              "title": "Check Bipartite Graph",
-              "slug": "check-bipartite"
+              "title": "Problems on Rolling Hash",
+              "slug": "problems-on-rolling-hash"
             }
-          ],
-          "slug": "traversals-basic-properties"
+          ]
         },
         {
-          "title": "Grid & Graph Patterns",
+          "title": "Substring Matching",
+          "slug": "substring-matching",
           "lessons": [
             {
               "isPosted": true,
-              "title": "Number of Islands",
-              "slug": "number-of-islands"
-            },
-            {
-              "isPosted": true,
-              "title": "Max Area of Island",
-              "slug": "max-area-island"
-            },
-            {
-              "isPosted": true,
-              "title": "Flood Fill Algorithm",
-              "slug": "flood-fill"
-            },
-            {
-              "isPosted": true,
-              "title": "Rotting Oranges",
-              "slug": "rotting-oranges"
-            },
-            {
-              "isPosted": true,
-              "title": "Surrounded Regions",
-              "slug": "surrounded-regions"
-            },
-            {
-              "isPosted": true,
-              "title": "Number of Provinces",
-              "slug": "number-of-provinces"
+              "title": "Substring Matching",
+              "slug": "substring-matching"
             }
-          ],
-          "slug": "grid-graph-patterns"
-        },
-        {
-          "title": "Topological Sort",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Topological Sort (DFS)",
-              "slug": "topological-sort-dfs"
-            },
-            {
-              "isPosted": true,
-              "title": "Topological Sort (Kahn's BFS)",
-              "slug": "topological-sort-kahns"
-            },
-            {
-              "isPosted": true,
-              "title": "Course Schedule I",
-              "slug": "course-schedule-i"
-            },
-            {
-              "isPosted": true,
-              "title": "Course Schedule II",
-              "slug": "course-schedule-ii"
-            },
-            {
-              "isPosted": true,
-              "title": "Find Eventual Safe States",
-              "slug": "eventual-safe-states"
-            }
-          ],
-          "slug": "topological-sort"
-        },
-        {
-          "title": "Shortest Path Algorithms",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Dijkstra's Algorithm",
-              "slug": "dijkstra"
-            },
-            {
-              "isPosted": true,
-              "title": "Shortest Path in Weighted Graph",
-              "slug": "shortest-path-weighted"
-            },
-            {
-              "isPosted": true,
-              "title": "0-1 BFS",
-              "slug": "zero-one-bfs"
-            },
-            {
-              "title": "Word Ladder",
-              "slug": "word-ladder",
-              "isPosted": true
-            },
-            {
-              "title": "Word Ladder II",
-              "slug": "word-ladder-ii",
-              "isPosted": true
-            },
-            {
-              "isPosted": true,
-              "title": "Network Delay Time",
-              "slug": "network-delay-time"
-            },
-            {
-              "isPosted": true,
-              "title": "Cheapest Flights Within K Stops",
-              "slug": "cheapest-flights"
-            }
-          ],
-          "slug": "shortest-path"
-        },
-        {
-          "title": "Disjoint Set Union (DSU)",
-          "lessons": [
-            {
-              "isPosted": true,
-              "title": "Implement DSU",
-              "slug": "implement-dsu"
-            },
-            {
-              "isPosted": true,
-              "title": "Detect Cycle using DSU",
-              "slug": "detect-cycle-dsu"
-            },
-            {
-              "isPosted": true,
-              "title": "Number of Provinces (DSU)",
-              "slug": "provinces-dsu"
-            },
-            {
-              "isPosted": true,
-              "title": "Redundant Connection",
-              "slug": "redundant-connection"
-            }
-          ],
-          "slug": "dsu"
+          ]
         }
-      ],
-      "slug": "graphs"
+      ]
     },
     {
       "title": "Miscellaneous",
       "sections": [
+        {
+          "title": "Introduction",
+          "slug": "introduction",
+          "lessons": [
+            {
+              "title": "Introduction to Miscellaneous Topics",
+              "slug": "intro-miscellaneous",
+              "isPosted": true
+            }
+          ]
+        },
         {
           "title": "Design Problems",
           "lessons": [
@@ -2884,17 +3273,6 @@
             {
               "title": "Find Row with Maximum Number of 1s",
               "slug": "max-ones-in-row",
-              "isPosted": true
-            }
-          ]
-        },
-        {
-          "title": "Array Problems",
-          "slug": "array-problems",
-          "lessons": [
-            {
-              "title": "Majority Element",
-              "slug": "majority-element",
               "isPosted": true
             }
           ]

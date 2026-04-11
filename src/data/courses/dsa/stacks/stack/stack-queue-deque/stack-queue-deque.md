@@ -64,3 +64,27 @@ Top element: 10
 **Why O(1) is optimal:**
 - Stack only accesses top element
 - No traversal needed for any operation
+
+
+---
+
+## Constraints
+
+- `Conceptual lesson — no specific LeetCode constraints`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Stack: LIFO order:** Last pushed is first popped
+2. **Queue: FIFO order:** First enqueued is first dequeued
+3. **Deque: both ends:** Can push/pop from front and back
+4. **Empty data structure operations:** Handle underflow
+
+<br>
+
+---
+
+```code```

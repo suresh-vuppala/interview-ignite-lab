@@ -21,6 +21,30 @@ Calculate how much water can be trapped after raining given elevation map.
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ height.length ≤ 2 × 10⁴`
+- `0 ≤ height[i] ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Less than 3 bars:** No water can be trapped
+2. **Monotonically increasing or decreasing:** 0 water
+3. **All same height:** 0 water
+4. **All zeros:** 0 water
+5. **V-shape:** [3,0,3] → 3 units
+6. **Single valley:** [2,0,2] → 2 units
+7. **Multiple valleys:** Water fills independently in each
+
+<br>
+
 ---
 
 ## Solution: Two Pointer Approach

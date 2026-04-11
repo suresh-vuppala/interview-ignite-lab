@@ -1,0 +1,26 @@
+{
+  "title": "Longest Substring with At Most K Distinct Characters",
+  "slug": "longest-substring-k-distinct",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "longest-substring-k-distinct.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/longest_substring_k_distinct.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/LongestSubstringKDistinct.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/longest_substring_k_distinct.py"
+        }
+      ]
+    }
+  ]
+}

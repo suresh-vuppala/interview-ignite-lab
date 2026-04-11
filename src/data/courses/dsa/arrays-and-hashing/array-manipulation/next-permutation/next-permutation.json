@@ -1,0 +1,26 @@
+{
+  "title": "Next Permutation",
+  "slug": "next-permutation",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "next-permutation.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/next_permutation.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/NextPermutation.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/next_permutation.py"
+        }
+      ]
+    }
+  ]
+}

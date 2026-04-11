@@ -13,4 +13,26 @@ Use appropriate tree algorithms and data structures
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single node:** One column sum
+2. **Negative values:** Sums can be negative
+3. **Symmetric tree:** Left and right columns have equal sums
+
+<br>
+
+---
+
 ```code```

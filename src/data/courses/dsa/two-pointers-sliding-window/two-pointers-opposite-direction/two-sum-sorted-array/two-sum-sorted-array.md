@@ -33,6 +33,34 @@ Find two numbers in a sorted array that add up to a target value. Return their i
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `2 ≤ nums.length ≤ 3 × 10⁴`
+- `-1000 ≤ nums[i] ≤ 1000`
+- `nums is sorted in non-decreasing order`
+- `-10⁶ ≤ target ≤ 10⁶`
+- `Exactly one solution exists`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Two elements only:** Array has exactly 2 elements — they must be the answer
+2. **Negative numbers:** Both numbers are negative, e.g., [-5, -3, 0, 2] target = -8
+3. **Zeros involved:** Target is 0 with both positive and negative numbers present
+4. **Duplicates in array:** [1, 1, 2, 3] target = 2 — first pair of duplicates is the answer
+5. **First and last element:** Answer is at the two extremes of the array
+6. **Large target:** Target requires the two largest elements
+7. **Small target:** Target requires the two smallest (most negative) elements
+
+<br>
+
 ---
 
 ## Solution: Two Pointers (Opposite Direction)

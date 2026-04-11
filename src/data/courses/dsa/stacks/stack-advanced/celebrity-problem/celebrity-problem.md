@@ -26,6 +26,30 @@ Return the celebrity's index, or -1 if no celebrity exists.
 
 <br>
 
+
+---
+
+## Constraints
+
+- `2 ≤ n ≤ 1000`
+- `Matrix M[i][j] is 0 or 1`
+- `M[i][i] = 0 (nobody knows themselves)`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **No celebrity exists:** Everyone knows someone or someone doesn't know them
+2. **Celebrity is first person:** Index 0
+3. **Celebrity is last person:** Index n-1
+4. **Two people, one celebrity:** Minimum case
+5. **Everyone knows everyone:** No celebrity (celebrity can't know anyone)
+6. **Nobody knows anyone:** No celebrity (celebrity must be known by all)
+
+<br>
+
 ---
 
 ## Solution: Stack Elimination + Verification

@@ -57,6 +57,29 @@ Since the array is **monotonic** (all `false` before all `true`), we use **binar
 
 ---
 
+
+---
+
+## Constraints
+
+- `1 ≤ arr.length ≤ 10⁵`
+- `Array is boolean-like (false...false, true...true)`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **All false:** Return -1 or arr.length
+2. **All true:** Return 0
+3. **Single element true:** Return 0
+4. **Single element false:** Return -1
+5. **Transition at middle:** Standard case
+6. **Transition at boundaries:** First or last element is the boundary
+
+<br>
+
 ## Complexity Analysis
 
 ### Time Complexity: O(log n)

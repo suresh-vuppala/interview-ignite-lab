@@ -123,6 +123,25 @@ Understanding common time complexities and their relationship with input constra
 
 ---
 
+
+---
+
+## Constraints
+
+- `Introductory lessons — basic constraints`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty input:** Handle base case
+2. **Single element:** Trivial case
+3. **Large input:** Consider time complexity
+
+<br>
+
 ## Complexity Comparison Chart
 
 For n = 1,000,000:
@@ -349,3 +368,7 @@ Sometimes O(n) space can reduce O(n²) to O(n)
 <br>
 
 ---
+
+---
+
+```code```

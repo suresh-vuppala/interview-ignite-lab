@@ -1,0 +1,26 @@
+{
+  "title": "Prim's MST Algorithm",
+  "slug": "prims-mst",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "prims-mst.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/prims_mst.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/PrimsMst.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/prims_mst.py"
+        }
+      ]
+    }
+  ]
+}

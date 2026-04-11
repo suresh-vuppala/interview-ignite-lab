@@ -20,6 +20,29 @@ Given daily temperatures, return array where each element is the number of days 
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ temperatures.length ≤ 10⁵`
+- `30 ≤ temperatures[i] ≤ 100`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Strictly increasing:** [30,31,32,33] → [1,1,1,0] — each waits just 1 day
+2. **Strictly decreasing:** [100,99,98] → [0,0,0] — no warmer day for any
+3. **All same temperature:** [70,70,70] → [0,0,0]
+4. **Single element:** [50] → [0]
+5. **Warmer only at the end:** [30,30,30,100] → [3,2,1,0]
+6. **Two elements:** [30,31] → [1,0]
+
+<br>
+
 ---
 
 ## Solution: Monotonic Stack

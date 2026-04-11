@@ -13,4 +13,29 @@ Use appropriate tree algorithms and data structures
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 100`
+- `1 ≤ preorder[i] ≤ 10⁸`
+- `All values unique`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single element:** Single node tree
+2. **Sorted input:** Right-skewed BST
+3. **Reverse sorted:** Left-skewed BST
+4. **Root is median:** Balanced BST
+
+<br>
+
+---
+
 ```code```

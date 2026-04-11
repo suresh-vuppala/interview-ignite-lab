@@ -13,4 +13,27 @@ Use appropriate tree algorithms and data structures
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 100`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single node:** One path with one element
+2. **Skewed tree:** One long path
+3. **Complete tree:** Multiple paths of same length
+4. **Multiple leaf nodes:** One path per leaf
+
+<br>
+
+---
+
 ```code```

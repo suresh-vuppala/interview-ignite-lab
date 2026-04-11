@@ -10,6 +10,27 @@ Learn multiple approaches to find the middle node of a linked list.
 ## Problem Statement
 Find the middle node of a singly linked list efficiently, handling both even and odd length lists.
 
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single node:** Middle is that node
+2. **Two nodes:** Middle is first or second (depends on convention)
+3. **Even length:** Two possible middles — return second typically
+4. **Odd length:** Exact middle
+5. **Large list:** Slow-fast pointer is O(n) time O(1) space
+
+<br>
+
 ## Approach
 
 ### 1. Two-Pass Approach

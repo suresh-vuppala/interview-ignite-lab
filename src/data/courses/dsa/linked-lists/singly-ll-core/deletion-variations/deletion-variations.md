@@ -10,6 +10,29 @@ Master all deletion operations in a singly linked list including deleting from b
 ## Problem Statement
 Implement all four deletion operations handling edge cases like empty list, single node, and node not found.
 
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 10⁴`
+- `Node to delete exists in the list (usually)`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Delete head:** Update head to head.next
+2. **Delete tail:** Traverse to second-last, set next to null
+3. **Delete only node:** List becomes empty
+4. **Delete from empty list:** Handle gracefully
+5. **Delete middle node:** Standard prev.next = curr.next
+6. **Node not found:** Return list unchanged
+
+<br>
+
 ## Approach
 
 ### 1. Delete from Beginning

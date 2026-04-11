@@ -12,6 +12,31 @@ Implement LRUCache class with:
 - `get(key)`: Return value if exists, else -1
 - `put(key, value)`: Insert or update, evict LRU if capacity exceeded
 
+
+---
+
+## Constraints
+
+- `1 ≤ capacity ≤ 3000`
+- `0 ≤ key ≤ 10⁴`
+- `0 ≤ value ≤ 10⁵`
+- `At most 2 × 10⁵ calls to get and put`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Get non-existent key:** Return -1
+2. **Put when at capacity:** Evict LRU item
+3. **Get moves item to most recent:** Subsequent eviction skips it
+4. **Put existing key:** Update value and move to front
+5. **Capacity = 1:** Every new put evicts the previous
+6. **Sequential access pattern:** LRU always evicts earliest inserted
+
+<br>
+
 ## Approach
 
 ### Data Structures

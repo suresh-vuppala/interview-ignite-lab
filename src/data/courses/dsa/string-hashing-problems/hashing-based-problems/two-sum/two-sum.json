@@ -1,0 +1,26 @@
+{
+  "title": "Two Sum",
+  "slug": "two-sum",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "two-sum.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/two_sum.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/TwoSum.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/two_sum.py"
+        }
+      ]
+    }
+  ]
+}

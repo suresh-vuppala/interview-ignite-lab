@@ -1,0 +1,26 @@
+{
+  "title": "Longest Consecutive Sequence",
+  "slug": "longest-consecutive-sequence",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "longest-consecutive-sequence.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/longest_consecutive_sequence.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/LongestConsecutiveSequence.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/longest_consecutive_sequence.py"
+        }
+      ]
+    }
+  ]
+}

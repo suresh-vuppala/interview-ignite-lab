@@ -241,6 +241,30 @@ We must take at least 2 from nums1 (since nums2 only has 2)
 We can take at most 3 from nums1 (its size)
 ```
 
+
+---
+
+## Constraints
+
+- `1 ≤ nums1.length, nums2.length ≤ 10⁶`
+- `-10⁹ ≤ nums1[i], nums2[j] ≤ 10⁹`
+- `1 ≤ k ≤ nums1.length + nums2.length`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k = 1:** Minimum of both first elements
+2. **k = m + n:** Maximum of both last elements
+3. **One array empty:** kth element of the other array
+4. **k larger than one array:** Must take elements from both
+5. **All elements in one array before the other:** Answer entirely from one array
+6. **Duplicate values across arrays:** Count duplicates properly
+
+<br>
+
 ## Complexity Analysis
 
 ### Time Complexity: **O(log(min(m, n)))**

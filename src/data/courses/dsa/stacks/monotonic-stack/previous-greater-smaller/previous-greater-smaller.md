@@ -32,6 +32,28 @@ The input array is `[4, 5, 2, 10, 8]`.
 4. `10`: Previous smaller is `2`
 5. `8`: Previous smaller is `2`
 
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 10⁵`
+- `-10⁹ ≤ nums[i] ≤ 10⁹`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **First element:** Always has no previous greater/smaller → -1
+2. **Strictly increasing:** Previous greater is always -1; previous smaller is always the element before
+3. **Strictly decreasing:** Previous smaller is always -1
+4. **All same:** Previous greater and smaller are both -1
+5. **Single element:** Both are -1
+
+<br>
+
 ## Solution Approach
 
 **For Previous Greater Element:**
@@ -63,3 +85,7 @@ The input array is `[4, 5, 2, 10, 8]`.
 **Why O(n) is optimal:**
 - Must process each element once
 - Stack maintains monotonic property efficiently
+
+---
+
+```code```

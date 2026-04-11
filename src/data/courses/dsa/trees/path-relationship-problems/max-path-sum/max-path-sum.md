@@ -16,4 +16,29 @@ Return the maximum path sum where path can include any nodes.
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 3 × 10⁴`
+- `-1000 ≤ Node.val ≤ 1000`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **All negative values:** Pick least negative single node
+2. **Single node:** Return its value
+3. **Path through root:** Sum of left path + root + right path
+4. **Path entirely in one subtree:** Don't include root
+5. **Negative child paths:** Exclude them (max with 0)
+
+<br>
+
+---
+
 ```code```

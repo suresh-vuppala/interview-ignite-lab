@@ -13,4 +13,27 @@ Use appropriate tree algorithms and data structures
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty input:** Return null
+2. **Single element:** Single node
+3. **Complete tree input:** Standard BFS construction
+4. **Null values in input:** Represent missing children
+
+<br>
+
+---
+
 ```code```

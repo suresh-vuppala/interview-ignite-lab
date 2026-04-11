@@ -10,6 +10,30 @@ Learn Floyd's Cycle Detection Algorithm (Tortoise and Hare) to detect if a linke
 ## Problem Statement
 Determine if a linked list has a cycle using two pointers.
 
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 10⁴`
+- `-10⁵ ≤ Node.val ≤ 10⁵`
+- `pos is -1 (no cycle) or valid index`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **No cycle:** Fast reaches null → false
+2. **Cycle at head:** Tail connects back to head
+3. **Cycle at middle:** Tail connects to mid-node
+4. **Single node, self-loop:** Cycle of length 1
+5. **Single node, no cycle:** false
+6. **Two nodes with cycle:** Tail points to head
+
+<br>
+
 ## Approach
 
 ### Floyd's Cycle Detection

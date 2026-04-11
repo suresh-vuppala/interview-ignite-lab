@@ -22,6 +22,30 @@ Given an array of non-negative integers where each element represents your maxim
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 10⁴`
+- `0 ≤ nums[i] ≤ 1000`
+- `Guaranteed to reach the last index`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single element:** 0 jumps needed
+2. **Can reach end in one jump:** Return 1
+3. **All ones:** Need n-1 jumps
+4. **First element covers entire array:** Return 1
+5. **Two elements:** Return 1
+6. **Large first element:** Might reach end directly
+
+<br>
+
 ---
 
 ## Solution: Greedy BFS-like Approach

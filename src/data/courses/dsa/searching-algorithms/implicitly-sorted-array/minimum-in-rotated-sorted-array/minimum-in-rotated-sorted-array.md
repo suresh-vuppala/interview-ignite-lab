@@ -62,6 +62,30 @@ By comparing with the right end, we can determine which half is properly sorted.
 
 ---
 
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 5000`
+- `-5000 ≤ nums[i] ≤ 5000`
+- `All elements are unique`
+- `Array was sorted then rotated 1 to n times`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Not rotated (rotation = n):** Minimum is first element
+2. **Rotated once:** Minimum is last element
+3. **Single element:** That element is minimum
+4. **Two elements:** Smaller one is minimum
+5. **Minimum at middle:** Standard pivot detection
+
+<br>
+
 ## Complexity Analysis
 
 ### Time Complexity: O(log n)
@@ -114,4 +138,3 @@ By comparing `nums[mid]` with `nums[right]`, we locate which side has the break 
 ---
 
 ```code```
-

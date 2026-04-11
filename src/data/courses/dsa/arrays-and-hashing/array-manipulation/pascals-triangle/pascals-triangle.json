@@ -1,0 +1,26 @@
+{
+  "title": "Pascals Triangle",
+  "slug": "pascals-triangle",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "pascals-triangle.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/pascals_triangle.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/PascalsTriangle.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/pascals_triangle.py"
+        }
+      ]
+    }
+  ]
+}

@@ -31,6 +31,33 @@ Given an encoded string, decode it according to the pattern `k[encoded_string]`,
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ s.length ≤ 30`
+- `s consists of digits, lowercase English letters, '[' and ']'`
+- `1 ≤ k ≤ 300 (repetition count)`
+- `Nested brackets are valid`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **No encoding:** 'abc' → 'abc'
+2. **Single level:** '3[a]' → 'aaa'
+3. **Nested brackets:** '2[a3[b]]' → 'abbbabbb'
+4. **Adjacent encoded groups:** '2[a]3[b]' → 'aabbb'
+5. **Mixed literal and encoded:** 'ab2[c]d' → 'abccd'
+6. **k = 1:** '1[abc]' → 'abc'
+7. **Large repetition:** '300[a]' → 300 a's
+8. **Deeply nested:** '2[2[2[a]]]' → 'aaaaaaaa'
+
+<br>
+
 ---
 
 ## Solution: Two Stack Approach

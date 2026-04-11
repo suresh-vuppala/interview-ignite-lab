@@ -17,6 +17,27 @@ Given a binary tree and two node values x and y, determine if the two nodes are 
 
 <br>
 
+
+---
+
+## Constraints
+
+- `2 ≤ n ≤ 100`
+- `All values unique`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Same parent:** Not cousins (siblings)
+2. **Different depth:** Not cousins
+3. **Same depth, different parents:** Cousins!
+4. **Root's children:** Not cousins of anyone except each other's subtrees
+
+<br>
+
 ---
 
 ## Solution 1: DFS with Parent and Depth Tracking

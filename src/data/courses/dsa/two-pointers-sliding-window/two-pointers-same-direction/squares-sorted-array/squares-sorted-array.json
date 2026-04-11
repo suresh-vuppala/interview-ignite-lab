@@ -3,22 +3,22 @@
   "slug": "squares-sorted-array",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./squares-sorted-array.md",
+  "mdFile": "squares-sorted-array.md",
   "codeExamples": [
     {
       "title": "Implementation",
       "languages": [
         {
           "language": "java",
-          "codeFile": "./code/java/SquaresSortedArray.java"
+          "codeFile": "code/java/SquaresSortedArray.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/squares_sorted_array.cpp"
+          "codeFile": "code/cpp/squares_sorted_array.cpp"
         },
         {
           "language": "python",
-          "codeFile": "./code/python/squares-sorted-array.py"
+          "codeFile": "code/python/squares-sorted-array.py"
         }
       ]
     }

@@ -33,6 +33,30 @@ A valid parentheses string has every opening parenthesis matched with a closing 
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ s.length ≤ 10⁵`
+- `s consists of '(' and ')' only`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Already valid:** '()' → 0 removals
+2. **All opening:** '(((' → 3 removals
+3. **All closing:** ')))' → 3 removals
+4. **Empty string:** 0 removals
+5. **Single character:** 1 removal
+6. **Alternating invalid:** ')((' → 3 removals
+7. **Complex nesting:** '(()))(' → 2 removals
+
+<br>
+
 ---
 
 ## Solution: Two Counter Approach

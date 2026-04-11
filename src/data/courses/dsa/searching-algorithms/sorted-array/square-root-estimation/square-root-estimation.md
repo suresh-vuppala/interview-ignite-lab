@@ -56,6 +56,28 @@ We use **binary search** on the answer space. The search space is all integers f
 
 ---
 
+
+---
+
+## Constraints
+
+- `0 ≤ x ≤ 2³¹ - 1`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **x = 0:** Return 0
+2. **x = 1:** Return 1
+3. **Perfect square:** sqrt(16) = 4 exact
+4. **Non-perfect square:** sqrt(8) = 2 (floor)
+5. **Large input:** x = INT_MAX — watch for overflow in mid*mid
+6. **x = 2:** Return 1 (floor of 1.414)
+
+<br>
+
 ## Complexity Analysis
 
 ### Time Complexity: O(log n)

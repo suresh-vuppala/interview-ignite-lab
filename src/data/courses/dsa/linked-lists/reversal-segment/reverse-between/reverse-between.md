@@ -10,6 +10,29 @@ Learn to reverse a segment of linked list between two positions.
 ## Problem Statement
 Reverse nodes from position m to n (1-indexed) in a linked list.
 
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 500`
+- `1 ≤ left ≤ right ≤ n`
+- `-500 ≤ Node.val ≤ 500`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **left == right:** No reversal needed
+2. **left = 1:** Reverse from head — head changes
+3. **right = n:** Reverse to end
+4. **left = 1, right = n:** Reverse entire list
+5. **Single node:** Return as-is
+
+<br>
+
 ## Approach
 
 ### Reverse Between m and n

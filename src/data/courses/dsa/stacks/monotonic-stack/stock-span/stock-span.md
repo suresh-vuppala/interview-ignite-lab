@@ -19,6 +19,28 @@ Calculate stock span for each day. Span is the number of consecutive days before
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ prices.length ≤ 10⁵`
+- `1 ≤ prices[i] ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Strictly increasing:** Span grows: [1, 2, 3, 4, ...]
+2. **Strictly decreasing:** Span is always 1
+3. **All same price:** Span grows linearly
+4. **Single day:** Span = 1
+5. **Peak after valley:** Peak absorbs all valley spans
+
+<br>
+
 ---
 
 ## Solution: Monotonic Stack

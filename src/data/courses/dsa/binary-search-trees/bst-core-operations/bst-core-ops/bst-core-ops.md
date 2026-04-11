@@ -13,4 +13,28 @@ Use appropriate tree algorithms and data structures
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Search in empty BST:** Return null
+2. **Insert into empty BST:** New node becomes root
+3. **Delete leaf:** Simply remove
+4. **Delete node with one child:** Replace with child
+5. **Delete node with two children:** Replace with inorder successor or predecessor
+
+<br>
+
+---
+
 ```code```

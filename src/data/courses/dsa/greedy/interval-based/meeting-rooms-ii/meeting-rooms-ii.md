@@ -21,6 +21,29 @@ Given an array of meeting time intervals, find the minimum number of conference 
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ intervals.length ≤ 10⁴`
+- `0 ≤ start < end ≤ 10⁶`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **No overlaps:** 1 room needed
+2. **All overlap:** n rooms needed
+3. **Single meeting:** 1 room
+4. **Back-to-back meetings:** [0,10],[10,20] — same room reusable
+5. **All same time:** n rooms needed
+6. **One long meeting + many short:** May need 2 rooms
+
+<br>
+
 ---
 
 ## Solution: Two Pointer Approach

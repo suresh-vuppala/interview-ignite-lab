@@ -15,6 +15,27 @@ Given an array of size n, find the majority element. The majority element is the
 
 <br>
 
+
+---
+
+## Constraints
+
+- `Constraints vary by specific problem`
+- `Check individual problem for exact bounds`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Minimum input size:** Base case
+2. **Maximum input size:** Performance boundary
+3. **Edge values (0, INT_MAX, INT_MIN):** Boundary testing
+4. **Empty or null input:** Handle gracefully
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

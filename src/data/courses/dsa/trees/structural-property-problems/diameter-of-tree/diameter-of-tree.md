@@ -32,6 +32,27 @@ Find the diameter of a binary tree. Diameter is the length of the longest path b
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁴`
+- `-100 ≤ Node.val ≤ 100`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single node:** Diameter = 0
+2. **Linear tree:** Diameter = n-1
+3. **Diameter doesn't pass through root:** Must check all subtrees
+4. **Balanced tree:** Diameter ≈ 2×height
+
+<br>
+
 ---
 
 ## Solution: Post-order DFS with Height Tracking

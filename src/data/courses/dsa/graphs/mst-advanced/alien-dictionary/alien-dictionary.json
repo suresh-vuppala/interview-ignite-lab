@@ -1,0 +1,26 @@
+{
+  "title": "Alien Dictionary",
+  "slug": "alien-dictionary",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "alien-dictionary.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/alien_dictionary.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/AlienDictionary.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/alien_dictionary.py"
+        }
+      ]
+    }
+  ]
+}

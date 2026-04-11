@@ -25,3 +25,25 @@ Two pointers are helpful because it often offers a more efficient solution than 
 If we use two pointers for this type of problem, we are often only passing through the array once with the two pointers, which means that the time complexity is often **O(n)**.
 
 This makes two pointers a powerful optimization technique for array-based problems where naive approaches would be too slow.
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single element:** No pair possible
+2. **Two elements:** One pair to check
+3. **All same elements:** Depends on problem target
+
+<br>
+
+---
+
+```code```

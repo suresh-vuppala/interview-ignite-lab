@@ -1,0 +1,26 @@
+{
+  "title": "Candy Distribution",
+  "slug": "candy",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "candy.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/candy.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/Candy.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/candy.py"
+        }
+      ]
+    }
+  ]
+}

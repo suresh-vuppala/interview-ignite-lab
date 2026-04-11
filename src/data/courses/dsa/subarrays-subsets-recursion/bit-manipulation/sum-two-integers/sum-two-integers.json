@@ -1,0 +1,26 @@
+{
+  "title": "Sum Two Integers",
+  "slug": "sum-two-integers",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "sum-two-integers.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/sum_two_integers.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/SumTwoIntegers.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/sum_two_integers.py"
+        }
+      ]
+    }
+  ]
+}

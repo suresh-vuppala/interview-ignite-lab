@@ -3,22 +3,22 @@
   "slug": "long-pressed-name",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./long-pressed-name.md",
+  "mdFile": "long-pressed-name.md",
   "codeExamples": [
     {
       "title": "Implementation",
       "languages": [
         {
           "language": "java",
-          "codeFile": "./code/java/LongPressedName.java"
+          "codeFile": "code/java/LongPressedName.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/long_pressed_name.cpp"
+          "codeFile": "code/cpp/long_pressed_name.cpp"
         },
         {
           "language": "python",
-          "codeFile": "./code/python/long-pressed-name.py"
+          "codeFile": "code/python/long-pressed-name.py"
         }
       ]
     }

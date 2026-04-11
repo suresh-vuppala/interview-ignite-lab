@@ -26,6 +26,34 @@ Given a sorted array, remove duplicates in-place such that each element appears 
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 3 × 10⁴`
+- `-100 ≤ nums[i] ≤ 100`
+- `nums is sorted in non-decreasing order`
+- `Must modify in-place with O(1) extra memory`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single element:** [1] → return 1
+2. **No duplicates:** [1, 2, 3] → return 3, unchanged
+3. **All same:** [1, 1, 1, 1] → return 1
+4. **Duplicates at beginning:** [1, 1, 2, 3]
+5. **Duplicates at end:** [1, 2, 3, 3]
+6. **Two elements, same:** [1, 1] → return 1
+7. **Two elements, different:** [1, 2] → return 2
+8. **Large runs of duplicates:** [1,1,1,2,2,2,3,3,3] — many consecutive duplicates
+
+<br>
+
 ---
 
 ## Solution: Two Pointers (Same Direction)

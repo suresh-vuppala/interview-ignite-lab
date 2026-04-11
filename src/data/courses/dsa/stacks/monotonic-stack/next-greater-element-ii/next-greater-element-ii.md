@@ -23,6 +23,28 @@ The input array is `[1, 2, 1]` (circular).
 
 **Key insight:** Process array twice (2n iterations) to handle circular nature.
 
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 10⁴`
+- `-10⁹ ≤ nums[i] ≤ 10⁹`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **All same elements:** [5,5,5] → [-1,-1,-1]
+2. **Single element:** [1] → [-1] (wraps to itself, no greater)
+3. **Two elements:** [1,2] → [2,-1] (circular: 2 wraps but finds nothing)
+4. **Strictly increasing:** Last element wraps to find its NGE at the start
+5. **Maximum at single position:** That element's answer is -1, all others can wrap
+
+<br>
+
 ## Solution Approach
 
 Use monotonic decreasing stack with circular traversal:
@@ -51,3 +73,7 @@ Use monotonic decreasing stack with circular traversal:
 - Must examine each element at least once
 - Circular nature requires checking wrap-around
 - Stack ensures each element processed exactly twice
+
+---
+
+```code```

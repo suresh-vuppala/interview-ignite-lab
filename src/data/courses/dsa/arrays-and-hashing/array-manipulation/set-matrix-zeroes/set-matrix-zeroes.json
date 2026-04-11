@@ -1,0 +1,26 @@
+{
+  "title": "Set Matrix Zeroes",
+  "slug": "set-matrix-zeroes",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "set-matrix-zeroes.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/set_matrix_zeroes.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/SetMatrixZeroes.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/set_matrix_zeroes.py"
+        }
+      ]
+    }
+  ]
+}

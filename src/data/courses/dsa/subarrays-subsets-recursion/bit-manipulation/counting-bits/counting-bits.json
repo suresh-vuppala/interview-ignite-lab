@@ -1,0 +1,26 @@
+{
+  "title": "Counting Bits",
+  "slug": "counting-bits",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "counting-bits.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/counting_bits.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/CountingBits.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/counting_bits.py"
+        }
+      ]
+    }
+  ]
+}

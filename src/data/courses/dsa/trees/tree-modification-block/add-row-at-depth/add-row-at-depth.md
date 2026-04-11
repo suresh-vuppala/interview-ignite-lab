@@ -13,4 +13,29 @@ Use appropriate tree algorithms and data structures
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁴`
+- `1 ≤ depth ≤ n + 1`
+- `-100 ≤ val ≤ 100`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Depth = 1:** New root, old tree becomes left child
+2. **Depth = 2:** Insert below root
+3. **Leaf level:** Add as children of leaves
+4. **Beyond tree depth:** Add at the very bottom
+
+<br>
+
+---
+
 ```code```

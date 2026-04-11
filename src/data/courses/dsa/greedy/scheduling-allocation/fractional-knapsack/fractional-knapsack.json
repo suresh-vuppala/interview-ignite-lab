@@ -1,0 +1,26 @@
+{
+  "title": "Fractional Knapsack",
+  "slug": "fractional-knapsack",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "fractional-knapsack.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/fractional_knapsack.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/FractionalKnapsack.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/fractional_knapsack.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Product of Array Except Self",
+  "slug": "product-of-array-except-self",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "product-of-array-except-self.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/product_of_array_except_self.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/ProductOfArrayExceptSelf.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/product_of_array_except_self.py"
+        }
+      ]
+    }
+  ]
+}

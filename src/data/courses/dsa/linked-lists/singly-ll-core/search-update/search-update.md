@@ -10,6 +10,29 @@ Learn to search for elements and update node values in a linked list.
 ## Problem Statement
 Implement search and update operations to query and modify linked list data.
 
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 10⁴`
+- `-10⁵ ≤ val ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Value at head:** Found immediately
+2. **Value at tail:** Full traversal
+3. **Value not found:** Return -1 or false
+4. **Empty list:** Not found
+5. **Duplicate values:** Return first occurrence or update all
+6. **Update head value:** No pointer change needed
+
+<br>
+
 ## Approach
 
 ### 1. Search by Value

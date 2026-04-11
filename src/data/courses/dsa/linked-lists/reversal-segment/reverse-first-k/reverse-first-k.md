@@ -10,6 +10,27 @@ Learn to reverse only the first K nodes of a linked list.
 ## Problem Statement
 Reverse the first K nodes of a linked list and keep the rest unchanged.
 
+
+---
+
+## Constraints
+
+- `1 ≤ k ≤ n`
+- `1 ≤ n ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k = 1:** No change
+2. **k = n:** Reverse entire list
+3. **k = 2:** Swap first two nodes
+4. **Single node, k = 1:** Return as-is
+
+<br>
+
 ## Approach
 
 ### Reverse First K

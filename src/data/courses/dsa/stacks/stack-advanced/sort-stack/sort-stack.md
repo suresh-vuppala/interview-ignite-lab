@@ -15,6 +15,29 @@ Given a stack, sort it in ascending order. You can use additional data structure
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ stack.size ≤ 5000`
+- `-10⁴ ≤ stack[i] ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Already sorted:** Stack unchanged
+2. **Reverse sorted:** Maximum work needed
+3. **Single element:** Already sorted
+4. **Two elements:** Swap if needed
+5. **All same elements:** No swaps needed
+6. **Negative values:** Sort works the same way
+
+<br>
+
 ---
 
 ## Solution 1: Using Temporary Stack

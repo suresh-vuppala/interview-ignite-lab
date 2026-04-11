@@ -1,0 +1,26 @@
+{
+  "title": "Rotate Image",
+  "slug": "rotate-image",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "rotate-image.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/rotate_image.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/RotateImage.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/rotate_image.py"
+        }
+      ]
+    }
+  ]
+}

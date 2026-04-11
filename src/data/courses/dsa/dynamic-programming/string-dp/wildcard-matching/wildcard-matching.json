@@ -1,0 +1,26 @@
+{
+  "title": "Wildcard Matching",
+  "slug": "wildcard-matching",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "wildcard-matching.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/wildcard_matching.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/WildcardMatching.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/wildcard_matching.py"
+        }
+      ]
+    }
+  ]
+}

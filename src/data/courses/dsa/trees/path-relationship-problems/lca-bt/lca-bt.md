@@ -39,6 +39,29 @@ Find the Lowest Common Ancestor (LCA) of two nodes in a binary tree. LCA is the 
 
 <br>
 
+
+---
+
+## Constraints
+
+- `2 ≤ n ≤ 10⁵`
+- `All values unique`
+- `Both p and q exist in the tree`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **p and q in different subtrees:** LCA is root
+2. **p is ancestor of q:** LCA is p
+3. **q is ancestor of p:** LCA is q
+4. **p and q are siblings:** LCA is their parent
+5. **p == root or q == root:** LCA is root
+
+<br>
+
 ---
 
 ## Solution: Recursive Post-order DFS

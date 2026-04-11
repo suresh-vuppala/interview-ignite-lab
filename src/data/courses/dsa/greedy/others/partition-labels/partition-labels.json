@@ -1,0 +1,26 @@
+{
+  "title": "Partition Labels",
+  "slug": "partition-labels",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "partition-labels.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/partition_labels.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/PartitionLabels.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/partition_labels.py"
+        }
+      ]
+    }
+  ]
+}

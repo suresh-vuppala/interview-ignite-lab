@@ -21,6 +21,30 @@ Given an array and a window size k, find the first negative number in every wind
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ k ≤ nums.length ≤ 10⁵`
+- `-10⁵ ≤ nums[i] ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **No negative numbers:** All windows return 0
+2. **All negative:** First element of each window is the answer
+3. **k = 1:** Each element — return negative or 0
+4. **k = n:** First negative in entire array
+5. **Negative only at end:** Early windows return 0, later windows catch it
+6. **Single negative element:** Only windows containing it return non-zero
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

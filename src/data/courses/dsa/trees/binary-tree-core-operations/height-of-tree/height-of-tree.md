@@ -30,6 +30,27 @@ Find the height (or depth) of a binary tree. Height is the number of edges on th
 
 <br>
 
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 10⁴`
+- `-100 ≤ Node.val ≤ 100`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty tree:** Height = -1 or 0 (depends on convention)
+2. **Single node:** Height = 0
+3. **Skewed tree:** Height = n-1
+4. **Balanced tree:** Height = log(n)
+
+<br>
+
 ---
 
 ## Solution: Recursive DFS

@@ -1,0 +1,26 @@
+{
+  "title": "Intersection Two Arrays",
+  "slug": "intersection-two-arrays",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "intersection-two-arrays.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/intersection_two_arrays.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/IntersectionTwoArrays.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/intersection_two_arrays.py"
+        }
+      ]
+    }
+  ]
+}

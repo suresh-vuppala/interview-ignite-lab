@@ -1,0 +1,26 @@
+{
+  "title": "Contains Duplicate",
+  "slug": "contains-duplicate",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "contains-duplicate.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/contains_duplicate.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/ContainsDuplicate.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/contains_duplicate.py"
+        }
+      ]
+    }
+  ]
+}

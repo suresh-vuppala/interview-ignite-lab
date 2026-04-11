@@ -12,4 +12,27 @@ Implement insertion in circular linked list where last node points to first.
 ### Space: O(1)
 
 ## Code
+
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Insert into empty circular list:** Node points to itself
+2. **Insert at head:** Update tail's next to new head
+3. **Insert in middle:** Update circular links
+4. **Single node circular:** After insert, two nodes form circle
+
+<br>
+
+---
+
 ```code```

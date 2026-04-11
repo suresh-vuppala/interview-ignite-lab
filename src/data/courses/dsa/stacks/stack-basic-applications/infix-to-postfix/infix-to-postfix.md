@@ -40,6 +40,31 @@ Given an infix expression, convert it to postfix notation (Reverse Polish Notati
 
 <br>
 
+
+---
+
+## Constraints
+
+- `Valid infix expression`
+- `Operators: +, -, *, /, ^`
+- `Parentheses are balanced`
+- `Operands are single characters or digits`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **No operators:** 'a' → 'a'
+2. **Single operation:** 'a+b' → 'ab+'
+3. **Nested parentheses:** '((a+b))' → 'ab+'
+4. **Right-associative operator:** '^' is right-associative: 'a^b^c' → 'abc^^'
+5. **Mixed precedence:** 'a+b*c' → 'abc*+'
+6. **All same precedence:** 'a+b-c' → 'ab+c-' (left-to-right)
+
+<br>
+
 ---
 
 ## Solution: Stack with Operator Precedence

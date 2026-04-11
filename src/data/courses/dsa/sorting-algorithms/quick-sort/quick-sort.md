@@ -16,6 +16,31 @@ Implement Quick Sort algorithm to sort an array in ascending order using divide-
 
 <br>
 
+
+---
+
+## Constraints
+
+- `0 ≤ nums.length ≤ 10⁵`
+- `-10⁹ ≤ nums[i] ≤ 10⁹`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Already sorted:** Worst case O(n²) with naive pivot — use random/median-of-3 pivot
+2. **Reverse sorted:** Same worst case — random pivot selection prevents this
+3. **All same elements:** O(n²) with Lomuto partition — use 3-way partition (Dutch National Flag)
+4. **Single element:** Already sorted
+5. **Empty array:** Nothing to sort
+6. **Many duplicates:** 3-way partition handles efficiently — O(n) when all same
+7. **Large array:** Recursion depth can cause stack overflow — use tail recursion optimization or iterative approach
+8. **Two elements:** At most one swap
+
+<br>
+
 ---
 
 ## Solution: Quick Sort with Lomuto Partition

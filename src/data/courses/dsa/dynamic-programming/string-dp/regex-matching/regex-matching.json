@@ -1,0 +1,26 @@
+{
+  "title": "Regular Expression Matching",
+  "slug": "regex-matching",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "regex-matching.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/regex_matching.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/RegexMatching.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/regex_matching.py"
+        }
+      ]
+    }
+  ]
+}

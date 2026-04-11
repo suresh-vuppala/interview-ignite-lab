@@ -1,0 +1,26 @@
+{
+  "title": "Encode and Decode Strings",
+  "slug": "encode-decode-strings",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "encode-decode-strings.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/encode_decode_strings.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/EncodeDecodeStrings.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/encode_decode_strings.py"
+        }
+      ]
+    }
+  ]
+}

@@ -16,6 +16,32 @@ Given an array of positive integers and a target sum, find the minimal length of
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ target ≤ 10⁹`
+- `1 ≤ nums.length ≤ 10⁵`
+- `1 ≤ nums[i] ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **No valid subarray:** Total sum < target → return 0
+2. **Single element ≥ target:** Return 1
+3. **Entire array needed:** Sum barely meets target only with all elements
+4. **All elements equal:** Need ceil(target / element) elements
+5. **Target = 1:** Any single positive element works → return 1
+6. **Large target, small elements:** May need many or all elements
+7. **Single element array:** Either meets target or doesn't
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

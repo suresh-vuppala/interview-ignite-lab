@@ -1,0 +1,26 @@
+{
+  "title": "Pacific Atlantic Water Flow",
+  "slug": "pacific-atlantic-water-flow",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "pacific-atlantic-water-flow.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/pacific_atlantic_water_flow.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/PacificAtlanticWaterFlow.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/pacific_atlantic_water_flow.py"
+        }
+      ]
+    }
+  ]
+}

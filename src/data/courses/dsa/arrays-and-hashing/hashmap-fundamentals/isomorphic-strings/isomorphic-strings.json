@@ -1,0 +1,26 @@
+{
+  "title": "Isomorphic Strings",
+  "slug": "isomorphic-strings",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "isomorphic-strings.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/isomorphic_strings.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/IsomorphicStrings.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/isomorphic_strings.py"
+        }
+      ]
+    }
+  ]
+}

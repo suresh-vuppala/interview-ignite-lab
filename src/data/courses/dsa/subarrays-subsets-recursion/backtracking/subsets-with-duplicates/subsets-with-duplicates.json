@@ -1,0 +1,26 @@
+{
+  "title": "Subsets With Duplicates",
+  "slug": "subsets-with-duplicates",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "subsets-with-duplicates.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/subsets_with_duplicates.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/SubsetsWithDuplicates.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/subsets_with_duplicates.py"
+        }
+      ]
+    }
+  ]
+}

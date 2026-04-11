@@ -1,0 +1,26 @@
+{
+  "title": "Graph Valid Tree",
+  "slug": "graph-valid-tree",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "graph-valid-tree.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/graph_valid_tree.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/GraphValidTree.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/graph_valid_tree.py"
+        }
+      ]
+    }
+  ]
+}

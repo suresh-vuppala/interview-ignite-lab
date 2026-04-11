@@ -265,6 +265,31 @@ function findMedianSortedArrays(nums1, nums2):
     return 0.0
 ```
 
+
+---
+
+## Constraints
+
+- `0 ≤ nums1.length, nums2.length ≤ 1000`
+- `1 ≤ nums1.length + nums2.length ≤ 2000`
+- `-10⁶ ≤ nums1[i], nums2[j] ≤ 10⁶`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **One array empty:** Median of the other array
+2. **Arrays don't overlap:** [1,2] and [3,4] → median between 2 and 3
+3. **Single element each:** [1] and [2] → 1.5
+4. **Even total length:** Average of two middle elements
+5. **Odd total length:** Single middle element
+6. **All same elements:** Median is that element
+7. **One array much longer:** Binary search on shorter array
+
+<br>
+
 ## Complexity Analysis
 
 ### Time Complexity: **O(log(min(m, n)))**

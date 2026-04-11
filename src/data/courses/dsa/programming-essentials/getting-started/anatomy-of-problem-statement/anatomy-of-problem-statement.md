@@ -176,3 +176,25 @@ A well-structured problem statement in DSA includes:
 6. (Optional) Constraints and Edge Cases  
 
 Understanding this structure allows you to approach problems methodically, think like an interviewer, and design efficient, reliable solutions.
+
+---
+
+## Constraints
+
+- `Introductory lessons — basic constraints`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty input:** Handle base case
+2. **Single element:** Trivial case
+3. **Large input:** Consider time complexity
+
+<br>
+
+---
+
+```code```

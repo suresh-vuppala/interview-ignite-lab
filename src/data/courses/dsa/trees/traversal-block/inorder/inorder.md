@@ -29,6 +29,28 @@ Perform inorder traversal of a binary tree. Inorder visits nodes in Left-Root-Ri
 
 <br>
 
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 100`
+- `-100 ≤ Node.val ≤ 100`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty tree:** Return []
+2. **Single node:** Return [val]
+3. **Left-skewed tree:** Acts like descending list
+4. **Right-skewed tree:** Acts like ascending list
+5. **Complete binary tree:** Standard traversal
+
+<br>
+
 ---
 
 ## Solution #1: Recursive Inorder

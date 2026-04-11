@@ -19,6 +19,29 @@ Given two words beginWord and endWord, and a dictionary wordList, return all sho
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ beginWord.length ≤ 5`
+- `endWord.length == beginWord.length`
+- `1 ≤ wordList.length ≤ 500`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **No path exists:** Return []
+2. **Multiple shortest paths:** Return all of them
+3. **Single step transformation:** Return [[begin, end]]
+4. **endWord not in wordList:** Return []
+5. **Very long paths:** Memory for storing all paths
+
+<br>
+
 ---
 
 ## Solution 1: BFS + DFS (Two-Pass)

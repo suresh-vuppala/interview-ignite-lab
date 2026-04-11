@@ -1,0 +1,26 @@
+{
+  "title": "Floyd-Warshall Algorithm",
+  "slug": "floyd-warshall",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "floyd-warshall.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/floyd_warshall.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/FloydWarshall.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/floyd_warshall.py"
+        }
+      ]
+    }
+  ]
+}

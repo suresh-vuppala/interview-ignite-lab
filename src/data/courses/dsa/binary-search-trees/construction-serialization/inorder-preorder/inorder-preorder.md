@@ -13,4 +13,28 @@ Use appropriate tree algorithms and data structures
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 3000`
+- `All values unique`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single node:** Both arrays have one element
+2. **Left-skewed:** Preorder and inorder are same
+3. **Right-skewed:** Inorder and preorder reversed relationship
+4. **Balanced tree:** Standard split by root in inorder
+
+<br>
+
+---
+
 ```code```

@@ -1,0 +1,26 @@
+{
+  "title": "Reverse Bits",
+  "slug": "reverse-bits",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "reverse-bits.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/reverse_bits.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/ReverseBits.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/reverse_bits.py"
+        }
+      ]
+    }
+  ]
+}

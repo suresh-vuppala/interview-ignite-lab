@@ -1,0 +1,26 @@
+{
+  "title": "Subarrays with K Different Integers",
+  "slug": "subarrays-k-different-integers",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "subarrays-k-different-integers.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/subarrays_k_different_integers.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/SubarraysKDifferentIntegers.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/subarrays_k_different_integers.py"
+        }
+      ]
+    }
+  ]
+}

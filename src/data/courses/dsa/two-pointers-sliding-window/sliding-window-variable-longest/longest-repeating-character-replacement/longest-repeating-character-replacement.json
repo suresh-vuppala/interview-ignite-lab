@@ -3,7 +3,7 @@
   "slug": "longest-repeating-character-replacement",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./longest-repeating-character-replacement.md",
+  "mdFile": "longest-repeating-character-replacement.md",
   "codeExamples": [
     {
       "title": "Solution",

@@ -15,4 +15,29 @@ A balanced tree has left/right height difference  1 at each node.
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 5000`
+- `-10⁴ ≤ Node.val ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty tree:** Balanced
+2. **Single node:** Balanced
+3. **Skewed tree:** Not balanced (depth diff > 1)
+4. **Off by one:** Heights differ by exactly 1 — still balanced
+5. **Off by two:** Not balanced
+
+<br>
+
+---
+
 ```code```

@@ -1,18 +1,22 @@
-from typing import List
+from collections import defaultdict
 
-def subarraySum(nums: List[int], k: int) -> int:
-    n = len(nums)
-    PS = [0] * (n + 1)
-    PS[0] = 0
-    for i in range(1, n + 1):
-        PS[i] = PS[i - 1] + nums[i - 1]
-
-    freq = {0: 1}  # prefix sum 0 appears once
-    count = 0
-
-    for end in range(1, n + 1):
-        target = PS[end] - k
-        count += freq.get(target, 0)
-        freq[PS[end]] = freq.get(PS[end], 0) + 1
-
-    return count
+class Solution:
+    def subarraySum(self, nums: list[int], k: int) -> int:
+        prefix_count = defaultdict(int)
+        prefix_count[0] = 1  # Base case: empty prefix with sum 0
+        
+        count = 0
+        prefix_sum = 0
+        
+        for num in nums:
+            prefix_sum += num
+            
+            # Check if (prefix_sum - k) exists in our map
+            # This means we found a subarray with sum k
+            if prefix_sum - k in prefix_count:
+                count += prefix_count[prefix_sum - k]
+            
+            # Add current prefix sum to map
+            prefix_count[prefix_sum] += 1
+        
+        return count

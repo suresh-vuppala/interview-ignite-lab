@@ -1,0 +1,26 @@
+{
+  "title": "Search in Rotated Sorted Array",
+  "slug": "search-rotated-sorted-array",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "search-rotated-sorted-array.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/search_rotated_sorted_array.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/SearchRotatedSortedArray.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/search_rotated_sorted_array.py"
+        }
+      ]
+    }
+  ]
+}

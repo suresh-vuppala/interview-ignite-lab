@@ -29,6 +29,31 @@ Given an array of fruits where each number represents a fruit type, find the max
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ fruits.length ≤ 10⁵`
+- `0 ≤ fruits[i] < fruits.length`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Only 1 type of fruit:** Return entire array length
+2. **Only 2 types total:** Return entire array length
+3. **All different types:** Maximum window is 2 (any adjacent pair of distinct types)
+4. **Single fruit:** Return 1
+5. **Two fruits:** Return 2
+6. **Same type at start and end:** [1, 2, 1] → 3
+7. **Long run of one type:** [1, 1, 1, 2, 3] → 4 (first four)
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

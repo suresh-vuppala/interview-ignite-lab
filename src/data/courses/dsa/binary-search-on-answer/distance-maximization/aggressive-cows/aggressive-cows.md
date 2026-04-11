@@ -215,6 +215,29 @@ For `stalls = [1, 2, 4, 8, 9]`, `C = 3`:
 
 **Final:** `left = 4`, `right = 3` → Answer = **3**
 
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁵`
+- `Input array elements ≥ 1`
+- `Answer is monotonic — if X works, X+1 also works (or vice versa)`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Minimum possible answer:** Binary search low boundary
+2. **Maximum possible answer:** Binary search high boundary
+3. **Single element array:** Answer is trivially that element
+4. **All elements same:** Answer may be the element or a function of it
+5. **Large range:** Binary search on answer space O(log(range))
+
+<br>
+
 ## Complexity Analysis
 
 ### Time Complexity: **O(N log N + N log(max - min))**

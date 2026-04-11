@@ -63,6 +63,28 @@ We use **binary search** by comparing the middle element with its neighbors to d
 
 ---
 
+
+---
+
+## Constraints
+
+- `3 ≤ arr.length ≤ 10⁵`
+- `arr is guaranteed mountain (strictly increases then strictly decreases)`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Peak at index 1:** Very early peak
+2. **Peak at index n-2:** Very late peak
+3. **Minimum length array (3):** Peak is always middle
+4. **Long ascending, short descending:** Peak near end
+5. **Short ascending, long descending:** Peak near start
+
+<br>
+
 ## Complexity Analysis
 
 ### Time Complexity: O(log n)

@@ -25,6 +25,31 @@ Given a non-negative integer represented as a string and an integer k, remove k 
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ k ≤ num.length ≤ 10⁵`
+- `num consists of digits 0-9 only`
+- `num does not have leading zeros`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k = num.length:** Return '0'
+2. **k = 0:** Return original
+3. **Increasing digits:** Remove last k digits
+4. **Decreasing digits:** Remove first k digits
+5. **Leading zeros after removal:** '10200' k=1 → '200'
+6. **Result is all zeros:** Return '0'
+7. **All same digits:** Remove any k → remaining digits
+
+<br>
+
 ---
 
 ## Solution: Greedy Stack Approach

@@ -1,0 +1,26 @@
+{
+  "title": "Top K Frequent Elements",
+  "slug": "top-k-frequent-elements",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "top-k-frequent-elements.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/top_k_frequent_elements.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/TopKFrequentElements.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/top_k_frequent_elements.py"
+        }
+      ]
+    }
+  ]
+}

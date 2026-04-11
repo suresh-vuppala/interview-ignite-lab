@@ -17,6 +17,28 @@ Implement a stack data structure with all core operations: push, pop, peek, isEm
 
 <br>
 
+
+---
+
+## Constraints
+
+- `At most 10⁴ operations`
+- `-10⁹ ≤ val ≤ 10⁹`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Pop on empty stack:** Should handle gracefully — return error or -1
+2. **Peek on empty stack:** Should handle gracefully
+3. **Push then immediate pop:** Returns the pushed value
+4. **Multiple pushes then size check:** Size matches push count
+5. **isEmpty on non-empty stack:** Returns false
+
+<br>
+
 ---
 
 ## Solution: Array-Based Stack Implementation

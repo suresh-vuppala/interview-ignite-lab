@@ -10,6 +10,30 @@ Master all insertion operations in a singly linked list. This lesson covers inse
 ## Problem Statement
 Implement all four insertion operations for a singly linked list, handling edge cases like empty lists and invalid positions.
 
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 10⁴`
+- `-10⁵ ≤ val ≤ 10⁵`
+- `0 ≤ position ≤ n`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Insert at head (position 0):** Update head pointer
+2. **Insert at tail:** Traverse to end, append
+3. **Insert in empty list:** New node becomes head
+4. **Insert at invalid position:** Handle out-of-bounds
+5. **Insert in middle:** Standard case
+6. **Single node list, insert at pos 1:** Append after head
+
+<br>
+
 ## Approach
 
 ### 1. Insert at Beginning

@@ -14,6 +14,28 @@ Given a linked list where each node has:
 
 Create a deep copy of the list.
 
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 1000`
+- `-10⁴ ≤ Node.val ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty list:** Return null
+2. **All random = null:** Simple copy
+3. **Random points to self:** Must handle self-reference in clone
+4. **Random points to next node:** Straightforward mapping
+5. **Interleaving technique:** O(1) space solution weaves cloned nodes
+
+<br>
+
 ## Approach
 
 ### Method 1: Interweaving (O(1) space)

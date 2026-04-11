@@ -16,6 +16,32 @@ Given a string s and an integer k, you can replace at most k characters. Find th
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ s.length ≤ 10⁵`
+- `s consists of only uppercase English letters`
+- `0 ≤ k ≤ s.length`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k = 0:** Find longest substring of same character (no replacements)
+2. **k >= s.length:** Entire string can be made uniform — return s.length
+3. **All same characters:** Return s.length regardless of k
+4. **Two alternating characters:** 'ABABAB' k=2
+5. **Single character string:** Return 1
+6. **k = 1:** Can replace one character
+7. **All unique characters:** Window size limited to k+1
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

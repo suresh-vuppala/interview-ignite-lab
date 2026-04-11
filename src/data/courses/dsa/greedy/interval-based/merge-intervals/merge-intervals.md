@@ -22,6 +22,30 @@ Given an array of intervals, merge all overlapping intervals.
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ intervals.length ≤ 10⁴`
+- `0 ≤ start ≤ end ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **No overlaps:** Return all intervals as-is
+2. **All overlap into one:** Return single merged interval
+3. **Single interval:** Return it
+4. **Adjacent intervals:** [1,2],[2,3] → [1,3] (touching counts as overlapping)
+5. **Nested intervals:** [1,10],[2,5] → [1,10]
+6. **Unsorted input:** Must sort first by start time
+7. **Duplicate intervals:** [1,3],[1,3] → [1,3]
+
+<br>
+
 ---
 
 ## Solution: Merge Overlapping Intervals

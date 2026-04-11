@@ -58,6 +58,29 @@ We use **binary search** to find the leftmost position where the condition `nums
 
 ---
 
+
+---
+
+## Constraints
+
+- `1 ≤ arr.length ≤ 10⁵`
+- `-10⁹ ≤ arr[i] ≤ 10⁹`
+- `Array is sorted`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **All elements smaller:** Return n (or -1)
+2. **All elements larger or equal:** Return 0
+3. **Exact match exists:** Return that index
+4. **Target between elements:** Return the first element ≥ target
+5. **Single element:** Compare with target
+
+<br>
+
 ## Complexity Analysis
 
 ### Time Complexity: O(log n)

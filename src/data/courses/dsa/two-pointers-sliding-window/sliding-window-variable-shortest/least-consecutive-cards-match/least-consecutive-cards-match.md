@@ -17,6 +17,32 @@ Given an array of cards where each card has a number, find the minimum number of
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ cards.length ≤ 10⁵`
+- `0 ≤ cards[i] ≤ 10⁶`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **No matching cards:** All unique → return -1
+2. **Adjacent matching cards:** Minimum possible answer is 2
+3. **First and last card match:** Window size is n
+4. **All same cards:** Return 2 (any adjacent pair)
+5. **Single card:** Return -1 — can't form a pair
+6. **Two cards, same value:** Return 2
+7. **Two cards, different value:** Return -1
+8. **Multiple pairs, different distances:** Must find the minimum
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

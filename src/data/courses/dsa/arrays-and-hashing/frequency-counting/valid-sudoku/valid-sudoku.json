@@ -1,0 +1,26 @@
+{
+  "title": "Valid Sudoku",
+  "slug": "valid-sudoku",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "valid-sudoku.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/valid_sudoku.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/ValidSudoku.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/valid_sudoku.py"
+        }
+      ]
+    }
+  ]
+}

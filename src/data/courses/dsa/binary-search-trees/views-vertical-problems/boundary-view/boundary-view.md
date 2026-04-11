@@ -13,4 +13,27 @@ Use appropriate tree algorithms and data structures
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single node:** Just that node
+2. **Left-skewed:** All are boundary
+3. **Right-skewed:** All are boundary
+4. **Complete tree:** Outer ring
+
+<br>
+
+---
+
 ```code```

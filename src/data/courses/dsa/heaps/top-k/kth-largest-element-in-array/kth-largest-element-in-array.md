@@ -25,6 +25,29 @@ Find the kth largest element in an unsorted array.
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁵`
+- `-10⁴ ≤ nums[i] ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single element:** It is both min and max
+2. **All same elements:** Heap operations trivial
+3. **Already a valid heap:** No restructuring needed
+4. **k = 1:** Find min/max directly
+5. **k = n:** Need to process entire heap
+6. **Negative values:** Min heap with negatives
+
+<br>
+
 ---
 
 ## Solution: Min Heap of Size K

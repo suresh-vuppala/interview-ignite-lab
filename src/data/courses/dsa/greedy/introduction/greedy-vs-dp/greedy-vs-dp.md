@@ -65,6 +65,25 @@ A problem has greedy choice property if:
 
 <br>
 
+
+---
+
+## Constraints
+
+- `Conceptual lesson — comparison of greedy vs dynamic programming`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Greedy works:** Optimal substructure + greedy choice property (e.g., activity selection)
+2. **Greedy fails:** 0-1 Knapsack — local optimal ≠ global optimal
+3. **Both work:** Fractional knapsack — greedy is simpler
+
+<br>
+
 ---
 
 ## Comparison Example

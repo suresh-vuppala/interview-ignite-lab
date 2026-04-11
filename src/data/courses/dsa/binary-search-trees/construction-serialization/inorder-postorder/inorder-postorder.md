@@ -13,4 +13,27 @@ Use appropriate tree algorithms and data structures
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 3000`
+- `All values unique`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single node:** Same as above
+2. **Skewed tree:** Special ordering
+3. **Root identification:** Last element of postorder is root
+
+<br>
+
+---
+
 ```code```

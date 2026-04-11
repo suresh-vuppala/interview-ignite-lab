@@ -18,6 +18,30 @@ Design a stack that supports push, pop, top, and retrieving the minimum element 
 
 <br>
 
+
+---
+
+## Constraints
+
+- `-2³¹ ≤ val ≤ 2³¹ - 1`
+- `Methods pop, top, getMin always called on non-empty stack`
+- `At most 3 × 10⁴ calls total`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single element:** Min is that element
+2. **Decreasing pushes:** Min updates on every push
+3. **Push min, push larger, pop larger:** Min should still be the first pushed
+4. **All same elements:** Min is always that value
+5. **Pop the minimum element:** Min must update to next minimum
+6. **Large negative values:** Min can be INT_MIN
+
+<br>
+
 ---
 
 ## Solution: Two Stack Approach

@@ -1,0 +1,26 @@
+{
+  "title": "Clone Graph",
+  "slug": "clone-graph",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "clone-graph.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/clone_graph.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/CloneGraph.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/clone_graph.py"
+        }
+      ]
+    }
+  ]
+}

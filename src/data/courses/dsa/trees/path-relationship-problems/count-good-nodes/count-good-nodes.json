@@ -1,0 +1,26 @@
+{
+  "title": "Count Good Nodes in Binary Tree",
+  "slug": "count-good-nodes",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "count-good-nodes.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/count_good_nodes.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/CountGoodNodes.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/count_good_nodes.py"
+        }
+      ]
+    }
+  ]
+}

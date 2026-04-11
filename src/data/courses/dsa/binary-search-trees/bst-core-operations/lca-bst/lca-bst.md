@@ -15,4 +15,30 @@ Given a BST and two node values, find their LCA.
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `2 ≤ n ≤ 10⁵`
+- `All values unique`
+- `BST property holds`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Both in left subtree:** LCA is in left subtree
+2. **Both in right subtree:** LCA is in right subtree
+3. **Split point:** One in left, one in right — current node is LCA
+4. **One node is ancestor of other:** That node is the LCA
+5. **Both are root's children:** LCA is root
+
+<br>
+
+---
+
 ```code```

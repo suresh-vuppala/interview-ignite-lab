@@ -57,4 +57,25 @@
 
 ---
 
+
+
+---
+
+## Constraints
+
+- `Conceptual lesson — applications of binary search`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Search on answer:** Binary search on result space, not input
+2. **Rotated arrays:** Modified binary search with pivot detection
+
+<br>
+
+---
+
 ```code```

@@ -36,4 +36,28 @@ Understanding different sorting algorithms and their characteristics.
 - **Limited range integers**: Counting Sort
 
 ## Code
+
+
+---
+
+## Constraints
+
+- `Conceptual lesson — comparison of standard sorting algorithms`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Small input (n < 50):** Insertion sort often fastest due to low overhead
+2. **Nearly sorted input:** Insertion sort or Timsort excel
+3. **Random data:** Quicksort or merge sort preferred
+4. **Memory constrained:** In-place sorts (heap sort, quick sort) preferred
+5. **Stability required:** Merge sort or insertion sort
+
+<br>
+
+---
+
 ```code```

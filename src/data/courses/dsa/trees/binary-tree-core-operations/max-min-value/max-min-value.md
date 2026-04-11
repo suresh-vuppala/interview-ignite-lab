@@ -15,4 +15,28 @@ Given a binary tree, find both the maximum and minimum node values.
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁴`
+- `-10⁴ ≤ Node.val ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single node:** Max = Min = that value
+2. **All same values:** Max = Min
+3. **Sorted tree (BST):** Min at leftmost, max at rightmost
+4. **Negative values:** Min can be very negative
+
+<br>
+
+---
+
 ```code```

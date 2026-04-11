@@ -15,4 +15,30 @@ Check if tree s is a subtree of tree t (starting at some node in t).
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ root nodes ≤ 2000`
+- `1 ≤ subRoot nodes ≤ 1000`
+- `-10⁴ ≤ Node.val ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **subRoot is entire tree:** true
+2. **subRoot is leaf of tree:** true
+3. **Empty subRoot:** true (empty tree is subtree of any tree)
+4. **subRoot not found:** false
+5. **Multiple occurrences:** Match any one
+
+<br>
+
+---
+
 ```code```

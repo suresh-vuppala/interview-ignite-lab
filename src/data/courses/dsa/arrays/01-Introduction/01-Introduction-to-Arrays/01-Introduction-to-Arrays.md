@@ -56,6 +56,28 @@ Efficient for `range sum queries` and cumulative operations.
 - **Database Indexing** - B-trees, hash tables
 - **Network Protocols** - Packet parsing, data transmission
 - **Game Development** - Collision detection, pathfinding
+
+
+---
+
+## Constraints
+
+- `Introductory lesson — array fundamentals`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty array:** Handle base case
+2. **Single element:** Trivial operations
+3. **Large array:** Memory considerations
+
+<br>
+
+---
+
 ```code```
 
 ## Practice Strategy

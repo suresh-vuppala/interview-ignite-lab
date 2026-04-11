@@ -15,4 +15,29 @@ Perform level order traversal returning list of lists (each inner list is one le
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 2000`
+- `-1000 ≤ Node.val ≤ 1000`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty tree:** Return []
+2. **Single node:** Return [[val]]
+3. **Complete binary tree:** Each level fully populated
+4. **Skewed tree:** One node per level
+5. **Single level:** Only root
+
+<br>
+
+---
+
 ```code```

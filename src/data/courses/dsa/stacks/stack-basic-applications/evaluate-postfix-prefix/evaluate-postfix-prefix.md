@@ -42,6 +42,30 @@ Given a postfix or prefix expression, evaluate it and return the result.
 
 <br>
 
+
+---
+
+## Constraints
+
+- `Valid postfix/prefix expression`
+- `Operands are single-digit or multi-digit integers`
+- `Operators are +, -, *, /`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single operand:** '5' → 5
+2. **Division by zero:** Undefined behavior — handle error
+3. **Negative result:** '3 5 -' → -2
+4. **Integer division:** '7 2 /' → 3 (truncate toward zero)
+5. **Large numbers:** Multi-digit operands
+6. **All same operator:** '2 3 4 + +' → 9
+
+<br>
+
 ---
 
 ## Solution: Stack-Based Evaluation

@@ -15,6 +15,33 @@ Given a sorted array of integers and a target difference k, find if there exists
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 10⁵`
+- `-10⁴ ≤ nums[i] ≤ 10⁴`
+- `Array is sorted in non-decreasing order`
+- `k ≥ 0`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k = 0:** Need two distinct indices with same value — look for duplicates
+2. **No valid pair:** No pair with the required difference
+3. **Single element array:** Impossible to form a pair
+4. **All same elements with k=0:** Any pair works
+5. **Negative numbers:** Difference with negative sorted array
+6. **Pair at adjacent positions:** Minimum gap pair
+7. **Pair at extremes:** First and last element form the pair
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

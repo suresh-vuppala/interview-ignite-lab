@@ -21,6 +21,29 @@ Find the kth smallest element in an unsorted array using QuickSelect algorithm.
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ k ≤ nums.length ≤ 10⁵`
+- `-10⁴ ≤ nums[i] ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k = 1:** Find minimum element
+2. **k = n:** Find maximum element
+3. **All same elements:** Any element is the answer
+4. **Already sorted:** Element at index k-1
+5. **Single element, k=1:** Return that element
+6. **Array with negatives:** Smallest can be very negative
+
+<br>
+
 ---
 
 ## Solution: QuickSelect Algorithm

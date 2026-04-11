@@ -10,6 +10,28 @@ Learn to reverse a linked list using iterative approach with pointer manipulatio
 ## Problem Statement
 Reverse a singly linked list iteratively by changing the direction of next pointers.
 
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 5000`
+- `-5000 ≤ Node.val ≤ 5000`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty list:** Return null
+2. **Single node:** Return as-is
+3. **Two nodes:** Swap them
+4. **Already reversed (sorted desc):** Results in ascending
+5. **Large list:** Must be O(n) time O(1) space
+
+<br>
+
 ## Approach
 
 ### Iterative Reversal

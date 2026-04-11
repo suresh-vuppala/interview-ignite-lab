@@ -24,6 +24,29 @@ A primitive string is a non-empty valid parentheses string that cannot be split 
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ s.length ≤ 10⁵`
+- `s is a valid parentheses string`
+- `s consists of '(' and ')' only`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single primitive:** '()' → ''
+2. **Multiple primitives:** '()()' → ''
+3. **Nested:** '(())' → '()'
+4. **Complex:** '(()())(())' → '()()()'
+5. **Deeply nested:** '(((())))' → '((()))'
+
+<br>
+
 ---
 
 ## Solution: Counter-Based Approach

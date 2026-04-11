@@ -33,6 +33,29 @@ Find the index of a target value in an unsorted array. Return `-1` if the target
 
 ---
 
+
+---
+
+## Constraints
+
+- `0 ≤ nums.length ≤ 10⁴`
+- `-10⁴ ≤ nums[i] ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty array:** Return -1
+2. **Target at beginning:** Found in first iteration
+3. **Target at end:** Found in last iteration
+4. **Target not present:** Full traversal then -1
+5. **Duplicate targets:** Return first occurrence
+6. **Single element:** Match or not
+
+<br>
+
 ## Complexity Analysis
 
 ### Time Complexity: O(n)

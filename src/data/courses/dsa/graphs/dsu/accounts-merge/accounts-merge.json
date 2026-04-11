@@ -1,0 +1,26 @@
+{
+  "title": "Accounts Merge",
+  "slug": "accounts-merge",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "accounts-merge.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/accounts_merge.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/AccountsMerge.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/accounts_merge.py"
+        }
+      ]
+    }
+  ]
+}

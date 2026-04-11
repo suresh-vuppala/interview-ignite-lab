@@ -47,6 +47,26 @@ A monotonic array is one where elements consistently move in one direction (neve
 
 ---
 
+
+---
+
+## Constraints
+
+- `Binary search on monotonic function over range [lo, hi]`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Function always true:** Return lo
+2. **Function always false:** Return hi + 1 or no answer
+3. **Transition at boundary:** lo or hi is the answer
+4. **Single point range:** lo == hi
+
+<br>
+
 ## Complexity Analysis
 
 ### Time Complexity: O(n)

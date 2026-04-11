@@ -1,0 +1,26 @@
+{
+  "title": "First Missing Positive",
+  "slug": "first-missing-positive",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "first-missing-positive.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/first_missing_positive.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/FirstMissingPositive.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/first_missing_positive.py"
+        }
+      ]
+    }
+  ]
+}

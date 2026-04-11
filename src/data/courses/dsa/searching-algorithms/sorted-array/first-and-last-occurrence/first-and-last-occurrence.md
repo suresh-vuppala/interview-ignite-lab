@@ -38,5 +38,31 @@ Both searches require _O(log n)_ time and constant extra space.
 
 ---
 
-```code```
 
+
+---
+
+## Constraints
+
+- `0 ≤ nums.length ≤ 10⁵`
+- `-10⁹ ≤ nums[i] ≤ 10⁹`
+- `nums is sorted in non-decreasing order`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Target not found:** Return [-1, -1]
+2. **Single occurrence:** First == Last
+3. **All elements are target:** First=0, Last=n-1
+4. **Target at boundaries:** First or last position only
+5. **Empty array:** Return [-1, -1]
+6. **Large run of target:** Must binary search for both ends
+
+<br>
+
+---
+
+```code```

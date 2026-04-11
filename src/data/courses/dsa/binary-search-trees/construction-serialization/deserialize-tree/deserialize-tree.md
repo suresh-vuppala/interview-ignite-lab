@@ -13,4 +13,27 @@ Use appropriate tree algorithms and data structures
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `Valid serialized string`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty string:** Return null
+2. **Single value:** Return single node
+3. **Null markers:** Skip and continue
+4. **Mismatched format:** Handle errors
+
+<br>
+
+---
+
 ```code```

@@ -27,6 +27,31 @@ Find the largest rectangle area in a histogram where bars have width 1 and varyi
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ heights.length ≤ 10⁵`
+- `0 ≤ heights[i] ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single bar:** [5] → 5
+2. **All same height:** [3,3,3,3] → 12
+3. **Strictly increasing:** [1,2,3,4] → max rect uses middle bars
+4. **Strictly decreasing:** [4,3,2,1] → max rect uses middle bars
+5. **Contains zero:** [2,0,3] → 3 (zero splits the histogram)
+6. **All zeros:** [0,0,0] → 0
+7. **Spike in middle:** [1,1,100,1,1] → 100 (single tall bar)
+8. **Wide low bar vs tall narrow:** [2,2,2,2] vs [8] — compare area
+
+<br>
+
 ---
 
 ## Solution: Monotonic Stack

@@ -1,0 +1,26 @@
+{
+  "title": "Spiral Matrix",
+  "slug": "spiral-matrix",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "spiral-matrix.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/spiral_matrix.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/SpiralMatrix.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/spiral_matrix.py"
+        }
+      ]
+    }
+  ]
+}

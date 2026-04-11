@@ -40,6 +40,27 @@ Find the kth smallest (or kth largest) element in a Binary Search Tree.
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ k ≤ n ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k = 1:** Leftmost node (smallest)
+2. **k = n:** Rightmost node (largest)
+3. **k = n/2:** Middle element — median
+4. **Single node, k=1:** Return that node
+5. **Skewed BST:** k steps from one end
+
+<br>
+
 ---
 
 ## Solution #1: Inorder Traversal for Kth Smallest

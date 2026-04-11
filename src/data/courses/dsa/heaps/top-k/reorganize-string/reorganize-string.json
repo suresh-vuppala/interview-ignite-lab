@@ -1,0 +1,26 @@
+{
+  "title": "Reorganize String",
+  "slug": "reorganize-string",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "reorganize-string.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/reorganize_string.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/ReorganizeString.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/reorganize_string.py"
+        }
+      ]
+    }
+  ]
+}

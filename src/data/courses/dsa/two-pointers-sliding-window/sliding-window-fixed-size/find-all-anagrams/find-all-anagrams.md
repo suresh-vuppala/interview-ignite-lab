@@ -17,6 +17,31 @@ Given a string s and a pattern p, find all starting indices of p's anagrams in s
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ s.length, p.length ≤ 3 × 10⁴`
+- `s and p consist of lowercase English letters`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **p longer than s:** No anagrams possible — return []
+2. **s equals p:** Return [0]
+3. **No anagrams exist:** Return []
+4. **Entire string is one big anagram:** s is a permutation of p repeated
+5. **Single character pattern:** Find all occurrences of that character
+6. **All same characters:** 'aaaa' pattern 'aa' → [0, 1, 2]
+7. **Overlapping anagrams:** Anagram windows can overlap
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force with Sorting

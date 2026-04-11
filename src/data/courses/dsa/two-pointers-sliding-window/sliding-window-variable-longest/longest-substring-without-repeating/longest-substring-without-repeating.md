@@ -17,6 +17,32 @@ Given a string s, find the length of the longest substring without repeating cha
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `0 ≤ s.length ≤ 5 × 10⁴`
+- `s consists of English letters, digits, symbols, and spaces`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty string:** Return 0
+2. **Single character:** Return 1
+3. **All same characters:** 'aaaa' → 1
+4. **All unique characters:** 'abcdef' → length of string
+5. **Repeating at start and end:** 'abcabc' → 3
+6. **Space characters:** ' ' is a valid character that can repeat
+7. **String with digits and symbols:** All printable ASCII can appear
+8. **Length 1 repeats:** 'au' → 2
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

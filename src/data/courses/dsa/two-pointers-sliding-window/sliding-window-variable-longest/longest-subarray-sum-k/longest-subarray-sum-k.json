@@ -3,7 +3,7 @@
   "slug": "longest-subarray-sum-k",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./longest-subarray-sum-k.md",
+  "mdFile": "longest-subarray-sum-k.md",
   "codeExamples": [
     {
       "title": "Solution",

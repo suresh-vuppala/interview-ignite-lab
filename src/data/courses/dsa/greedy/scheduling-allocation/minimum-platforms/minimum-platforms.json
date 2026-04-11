@@ -1,0 +1,26 @@
+{
+  "title": "Minimum Platforms",
+  "slug": "minimum-platforms",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "minimum-platforms.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/minimum_platforms.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/MinimumPlatforms.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/minimum_platforms.py"
+        }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,27 @@ Learn to reverse a linked list using recursive approach.
 ## Problem Statement
 Reverse a singly linked list using recursion.
 
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 5000`
+- `-5000 ≤ Node.val ≤ 5000`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty list:** Return null
+2. **Single node:** Return as-is
+3. **Large list:** Recursion depth = n — potential stack overflow
+4. **Two nodes:** Base recursive case
+
+<br>
+
 ## Approach
 
 ### Recursive Reversal

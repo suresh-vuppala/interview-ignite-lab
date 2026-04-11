@@ -11,4 +11,28 @@ Detect if a linked list is circular using Floyd's algorithm.
 ### Time: O(n), Space: O(1)
 
 ## Code
+
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Not circular:** Traversal hits null
+2. **Circular list:** Traversal revisits head
+3. **Empty list:** Not circular
+4. **Single node pointing to itself:** Circular
+5. **Single node pointing to null:** Not circular
+
+<br>
+
+---
+
 ```code```

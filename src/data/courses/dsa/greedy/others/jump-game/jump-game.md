@@ -35,6 +35,30 @@ Given an array of non-negative integers where each element represents your maxim
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 10⁴`
+- `0 ≤ nums[i] ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single element:** Already at end → true
+2. **Zero at start:** [0,...] → false (stuck at start)
+3. **All ones:** Always reachable
+4. **Zero in middle but reachable by jumping over:** [2,0,1] → true
+5. **All zeros except first:** [3,0,0,0] → depends on first element
+6. **Large jumps:** Single jump covers entire array
+7. **Last element is zero:** Doesn't matter — we just need to reach it
+
+<br>
+
 ---
 
 ## Solution: Greedy Maximum Reach

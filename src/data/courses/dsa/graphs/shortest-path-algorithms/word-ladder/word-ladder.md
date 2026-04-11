@@ -19,6 +19,32 @@ Given two words beginWord and endWord, and a dictionary wordList, return the len
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ beginWord.length ≤ 10`
+- `endWord.length == beginWord.length`
+- `1 ≤ wordList.length ≤ 5000`
+- `All words same length`
+- `Words consist of lowercase English letters`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **endWord not in wordList:** Return 0
+2. **beginWord == endWord:** Return 1 (or 0 depending on definition)
+3. **No path exists:** Return 0
+4. **Direct one-char change:** Return 2
+5. **Long chain needed:** BFS finds shortest
+6. **Large wordList:** Need efficient neighbor generation
+
+<br>
+
 ---
 
 ## Solution 1: BFS with Neighbor Generation

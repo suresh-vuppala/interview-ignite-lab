@@ -15,4 +15,28 @@ Build height-balanced BST from sorted array (O(n) time).
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 10⁴`
+- `nums is sorted in ascending order`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single element:** Return single node
+2. **Two elements:** Root + one child
+3. **Odd length:** Middle element is root
+4. **Even length:** Either middle works
+
+<br>
+
+---
+
 ```code```

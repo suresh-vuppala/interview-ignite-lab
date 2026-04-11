@@ -21,6 +21,33 @@ Given an array and a window size k, find the maximum element in each window of s
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 10⁵`
+- `-10⁴ ≤ nums[i] ≤ 10⁴`
+- `1 ≤ k ≤ nums.length`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k = 1:** Return the array itself
+2. **k = n:** Return single maximum of entire array
+3. **Sorted ascending:** Maximum is always rightmost element in window
+4. **Sorted descending:** Maximum is always leftmost — tests deque eviction
+5. **All same elements:** Every window max is that element
+6. **Single element:** Return that element
+7. **Large k, small variations:** Deque stays short
+8. **Negative numbers:** Maximum could be negative
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

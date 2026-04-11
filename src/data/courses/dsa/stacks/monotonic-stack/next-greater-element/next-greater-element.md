@@ -24,6 +24,29 @@ For each element in an array, find the next greater element to its right. If no 
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 10⁴`
+- `-10⁹ ≤ nums[i] ≤ 10⁹`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Strictly decreasing:** All answers are -1
+2. **Strictly increasing:** Each element's NGE is the next element, last is -1
+3. **Single element:** [-1]
+4. **All same:** [5,5,5] → [-1,-1,-1]
+5. **Two elements:** [1,2] → [2,-1]
+6. **Negative numbers:** NGE still works by value comparison
+
+<br>
+
 ---
 
 ## Solution: Monotonic Stack

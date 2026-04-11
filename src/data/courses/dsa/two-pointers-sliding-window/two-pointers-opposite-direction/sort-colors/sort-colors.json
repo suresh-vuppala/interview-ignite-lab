@@ -1,0 +1,26 @@
+{
+  "title": "Sort Colors (Dutch National Flag)",
+  "slug": "sort-colors",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "sort-colors.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/sort_colors.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/SortColors.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/sort_colors.py"
+        }
+      ]
+    }
+  ]
+}

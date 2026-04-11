@@ -24,6 +24,30 @@ Given an array of tasks and a cooling interval n, find the minimum time needed t
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ tasks.length ≤ 10⁴`
+- `0 ≤ n ≤ 100`
+- `tasks[i] is uppercase English letter`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **n = 0:** No cooldown — total time = tasks.length
+2. **All same task:** 'AAAA' n=2 → A_A_A_A → needs idle slots
+3. **All unique tasks:** No idle time needed if enough variety
+4. **Single task:** Time = 1
+5. **Two tasks same, n=1:** 'AA' n=1 → A_A → 3
+6. **Many distinct tasks:** Cooldown easily filled by other tasks
+
+<br>
+
 ---
 
 ## Solution: Greedy Frequency-Based Scheduling

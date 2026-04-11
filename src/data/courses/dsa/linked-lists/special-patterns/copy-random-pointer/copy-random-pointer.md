@@ -11,4 +11,31 @@ Deep copy a linked list where each node has a random pointer.
 ### Time: O(n), Space: O(1) or O(n) with map
 
 ## Code
+
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 1000`
+- `-10⁴ ≤ Node.val ≤ 10⁴`
+- `Random pointer is null or points to a node in the list`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty list:** Return null
+2. **Single node, random = null:** Copy single node
+3. **Single node, random = self:** Copy with self-reference
+4. **All random pointers null:** Simple deep copy
+5. **Random pointer to head:** Must map old→new nodes
+6. **Random pointer to tail:** Same mapping logic
+
+<br>
+
+---
+
 ```code```

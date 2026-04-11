@@ -30,6 +30,31 @@ Remove k digits from number to make it smallest possible. Return result as strin
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ k ≤ num.length ≤ 10⁵`
+- `num consists of digits 0-9`
+- `num does not have leading zeros`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k = num.length:** Remove all digits → '0'
+2. **k = 0:** Return original number
+3. **All same digits:** '1111' k=2 → '11'
+4. **Increasing digits:** '12345' k=1 → '1234' (remove last)
+5. **Decreasing digits:** '54321' k=1 → '4321' (remove first)
+6. **Leading zeros after removal:** '10200' k=1 → '200'
+7. **Result is '0':** '10' k=2 → '0'
+
+<br>
+
 ---
 
 ## Solution: Monotonic Increasing Stack

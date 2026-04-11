@@ -19,6 +19,30 @@ Given an array of integers and a number k, find all subarrays of size k and thei
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ k ≤ nums.length ≤ 10⁵`
+- `-10⁴ ≤ nums[i] ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k equals array length:** Only one subarray
+2. **k = 1:** Each element is its own subarray
+3. **All zeros:** All sums are 0
+4. **Single element, k=1:** One subarray with that element
+5. **Negative numbers:** Sums can be negative
+6. **Large array:** Must use O(1) sliding, not O(k) per window
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

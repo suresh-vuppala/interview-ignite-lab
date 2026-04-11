@@ -16,6 +16,32 @@ Given an array of positive integers and an integer k, count the number of contig
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 3 × 10⁴`
+- `1 ≤ nums[i] ≤ 1000`
+- `0 ≤ k ≤ 10⁶`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k = 0 or k = 1:** No positive product can be < 0 or < 1 → return 0
+2. **All elements are 1:** Product is always 1 — all subarrays valid if k > 1
+3. **Single element ≥ k:** That element alone doesn't form valid subarray
+4. **Single element < k:** Return 1
+5. **Entire array product < k:** All subarrays are valid → n*(n+1)/2
+6. **Large elements:** Window shrinks quickly
+7. **Product overflow concern:** With max element 1000 and n=30000, product can be huge — shrink early
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

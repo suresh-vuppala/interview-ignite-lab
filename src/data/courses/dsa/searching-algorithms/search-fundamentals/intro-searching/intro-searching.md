@@ -37,3 +37,25 @@ Searching is the process of finding a specific value (key) in a collection of da
 - Looking up a student ID in a database
 - Auto-complete suggestions
 - Search engines indexing
+
+
+---
+
+## Constraints
+
+- `Conceptual lesson — overview of searching techniques`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Sorted vs unsorted input:** Determines which algorithm is applicable
+2. **Duplicate elements:** May affect which occurrence is found
+
+<br>
+
+---
+
+```code```

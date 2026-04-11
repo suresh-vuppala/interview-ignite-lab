@@ -3,22 +3,22 @@
   "slug": "container-most-water",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./container-most-water.md",
+  "mdFile": "container-most-water.md",
   "codeExamples": [
     {
       "title": "Implementation",
       "languages": [
         {
           "language": "java",
-          "codeFile": "./code/java/ContainerMostWater.java"
+          "codeFile": "code/java/ContainerMostWater.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/container_most_water.cpp"
+          "codeFile": "code/cpp/container_most_water.cpp"
         },
         {
           "language": "python",
-          "codeFile": "./code/python/container-most-water.py"
+          "codeFile": "code/python/container-most-water.py"
         }
       ]
     }

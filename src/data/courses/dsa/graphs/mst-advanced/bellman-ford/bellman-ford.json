@@ -1,0 +1,26 @@
+{
+  "title": "Bellman-Ford Algorithm",
+  "slug": "bellman-ford",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "bellman-ford.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/bellman_ford.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/BellmanFord.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/bellman_ford.py"
+        }
+      ]
+    }
+  ]
+}

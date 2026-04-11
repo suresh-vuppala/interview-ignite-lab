@@ -1,0 +1,26 @@
+{
+  "title": "Find All Duplicates",
+  "slug": "find-all-duplicates",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "find-all-duplicates.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/find_all_duplicates.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/FindAllDuplicates.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/find_all_duplicates.py"
+        }
+      ]
+    }
+  ]
+}

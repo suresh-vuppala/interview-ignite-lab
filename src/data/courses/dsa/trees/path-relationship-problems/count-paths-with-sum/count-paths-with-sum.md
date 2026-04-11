@@ -13,4 +13,28 @@ Use appropriate tree algorithms and data structures
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 1000`
+- `-10⁹ ≤ Node.val ≤ 10⁹`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **No valid paths:** Return 0
+2. **Multiple overlapping paths:** Count each separately
+3. **Negative values:** Path can dip and recover
+4. **Single node path:** Valid if equals target
+
+<br>
+
+---
+
 ```code```

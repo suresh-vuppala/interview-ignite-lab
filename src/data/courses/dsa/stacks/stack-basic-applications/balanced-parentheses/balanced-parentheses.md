@@ -34,6 +34,31 @@ Check if a string containing parentheses is balanced. A string is balanced if ev
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ s.length ≤ 10⁴`
+- `s consists of '(', ')', '{', '}', '[', ']' only`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty string:** Considered balanced
+2. **Single character:** Always unbalanced
+3. **Correctly nested:** '({[]})' → true
+4. **Wrong order close:** '(]' → false
+5. **Extra opening:** '(((' → false
+6. **Extra closing:** ')))' → false
+7. **Only one type:** '(())' → true
+8. **Interleaved types:** '([)]' → false
+
+<br>
+
 ---
 
 ## Solution: Stack-Based Matching

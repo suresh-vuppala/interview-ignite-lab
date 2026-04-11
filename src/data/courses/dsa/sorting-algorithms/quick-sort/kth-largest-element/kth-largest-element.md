@@ -21,6 +21,30 @@ Find the kth largest element in an unsorted array using QuickSelect algorithm.
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ k ≤ nums.length ≤ 10⁵`
+- `-10⁴ ≤ nums[i] ≤ 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k = 1:** Find maximum element
+2. **k = n:** Find minimum element
+3. **All same elements:** Any element is the answer
+4. **k = n/2:** Find median
+5. **Already sorted:** kth from end
+6. **Single element, k=1:** Return that element
+7. **Duplicates:** kth largest counts duplicates separately
+
+<br>
+
 ---
 
 ## Solution: QuickSelect for Kth Largest

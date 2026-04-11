@@ -3,22 +3,22 @@
   "slug": "move-zeros",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./move-zeros.md",
+  "mdFile": "move-zeros.md",
   "codeExamples": [
     {
       "title": "Implementation",
       "languages": [
         {
           "language": "java",
-          "codeFile": "./code/java/MoveZeros.java"
+          "codeFile": "code/java/MoveZeros.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/move_zeros.cpp"
+          "codeFile": "code/cpp/move_zeros.cpp"
         },
         {
           "language": "python",
-          "codeFile": "./code/python/move-zeros.py"
+          "codeFile": "code/python/move-zeros.py"
         }
       ]
     }

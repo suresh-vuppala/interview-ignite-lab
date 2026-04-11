@@ -22,6 +22,30 @@ There are n gas stations along a circular route. Given two arrays: gas[i] = amou
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ gas.length ≤ 10⁵`
+- `0 ≤ gas[i], cost[i] ≤ 10⁴`
+- `gas.length == cost.length`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Total gas < total cost:** Impossible — return -1
+2. **Total gas == total cost:** Exactly one valid start exists
+3. **All gas[i] == cost[i]:** Can start anywhere — return 0
+4. **Single station:** gas[0] >= cost[0] → return 0, else -1
+5. **Only one valid starting point:** Must find it efficiently
+6. **Large surplus at one station:** That station likely the answer
+
+<br>
+
 ---
 
 ## Solution: Greedy Single Pass

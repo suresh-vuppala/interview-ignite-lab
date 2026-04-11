@@ -3,22 +3,22 @@
   "slug": "two-sum-sorted-array",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./two-sum-sorted-array.md",
+  "mdFile": "two-sum-sorted-array.md",
   "codeExamples": [
     {
       "title": "Implementation",
       "languages": [
         {
           "language": "java",
-          "codeFile": "./code/java/TwoSumSortedArray.java"
+          "codeFile": "code/java/TwoSumSortedArray.java"
         },
         {
           "language": "cpp",
-          "codeFile": "./code/cpp/two_sum_sorted_array.cpp"
+          "codeFile": "code/cpp/two_sum_sorted_array.cpp"
         },
         {
           "language": "python",
-          "codeFile": "./code/python/two-sum-sorted-array.py"
+          "codeFile": "code/python/two-sum-sorted-array.py"
         }
       ]
     }

@@ -1,0 +1,26 @@
+{
+  "title": "Maximal Rectangle",
+  "slug": "maximal-rectangle",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "maximal-rectangle.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/maximal_rectangle.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/MaximalRectangle.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/maximal_rectangle.py"
+        }
+      ]
+    }
+  ]
+}

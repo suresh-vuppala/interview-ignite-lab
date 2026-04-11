@@ -13,4 +13,28 @@ Use appropriate tree algorithms and data structures
 
 ## Code
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 200`
+- `Node.val is 0 or 1`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **All zeros:** Return null
+2. **All ones:** Return unchanged
+3. **Root is 0 but has 1 in subtree:** Root survives
+4. **Leaf is 0:** Gets pruned
+
+<br>
+
+---
+
 ```code```

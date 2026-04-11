@@ -12,6 +12,28 @@ Implement a singly linked list with the following operations:
 - Traverse the list and print all elements
 - Count the total number of nodes
 
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 10⁴ (number of nodes)`
+- `-10⁵ ≤ Node.val ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty list:** Head is null
+2. **Single node:** Next is null
+3. **Traversal prints all values:** Iterate until null
+4. **Circular list (if malformed):** Infinite loop without detection
+5. **Large list:** Memory allocation for each node
+
+<br>
+
 ## Approach
 
 ### 1. Create Linked List

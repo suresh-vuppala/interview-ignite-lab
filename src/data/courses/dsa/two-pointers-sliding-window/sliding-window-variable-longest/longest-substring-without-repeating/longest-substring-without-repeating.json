@@ -3,7 +3,7 @@
   "slug": "longest-substring-without-repeating",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "./longest-substring-without-repeating.md",
+  "mdFile": "longest-substring-without-repeating.md",
   "codeExamples": [
     {
       "title": "Solution",

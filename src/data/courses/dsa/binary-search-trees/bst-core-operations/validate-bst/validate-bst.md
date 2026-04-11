@@ -38,6 +38,28 @@ Determine if a binary tree is a valid Binary Search Tree (BST). A valid BST sati
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁴`
+- `-2³¹ ≤ Node.val ≤ 2³¹ - 1`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single node:** Always valid BST
+2. **All left:** Valid if descending
+3. **Equal values:** Not valid BST (strict inequality)
+4. **INT_MIN/INT_MAX values:** Watch for boundary overflow in comparisons
+5. **Valid but not balanced:** Still a valid BST
+
+<br>
+
 ---
 
 ## Solution: Range Validation (Min-Max Approach)

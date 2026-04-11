@@ -22,6 +22,30 @@ Given an array of intervals, find the minimum number of intervals you need to re
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ intervals.length ≤ 10⁵`
+- `-5 × 10⁴ ≤ start < end ≤ 5 × 10⁴`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **No overlaps:** Remove 0 intervals
+2. **All overlap:** Remove n-1 intervals
+3. **Single interval:** Remove 0
+4. **Nested intervals:** Remove the outer one (keep shorter)
+5. **Same start, different end:** Keep shorter one
+6. **Same end, different start:** Keep either
+7. **Negative coordinates:** Works the same way
+
+<br>
+
 ---
 
 ## Solution: Greedy Interval Selection

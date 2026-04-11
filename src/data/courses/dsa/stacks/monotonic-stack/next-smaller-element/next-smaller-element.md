@@ -17,6 +17,28 @@ For each element in array, find the next smaller element to its right. If no sma
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 10⁵`
+- `-10⁹ ≤ nums[i] ≤ 10⁹`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Strictly increasing:** All answers are -1
+2. **Strictly decreasing:** Each element's NSE is the next element
+3. **All same:** All answers are -1
+4. **Single element:** [-1]
+5. **Negative numbers:** Smaller can be more negative
+
+<br>
+
 ---
 
 ## Solution: Monotonic Stack

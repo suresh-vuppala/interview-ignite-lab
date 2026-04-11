@@ -24,6 +24,29 @@ Given start and end times of activities, select the maximum number of non-overla
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁵`
+- `0 ≤ start[i] < end[i] ≤ 10⁹`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **All overlapping:** Only one activity can be selected
+2. **No overlapping:** All activities selected
+3. **Single activity:** Select it
+4. **Same start time, different end:** Greedy picks earliest ending
+5. **Nested intervals:** [1,10], [2,3], [4,5] → pick inner ones
+6. **Adjacent intervals:** [1,2], [2,3] — depends on open/closed intervals
+
+<br>
+
 ---
 
 ## Solution: Greedy Activity Selection

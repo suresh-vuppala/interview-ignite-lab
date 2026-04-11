@@ -25,6 +25,29 @@ Implement the MyStack class:
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ x ≤ 9`
+- `At most 100 calls to push, pop, top, empty`
+- `All calls to pop and top are valid`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single push then pop:** Returns the pushed element
+2. **Multiple pushes then pops:** LIFO order verified
+3. **Push after pop:** Stack resumes correctly
+4. **empty() on empty stack:** Returns true
+5. **top() returns without removing:** Subsequent pop still works
+
+<br>
+
 ---
 
 ## Solution: Single Queue with Rotation

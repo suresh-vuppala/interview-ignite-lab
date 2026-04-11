@@ -16,6 +16,33 @@ Given a binary array and an integer k, find the maximum number of consecutive 1'
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ nums.length ≤ 10⁵`
+- `nums[i] is either 0 or 1`
+- `0 ≤ k ≤ nums.length`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k = 0:** Find longest run of 1s without any flips
+2. **k >= number of zeros:** Return entire array length
+3. **All ones:** Return array length
+4. **All zeros:** Return min(k, n)
+5. **Single element:** Return 1 if element is 1 or k >= 1
+6. **k = n:** Can flip all — return n
+7. **Zeros at extremes:** [0,0,1,1,1,0,0] k=2
+8. **Alternating 0s and 1s:** [0,1,0,1,0] k=2
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

@@ -16,6 +16,30 @@ Given an array of integers and a target sum k, find the length of the longest su
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁵`
+- `-10⁵ ≤ nums[i] ≤ 10⁵`
+- `Prefix sum may overflow — use long/long long if needed`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single element:** Subarray is the element itself
+2. **All zeros:** All prefix sums are 0
+3. **All same values:** Uniform prefix sum growth
+4. **Negative values:** Prefix sum can decrease
+5. **Target = 0:** Count subarrays summing to 0 (common trick)
+6. **Entire array is the answer:** Sum of all elements matches target
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

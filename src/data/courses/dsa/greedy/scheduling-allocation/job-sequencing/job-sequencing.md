@@ -27,6 +27,30 @@ Given an array of jobs where each job has a deadline and profit, schedule jobs t
 
 <br>
 
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ 10⁵`
+- `1 ≤ deadline[i] ≤ n`
+- `1 ≤ profit[i] ≤ 500`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **All same deadline = 1:** Only highest profit job selected
+2. **All deadlines = n:** All jobs can be scheduled
+3. **Single job:** Always scheduled
+4. **All same profit:** Any valid selection works
+5. **Deadlines larger than n:** More slots available
+6. **All deadline = 1, different profits:** Pick highest profit only
+
+<br>
+
 ---
 
 ## Solution: Greedy Job Scheduling

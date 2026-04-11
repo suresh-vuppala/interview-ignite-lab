@@ -18,6 +18,30 @@ Given an array of integers and a window size k, find the count of distinct eleme
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ k ≤ nums.length ≤ 10⁵`
+- `1 ≤ nums[i] ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **k = 1:** Each window has exactly 1 distinct element
+2. **k = n:** Count distinct in entire array
+3. **All same elements:** Every window has 1 distinct element
+4. **All unique elements:** Every window of size k has k distinct elements
+5. **Single element array, k=1:** Return [1]
+6. **Large k with repeats:** Frequency map must track add/remove correctly
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

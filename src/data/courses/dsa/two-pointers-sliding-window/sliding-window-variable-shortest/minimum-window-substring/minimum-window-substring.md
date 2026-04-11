@@ -16,6 +16,33 @@ Given two strings s and t, find the minimum window substring in s that contains 
 
 <br>
 
+
+
+---
+
+## Constraints
+
+- `1 ≤ s.length, t.length ≤ 10⁵`
+- `s and t consist of uppercase and lowercase English letters`
+- `Answer is guaranteed to be unique if it exists`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **t longer than s:** Impossible → return ''
+2. **s equals t:** Return s
+3. **t is single character:** Find first occurrence in s
+4. **No valid window:** s doesn't contain all chars of t → return ''
+5. **Duplicate characters in t:** 't = "aa"' — window must contain at least 2 'a's
+6. **Minimum window is entire string s:** All chars of t spread across s
+7. **Multiple valid windows:** Must return the smallest one
+8. **t has chars not in s:** Return ''
+
+<br>
+
 ---
 
 ## Solution 1: Brute Force

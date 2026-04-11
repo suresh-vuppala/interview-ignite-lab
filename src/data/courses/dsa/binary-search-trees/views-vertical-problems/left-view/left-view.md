@@ -26,6 +26,26 @@ Find the left view of a binary tree. Left view contains the first node visible a
 
 <br>
 
+
+---
+
+## Constraints
+
+- `0 ≤ n ≤ 10⁵`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Empty tree:** Return []
+2. **Right-skewed tree:** Only root visible
+3. **Left-skewed tree:** All nodes visible
+4. **Complete tree:** One node per level
+
+<br>
+
 ---
 
 ## Solution #1: Level Order Traversal (BFS)

@@ -1,0 +1,26 @@
+{
+  "title": "Valid Anagram",
+  "slug": "valid-anagram",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "valid-anagram.md",
+  "codeExamples": [
+    {
+      "title": "Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "code/cpp/valid_anagram.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "code/java/ValidAnagram.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "code/python/valid_anagram.py"
+        }
+      ]
+    }
+  ]
+}

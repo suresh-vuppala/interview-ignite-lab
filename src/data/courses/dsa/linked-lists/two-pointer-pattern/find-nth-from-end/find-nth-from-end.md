@@ -11,4 +11,29 @@ Find the nth node from the end using two-pointer technique in one pass.
 ### Time: O(n), Space: O(1)
 
 ## Code
+
+
+---
+
+## Constraints
+
+- `1 ≤ n ≤ size of list`
+- `List size ≥ 1`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **n = 1:** Return last node
+2. **n = list size:** Return head
+3. **n > list size:** Invalid — handle error
+4. **Single node, n = 1:** Return that node
+5. **n = 0:** Invalid input
+
+<br>
+
+---
+
 ```code```

@@ -26,6 +26,29 @@ Implement the MaxStack class:
 
 <br>
 
+
+---
+
+## Constraints
+
+- `-10⁷ ≤ val ≤ 10⁷`
+- `At most 2 × 10⁴ calls to push, pop, top, peekMax, popMax`
+
+<br>
+
+---
+
+## All Possible Edge Cases
+
+1. **Single element:** Max is that element
+2. **All same elements:** popMax removes one, max stays same
+3. **Strictly increasing pushes:** Max is always top
+4. **Strictly decreasing pushes:** popMax removes bottom-most
+5. **popMax then push:** Max may change after popMax
+6. **Multiple popMax calls:** Max decreases progressively
+
+<br>
+
 ---
 
 ## Solution: Two Stack Approach
