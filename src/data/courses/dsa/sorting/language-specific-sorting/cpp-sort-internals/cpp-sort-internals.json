@@ -1,0 +1,8 @@
+{
+  "title": "C++ Sort Function Internals & Comparators",
+  "description": "Master C++ sorting with custom comparators, lambda functions, and advanced sorting techniques",
+  "difficulty": "medium",
+  "timeEstimate": "30 minutes",
+  "tags": ["cpp", "sorting", "comparators", "lambda"],
+  "isPosted": true
+}

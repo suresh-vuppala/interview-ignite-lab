@@ -28,6 +28,11 @@
               "isPosted": true
             },
             {
+              "title": "Understanding Constraints",
+              "slug": "understanding-constraints",
+              "isPosted": true
+            },
+            {
               "title": "Getting Started with Arrays",
               "slug": "getting-started-with-arrays",
               "isPosted": true
@@ -482,6 +487,27 @@
               "isPosted": true
             }
           ]
+        },
+        {
+          "title": "Language-Specific Sorting",
+          "slug": "language-specific-sorting",
+          "lessons": [
+            {
+              "title": "C++ Sort Function Internals & Comparators",
+              "slug": "cpp-sort-internals",
+              "isPosted": true
+            },
+            {
+              "title": "Java Sort Internals & Comparators",
+              "slug": "java-sort-internals",
+              "isPosted": true
+            },
+            {
+              "title": "Python Sort Internals & Key Functions",
+              "slug": "python-sort-internals",
+              "isPosted": true
+            }
+          ]
         }
       ]
     },
@@ -603,9 +629,14 @@
           ]
         },
         {
-          "title": "Partition / Allocation Type",
-          "slug": "partition-allocation",
+          "title": "Minimize Maximum",
+          "slug": "minimize-maximum",
           "lessons": [
+            {
+              "title": "Introduction to Minimize Maximum Pattern",
+              "slug": "intro-minimize-maximum",
+              "isPosted": true
+            },
             {
               "title": "Allocate Minimum Number of Pages (Book Problem)",
               "slug": "allocate-minimum-pages",
@@ -629,35 +660,14 @@
           ]
         },
         {
-          "title": "Capacity / Time Optimization",
-          "slug": "capacity-time-optimization",
+          "title": "Maximize Minimum",
+          "slug": "maximize-minimum",
           "lessons": [
             {
-              "title": "Capacity To Ship Packages Within D Days",
-              "slug": "capacity-ship-packages",
+              "title": "Introduction to Maximize Minimum Pattern",
+              "slug": "intro-maximize-minimum",
               "isPosted": true
             },
-            {
-              "title": "Minimum Time to Finish All Jobs",
-              "slug": "minimum-time-finish-jobs",
-              "isPosted": true
-            },
-            {
-              "title": "Koko Eating Bananas",
-              "slug": "koko-eating-bananas",
-              "isPosted": true
-            },
-            {
-              "title": "Minimum Days to Make M Bouquets",
-              "slug": "minimum-days-bouquets",
-              "isPosted": true
-            }
-          ]
-        },
-        {
-          "title": "Distance Maximization",
-          "slug": "distance-maximization",
-          "lessons": [
             {
               "title": "Aggressive Cows",
               "slug": "aggressive-cows",
@@ -671,6 +681,37 @@
             {
               "title": "Place k Elements Such That Minimum Distance is Maximum",
               "slug": "place-k-elements-max-distance",
+              "isPosted": true
+            }
+          ]
+        },
+        {
+          "title": "Capacity/Rate Optimization",
+          "slug": "capacity-rate-optimization",
+          "lessons": [
+            {
+              "title": "Introduction to Capacity/Rate Optimization Pattern",
+              "slug": "intro-capacity-rate",
+              "isPosted": true
+            },
+            {
+              "title": "Capacity To Ship Packages Within D Days",
+              "slug": "capacity-ship-packages",
+              "isPosted": true
+            },
+            {
+              "title": "Koko Eating Bananas",
+              "slug": "koko-eating-bananas",
+              "isPosted": true
+            },
+            {
+              "title": "Minimum Days to Make M Bouquets",
+              "slug": "minimum-days-bouquets",
+              "isPosted": true
+            },
+            {
+              "title": "Minimum Time to Finish All Jobs",
+              "slug": "minimum-time-finish-jobs",
               "isPosted": true
             }
           ]
@@ -1136,6 +1177,11 @@
             {
               "title": "Reverse Bits",
               "slug": "reverse-bits",
+              "isPosted": true
+            },
+            {
+              "title": "Bit Packing and Unpacking",
+              "slug": "bit-packing-unpacking",
               "isPosted": true
             }
           ]

@@ -1,0 +1,8 @@
+{
+  "title": "Java Sort Internals & Comparators",
+  "description": "Master Java sorting with Comparator, Comparable, lambda expressions, and Stream API",
+  "difficulty": "medium",
+  "timeEstimate": "30 minutes",
+  "tags": ["java", "sorting", "comparator", "lambda"],
+  "isPosted": true
+}

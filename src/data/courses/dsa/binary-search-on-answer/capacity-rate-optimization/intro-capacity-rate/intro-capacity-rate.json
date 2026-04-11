@@ -1,0 +1,8 @@
+{
+  "title": "Introduction to Capacity/Rate Optimization Pattern",
+  "description": "Learn the Capacity/Rate Optimization pattern for binary search on answer problems",
+  "difficulty": "medium",
+  "timeEstimate": "15 minutes",
+  "tags": ["binary-search", "capacity-optimization", "pattern"],
+  "isPosted": true
+}

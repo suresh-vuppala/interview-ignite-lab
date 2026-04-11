@@ -1,0 +1,8 @@
+{
+  "title": "Bit Packing and Unpacking",
+  "description": "Learn how to pack multiple integers into one using bit manipulation for efficient storage and faster operations",
+  "difficulty": "medium",
+  "timeEstimate": "25 minutes",
+  "tags": ["bit-manipulation", "packing", "optimization", "hashing"],
+  "isPosted": true
+}

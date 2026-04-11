@@ -1,0 +1,8 @@
+{
+  "title": "Understanding Constraints",
+  "description": "Learn how to interpret time and memory constraints, choose appropriate data types, and ask clarifying questions",
+  "difficulty": "easy",
+  "timeEstimate": "20 minutes",
+  "tags": ["constraints", "time-complexity", "memory", "data-types"],
+  "isPosted": true
+}
