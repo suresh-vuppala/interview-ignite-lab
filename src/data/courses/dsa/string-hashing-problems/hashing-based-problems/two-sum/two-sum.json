@@ -6,19 +6,36 @@
   "mdFile": "two-sum.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Solution 1: Brute Force",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/cpp/two_sum.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/cpp/two_sum_sol1.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/java/TwoSum.java"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/java/TwoSumSol1.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/python/two_sum.py"
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/python/two_sum_sol1.py"
+        }
+      ]
+    },
+    {
+      "title": "Solution 2: Hash Map (Optimal)",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/cpp/two_sum_sol2.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/java/TwoSumSol2.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/string-hashing-problems/hashing-based-problems/two-sum/code/python/two_sum_sol2.py"
         }
       ]
     }
