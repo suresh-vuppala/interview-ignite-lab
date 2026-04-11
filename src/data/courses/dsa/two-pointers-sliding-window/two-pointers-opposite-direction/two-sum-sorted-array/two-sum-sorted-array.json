@@ -6,36 +6,19 @@
   "mdFile": "two-sum-sorted-array.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Brute Force",
+      "title": "Two Sum (Sorted Array)",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-sum-sorted-array/code/cpp/two_sum_sorted_array_sol1.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-sum-sorted-array/code/cpp/two_sum_sorted_array.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-sum-sorted-array/code/java/TwoSumSortedArraySol1.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-sum-sorted-array/code/java/TwoSumSortedArray.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-sum-sorted-array/code/python/two_sum_sorted_array_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Two Pointers (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-sum-sorted-array/code/cpp/two_sum_sorted_array_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-sum-sorted-array/code/java/TwoSumSortedArraySol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-sum-sorted-array/code/python/two_sum_sorted_array_sol2.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-opposite-direction/two-sum-sorted-array/code/python/two_sum_sorted_array.py"
         }
       ]
     }

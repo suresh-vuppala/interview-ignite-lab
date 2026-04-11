@@ -6,36 +6,19 @@
   "mdFile": "move-zeros.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Two-Pass",
+      "title": "Move Zeros",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/move-zeros/code/cpp/move_zeros_sol1.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/move-zeros/code/cpp/move_zeros.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/move-zeros/code/java/MoveZerosSol1.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/move-zeros/code/java/MoveZeros.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/move-zeros/code/python/move_zeros_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Single-Pass Swap (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/move-zeros/code/cpp/move_zeros_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/move-zeros/code/java/MoveZerosSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/move-zeros/code/python/move_zeros_sol2.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/two-pointers-same-direction/move-zeros/code/python/move_zeros.py"
         }
       ]
     }
