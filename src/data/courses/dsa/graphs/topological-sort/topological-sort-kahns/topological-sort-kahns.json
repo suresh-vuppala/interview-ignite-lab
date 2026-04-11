@@ -6,11 +6,11 @@
   "mdFile": "topological-sort-kahns.md",
   "codeExamples": [
     {
-      "title": "Topological Sort Kahns Solution",
+      "title": "Topological Sort Kahns",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/topological-sort/topological-sort-kahns/code/cpp/TopologicalSortKahns.cpp"
+          "codeFile": "courses/dsa/graphs/topological-sort/topological-sort-kahns/code/cpp/topological_sort_kahns.cpp"
         },
         {
           "language": "java",

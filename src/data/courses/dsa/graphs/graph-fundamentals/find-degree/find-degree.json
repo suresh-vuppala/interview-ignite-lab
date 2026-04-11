@@ -6,11 +6,11 @@
   "mdFile": "find-degree.md",
   "codeExamples": [
     {
-      "title": "Find Degree Solution",
+      "title": "Find Degree",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/graph-fundamentals/find-degree/code/cpp/FindDegree.cpp"
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/find-degree/code/cpp/find_degree.cpp"
         },
         {
           "language": "java",

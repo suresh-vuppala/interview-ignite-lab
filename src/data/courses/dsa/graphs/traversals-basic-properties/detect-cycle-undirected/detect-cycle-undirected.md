@@ -1,24 +1,36 @@
-Detect cycle in an undirected graph.
+Detect if an undirected graph contains a cycle.
+
+<br>
+
+> Input: n=4, edges=[[0,1],[1,2],[2,3],[3,1]]
+> Output: true (cycle: 1→2→3→1)
+> **Key insight:** DFS with parent tracking. If we visit a neighbor that's already visited AND it's not our parent → cycle found. BFS alternative: same parent check.
 
 <br>
 
 ---
 
-## Solution 1: DFS with Parent Tracking
-
-If neighbor is visited AND not parent → cycle found.
-
-### Time: O(V + E) | Space: O(V)
+## Constraints
+- `1 ≤ V ≤ 10⁵`
 
 <br>
 
 ---
 
-## Solution 2: Union-Find (DSU)
+## Solution: DFS with Parent Tracking (Optimal)
 
-For each edge (u,v): if find(u) == find(v) → cycle. Else union(u,v).
+**Algorithm:** DFS(node, parent). For each neighbor: if visited AND ≠ parent → cycle. If not visited → recurse.
 
-### Time: O(V + E × α(V)) | Space: O(V)
+### Time Complexity: O(V + E)
+**Why?** Standard DFS traversal.
+
+**Detailed breakdown:** V=100,000, E=100,000 → ~300,000 operations
+
+### Space Complexity: O(V)
+
+> **Drawback:** Need to handle disconnected graphs — run DFS from all unvisited nodes.
+
+> **Key Insight for Improvement:** Union-Find alternative: for each edge, if both endpoints already in same set → cycle. O(E×α(V)).
 
 <br>
 
@@ -26,13 +38,17 @@ For each edge (u,v): if find(u) == find(v) → cycle. Else union(u,v).
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| DFS + Parent | O(V+E) | O(V) | Track parent in DFS |
-| DSU | O(V+E) | O(V) | Union-find cycle detection |
+| Solution | Time | Space |
+|----------|------|-------|
+| DFS + Parent | O(V+E) | O(V) |
+| Union-Find | O(E·α) | O(V) |
 
-<br>
-<br>
+**Key Insights:**
+1. **Parent check critical:** In undirected graphs, the edge back to parent is NOT a cycle
+2. **visited + ≠ parent = cycle:** The defining condition
+3. **Disconnected:** Must check all components
+
+<br><br>
 
 ---
 

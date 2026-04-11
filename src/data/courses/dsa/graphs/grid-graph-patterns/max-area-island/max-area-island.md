@@ -1,13 +1,32 @@
-Find the island with maximum area.
+Find the maximum area of an island in a 2D grid. Area = number of '1' cells in the island.
+
+<br>
+
+> Input: grid = [[0,0,1,0,0],[0,0,0,0,0],[0,1,1,0,0],[0,1,1,0,0]]
+> Output: 4
+> **Key insight:** Same as Number of Islands but track size during DFS. Return count of cells visited per island.
 
 <br>
 
 ---
 
-## Solution 1: DFS — Count cells during flood fill, track max
-## Solution 2: BFS — Same with queue
+## Constraints
+- `1 ≤ m, n ≤ 50`
 
-### Time: O(m × n) | Space: O(m × n) or O(min(m,n))
+<br>
+
+---
+
+## Solution: DFS + Count Cells (Optimal)
+
+**Algorithm:** DFS returns count of cells visited. Track max across all islands.
+
+### Time Complexity: O(M × N)
+### Space Complexity: O(M × N)
+
+> **Drawback:** None — must visit all cells.
+
+> **Key Insight for Improvement:** Same sink technique as Number of Islands. DFS returns area instead of void.
 
 <br>
 
@@ -15,13 +34,16 @@ Find the island with maximum area.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| DFS | O(m×n) | O(m×n) | Count during flood fill |
-| BFS | O(m×n) | O(min(m,n)) | Queue-based |
+| Solution | Time | Space |
+|----------|------|-------|
+| DFS + Area Count | O(M×N) | O(M×N) |
 
-<br>
-<br>
+**Key Insights:**
+1. **DFS returns area:** 1 + dfs(up) + dfs(down) + dfs(left) + dfs(right)
+2. **Sink technique:** Same as Number of Islands
+3. **Variation:** Can also track all island sizes for further analysis
+
+<br><br>
 
 ---
 

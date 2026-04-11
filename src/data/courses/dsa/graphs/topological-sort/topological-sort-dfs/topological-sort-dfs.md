@@ -1,27 +1,32 @@
-Topological ordering of DAG using DFS.
+Return a topological ordering of a directed acyclic graph (DAG) using DFS.
+
+<br>
+
+> Input: n=6, edges=[[5,2],[5,0],[4,0],[4,1],[2,3],[3,1]]
+> Output: [5,4,2,3,1,0] (one valid ordering)
+> **Key insight:** DFS postorder + reverse. After fully processing a node (all descendants visited), push to stack. Stack order = topological order.
 
 <br>
 
 ---
 
-## Solution 1: DFS + Stack
-
-**Intuition:** DFS postorder gives reverse topological order. Push to stack after all descendants processed.
-
-**Algorithm:**
-1. For each unvisited node: DFS
-2. After processing all neighbors → push to stack
-3. Pop stack → topological order
-
-### Time: O(V + E) | Space: O(V)
+## Constraints
+- `1 ≤ V ≤ 10⁵`
 
 <br>
 
 ---
 
-## Solution 2: Kahn's BFS (Alternative)
+## Solution: DFS Postorder + Reverse (Optimal)
 
-See topological-sort-kahns.
+**Algorithm:** DFS from each unvisited node. After recursing all children, push node to stack (postorder). Result = stack order (or reverse postorder).
+
+### Time Complexity: O(V + E)
+### Space Complexity: O(V)
+
+> **Drawback:** Doesn't detect cycles — assumes DAG. Use detect-cycle first or use Kahn's (which naturally detects cycles).
+
+> **Key Insight for Improvement:** Kahn's BFS alternative: process nodes with in-degree 0 first. Naturally detects cycles (if output < V nodes).
 
 <br>
 
@@ -29,13 +34,17 @@ See topological-sort-kahns.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
+| Solution | Time | Space | Cycle Detection |
 |----------|------|-------|----------------|
-| DFS + Stack | O(V+E) | O(V) | Postorder gives reverse topo |
-| Kahn's BFS | O(V+E) | O(V) | In-degree based |
+| DFS Postorder | O(V+E) | O(V) | No (assumes DAG) |
+| Kahn's BFS | O(V+E) | O(V) | Yes (output size < V) |
 
-<br>
-<br>
+**Key Insights:**
+1. **Postorder = dependencies first:** A node is added AFTER all its dependencies
+2. **Reverse postorder = topological order:** Most dependent first
+3. **Applications:** Build systems, course scheduling, dependency resolution
+
+<br><br>
 
 ---
 

@@ -6,11 +6,11 @@
   "mdFile": "detect-cycle-undirected.md",
   "codeExamples": [
     {
-      "title": "Detect Cycle Undirected Solution",
+      "title": "Detect Cycle Undirected",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/traversals-basic-properties/detect-cycle-undirected/code/cpp/DetectCycleUndirected.cpp"
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/detect-cycle-undirected/code/cpp/detect_cycle_undirected.cpp"
         },
         {
           "language": "java",

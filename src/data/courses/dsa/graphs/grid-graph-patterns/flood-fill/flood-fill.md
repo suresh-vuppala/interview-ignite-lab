@@ -1,15 +1,32 @@
-Flood fill starting from (sr, sc) with new color.
+Perform a flood fill on an image. Starting from pixel (sr, sc), change all connected pixels of the same color to newColor.
+
+<br>
+
+> Input: image=[[1,1,1],[1,1,0],[1,0,1]], sr=1, sc=1, color=2
+> Output: [[2,2,2],[2,2,0],[2,0,1]]
+> **Key insight:** DFS/BFS from starting pixel. Only visit cells with the original color. Change to new color.
 
 <br>
 
 ---
 
-## Solution 1: DFS — Recursive fill from start, change color
-## Solution 2: BFS — Queue-based fill
+## Constraints
+- `1 ≤ m, n ≤ 50`
 
-**Edge case:** If new color == original color → no-op (avoid infinite loop).
+<br>
 
-### Time: O(m × n) | Space: O(m × n)
+---
+
+## Solution: DFS Fill (Optimal)
+
+**Algorithm:** Record original color. If same as newColor → return (no-op). DFS: change color, recurse 4 directions.
+
+### Time Complexity: O(M × N)
+### Space Complexity: O(M × N) recursion
+
+> **Drawback:** None. Edge case: if original == newColor, must return immediately to avoid infinite loop.
+
+> **Key Insight for Improvement:** The "original == newColor" check is critical — without it, DFS never terminates.
 
 <br>
 
@@ -17,13 +34,16 @@ Flood fill starting from (sr, sc) with new color.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| DFS | O(m×n) | O(m×n) | Recursive fill |
-| BFS | O(m×n) | O(m×n) | Iterative fill |
+| Solution | Time | Space |
+|----------|------|-------|
+| DFS Fill | O(M×N) | O(M×N) |
 
-<br>
-<br>
+**Key Insights:**
+1. **No-op check:** If original color == newColor → return immediately
+2. **Same as island exploration:** But changes color instead of sinking
+3. **Paint bucket tool:** This IS how paint fill works in image editors
+
+<br><br>
 
 ---
 

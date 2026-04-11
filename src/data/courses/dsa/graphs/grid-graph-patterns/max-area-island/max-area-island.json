@@ -6,11 +6,11 @@
   "mdFile": "max-area-island.md",
   "codeExamples": [
     {
-      "title": "Max Area Island Solution",
+      "title": "Max Area Island",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/grid-graph-patterns/max-area-island/code/cpp/MaxAreaIsland.cpp"
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/max-area-island/code/cpp/max_area_island.cpp"
         },
         {
           "language": "java",

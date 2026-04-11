@@ -6,11 +6,11 @@
   "mdFile": "course-schedule-ii.md",
   "codeExamples": [
     {
-      "title": "Course Schedule II Solution",
+      "title": "Course Schedule II",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/topological-sort/course-schedule-ii/code/cpp/CourseScheduleIi.cpp"
+          "codeFile": "courses/dsa/graphs/topological-sort/course-schedule-ii/code/cpp/course_schedule_ii.cpp"
         },
         {
           "language": "java",

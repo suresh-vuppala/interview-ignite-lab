@@ -1,29 +1,32 @@
-Can you finish all courses? (Detect cycle in prerequisite graph.)
+There are numCourses courses with prerequisites. Determine if you can finish all courses (no circular dependency).
 
 <br>
 
 > Input: numCourses=2, prerequisites=[[1,0]]
-> Output: true (take 0 then 1)
+> Output: true (take 0 first, then 1)
+> **Key insight:** This is cycle detection in a directed graph. If DAG → can finish. If cycle → cannot. Use Kahn's or DFS 3-color.
 
 <br>
 
 ---
 
-## Solution 1: DFS Cycle Detection (3-Color)
-
-Build directed graph. If cycle exists → false.
-
-### Time: O(V + E) | Space: O(V)
+## Constraints
+- `1 ≤ numCourses ≤ 2000`, `0 ≤ prerequisites.length ≤ 5000`
 
 <br>
 
 ---
 
-## Solution 2: Kahn's Topological Sort
+## Solution: Kahn's / DFS Cycle Detection (Optimal)
 
-If topological sort processes all courses → true. Otherwise cycle → false.
+**Algorithm:** Build directed graph from prerequisites. Check if graph has a cycle. No cycle → true. Cycle → false.
 
-### Time: O(V + E) | Space: O(V)
+### Time Complexity: O(V + E)
+### Space Complexity: O(V + E)
+
+> **Drawback:** None.
+
+> **Key Insight for Improvement:** Same as detect-cycle-directed. Kahn's: if topo sort includes all V nodes → no cycle → true.
 
 <br>
 
@@ -31,13 +34,17 @@ If topological sort processes all courses → true. Otherwise cycle → false.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| DFS 3-Color | O(V+E) | O(V) | Gray node = cycle |
-| Kahn's BFS | O(V+E) | O(V) | Incomplete sort = cycle |
+| Solution | Time | Space |
+|----------|------|-------|
+| Kahn's BFS | O(V+E) | O(V+E) |
+| DFS 3-Color | O(V+E) | O(V+E) |
 
-<br>
-<br>
+**Key Insights:**
+1. **Course Schedule = Cycle Detection** on dependency graph
+2. **Prerequisite [a,b] means:** b → a (take b before a)
+3. **FAANG classic:** Frequently asked at Google, Amazon, Microsoft
+
+<br><br>
 
 ---
 

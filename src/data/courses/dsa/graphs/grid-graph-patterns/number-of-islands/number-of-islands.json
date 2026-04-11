@@ -6,11 +6,11 @@
   "mdFile": "number-of-islands.md",
   "codeExamples": [
     {
-      "title": "Number of Islands Solution",
+      "title": "Number of Islands",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/grid-graph-patterns/number-of-islands/code/cpp/NumberOfIslands.cpp"
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/number-of-islands/code/cpp/number_of_islands.cpp"
         },
         {
           "language": "java",

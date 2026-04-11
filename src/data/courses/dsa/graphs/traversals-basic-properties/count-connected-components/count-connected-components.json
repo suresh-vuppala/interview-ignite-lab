@@ -6,11 +6,11 @@
   "mdFile": "count-connected-components.md",
   "codeExamples": [
     {
-      "title": "Count Connected Components Solution",
+      "title": "Count Connected Components",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/traversals-basic-properties/count-connected-components/code/cpp/CountConnectedComponents.cpp"
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/count-connected-components/code/cpp/count_connected_components.cpp"
         },
         {
           "language": "java",

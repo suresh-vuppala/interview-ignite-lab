@@ -6,11 +6,11 @@
   "mdFile": "dfs.md",
   "codeExamples": [
     {
-      "title": "DFS Solution",
+      "title": "DFS",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/traversals-basic-properties/dfs/code/cpp/Dfs.cpp"
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/dfs/code/cpp/dfs.cpp"
         },
         {
           "language": "java",

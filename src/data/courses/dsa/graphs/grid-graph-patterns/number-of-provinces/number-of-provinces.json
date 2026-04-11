@@ -6,11 +6,11 @@
   "mdFile": "number-of-provinces.md",
   "codeExamples": [
     {
-      "title": "Number of Provinces Solution",
+      "title": "Number of Provinces",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/grid-graph-patterns/number-of-provinces/code/cpp/NumberOfProvinces.cpp"
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/number-of-provinces/code/cpp/number_of_provinces.cpp"
         },
         {
           "language": "java",

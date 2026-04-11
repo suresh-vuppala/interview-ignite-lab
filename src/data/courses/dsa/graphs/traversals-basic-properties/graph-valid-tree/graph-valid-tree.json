@@ -6,7 +6,7 @@
   "mdFile": "graph-valid-tree.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Graph Valid Tree",
       "languages": [
         {
           "language": "cpp",

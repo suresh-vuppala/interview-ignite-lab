@@ -6,11 +6,11 @@
   "mdFile": "build-graph.md",
   "codeExamples": [
     {
-      "title": "Build Graph Solution",
+      "title": "Build Graph",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/graph-fundamentals/build-graph/code/cpp/BuildGraph.cpp"
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/build-graph/code/cpp/build_graph.cpp"
         },
         {
           "language": "java",

@@ -1,47 +1,36 @@
-Count islands in a grid (connected groups of '1's).
+Given a 2D grid of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and connected 4-directionally.
 
 <br>
 
-> Input: [["1","1","0"],["1","1","0"],["0","0","1"]]
-> Output: 2
+> Input: grid = [["1","1","0","0","0"],["1","1","0","0","0"],["0","0","1","0","0"],["0","0","0","1","1"]]
+> Output: 3
+> **Key insight:** Same as counting connected components — but on a grid. DFS/BFS from each unvisited '1', sinking the island (mark as '0'). Each launch = one island.
 
 <br>
 
 ---
 
 ## Constraints
-
 - `1 ≤ m, n ≤ 300`
 
 <br>
 
 ---
 
-## Solution 1: DFS Flood Fill
+## Solution: DFS + Sink Island (Optimal)
 
-For each unvisited '1', DFS to mark entire island. Increment count.
+**Algorithm:** For each cell with '1': count++, DFS to mark entire island as '0' (visited).
 
-### Time: O(m × n) | Space: O(m × n) recursion stack worst case
+### Time Complexity: O(M × N)
+**Why?** Each cell visited at most once.
 
-<br>
+**Detailed breakdown:** 300×300 = 90,000 cells
 
----
+### Space Complexity: O(M × N) worst case for DFS recursion on large island
 
-## Solution 2: BFS Flood Fill
+> **Drawback:** DFS recursion depth can be O(M×N) for snake-shaped islands. BFS avoids deep recursion.
 
-Same but use queue for BFS instead of recursion.
-
-### Time: O(m × n) | Space: O(min(m, n)) queue size
-
-<br>
-
----
-
-## Solution 3: Union-Find
-
-Treat each '1' cell as a node. Union adjacent '1' cells. Count distinct components.
-
-### Time: O(m × n × α(m×n)) | Space: O(m × n)
+> **Key Insight for Improvement:** BFS alternative uses O(min(M,N)) queue space. Union-Find also works in O(M×N×α).
 
 <br>
 
@@ -51,12 +40,15 @@ Treat each '1' cell as a node. Union adjacent '1' cells. Count distinct componen
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| DFS | O(m×n) | O(m×n) | Recursive flood fill |
-| BFS | O(m×n) | O(min(m,n)) | Better space for wide grids |
-| Union-Find | O(m×n) | O(m×n) | No recursion, good for streaming |
+| DFS Sink | O(M×N) | O(M×N) | Mark visited by overwriting grid |
+| BFS | O(M×N) | O(min(M,N)) | Queue-based, less stack depth |
 
-<br>
-<br>
+**Key Insights:**
+1. **Grid = implicit graph:** Each cell is a node, adjacent cells are edges
+2. **Sink to avoid visited array:** Overwrite '1'→'0' instead of separate visited
+3. **FAANG top-5:** Most frequently asked graph problem
+
+<br><br>
 
 ---
 

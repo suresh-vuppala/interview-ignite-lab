@@ -6,11 +6,11 @@
   "mdFile": "surrounded-regions.md",
   "codeExamples": [
     {
-      "title": "Surrounded Regions Solution",
+      "title": "Surrounded Regions",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/grid-graph-patterns/surrounded-regions/code/cpp/SurroundedRegions.cpp"
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/surrounded-regions/code/cpp/surrounded_regions.cpp"
         },
         {
           "language": "java",

@@ -6,11 +6,11 @@
   "mdFile": "eventual-safe-states.md",
   "codeExamples": [
     {
-      "title": "Eventual Safe States Solution",
+      "title": "Eventual Safe States",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/topological-sort/eventual-safe-states/code/cpp/EventualSafeStates.cpp"
+          "codeFile": "courses/dsa/graphs/topological-sort/eventual-safe-states/code/cpp/eventual_safe_states.cpp"
         },
         {
           "language": "java",

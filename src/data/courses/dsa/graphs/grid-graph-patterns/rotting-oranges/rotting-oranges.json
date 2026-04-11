@@ -6,11 +6,11 @@
   "mdFile": "rotting-oranges.md",
   "codeExamples": [
     {
-      "title": "Rotting Oranges Solution",
+      "title": "Rotting Oranges",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/grid-graph-patterns/rotting-oranges/code/cpp/RottingOranges.cpp"
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/rotting-oranges/code/cpp/rotting_oranges.cpp"
         },
         {
           "language": "java",

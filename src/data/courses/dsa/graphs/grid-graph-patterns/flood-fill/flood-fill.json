@@ -6,11 +6,11 @@
   "mdFile": "flood-fill.md",
   "codeExamples": [
     {
-      "title": "Flood Fill Solution",
+      "title": "Flood Fill",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/grid-graph-patterns/flood-fill/code/cpp/FloodFill.cpp"
+          "codeFile": "courses/dsa/graphs/grid-graph-patterns/flood-fill/code/cpp/flood_fill.cpp"
         },
         {
           "language": "java",

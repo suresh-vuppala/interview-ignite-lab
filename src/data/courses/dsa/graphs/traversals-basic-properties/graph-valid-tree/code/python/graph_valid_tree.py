@@ -1,12 +1,16 @@
+# ============================================================
+# Graph Valid Tree
+# ============================================================
+from collections import deque
 class Solution:
-    def validTree(self, n: int, edges: List[List[int]]) -> bool:
-        if len(edges) != n - 1: return False  # Tree must have n-1 edges
+    def validTree(self, n, edges):
+        if len(edges) != n - 1: return False
         adj = [[] for _ in range(n)]
         for u, v in edges: adj[u].append(v); adj[v].append(u)
-        visited = set([0])
-        queue = [0]
+        visited = [False] * n
+        queue = deque([0]); visited[0] = True; count = 0
         while queue:
-            node = queue.pop(0)
+            node = queue.popleft(); count += 1
             for nb in adj[node]:
-                if nb not in visited: visited.add(nb); queue.append(nb)
-        return len(visited) == n
+                if not visited[nb]: visited[nb] = True; queue.append(nb)
+        return count == n

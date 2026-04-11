@@ -1,25 +1,39 @@
-Breadth-First Search traversal of a graph.
+Implement Breadth-First Search (BFS) on a graph. Return nodes in BFS order.
+
+<br>
+
+> Input: n=5, adj={0:[1,2], 1:[0,3], 2:[0,4], 3:[1], 4:[2]}, start=0
+> Output: [0, 1, 2, 3, 4]
+> **Key insight:** Queue-based traversal. Visit all neighbors at current distance before moving farther. Naturally finds shortest path in unweighted graphs.
 
 <br>
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 10⁵`, `0 ≤ edges ≤ 2 × 10⁵`
+- `1 ≤ V ≤ 10⁵`, `0 ≤ E ≤ 10⁵`
 
 <br>
 
 ---
 
-## Solution 1: Queue-Based BFS (Standard)
+## Solution: Queue + Visited Set (Optimal)
 
 **Algorithm:**
-1. Start from source, mark visited, enqueue
-2. While queue not empty: dequeue → visit → enqueue unvisited neighbors
-3. For disconnected graphs: loop over all nodes, BFS from unvisited ones
+1. Queue = [start], visited = {start}
+2. While queue not empty: dequeue node, process, enqueue unvisited neighbors (mark visited)
 
-### Time: O(V + E) | Space: O(V) — visited array + queue
+### Time Complexity: O(V + E)
+**Why?** Each vertex dequeued once. Each edge examined once (or twice for undirected).
+
+**Detailed breakdown:** V=100,000, E=100,000 → ~300,000 operations
+
+### Space Complexity: O(V)
+**Why?** Visited array + queue holds at most V nodes.
+
+> **Drawback:** Uses O(V) space for visited set and queue. Cannot be avoided for graph traversal.
+
+> **Key Insight for Improvement:** BFS gives shortest path in unweighted graphs. For weighted graphs, use Dijkstra instead.
 
 <br>
 
@@ -27,12 +41,18 @@ Breadth-First Search traversal of a graph.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| BFS Queue | O(V+E) | O(V) | Level-by-level exploration |
+| Algorithm | Time | Space | Use Case |
+|-----------|------|-------|----------|
+| BFS | O(V+E) | O(V) | Shortest path (unweighted), level-order |
+| DFS | O(V+E) | O(V) | Cycle detection, topological sort, components |
 
-<br>
-<br>
+**Key Insights:**
+1. **FIFO queue:** Processes by distance — closer nodes first
+2. **Shortest path:** BFS gives minimum edges from source in unweighted graphs
+3. **Mark visited BEFORE enqueueing:** Prevents duplicates in queue
+4. **Foundation:** Used in rotting oranges, word ladder, 0-1 BFS, multi-source BFS
+
+<br><br>
 
 ---
 

@@ -1,24 +1,32 @@
-Find all nodes that eventually reach a terminal node (no outgoing edges).
+Find all eventual safe nodes in a directed graph. A node is safe if every path starting from it leads to a terminal node (node with no outgoing edges).
+
+<br>
+
+> Input: graph = [[1,2],[2,3],[5],[0],[5],[],[]]
+> Output: [2,4,5,6]
+> **Key insight:** Nodes in cycles are NOT safe. Use reverse DFS 3-coloring: safe=2(black), in-cycle=1(gray). Or reverse graph + Kahn's from terminal nodes.
 
 <br>
 
 ---
 
-## Solution 1: DFS 3-Color
-
-Nodes in cycles are unsafe. Terminal nodes and nodes leading only to safe nodes are safe. Use 3-color DFS to detect cycle membership.
-
-### Time: O(V + E) | Space: O(V)
+## Constraints
+- `1 ≤ N ≤ 10⁴`
 
 <br>
 
 ---
 
-## Solution 2: Reverse Graph + Kahn's
+## Solution: DFS 3-Coloring (Optimal)
 
-Reverse edges. Terminal nodes have in-degree 0 in reverse. Kahn's from terminals marks all safe nodes.
+**Algorithm:** Color: 0=white, 1=gray(unsafe/cycle), 2=black(safe). DFS: if all successors are safe → this node is safe. If any successor is gray → this node is unsafe.
 
-### Time: O(V + E) | Space: O(V)
+### Time Complexity: O(V + E)
+### Space Complexity: O(V)
+
+> **Drawback:** None.
+
+> **Key Insight for Improvement:** Alternative: reverse the graph. Terminal nodes have in-degree 0 in the reversed graph. Kahn's from them finds all safe nodes.
 
 <br>
 
@@ -26,13 +34,17 @@ Reverse edges. Terminal nodes have in-degree 0 in reverse. Kahn's from terminals
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| DFS 3-Color | O(V+E) | O(V) | Cycle = unsafe |
-| Reverse Kahn's | O(V+E) | O(V) | BFS from terminals |
+| Solution | Time | Space |
+|----------|------|-------|
+| DFS 3-Color | O(V+E) | O(V) |
+| Reverse + Kahn's | O(V+E) | O(V+E) |
 
-<br>
-<br>
+**Key Insights:**
+1. **Safe = not in any cycle AND not reachable from cycle**
+2. **Terminal node = safe (base case):** No outgoing edges
+3. **3-color determines:** Black = safe, Gray = in cycle or leads to cycle
+
+<br><br>
 
 ---
 

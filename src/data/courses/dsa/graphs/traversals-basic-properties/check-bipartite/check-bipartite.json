@@ -6,11 +6,11 @@
   "mdFile": "check-bipartite.md",
   "codeExamples": [
     {
-      "title": "Check Bipartite Solution",
+      "title": "Check Bipartite",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/traversals-basic-properties/check-bipartite/code/cpp/CheckBipartite.cpp"
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/check-bipartite/code/cpp/check_bipartite.cpp"
         },
         {
           "language": "java",

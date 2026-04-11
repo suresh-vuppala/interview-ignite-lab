@@ -6,11 +6,11 @@
   "mdFile": "bfs.md",
   "codeExamples": [
     {
-      "title": "BFS Solution",
+      "title": "BFS",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/traversals-basic-properties/bfs/code/cpp/Bfs.cpp"
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/bfs/code/cpp/bfs.cpp"
         },
         {
           "language": "java",

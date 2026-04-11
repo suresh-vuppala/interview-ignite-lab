@@ -6,11 +6,11 @@
   "mdFile": "weighted-graph.md",
   "codeExamples": [
     {
-      "title": "Weighted Graph Solution",
+      "title": "Weighted Graph",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/graph-fundamentals/weighted-graph/code/cpp/WeightedGraph.cpp"
+          "codeFile": "courses/dsa/graphs/graph-fundamentals/weighted-graph/code/cpp/weighted_graph.cpp"
         },
         {
           "language": "java",

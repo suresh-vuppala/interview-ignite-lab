@@ -6,11 +6,11 @@
   "mdFile": "topological-sort-dfs.md",
   "codeExamples": [
     {
-      "title": "Topological Sort DFS Solution",
+      "title": "Topological Sort DFS",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/topological-sort/topological-sort-dfs/code/cpp/TopologicalSortDfs.cpp"
+          "codeFile": "courses/dsa/graphs/topological-sort/topological-sort-dfs/code/cpp/topological_sort_dfs.cpp"
         },
         {
           "language": "java",

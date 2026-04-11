@@ -6,11 +6,11 @@
   "mdFile": "detect-cycle-directed.md",
   "codeExamples": [
     {
-      "title": "Detect Cycle Directed Solution",
+      "title": "Detect Cycle Directed",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/traversals-basic-properties/detect-cycle-directed/code/cpp/DetectCycleDirected.cpp"
+          "codeFile": "courses/dsa/graphs/traversals-basic-properties/detect-cycle-directed/code/cpp/detect_cycle_directed.cpp"
         },
         {
           "language": "java",
