@@ -1,24 +1,11 @@
-Given a sorted array of integers (may contain negatives), return a sorted array of the squares of each number.
+Given a sorted array (may contain negatives), return a sorted array of the squares of each number.
 
 <br>
 
-> Input:
-> nums = [-4, -1, 0, 3, 10]
-
-> Output:
-> [0, 1, 9, 16, 100]
-
-> Explanation:
-> Squares: [16, 1, 0, 9, 100] — not sorted!
-> 
-> Two pointer approach (fill result from end):
-> - L=0(-4²=16), R=4(10²=100): 100 > 16 → result[4]=100, R--
-> - L=0(-4²=16), R=3(3²=9): 16 > 9 → result[3]=16, L++
-> - L=1(-1²=1), R=3(3²=9): 9 > 1 → result[2]=9, R--
-> - L=1(-1²=1), R=2(0²=0): 1 > 0 → result[1]=1, L++
-> - L=2(0²=0), R=2(0²=0): result[0]=0
-> 
-> **Key insight:** Largest squares are at the extremes (most negative or most positive). Fill result from end.
+> Input: [-4, -1, 0, 3, 10]
+> Output: [0, 1, 9, 16, 100]
+>
+> **Key insight:** Largest squares are at the two ends (most negative or most positive). Use two pointers from both ends.
 
 <br>
 
@@ -36,37 +23,52 @@ Given a sorted array of integers (may contain negatives), return a sorted array 
 
 ## All Possible Edge Cases
 
-1. **All non-negative:** [0, 1, 2, 3] → [0, 1, 4, 9] — already sorted after squaring
-2. **All negative:** [-4, -3, -2, -1] → [1, 4, 9, 16] — reverse order
-3. **Single element:** [5] → [25]
-4. **Mix of negative and positive:** [-4, -1, 0, 3, 10]
-5. **Contains zero:** Zero squared is still zero
-6. **Symmetric around zero:** [-3, -2, 0, 2, 3] → [0, 4, 4, 9, 9]
-7. **All same absolute value:** [-2, -2, 2, 2] → [4, 4, 4, 4]
-8. **Very large negatives:** Squared values may be large — check int overflow
+1. **All positive:** Squares already sorted
+2. **All negative:** Squares in reverse order
+3. **Contains zero:** 0² = 0, stays small
+4. **Single element:** Square it
 
 <br>
 
 ---
 
-## Solution: Two Pointers (Opposite Direction)
+## Solution 1: Square + Sort
 
 **Intuition:**
-In a sorted array with negatives, the largest squared values are at the ends (large negative or large positive). Use two pointers at both ends, compare absolute values, and fill the result array from the back.
+Square every element, then sort.
 
-**Algorithm:**
-1. Create result array of size n
-2. left = 0, right = n-1, write = n-1
-3. While left <= right:
-   - If |nums[left]| > |nums[right]|: result[write] = nums[left]², left++
-   - Else: result[write] = nums[right]², right--
-   - write--
-4. Return result
+### Time Complexity: O(n log n)
+### Space Complexity: O(n) or O(1) depending on sort
 
 <br>
 
+---
+
+## Solution 2: Two Pointers from Ends (Optimal)
+
+**Intuition:**
+The largest square is at either end (most negative or most positive). Compare absolute values at both ends, place the larger square at the end of the result array, and move that pointer inward.
+
+**Algorithm:**
+1. left = 0, right = n-1, pos = n-1
+2. While left ≤ right:
+   - If |nums[left]| > |nums[right]| → result[pos] = nums[left]², left++
+   - Else → result[pos] = nums[right]², right--
+   - pos--
+
 ### Time Complexity: O(n) — single pass
-### Space Complexity: O(n) — result array (required by output)
+### Space Complexity: O(n) — result array
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Square + Sort | O(n log n) | O(n) | Brute force |
+| Two Pointers | O(n) | O(n) | Largest squares at ends |
 
 <br>
 <br>

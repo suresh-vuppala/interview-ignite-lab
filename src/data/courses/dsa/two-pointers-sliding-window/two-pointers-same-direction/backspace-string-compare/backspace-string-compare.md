@@ -1,32 +1,9 @@
-Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.
+Given two strings with '#' as backspace, check if they are equal after processing.
 
 <br>
 
-> Input:
-> s = "ab#c", t = "ad#c"
-
-> Output:
-> true
-
-> Explanation:
-> s: type 'a' → "a", type 'b' → "ab", backspace → "a", type 'c' → "ac"
-> t: type 'a' → "a", type 'd' → "ad", backspace → "a", type 'c' → "ac"
-> Both result in "ac" → true
-> 
-> **Key insight:** Process from the END. Count backspaces and skip characters accordingly. O(1) space.
-
-<br>
-
-> Input:
-> s = "ab##", t = "c#d#"
-
-> Output:
-> true
-
-> Explanation:
-> s: "ab##" → "" (both characters deleted)
-> t: "c#d#" → "" (both characters deleted)
-> Both empty → true
+> Input: s = "ab#c", t = "ad#c"
+> Output: true (both become "ac")
 
 <br>
 
@@ -35,7 +12,7 @@ Given two strings s and t, return true if they are equal when both are typed int
 ## Constraints
 
 - `1 ≤ s.length, t.length ≤ 200`
-- `s and t only contain lowercase letters and '#' characters`
+- `s and t contain lowercase letters and '#'`
 
 <br>
 
@@ -43,44 +20,53 @@ Given two strings s and t, return true if they are equal when both are typed int
 
 ## All Possible Edge Cases
 
-1. **No backspaces:** 'abc' vs 'abc' → true
-2. **Backspace on empty:** '#a' — backspace at start has no effect, result is 'a'
-3. **All backspaces:** '###' → empty string
-4. **Multiple consecutive backspaces:** 'abc###' → empty string
-5. **Both empty after processing:** 'a#' vs 'b#' → true (both empty)
-6. **Different lengths, same result:** 'ab##c' vs 'c' → true
-7. **Backspace deletes previous backspace result:** 'ab#c' = 'ac', not 'abc'
-8. **Single character each:** 'a' vs 'a' → true, 'a' vs 'b' → false
+1. **No backspaces:** Direct comparison
+2. **Backspace on empty:** '#a' → 'a' (backspace has no effect)
+3. **All backspaces:** "###" → ""
+4. **Multiple consecutive backspaces:** "abc###" → ""
 
 <br>
 
 ---
 
-## Solution: Two Pointers from End (O(1) Space)
+## Solution 1: Build String with Stack
 
 **Intuition:**
-Process both strings from the end. When we encounter '#', count backspaces and skip that many characters. Compare the next valid characters from both strings.
+Process each string: push non-'#' chars onto stack, pop on '#'. Compare final stacks.
 
-**Algorithm:**
-1. Start i = end of s, j = end of t
-2. Loop while i >= 0 or j >= 0:
-   - Find next valid char in s: count '#' and skip accordingly
-   - Find next valid char in t: count '#' and skip accordingly
-   - If both valid: compare characters, return false if different
-   - If one valid and one exhausted: return false
-   - Move both pointers left
-3. Return true
+### Time Complexity: O(n + m)
+### Space Complexity: O(n + m)
 
 <br>
 
-### Time Complexity: O(n + m)
-**Why?**
-- Each character in both strings processed at most twice (once for counting, once for comparing)
+---
 
-### Space Complexity: O(1)
-**Why?**
-- Only pointer and counter variables
-- No extra strings built
+## Solution 2: Two Pointers from End (Optimal)
+
+**Intuition:**
+Process both strings from right to left. Count '#' characters to know how many to skip. Compare characters after skipping.
+
+**Algorithm:**
+1. i = len(s)-1, j = len(t)-1
+2. While i ≥ 0 or j ≥ 0:
+   - Count and skip backspaced chars in s (advance i)
+   - Count and skip backspaced chars in t (advance j)
+   - Compare s[i] and t[j]
+   - If mismatch → false
+
+### Time Complexity: O(n + m)
+### Space Complexity: O(1) — no extra data structures
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Stack | O(n+m) | O(n+m) | Build processed strings |
+| Two Pointers RTL | O(n+m) | O(1) | Process from right, skip in-place |
 
 <br>
 <br>

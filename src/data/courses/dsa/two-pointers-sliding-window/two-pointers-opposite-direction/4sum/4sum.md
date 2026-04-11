@@ -1,21 +1,9 @@
-Find all unique quadruplets in the array that sum to a given target.
+Find all unique quadruplets that sum to a target value.
 
 <br>
 
-> Input:
-> nums = [1, 0, -1, 0, -2, 2], target = 0
-
-> Output:
-> [[-2, -1, 1, 2], [-2, 0, 0, 2], [-1, 0, 0, 1]]
-
-> Explanation:
-> After sorting: [-2, -1, 0, 0, 1, 2]
-> Fix i=0 (-2), j=1 (-1): two pointers find [0,0,1,2] sums → [-2,-1,1,2] ✓
-> Fix i=0 (-2), j=2 (0): two pointers → [-2,0,0,2] ✓
-> Fix i=1 (-1), j=2 (0): two pointers → [-1,0,0,1] ✓
-> All other combinations either don't sum to 0 or are duplicates.
-> 
-> **Key insight:** Reduce to 3Sum by fixing one element, then to 2Sum with two pointers. Skip duplicates at all four levels.
+> Input: nums = [1, 0, -1, 0, -2, 2], target = 0
+> Output: [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
 
 <br>
 
@@ -26,7 +14,6 @@ Find all unique quadruplets in the array that sum to a given target.
 - `1 ≤ nums.length ≤ 200`
 - `-10⁹ ≤ nums[i] ≤ 10⁹`
 - `-10⁹ ≤ target ≤ 10⁹`
-- `Answer set must not contain duplicate quadruplets`
 
 <br>
 
@@ -34,70 +21,53 @@ Find all unique quadruplets in the array that sum to a given target.
 
 ## All Possible Edge Cases
 
-1. **Array smaller than 4:** Return empty — impossible to form a quadruplet
-2. **All same elements:** [2,2,2,2] target=8 → [[2,2,2,2]]
-3. **No valid quadruplet:** [1,2,3,4] target=100 → []
-4. **Integer overflow:** nums[i] up to 10⁹ — sum of 4 can overflow int32, use long/long long
-5. **Target is 0 with negatives and positives:** [-2,-1,0,0,1,2] target=0
-6. **Many duplicates:** Must skip duplicates at all 4 levels
-7. **Large negative target:** All elements negative, target very negative
-8. **Exactly 4 elements:** Only one possible quadruplet to check
+1. **Less than 4 elements:** Return []
+2. **All same elements:** [0,0,0,0] target=0 → [[0,0,0,0]]
+3. **Integer overflow:** nums[i] can be 10⁹, sum of 4 can overflow int
+4. **Duplicate quadruplets:** Must skip
 
 <br>
 
 ---
 
-## Solution: Sort + Two Nested Loops + Two Pointers
+## Solution 1: Brute Force
 
-**Intuition:**
-Extension of 3Sum. Fix two elements with nested loops, use two pointers for the remaining two. Sort first to enable duplicate skipping and pointer movement.
+**Intuition:** Check all combinations of 4 elements.
 
-**Algorithm:**
-1. Sort the array
-2. For each index i from 0 to n-4:
-   - Skip duplicate i values
-   - For each index j from i+1 to n-3:
-     - Skip duplicate j values
-     - Set left = j+1, right = n-1
-     - Two pointer search for target - nums[i] - nums[j]
-     - Skip duplicates in left and right
-
-**⚠️ Overflow Warning:**
-Sum of 4 elements can exceed int32 range. Use `long long` in C++ or `long` in Java.
-
-**Example Walkthrough:**
-```
-nums = [1, 0, -1, 0, -2, 2], target = 0
-Sorted: [-2, -1, 0, 0, 1, 2]
-
-i=0(-2):
-  j=1(-1): need sum=3 from [0,0,1,2]
-    L=2(0), R=5(2): sum=2 < 3 → L++
-    L=3(0), R=5(2): sum=2 < 3 → L++
-    L=4(1), R=5(2): sum=3 == 3 ✓ → [-2,-1,1,2]
-  j=2(0): need sum=2 from [0,1,2]
-    L=3(0), R=5(2): sum=2 == 2 ✓ → [-2,0,0,2]
-    L=4(1), R=4: done
-  j=3(0): SKIP (duplicate of j=2)
-
-i=1(-1):
-  j=2(0): need sum=1 from [0,1,2]
-    L=3(0), R=5(2): sum=2 > 1 → R--
-    L=3(0), R=4(1): sum=1 == 1 ✓ → [-1,0,0,1]
-  j=3(0): SKIP (duplicate of j=2)
-```
+### Time Complexity: O(n⁴)
+### Space Complexity: O(1)
 
 <br>
 
-### Time Complexity: O(n³)
-**Why?**
-- Sorting: O(n log n)
-- Two nested loops: O(n²)
-- Inner two-pointer: O(n) per pair
-- Total: O(n³)
+---
 
+## Solution 2: Sort + Two Loops + Two Pointers (Optimal)
+
+**Intuition:**
+Extend 3Sum: fix two elements with nested loops, use two pointers for the remaining pair.
+
+**Algorithm:**
+1. Sort nums
+2. For i from 0 to n-4 (skip duplicates):
+   - For j from i+1 to n-3 (skip duplicates):
+     - left = j+1, right = n-1
+     - Two-pointer search for target - nums[i] - nums[j]
+
+### Time Complexity: O(n³)
 ### Space Complexity: O(1)
-- Only pointer variables (excluding output)
+
+**Optimization:** Early termination — if nums[i] × 4 > target or nums[i] + 3 × nums[n-1] < target, skip.
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute Force | O(n⁴) | O(1) | All quadruplets |
+| Sort + Two Pointers | O(n³) | O(1) | Fix two, two-pointer for pair |
 
 <br>
 <br>

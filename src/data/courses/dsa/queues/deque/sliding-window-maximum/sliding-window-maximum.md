@@ -1,37 +1,19 @@
-Find the maximum element in each sliding window of size k as it moves from left to right through an array.
+Find the maximum element in each sliding window of size k.
 
 <br>
 
-> Input:
-> nums = [1, 3, -1, -3, 5, 3, 6, 7], k = 3
-
-> Output:
-> [3, 3, 5, 5, 6, 7]
-
-> Explanation:
-> Window positions and maximums:
-> - [1, 3, -1] -3  5  3  6  7  → max = 3
-> -  1 [3, -1, -3] 5  3  6  7  → max = 3
-> -  1  3 [-1, -3, 5] 3  6  7  → max = 5
-> -  1  3  -1 [-3, 5, 3] 6  7  → max = 5
-> -  1  3  -1  -3 [5, 3, 6] 7  → max = 6
-> -  1  3  -1  -3  5 [3, 6, 7] → max = 7
-> 
-> Deque process for window [1,3,-1]:
-> - Add 1: deque = [1]
-> - Add 3: 3 > 1, remove 1, deque = [3]
-> - Add -1: -1 < 3, keep both, deque = [3, -1]
-> - Max = front of deque = 3
+> Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
+> Output: [3,3,5,5,6,7]
 
 <br>
-
 
 ---
 
 ## Constraints
 
-- `At most 10⁴ operations`
-- `-10⁹ ≤ val ≤ 10⁹`
+- `1 ≤ nums.length ≤ 10⁵`
+- `-10⁴ ≤ nums[i] ≤ 10⁴`
+- `1 ≤ k ≤ nums.length`
 
 <br>
 
@@ -39,76 +21,69 @@ Find the maximum element in each sliding window of size k as it moves from left 
 
 ## All Possible Edge Cases
 
-1. **Dequeue from empty queue:** Handle gracefully — return -1 or error
-2. **Peek on empty queue:** Handle gracefully
-3. **Single enqueue then dequeue:** Returns the enqueued value
-4. **Queue full (if bounded):** Handle overflow
-5. **Multiple enqueues then size check:** Size equals enqueue count minus dequeue count
+1. **k = 1:** Return original array
+2. **k = n:** Return [max of entire array]
+3. **Sorted ascending:** Max always at right edge
+4. **Sorted descending:** Max always at left edge
 
 <br>
 
 ---
 
-## Solution: Monotonic Deque
+## Solution 1: Brute Force
 
-Use deque (double-ended queue) to maintain potential maximums:
-1. Store indices in deque (not values)
-2. Maintain decreasing order in deque
-3. Remove indices outside current window
-4. Remove smaller elements from back (they can't be max)
-5. Front of deque is always maximum
+**Intuition:** For each window, scan k elements to find max.
 
-**Key insight:** Keep only elements that could be maximum in current or future windows.
+### Time Complexity: O(n × k)
+### Space Complexity: O(1)
 
-
-
-<br>
-
-### Time Complexity Analysis
-
-**Single Pass: O(n)**
-- Traverse array once: n elements
-- Each element:
-  - Added to deque exactly once: n additions
-  - Removed from deque at most once: n removals
-- Total operations: 2n = O(n)
-
-**Amortized Analysis:**
-- While loop for removing smaller elements seems nested
-- But each element processed at most twice (add + remove)
-- Amortized O(1) per element
-
-**Why not O(n × k)?**
-- Brute force: For each window, find max in O(k) = O(n × k)
-- Deque: Each element added/removed once = O(n)
-- Huge improvement when k is large
-
-**Space Complexity: O(k)**
-- Deque holds at most k elements
-- Only stores indices of potential maximums
-- Elements outside window removed
-- Smaller elements removed (can't be max)
-
-**Why deque (not stack or queue)?**
-- Need to remove from both ends:
-  - Front: Remove elements outside window
-  - Back: Remove smaller elements
-- Deque supports O(1) operations at both ends
-- Stack/Queue can't efficiently remove from both ends
-
-**Monotonic deque property:**
-- Maintains decreasing order
-- Front = largest element in window
-- Back = smallest element that could be future max
-- All elements between are potential maximums
-
-> **Time Complexity:** O(n) - each element added and removed once
-> **Space Complexity:** O(k) - deque holds at most k indices
-
-<br>
 <br>
 
 ---
+
+## Solution 2: Max Heap
+
+**Intuition:** Maintain a max heap. For each window, add new element, remove expired elements.
+
+### Time Complexity: O(n log n) — heap operations
+### Space Complexity: O(n)
+
+<br>
+
+---
+
+## Solution 3: Monotonic Deque (Optimal)
+
+**Intuition:**
+Maintain a deque of indices in decreasing order of values. The front is always the current window maximum. Remove from front if expired, from back if smaller than incoming element.
+
+**Algorithm:**
+1. Deque stores indices, front = max of current window
+2. For each i:
+   - Remove front if expired (index < i - k + 1)
+   - Remove from back while nums[back] ≤ nums[i] (no longer useful)
+   - Push i to back
+   - If i ≥ k-1 → result.push(nums[deque.front()])
+
+**Why this works:** Elements in deque are potential maximums. Smaller elements behind a larger one will never be the max, so we remove them.
+
+### Time Complexity: O(n) — each element pushed/popped at most once
+### Space Complexity: O(k) — deque size
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute Force | O(n×k) | O(1) | Scan each window |
+| Max Heap | O(n log n) | O(n) | Heap tracks max, lazy removal |
+| Monotonic Deque | O(n) | O(k) | Decreasing deque, amortized O(1) per element |
+
+<br>
+<br>
 
 ---
 

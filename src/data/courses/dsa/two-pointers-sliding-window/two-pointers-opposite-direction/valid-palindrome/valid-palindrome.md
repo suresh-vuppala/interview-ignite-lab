@@ -1,38 +1,9 @@
-Given a string s, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+Given a string, determine if it's a palindrome considering only alphanumeric characters and ignoring case.
 
 <br>
 
-> Input:
-> s = "A man, a plan, a canal: Panama"
-
-> Output:
-> true
-
-> Explanation:
-> After removing non-alphanumeric and lowercasing: "amanaplanacanalpanama"
-> 
-> Two pointer process:
-> - left=0 ('a'), right=19 ('a'): match ✓, move inward
-> - left=1 ('m'), right=18 ('m'): match ✓, move inward
-> - ... all characters match
-> - Pointers meet → palindrome confirmed
-> 
-> **Key insight:** Skip non-alphanumeric characters, compare case-insensitively.
-
-<br>
-
-> Input:
-> s = "race a car"
-
-> Output:
-> false
-
-> Explanation:
-> After filtering: "raceacar"
-> - left=0 ('r'), right=7 ('r'): match ✓
-> - left=1 ('a'), right=6 ('a'): match ✓
-> - left=2 ('c'), right=5 ('c'): match ✓
-> - left=3 ('e'), right=4 ('a'): mismatch ✗ → not a palindrome
+> Input: "A man, a plan, a canal: Panama"
+> Output: true
 
 <br>
 
@@ -49,48 +20,54 @@ Given a string s, determine if it is a palindrome, considering only alphanumeric
 
 ## All Possible Edge Cases
 
-1. **Empty string or single char:** Always a palindrome
-2. **Only non-alphanumeric characters:** '!!!@@@' → true (empty after filtering)
-3. **Case sensitivity:** 'Aa' → true (case-insensitive comparison)
-4. **All spaces:** '     ' → true
-5. **Numbers in string:** '0P' → false (0 and P are not equal)
-6. **Palindrome with mixed punctuation:** 'A man, a plan, a canal: Panama' → true
-7. **Two characters, not palindrome:** 'ab' → false
-8. **String with only numbers:** '12321' → true
+1. **Empty string:** True
+2. **Single character:** True
+3. **All non-alphanumeric:** ",.!!" → true (empty after filtering)
+4. **Mixed case:** "Aa" → true
+5. **Numbers:** "0P" → false
 
 <br>
 
 ---
 
-## Solution: Two Pointers (Opposite Direction)
+## Solution 1: Filter + Reverse
 
-**Intuition:**
-Place two pointers at the start and end. Skip non-alphanumeric characters. Compare characters case-insensitively. Move inward.
+**Intuition:** Clean the string (lowercase, alphanumeric only), then compare with its reverse.
 
-**Algorithm:**
-1. Initialize left = 0, right = s.length - 1
-2. While left < right:
-   - Skip left forward past non-alphanumeric characters
-   - Skip right backward past non-alphanumeric characters
-   - If left >= right: break (all compared)
-   - Compare toLower(s[left]) vs toLower(s[right])
-   - If not equal: return false
-   - Move both pointers inward
-3. Return true
+### Time Complexity: O(n)
+### Space Complexity: O(n) — cleaned string
 
 <br>
 
-### Time Complexity: O(n)
-**Why?**
-- Each pointer moves at most n positions total
-- Each character visited at most once
-- tolower and isalnum are O(1) operations
+---
 
-### Space Complexity: O(1)
-**Why?**
-- Only two pointer variables
-- No extra string created (in-place comparison)
-- Constant space regardless of input size
+## Solution 2: Two Pointers (Optimal)
+
+**Intuition:**
+Pointers at both ends, skip non-alphanumeric, compare lowercase characters.
+
+**Algorithm:**
+1. left = 0, right = n-1
+2. While left < right:
+   - Skip non-alphanumeric from left
+   - Skip non-alphanumeric from right
+   - If toLower(s[left]) != toLower(s[right]) → false
+   - left++, right--
+3. Return true
+
+### Time Complexity: O(n)
+### Space Complexity: O(1) — no extra string
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Filter + Reverse | O(n) | O(n) | Build clean string |
+| Two Pointers | O(n) | O(1) | Compare in-place, skip junk |
 
 <br>
 <br>

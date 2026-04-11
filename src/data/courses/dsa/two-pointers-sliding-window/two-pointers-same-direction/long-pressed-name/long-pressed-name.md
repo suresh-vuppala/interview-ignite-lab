@@ -1,22 +1,9 @@
-Your friend is typing their name on a keyboard. Sometimes a key might get long pressed — the character is typed 1 or more extra times. Check if the typed string could be the result of long pressing the name.
+Check if a typed string could be the result of long pressing keys while typing a name.
 
 <br>
 
-> Input:
-> name = "alex", typed = "aaleex"
-
-> Output:
-> true
-
-> Explanation:
-> Two pointer comparison:
-> - i=0('a'), j=0('a'): match, i++, j++
-> - i=1('l'), j=1('a'): no match, but typed[1]=='a'==typed[0] (long press), j++
-> - i=1('l'), j=2('l'): match, i++, j++
-> - i=2('e'), j=3('e'): match, i++, j++
-> - i=3('x'), j=4('e'): no match, typed[4]=='e'==typed[3] (long press), j++
-> - i=3('x'), j=5('x'): match, i++, j++
-> - Both exhausted → true
+> Input: name = "alex", typed = "aaleex"
+> Output: true (a long-pressed, e long-pressed)
 
 <br>
 
@@ -25,7 +12,7 @@ Your friend is typing their name on a keyboard. Sometimes a key might get long p
 ## Constraints
 
 - `1 ≤ name.length, typed.length ≤ 1000`
-- `name and typed consist of only lowercase English letters`
+- `Lowercase English letters only`
 
 <br>
 
@@ -33,37 +20,55 @@ Your friend is typing their name on a keyboard. Sometimes a key might get long p
 
 ## All Possible Edge Cases
 
-1. **Exact match:** 'alex' vs 'alex' → true
-2. **typed shorter than name:** 'alex' vs 'al' → false
-3. **Extra character not matching:** 'alex' vs 'alexb' → false
-4. **Long press every char:** 'abc' vs 'aabbcc' → true
-5. **Wrong character long-pressed:** 'alex' vs 'aaleexa' → false
-6. **Empty name:** '' vs '' → true
-7. **Single character:** 'a' vs 'aaa' → true
-8. **Long press at end only:** 'alex' vs 'alexx' → true
-9. **First character mismatch:** 'alex' vs 'blex' → false
+1. **Identical strings:** true
+2. **Extra characters at end:** "alex" vs "alexxx" → true only if last char matches
+3. **Missing character:** "alex" vs "ale" → false
+4. **Wrong character:** "alex" vs "alxe" → false
 
 <br>
 
 ---
 
-## Solution: Two Pointers (Same Direction)
+## Solution 1: Two Pointers
 
 **Intuition:**
-Walk through both strings. If characters match, advance both pointers. If they don't match, check if the typed character is a long-press repeat of the previous character — advance only typed pointer. Otherwise, return false.
+Use pointer i for name, j for typed. If chars match, advance both. If typed[j] matches typed[j-1] (long press), advance j only. Otherwise, mismatch → false.
 
 **Algorithm:**
-1. i = 0 (name pointer), j = 0 (typed pointer)
+1. i = 0, j = 0
 2. While j < typed.length:
-   - If i < name.length AND name[i] == typed[j]: i++, j++ (character match)
-   - Else if j > 0 AND typed[j] == typed[j-1]: j++ (long press of previous)
-   - Else: return false (mismatch)
-3. Return i == name.length (all name characters consumed)
+   - If i < name.length AND name[i] == typed[j] → i++, j++
+   - Else if j > 0 AND typed[j] == typed[j-1] → j++ (long press)
+   - Else → return false
+3. Return i == name.length
+
+### Time Complexity: O(n + m)
+### Space Complexity: O(1)
 
 <br>
 
-### Time Complexity: O(n + m) — single pass through both strings
-### Space Complexity: O(1) — only pointer variables
+---
+
+## Solution 2: Group Comparison
+
+**Intuition:**
+Group consecutive identical characters in both strings. Compare groups: same character, and typed group size ≥ name group size.
+
+### Time Complexity: O(n + m)
+### Space Complexity: O(n + m) for groups
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Two Pointers | O(n+m) | O(1) | Direct character-by-character matching |
+| Group Comparison | O(n+m) | O(n+m) | Compare run-length groups |
+
+**Recommended:** Two Pointers — simpler, O(1) space.
 
 <br>
 <br>

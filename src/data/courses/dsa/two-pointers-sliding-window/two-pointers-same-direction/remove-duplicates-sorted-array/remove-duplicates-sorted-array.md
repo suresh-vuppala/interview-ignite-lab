@@ -2,31 +2,12 @@ Given a sorted array, remove duplicates in-place such that each element appears 
 
 <br>
 
-> Input:
-> nums = [1, 1, 2, 2, 2, 3, 4, 4, 5]
-
-> Output:
-> 5
-
-> Explanation:
-> Modified array: [1, 2, 3, 4, 5, _, _, _, _]
-> 
-> Two pointer process:
-> - Start: write=0, read=1
-> - read=1: nums[1]=1 == nums[0]=1, skip
-> - read=2: nums[2]=2 != nums[0]=1, write++, nums[1]=2
-> - read=3: nums[3]=2 == nums[1]=2, skip
-> - read=4: nums[4]=2 == nums[1]=2, skip
-> - read=5: nums[5]=3 != nums[1]=2, write++, nums[2]=3
-> - read=6: nums[6]=4 != nums[2]=3, write++, nums[3]=4
-> - read=7: nums[7]=4 == nums[3]=4, skip
-> - read=8: nums[8]=5 != nums[3]=4, write++, nums[4]=5
-> 
-> New length: write + 1 = 5
+> Input: nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+> Output: 5, nums = [0, 1, 2, 3, 4, ...]
+>
+> **Key insight:** Use a slow pointer for the write position and a fast pointer to scan for new unique values.
 
 <br>
-
-
 
 ---
 
@@ -35,7 +16,6 @@ Given a sorted array, remove duplicates in-place such that each element appears 
 - `1 ≤ nums.length ≤ 3 × 10⁴`
 - `-100 ≤ nums[i] ≤ 100`
 - `nums is sorted in non-decreasing order`
-- `Must modify in-place with O(1) extra memory`
 
 <br>
 
@@ -43,57 +23,73 @@ Given a sorted array, remove duplicates in-place such that each element appears 
 
 ## All Possible Edge Cases
 
-1. **Single element:** [1] → return 1
-2. **No duplicates:** [1, 2, 3] → return 3, unchanged
-3. **All same:** [1, 1, 1, 1] → return 1
-4. **Duplicates at beginning:** [1, 1, 2, 3]
-5. **Duplicates at end:** [1, 2, 3, 3]
-6. **Two elements, same:** [1, 1] → return 1
-7. **Two elements, different:** [1, 2] → return 2
-8. **Large runs of duplicates:** [1,1,1,2,2,2,3,3,3] — many consecutive duplicates
+1. **All unique:** No duplicates to remove — return n
+2. **All same:** Return 1
+3. **Single element:** Return 1
+4. **Two elements, same:** Return 1
+5. **Two elements, different:** Return 2
 
 <br>
 
 ---
 
-## Solution: Two Pointers (Same Direction)
+## Solution 1: Extra Array (Not In-Place)
 
-Use two pointers moving in same direction:
-1. **Write pointer**: Tracks position for next unique element
-2. **Read pointer**: Scans through array
-3. When read finds new unique element, copy to write position
-4. Return write + 1 as new length
+**Intuition:**
+Create new array, copy unique elements.
 
+**Algorithm:**
+1. Create result array
+2. Scan original, add element only if different from last added
+3. Copy back
 
+### Time Complexity: O(n)
+### Space Complexity: O(n) — extra array
 
-<br>
+> **Key Insight:** Since array is sorted, duplicates are adjacent. A two-pointer approach handles this in-place.
 
-### Time Complexity Analysis
-
-**Single Pass: O(n)**
-- Read pointer traverses array once: n iterations
-- For each element:
-  - Compare with last unique: O(1)
-  - Copy if different: O(1)
-- Total: n × O(1) = O(n)
-
-**No nested loops:**
-- Both pointers move forward only
-- Each element processed exactly once
-- No backtracking or revisiting
-
-**Why in-place is efficient:**
-- No extra array needed
-- Modify original array as we scan
-- Write pointer always ≤ read pointer
-
-> **Time Complexity:** O(n) - single pass through array
-> **Space Complexity:** O(1) - only two pointer variables, in-place modification
-
-<br>
 <br>
 
 ---
+
+## Solution 2: Two Pointers (Optimal)
+
+**Intuition:**
+Slow pointer `j` marks the write position. Fast pointer `i` scans forward. When `nums[i] != nums[j]`, copy `nums[i]` to `nums[++j]`.
+
+**Algorithm:**
+1. j = 0 (last unique position)
+2. For i = 1 to n-1:
+   - If nums[i] != nums[j] → j++, nums[j] = nums[i]
+3. Return j + 1
+
+**Example: [0, 0, 1, 1, 2]**
+```
+i=1: nums[1]=0 == nums[0]=0 → skip
+i=2: nums[2]=1 != nums[0]=0 → j=1, nums[1]=1 → [0,1,1,1,2]
+i=3: nums[3]=1 == nums[1]=1 → skip
+i=4: nums[4]=2 != nums[1]=1 → j=2, nums[2]=2 → [0,1,2,1,2]
+Return 3
+```
+
+### Time Complexity: O(n) — single pass
+### Space Complexity: O(1) — in-place
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Extra Array | O(n) | O(n) | Copy uniques |
+| Two Pointers | O(n) | O(1) | Slow/fast pointer in-place |
+
+**Recommended:** Two Pointers — O(n) time, O(1) space.
+
+<br>
+<br>
 
 ---
 

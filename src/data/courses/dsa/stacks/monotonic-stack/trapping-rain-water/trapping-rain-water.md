@@ -1,32 +1,19 @@
-Calculate how much water can be trapped after raining given elevation map.
+Given elevation map, compute how much water can be trapped after raining.
 
 <br>
 
-> Input:
-> height = [0,1,0,2,1,0,1,3,2,1,2,1]
+> Input: height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+> Output: 6
 
-> Output:
-> 6
-
-> Explanation:
-> Water trapped visualization:
->        █
->    █www█w█
-> _█w█w█████
-> 
-> Water units: 1+1+2+1+1 = 6
-> - At index 2: min(max_left=1, max_right=2) - height=0 = 1
-> - At index 4: min(max_left=2, max_right=3) - height=1 = 1
-> - At index 5: min(max_left=2, max_right=3) - height=0 = 2
+> **Key insight:** Water at position i = min(maxLeft, maxRight) - height[i]
 
 <br>
-
 
 ---
 
 ## Constraints
 
-- `1 ≤ height.length ≤ 2 × 10⁴`
+- `1 ≤ n ≤ 2 × 10⁴`
 - `0 ≤ height[i] ≤ 10⁵`
 
 <br>
@@ -35,56 +22,87 @@ Calculate how much water can be trapped after raining given elevation map.
 
 ## All Possible Edge Cases
 
-1. **Less than 3 bars:** No water can be trapped
-2. **Monotonically increasing or decreasing:** 0 water
-3. **All same height:** 0 water
-4. **All zeros:** 0 water
-5. **V-shape:** [3,0,3] → 3 units
-6. **Single valley:** [2,0,2] → 2 units
-7. **Multiple valleys:** Water fills independently in each
+1. **Less than 3 bars:** No water
+2. **Monotonically increasing/decreasing:** No water
+3. **All same height:** No water
+4. **V-shape:** [3,0,3] → 3 units
 
 <br>
 
 ---
 
-## Solution: Two Pointer Approach
+## Solution 1: Brute Force
 
-Use two pointers to track max heights:
-1. Left and right pointers at ends
-2. Track leftMax and rightMax
-3. Move pointer with smaller max
-4. Water at position = min(leftMax, rightMax) - height
+**Intuition:**
+For each position, find max height to its left and right. Water = min(maxLeft, maxRight) - height[i].
 
-**Key insight:** Water level determined by minimum of max heights on both sides.
+### Time Complexity: O(n²) — scan left/right for each position
+### Space Complexity: O(1)
 
-
-
-<br>
-
-### Time Complexity Analysis
-
-**Single Pass: O(n)**
-- Two pointers traverse array once
-- Each element processed exactly once
-- No nested loops
-
-**Space Complexity: O(1)**
-- Only use constant extra space
-- Two pointers + two max variables
-- No additional data structures
-
-**Alternative stack approach: O(n) time, O(n) space**
-- Stack stores indices
-- Calculate water when popping
-- Less space efficient than two pointers
-
-> **Time Complexity:** O(n) - single pass
-> **Space Complexity:** O(1) - constant space
-
-<br>
 <br>
 
 ---
+
+## Solution 2: Prefix Max Arrays
+
+**Intuition:**
+Precompute leftMax[i] and rightMax[i] arrays. Water at i = min(leftMax[i], rightMax[i]) - height[i].
+
+### Time Complexity: O(n) — three passes
+### Space Complexity: O(n) — two extra arrays
+
+<br>
+
+---
+
+## Solution 3: Two Pointers (Optimal)
+
+**Intuition:**
+Use left and right pointers. Track maxLeft and maxRight. The shorter side determines water level — process from that side.
+
+**Algorithm:**
+1. left = 0, right = n-1, maxLeft = 0, maxRight = 0, water = 0
+2. While left < right:
+   - If height[left] < height[right]:
+     - If height[left] >= maxLeft → update maxLeft
+     - Else → water += maxLeft - height[left]
+     - left++
+   - Else: mirror logic for right side
+
+**Why this works:** When height[left] < height[right], we know maxRight ≥ height[right] > height[left], so water at left depends only on maxLeft.
+
+### Time Complexity: O(n) — single pass
+### Space Complexity: O(1) — just pointers
+
+<br>
+
+---
+
+## Solution 4: Monotonic Stack
+
+**Intuition:**
+Maintain decreasing stack of heights. When we find a bar taller than stack top, we can trap water between the current bar, the popped bar, and the new stack top.
+
+### Time Complexity: O(n)
+### Space Complexity: O(n) for stack
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute Force | O(n²) | O(1) | Find max left/right per position |
+| Prefix Max | O(n) | O(n) | Precompute max arrays |
+| Two Pointers | O(n) | O(1) | Shorter side determines water |
+| Monotonic Stack | O(n) | O(n) | Process horizontal layers |
+
+**Recommended:** Two Pointers — O(n) time, O(1) space.
+
+<br>
+<br>
 
 ---
 
