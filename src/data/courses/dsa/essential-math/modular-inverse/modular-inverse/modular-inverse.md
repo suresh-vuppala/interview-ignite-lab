@@ -1,46 +1,26 @@
-## Overview
-Compute modular multiplicative inverse using Extended Euclidean and Fermat's Little Theorem.
-
-## Topics Covered
-1. **Modular Inverse using Extended Euclid**: For any modulo
-2. **Modular Inverse using Fermat's Little Theorem**: For prime modulo
-3. **Applications**: Division in modular arithmetic
-
-## Approach
-### Extended Euclidean
-- Find x such that (a * x) % m = 1
-- Time: O(log m)
-
-### Fermat's Little Theorem
-- If m is prime: a^(-1) = a^(m-2) mod m
-- Time: O(log m)
-
-## Complexity Analysis
-### Time: O(log m), Space: O(1)
-
-## Code
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁹ (for number theory problems)`
-- `Results may need modular arithmetic`
+Find modular multiplicative inverse: a⁻¹ mod m.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Extended Euclidean Algorithm — Find x where ax ≡ 1 (mod m)
+## Solution 2: Fermat's Little Theorem — If m is prime: a⁻¹ = a^(m-2) mod m (use fast exponentiation)
 
-1. **n = 0:** Check base case definition
-2. **n = 1:** Smallest valid input
-3. **Prime number input:** Special behavior in factorization/sieve
-4. **Power of 2:** Special case in many algorithms
-5. **Very large n:** Needs O(√n) or O(log n) algorithm
-6. **n = 0 or 1 in GCD:** GCD(a,0) = a, GCD(1,b) = 1
+### Time: O(log m) | Space: O(1)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Extended GCD | O(log m) | O(1) | Works for any coprime a,m |
+| Fermat's | O(log m) | O(1) | Simpler when m is prime |
+
+<br>
 <br>
 
 ---

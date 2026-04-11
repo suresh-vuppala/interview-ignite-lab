@@ -1,42 +1,36 @@
-## Problem Statement
+## Building Graph Representations
 
-Solve Build Graph problem using graph algorithms.
+**Adjacency List (Most Common):**
+```
+vector<vector<int>> adj(n);
+for (auto& [u, v] : edges) {
+    adj[u].push_back(v);
+    adj[v].push_back(u); // undirected
+}
+```
+Space: O(V + E) | Edge lookup: O(degree)
 
-## Approach
+**Adjacency Matrix:**
+```
+vector<vector<bool>> mat(n, vector<bool>(n, false));
+```
+Space: O(V²) | Edge lookup: O(1) | Best for dense graphs
 
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵ (number of nodes)`
-- `0 ≤ edges.length ≤ 2 × 10⁵`
-- `Edges given as pairs [u, v]`
+**Edge List:** Simply store edges. Best for Kruskal's MST.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Comparison
 
-1. **Empty graph:** No edges — adjacency list has empty lists
-2. **Single node:** Node with no connections
-3. **Self-loop:** Edge [u, u] — handle or ignore based on problem
-4. **Duplicate edges:** Same edge given twice
-5. **Disconnected graph:** Multiple components
-6. **Dense graph:** Close to n² edges — adjacency matrix may be better
+| Representation | Space | Add Edge | Check Edge | Iterate Neighbors |
+|---------------|-------|----------|-----------|-------------------|
+| Adj List | O(V+E) | O(1) | O(degree) | O(degree) |
+| Adj Matrix | O(V²) | O(1) | O(1) | O(V) |
+| Edge List | O(E) | O(1) | O(E) | O(E) |
 
+<br>
 <br>
 
 ---

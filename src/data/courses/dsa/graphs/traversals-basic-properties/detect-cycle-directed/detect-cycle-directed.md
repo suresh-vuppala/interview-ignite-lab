@@ -1,41 +1,38 @@
-## Problem Statement
-
-Solve Detect Cycle Directed problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `0 ≤ edges.length ≤ 2 × 10⁵`
+Detect cycle in a directed graph.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS with Three Colors
 
-1. **DAG (no cycle):** Return false
-2. **Self-loop:** Single node cycle
-3. **Two nodes cycling:** A→B→A
-4. **Long cycle:** Requires full DFS path tracking
-5. **Multiple disconnected components:** Must check each
-6. **Single node, no edges:** No cycle
+**Colors:** White (unvisited), Gray (in current path), Black (finished).
+If we visit a Gray node → back edge → cycle.
 
+### Time: O(V + E) | Space: O(V)
+
+<br>
+
+---
+
+## Solution 2: Kahn's Algorithm (Topological Sort)
+
+If topological sort doesn't include all nodes → cycle exists.
+
+### Time: O(V + E) | Space: O(V)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS 3-Color | O(V+E) | O(V) | Gray = in-path detection |
+| Kahn's BFS | O(V+E) | O(V) | Incomplete topo sort → cycle |
+
+<br>
 <br>
 
 ---

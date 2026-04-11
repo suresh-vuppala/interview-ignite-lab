@@ -1,30 +1,26 @@
-## Problem Statement
-Stack using Queue implementation.
-
-## Approach
-Stack/Queue based solution.
-
-## Code Implementation
-
----
-
-## Constraints
-
-- `At most 10⁴ operations`
-- `-10⁹ ≤ val ≤ 10⁹`
+Implement stack using queue(s).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Two Queues — Push O(n), Pop O(1)
+## Solution 2: One Queue — After enqueue, rotate n-1 elements to back
 
-1. **Dequeue from empty queue:** Handle gracefully — return -1 or error
-2. **Peek on empty queue:** Handle gracefully
-3. **Single enqueue then dequeue:** Returns the enqueued value
-4. **Queue full (if bounded):** Handle overflow
-5. **Multiple enqueues then size check:** Size equals enqueue count minus dequeue count
+### Time: Push O(n) | Space: O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Two Queues | Push O(n) | O(n) | Transfer between queues |
+| One Queue | Push O(n) | O(n) | Self-rotate |
+
+<br>
 <br>
 
 ---

@@ -1,40 +1,34 @@
-## Problem Statement
-
-Solve Topological Sort Kahns problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `0 ≤ edges.length ≤ 2 × 10⁵`
+Topological sort using Kahn's algorithm (BFS, in-degree based).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Kahn's Algorithm (BFS)
 
-1. **Graph has cycle:** Kahn's detects it — not all nodes processed
-2. **Multiple sources (in-degree 0):** Multiple valid orderings
-3. **Single source:** Unique start point
-4. **All nodes independent:** Any order works
-5. **Single node:** Trivial ordering
+**Intuition:** Repeatedly remove nodes with in-degree 0. They have no dependencies.
 
+**Algorithm:**
+1. Compute in-degree for all nodes
+2. Enqueue all nodes with in-degree 0
+3. While queue not empty:
+   - Dequeue node → add to result
+   - For each neighbor: decrement in-degree. If 0 → enqueue
+4. If result.size() < V → cycle exists
+
+### Time: O(V + E) | Space: O(V)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Kahn's BFS | O(V+E) | O(V) | In-degree removal, detects cycles |
+
+<br>
 <br>
 
 ---

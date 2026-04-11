@@ -1,46 +1,26 @@
-## Problem Statement
-Solve Palindrome Partitioning II using dynamic programming.
-
-## Approach
-
-### DP Formula
-```
-dp[i] = min(dp[j] + 1) if s[j..i] is palindrome
-```
-
-### Steps
-1. Define DP state
-2. Initialize base cases
-3. Fill DP table using recurrence
-4. Return final result
-
-## Complexity
-- Time: O(n) or O(n²)
-- Space: O(n)
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+Minimum cuts to partition string into palindromes.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion — Try all cut points O(2^n)
+## Solution 2: DP — dp[i] = min cuts for s[0..i]. Precompute isPalin[i][j]. dp[i] = min(dp[j-1]+1) for all j where s[j..i] is palindrome.
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+### Time: O(n²) | Space: O(n²)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursion | O(2^n) | O(n) | Try all partitions |
+| DP | O(n²) | O(n²) | Precompute palindromes + cut DP |
+
+<br>
 <br>
 
 ---

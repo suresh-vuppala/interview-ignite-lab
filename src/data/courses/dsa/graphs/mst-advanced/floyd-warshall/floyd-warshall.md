@@ -1,27 +1,36 @@
-Find shortest paths between all pairs of vertices. Handles negative edges. Can detect negative weight cycles (diagonal becomes negative), but shortest paths are undefined if a negative cycle exists on the path.
+All-pairs shortest paths.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Floyd-Warshall DP
 
-- `1 ≤ V ≤ 500`
-- `Weights can be negative`
-- `Works for directed and undirected graphs`
+**Intuition:** For each intermediate vertex k, check if path i→k→j is shorter than current i→j.
+
+**Algorithm:**
+```
+for k = 0 to V-1:
+    for i = 0 to V-1:
+        for j = 0 to V-1:
+            dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
+```
+
+**Negative cycle detection:** If dist[i][i] < 0 after algorithm → negative cycle.
+
+### Time: O(V³) | Space: O(V²)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **Negative cycle:** Diagonal becomes negative
-2. **Disconnected nodes:** Distance remains infinity
-3. **Single node:** dist[0][0] = 0
-4. **Dense graph:** O(V³) may be acceptable for V ≤ 500
-5. **All edges same weight:** Equivalent to BFS shortest path
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Floyd-Warshall | O(V³) | O(V²) | DP over intermediate vertices |
 
+<br>
 <br>
 
 ---

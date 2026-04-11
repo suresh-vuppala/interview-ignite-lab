@@ -1,41 +1,28 @@
-## Problem Statement
-
-Solve Flood Fill problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ m, n ≤ 50`
-- `0 ≤ image[i][j] ≤ 65535`
-- `0 ≤ newColor ≤ 65535`
+Flood fill starting from (sr, sc) with new color.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS — Recursive fill from start, change color
+## Solution 2: BFS — Queue-based fill
 
-1. **New color same as original:** No change needed — skip to avoid infinite loop
-2. **Single cell:** Just change that cell
-3. **Entire grid same color:** Flood fill covers everything
-4. **Start cell different from neighbors:** Only start cell changes
-5. **All different colors:** Only start cell changes
+**Edge case:** If new color == original color → no-op (avoid infinite loop).
 
+### Time: O(m × n) | Space: O(m × n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS | O(m×n) | O(m×n) | Recursive fill |
+| BFS | O(m×n) | O(m×n) | Iterative fill |
+
+<br>
 <br>
 
 ---

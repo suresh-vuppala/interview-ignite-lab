@@ -1,28 +1,42 @@
-Find the Minimum Spanning Tree using Kruskal's algorithm. Sort edges by weight, add edges using DSU if they don't form a cycle.
+Find Minimum Spanning Tree using Kruskal's algorithm.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Kruskal's (Sort Edges + DSU)
 
-- `1 ≤ V ≤ 10⁵`
-- `V-1 ≤ E ≤ V×(V-1)/2`
-- `Connected undirected graph`
-- `Edge weights can be negative`
+**Intuition:** Sort edges by weight. Add edges greedily if they don't form a cycle (checked via DSU).
+
+**Algorithm:**
+1. Sort all edges by weight
+2. For each edge (u, v, w):
+   - If find(u) != find(v) → union(u, v), add to MST
+   - Stop when MST has V-1 edges
+
+### Time: O(E log E) — dominated by sort
+### Space: O(V) — DSU
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 2: Prim's Algorithm (Alternative)
 
-1. **Already a tree:** MST = the tree itself
-2. **All edges same weight:** Any spanning tree is MST
-3. **Single node:** Empty MST
-4. **Multiple MSTs:** When equal weight edges exist
-5. **Disconnected graph:** MST doesn't exist — check components
+See prims-mst.
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Algorithm | Time | Space | Best For |
+|-----------|------|-------|----------|
+| Kruskal's | O(E log E) | O(V) | Sparse graphs |
+| Prim's | O(E log V) | O(V) | Dense graphs |
+
+<br>
 <br>
 
 ---

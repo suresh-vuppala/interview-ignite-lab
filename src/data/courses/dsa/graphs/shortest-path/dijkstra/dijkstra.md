@@ -1,42 +1,44 @@
-## Problem Statement
-
-Solve Dijkstra problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `0 ≤ edges.length ≤ 2 × 10⁵`
-- `0 ≤ weight ≤ 10⁴ (non-negative weights only)`
+Find shortest paths from source to all vertices (non-negative weights).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Naive — Relax All Vertices V Times
 
-1. **Source is destination:** Distance = 0
-2. **Unreachable node:** Distance = infinity
-3. **Single node:** Distance = 0
-4. **Negative weights:** Dijkstra gives wrong answer — use Bellman-Ford
-5. **Multiple shortest paths:** Any one is valid
-6. **Disconnected graph:** Some nodes unreachable
+For each unprocessed vertex, find min distance, relax neighbors.
 
+### Time: O(V²) | Space: O(V)
+
+<br>
+
+---
+
+## Solution 2: Min-Heap (Optimal for Sparse Graphs)
+
+**Intuition:** Use priority queue to always process the closest unvisited vertex.
+
+**Algorithm:**
+1. dist[src] = 0, all others = ∞
+2. Push (0, src) to min-heap
+3. While heap not empty:
+   - Pop (d, u) — skip if d > dist[u]
+   - For each neighbor v: if dist[u] + w < dist[v] → update, push
+
+### Time: O((V + E) log V) | Space: O(V)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Naive | O(V²) | O(V) | Linear scan for min |
+| Min-Heap | O((V+E)log V) | O(V) | Heap gives min in O(log V) |
+
+<br>
 <br>
 
 ---

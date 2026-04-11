@@ -1,38 +1,28 @@
-## Overview
-Remove the nth node from end using two-pointer technique.
-
-## Topics Covered
-1. **Find and Remove**: Locate then delete node
-2. **Dummy Node Technique**: Handle edge cases
-3. **One-Pass Solution**: Efficient removal
-4. **Handle Head Removal**: When n equals length
-
-## Complexity Analysis
-### Time: O(n), Space: O(1)
-
-## Code
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ size of list`
-- `1 ≤ size ≤ 30`
-- `0 ≤ Node.val ≤ 100`
+Remove the nth node from the end. Return head.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Two Pass — Count length, remove at position (length - n)
+## Solution 2: Two Pointers + Dummy (Optimal)
 
-1. **Remove head (n = size):** Return head.next
-2. **Remove tail (n = 1):** Traverse to second-last
-3. **Single node, n = 1:** Return null
-4. **n = size:** Remove first node — use dummy head
-5. **Two nodes, remove first:** Return second node
+**Intuition:** Use dummy node before head. Fast advances n+1 steps. Move both until fast is null. Slow.next = slow.next.next.
 
+### Time: O(n) | Space: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Two Pass | O(n) | O(1) | Count then delete |
+| Two Pointers | O(n) | O(1) | Single pass, dummy handles edge cases |
+
+<br>
 <br>
 
 ---

@@ -1,41 +1,26 @@
-## Problem Statement
-
-Solve Redundant Connection problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `n == edges.length`
-- `1 ≤ n ≤ 1000`
-- `1 ≤ edges[i][0], edges[i][1] ≤ n`
-- `No repeated edges`
+Find the edge that creates a cycle in a tree + 1 edge graph.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Union-Find (Optimal)
 
-1. **Cycle formed by last edge:** Return last edge
-2. **Cycle formed early:** Return the edge that first creates redundancy
-3. **Triangle:** First edge completing the triangle
-4. **All edges form one big cycle:** Last edge in the cycle
+Process edges one by one. The first edge where both endpoints are already in the same component → that's the redundant edge.
 
+### Time: O(n × α(n)) ≈ O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DSU | O(n) | O(n) | First edge connecting same component |
+
+<br>
 <br>
 
 ---

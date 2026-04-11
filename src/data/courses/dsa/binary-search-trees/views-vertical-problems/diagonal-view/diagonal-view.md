@@ -1,36 +1,24 @@
-## Overview
-Comprehensive solution for Diagonal View
-
-## Problem Statement
-Implement Diagonal View
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
+Diagonal traversal in BST.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: BFS/DFS with Diagonal Level — Going right = same diagonal, going left = next diagonal
 
-1. **Single node:** One diagonal
-2. **Right-skewed:** All in one diagonal
-3. **Left-skewed:** Each in separate diagonal
+### Time: O(n) | Space: O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS + Map | O(n) | O(n) | Track diagonal index |
+
+<br>
 <br>
 
 ---

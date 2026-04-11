@@ -1,29 +1,26 @@
-Implement regular expression matching with '.' (matches any single character) and '*' (matches zero or more of the preceding element).
+Regular expression matching with '.' and '*'.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Recursion — O(exponential)
+## Solution 2: DP — dp[i][j] = s[0..i-1] matches p[0..j-1]. Handle '.', '*' transitions.
 
-- `1 ≤ s.length ≤ 20`
-- `1 ≤ p.length ≤ 20`
-- `s contains only lowercase letters`
-- `p contains lowercase letters, '.', and '*'`
+### Time: O(m × n) | Space: O(m × n)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **No special chars:** Exact match required
-2. **'.*' pattern:** Matches any string
-3. **'a*' matches empty:** Star means zero or more of preceding
-4. **Consecutive star patterns:** 'a*b*c' — each star group independent
-5. **'.' matches any single char:** 'a.b' matches 'aXb'
-6. **Pattern longer than string:** Can still match if stars consume to zero
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursion | exponential | O(m+n) | Try all possibilities |
+| DP | O(mn) | O(mn) | Memoize match states |
 
+<br>
 <br>
 
 ---

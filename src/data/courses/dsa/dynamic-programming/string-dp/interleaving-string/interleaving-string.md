@@ -1,46 +1,26 @@
-## Problem Statement
-Solve Interleaving String using dynamic programming.
-
-## Approach
-
-### DP Formula
-```
-dp[i][j] = (dp[i-1][j] && s1[i-1]==s3[i+j-1]) || (dp[i][j-1] && s2[j-1]==s3[i+j-1])
-```
-
-### Steps
-1. Define DP state
-2. Initialize base cases
-3. Fill DP table using recurrence
-4. Return final result
-
-## Complexity
-- Time: O(n) or O(n²)
-- Space: O(n)
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+Check if s3 is formed by interleaving s1 and s2.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion — O(2^(m+n))
+## Solution 2: DP — dp[i][j] = can first i chars of s1 + first j chars of s2 form first i+j chars of s3.
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+### Time: O(m × n) | Space: O(m × n) → O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursion | O(2^(m+n)) | O(m+n) | Try both |
+| DP | O(mn) | O(n) | Track interleave validity |
+
+<br>
 <br>
 
 ---

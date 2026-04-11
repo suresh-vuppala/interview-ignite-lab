@@ -1,30 +1,26 @@
-## Problem Statement
-Implement Circular Queue implementation.
-
-## Approach
-Stack/Queue based solution.
-
-## Code Implementation
-
----
-
-## Constraints
-
-- `At most 10⁴ operations`
-- `-10⁹ ≤ val ≤ 10⁹`
+Implement circular queue operations (enqueue, dequeue, front, rear, isEmpty, isFull).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Array with Modulo
 
-1. **Dequeue from empty queue:** Handle gracefully — return -1 or error
-2. **Peek on empty queue:** Handle gracefully
-3. **Single enqueue then dequeue:** Returns the enqueued value
-4. **Queue full (if bounded):** Handle overflow
-5. **Multiple enqueues then size check:** Size equals enqueue count minus dequeue count
+Same as design-circular-queue. Key: next = (current + 1) % capacity.
 
+### Time: O(1) all operations | Space: O(k)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Modulo Array | O(1) all ops | O(k) | Circular indexing |
+
+<br>
 <br>
 
 ---

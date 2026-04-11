@@ -1,37 +1,24 @@
-## Overview
-Comprehensive solution for Top View
-
-## Problem Statement
-Implement Top View
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
+Top view of binary tree — first node visible from each horizontal distance.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: BFS + HashMap — Track first node at each horizontal distance (BFS ensures top-most)
 
-1. **Single node:** Return [val]
-2. **Skewed tree:** All nodes visible from top
-3. **Complete tree:** Edges visible, inner nodes hidden
-4. **Overlapping horizontal positions:** First node at each position wins
+### Time: O(n) | Space: O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| BFS + Map | O(n) | O(n) | First visit at each HD wins |
+
+<br>
 <br>
 
 ---

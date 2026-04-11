@@ -1,46 +1,28 @@
-## Problem Statement
-Solve Russian Doll Envelopes using dynamic programming.
-
-## Approach
-
-### DP Formula
-```
-Sort by width, LIS on height
-```
-
-### Steps
-1. Define DP state
-2. Initialize base cases
-3. Fill DP table using recurrence
-4. Return final result
-
-## Complexity
-- Time: O(n) or O(n²)
-- Space: O(n)
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+Max envelopes you can nest (sort by width, LIS on height).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Sort + LIS DP — O(n²)
+## Solution 2: Sort + LIS with Binary Search (Optimal)
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+Sort by width ascending, height descending (for same width). Then LIS on heights using binary search.
 
+### Time: O(n log n) | Space: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Sort + LIS DP | O(n²) | O(n) | Standard LIS |
+| Sort + BS LIS | O(n log n) | O(n) | Patience sorting LIS |
+
+<br>
 <br>
 
 ---

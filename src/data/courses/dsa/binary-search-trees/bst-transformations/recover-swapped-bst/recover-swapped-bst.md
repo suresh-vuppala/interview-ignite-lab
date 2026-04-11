@@ -1,38 +1,35 @@
-## Overview
-Comprehensive solution for Recover Swapped BST
-
-## Problem Statement
-Implement Recover Swapped BST
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `2 ≤ n ≤ 1000`
-- `Exactly two nodes are swapped`
+Two nodes in BST are swapped. Fix the BST.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Inorder → Array — Find two violations in sorted order, swap
 
-1. **Adjacent nodes swapped:** One inorder anomaly
-2. **Non-adjacent nodes swapped:** Two inorder anomalies
-3. **Root is one of the swapped:** Root value changes
-4. **Leaves swapped:** Only leaf values change
+### Time: O(n) | Space: O(n)
 
+<br>
+
+---
+
+## Solution 2: Morris Traversal (Optimal)
+
+Inorder traversal tracking prev. First violation: prev > curr → first = prev. Second violation: prev > curr → second = curr. Swap values.
+
+### Time: O(n) | Space: O(1) with Morris
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Inorder Array | O(n) | O(n) | Find violations in sorted order |
+| Morris | O(n) | O(1) | Track violations during O(1) space traversal |
+
+<br>
 <br>
 
 ---

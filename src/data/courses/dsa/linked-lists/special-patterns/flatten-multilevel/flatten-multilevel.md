@@ -1,38 +1,37 @@
-## Overview
-Flatten a multilevel doubly linked list where nodes can have child pointers.
-
-## Topics Covered
-1. **DFS Traversal**: Process child lists recursively
-2. **Pointer Adjustment**: Connect child lists properly
-3. **Maintain Doubly Links**: Update both next and prev
-4. **Stack/Recursion**: Handle multilevel structure
-
-## Complexity Analysis
-### Time: O(n), Space: O(n) recursion
-
-## Code
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 1000`
-- `1 ≤ Node.val ≤ 10⁵`
+Flatten a multilevel doubly linked list. Child pointers become part of the main list.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS/Stack
 
-1. **No child pointers:** Already flat
-2. **Single level of children:** Insert children between current and next
-3. **Deeply nested children:** Recursive flattening
-4. **Child at tail:** Append child list at end
-5. **Empty list:** Return null
-6. **Child list longer than parent:** Expanded list is much longer
+**Intuition:** When child exists, insert child list between current and next. Use stack to remember the next pointer.
 
+### Time: O(n) | Space: O(depth) for stack
+
+<br>
+
+---
+
+## Solution 2: Iterative
+
+Traverse. When child found: find child list's tail, connect tail → current.next, set current.next = child.
+
+### Time: O(n) | Space: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Stack/DFS | O(n) | O(depth) | Stack tracks paused next pointers |
+| Iterative | O(n) | O(1) | Find child tail inline |
+
+<br>
 <br>
 
 ---

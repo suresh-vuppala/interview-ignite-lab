@@ -1,37 +1,26 @@
-## Overview
-Comprehensive solution for Deserialize Tree
-
-## Problem Statement
-Implement Deserialize Tree
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `Valid serialized string`
+Deserialize — reconstruct tree from serialized string. See serialize-tree.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Preorder Token Parsing — Parse tokens recursively, "#" = null
+## Solution 2: Level-Order Queue — Parse tokens into BFS queue reconstruction
 
-1. **Empty string:** Return null
-2. **Single value:** Return single node
-3. **Null markers:** Skip and continue
-4. **Mismatched format:** Handle errors
+### Time: O(n) | Space: O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Preorder Parse | O(n) | O(n) | Recursive token consumption |
+| BFS Parse | O(n) | O(n) | Queue-based reconstruction |
+
+<br>
 <br>
 
 ---

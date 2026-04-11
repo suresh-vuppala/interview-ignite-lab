@@ -1,37 +1,24 @@
-## Overview
-Comprehensive solution for Level Order Construction
-
-## Problem Statement
-Implement Level Order Construction
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁵`
+Construct binary tree from level-order traversal.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: BFS Queue — Enqueue root, dequeue and assign left/right children from array
 
-1. **Empty input:** Return null
-2. **Single element:** Single node
-3. **Complete tree input:** Standard BFS construction
-4. **Null values in input:** Represent missing children
+### Time: O(n) | Space: O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| BFS Queue | O(n) | O(n) | Level-by-level construction |
+
+<br>
 <br>
 
 ---

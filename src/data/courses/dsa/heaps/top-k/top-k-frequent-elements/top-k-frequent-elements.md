@@ -1,29 +1,30 @@
-Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
+Find k most frequent elements.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Sort by Frequency — O(n log n)
+## Solution 2: Min-Heap of Size k — O(n log k)
+## Solution 3: Bucket Sort (Optimal)
 
-- `1 ≤ nums.length ≤ 10⁵`
-- `-10⁴ ≤ nums[i] ≤ 10⁴`
-- `k is in range [1, number of unique elements]`
-- `Answer is unique`
+Index = frequency, value = list of elements. Scan from highest index.
+
+### Time: O(n) | Space: O(n)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **k = 1:** Return the most frequent element
-2. **All same elements:** Return that element
-3. **All unique:** Any k elements valid
-4. **k equals unique count:** Return all unique elements
-5. **Negative numbers:** Frequency counting works same way
-6. **Single element:** Return it
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Sort | O(n log n) | O(n) | Sort all by frequency |
+| Min-Heap k | O(n log k) | O(k) | Maintain top-k heap |
+| Bucket Sort | O(n) | O(n) | Frequency as array index |
 
+<br>
 <br>
 
 ---

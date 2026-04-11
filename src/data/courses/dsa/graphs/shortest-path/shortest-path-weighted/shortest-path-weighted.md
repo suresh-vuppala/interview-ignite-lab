@@ -1,41 +1,33 @@
-## Problem Statement
-
-Solve Shortest Path Weighted problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `0 ≤ edges.length ≤ 2 × 10⁵`
-- `Weights are non-negative`
+Find shortest path in weighted graph (general).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Dijkstra — Non-negative weights, O((V+E) log V)
+## Solution 2: Bellman-Ford — Handles negative weights, O(V × E)
+## Solution 3: Floyd-Warshall — All-pairs, O(V³)
 
-1. **Source == destination:** Distance = 0
-2. **No path exists:** Return -1 or infinity
-3. **Single edge path:** Return edge weight
-4. **Multiple shortest paths:** Return any
-5. **Disconnected graph:** Some distances are infinity
+**Which to use:**
+- Non-negative, single source → Dijkstra
+- Negative edges, single source → Bellman-Ford
+- All pairs → Floyd-Warshall
+- Weights 0/1 only → 0-1 BFS
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Algorithm | Time | Space | Use Case |
+|-----------|------|-------|----------|
+| Dijkstra | O((V+E)log V) | O(V) | Non-negative, single source |
+| Bellman-Ford | O(V×E) | O(V) | Negative edges, single source |
+| Floyd-Warshall | O(V³) | O(V²) | All pairs |
+| 0-1 BFS | O(V+E) | O(V) | Weights are 0 or 1 |
+
+<br>
 <br>
 
 ---

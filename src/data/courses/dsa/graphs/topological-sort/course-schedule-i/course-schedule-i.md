@@ -1,43 +1,42 @@
-## Problem Statement
+Can you finish all courses? (Detect cycle in prerequisite graph.)
 
-Solve Course Schedule I problem using graph algorithms.
+<br>
 
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ numCourses ≤ 2000`
-- `0 ≤ prerequisites.length ≤ 5000`
-- `prerequisites[i].length == 2`
-- `No duplicate prerequisites`
+> Input: numCourses=2, prerequisites=[[1,0]]
+> Output: true (take 0 then 1)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS Cycle Detection (3-Color)
 
-1. **No prerequisites:** All courses can be taken → true
-2. **Simple chain:** A→B→C → true
-3. **Cycle exists:** A→B→A → false
-4. **Self-dependency:** [0,0] → false
-5. **Disconnected courses:** Independent groups → true
-6. **Single course:** Always true
+Build directed graph. If cycle exists → false.
 
+### Time: O(V + E) | Space: O(V)
+
+<br>
+
+---
+
+## Solution 2: Kahn's Topological Sort
+
+If topological sort processes all courses → true. Otherwise cycle → false.
+
+### Time: O(V + E) | Space: O(V)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS 3-Color | O(V+E) | O(V) | Gray node = cycle |
+| Kahn's BFS | O(V+E) | O(V) | Incomplete sort = cycle |
+
+<br>
 <br>
 
 ---

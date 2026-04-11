@@ -1,42 +1,24 @@
-## Problem Statement
-
-Solve Number of Provinces problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 200`
-- `isConnected[i][j] is 0 or 1`
-- `isConnected[i][i] = 1`
-- `isConnected is symmetric`
+Count provinces (connected components) given adjacency matrix.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS/BFS — O(n²) time, O(n) space
+## Solution 2: Union-Find — O(n² × α(n)) ≈ O(n²)
 
-1. **All connected:** 1 province
-2. **No connections:** n provinces
-3. **Single node:** 1 province
-4. **Chain connections:** 1 province
-5. **Pairs only:** n/2 provinces
+<br>
 
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS/BFS | O(n²) | O(n) | Traverse adjacency matrix |
+| DSU | O(n²) | O(n) | Union-find alternative |
+
+<br>
 <br>
 
 ---

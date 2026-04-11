@@ -1,28 +1,26 @@
-Given a string s and a pattern p with '?' (matches single char) and '*' (matches any sequence including empty), determine if the pattern matches the entire string.
+Wildcard matching with '?' and '*'.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Recursion + Memo
+## Solution 2: DP — dp[i][j] = s[0..i-1] matches p[0..j-1]. '*' matches empty or one more char.
 
-- `0 ≤ s.length, p.length ≤ 2000`
-- `s contains only lowercase English letters`
-- `p contains lowercase letters, '?' and '*'`
+### Time: O(m × n) | Space: O(m × n)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **Empty pattern:** Only matches empty string
-2. **Pattern is all '*':** Matches any string
-3. **No wildcards:** Exact string match
-4. **'?' only:** Each '?' must match exactly one char
-5. **Consecutive '*':** Same as single '*'
-6. **Empty string with '*' pattern:** '*' matches empty
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursion | exponential | O(m+n) | Branching on '*' |
+| DP | O(mn) | O(mn) | Table of match states |
 
+<br>
 <br>
 
 ---

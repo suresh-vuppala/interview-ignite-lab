@@ -1,37 +1,26 @@
-## Overview
-Comprehensive solution for Floor and Ceil
-
-## Problem Statement
-Implement Floor and Ceil
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
+Find floor (largest ≤ key) and ceiling (smallest ≥ key) in BST.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: BST Property Traversal
 
-1. **Key exists in BST:** Floor = Ceil = key
-2. **Key smaller than all:** Floor = -1, Ceil = minimum
-3. **Key larger than all:** Floor = maximum, Ceil = -1
-4. **Key between two nodes:** Floor and ceil are adjacent in-order elements
+Go left if node.val > key (update ceil), go right if node.val < key (update floor).
 
+### Time: O(h) | Space: O(1) iterative / O(h) recursive
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| BST Traversal | O(h) | O(1) | BST property narrows search |
+
+<br>
 <br>
 
 ---

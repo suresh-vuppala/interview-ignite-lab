@@ -1,26 +1,38 @@
-Given an m×n matrix of heights, find all cells where water can flow to both the Pacific (top/left edges) and Atlantic (bottom/right edges) oceans.
+Find cells where water can flow to both Pacific (top/left) and Atlantic (bottom/right) oceans.
 
 <br>
 
 ---
 
-## Constraints
-
-- `1 ≤ m, n ≤ 200`
-- `0 ≤ heights[i][j] ≤ 10⁵`
+## Solution 1: DFS/BFS from Every Cell — O(m²n²) — Check each cell's reachability
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 2: Reverse DFS from Oceans (Optimal)
 
-1. **1×1 grid:** That cell reaches both oceans
-2. **All same height:** Every cell reaches both oceans
-3. **Strictly increasing left to right:** Only rightmost column + bottom row
-4. **Single row:** Left border → Pacific, right border → Atlantic
-5. **Single column:** Top → Pacific, bottom → Atlantic
+**Intuition:** Instead of checking each cell → ocean, reverse: start from ocean borders and DFS/BFS uphill. Find intersection of Pacific-reachable and Atlantic-reachable cells.
 
+**Algorithm:**
+1. DFS from all Pacific border cells (top row + left col) — mark pac[i][j]
+2. DFS from all Atlantic border cells (bottom row + right col) — mark atl[i][j]
+3. Result = cells where both pac and atl are true
+
+### Time: O(m × n) | Space: O(m × n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Per-cell check | O(m²n²) | O(m×n) | DFS from every cell |
+| Reverse from oceans | O(m×n) | O(m×n) | Two DFS from borders, intersect |
+
+<br>
 <br>
 
 ---

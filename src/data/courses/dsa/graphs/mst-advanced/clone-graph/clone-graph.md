@@ -1,28 +1,37 @@
-Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph.
+Clone a connected undirected graph — deep copy all nodes and edges.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: DFS + HashMap (Standard)
 
-- `0 ≤ number of nodes ≤ 100`
-- `1 ≤ Node.val ≤ 100`
-- `No duplicate values`
-- `No self-loops`
+**Intuition:** Use hashmap old→new to track cloned nodes. DFS: if already cloned, return clone. Otherwise create clone, recurse on neighbors.
+
+### Time: O(V + E) | Space: O(V) — hashmap + recursion
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 2: BFS + HashMap
 
-1. **Empty graph:** Return null
-2. **Single node, no neighbors:** Return single cloned node
-3. **Fully connected graph:** All nodes reference each other
-4. **Linear graph (chain):** Each node has one neighbor
-5. **Cycle in graph:** Must handle visited to avoid infinite loop
+Same logic with queue instead of recursion.
 
+### Time: O(V + E) | Space: O(V)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS + Map | O(V+E) | O(V) | Recursive cloning |
+| BFS + Map | O(V+E) | O(V) | Iterative cloning |
+
+<br>
 <br>
 
 ---

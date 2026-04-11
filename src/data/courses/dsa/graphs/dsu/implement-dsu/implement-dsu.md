@@ -1,40 +1,39 @@
-## Problem Statement
-
-Solve Implement DSU problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `Operations: union(u,v), find(u)`
+Implement Disjoint Set Union (Union-Find) with path compression and union by rank.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Naive (Array Parent)
 
-1. **Union same element:** No change
-2. **Find on root:** Returns itself
-3. **Long chain before compression:** Path compression flattens it
-4. **All elements in one set:** Single root after all unions
-5. **No unions performed:** Each element is its own set
+find(): follow parent chain. union(): set parent.
 
+### Time: O(n) per operation worst case
+
+<br>
+
+---
+
+## Solution 2: Path Compression + Union by Rank (Optimal)
+
+**Path Compression:** During find, make every node point directly to root.
+**Union by Rank:** Attach shorter tree under taller tree.
+
+### Time: O(α(n)) ≈ O(1) amortized per operation
+### Space: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time per op | Space | Key Improvement |
+|----------|------------|-------|----------------|
+| Naive | O(n) | O(n) | Linear chain |
+| Compression + Rank | O(α(n)) ≈ O(1) | O(n) | Near-constant via optimizations |
+
+<br>
 <br>
 
 ---

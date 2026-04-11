@@ -1,36 +1,24 @@
-## Overview
-Comprehensive solution for Bottom View
-
-## Problem Statement
-Implement Bottom View
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
+Bottom view — last node at each horizontal distance.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: BFS + HashMap — Update map at each HD (last update wins = bottom view)
 
-1. **Single node:** Return [val]
-2. **Skewed tree:** All nodes visible from bottom
-3. **Overlapping positions:** Last node at each horizontal distance wins
+### Time: O(n) | Space: O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| BFS + Map | O(n) | O(n) | Last visit at each HD wins |
+
+<br>
 <br>
 
 ---

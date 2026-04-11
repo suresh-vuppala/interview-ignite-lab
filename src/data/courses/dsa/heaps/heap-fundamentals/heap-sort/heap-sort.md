@@ -1,46 +1,27 @@
-## Problem Statement
-
-Sort an array using heap sort algorithm.
-
-## Approach
-
-1. Build max heap from array - O(n)
-2. Repeatedly extract max and place at end - O(n log n)
-3. Reduce heap size and heapify
-
-## Complexity Analysis
-
-### Time Complexity: O(n log n)
-- Build heap: O(n)
-- Extract n times: O(n log n)
-
-### Space Complexity: O(1)
-- In-place sorting
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `-10⁴ ≤ nums[i] ≤ 10⁴`
+Sort using heap — build max-heap, repeatedly extract max.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Heap Sort
 
-1. **Single element:** It is both min and max
-2. **All same elements:** Heap operations trivial
-3. **Already a valid heap:** No restructuring needed
-4. **k = 1:** Find min/max directly
-5. **k = n:** Need to process entire heap
-6. **Negative values:** Min heap with negatives
+1. Build max-heap: O(n)
+2. Repeatedly swap root with last, heapify: O(n log n)
 
+### Time: O(n log n) | Space: O(1) in-place
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Heap Sort | O(n log n) | O(1) | In-place, not stable |
+
+<br>
 <br>
 
 ---

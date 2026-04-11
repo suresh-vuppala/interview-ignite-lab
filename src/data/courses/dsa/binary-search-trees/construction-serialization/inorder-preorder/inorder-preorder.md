@@ -1,38 +1,26 @@
-## Overview
-Comprehensive solution for Inorder + Preorder
-
-## Problem Statement
-Implement Inorder + Preorder
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 3000`
-- `All values unique`
+Construct binary tree from inorder + preorder traversals.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursive with HashMap
 
-1. **Single node:** Both arrays have one element
-2. **Left-skewed:** Preorder and inorder are same
-3. **Right-skewed:** Inorder and preorder reversed relationship
-4. **Balanced tree:** Standard split by root in inorder
+Preorder[0] = root. Find root in inorder → splits left/right subtrees. Use HashMap for O(1) index lookup.
 
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursive + Map | O(n) | O(n) | HashMap avoids O(n) search in inorder |
+
+<br>
 <br>
 
 ---

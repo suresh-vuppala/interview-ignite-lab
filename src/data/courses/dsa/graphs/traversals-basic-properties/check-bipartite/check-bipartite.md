@@ -1,42 +1,37 @@
-## Problem Statement
-
-Solve Check Bipartite problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `0 ≤ edges.length ≤ 2 × 10⁵`
+Check if graph is bipartite (2-colorable).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: BFS Coloring
 
-1. **Tree:** Always bipartite
-2. **Odd-length cycle:** Not bipartite
-3. **Even-length cycle:** Bipartite
-4. **Single node:** Bipartite
-5. **Disconnected graph:** Each component must be bipartite
-6. **Complete graph K3+:** Not bipartite for n ≥ 3
-7. **Two nodes with edge:** Bipartite
+Assign colors alternately during BFS. If neighbor has same color → not bipartite.
 
+### Time: O(V + E) | Space: O(V)
+
+<br>
+
+---
+
+## Solution 2: DFS Coloring
+
+Same logic with DFS.
+
+### Time: O(V + E) | Space: O(V)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| BFS Color | O(V+E) | O(V) | Alternate coloring |
+| DFS Color | O(V+E) | O(V) | Recursive coloring |
+
+<br>
 <br>
 
 ---

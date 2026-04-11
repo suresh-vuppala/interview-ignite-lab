@@ -1,46 +1,26 @@
-## Problem Statement
-Solve Target Sum using dynamic programming.
-
-## Approach
-
-### DP Formula
-```
-dp[sum] = count ways to reach sum
-```
-
-### Steps
-1. Define DP state
-2. Initialize base cases
-3. Fill DP table using recurrence
-4. Return final result
-
-## Complexity
-- Time: O(n) or O(n²)
-- Space: O(n)
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+Assign + or - to each element to reach target sum.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion — Try +/- for each element O(2^n)
+## Solution 2: DP — Transform to subset sum: find count of subsets with sum = (total + target) / 2
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+### Time: O(n × sum) | Space: O(sum)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursion | O(2^n) | O(n) | Try all assignments |
+| Subset Sum DP | O(n × sum) | O(sum) | Reduce to subset sum |
+
+<br>
 <br>
 
 ---

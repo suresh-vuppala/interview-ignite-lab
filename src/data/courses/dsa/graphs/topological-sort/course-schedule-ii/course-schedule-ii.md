@@ -1,40 +1,37 @@
-## Problem Statement
-
-Solve Course Schedule II problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ numCourses ≤ 2000`
-- `0 ≤ prerequisites.length ≤ 5000`
+Return a valid course order (topological sort of prerequisite graph).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS Postorder → Reverse
 
-1. **No prerequisites:** Return [0,1,...,n-1] (any order)
-2. **Cycle exists:** Return empty array
-3. **Single course:** Return [0]
-4. **Linear chain:** One valid order
-5. **Multiple valid orders:** Return any valid topological order
+DFS topological sort. If cycle → return [].
 
+### Time: O(V + E) | Space: O(V)
+
+<br>
+
+---
+
+## Solution 2: Kahn's BFS (Preferred)
+
+Collect nodes as they reach in-degree 0. If result size < numCourses → cycle.
+
+### Time: O(V + E) | Space: O(V)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS + Reverse | O(V+E) | O(V) | Postorder gives reverse order |
+| Kahn's BFS | O(V+E) | O(V) | Direct order via in-degree |
+
+<br>
 <br>
 
 ---

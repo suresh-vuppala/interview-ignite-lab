@@ -1,26 +1,26 @@
-Reverse the bits of a given 32-bit unsigned integer. For example, input 43261596 (00000010100101000001111010011100) returns 964176192 (00111001011110000010100101000000).
+Reverse all 32 bits of an integer.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Bit by Bit — Extract LSB, shift into result
+## Solution 2: Divide and Conquer — Swap halves recursively (16→8→4→2→1 bits)
 
-- `Input is a 32-bit unsigned integer`
+### Time: O(32) = O(1) | Space: O(1)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **All zeros:** 0 → 0
-2. **All ones:** 4294967295 → 4294967295
-3. **Power of two:** Only one bit set — moves to mirror position
-4. **Palindrome bit pattern:** Reverse equals original
-5. **Single trailing bit:** Becomes leading bit after reversal
-6. **Alternating bits:** Pattern reverses but looks similar
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Bit by Bit | O(1) | O(1) | Extract + shift 32 times |
+| Divide & Conquer | O(1) | O(1) | Swap bit groups |
 
+<br>
 <br>
 
 ---

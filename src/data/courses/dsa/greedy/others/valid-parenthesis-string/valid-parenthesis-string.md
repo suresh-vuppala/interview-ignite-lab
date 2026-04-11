@@ -1,29 +1,35 @@
-Given a string with '(', ')' and '*' where '*' can be '(', ')' or empty, determine if the string is valid. Use greedy with min/max open count range.
+Check if string with '(', ')', '*' can be valid. * can be '(', ')', or empty.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Brute Force / DP — Try all possibilities for *
 
-- `1 ≤ s.length ≤ 100`
-- `s consists of '(', ')' and '*' only`
+### Time: O(3^n) or O(n²) with DP
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 2: Min-Max Open Count (Optimal)
 
-1. **No stars:** Standard valid parentheses check
-2. **All stars:** Always valid (all can be empty)
-3. **Star as open:** '*(' — star becomes empty or '(' 
-4. **Star as close:** '*)' — star becomes ')'
-5. **Empty string:** Valid
-6. **Single star:** Valid (* can be empty)
-7. **Unbalanceable:** ')(' — no star placement can fix
-8. **Stars at end:** '((**' — stars become '))'
+Track range [minOpen, maxOpen]. For '(': both++. For ')': both--. For '*': min--, max++. Clamp min ≥ 0.
 
+### Time: O(n) | Space: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DP | O(n²) | O(n) | Track possible open counts |
+| Min-Max | O(n) | O(1) | Range tracking replaces all states |
+
+<br>
 <br>
 
 ---

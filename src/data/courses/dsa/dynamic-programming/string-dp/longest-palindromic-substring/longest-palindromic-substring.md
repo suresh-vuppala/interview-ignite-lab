@@ -1,46 +1,30 @@
-## Problem Statement
-Solve Longest Palindromic Substring using dynamic programming.
-
-## Approach
-
-### DP Formula
-```
-dp[i][j] = true if s[i]==s[j] and dp[i+1][j-1]
-```
-
-### Steps
-1. Define DP state
-2. Initialize base cases
-3. Fill DP table using recurrence
-4. Return final result
-
-## Complexity
-- Time: O(n) or O(n²)
-- Space: O(n)
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+Find the longest palindromic substring.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Check All Substrings — O(n³)
+## Solution 2: DP — dp[i][j] = s[i..j] is palindrome. O(n²) time, O(n²) space
+## Solution 3: Expand Around Center (Optimal practical)
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+For each center (n single + n-1 between), expand outward while palindrome.
 
+### Time: O(n²) | Space: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| All Substrings | O(n³) | O(1) | Check each substring |
+| DP | O(n²) | O(n²) | Build palindrome table |
+| Expand Center | O(n²) | O(1) | Expand from each center |
+
+<br>
 <br>
 
 ---

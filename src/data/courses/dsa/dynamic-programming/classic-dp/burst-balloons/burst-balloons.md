@@ -1,46 +1,28 @@
-## Problem Statement
-Solve Burst Balloons using dynamic programming.
-
-## Approach
-
-### DP Formula
-```
-dp[i][j] = max(dp[i][k] + dp[k][j] + nums[i]*nums[k]*nums[j])
-```
-
-### Steps
-1. Define DP state
-2. Initialize base cases
-3. Fill DP table using recurrence
-4. Return final result
-
-## Complexity
-- Time: O(n) or O(n²)
-- Space: O(n)
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+Maximize coins from bursting balloons (when balloon i bursts, coins = nums[left] × nums[i] × nums[right]).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Backtracking — Try all orderings O(n!)
+## Solution 2: DP — Think of last balloon to burst in range [i,j]. dp[i][j] = max coins for range.
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+### Time: O(n³) | Space: O(n²)
 
+**Key insight:** Instead of first-to-burst, think LAST-to-burst. When k is last in [i,j], its neighbors are i-1 and j+1 (guaranteed to still exist).
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Backtracking | O(n!) | O(n) | Try all orderings |
+| Interval DP | O(n³) | O(n²) | Last-to-burst insight |
+
+<br>
 <br>
 
 ---

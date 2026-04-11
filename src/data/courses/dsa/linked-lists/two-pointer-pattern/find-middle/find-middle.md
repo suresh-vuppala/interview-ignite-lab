@@ -1,35 +1,40 @@
-## Overview
-Use slow-fast pointer technique to find middle node efficiently.
+Find the middle node of a linked list.
 
-## Topics Covered
-1. **Slow-Fast Pointer**: Optimal one-pass solution
-2. **Even vs Odd Length**: Handle both cases
-3. **Return First or Second Middle**: For even length lists
-4. **Applications**: Used in merge sort, palindrome check
+<br>
 
-## Complexity Analysis
-### Time: O(n), Space: O(1)
-
-## Code
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
+> Input: 1→2→3→4→5 → Output: 3
+> Input: 1→2→3→4→5→6 → Output: 4 (second middle for even)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Count + Traverse — Two passes: count length, then traverse n/2
 
-1. **Single node:** Return that node
-2. **Two nodes:** Return second (or first based on problem)
-3. **Odd length:** Exact middle
-4. **Even length:** Return second middle node typically
+### Time: O(n) | Space: O(1) — Two passes
 
+<br>
+
+---
+
+## Solution 2: Slow & Fast Pointers (Optimal)
+
+**Intuition:** Slow moves 1 step, fast moves 2 steps. When fast reaches end, slow is at middle.
+
+### Time: O(n) | Space: O(1) — Single pass
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Count + Traverse | O(n) | O(1) | Two passes |
+| Slow & Fast | O(n) | O(1) | Single pass |
+
+<br>
 <br>
 
 ---

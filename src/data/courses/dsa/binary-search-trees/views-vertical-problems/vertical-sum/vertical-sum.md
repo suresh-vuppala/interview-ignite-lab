@@ -1,36 +1,24 @@
-## Overview
-Comprehensive solution for Vertical Sum
-
-## Problem Statement
-Implement Vertical Sum
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
+Sum of nodes at each vertical line.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS + HashMap — HD → cumulative sum
 
-1. **Single node:** One column sum
-2. **Negative values:** Sums can be negative
-3. **Symmetric tree:** Left and right columns have equal sums
+### Time: O(n) | Space: O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS + Map | O(n) | O(n) | Accumulate per HD |
+
+<br>
 <br>
 
 ---

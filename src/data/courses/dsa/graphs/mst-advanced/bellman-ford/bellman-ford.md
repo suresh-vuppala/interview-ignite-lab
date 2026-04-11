@@ -1,28 +1,32 @@
-Find shortest paths from source to all vertices, handling negative edge weights. Detect negative weight cycles.
+Find shortest paths handling negative weights. Detect negative cycles.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Bellman-Ford Algorithm
 
-- `1 ≤ V ≤ 10⁵`
-- `0 ≤ E ≤ V×(V-1)` (directed graph)
-- `Weights can be negative`
-- `Detects negative weight cycles`
+**Algorithm:**
+1. dist[src] = 0, all others = ∞
+2. Repeat V-1 times: for each edge (u,v,w): if dist[u] + w < dist[v] → relax
+3. One more pass: if any edge still relaxes → negative cycle
+
+**Why V-1 iterations?** Shortest path has at most V-1 edges. Each iteration propagates one more edge.
+
+### Time: O(V × E)
+### Space: O(V)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **No negative edges:** Same result as Dijkstra but slower
-2. **Negative cycle:** Report negative cycle detected
-3. **Disconnected graph:** Unreachable nodes have distance = infinity
-4. **Single node:** Distance = 0
-5. **All positive weights:** Works correctly but Dijkstra is faster
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Bellman-Ford | O(V×E) | O(V) | V-1 relaxation passes, detects neg cycles |
 
+<br>
 <br>
 
 ---

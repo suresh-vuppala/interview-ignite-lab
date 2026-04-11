@@ -1,46 +1,26 @@
-## Overview
-Find primes in large range [L, R] where R can be up to 10^9 using segmented sieve technique.
-
-## Topics Covered
-1. **Segmented Sieve Algorithm**: Handle large ranges
-2. **Primes in Range [L, R]**: Find all primes in given range
-3. **Memory Optimization**: Use only O(√R) space
-
-## Approach
-
-### Segmented Sieve
-- First find all primes up to √R using standard sieve
-- Use these primes to mark composites in [L, R]
-- Process in segments to save memory
-- Time: O((R-L+1)log log R + √R log log √R)
-- Space: O(√R + (R-L+1))
-
-## Complexity Analysis
-### Time: O((R-L)log log R), Space: O(√R)
-
-## Code
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁹ (for number theory problems)`
-- `Results may need modular arithmetic`
+Find primes in range [L, R] using segmented sieve.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Simple Sieve up to R — O(R) space, infeasible for large R
+## Solution 2: Segmented Sieve — Sieve primes up to √R, then mark composites in [L,R]
 
-1. **n = 0:** Check base case definition
-2. **n = 1:** Smallest valid input
-3. **Prime number input:** Special behavior in factorization/sieve
-4. **Power of 2:** Special case in many algorithms
-5. **Very large n:** Needs O(√n) or O(log n) algorithm
-6. **n = 0 or 1 in GCD:** GCD(a,0) = a, GCD(1,b) = 1
+### Time: O((R-L+1) log log R + √R) | Space: O(√R + R-L)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Simple Sieve | O(R log log R) | O(R) | Too much memory for large R |
+| Segmented | O((R-L) log log R) | O(√R + R-L) | Only sieve the range |
+
+<br>
 <br>
 
 ---

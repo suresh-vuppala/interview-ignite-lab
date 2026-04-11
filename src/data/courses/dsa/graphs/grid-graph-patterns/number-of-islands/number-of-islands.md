@@ -1,42 +1,61 @@
-## Problem Statement
+Count islands in a grid (connected groups of '1's).
 
-Solve Number of Islands problem using graph algorithms.
+<br>
 
-## Approach
+> Input: [["1","1","0"],["1","1","0"],["0","0","1"]]
+> Output: 2
 
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
+<br>
 
 ---
 
 ## Constraints
 
 - `1 ≤ m, n ≤ 300`
-- `grid[i][j] is '0' or '1'`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS Flood Fill
 
-1. **All water:** 0 islands
-2. **All land:** 1 island
-3. **Single cell land:** 1 island
-4. **Diagonal land cells:** Diagonals don't connect — separate islands
-5. **Large single island:** Fills entire grid
-6. **Checkerboard pattern:** Many small islands
-7. **Island touching edge:** Still valid island
+For each unvisited '1', DFS to mark entire island. Increment count.
 
+### Time: O(m × n) | Space: O(m × n) recursion stack worst case
+
+<br>
+
+---
+
+## Solution 2: BFS Flood Fill
+
+Same but use queue for BFS instead of recursion.
+
+### Time: O(m × n) | Space: O(min(m, n)) queue size
+
+<br>
+
+---
+
+## Solution 3: Union-Find
+
+Treat each '1' cell as a node. Union adjacent '1' cells. Count distinct components.
+
+### Time: O(m × n × α(m×n)) | Space: O(m × n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS | O(m×n) | O(m×n) | Recursive flood fill |
+| BFS | O(m×n) | O(min(m,n)) | Better space for wide grids |
+| Union-Find | O(m×n) | O(m×n) | No recursion, good for streaming |
+
+<br>
 <br>
 
 ---

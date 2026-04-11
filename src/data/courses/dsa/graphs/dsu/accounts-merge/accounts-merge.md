@@ -1,29 +1,37 @@
-Given a list of accounts where each account has a name and list of emails, merge accounts belonging to the same person (connected by shared emails). Use DSU or DFS.
+Merge accounts sharing common emails using Union-Find.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: DFS/BFS on Email Graph
 
-- `1 ≤ accounts.length ≤ 1000`
-- `2 ≤ accounts[i].length ≤ 10`
-- `1 ≤ accounts[i][j].length ≤ 30`
-- `accounts[i][0] is the name`
+Build graph: emails are nodes, edges between emails in same account. DFS/BFS to find connected components.
+
+### Time: O(N × L) where N = accounts, L = avg emails | Space: O(N × L)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 2: Union-Find (Optimal)
 
-1. **No shared emails:** Each account stays separate
-2. **All same person:** All accounts merge into one
-3. **Same name different people:** Names don't determine merge — only shared emails
-4. **Single account:** Return as-is
-5. **Chain of shared emails:** A shares with B, B shares with C → all merge
-6. **Multiple names merge:** Two accounts share email but have different names — shouldn't happen per constraints
+Map each email to an account ID. For each account, union all its emails together. Group by root.
 
+### Time: O(N × L × α(N)) ≈ O(N × L) | Space: O(N × L)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Email Graph DFS | O(NL) | O(NL) | Graph of emails |
+| Union-Find | O(NL) | O(NL) | Union emails per account |
+
+<br>
 <br>
 
 ---

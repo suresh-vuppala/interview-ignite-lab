@@ -1,26 +1,37 @@
-Given a string s, rearrange the characters so that no two adjacent characters are the same. Return any valid arrangement or empty string if impossible.
+Reorganize string so no two adjacent chars are same.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Max Heap
 
-- `1 ≤ s.length ≤ 500`
-- `s consists of lowercase English letters`
+Always place most frequent char next. Use max-heap sorted by frequency.
+
+### Time: O(n log 26) = O(n) | Space: O(1)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 2: Greedy Fill Even/Odd Positions
 
-1. **Impossible case:** 'aaa' — one char freq > (n+1)/2 → return ''
-2. **Single character:** 'a' → 'a'
-3. **Two characters equal freq:** 'aabb' → 'abab'
-4. **Already valid:** 'abc' → 'abc'
-5. **All same except one:** 'aaab' → 'abaa' is invalid, return ''
+Count frequencies. Place most frequent at even indices, rest at remaining spots.
 
+### Time: O(n) | Space: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Max Heap | O(n) | O(1) | Always pick most frequent |
+| Index Fill | O(n) | O(1) | Even positions first |
+
+<br>
 <br>
 
 ---

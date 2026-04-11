@@ -1,30 +1,37 @@
-Given n nodes labeled 0 to n-1 and a list of undirected edges, determine if these edges form a valid tree. A valid tree has n-1 edges, is connected, and has no cycles.
+Check if edges form a valid tree (connected + no cycles + n-1 edges).
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: BFS/DFS — Check connected + n-1 edges
 
-- `1 ≤ n ≤ 2000`
-- `0 ≤ edges.length ≤ 5000`
-- `0 ≤ ai, bi < n`
-- `ai ≠ bi`
-- `No duplicate edges`
+If edges != n-1 → false. If BFS from 0 visits all n nodes → true.
+
+### Time: O(V + E) | Space: O(V)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 2: Union-Find
 
-1. **No edges, n=1:** Valid tree (single node)
-2. **No edges, n>1:** Not valid (disconnected)
-3. **n-1 edges, connected:** Valid tree
-4. **n-1 edges, disconnected:** Not valid (has cycle in one component)
-5. **n edges:** Has a cycle — not a tree
-6. **Extra edge creating cycle:** Exactly n edges → one cycle
+Process each edge. If union fails (already connected) → cycle. After all edges, check one component.
 
+### Time: O(V + E × α(V)) | Space: O(V)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| BFS + edge count | O(V+E) | O(V) | Connected + n-1 edges |
+| Union-Find | O(V+E) | O(V) | Cycle detection via DSU |
+
+<br>
 <br>
 
 ---

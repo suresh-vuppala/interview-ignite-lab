@@ -1,27 +1,33 @@
-Given a sorted dictionary of an alien language, derive the order of characters in that language using topological sort.
+Derive character ordering from a sorted alien dictionary using topological sort.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Build Graph + Topological Sort (BFS/DFS)
 
-- `1 ≤ words.length ≤ 100`
-- `1 ≤ words[i].length ≤ 100`
-- `words[i] consists of lowercase English letters`
+**Algorithm:**
+1. Compare adjacent words to find ordering constraints (first differing char)
+2. Build directed graph of character ordering
+3. Topological sort gives the alien alphabet order
+4. If cycle → invalid → return ""
+
+**Edge case:** If word1 is prefix of word2 but longer → invalid.
+
+### Time: O(C) where C = total characters
+### Space: O(1) — at most 26 nodes
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **Single word:** Any order of its characters
-2. **Invalid ordering:** 'abc' before 'ab' → impossible, return ''
-3. **Cycle detected:** Return '' — no valid ordering
-4. **All same first letter:** Compare second characters
-5. **Independent characters:** Multiple valid orderings
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Graph + Topo Sort | O(C) | O(1) | Extract ordering from adjacent words |
 
+<br>
 <br>
 
 ---

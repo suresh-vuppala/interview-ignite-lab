@@ -1,46 +1,26 @@
-## Problem Statement
-Solve Unique Paths using dynamic programming.
-
-## Approach
-
-### DP Formula
-```
-dp[i][j] = dp[i-1][j] + dp[i][j-1]
-```
-
-### Steps
-1. Define DP state
-2. Initialize base cases
-3. Fill DP table using recurrence
-4. Return final result
-
-## Complexity
-- Time: O(n) or O(n²)
-- Space: O(n)
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+Count unique paths in m×n grid (can only move right or down).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion — O(2^(m+n))
+## Solution 2: DP — dp[i][j] = dp[i-1][j] + dp[i][j-1]
+## Solution 3: Math — C(m+n-2, m-1) — O(min(m,n))
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+<br>
 
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursion | O(2^(m+n)) | O(m+n) | Exponential |
+| DP | O(m×n) | O(n) | Bottom-up grid |
+| Math | O(min(m,n)) | O(1) | Combinatorics formula |
+
+<br>
 <br>
 
 ---

@@ -1,43 +1,26 @@
-## Problem Statement
-Find longest word that can be built one character at a time by other words in the array.
-
-## Approach
-
-### Trie + DFS
-- Insert all words into trie
-- DFS from root:
-  - Only visit nodes that mark end of word
-  - Track longest valid word
-- Time: O(N*L)
-
-## Complexity
-- Build: O(N*L)
-- DFS: O(N*L)
-- Total: O(N*L)
-
-
-
----
-
-## Constraints
-
-- `1 ≤ number of words ≤ 3 × 10⁴`
-- `1 ≤ word length ≤ 2000`
-- `Words consist of lowercase English letters (unless stated otherwise)`
+Find longest word buildable one character at a time.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Sort + HashSet — Sort by length, check each prefix exists
+## Solution 2: Trie + DFS — Insert all words, DFS for longest path where every prefix is a word
 
-1. **Empty trie:** Search returns false, prefix returns false
-2. **Single character words:** Trie depth = 1
-3. **All same word inserted:** Count or flag must handle duplicates
-4. **Prefix is also a complete word:** isEnd flag must be separate from having children
-5. **Very long word:** Deep trie path
-6. **No matching prefix:** Return false or empty list
+### Time: O(sum of word lengths) | Space: O(same)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Sort + Set | O(n log n + total) | O(total) | Check prefixes in set |
+| Trie + DFS | O(total) | O(total) | DFS on trie structure |
+
+<br>
 <br>
 
 ---

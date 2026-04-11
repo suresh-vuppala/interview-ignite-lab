@@ -1,37 +1,24 @@
-## Overview
-Comprehensive solution for Boundary View
-
-## Problem Statement
-Implement Boundary View
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
+Boundary view — left boundary + leaves + right boundary.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Three Passes — Same as boundary traversal in Trees module
 
-1. **Single node:** Just that node
-2. **Left-skewed:** All are boundary
-3. **Right-skewed:** All are boundary
-4. **Complete tree:** Outer ring
+### Time: O(n) | Space: O(h)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Three Passes | O(n) | O(h) | Left boundary + leaves + right boundary |
+
+<br>
 <br>
 
 ---

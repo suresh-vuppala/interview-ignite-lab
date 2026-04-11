@@ -1,38 +1,37 @@
-## Overview
-Comprehensive solution for Serialize Tree
-
-## Problem Statement
-Implement Serialize Tree
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `-1000 ≤ Node.val ≤ 1000`
+Serialize and deserialize a binary tree.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Preorder with Nulls
 
-1. **Empty tree:** Serialize as 'null' or ''
-2. **Single node:** '1'
-3. **Complete tree:** No null markers except at leaves
-4. **Skewed tree:** Many null markers
+Serialize: preorder traversal, mark nulls as "#". Deserialize: parse tokens, reconstruct preorder.
 
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Solution 2: Level-Order (BFS)
+
+Serialize: BFS, include null markers. Deserialize: BFS reconstruction.
+
+### Time: O(n) | Space: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Preorder | O(n) | O(n) | DFS with null markers |
+| Level-Order | O(n) | O(n) | BFS with null markers |
+
+<br>
 <br>
 
 ---

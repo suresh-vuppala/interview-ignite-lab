@@ -1,44 +1,35 @@
-## Problem Statement
-Determine if string can be segmented into words from dictionary.
-
-## Approach
-
-### Trie + DP
-- Build trie from dictionary
-- DP[i] = can segment s[0...i]
-- For each position:
-  - Traverse trie from current position
-  - Mark reachable positions
-- Time: O(N^2), Space: O(N)
-
-## Complexity
-- Build Trie: O(W*L)
-- DP: O(N^2)
-- Total: O(W*L + N^2)
-
-
-
----
-
-## Constraints
-
-- `1 ≤ number of words ≤ 3 × 10⁴`
-- `1 ≤ word length ≤ 2000`
-- `Words consist of lowercase English letters (unless stated otherwise)`
+Check if string can be segmented into dictionary words (Trie-assisted).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DP — dp[i] = can s[0..i-1] be segmented. Check all j < i.
 
-1. **Empty trie:** Search returns false, prefix returns false
-2. **Single character words:** Trie depth = 1
-3. **All same word inserted:** Count or flag must handle duplicates
-4. **Prefix is also a complete word:** isEnd flag must be separate from having children
-5. **Very long word:** Deep trie path
-6. **No matching prefix:** Return false or empty list
+### Time: O(n² × L) | Space: O(n)
 
+<br>
+
+---
+
+## Solution 2: DP + Trie (Optimized)
+
+Build trie from dictionary. For each position, traverse trie to find all matching words → faster than checking all substrings.
+
+### Time: O(n × L) | Space: O(dictionary size)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DP | O(n²L) | O(n) | Check all splits |
+| DP + Trie | O(nL) | O(dict) | Trie eliminates invalid prefix checks |
+
+<br>
 <br>
 
 ---

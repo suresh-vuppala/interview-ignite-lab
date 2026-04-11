@@ -1,27 +1,24 @@
-Given weights and values of n items, put items in a knapsack of capacity W to get maximum total value. You can break items (take fractions).
+Fractional knapsack — take fractions of items to maximize value.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Sort by Value/Weight Ratio — Take greedily from highest ratio
 
-- `1 ≤ n ≤ 10⁵`
-- `1 ≤ W ≤ 10⁹`
-- `1 ≤ value[i], weight[i] ≤ 10⁴`
+### Time: O(n log n) | Space: O(1)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **All items fit:** Total weight ≤ W → take everything
-2. **Single item:** Take min(weight, W) fraction
-3. **All same value/weight ratio:** Take in any order until full
-4. **W = 0:** Can't take anything → return 0
-5. **Item weight > W:** Take fraction of it
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Sort + Greedy | O(n log n) | O(1) | Value density sorting |
 
+<br>
 <br>
 
 ---

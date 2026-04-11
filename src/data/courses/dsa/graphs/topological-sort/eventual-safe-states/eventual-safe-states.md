@@ -1,40 +1,37 @@
-## Problem Statement
-
-Solve Eventual Safe States problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁴`
-- `0 ≤ graph[i].length ≤ n`
+Find all nodes that eventually reach a terminal node (no outgoing edges).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS 3-Color
 
-1. **All terminal nodes:** All nodes are safe
-2. **All in cycle:** No safe nodes
-3. **Mix of safe and cyclic:** Only non-cyclic paths lead to safe
-4. **Single node, no edges:** Safe (terminal)
-5. **Self-loop:** Not safe
+Nodes in cycles are unsafe. Terminal nodes and nodes leading only to safe nodes are safe. Use 3-color DFS to detect cycle membership.
 
+### Time: O(V + E) | Space: O(V)
+
+<br>
+
+---
+
+## Solution 2: Reverse Graph + Kahn's
+
+Reverse edges. Terminal nodes have in-degree 0 in reverse. Kahn's from terminals marks all safe nodes.
+
+### Time: O(V + E) | Space: O(V)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS 3-Color | O(V+E) | O(V) | Cycle = unsafe |
+| Reverse Kahn's | O(V+E) | O(V) | BFS from terminals |
+
+<br>
 <br>
 
 ---

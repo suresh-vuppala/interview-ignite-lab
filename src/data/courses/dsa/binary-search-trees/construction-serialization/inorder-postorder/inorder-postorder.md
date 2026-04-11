@@ -1,37 +1,24 @@
-## Overview
-Comprehensive solution for Inorder + Postorder
-
-## Problem Statement
-Implement Inorder + Postorder
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 3000`
-- `All values unique`
+Construct binary tree from inorder + postorder.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursive — Postorder last element = root. Find in inorder. Process right then left (reverse postorder).
 
-1. **Single node:** Same as above
-2. **Skewed tree:** Special ordering
-3. **Root identification:** Last element of postorder is root
+### Time: O(n) | Space: O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursive + Map | O(n) | O(n) | Process postorder from right |
+
+<br>
 <br>
 
 ---

@@ -1,35 +1,26 @@
-## Overview
-Reverse a doubly linked list by swapping next and prev pointers.
-
-## Topics Covered
-1. **Swap Pointers**: Exchange next and prev
-2. **Iterative Approach**: Traverse and swap
-3. **Update Head**: Set new head
-4. **Bidirectional Links**: Maintain both directions
-
-## Complexity Analysis
-### Time: O(n), Space: O(1)
-
-## Code
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁴`
+Reverse a doubly linked list.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Swap prev/next for each node
 
-1. **Empty list:** Return null
-2. **Single node:** Return as-is
-3. **Two nodes:** Swap them, update all prev/next
-4. **Large list:** Swap prev and next for every node
+Traverse, swap prev and next pointers. Update head to last node.
 
+### Time: O(n) | Space: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Swap Pointers | O(n) | O(1) | Swap prev/next at each node |
+
+<br>
 <br>
 
 ---

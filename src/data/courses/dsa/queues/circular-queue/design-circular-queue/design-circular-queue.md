@@ -1,30 +1,26 @@
-## Problem Statement
-Design Circular Queue implementation.
-
-## Approach
-Stack/Queue based solution.
-
-## Code Implementation
-
----
-
-## Constraints
-
-- `At most 10⁴ operations`
-- `-10⁹ ≤ val ≤ 10⁹`
+Design a circular queue with fixed capacity.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Array with Front/Rear Pointers
 
-1. **Dequeue from empty queue:** Handle gracefully — return -1 or error
-2. **Peek on empty queue:** Handle gracefully
-3. **Single enqueue then dequeue:** Returns the enqueued value
-4. **Queue full (if bounded):** Handle overflow
-5. **Multiple enqueues then size check:** Size equals enqueue count minus dequeue count
+Use array of fixed size. front and rear indices wrap around using modulo. Track count or use front == rear with size.
 
+### Time: O(1) all operations | Space: O(k)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Circular Array | O(1) all ops | O(k) | Modulo-based wrap-around |
+
+<br>
 <br>
 
 ---

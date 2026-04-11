@@ -1,39 +1,26 @@
-## Problem Statement
-
-Solve Provinces DSU problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 200`
-- `isConnected[i][j] is 0 or 1`
+Count provinces using DSU — same as count connected components with adjacency matrix.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS — O(n²) time
+## Solution 2: DSU — Union connected cities, count distinct roots
 
-1. **All connected:** 1 province
-2. **All disconnected:** n provinces
-3. **Single node:** 1 province
-4. **Pairs only:** n/2 provinces
+### Time: O(n²) | Space: O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS | O(n²) | O(n) | Traverse matrix |
+| DSU | O(n²) | O(n) | Union-find |
+
+<br>
 <br>
 
 ---

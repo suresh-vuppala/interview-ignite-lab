@@ -1,29 +1,27 @@
-There are n children standing in a line with ratings. Give candies such that: each child gets ≥ 1 candy, and children with higher rating than neighbors get more. Find minimum total candies.
+Distribute candies: each child gets ≥ 1, higher-rated gets more than neighbors.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Two-Pass (Left + Right)
 
-- `1 ≤ n ≤ 2 × 10⁴`
-- `0 ≤ ratings[i] ≤ 2 × 10⁴`
+Pass 1 (left→right): if rating[i] > rating[i-1], candy[i] = candy[i-1]+1.
+Pass 2 (right→left): if rating[i] > rating[i+1], candy[i] = max(candy[i], candy[i+1]+1).
+
+### Time: O(n) | Space: O(n)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **All same ratings:** Everyone gets 1 candy → answer = n
-2. **Strictly increasing:** 1,2,3,...,n → answer = n(n+1)/2
-3. **Strictly decreasing:** n,n-1,...,1 → answer = n(n+1)/2
-4. **V-shape:** Valley gets 1, both sides increase
-5. **Peak:** Higher of left and right requirement
-6. **Single child:** Gets 1 candy
-7. **Two children:** Compare and assign 1 and 2
-8. **Zigzag ratings:** Alternating high-low
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Two-Pass | O(n) | O(n) | Left constraint then right constraint |
 
+<br>
 <br>
 
 ---

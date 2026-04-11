@@ -1,41 +1,30 @@
-## Problem Statement
-
-Solve Surrounded Regions problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ m, n ≤ 200`
-- `board[i][j] is 'X' or 'O'`
+Capture 'O' regions that are completely surrounded by 'X'. Border-connected 'O's survive.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS/BFS from Borders (Optimal)
 
-1. **No O cells:** Nothing to flip
-2. **All O cells:** Border-connected O's survive
-3. **O only on border:** None get flipped
-4. **O not connected to border:** All get flipped
-5. **Single cell board:** Never surrounded
-6. **O in corner:** Connected to border — survives
+**Intuition:** Mark all 'O's connected to borders as safe. Everything else gets captured.
 
+**Algorithm:**
+1. DFS/BFS from all border 'O' cells → mark as 'S' (safe)
+2. Scan grid: remaining 'O' → 'X' (captured), 'S' → 'O' (restore)
+
+### Time: O(m × n) | Space: O(m × n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Border DFS/BFS | O(m×n) | O(m×n) | Mark safe from borders, flip rest |
+
+<br>
 <br>
 
 ---

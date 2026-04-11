@@ -1,39 +1,44 @@
-## Overview
-Merge K sorted linked lists into one sorted list.
-
-## Topics Covered
-1. **Min Heap Approach**: Use priority queue
-2. **Divide and Conquer**: Merge pairs recursively
-3. **Sequential Merging**: Merge one by one
-4. **Optimization**: Choose best approach
-
-## Complexity Analysis
-### Time: O(N log k), Space: O(k) where N=total nodes
-
-## Code
-
-
----
-
-## Constraints
-
-- `0 ≤ k ≤ 10⁴`
-- `0 ≤ total nodes ≤ 10⁴`
-- `Lists are sorted in ascending order`
+Merge k sorted linked lists.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Merge One by One — Merge lists[0] with lists[1], result with lists[2], etc.
 
-1. **k = 0:** Return null
-2. **k = 1:** Return that single list
-3. **All empty lists:** Return null
-4. **One non-empty, rest empty:** Return the non-empty one
-5. **All lists single node:** Merge into one sorted list
-6. **Large k, small lists:** Min-heap approach efficient
+### Time: O(k × N) where N = total nodes | Space: O(1)
 
+<br>
+
+---
+
+## Solution 2: Divide and Conquer — Pair up lists, merge pairs, repeat
+
+### Time: O(N log k) | Space: O(log k) recursion
+
+<br>
+
+---
+
+## Solution 3: Min-Heap (Optimal)
+
+**Intuition:** Put heads of all k lists in min-heap. Pop smallest, append to result, push its next.
+
+### Time: O(N log k) | Space: O(k) for heap
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Sequential | O(kN) | O(1) | Merge one at a time |
+| Divide & Conquer | O(N log k) | O(log k) | Merge pairs in tree fashion |
+| Min-Heap | O(N log k) | O(k) | Always pick global minimum |
+
+<br>
 <br>
 
 ---

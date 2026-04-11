@@ -1,39 +1,28 @@
-## Overview
-Comprehensive solution for BST from Preorder
-
-## Problem Statement
-Implement BST from Preorder
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 100`
-- `1 ≤ preorder[i] ≤ 10⁸`
-- `All values unique`
+Construct BST from preorder traversal.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Sort → Inorder, use Preorder+Inorder — O(n log n)
+## Solution 2: Recursive with Bounds (Optimal)
 
-1. **Single element:** Single node tree
-2. **Sorted input:** Right-skewed BST
-3. **Reverse sorted:** Left-skewed BST
-4. **Root is median:** Balanced BST
+Use upper bound to determine when to stop. First element is root, recurse with bounds.
 
+### Time: O(n) | Space: O(h)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Sort + Build | O(n log n) | O(n) | Get inorder by sorting |
+| Bounds Recursion | O(n) | O(h) | Upper bound guides construction |
+
+<br>
 <br>
 
 ---

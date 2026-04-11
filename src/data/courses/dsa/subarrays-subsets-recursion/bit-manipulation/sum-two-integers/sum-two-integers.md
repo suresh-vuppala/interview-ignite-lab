@@ -1,28 +1,31 @@
-Calculate the sum of two integers without using the + or - operators. Use bitwise XOR for addition without carry, AND + left shift for carry, and repeat until carry is zero.
+Add two integers without + or - operators.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Bit Manipulation — XOR for sum without carry, AND + shift for carry
 
-- `-1000 ≤ a, b ≤ 1000`
-- `Cannot use + or - operators`
+```
+while b != 0:
+    carry = a & b
+    a = a ^ b
+    b = carry << 1
+```
+
+### Time: O(32) = O(1) | Space: O(1)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **Both positive:** Standard case
-2. **Both negative:** Two's complement addition
-3. **One zero:** a + 0 = a
-4. **Both zero:** 0 + 0 = 0
-5. **Opposite signs:** 5 + (-3) = 2
-6. **Carry propagation:** 7 + 1 = 8 (carry ripples through bits)
-7. **Negative result:** 1 + (-3) = -2
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| XOR + AND | O(1) | O(1) | Simulate binary addition |
 
+<br>
 <br>
 
 ---

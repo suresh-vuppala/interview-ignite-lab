@@ -1,37 +1,24 @@
-## Overview
-Comprehensive solution for Vertical Order
-
-## Problem Statement
-Implement Vertical Order
-
-## Approach
-Use appropriate tree algorithms and data structures
-
-## Complexity Analysis
-- **Time**: O(n) or O(n log n)
-- **Space**: O(h) or O(n)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁵`
+Vertical order traversal — group by horizontal distance, ordered by level.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: BFS + TreeMap — Track (HD, level) → values. Use TreeMap for sorted HD.
 
-1. **Empty tree:** Return []
-2. **Single node:** One column
-3. **Skewed tree:** Each node in different column
-4. **Overlapping nodes:** Group by column, sort by row
+### Time: O(n log n) | Space: O(n)
 
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| BFS + TreeMap | O(n log n) | O(n) | Sorted by HD then level |
+
+<br>
 <br>
 
 ---

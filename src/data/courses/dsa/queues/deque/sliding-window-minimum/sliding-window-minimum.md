@@ -1,30 +1,28 @@
-## Problem Statement
-Sliding Window Minimum implementation.
-
-## Approach
-Stack/Queue based solution.
-
-## Code Implementation
-
----
-
-## Constraints
-
-- `At most 10⁴ operations`
-- `-10⁹ ≤ val ≤ 10⁹`
+Find minimum in each sliding window of size k (complement of sliding window maximum).
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force — Scan k elements per window O(nk)
+## Solution 2: Monotonic Deque (Optimal)
 
-1. **Dequeue from empty queue:** Handle gracefully — return -1 or error
-2. **Peek on empty queue:** Handle gracefully
-3. **Single enqueue then dequeue:** Returns the enqueued value
-4. **Queue full (if bounded):** Handle overflow
-5. **Multiple enqueues then size check:** Size equals enqueue count minus dequeue count
+Maintain increasing deque. Front = minimum. Remove from front if expired, back if larger than incoming.
 
+### Time: O(n) | Space: O(k)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute Force | O(nk) | O(1) | Scan each window |
+| Monotonic Deque | O(n) | O(k) | Increasing deque tracks minimums |
+
+<br>
 <br>
 
 ---

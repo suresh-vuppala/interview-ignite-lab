@@ -1,31 +1,28 @@
-Given a rotated sorted array with unique elements and a target value, return the index of target or -1. Must solve in O(log n) time.
+Search for target in rotated sorted array.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Find Pivot + Binary Search — O(2 log n) = O(log n)
+## Solution 2: Modified Binary Search (Optimal)
 
-- `1 ≤ nums.length ≤ 5000`
-- `-10⁴ ≤ nums[i] ≤ 10⁴`
-- `All values are unique`
-- `nums was sorted then rotated 1 to n times`
-- `Must solve in O(log n)`
+Identify which half is sorted. Check if target is in sorted half → narrow search.
+
+### Time: O(log n) | Space: O(1)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **Not rotated:** Standard binary search
-2. **Target at pivot:** Found at the rotation point
-3. **Target not in array:** Return -1
-4. **Single element:** Check if it's the target
-5. **Two elements:** Check both
-6. **Target in left sorted half:** Standard BS on left
-7. **Target in right sorted half:** Standard BS on right
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Pivot + BS | O(log n) | O(1) | Two binary searches |
+| Single Modified BS | O(log n) | O(1) | One-pass identification |
 
+<br>
 <br>
 
 ---

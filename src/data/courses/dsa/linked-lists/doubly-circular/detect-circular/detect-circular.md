@@ -1,36 +1,37 @@
-## Overview
-Detect if a linked list is circular using Floyd's algorithm.
-
-## Topics Covered
-1. **Floyd's Algorithm**: Slow-fast pointer technique
-2. **Circular vs Cycle**: Distinguish between types
-3. **Check Last Node**: Verify if points to head
-4. **Handle Edge Cases**: Empty and single node
-
-## Complexity Analysis
-### Time: O(n), Space: O(1)
-
-## Code
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁵`
+Detect if a linked list has a cycle.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Hash Set — Store visited nodes, check for revisit
 
-1. **Not circular:** Traversal hits null
-2. **Circular list:** Traversal revisits head
-3. **Empty list:** Not circular
-4. **Single node pointing to itself:** Circular
-5. **Single node pointing to null:** Not circular
+### Time: O(n) | Space: O(n)
 
+<br>
+
+---
+
+## Solution 2: Floyd's Cycle Detection (Optimal)
+
+**Intuition:** Slow moves 1, fast moves 2. If cycle exists, they'll meet. If no cycle, fast reaches null.
+
+### Time: O(n) | Space: O(1)
+
+**Finding cycle start:** After detection, reset one pointer to head. Move both at speed 1. They meet at cycle start.
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Hash Set | O(n) | O(n) | Track visited |
+| Floyd's | O(n) | O(1) | Two-pointer cycle detection |
+
+<br>
 <br>
 
 ---

@@ -1,25 +1,33 @@
-Find the Minimum Spanning Tree using Prim's algorithm. Grow MST by always adding the cheapest edge from MST to non-MST vertex.
+Find MST using Prim's algorithm (grow from a single vertex).
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Prim's with Min-Heap
 
-- `1 ≤ V ≤ 10⁵`
-- `Connected undirected weighted graph`
+**Intuition:** Start from any vertex. Always add the cheapest edge connecting MST to non-MST vertex.
+
+**Algorithm:**
+1. Min-heap: (weight, vertex). Start with (0, source)
+2. While heap not empty:
+   - Pop (w, u). Skip if already in MST
+   - Add to MST, total += w
+   - Push all edges from u to non-MST neighbors
+
+### Time: O(E log V) | Space: O(V)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **Dense graph:** Adjacency matrix + O(V²) Prim's may be better
-2. **Sparse graph:** Adjacency list + min-heap O(E log V)
-3. **All same weights:** Any spanning tree works
-4. **Negative weights:** Works correctly unlike Dijkstra for shortest paths
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Prim's + Heap | O(E log V) | O(V) | Greedy edge selection |
 
+<br>
 <br>
 
 ---

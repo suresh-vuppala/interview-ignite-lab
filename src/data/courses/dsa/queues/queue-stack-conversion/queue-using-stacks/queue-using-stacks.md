@@ -1,30 +1,28 @@
-## Problem Statement
-Queue using Stacks implementation.
-
-## Approach
-Stack/Queue based solution.
-
-## Code Implementation
-
----
-
-## Constraints
-
-- `At most 10⁴ operations`
-- `-10⁹ ≤ val ≤ 10⁹`
+Implement queue using two stacks.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Push-Heavy — Push O(1), Pop O(n)
+## Solution 2: Pop-Heavy (Amortized O(1))
 
-1. **Dequeue from empty queue:** Handle gracefully — return -1 or error
-2. **Peek on empty queue:** Handle gracefully
-3. **Single enqueue then dequeue:** Returns the enqueued value
-4. **Queue full (if bounded):** Handle overflow
-5. **Multiple enqueues then size check:** Size equals enqueue count minus dequeue count
+Two stacks: input and output. Push to input. Pop from output; if empty, transfer all from input (reverse order gives FIFO).
 
+### Time: O(1) amortized | Space: O(n)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Push-Heavy | Push O(1), Pop O(n) | O(n) | Transfer on every pop |
+| Amortized | O(1) amortized | O(n) | Lazy transfer — only when output empty |
+
+<br>
 <br>
 
 ---

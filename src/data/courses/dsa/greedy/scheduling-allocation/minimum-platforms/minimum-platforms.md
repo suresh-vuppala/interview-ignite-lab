@@ -1,26 +1,26 @@
-Given arrival and departure times of all trains at a railway station, find the minimum number of platforms required.
+Minimum platforms needed at a railway station.
 
 <br>
 
 ---
 
-## Constraints
+## Solution 1: Sort + Sweep Line
 
-- `1 ≤ n ≤ 10⁵`
-- `0 ≤ arrival[i] < departure[i] ≤ 2359`
+Sort arrivals and departures separately. Two-pointer sweep counting overlapping intervals.
+
+### Time: O(n log n) | Space: O(1)
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Complexity Progression Summary
 
-1. **No overlaps:** 1 platform needed
-2. **All overlap:** n platforms needed
-3. **Single train:** 1 platform
-4. **Back-to-back arrivals:** Departure before next arrival → reuse platform
-5. **All arrive same time:** n platforms
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Sort + Sweep | O(n log n) | O(1) | Event-based counting |
 
+<br>
 <br>
 
 ---

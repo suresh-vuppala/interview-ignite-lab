@@ -1,46 +1,28 @@
-## Problem Statement
-Solve Subset Sum using dynamic programming.
-
-## Approach
-
-### DP Formula
-```
-dp[i][j] = dp[i-1][j] || dp[i-1][j-nums[i]]
-```
-
-### Steps
-1. Define DP state
-2. Initialize base cases
-3. Fill DP table using recurrence
-4. Return final result
-
-## Complexity
-- Time: O(n) or O(n²)
-- Space: O(n)
-
-
-
----
-
-## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+Check if a subset with given sum exists.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion — Try include/exclude each element O(2^n)
+## Solution 2: DP Table (Optimal)
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+dp[i][s] = can we make sum s using first i elements. dp[i][s] = dp[i-1][s] || dp[i-1][s-nums[i]].
 
+### Time: O(n × sum) | Space: O(n × sum) → O(sum) with space optimization
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursion | O(2^n) | O(n) | Exponential |
+| DP | O(n × sum) | O(sum) | Pseudo-polynomial |
+
+<br>
 <br>
 
 ---

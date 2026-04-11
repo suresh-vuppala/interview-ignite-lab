@@ -1,41 +1,40 @@
-## Problem Statement
-
-Solve Topological Sort DFS problem using graph algorithms.
-
-## Approach
-
-- Apply appropriate graph traversal or algorithm
-- Handle edge cases
-
-## Complexity Analysis
-
-### Time Complexity: O(V + E)
-### Space Complexity: O(V)
-
-## Code
-
-
-
----
-
-## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `0 ≤ edges.length ≤ 2 × 10⁵`
-- `Graph is a DAG`
+Topological ordering of DAG using DFS.
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: DFS + Stack
 
-1. **Single node:** Order is [0]
-2. **Linear chain:** Only one valid ordering
-3. **Diamond DAG:** Multiple valid orderings
-4. **Disconnected DAG:** Include all components
-5. **No edges:** Any permutation is valid
+**Intuition:** DFS postorder gives reverse topological order. Push to stack after all descendants processed.
 
+**Algorithm:**
+1. For each unvisited node: DFS
+2. After processing all neighbors → push to stack
+3. Pop stack → topological order
+
+### Time: O(V + E) | Space: O(V)
+
+<br>
+
+---
+
+## Solution 2: Kahn's BFS (Alternative)
+
+See topological-sort-kahns.
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS + Stack | O(V+E) | O(V) | Postorder gives reverse topo |
+| Kahn's BFS | O(V+E) | O(V) | In-degree based |
+
+<br>
 <br>
 
 ---
