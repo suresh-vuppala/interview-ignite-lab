@@ -6,19 +6,19 @@
   "mdFile": "longest-repeating-character-replacement.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Longest Repeating Character Replacement",
       "languages": [
         {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-repeating-character-replacement/code/python/longest_repeating_character_replacement.py"
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-repeating-character-replacement/code/cpp/longest_repeating_character_replacement.cpp"
         },
         {
           "language": "java",
           "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-repeating-character-replacement/code/java/LongestRepeatingCharacterReplacement.java"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-repeating-character-replacement/code/cpp/longest_repeating_character_replacement.cpp"
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-repeating-character-replacement/code/python/longest_repeating_character_replacement.py"
         }
       ]
     }

@@ -6,36 +6,19 @@
   "mdFile": "longest-subarray-sum-k.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Brute Force",
+      "title": "Longest Subarray with Sum \u2264 K",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-subarray-sum-k/code/cpp/longest_subarray_sum_k_sol1.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-subarray-sum-k/code/cpp/longest_subarray_sum_k.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-subarray-sum-k/code/java/LongestSubarraySumKSol1.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-subarray-sum-k/code/java/LongestSubarraySumK.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-subarray-sum-k/code/python/longest_subarray_sum_k_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Sliding Window (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-subarray-sum-k/code/cpp/longest_subarray_sum_k_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-subarray-sum-k/code/java/LongestSubarraySumKSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-subarray-sum-k/code/python/longest_subarray_sum_k_sol2.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-subarray-sum-k/code/python/longest_subarray_sum_k.py"
         }
       ]
     }

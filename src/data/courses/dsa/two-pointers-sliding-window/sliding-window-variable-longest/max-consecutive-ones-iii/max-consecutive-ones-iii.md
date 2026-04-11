@@ -1,4 +1,4 @@
-Given a binary array and an integer k, find the maximum number of consecutive 1's if you can flip at most k 0's to 1's.
+Given a binary array nums and integer k, return the maximum number of consecutive 1's if you can flip at most k 0's.
 
 <br>
 
@@ -9,10 +9,9 @@ Given a binary array and an integer k, find the maximum number of consecutive 1'
 > 6
 
 > Explanation:
-> Flip the two 0's at indices 9 and 10 to get [1,1,1,0,0,0,1,1,1,1,1,1]
-> The longest sequence of 1's is from index 6 to 11 (length 6)
+> Flip zeros at positions 5 and 10 → [1,1,1,0,0,1,1,1,1,1,1]. Longest consecutive 1's = 6 (indices 5-10).
 > 
-> **Key insight:** This is equivalent to finding longest subarray with at most k zeros.
+> **Key insight:** This is "Longest Repeating Character Replacement" with only '1' as the target. Window is valid when number of 0's in window ≤ k. Sliding window: expand right, shrink left when zeros > k.
 
 <br>
 
@@ -23,7 +22,6 @@ Given a binary array and an integer k, find the maximum number of consecutive 1'
 ## Constraints
 
 - `1 ≤ nums.length ≤ 10⁵`
-- `nums[i] is either 0 or 1`
 - `0 ≤ k ≤ nums.length`
 
 <br>
@@ -32,125 +30,95 @@ Given a binary array and an integer k, find the maximum number of consecutive 1'
 
 ## All Possible Edge Cases
 
-1. **k = 0:** Find longest run of 1s without any flips
-2. **k >= number of zeros:** Return entire array length
-3. **All ones:** Return array length
-4. **All zeros:** Return min(k, n)
-5. **Single element:** Return 1 if element is 1 or k >= 1
-6. **k = n:** Can flip all — return n
-7. **Zeros at extremes:** [0,0,1,1,1,0,0] k=2
-8. **Alternating 0s and 1s:** [0,1,0,1,0] k=2
+1. **k = 0:** Longest run of 1's (no flips)
+2. **k ≥ count of 0's:** Entire array
+3. **All 1's:** Return n regardless of k
+4. **All 0's:** Return min(n, k)
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Brute Force — All Subarrays
 
-**Intuition:**
-Check all possible subarrays. Count zeros in each. If zeros ≤ k, it's valid.
+### Time Complexity: O(N²)
 
-**Algorithm:**
-1. For each starting position i
-2. For each ending position j ≥ i
-3. Count zeros in subarray [i, j]
-4. If zeros ≤ k, update max length
-
-### Time Complexity: O(n²)
-**Why?**
-- Two nested loops: O(n²) subarrays
-- Counting zeros: O(1) per iteration (incremental)
-- Total: O(n²)
-
-### Space Complexity: O(1)
-**Why?**
-- Only tracking zero count and max length
-- No additional structures
-
-**Problem:** Checking all subarrays is inefficient.
+> **Drawback:**
+> Checking each subarray from scratch. Same as character replacement — we should use a sliding window.
 
 > **Key Insight for Improvement:**
-> Use sliding window. Maintain a window with at most k zeros. Expand right, shrink left when zeros > k.
+> Track zero count in the window. When zeros > k, shrink from left. Window is valid when zeroCount ≤ k.
 
 <br>
 
 ---
 
-## Solution 2: Sliding Window
+## Solution 2: Sliding Window — Count Zeros (Optimal)
 
 **Intuition:**
-Maintain a window with at most k zeros. When zeros exceed k, shrink from left until valid again.
+Window is valid when it contains ≤ k zeros. Expand right. If zeros > k, shrink left until zeros ≤ k. Track max window length.
 
 **Algorithm:**
-1. Use two pointers: left and right
-2. Expand right, count zeros
-3. While zeros > k:
-   - If nums[left] == 0, decrement zero count
-   - Move left forward
-4. Update max length
+1. left = 0, zeros = 0, maxLen = 0
+2. For right = 0 to n-1:
+   - If nums[right] == 0 → zeros++
+   - While zeros > k: if nums[left] == 0 → zeros--; left++
+   - maxLen = max(maxLen, right - left + 1)
 
-### Time Complexity: O(n)
+### Time Complexity: O(N)
 **Why?**
-- Right pointer moves n times: O(n)
-- Left pointer moves at most n times total: O(n)
-- Each element processed at most twice
-- Total: O(n)
+- Right pointer: N iterations
+- Left pointer: moves at most N times total
+- Total: 2N = O(N)
 
-**Improvement:**
-- Before: O(n²)
-- After: O(n)
-- Example: n=10000
-  - Brute: 100,000,000 operations
-  - Sliding: 10,000 operations (10,000× faster!)
+**Detailed breakdown:**
+- N = 100,000 → at most 200,000 operations
+
+**Example walkthrough:**
+```
+nums = [1,1,1,0,0,0,1,1,1,1,0], k = 2
+
+right=0,1,2: all 1's → zeros=0, window grows → len=3
+right=3: 0 → zeros=1 ≤ 2 ✓ → len=4
+right=4: 0 → zeros=2 ≤ 2 ✓ → len=5
+right=5: 0 → zeros=3 > 2 → shrink until zeros ≤ 2
+  left=0(1): skip, left=1(1): skip, left=2(1): skip, left=3(0): zeros=2 ✓
+  left=4, window=[0,0,1,1,1,1,0] wait... let me redo
+  
+Actually: shrink removes nums[0]=1→left=1, nums[1]=1→left=2, nums[2]=1→left=3, nums[3]=0→zeros=2→left=4
+right=5: window = [0,0,1,1,1,1] wait that has 2 zeros... left=4, window size=2
+
+Let me be precise:
+right=5: nums[5]=0, zeros=3. While zeros>2: nums[3]=0→zeros=2, left=4. len=5-4+1=2
+right=6: 1, zeros=2, len=3
+right=7: 1, len=4
+right=8: 1, len=5
+right=9: 1, len=6 ★
+right=10: 0, zeros=3>2 → shrink: nums[4]=0→zeros=2, left=5. len=10-5+1=6
+
+maxLen = 6 ✓
+```
 
 ### Space Complexity: O(1)
-**Why?**
-- Only tracking zero count and pointers
-- Constant space
-
-> **Key Insight for Improvement:**
-> Instead of shrinking when invalid, we can maintain window size and only expand when valid. This avoids unnecessary shrinking.
 
 <br>
 
 ---
 
-## Solution 3: Optimized Sliding Window (Fixed Window Growth)
+## Complexity Progression Summary
 
-**Intuition:**
-Once we find a valid window of size x, we only care about windows ≥ x. Keep window size and slide it, only expanding when valid.
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute Force | O(N²) | O(1) | Check all windows |
+| Sliding Window | O(N) | O(1) | Track zero count, shrink when > k |
 
-**Algorithm:**
-1. Track zeros in current window
-2. Expand right always
-3. If zeros > k, move left (maintain window size)
-4. If zeros ≤ k, window grows (don't move left)
-5. Final window size is the answer
+**Recommended Solution:** Sliding Window (Solution 2) — O(N) time, O(1) space.
 
-### Time Complexity: O(n)
-**Why?**
-- Single pass through array
-- Each pointer moves at most n times
-- Constant work per iteration
+**Key Insights:**
+1. **Reframe:** "Flip k zeros" = "Find longest window with ≤ k zeros"
+2. **Same as Character Replacement:** Target char = 1, replacements = zeros in window
+3. **Binary array simplifies:** Only track zero count (not full frequency)
 
-### Space Complexity: O(1)
-**Why?**
-- Only tracking zero count
-- Constant space
-
-<br>
-
----
-
-## Complexity Summary
-
-| Solution | Time | Space | Notes |
-|----------|------|-------|-------|
-| Brute Force | O(n²) | O(1) | Checks all subarrays |
-| Sliding Window | O(n) | O(1) | Shrinks when invalid |
-| Optimized Window | O(n) | O(1) | Maintains window size |
-
-> **Recommended Solution:** Sliding Window - O(n) time, O(1) space
 
 <br>
 <br>

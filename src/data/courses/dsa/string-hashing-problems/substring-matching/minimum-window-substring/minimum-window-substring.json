@@ -6,36 +6,19 @@
   "mdFile": "minimum-window-substring.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Brute Force",
+      "title": "Minimum Window Substring",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/minimum-window-substring/code/cpp/minimum_window_substring_sol1.cpp"
+          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/minimum-window-substring/code/cpp/minimum_window_substring.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/minimum-window-substring/code/java/MinimumWindowSubstringSol1.java"
+          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/minimum-window-substring/code/java/MinimumWindowSubstring.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/minimum-window-substring/code/python/minimum_window_substring_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Sliding Window (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/minimum-window-substring/code/cpp/minimum_window_substring_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/minimum-window-substring/code/java/MinimumWindowSubstringSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/minimum-window-substring/code/python/minimum_window_substring_sol2.py"
+          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/minimum-window-substring/code/python/minimum_window_substring.py"
         }
       ]
     }

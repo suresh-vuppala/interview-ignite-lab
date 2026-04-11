@@ -1,8 +1,8 @@
 // ============================================================
-// Longest Substring with K Distinct Characters
+// Fruits Into Baskets (Longest with 2 Distinct)
 // ============================================================
 
-#include <string>
+#include <vector>
 #include <unordered_map>
 using namespace std;
 
@@ -12,13 +12,13 @@ using namespace std;
 // ============================================================
 class Solution1 {
 public:
-    int lengthOfLongestSubstringKDistinct(string s, int k) {
+    int totalFruit(vector<int>& fruits) {
         int maxLen = 0;
-        for (int i = 0; i < s.size(); i++) {
-            unordered_map<char,int> freq;
-            for (int j = i; j < s.size(); j++) {
-                freq[s[j]]++;
-                if ((int)freq.size() > k) break;
+        for (int i = 0; i < fruits.size(); i++) {
+            unordered_map<int,int> freq;
+            for (int j = i; j < fruits.size(); j++) {
+                freq[fruits[j]]++;
+                if (freq.size() > 2) break;
                 maxLen = max(maxLen, j - i + 1);
             }
         }
@@ -28,21 +28,21 @@ public:
 
 // ============================================================
 // Solution 2: Sliding Window + Frequency Map (Optimal)
-// Time: O(N) | Space: O(K)
+// Time: O(N) | Space: O(1)
 // ============================================================
 class Solution2 {
 public:
-    int lengthOfLongestSubstringKDistinct(string s, int k) {
-        unordered_map<char, int> freq;
+    int totalFruit(vector<int>& fruits) {
+        unordered_map<int, int> freq;
         int left = 0, maxLen = 0;
 
-        for (int right = 0; right < s.size(); right++) {
-            freq[s[right]]++;
+        for (int right = 0; right < fruits.size(); right++) {
+            freq[fruits[right]]++;
 
-            // Shrink when distinct > k
-            while ((int)freq.size() > k) {
-                freq[s[left]]--;
-                if (freq[s[left]] == 0) freq.erase(s[left]);
+            // Shrink while more than 2 distinct types
+            while (freq.size() > 2) {
+                freq[fruits[left]]--;
+                if (freq[fruits[left]] == 0) freq.erase(fruits[left]);
                 left++;
             }
 

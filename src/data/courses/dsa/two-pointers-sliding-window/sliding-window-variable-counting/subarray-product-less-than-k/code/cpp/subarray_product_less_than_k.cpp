@@ -1,9 +1,8 @@
 // ============================================================
-// Minimum Size Subarray Sum
+// Subarray Product Less Than K
 // ============================================================
 
 #include <vector>
-#include <climits>
 using namespace std;
 
 // ============================================================
@@ -12,19 +11,17 @@ using namespace std;
 // ============================================================
 class Solution1 {
 public:
-    int minSubArrayLen(int target, vector<int>& nums) {
-        int minLen = INT_MAX;
+    int numSubarrayProductLessThanK(vector<int>& nums, int k) {
+        int count = 0;
         for (int i = 0; i < nums.size(); i++) {
-            int sum = 0;
+            int product = 1;
             for (int j = i; j < nums.size(); j++) {
-                sum += nums[j];
-                if (sum >= target) {
-                    minLen = min(minLen, j - i + 1);
-                    break; // Found shortest from this start
-                }
+                product *= nums[j];
+                if (product >= k) break;
+                count++;
             }
         }
-        return minLen == INT_MAX ? 0 : minLen;
+        return count;
     }
 };
 
@@ -34,20 +31,24 @@ public:
 // ============================================================
 class Solution2 {
 public:
-    int minSubArrayLen(int target, vector<int>& nums) {
-        int left = 0, sum = 0, minLen = INT_MAX;
+    int numSubarrayProductLessThanK(vector<int>& nums, int k) {
+        if (k <= 1) return 0; // No positive product < 1
+
+        int product = 1, left = 0, count = 0;
 
         for (int right = 0; right < nums.size(); right++) {
-            sum += nums[right]; // Expand window
+            product *= nums[right]; // Expand window
 
-            // Shrink while valid — find minimum length
-            while (sum >= target) {
-                minLen = min(minLen, right - left + 1);
-                sum -= nums[left]; // Remove left element
+            // Shrink while product too large
+            while (product >= k) {
+                product /= nums[left]; // Divide out leaving element
                 left++;
             }
+
+            // All subarrays ending at right are valid
+            count += right - left + 1;
         }
 
-        return minLen == INT_MAX ? 0 : minLen;
+        return count;
     }
 };

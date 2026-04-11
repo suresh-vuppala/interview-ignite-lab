@@ -6,19 +6,19 @@
   "mdFile": "max-sum-subarray-not-greater-m.md",
   "codeExamples": [
     {
-      "title": "Maximum Sum Subarray Not Greater Than M Solution",
+      "title": "Maximum Sum Subarray Not Greater Than M",
       "languages": [
         {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-sum-subarray-not-greater-m/code/java/MaxSumNotGreaterM.java"
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-sum-subarray-not-greater-m/code/cpp/max_sum_subarray_not_greater_m.cpp"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-sum-subarray-not-greater-m/code/cpp/MaxSumNotGreaterM.cpp"
+          "language": "java",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-sum-subarray-not-greater-m/code/java/MaxSumSubarrayNotGreaterM.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-sum-subarray-not-greater-m/code/python/max_sum_not_greater_m.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-sum-subarray-not-greater-m/code/python/max_sum_subarray_not_greater_m.py"
         }
       ]
     }

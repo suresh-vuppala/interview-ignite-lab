@@ -1,81 +1,39 @@
-public class SubarrayProductLessThanK {
-    
-    // ==================== SOLUTION 1: BRUTE FORCE ====================
-    // Time: O(N³) | Space: O(1)
-    public static int subarrayProductBrute(int[] nums, int k) {
-        int n = nums.length;
+// ============================================================
+// Subarray Product Less Than K
+// ============================================================
+
+// ============================================================
+// Solution 1: Brute Force
+// Time: O(N²) | Space: O(1)
+// ============================================================
+class Solution1 {
+    public int numSubarrayProductLessThanK(int[] nums, int k) {
         int count = 0;
-        
-        // Check all subarrays
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j < n; j++) {
-                // Calculate product of subarray [i...j]
-                int product = 1;
-                for (int idx = i; idx <= j; idx++) {
-                    product *= nums[idx];
-                }
-                
-                if (product < k) {
-                    count++;
-                }
+        for (int i = 0; i < nums.length; i++) {
+            int prod = 1;
+            for (int j = i; j < nums.length; j++) {
+                prod *= nums[j];
+                if (prod >= k) break;
+                count++;
             }
         }
-        
         return count;
     }
-    
-    // ==================== SOLUTION 2: BRUTE FORCE OPTIMIZED ====================
-    // Time: O(N²) | Space: O(1)
-    public static int subarrayProductOptimized(int[] nums, int k) {
-        int n = nums.length;
-        int count = 0;
-        
-        // For each starting position
-        for (int i = 0; i < n; i++) {
-            int product = 1;
-            // Extend subarray
-            for (int j = i; j < n; j++) {
-                product *= nums[j];
-                
-                if (product < k) {
-                    count++;
-                } else {
-                    break;  // Product will only increase
-                }
-            }
-        }
-        
-        return count;
-    }
-    
-    // ==================== SOLUTION 3: SLIDING WINDOW ====================
-    // Time: O(N) | Space: O(1)
-    public static int subarrayProductSlidingWindow(int[] nums, int k) {
+}
+
+// ============================================================
+// Solution 2: Sliding Window (Optimal)
+// Time: O(N) | Space: O(1)
+// ============================================================
+class Solution2 {
+    public int numSubarrayProductLessThanK(int[] nums, int k) {
         if (k <= 1) return 0;
-        
-        int left = 0;
-        int product = 1;
-        int count = 0;
-        
-        // Expand window with right pointer
+        int prod = 1, left = 0, count = 0;
         for (int right = 0; right < nums.length; right++) {
-            product *= nums[right];
-            
-            // Shrink window if product >= k
-            while (product >= k && left <= right) {
-                product /= nums[left];
-                left++;
-            }
-            
-            // Count all subarrays ending at right
-            count += (right - left + 1);
+            prod *= nums[right];
+            while (prod >= k) prod /= nums[left++];
+            count += right - left + 1;
         }
-        
         return count;
-    }
-    
-    // Main solution - recommended approach
-    public static int numSubarrayProductLessThanK(int[] nums, int k) {
-        return subarrayProductSlidingWindow(nums, k);
     }
 }

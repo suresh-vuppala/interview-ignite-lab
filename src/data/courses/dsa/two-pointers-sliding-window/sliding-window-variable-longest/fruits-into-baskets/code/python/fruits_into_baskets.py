@@ -1,67 +1,43 @@
-class Solution:
-    # ==================== SOLUTION 1: BRUTE FORCE ====================
-    # Time: O(n²) | Space: O(n)
-    def totalFruitBruteForce(self, fruits):
-        n = len(fruits)
-        max_fruits = 0
-        
-        # Check all subarrays
-        for i in range(n):
+# ============================================================
+# Fruits Into Baskets
+# ============================================================
+
+from typing import List
+from collections import defaultdict
+
+# ============================================================
+# Solution 1: Brute Force
+# Time: O(N²) | Space: O(N)
+# ============================================================
+class Solution1:
+    def totalFruit(self, fruits: List[int]) -> int:
+        max_len = 0
+        for i in range(len(fruits)):
             types = set()
-            for j in range(i, n):
+            for j in range(i, len(fruits)):
                 types.add(fruits[j])
-                
-                # Check if valid (at most 2 types)
-                if len(types) <= 2:
-                    max_fruits = max(max_fruits, j - i + 1)
-                else:
-                    break  # More than 2 types, no point continuing
-        
-        return max_fruits
-    
-    # ==================== SOLUTION 2: SLIDING WINDOW WITH HASHMAP ====================
-    # Time: O(n) | Space: O(1)
-    def totalFruitSlidingWindow(self, fruits):
-        freq = {}
-        left = 0
-        max_fruits = 0
-        
+                if len(types) > 2: break
+                max_len = max(max_len, j - i + 1)
+        return max_len
+
+# ============================================================
+# Solution 2: Sliding Window (Optimal)
+# Time: O(N) | Space: O(1)
+# ============================================================
+class Solution2:
+    def totalFruit(self, fruits: List[int]) -> int:
+        freq = defaultdict(int)
+        left = max_len = 0
+
         for right in range(len(fruits)):
-            # Add fruit to window
-            freq[fruits[right]] = freq.get(fruits[right], 0) + 1
-            
-            # Shrink window while more than 2 types
+            freq[fruits[right]] += 1
+
             while len(freq) > 2:
                 freq[fruits[left]] -= 1
                 if freq[fruits[left]] == 0:
                     del freq[fruits[left]]
                 left += 1
-            
-            # Update max fruits
-            max_fruits = max(max_fruits, right - left + 1)
-        
-        return max_fruits
-    
-    # ==================== SOLUTION 3: OPTIMIZED SLIDING WINDOW ====================
-    # Time: O(n) | Space: O(1)
-    def totalFruitOptimized(self, fruits):
-        freq = {}
-        left = 0
-        
-        for right in range(len(fruits)):
-            # Add fruit to window
-            freq[fruits[right]] = freq.get(fruits[right], 0) + 1
-            
-            # If more than 2 types, slide window
-            if len(freq) > 2:
-                freq[fruits[left]] -= 1
-                if freq[fruits[left]] == 0:
-                    del freq[fruits[left]]
-                left += 1
-        
-        # Window size is the answer
-        return len(fruits) - left
-    
-    # ==================== MAIN SOLUTION (RECOMMENDED) ====================
-    def totalFruit(self, fruits):
-        return self.totalFruitSlidingWindow(fruits)
+
+            max_len = max(max_len, right - left + 1)
+
+        return max_len

@@ -6,15 +6,15 @@
   "mdFile": "subarray-product-less-than-k.md",
   "codeExamples": [
     {
-      "title": "Number of Subarrays with Product Less Than K Solution",
+      "title": "Number of Subarrays with Product Less Than K",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-counting/subarray-product-less-than-k/code/cpp/subarray_product_less_than_k.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-counting/subarray-product-less-than-k/code/java/SubarrayProductLessThanK.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-counting/subarray-product-less-than-k/code/cpp/SubarrayProductLessThanK.cpp"
         },
         {
           "language": "python",

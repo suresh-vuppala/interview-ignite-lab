@@ -6,53 +6,19 @@
   "mdFile": "longest-substring-without-repeating.md",
   "codeExamples": [
     {
-      "title": "Solution 1: Brute Force",
+      "title": "Longest Substring Without Repeating Characters",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/cpp/longest_substring_without_repeating_sol1.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/cpp/longest_substring_without_repeating.cpp"
         },
         {
           "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/java/LongestSubstringWithoutRepeatingSol1.java"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/java/LongestSubstringWithoutRepeating.java"
         },
         {
           "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/python/longest_substring_without_repeating_sol1.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 2: Sliding Window + Set",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/cpp/longest_substring_without_repeating_sol2.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/java/LongestSubstringWithoutRepeatingSol2.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/python/longest_substring_without_repeating_sol2.py"
-        }
-      ]
-    },
-    {
-      "title": "Solution 3: HashMap Jump (Optimal)",
-      "languages": [
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/cpp/longest_substring_without_repeating_sol3.cpp"
-        },
-        {
-          "language": "java",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/java/LongestSubstringWithoutRepeatingSol3.java"
-        },
-        {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/python/longest_substring_without_repeating_sol3.py"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/longest-substring-without-repeating/code/python/longest_substring_without_repeating.py"
         }
       ]
     }

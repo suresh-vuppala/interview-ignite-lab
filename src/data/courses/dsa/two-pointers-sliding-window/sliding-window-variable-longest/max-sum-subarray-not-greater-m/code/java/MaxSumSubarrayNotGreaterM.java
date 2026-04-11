@@ -1,5 +1,5 @@
 // ============================================================
-// Longest Subarray with Sum K
+// Max Sum Subarray Not Greater Than M
 // ============================================================
 
 import java.util.*;
@@ -9,13 +9,13 @@ import java.util.*;
 // Time: O(N²) | Space: O(1)
 // ============================================================
 class Solution1 {
-    public int longestSubarray(int[] nums, int k) {
-        int max = 0;
+    public int maxSumNotGreater(int[] nums, int M) {
+        int max = Integer.MIN_VALUE;
         for (int i = 0; i < nums.length; i++) {
             int sum = 0;
             for (int j = i; j < nums.length; j++) {
                 sum += nums[j];
-                if (sum == k) max = Math.max(max, j - i + 1);
+                if (sum <= M) max = Math.max(max, sum);
             }
         }
         return max;
@@ -23,27 +23,29 @@ class Solution1 {
 }
 
 // ============================================================
-// Solution 2: Prefix Sum + Hash Map (Optimal)
-// Time: O(N) | Space: O(N)
+// Solution 2: Prefix Sum + TreeSet (Optimal)
+// Time: O(N log N) | Space: O(N)
 // ============================================================
 class Solution2 {
-    public int longestSubarray(int[] nums, int k) {
-        Map<Long, Integer> first = new HashMap<>();
-        first.put(0L, -1);
+    public int maxSumNotGreater(int[] nums, int M) {
+        TreeSet<Long> set = new TreeSet<>();
+        set.add(0L);
 
-        long prefix = 0;
-        int maxLen = 0;
+        long prefix = 0, max = Long.MIN_VALUE;
 
-        for (int j = 0; j < nums.length; j++) {
-            prefix += nums[j];
+        for (int num : nums) {
+            prefix += num;
 
-            if (first.containsKey(prefix - k)) {
-                maxLen = Math.max(maxLen, j - first.get(prefix - k));
+            // Find smallest prefix ≥ (prefix - M)
+            Long ceiling = set.ceiling(prefix - M);
+
+            if (ceiling != null) {
+                max = Math.max(max, prefix - ceiling);
             }
 
-            first.putIfAbsent(prefix, j); // First occurrence only
+            set.add(prefix);
         }
 
-        return maxLen;
+        return (int) max;
     }
 }

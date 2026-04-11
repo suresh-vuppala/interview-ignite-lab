@@ -1,31 +1,17 @@
-Given an array of fruits where each number represents a fruit type, find the maximum number of fruits you can collect with two baskets, where each basket can only hold one type of fruit.
+Given an array where each element represents a type of fruit tree, find the maximum number of fruits you can collect with exactly 2 baskets. You pick continuously from any starting tree, but each basket can only hold one type.
 
 <br>
 
 > Input:
-> fruits = [1,2,1,2,3,2,2]
+> fruits = [1, 2, 1, 2, 3]
 
 > Output:
-> 5
+> 4
 
 > Explanation:
-> Collect fruits [2,1,2,3,2] or [1,2,3,2,2] (5 fruits with 2 types)
-> Best is [2,3,2,2] starting at index 4 (4 fruits) or [1,2,1,2] (4 fruits)
-> Actually best is [2,3,2,2,2] but that's only in extended array
-> Correct: [2,1,2,2] at indices 3-6 gives 4 fruits with types {1,2}
-> Wait: [3,2,2] at indices 4-6 gives 3 fruits with types {2,3}
-> Best: [1,2,1,2] at indices 0-3 or [2,3,2,2] at indices 3-6 both give length 4
-> Actually [2,3,2,2] at indices 3-6 is length 4
-> Let me recalculate: [1,2,1,2,3,2,2]
-> - [1,2,1,2] (indices 0-3): 4 fruits, types {1,2} ✓
-> - [2,1,2,3] (indices 1-4): 4 fruits, types {1,2,3} ✗
-> - [1,2,3,2,2] (indices 2-6): 5 fruits, types {1,2,3} ✗
-> - [2,3,2,2] (indices 3-6): 4 fruits, types {2,3} ✓
-> - [3,2,2] (indices 4-6): 3 fruits, types {2,3} ✓
+> Pick from trees [1, 2, 1, 2] — types {1, 2} using 2 baskets. Length = 4.
 > 
-> Maximum with at most 2 types is 4
-> 
-> **Key insight:** Find longest subarray with at most 2 distinct elements.
+> **Key insight:** This is "Longest Substring with at Most K Distinct Characters" where K = 2. Sliding window with a frequency map, shrink when distinct types > 2.
 
 <br>
 
@@ -44,13 +30,9 @@ Given an array of fruits where each number represents a fruit type, find the max
 
 ## All Possible Edge Cases
 
-1. **Only 1 type of fruit:** Return entire array length
-2. **Only 2 types total:** Return entire array length
-3. **All different types:** Maximum window is 2 (any adjacent pair of distinct types)
-4. **Single fruit:** Return 1
-5. **Two fruits:** Return 2
-6. **Same type at start and end:** [1, 2, 1] → 3
-7. **Long run of one type:** [1, 1, 1, 2, 3] → 4 (first four)
+1. **≤ 2 types total:** Return n (entire array)
+2. **All same type:** Return n
+3. **Alternating 3 types:** [1,2,3,1,2,3] → max = 2
 
 <br>
 
@@ -58,110 +40,71 @@ Given an array of fruits where each number represents a fruit type, find the max
 
 ## Solution 1: Brute Force
 
-**Intuition:**
-Check all possible subarrays. Count distinct fruit types. If types ≤ 2, it's valid.
+### Time Complexity: O(N²)
 
-**Algorithm:**
-1. For each starting position i
-2. For each ending position j ≥ i
-3. Count distinct types in subarray [i, j]
-4. If types ≤ 2, update max length
-
-### Time Complexity: O(n²)
-**Why?**
-- Two nested loops: O(n²) subarrays
-- Counting distinct types: O(1) with set (amortized)
-- Total: O(n²)
-
-### Space Complexity: O(n)
-**Why?**
-- Set to track distinct types
-- Worst case: all elements distinct
-
-**Problem:** Checking all subarrays is inefficient.
+> **Drawback:**
+> Checking all subarrays. We can use a sliding window since adding elements can only increase distinct count, and removing from left decreases it.
 
 > **Key Insight for Improvement:**
-> Use sliding window with frequency map. Maintain window with at most 2 distinct types. Expand right, shrink left when types > 2.
+> Sliding window with frequency map. When distinct types > 2, shrink from left (remove from map when count → 0). Map size = distinct types.
 
 <br>
 
 ---
 
-## Solution 2: Sliding Window with HashMap
-
-**Intuition:**
-Maintain a window with at most 2 distinct fruit types using a frequency map. When types exceed 2, shrink from left.
+## Solution 2: Sliding Window + Frequency Map (Optimal)
 
 **Algorithm:**
-1. Use frequency map to track fruit types
-2. Expand right, add fruit to map
-3. While distinct types > 2:
-   - Remove fruit at left from map
-   - Move left forward
-4. Update max length
+1. left = 0, freq = {}, maxLen = 0
+2. For right = 0 to n-1:
+   - freq[fruits[right]]++
+   - While len(freq) > 2: freq[fruits[left]]--, if 0 → delete; left++
+   - maxLen = max(maxLen, right - left + 1)
 
-### Time Complexity: O(n)
+### Time Complexity: O(N)
 **Why?**
-- Right pointer moves n times: O(n)
-- Left pointer moves at most n times total: O(n)
-- Map operations: O(1) average
-- Total: O(n)
+- Each element added/removed from map at most once
+- Total: 2N = O(N)
 
-**Improvement:**
-- Before: O(n²)
-- After: O(n)
-- Example: n=10000
-  - Brute: 100,000,000 operations
-  - Sliding: 10,000 operations (10,000× faster!)
+**Detailed breakdown:**
+- N = 100,000 → at most 200,000 operations
 
-### Space Complexity: O(1)
-**Why?**
-- Map stores at most 3 fruit types (2 valid + 1 being removed)
-- Constant space
+**Example walkthrough:**
+```
+fruits = [1, 2, 1, 2, 3]
 
-> **Key Insight for Improvement:**
-> We can optimize by maintaining window size instead of always shrinking to valid state.
+right=0: freq={1:1}, types=1 ≤ 2 → len=1
+right=1: freq={1:1,2:1}, types=2 ≤ 2 → len=2
+right=2: freq={1:2,2:1}, types=2 ≤ 2 → len=3
+right=3: freq={1:2,2:2}, types=2 ≤ 2 → len=4 ★
+right=4: freq={1:2,2:2,3:1}, types=3 > 2 → shrink:
+  remove fruits[0]=1: freq={1:1,2:2,3:1}, types=3 > 2
+  remove fruits[1]=2: freq={1:1,2:1,3:1}, types=3 > 2
+  remove fruits[2]=1: freq={1:0→del,2:1,3:1}, types=2 ≤ 2
+
+maxLen = 4 ✓
+```
+
+### Space Complexity: O(1) — at most 3 entries in map
 
 <br>
 
 ---
 
-## Solution 3: Optimized Sliding Window
+## Complexity Progression Summary
 
-**Intuition:**
-Once we find a valid window of size x with 2 types, we only care about windows ≥ x. Maintain window size and slide it.
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute Force | O(N²) | O(N) | Check all subarrays |
+| Sliding Window | O(N) | O(1) | Freq map, shrink when types > 2 |
 
-**Algorithm:**
-1. Track fruit types with frequency map
-2. Expand right always
-3. If types > 2, move left once (slide window)
-4. If types ≤ 2, window grows
-5. Final window size is the answer
+**Recommended Solution:** Sliding Window (Solution 2) — O(N) time.
 
-### Time Complexity: O(n)
-**Why?**
-- Single pass through array
-- Each pointer moves at most n times
-- Constant work per iteration
+**Key Insights:**
+1. **Reframing:** "2 baskets" = "at most 2 distinct types"
+2. **Same as K-distinct:** Generalize to any K by changing the threshold
+3. **Delete keys when count = 0:** Crucial for correct distinct count
 
-### Space Complexity: O(1)
-**Why?**
-- Map stores at most 3 types
-- Constant space
-
-<br>
-
----
-
-## Complexity Summary
-
-| Solution | Time | Space | Notes |
-|----------|------|-------|-------|
-| Brute Force | O(n²) | O(n) | Checks all subarrays |
-| Sliding Window | O(n) | O(1) | Shrinks to valid state |
-| Optimized Window | O(n) | O(1) | Maintains window size |
-
-> **Recommended Solution:** Sliding Window - O(n) time, O(1) space
 
 <br>
 <br>

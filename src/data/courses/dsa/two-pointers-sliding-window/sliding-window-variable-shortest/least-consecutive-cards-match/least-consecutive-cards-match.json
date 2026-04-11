@@ -6,19 +6,19 @@
   "mdFile": "least-consecutive-cards-match.md",
   "codeExamples": [
     {
-      "title": "Least Consecutive Cards Solution",
+      "title": "Least Consecutive Cards to Match",
       "languages": [
         {
-          "language": "python",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/least-consecutive-cards-match/code/python/least-consecutive-cards-match.py"
+          "language": "cpp",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/least-consecutive-cards-match/code/cpp/least_consecutive_cards_match.cpp"
         },
         {
           "language": "java",
           "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/least-consecutive-cards-match/code/java/LeastConsecutiveCardsMatch.java"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/least-consecutive-cards-match/code/cpp/LeastConsecutiveCardsMatch.cpp"
+          "language": "python",
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/least-consecutive-cards-match/code/python/least_consecutive_cards_match.py"
         }
       ]
     }

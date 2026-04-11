@@ -6,7 +6,7 @@
   "mdFile": "subarrays-k-different-integers.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Subarrays with K Different Integers",
       "languages": [
         {
           "language": "cpp",
