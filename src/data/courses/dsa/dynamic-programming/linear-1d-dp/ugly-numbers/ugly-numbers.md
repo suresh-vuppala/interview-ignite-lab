@@ -1,67 +1,72 @@
-Find the nth ugly number. Ugly numbers are positive numbers whose prime factors are only 2, 3, or 5.
+Find the nth ugly number. Ugly numbers have only 2, 3, 5 as prime factors. Sequence: 1,2,3,4,5,6,8,9,10,12...
 
 <br>
 
-> Input:
-> n = 10
-
-> Output:
-> 12
-
-> Explanation:
-> Sequence: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12
-> 10th ugly number is 12
-> 
-> **Key insight:** Generate ugly numbers by multiplying previous ugly numbers by 2, 3, 5.
+> Input: n=10
+> Output: 12
+> **Key insight:** Three pointers for factors 2, 3, 5. Next ugly = min(ugly[i2]*2, ugly[i3]*3, ugly[i5]*5). Advance the pointer(s) that produced the min.
 
 <br>
-
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+- Typical DP constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion (Brute Force)
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+### Time Complexity: O(N log N) with heap
+
+> **Drawback:** Overlapping subproblems cause exponential recomputation. The same state is computed many times.
+
+> **Key Insight for Improvement:** Memoize computed states (top-down) or build bottom-up (tabulation). Recurrence: dp[i] = min(dp[i2]*2, dp[i3]*3, dp[i5]*5)
 
 <br>
 
 ---
 
-## Solution 1: Memoization (Top-Down DP)
+## Solution 2: DP — Three-pointer merge
 
-**Not ideal for this problem - use tabulation**
+**Recurrence:** `dp[i] = min(dp[i2]*2, dp[i3]*3, dp[i5]*5)`
+
+**Algorithm:** Three-pointer merge
+
+### Time Complexity: O(N)
+**Why?** Each state computed exactly once. Total states × O(1) per state transition.
+
+**Detailed breakdown:** Depends on input size, but each state visited once.
+
+### Space Complexity: O(N)
+
+**Example walkthrough:**
+```
+i2=i3=i5=0. dp=[1,2,3,4,5,6,8,9,10,12]
+Each step: take min of 3 candidates, advance matching pointers
+```
+
+<br>
 
 ---
 
-## Solution 2: Tabulation (Bottom-Up DP)
+## Complexity Progression Summary
 
-**DP State:**
-```
-dp[i] = ith ugly number
-Use 3 pointers (i2, i3, i5)
-dp[i] = min(dp[i2]*2, dp[i3]*3, dp[i5]*5)
-```
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursion | O(N log N) with heap | O(N) stack | Brute force, overlapping subproblems |
+| Memoization | O(N) | O(N) | Cache computed states |
+| Tabulation | O(N) | O(N) | Bottom-up, possible space optimization |
+
+**Key Insights:**
+1. **Identify recurrence:** Express dp[i] in terms of smaller subproblems
+2. **Base cases:** Starting values that don't depend on other states
+3. **Space optimization:** If dp[i] only depends on dp[i-1] and dp[i-2], use two variables instead of array
 
 
-
-### Time: O(n) | Space: O(n)
-
----
+<br><br>
 
 ---
 

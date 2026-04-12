@@ -1,70 +1,72 @@
-You are given an array cost where cost[i] is the cost of ith step. You can start from step 0 or 1. Find minimum cost to reach the top (beyond last step).
+Each step has a cost. Pay the cost to climb 1 or 2 steps from that position. Find minimum cost to reach the top.
 
 <br>
 
-> Input:
-> cost = [10, 15, 20]
-
-> Output:
-> 15
-
-> Explanation:
-> Start at index 1 (cost 15), climb one step to top
-> Total cost: 15
-> Alternative: Start at 0 (10), climb to 1 (15), climb to top = 25
-> 
-> **Key insight:** At each step, choose minimum of previous two steps.
+> Input: cost=[10,15,20]
+> Output: 15 (start at index 1, pay 15, climb 2 to top)
+> **Key insight:** dp[i] = cost[i] + min(dp[i-1], dp[i-2]). Choose cheaper path to reach step i, then pay its cost.
 
 <br>
-
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+- Typical DP constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion (Brute Force)
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+### Time Complexity: O(2^N)
+
+> **Drawback:** Overlapping subproblems cause exponential recomputation. The same state is computed many times.
+
+> **Key Insight for Improvement:** Memoize computed states (top-down) or build bottom-up (tabulation). Recurrence: dp[i] = cost[i] + min(dp[i-1], dp[i-2])
 
 <br>
 
 ---
 
-## Solution 1: Memoization (Top-Down DP)
+## Solution 2: DP — Bottom-up with two variables
 
-**Recurrence:**
+**Recurrence:** `dp[i] = cost[i] + min(dp[i-1], dp[i-2])`
+
+**Algorithm:** Bottom-up with two variables
+
+### Time Complexity: O(N)
+**Why?** Each state computed exactly once. Total states × O(1) per state transition.
+
+**Detailed breakdown:** Depends on input size, but each state visited once.
+
+### Space Complexity: O(1)
+
+**Example walkthrough:**
 ```
-minCost(i) = cost[i] + min(minCost(i-1), minCost(i-2))
-Base: minCost(0) = cost[0], minCost(1) = cost[1]
+cost=[10,15,20]: dp[0]=10, dp[1]=15, dp[2]=20+min(10,15)=30. Answer=min(dp[1],dp[2])=min(15,30)=15
 ```
 
-
-### Time: O(n) | Space: O(n)
+<br>
 
 ---
 
-## Solution 2: Tabulation (Bottom-Up DP)
+## Complexity Progression Summary
 
-**DP State:**
-```
-dp[i] = min cost to reach step i
-dp[i] = cost[i] + min(dp[i-1], dp[i-2])
-```
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursion | O(2^N) | O(N) stack | Brute force, overlapping subproblems |
+| Memoization | O(N) | O(N) | Cache computed states |
+| Tabulation | O(N) | O(1) | Bottom-up, possible space optimization |
+
+**Key Insights:**
+1. **Identify recurrence:** Express dp[i] in terms of smaller subproblems
+2. **Base cases:** Starting values that don't depend on other states
+3. **Space optimization:** If dp[i] only depends on dp[i-1] and dp[i-2], use two variables instead of array
 
 
-### Time: O(n) | Space: O(n) or O(1) optimized
+<br><br>
+
+---
 
 ```code```

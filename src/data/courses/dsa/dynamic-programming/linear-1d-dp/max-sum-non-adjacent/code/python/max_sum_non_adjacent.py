@@ -1,49 +1,7 @@
 class Solution:
-    # ============ MEMOIZATION (TOP-DOWN) ============
-    def maxSumNonAdjacentMemo(self, arr):
-        n = len(arr)
-        if n == 0:
-            return 0
-        memo = {}
-        
-        def dp(i):
-            if i < 0:
-                return 0
-            if i in memo:
-                return memo[i]
-            memo[i] = max(arr[i] + dp(i-2), dp(i-1))
-            return memo[i]
-        
-        return dp(n-1)
-    
-    # ============ TABULATION (BOTTOM-UP) ============
-    def maxSumNonAdjacentTab(self, arr):
-        n = len(arr)
-        if n == 0:
-            return 0
-        if n == 1:
-            return arr[0]
-        
-        dp = [0] * n
-        dp[0] = arr[0]
-        dp[1] = max(arr[0], arr[1])
-        
-        for i in range(2, n):
-            dp[i] = max(arr[i] + dp[i-2], dp[i-1])
-        
-        return dp[n-1]
-    
-    # ============ SPACE OPTIMIZED ============
-    def maxSumNonAdjacent(self, arr):
-        if not arr:
-            return 0
-        if len(arr) == 1:
-            return arr[0]
-        
-        prev2, prev1 = arr[0], max(arr[0], arr[1])
-        
-        for i in range(2, len(arr)):
-            curr = max(arr[i] + prev2, prev1)
-            prev2, prev1 = prev1, curr
-        
-        return prev1
+    def maxSumNonAdjacent(self, nums) -> int:
+        if not nums: return 0
+        a = max(0, nums[0])
+        b = max(a, nums[1]) if len(nums) > 1 else a
+        for i in range(2, len(nums)): a, b = b, max(b, a + nums[i])
+        return b

@@ -1,72 +1,71 @@
-Find maximum sum of non-adjacent elements in array (same as House Robber).
+Find maximum sum of non-adjacent elements in an array. Same as House Robber.
 
 <br>
 
-> Input:
-> arr = [5, 1, 3, 8, 2]
-
-> Output:
-> 15
-
-> Explanation:
-> Select 5, 8, 2 (non-adjacent) = 15
-> 
-> **Key insight:** Same as House Robber problem.
+> Input: nums=[3,2,7,10]
+> Output: 13 (pick 3+10=13)
+> **Key insight:** Same as House Robber: dp[i] = max(dp[i-1], dp[i-2] + nums[i]).
 
 <br>
-
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+- Typical DP constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion (Brute Force)
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+### Time Complexity: O(2^N)
+
+> **Drawback:** Overlapping subproblems cause exponential recomputation. The same state is computed many times.
+
+> **Key Insight for Improvement:** Memoize computed states (top-down) or build bottom-up (tabulation). Recurrence: dp[i] = max(dp[i-1], dp[i-2] + nums[i])
 
 <br>
 
 ---
 
-## Solution 1: Memoization (Top-Down DP)
+## Solution 2: DP — Bottom-up with two variables
 
-**Recurrence:**
+**Recurrence:** `dp[i] = max(dp[i-1], dp[i-2] + nums[i])`
+
+**Algorithm:** Bottom-up with two variables
+
+### Time Complexity: O(N)
+**Why?** Each state computed exactly once. Total states × O(1) per state transition.
+
+**Detailed breakdown:** Depends on input size, but each state visited once.
+
+### Space Complexity: O(1)
+
+**Example walkthrough:**
 ```
-maxSum(i) = max(arr[i] + maxSum(i-2), maxSum(i-1))
+nums=[3,2,7,10]: dp[0]=3, dp[1]=3, dp[2]=max(3,3+7)=10, dp[3]=max(10,3+10)=13
 ```
 
-
-
-### Time: O(n) | Space: O(n)
+<br>
 
 ---
 
-## Solution 2: Tabulation (Bottom-Up DP)
+## Complexity Progression Summary
 
-**DP State:**
-```
-dp[i] = max sum using elements 0..i
-dp[i] = max(arr[i] + dp[i-2], dp[i-1])
-```
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursion | O(2^N) | O(N) stack | Brute force, overlapping subproblems |
+| Memoization | O(N) | O(N) | Cache computed states |
+| Tabulation | O(N) | O(1) | Bottom-up, possible space optimization |
+
+**Key Insights:**
+1. **Identify recurrence:** Express dp[i] in terms of smaller subproblems
+2. **Base cases:** Starting values that don't depend on other states
+3. **Space optimization:** If dp[i] only depends on dp[i-1] and dp[i-2], use two variables instead of array
 
 
-
-### Time: O(n) | Space: O(1) optimized
-
----
+<br><br>
 
 ---
 

@@ -6,15 +6,15 @@
   "mdFile": "partition-equal-subset.md",
   "codeExamples": [
     {
-      "title": "Partition Equal Subset Sum Solution",
+      "title": "Partition Equal Subset Sum",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/partition-equal-subset/code/cpp/partition_equal_subset.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/partition-equal-subset/code/java/PartitionEqualSubset.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/partition-equal-subset/code/cpp/PartitionEqualSubset.cpp"
         },
         {
           "language": "python",

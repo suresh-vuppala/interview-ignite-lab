@@ -1,155 +1,51 @@
-Find the number of ways to tile a 2×N board using 2×1 dominoes and L-shaped trominoes.
+Tile a 2×N board using dominoes (1×2) and trominoes (L-shaped). Count ways mod 10^9+7.
 
 <br>
 
-> Input:
-> n = 3
-
-> Output:
-> 5
-
-> Explanation:
-> Five ways to tile 2×3 board:
-> 1. Three horizontal dominoes
-> 2. Vertical + two horizontal
-> 3. Two horizontal + vertical
-> 4. Two trominoes (one up, one down)
-> 5. One tromino + one domino
-> 
-> **Key insight:** Track fully covered columns and partially covered columns separately.
+> Input: n=3
+> Output: 5
+> **Key insight:** dp[i] = 2*dp[i-1] + dp[i-3]. Two full columns can be filled by extending previous patterns. The dp[i-3] accounts for the L-shaped tromino combinations.
 
 <br>
-
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+- Typical DP constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion (Brute Force)
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+### Time Complexity: O(2^N)
 
-<br>
+> **Drawback:** Overlapping subproblems cause exponential recomputation. The same state is computed many times.
 
----
-
-## Solution 1: Recursive Approach (Brute Force)
-
-**Intuition:**
-At column i, we can have:
-- Fully covered: place vertical domino or two horizontal dominoes
-- Partially covered: place tromino creating gap for next column
-
-**Recurrence Relation:**
-```
-full[i] = full[i-1] + full[i-2] + 2*partial[i-1]
-partial[i] = full[i-2] + partial[i-1]
-Base: full[0]=1, full[1]=1, partial[0]=0, partial[1]=1
-```
-
-**Algorithm:**
-1. Track two states: fully covered and partially covered
-2. Recursively compute both states
-
-### Time Complexity: O(2^n)
-**Why exponential?**
-- Two recursive calls per state
-- Two states to track
-- Overlapping subproblems
-
-### Space Complexity: O(n)
-- Recursion stack depth
-
-> **Key Insight for Improvement:**
-> Overlapping subproblems for both states. Memoize both full[i] and partial[i] to reduce to O(n).
+> **Key Insight for Improvement:** Memoize computed states (top-down) or build bottom-up (tabulation). Recurrence: dp[i] = 2*dp[i-1] + dp[i-3]
 
 <br>
 
 ---
 
-## Solution 2: Memoization (Top-Down DP)
+## Solution 2: DP — Bottom-up with recurrence
 
-**Intuition:**
-Cache results for both fully covered and partially covered states.
+**Recurrence:** `dp[i] = 2*dp[i-1] + dp[i-3]`
 
-**Algorithm:**
-1. Create memo for both states
-2. Check memo before computing
-3. Store and return results
+**Algorithm:** Bottom-up with recurrence
 
-### Time Complexity: O(n)
-**Why linear?**
-- 2n unique subproblems (n for each state)
-- Each computed once
-- Total: O(n)
+### Time Complexity: O(N)
+**Why?** Each state computed exactly once. Total states × O(1) per state transition.
 
-### Space Complexity: O(n)
-- Memo tables + recursion stack
+**Detailed breakdown:** Depends on input size, but each state visited once.
 
-> **Key Insight for Improvement:**
-> Remove recursion overhead with iterative tabulation.
-
-<br>
-
----
-
-## Solution 3: Tabulation (Bottom-Up DP)
-
-**DP State:**
-```
-full[i] = ways to fully cover up to column i
-partial[i] = ways to partially cover up to column i
-```
-
-**Transition:**
-```
-full[i] = full[i-1] + full[i-2] + 2*partial[i-1]
-partial[i] = full[i-2] + partial[i-1]
-```
-
-**Algorithm:**
-1. Initialize base cases
-2. Fill both arrays iteratively
-3. Return full[n]
-
-### Time Complexity: O(n)
-- Single loop, constant work per iteration
-
-### Space Complexity: O(n)
-- Two arrays of size n
-
-> **Key Insight for Improvement:**
-> Only need last 2 values for each state. Use variables instead of arrays.
-
-<br>
-
----
-
-## Solution 4: Space Optimized
-
-**Intuition:**
-Track only necessary previous values for both states.
-
-**Algorithm:**
-1. Use variables: full_prev2, full_prev1, partial_prev2, partial_prev1
-2. Update in sliding window fashion
-
-### Time Complexity: O(n)
 ### Space Complexity: O(1)
-- Only 4-6 variables
+
+**Example walkthrough:**
+```
+dp[1]=1, dp[2]=2, dp[3]=5, dp[4]=11, dp[5]=24
+```
 
 <br>
 
@@ -159,20 +55,17 @@ Track only necessary previous values for both states.
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Recursive | O(2^n) | O(n) | Baseline |
-| Memoization | O(n) | O(n) | Cache both states |
-| Tabulation | O(n) | O(n) | Remove recursion |
-| Space Optimized | O(n) | O(1) | Variables only |
+| Recursion | O(2^N) | O(N) stack | Brute force, overlapping subproblems |
+| Memoization | O(N) | O(N) | Cache computed states |
+| Tabulation | O(N) | O(1) | Bottom-up, possible space optimization |
 
-**Key Pattern:**
-- Two-state DP problem
-- Each state depends on previous states
-- Common in tiling with multiple tile types
+**Key Insights:**
+1. **Identify recurrence:** Express dp[i] in terms of smaller subproblems
+2. **Base cases:** Starting values that don't depend on other states
+3. **Space optimization:** If dp[i] only depends on dp[i-1] and dp[i-2], use two variables instead of array
 
-> **Final Complexity:** O(n) time, O(1) space
 
-<br>
-<br>
+<br><br>
 
 ---
 

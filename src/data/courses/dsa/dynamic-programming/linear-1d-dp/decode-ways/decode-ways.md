@@ -1,75 +1,71 @@
-A message containing letters A-Z is encoded as "1"=A, "2"=B, ..., "26"=Z. Count ways to decode a string.
+A message of digits can be decoded (A=1..Z=26). Count total ways to decode.
 
 <br>
 
-> Input:
-> s = "226"
-
-> Output:
-> 3
-
-> Explanation:
-> "226" can be decoded as:
-> 1. "BZ" (2, 26)
-> 2. "VF" (22, 6)
-> 3. "BBF" (2, 2, 6)
-> 
-> **Key insight:** At each position, decode 1 digit or 2 digits if valid.
+> Input: s='226'
+> Output: 3 ('BZ'=2,26, 'VF'=22,6, 'BBF'=2,2,6)
+> **Key insight:** dp[i] = (dp[i-1] if s[i] valid single) + (dp[i-2] if s[i-1..i] valid pair 10-26).
 
 <br>
-
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+- Typical DP constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion (Brute Force)
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+### Time Complexity: O(2^N)
+
+> **Drawback:** Overlapping subproblems cause exponential recomputation. The same state is computed many times.
+
+> **Key Insight for Improvement:** Memoize computed states (top-down) or build bottom-up (tabulation). Recurrence: dp[i] = dp[i-1]*(valid single) + dp[i-2]*(valid pair)
 
 <br>
 
 ---
 
-## Solution 1: Memoization (Top-Down DP)
+## Solution 2: DP — Bottom-up with two variables
 
-**Recurrence:**
+**Recurrence:** `dp[i] = dp[i-1]*(valid single) + dp[i-2]*(valid pair)`
+
+**Algorithm:** Bottom-up with two variables
+
+### Time Complexity: O(N)
+**Why?** Each state computed exactly once. Total states × O(1) per state transition.
+
+**Detailed breakdown:** Depends on input size, but each state visited once.
+
+### Space Complexity: O(1)
+
+**Example walkthrough:**
 ```
-ways(i) = ways(i-1) [if s[i] valid] + ways(i-2) [if s[i-1:i+1] valid]
+s='226': dp[0]=1('B'), dp[1]=2('BB','V'), dp[2]=3('BBF','VF','BZ')
 ```
 
-
-
-### Time: O(n) | Space: O(n)
+<br>
 
 ---
 
-## Solution 2: Tabulation (Bottom-Up DP)
+## Complexity Progression Summary
 
-**DP State:**
-```
-dp[i] = ways to decode s[0..i-1]
-dp[i] = dp[i-1] [1 digit] + dp[i-2] [2 digits]
-```
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursion | O(2^N) | O(N) stack | Brute force, overlapping subproblems |
+| Memoization | O(N) | O(N) | Cache computed states |
+| Tabulation | O(N) | O(1) | Bottom-up, possible space optimization |
+
+**Key Insights:**
+1. **Identify recurrence:** Express dp[i] in terms of smaller subproblems
+2. **Base cases:** Starting values that don't depend on other states
+3. **Space optimization:** If dp[i] only depends on dp[i-1] and dp[i-2], use two variables instead of array
 
 
-
-### Time: O(n) | Space: O(1) optimized
-
----
+<br><br>
 
 ---
 

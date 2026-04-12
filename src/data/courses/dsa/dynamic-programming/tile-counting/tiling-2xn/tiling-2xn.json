@@ -6,15 +6,15 @@
   "mdFile": "tiling-2xn.md",
   "codeExamples": [
     {
-      "title": "Tiling 2\u00d7N Board Solution",
+      "title": "Tiling 2\u00d7N Board",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/tiling-2xn/code/cpp/tiling_2xn.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/tile-counting/tiling-2xn/code/java/Tiling2xn.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/tile-counting/tiling-2xn/code/cpp/Tiling2xn.cpp"
         },
         {
           "language": "python",

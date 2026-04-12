@@ -6,15 +6,15 @@
   "mdFile": "paint-fence.md",
   "codeExamples": [
     {
-      "title": "Paint Fence Problem Solution",
+      "title": "Paint Fence Problem",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/paint-fence/code/cpp/paint_fence.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/tile-counting/paint-fence/code/java/PaintFence.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/tile-counting/paint-fence/code/cpp/PaintFence.cpp"
         },
         {
           "language": "python",

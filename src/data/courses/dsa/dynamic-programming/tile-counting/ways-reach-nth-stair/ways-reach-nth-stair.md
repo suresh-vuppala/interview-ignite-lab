@@ -1,143 +1,51 @@
-Find the number of ways to reach the nth stair. You can climb 1, 2, or 3 steps at a time.
+Count ways to reach step N if you can take 1, 2, or 3 steps at a time.
 
 <br>
 
-> Input:
-> n = 4
-
-> Output:
-> 7
-
-> Explanation:
-> Seven ways to reach stair 4:
-> 1. 1+1+1+1
-> 2. 1+1+2
-> 3. 1+2+1
-> 4. 2+1+1
-> 5. 2+2
-> 6. 1+3
-> 7. 3+1
-> 
-> **Key insight:** To reach stair i, you can come from i-1, i-2, or i-3.
+> Input: n=4
+> Output: 7 (1111,112,121,211,13,31,22)
+> **Key insight:** dp[i] = dp[i-1] + dp[i-2] + dp[i-3]. Extension of climbing stairs with 3 step options.
 
 <br>
-
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+- Typical DP constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion (Brute Force)
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+### Time Complexity: O(3^N)
 
-<br>
+> **Drawback:** Overlapping subproblems cause exponential recomputation. The same state is computed many times.
 
----
-
-## Solution 1: Recursive Approach (Brute Force)
-
-**Intuition:**
-At stair i, we can reach it from i-1 (1 step), i-2 (2 steps), or i-3 (3 steps). Total ways = sum of ways from these three positions.
-
-**Recurrence Relation:**
-```
-f(n) = f(n-1) + f(n-2) + f(n-3)
-Base: f(0) = 1, f(1) = 1, f(2) = 2
-```
-
-**Algorithm:**
-1. Base cases: f(0)=1, f(1)=1, f(2)=2
-2. Recursively compute: f(n-1) + f(n-2) + f(n-3)
-
-### Time Complexity: O(3^n)
-**Why exponential?**
-- Each call makes 3 recursive calls
-- Recursion tree has branching factor 3
-- Depth = n
-- Total nodes ≈ 3^n
-
-### Space Complexity: O(n)
-- Recursion stack depth = n
-
-> **Key Insight for Improvement:**
-> We're computing f(i) multiple times. Memoize results to reduce from O(3^n) to O(n).
+> **Key Insight for Improvement:** Memoize computed states (top-down) or build bottom-up (tabulation). Recurrence: dp[i] = dp[i-1] + dp[i-2] + dp[i-3]
 
 <br>
 
 ---
 
-## Solution 2: Memoization (Top-Down DP)
+## Solution 2: DP — Bottom-up with three variables
 
-**Intuition:**
-Cache results to avoid recomputation.
+**Recurrence:** `dp[i] = dp[i-1] + dp[i-2] + dp[i-3]`
 
-**Algorithm:**
-1. Create memo dictionary
-2. Check memo before computing
-3. Store and return result
+**Algorithm:** Bottom-up with three variables
 
-### Time Complexity: O(n)
-- Each of n subproblems computed once
+### Time Complexity: O(N)
+**Why?** Each state computed exactly once. Total states × O(1) per state transition.
 
-### Space Complexity: O(n)
-- Memo table + recursion stack
+**Detailed breakdown:** Depends on input size, but each state visited once.
 
-> **Key Insight for Improvement:**
-> Remove recursion overhead with iterative tabulation.
-
-<br>
-
----
-
-## Solution 3: Tabulation (Bottom-Up DP)
-
-**DP State:**
-```
-dp[i] = ways to reach stair i
-```
-
-**Transition:**
-```
-dp[i] = dp[i-1] + dp[i-2] + dp[i-3]
-```
-
-**Algorithm:**
-1. Initialize: dp[0]=1, dp[1]=1, dp[2]=2
-2. For i from 3 to n: dp[i] = dp[i-1] + dp[i-2] + dp[i-3]
-3. Return dp[n]
-
-### Time Complexity: O(n)
-### Space Complexity: O(n)
-
-> **Key Insight for Improvement:**
-> Only need last 3 values. Use three variables for O(1) space.
-
-<br>
-
----
-
-## Solution 4: Space Optimized
-
-**Algorithm:**
-1. Use three variables: prev3, prev2, prev1
-2. Update in sliding window fashion
-
-### Time Complexity: O(n)
 ### Space Complexity: O(1)
+
+**Example walkthrough:**
+```
+dp[0]=1, dp[1]=1, dp[2]=2, dp[3]=4, dp[4]=7
+```
 
 <br>
 
@@ -147,15 +55,17 @@ dp[i] = dp[i-1] + dp[i-2] + dp[i-3]
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Recursive | O(3^n) | O(n) | Baseline |
-| Memoization | O(n) | O(n) | Cache results |
-| Tabulation | O(n) | O(n) | Remove recursion |
-| Space Optimized | O(n) | O(1) | Three variables |
+| Recursion | O(3^N) | O(N) stack | Brute force, overlapping subproblems |
+| Memoization | O(N) | O(N) | Cache computed states |
+| Tabulation | O(N) | O(1) | Bottom-up, possible space optimization |
 
-> **Final Complexity:** O(n) time, O(1) space
+**Key Insights:**
+1. **Identify recurrence:** Express dp[i] in terms of smaller subproblems
+2. **Base cases:** Starting values that don't depend on other states
+3. **Space optimization:** If dp[i] only depends on dp[i-1] and dp[i-2], use two variables instead of array
 
-<br>
-<br>
+
+<br><br>
 
 ---
 

@@ -1,72 +1,73 @@
-Determine if array can be partitioned into two subsets with equal sum (Subset Sum variant).
+Can you partition an array into two subsets with equal sum?
 
 <br>
 
-> Input:
-> nums = [1, 5, 11, 5]
-
-> Output:
-> true
-
-> Explanation:
-> [1, 5, 5] and [11] both sum to 11
-> 
-> **Key insight:** Find if subset with sum = total/2 exists (0/1 Knapsack).
+> Input: nums=[1,5,11,5]
+> Output: true (subsets {1,5,5} and {11})
+> **Key insight:** If total sum is odd → false. Target = sum/2. Reduce to: does a subset sum to target? 0/1 Knapsack variant with boolean DP.
 
 <br>
-
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+- Typical DP constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion (Brute Force)
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+### Time Complexity: O(2^N)
+
+> **Drawback:** Overlapping subproblems cause exponential recomputation. The same state is computed many times.
+
+> **Key Insight for Improvement:** Memoize computed states (top-down) or build bottom-up (tabulation). Recurrence: dp[j] = dp[j] || dp[j - nums[i]]
 
 <br>
 
 ---
 
-## Solution 1: Memoization (Top-Down DP)
+## Solution 2: DP — 1D boolean DP array (space-optimized knapsack)
 
-**Recurrence:**
+**Recurrence:** `dp[j] = dp[j] || dp[j - nums[i]]`
+
+**Algorithm:** 1D boolean DP array (space-optimized knapsack)
+
+### Time Complexity: O(N × sum)
+**Why?** Each state computed exactly once. Total states × O(1) per state transition.
+
+**Detailed breakdown:** Depends on input size, but each state visited once.
+
+### Space Complexity: O(sum)
+
+**Example walkthrough:**
 ```
-canPartition(i, sum) = canPartition(i-1, sum) || canPartition(i-1, sum-nums[i])
+nums=[1,5,11,5], sum=22, target=11
+Process each num, update dp[j] = dp[j] || dp[j-num]
+After all: dp[11] = true ✓
 ```
 
-
-
-### Time: O(n × sum) | Space: O(n × sum)
+<br>
 
 ---
 
-## Solution 2: Tabulation (Bottom-Up DP)
+## Complexity Progression Summary
 
-**DP State:**
-```
-dp[i][j] = can make sum j using first i elements
-dp[i][j] = dp[i-1][j] || dp[i-1][j-nums[i]]
-```
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursion | O(2^N) | O(N) stack | Brute force, overlapping subproblems |
+| Memoization | O(N × sum) | O(N) | Cache computed states |
+| Tabulation | O(N × sum) | O(sum) | Bottom-up, possible space optimization |
+
+**Key Insights:**
+1. **Identify recurrence:** Express dp[i] in terms of smaller subproblems
+2. **Base cases:** Starting values that don't depend on other states
+3. **Space optimization:** If dp[i] only depends on dp[i-1] and dp[i-2], use two variables instead of array
 
 
-
-### Time: O(n × sum) | Space: O(sum) optimized
-
----
+<br><br>
 
 ---
 

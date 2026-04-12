@@ -1,72 +1,71 @@
-Break integer n into sum of at least two positive integers and maximize their product.
+Break a positive integer n into at least two positive integers that sum to n. Maximize the product.
 
 <br>
 
-> Input:
-> n = 10
-
-> Output:
-> 36
-
-> Explanation:
-> 10 = 3 + 3 + 4, product = 3 × 3 × 4 = 36
-> 
-> **Key insight:** For each number, try all possible first breaks.
+> Input: n=10
+> Output: 36 (3+3+4=10, 3×3×4=36)
+> **Key insight:** dp[i] = max over j of (j × max(i-j, dp[i-j])). For each split j, either use (i-j) directly or break it further.
 
 <br>
-
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Values fit in 32-bit integer`
-- `DP state space fits in memory`
+- Typical DP constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion (Brute Force)
 
-1. **n = 0 or empty input:** Base case — return 0 or empty
-2. **n = 1:** Single element — trivial case
-3. **All same elements:** Check if pattern still applies
-4. **Maximum constraints:** Verify time complexity handles worst case
-5. **Negative values (if applicable):** Affects min/max DP transitions
-6. **Result requires modular arithmetic:** Use MOD = 10⁹ + 7 to prevent overflow
+### Time Complexity: O(N²)
+
+> **Drawback:** Overlapping subproblems cause exponential recomputation. The same state is computed many times.
+
+> **Key Insight for Improvement:** Memoize computed states (top-down) or build bottom-up (tabulation). Recurrence: dp[i] = max(j * max(i-j, dp[i-j])) for j=1..i-1
 
 <br>
 
 ---
 
-## Solution 1: Memoization (Top-Down DP)
+## Solution 2: DP — Bottom-up DP
 
-**Recurrence:**
+**Recurrence:** `dp[i] = max(j * max(i-j, dp[i-j])) for j=1..i-1`
+
+**Algorithm:** Bottom-up DP
+
+### Time Complexity: O(N²)
+**Why?** Each state computed exactly once. Total states × O(1) per state transition.
+
+**Detailed breakdown:** Depends on input size, but each state visited once.
+
+### Space Complexity: O(N)
+
+**Example walkthrough:**
 ```
-maxProduct(n) = max(j * (n-j), j * maxProduct(n-j)) for all j
+dp[2]=1, dp[3]=2, dp[4]=4, dp[5]=6, dp[6]=9, dp[7]=12, dp[8]=18, dp[9]=27, dp[10]=36
 ```
 
-
-
-### Time: O(n²) | Space: O(n)
+<br>
 
 ---
 
-## Solution 2: Tabulation (Bottom-Up DP)
+## Complexity Progression Summary
 
-**DP State:**
-```
-dp[i] = max product for integer i
-dp[i] = max(j * (i-j), j * dp[i-j]) for j in 1..i-1
-```
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Recursion | O(N²) | O(N) stack | Brute force, overlapping subproblems |
+| Memoization | O(N²) | O(N) | Cache computed states |
+| Tabulation | O(N²) | O(N) | Bottom-up, possible space optimization |
 
+**Key Insights:**
+1. **Identify recurrence:** Express dp[i] in terms of smaller subproblems
+2. **Base cases:** Starting values that don't depend on other states
+3. **Space optimization:** If dp[i] only depends on dp[i-1] and dp[i-2], use two variables instead of array
+4. **Math insight:** Always break into 3s (except remainder 1→use 4, remainder 2→keep 2)
 
-
-### Time: O(n²) | Space: O(n)
-
----
+<br><br>
 
 ---
 

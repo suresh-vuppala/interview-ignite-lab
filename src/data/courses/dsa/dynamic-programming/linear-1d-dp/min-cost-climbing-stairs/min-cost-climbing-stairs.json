@@ -6,15 +6,15 @@
   "mdFile": "min-cost-climbing-stairs.md",
   "codeExamples": [
     {
-      "title": "Min Cost Climbing Stairs Solution",
+      "title": "Min Cost Climbing Stairs",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/min-cost-climbing-stairs/code/cpp/min_cost_climbing_stairs.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/min-cost-climbing-stairs/code/java/MinCostClimbingStairs.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/min-cost-climbing-stairs/code/cpp/MinCostClimbingStairs.cpp"
         },
         {
           "language": "python",

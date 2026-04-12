@@ -6,15 +6,15 @@
   "mdFile": "decode-ways.md",
   "codeExamples": [
     {
-      "title": "Decode Ways Solution",
+      "title": "Decode Ways",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/decode-ways/code/cpp/decode_ways.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/decode-ways/code/java/DecodeWays.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/decode-ways/code/cpp/DecodeWays.cpp"
         },
         {
           "language": "python",

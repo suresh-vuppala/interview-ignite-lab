@@ -6,15 +6,15 @@
   "mdFile": "integer-break.md",
   "codeExamples": [
     {
-      "title": "Integer Break Solution",
+      "title": "Integer Break",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/integer-break/code/cpp/integer_break.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/integer-break/code/java/IntegerBreak.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/integer-break/code/cpp/IntegerBreak.cpp"
         },
         {
           "language": "python",
