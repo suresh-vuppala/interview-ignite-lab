@@ -6,7 +6,7 @@
   "mdFile": "bellman-ford.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Bellman-Ford Algorithm",
       "languages": [
         {
           "language": "cpp",

@@ -6,11 +6,11 @@
   "mdFile": "zero-one-bfs.md",
   "codeExamples": [
     {
-      "title": "Zero One BFS Solution",
+      "title": "Zero One BFS",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/shortest-path/zero-one-bfs/code/cpp/ZeroOneBfs.cpp"
+          "codeFile": "courses/dsa/graphs/shortest-path/zero-one-bfs/code/cpp/zero_one_bfs.cpp"
         },
         {
           "language": "java",

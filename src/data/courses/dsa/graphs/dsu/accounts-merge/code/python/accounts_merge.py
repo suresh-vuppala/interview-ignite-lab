@@ -1,18 +1,22 @@
+# ============================================================
+# Accounts Merge
+# ============================================================
+from collections import defaultdict
 class Solution:
-    def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
-        parent = list(range(len(accounts)))
+    def accountsMerge(self, accounts):
+        parent = {}
         def find(x):
-            while parent[x] != x: parent[x] = parent[parent[x]]; x = parent[x]
-            return x
-        def union(a, b): parent[find(a)] = find(b)
-        
-        email_to_id = {}
-        for i, acc in enumerate(accounts):
+            parent.setdefault(x, x)
+            if parent[x] != x: parent[x] = find(parent[x])
+            return parent[x]
+        def union(x, y):
+            parent[find(x)] = find(y)
+        email_name = {}
+        for acc in accounts:
             for email in acc[1:]:
-                if email in email_to_id: union(i, email_to_id[email])
-                else: email_to_id[email] = i
-        
-        from collections import defaultdict
-        groups = defaultdict(set)
-        for email, idx in email_to_id.items(): groups[find(idx)].add(email)
-        return [[accounts[i][0]] + sorted(emails) for i, emails in groups.items()]
+                email_name[email] = acc[0]
+                union(acc[1], email)  # Chain union through first email
+        groups = defaultdict(list)
+        for email in email_name:
+            groups[find(email)].append(email)
+        return [[email_name[emails[0]]] + sorted(emails) for emails in groups.values()]

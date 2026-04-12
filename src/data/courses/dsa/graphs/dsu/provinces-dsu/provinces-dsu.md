@@ -1,13 +1,32 @@
-Count provinces using DSU — same as count connected components with adjacency matrix.
+Count connected components (provinces) using Union-Find.
+
+<br>
+
+> Input: isConnected = [[1,1,0],[1,1,0],[0,0,1]]
+> Output: 2
+> **Key insight:** Union all connected pairs. Count distinct roots = number of components.
 
 <br>
 
 ---
 
-## Solution 1: DFS — O(n²) time
-## Solution 2: DSU — Union connected cities, count distinct roots
+## Constraints
+- `1 ≤ n ≤ 200`
 
-### Time: O(n²) | Space: O(n)
+<br>
+
+---
+
+## Solution: DSU — Union Connected, Count Roots (Optimal)
+
+**Algorithm:** For each pair (i,j) where isConnected[i][j]==1: union(i,j). Count nodes where find(i)==i (roots).
+
+### Time Complexity: O(N² × α(N)) ≈ O(N²)
+### Space Complexity: O(N)
+
+> **Drawback:** None — same asymptotic as DFS for matrix input.
+
+> **Key Insight for Improvement:** Count components = N - successful_unions (each union reduces components by 1).
 
 <br>
 
@@ -15,13 +34,16 @@ Count provinces using DSU — same as count connected components with adjacency 
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| DFS | O(n²) | O(n) | Traverse matrix |
-| DSU | O(n²) | O(n) | Union-find |
+| Solution | Time | Space |
+|----------|------|-------|
+| DFS | O(N²) | O(N) |
+| DSU | O(N²·α) | O(N) |
 
-<br>
-<br>
+**Key Insights:**
+1. **Components = N - unions:** Start with N components, each union merges two
+2. **Count roots:** Alternatively, count nodes where parent[i]==i after all unions
+
+<br><br>
 
 ---
 

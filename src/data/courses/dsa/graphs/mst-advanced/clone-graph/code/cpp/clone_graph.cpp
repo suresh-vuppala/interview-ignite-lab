@@ -1,15 +1,25 @@
+// ============================================================
+// Clone Graph
+// ============================================================
+#include <vector>
+#include <unordered_map>
+using namespace std;
+class Node { public: int val; vector<Node*> neighbors;
+    Node(int v):val(v){} Node(int v, vector<Node*> n):val(v),neighbors(n){} };
+
 class Solution {
+    unordered_map<Node*, Node*> cloneMap;
 public:
-    // O(V+E) — BFS/DFS with hash map to track cloned nodes
-    unordered_map<Node*, Node*> visited;
     Node* cloneGraph(Node* node) {
         if (!node) return nullptr;
-        if (visited.count(node)) return visited[node];
-        
+        if (cloneMap.count(node)) return cloneMap[node]; // Already cloned
+
         Node* clone = new Node(node->val);
-        visited[node] = clone;
+        cloneMap[node] = clone;
+
         for (Node* neighbor : node->neighbors)
             clone->neighbors.push_back(cloneGraph(neighbor));
+
         return clone;
     }
 };

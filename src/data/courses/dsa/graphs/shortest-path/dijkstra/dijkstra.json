@@ -6,11 +6,11 @@
   "mdFile": "dijkstra.md",
   "codeExamples": [
     {
-      "title": "Dijkstra Solution",
+      "title": "Dijkstra",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/shortest-path/dijkstra/code/cpp/Dijkstra.cpp"
+          "codeFile": "courses/dsa/graphs/shortest-path/dijkstra/code/cpp/dijkstra.cpp"
         },
         {
           "language": "java",

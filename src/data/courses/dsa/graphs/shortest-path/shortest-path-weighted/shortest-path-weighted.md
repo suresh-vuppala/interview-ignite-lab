@@ -1,18 +1,36 @@
-Find shortest path in weighted graph (general).
+Find the shortest path between two nodes in a weighted graph. Return the path and its total weight.
+
+<br>
+
+> Input: n=5, source=0, target=4, edges with weights
+> Output: path=[0,2,1,3,4], weight=7
+> **Key insight:** Dijkstra + parent tracking. During relaxation, record parent[v] = u. After Dijkstra, backtrack from target using parent pointers to reconstruct path.
 
 <br>
 
 ---
 
-## Solution 1: Dijkstra — Non-negative weights, O((V+E) log V)
-## Solution 2: Bellman-Ford — Handles negative weights, O(V × E)
-## Solution 3: Floyd-Warshall — All-pairs, O(V³)
+## Constraints
+- `1 ≤ V ≤ 10⁵`, non-negative weights
 
-**Which to use:**
-- Non-negative, single source → Dijkstra
-- Negative edges, single source → Bellman-Ford
-- All pairs → Floyd-Warshall
-- Weights 0/1 only → 0-1 BFS
+<br>
+
+---
+
+## Solution: Dijkstra + Parent Backtracking (Optimal)
+
+**Algorithm:** Run Dijkstra. Additionally, parent[v] = u when dist[v] is updated. After finding dist[target], reconstruct path by following parent pointers from target to source.
+
+### Time Complexity: O((V+E) log V)
+**Why?** Dijkstra dominates. Path reconstruction: O(V).
+
+**Detailed breakdown:** Same as Dijkstra + O(V) backtracking
+
+### Space Complexity: O(V + E)
+
+> **Drawback:** None — standard Dijkstra extension.
+
+> **Key Insight for Improvement:** For unweighted graphs, BFS is simpler and gives O(V+E) without a heap.
 
 <br>
 
@@ -20,15 +38,18 @@ Find shortest path in weighted graph (general).
 
 ## Complexity Progression Summary
 
-| Algorithm | Time | Space | Use Case |
-|-----------|------|-------|----------|
-| Dijkstra | O((V+E)log V) | O(V) | Non-negative, single source |
-| Bellman-Ford | O(V×E) | O(V) | Negative edges, single source |
-| Floyd-Warshall | O(V³) | O(V²) | All pairs |
-| 0-1 BFS | O(V+E) | O(V) | Weights are 0 or 1 |
+| Algorithm | Time | Weights | Path Recovery |
+|-----------|------|---------|--------------|
+| BFS | O(V+E) | Unweighted only | Parent array |
+| Dijkstra | O((V+E)logV) | Non-negative | Parent array |
+| Bellman-Ford | O(V×E) | Any (incl. negative) | Parent array |
 
-<br>
-<br>
+**Key Insights:**
+1. **Parent tracking:** parent[v] = u when relaxing edge u→v
+2. **Backtrack:** target → parent[target] → ... → source, then reverse
+3. **Foundation for:** All shortest path problems that need the actual path
+
+<br><br>
 
 ---
 

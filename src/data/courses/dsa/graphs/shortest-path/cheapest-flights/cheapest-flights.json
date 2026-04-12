@@ -6,11 +6,11 @@
   "mdFile": "cheapest-flights.md",
   "codeExamples": [
     {
-      "title": "Cheapest Flights Solution",
+      "title": "Cheapest Flights",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/shortest-path/cheapest-flights/code/cpp/CheapestFlights.cpp"
+          "codeFile": "courses/dsa/graphs/shortest-path/cheapest-flights/code/cpp/cheapest_flights.cpp"
         },
         {
           "language": "java",

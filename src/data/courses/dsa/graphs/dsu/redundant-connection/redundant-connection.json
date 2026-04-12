@@ -6,11 +6,11 @@
   "mdFile": "redundant-connection.md",
   "codeExamples": [
     {
-      "title": "Redundant Connection Solution",
+      "title": "Redundant Connection",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/dsu/redundant-connection/code/cpp/RedundantConnection.cpp"
+          "codeFile": "courses/dsa/graphs/dsu/redundant-connection/code/cpp/redundant_connection.cpp"
         },
         {
           "language": "java",

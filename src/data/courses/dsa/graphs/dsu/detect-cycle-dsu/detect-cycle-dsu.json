@@ -6,11 +6,11 @@
   "mdFile": "detect-cycle-dsu.md",
   "codeExamples": [
     {
-      "title": "Detect Cycle DSU Solution",
+      "title": "Detect Cycle DSU",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/dsu/detect-cycle-dsu/code/cpp/DetectCycleDsu.cpp"
+          "codeFile": "courses/dsa/graphs/dsu/detect-cycle-dsu/code/cpp/detect_cycle_dsu.cpp"
         },
         {
           "language": "java",

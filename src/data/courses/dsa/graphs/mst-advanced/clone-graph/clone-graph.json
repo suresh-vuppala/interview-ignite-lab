@@ -6,7 +6,7 @@
   "mdFile": "clone-graph.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Clone Graph",
       "languages": [
         {
           "language": "cpp",

@@ -6,15 +6,15 @@
   "mdFile": "word-ladder-ii.md",
   "codeExamples": [
     {
-      "title": "Word Ladder II Solution",
+      "title": "Word Ladder II",
       "languages": [
         {
-          "language": "java",
-          "codeFile": "courses/dsa/graphs/shortest-path-algorithms/word-ladder-ii/code/java/WordLadderII.java"
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/shortest-path-algorithms/word-ladder-ii/code/cpp/word_ladder_ii.cpp"
         },
         {
-          "language": "cpp",
-          "codeFile": "courses/dsa/graphs/shortest-path-algorithms/word-ladder-ii/code/cpp/WordLadderII.cpp"
+          "language": "java",
+          "codeFile": "courses/dsa/graphs/shortest-path-algorithms/word-ladder-ii/code/java/WordLadderIi.java"
         },
         {
           "language": "python",

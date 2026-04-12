@@ -6,11 +6,11 @@
   "mdFile": "implement-dsu.md",
   "codeExamples": [
     {
-      "title": "Implement DSU Solution",
+      "title": "Implement DSU",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/dsu/implement-dsu/code/cpp/ImplementDsu.cpp"
+          "codeFile": "courses/dsa/graphs/dsu/implement-dsu/code/cpp/implement_dsu.cpp"
         },
         {
           "language": "java",

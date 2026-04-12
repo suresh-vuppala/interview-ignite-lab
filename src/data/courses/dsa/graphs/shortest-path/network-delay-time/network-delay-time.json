@@ -6,11 +6,11 @@
   "mdFile": "network-delay-time.md",
   "codeExamples": [
     {
-      "title": "Network Delay Time Solution",
+      "title": "Network Delay Time",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/shortest-path/network-delay-time/code/cpp/NetworkDelayTime.cpp"
+          "codeFile": "courses/dsa/graphs/shortest-path/network-delay-time/code/cpp/network_delay_time.cpp"
         },
         {
           "language": "java",

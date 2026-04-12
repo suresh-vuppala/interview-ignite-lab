@@ -6,15 +6,15 @@
   "mdFile": "word-ladder.md",
   "codeExamples": [
     {
-      "title": "Word Ladder Solution",
+      "title": "Word Ladder",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/graphs/shortest-path-algorithms/word-ladder/code/cpp/word_ladder.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/graphs/shortest-path-algorithms/word-ladder/code/java/WordLadder.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/graphs/shortest-path-algorithms/word-ladder/code/cpp/WordLadder.cpp"
         },
         {
           "language": "python",

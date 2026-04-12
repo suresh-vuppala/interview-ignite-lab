@@ -1,41 +1,36 @@
+// ============================================================
+// Accounts Merge
+// ============================================================
+#include <vector>
+#include <string>
+#include <unordered_map>
+#include <map>
+#include <algorithm>
+using namespace std;
 class Solution {
+    unordered_map<int,int> p, r;
+    int find(int x){return p[x]==x?x:p[x]=find(p[x]);}
+    void unite(int x,int y){int a=find(x),b=find(y);if(a==b)return;if(r[a]<r[b])swap(a,b);p[b]=a;if(r[a]==r[b])r[a]++;}
 public:
-    // O(n * α(n)) — Union-Find: merge accounts sharing emails
-    vector<int> parent, rank_;
-    int find(int x) { return parent[x] == x ? x : parent[x] = find(parent[x]); }
-    void unite(int a, int b) {
-        a = find(a); b = find(b);
-        if (a == b) return;
-        if (rank_[a] < rank_[b]) swap(a, b);
-        parent[b] = a;
-        if (rank_[a] == rank_[b]) rank_[a]++;
-    }
-    
     vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
-        int n = accounts.size();
-        parent.resize(n); rank_.resize(n, 0);
-        iota(parent.begin(), parent.end(), 0);
-        
-        unordered_map<string, int> emailToId; // email -> first account id
-        for (int i = 0; i < n; i++) {
-            for (int j = 1; j < accounts[i].size(); j++) {
-                if (emailToId.count(accounts[i][j]))
-                    unite(i, emailToId[accounts[i][j]]);
-                else
-                    emailToId[accounts[i][j]] = i;
+        unordered_map<string,int> emailId;
+        unordered_map<string,string> emailName;
+        int id = 0;
+        for (auto& acc : accounts) {
+            for (int i = 1; i < acc.size(); i++) {
+                if (!emailId.count(acc[i])) { emailId[acc[i]] = id; p[id] = id; r[id] = 0; id++; }
+                emailName[acc[i]] = acc[0];
+                if (i > 1) unite(emailId[acc[1]], emailId[acc[i]]);
             }
         }
-        
-        // Group emails by root account
-        unordered_map<int, set<string>> groups;
-        for (auto& [email, id] : emailToId)
-            groups[find(id)].insert(email);
-        
+        map<int, vector<string>> groups;
+        for (auto& [email, eid] : emailId)
+            groups[find(eid)].push_back(email);
         vector<vector<string>> result;
-        for (auto& [id, emails] : groups) {
-            vector<string> merged = {accounts[id][0]}; // Name
-            merged.insert(merged.end(), emails.begin(), emails.end());
-            result.push_back(merged);
+        for (auto& [root, emails] : groups) {
+            sort(emails.begin(), emails.end());
+            emails.insert(emails.begin(), emailName[emails[0]]);
+            result.push_back(emails);
         }
         return result;
     }

@@ -6,7 +6,7 @@
   "mdFile": "prims-mst.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Prim's MST Algorithm",
       "languages": [
         {
           "language": "cpp",

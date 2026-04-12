@@ -1,11 +1,14 @@
+# ============================================================
+# Clone Graph
+# ============================================================
 class Solution:
-    def cloneGraph(self, node: 'Node') -> 'Node':
+    def cloneGraph(self, node):
         if not node: return None
-        visited = {}
+        clone_map = {}
         def dfs(n):
-            if n in visited: return visited[n]
+            if n in clone_map: return clone_map[n]
             clone = Node(n.val)
-            visited[n] = clone
-            clone.neighbors = [dfs(nb) for nb in n.neighbors]
+            clone_map[n] = clone
+            for nb in n.neighbors: clone.neighbors.append(dfs(nb))
             return clone
         return dfs(node)

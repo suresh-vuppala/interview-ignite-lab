@@ -6,11 +6,11 @@
   "mdFile": "provinces-dsu.md",
   "codeExamples": [
     {
-      "title": "Provinces DSU Solution",
+      "title": "Provinces DSU",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/dsu/provinces-dsu/code/cpp/ProvincesDsu.cpp"
+          "codeFile": "courses/dsa/graphs/dsu/provinces-dsu/code/cpp/provinces_dsu.cpp"
         },
         {
           "language": "java",

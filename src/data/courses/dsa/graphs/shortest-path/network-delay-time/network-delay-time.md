@@ -1,22 +1,32 @@
-Find time for signal to reach all nodes from source (Dijkstra application).
+Given a network of n nodes and directed weighted edges, find the time for a signal to reach all nodes from a source. Return -1 if not all nodes reachable.
+
+<br>
+
+> Input: times=[[2,1,1],[2,3,1],[3,4,1]], n=4, k=2
+> Output: 2
+> **Key insight:** Dijkstra from source k. Answer = max(dist[i]) for all i. If any dist[i] = ∞ → return -1.
 
 <br>
 
 ---
 
-## Solution 1: Dijkstra (Standard)
-
-Run Dijkstra from source. Answer = max(dist[v]) for all reachable v. If any unreachable → -1.
-
-### Time: O((V + E) log V) | Space: O(V + E)
+## Constraints
+- `1 ≤ n ≤ 100`, `1 ≤ times.length ≤ 6000`
 
 <br>
 
 ---
 
-## Solution 2: Bellman-Ford (if negative weights possible)
+## Solution: Dijkstra + Max Distance (Optimal)
 
-### Time: O(V × E) | Space: O(V)
+**Algorithm:** Run Dijkstra from k. Return max of all distances. If any node unreachable → -1.
+
+### Time Complexity: O((V+E) log V)
+### Space Complexity: O(V + E)
+
+> **Drawback:** None — direct Dijkstra application.
+
+> **Key Insight for Improvement:** For small n, even O(V²) Dijkstra works. This is a pure application problem.
 
 <br>
 
@@ -24,13 +34,16 @@ Run Dijkstra from source. Answer = max(dist[v]) for all reachable v. If any unre
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Dijkstra | O((V+E)log V) | O(V+E) | Standard SSSP |
-| Bellman-Ford | O(V×E) | O(V) | Handles negatives |
+| Solution | Time | Space |
+|----------|------|-------|
+| Dijkstra | O((V+E)logV) | O(V+E) |
 
-<br>
-<br>
+**Key Insights:**
+1. **Direct Dijkstra application:** Find SSSP, then answer = max distance
+2. **Check reachability:** If any dist = ∞ → -1
+3. **1-indexed nodes:** Remember to handle 1-based indexing
+
+<br><br>
 
 ---
 

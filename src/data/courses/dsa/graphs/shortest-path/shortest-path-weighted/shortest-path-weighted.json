@@ -6,11 +6,11 @@
   "mdFile": "shortest-path-weighted.md",
   "codeExamples": [
     {
-      "title": "Shortest Path Weighted Solution",
+      "title": "Shortest Path Weighted",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/graphs/shortest-path/shortest-path-weighted/code/cpp/ShortestPathWeighted.cpp"
+          "codeFile": "courses/dsa/graphs/shortest-path/shortest-path-weighted/code/cpp/shortest_path_weighted.cpp"
         },
         {
           "language": "java",

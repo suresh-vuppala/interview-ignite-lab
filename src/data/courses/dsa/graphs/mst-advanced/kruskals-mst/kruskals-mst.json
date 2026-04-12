@@ -6,7 +6,7 @@
   "mdFile": "kruskals-mst.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Kruskal's MST Algorithm",
       "languages": [
         {
           "language": "cpp",

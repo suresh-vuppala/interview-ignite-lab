@@ -1,24 +1,34 @@
-Merge accounts sharing common emails using Union-Find.
+Merge accounts that share at least one email. Each account has a name and list of emails.
+
+<br>
+
+> Input: accounts=[["John","john@mail","john_neo@mail"],["John","john@mail","john00@mail"],["Mary","mary@mail"],["John","johnnybravo@mail"]]
+> Output: [["John","john00@mail","john@mail","john_neo@mail"],["Mary","mary@mail"],["John","johnnybravo@mail"]]
+> **Key insight:** Union-Find on emails. For each account, union all emails together. Same-name check not needed — shared email = same person.
 
 <br>
 
 ---
 
-## Solution 1: DFS/BFS on Email Graph
-
-Build graph: emails are nodes, edges between emails in same account. DFS/BFS to find connected components.
-
-### Time: O(N × L) where N = accounts, L = avg emails | Space: O(N × L)
+## Constraints
+- `1 ≤ accounts.length ≤ 1000`
 
 <br>
 
 ---
 
-## Solution 2: Union-Find (Optimal)
+## Solution: DSU on Emails (Optimal)
 
-Map each email to an account ID. For each account, union all its emails together. Group by root.
+**Algorithm:**
+1. Map each email to an integer ID. Union all emails within same account.
+2. Group emails by root. Attach account name. Sort emails.
 
-### Time: O(N × L × α(N)) ≈ O(N × L) | Space: O(N × L)
+### Time Complexity: O(N × K × α) where K = emails per account
+### Space Complexity: O(N × K)
+
+> **Drawback:** None.
+
+> **Key Insight for Improvement:** Key insight: union first email with all others in same account. Don't union all pairs — just chain through first email.
 
 <br>
 
@@ -26,13 +36,16 @@ Map each email to an account ID. For each account, union all its emails together
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Email Graph DFS | O(NL) | O(NL) | Graph of emails |
-| Union-Find | O(NL) | O(NL) | Union emails per account |
+| Solution | Time | Space |
+|----------|------|-------|
+| DSU on emails | O(NK·α) | O(NK) |
 
-<br>
-<br>
+**Key Insights:**
+1. **Emails as nodes:** Union emails, not accounts
+2. **Shared email = same person:** Even if names are different (though problem guarantees same name)
+3. **Chain union:** Union email[0] with email[1], email[0] with email[2], etc.
+
+<br><br>
 
 ---
 

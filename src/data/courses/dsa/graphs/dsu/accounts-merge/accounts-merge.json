@@ -6,7 +6,7 @@
   "mdFile": "accounts-merge.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Accounts Merge",
       "languages": [
         {
           "language": "cpp",

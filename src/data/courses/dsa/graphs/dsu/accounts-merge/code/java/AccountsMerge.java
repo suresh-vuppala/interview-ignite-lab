@@ -1,23 +1,23 @@
+// ============================================================
+// Accounts Merge
+// ============================================================
+import java.util.*;
 class Solution {
-    int[] parent, rank;
-    int find(int x) { return parent[x] == x ? x : (parent[x] = find(parent[x])); }
-    void union(int a, int b) { a=find(a); b=find(b); if(a!=b){if(rank[a]<rank[b]){int t=a;a=b;b=t;} parent[b]=a; if(rank[a]==rank[b])rank[a]++;} }
-    
+    int[] pa; int find(int x){return pa[x]==x?x:(pa[x]=find(pa[x]));}
+    void unite(int x,int y){int a=find(x),b=find(y);if(a!=b)pa[b]=a;}
     public List<List<String>> accountsMerge(List<List<String>> accounts) {
-        int n = accounts.size();
-        parent = new int[n]; rank = new int[n];
-        for (int i = 0; i < n; i++) parent[i] = i;
-        Map<String, Integer> emailToId = new HashMap<>();
-        for (int i = 0; i < n; i++)
-            for (int j = 1; j < accounts.get(i).size(); j++) {
-                String email = accounts.get(i).get(j);
-                if (emailToId.containsKey(email)) union(i, emailToId.get(email));
-                else emailToId.put(email, i);
-            }
-        Map<Integer, TreeSet<String>> groups = new HashMap<>();
-        for (var e : emailToId.entrySet()) groups.computeIfAbsent(find(e.getValue()), k->new TreeSet<>()).add(e.getKey());
-        List<List<String>> res = new ArrayList<>();
-        for (var e : groups.entrySet()) { List<String> l = new ArrayList<>(); l.add(accounts.get(e.getKey()).get(0)); l.addAll(e.getValue()); res.add(l); }
-        return res;
+        Map<String,Integer> emailId = new HashMap<>(); int id = 0;
+        Map<String,String> emailName = new HashMap<>();
+        for (var acc : accounts) for (int i=1;i<acc.size();i++) {
+            if (!emailId.containsKey(acc.get(i))) emailId.put(acc.get(i), id++);
+            emailName.put(acc.get(i), acc.get(0));
+        }
+        pa = new int[id]; for (int i=0;i<id;i++) pa[i]=i;
+        for (var acc : accounts) for (int i=2;i<acc.size();i++) unite(emailId.get(acc.get(1)),emailId.get(acc.get(i)));
+        Map<Integer,List<String>> groups = new HashMap<>();
+        for (var e : emailId.entrySet()) groups.computeIfAbsent(find(e.getValue()),k->new ArrayList<>()).add(e.getKey());
+        List<List<String>> result = new ArrayList<>();
+        for (var g : groups.values()) { Collections.sort(g); g.add(0,emailName.get(g.get(0))); result.add(g); }
+        return result;
     }
 }

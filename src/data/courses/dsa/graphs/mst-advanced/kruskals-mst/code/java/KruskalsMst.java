@@ -1,12 +1,17 @@
+// ============================================================
+// Kruskal's MST
+// ============================================================
+import java.util.*;
 class Solution {
-    int[] parent, rank;
-    int find(int x) { return parent[x]==x?x:(parent[x]=find(parent[x])); }
-    boolean union(int a, int b) { a=find(a);b=find(b); if(a==b)return false; if(rank[a]<rank[b]){int t=a;a=b;b=t;} parent[b]=a; if(rank[a]==rank[b])rank[a]++; return true; }
-    public int kruskalMST(int V, int[][] edges) {
-        parent=new int[V]; rank=new int[V]; for(int i=0;i<V;i++)parent[i]=i;
+    int[] pa, rk;
+    int find(int x){return pa[x]==x?x:(pa[x]=find(pa[x]));}
+    boolean unite(int x,int y){int a=find(x),b=find(y);if(a==b)return false;if(rk[a]<rk[b]){int t=a;a=b;b=t;}pa[b]=a;if(rk[a]==rk[b])rk[a]++;return true;}
+    public int kruskalMST(int n, int[][] edges) {
+        pa=new int[n]; rk=new int[n]; for(int i=0;i<n;i++) pa[i]=i;
         Arrays.sort(edges, (a,b)->a[2]-b[2]);
-        int total=0, count=0;
-        for(int[] e:edges) if(union(e[0],e[1])) { total+=e[2]; if(++count==V-1)break; }
+        int total = 0, cnt = 0;
+        for (int[] e : edges)
+            if (unite(e[0],e[1])) { total+=e[2]; if(++cnt==n-1) break; }
         return total;
     }
 }

@@ -6,7 +6,7 @@
   "mdFile": "floyd-warshall.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Floyd-Warshall Algorithm",
       "languages": [
         {
           "language": "cpp",
