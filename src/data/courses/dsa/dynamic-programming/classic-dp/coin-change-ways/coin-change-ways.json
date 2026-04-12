@@ -6,15 +6,15 @@
   "mdFile": "coin-change-ways.md",
   "codeExamples": [
     {
-      "title": "Coin Change II Ways Solution",
+      "title": "Coin Change II Ways",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-ways/code/cpp/coin_change_ways.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-ways/code/java/CoinChangeWays.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-ways/code/cpp/CoinChangeWays.cpp"
         },
         {
           "language": "python",

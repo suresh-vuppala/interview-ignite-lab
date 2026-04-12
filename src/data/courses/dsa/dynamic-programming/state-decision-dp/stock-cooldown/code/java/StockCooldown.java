@@ -1,3 +1,1 @@
-class StockCooldown {
-    // DP solution
-}
+class Solution{public int maxProfit(int[]p){if(p.length<2)return 0;int sold=0,held=Integer.MIN_VALUE,rest=0;for(int x:p){int ps=sold;sold=held+x;held=Math.max(held,rest-x);rest=Math.max(rest,ps);}return Math.max(sold,rest);}}

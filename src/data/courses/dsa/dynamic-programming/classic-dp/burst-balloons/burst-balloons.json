@@ -6,15 +6,15 @@
   "mdFile": "burst-balloons.md",
   "codeExamples": [
     {
-      "title": "Burst Balloons Solution",
+      "title": "Burst Balloons",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/burst-balloons/code/cpp/burst_balloons.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/classic-dp/burst-balloons/code/java/BurstBalloons.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/classic-dp/burst-balloons/code/cpp/BurstBalloons.cpp"
         },
         {
           "language": "python",

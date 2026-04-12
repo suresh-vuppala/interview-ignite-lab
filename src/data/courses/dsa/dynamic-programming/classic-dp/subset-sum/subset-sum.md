@@ -1,15 +1,43 @@
-Check if a subset with given sum exists.
+Determine if a subset exists with sum equal to target.
+
+<br>
+
+> **Key insight:** Boolean knapsack: dp[j] = dp[j] || dp[j-nums[i]]. Process right to left (0/1 knapsack).
 
 <br>
 
 ---
 
-## Solution 1: Recursion — Try include/exclude each element O(2^n)
-## Solution 2: DP Table (Optimal)
+## Constraints
+- Typical DP constraints
 
-dp[i][s] = can we make sum s using first i elements. dp[i][s] = dp[i-1][s] || dp[i-1][s-nums[i]].
+<br>
 
-### Time: O(n × sum) | Space: O(n × sum) → O(sum) with space optimization
+---
+
+## Solution 1: Recursion
+
+> **Drawback:** Overlapping subproblems.
+
+> **Key Insight for Improvement:** Recurrence: `dp[j] = dp[j] || dp[j-nums[i]]`
+
+<br>
+
+---
+
+## Solution 2: DP — Bottom-up
+
+**Recurrence:** `dp[j] = dp[j] || dp[j-nums[i]]`
+
+### Time Complexity: O(N×target)
+**Why?** Each state computed once.
+
+### Space Complexity: O(target)
+
+**Example walkthrough:**
+```
+nums=[3,34,4,12,5,2], target=9 → true (4+5=9)
+```
 
 <br>
 
@@ -17,13 +45,17 @@ dp[i][s] = can we make sum s using first i elements. dp[i][s] = dp[i-1][s] || dp
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Recursion | O(2^n) | O(n) | Exponential |
-| DP | O(n × sum) | O(sum) | Pseudo-polynomial |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | Exponential | O(N) stack |
+| DP | O(N×target) | O(target) |
 
-<br>
-<br>
+**Key Insights:**
+1. Identify states, transitions, base cases
+2. Space optimization when possible
+
+
+<br><br>
 
 ---
 

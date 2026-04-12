@@ -6,15 +6,15 @@
   "mdFile": "maximum-sum-submatrix.md",
   "codeExamples": [
     {
-      "title": "Maximum Sum Submatrix Solution",
+      "title": "Maximum Sum Submatrix",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-sum-submatrix/code/cpp/maximum_sum_submatrix.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-sum-submatrix/code/java/MaximumSumSubmatrix.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-sum-submatrix/code/cpp/MaximumSumSubmatrix.cpp"
         },
         {
           "language": "python",

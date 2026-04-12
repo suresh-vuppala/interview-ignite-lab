@@ -6,7 +6,7 @@
   "mdFile": "wildcard-matching.md",
   "codeExamples": [
     {
-      "title": "Solution",
+      "title": "Wildcard Matching",
       "languages": [
         {
           "language": "cpp",

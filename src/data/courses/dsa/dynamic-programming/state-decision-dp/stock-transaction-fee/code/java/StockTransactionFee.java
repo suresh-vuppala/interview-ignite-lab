@@ -1,3 +1,1 @@
-class StockTransactionFee {
-    // DP solution
-}
+class Solution{public int maxProfit(int[]p,int fee){int cash=0,hold=-p[0];for(int i=1;i<p.length;i++){cash=Math.max(cash,hold+p[i]-fee);hold=Math.max(hold,cash-p[i]);}return cash;}}

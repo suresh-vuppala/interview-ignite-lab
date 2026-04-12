@@ -1,15 +1,43 @@
-Rob maximum from binary tree — can't rob adjacent (parent-child) nodes.
+Houses form a binary tree. Can't rob directly connected (parent-child). Maximize total.
+
+<br>
+
+> **Key insight:** DFS returns (skip, take) pair. skip = max of children's skip/take. take = val + children's skip.
 
 <br>
 
 ---
 
-## Solution 1: Recursion — Try rob/skip each node O(2^n)
-## Solution 2: DFS returning (rob, skip) pair
+## Constraints
+- Typical DP constraints
 
-At each node: rob = node.val + left.skip + right.skip. skip = max(left.rob, left.skip) + max(right.rob, right.skip).
+<br>
 
-### Time: O(n) | Space: O(h)
+---
+
+## Solution 1: Recursion
+
+> **Drawback:** Overlapping subproblems.
+
+> **Key Insight for Improvement:** Recurrence: `State machine / track approach`
+
+<br>
+
+---
+
+## Solution 2: DP — Bottom-up
+
+**Recurrence:** `State machine / track approach`
+
+### Time Complexity: O(N)
+**Why?** Each state computed once.
+
+### Space Complexity: O(1) or O(K)
+
+**Example walkthrough:**
+```
+Single pass through prices/values tracking states
+```
 
 <br>
 
@@ -17,13 +45,17 @@ At each node: rob = node.val + left.skip + right.skip. skip = max(left.rob, left
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Recursion | O(2^n) | O(n) | Exponential choices |
-| DFS (rob, skip) | O(n) | O(h) | Return pair eliminates recomputation |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | Exponential | O(N) stack |
+| DP | O(N) | O(1) or O(K) |
 
-<br>
-<br>
+**Key Insights:**
+1. Identify states, transitions, base cases
+2. Space optimization when possible
+
+
+<br><br>
 
 ---
 

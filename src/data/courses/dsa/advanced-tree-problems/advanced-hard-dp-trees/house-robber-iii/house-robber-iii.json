@@ -1,1 +1,27 @@
-{"title":"House Robber III","slug":"house-robber-iii","isPremium":false,"isPosted":true,"description":"Maximum sum using tree DP","mdFile":"dsa/advanced-tree-problems/advanced-hard-dp-trees/house-robber-iii/house-robber-iii.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/advanced-tree-problems/advanced-hard-dp-trees/house-robber-iii/code/cpp/HouseRobberIII.cpp","language":"cpp"},{"codeFile":"courses/dsa/advanced-tree-problems/advanced-hard-dp-trees/house-robber-iii/code/java/HouseRobberIII.java","language":"java"},{"codeFile":"courses/dsa/advanced-tree-problems/advanced-hard-dp-trees/house-robber-iii/code/python/house_robber_iii.py","language":"python"}],"title":"House Robber III Solution"}]}
+{
+  "title": "House Robber III",
+  "slug": "house-robber-iii",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Maximum sum using tree DP",
+  "mdFile": "dsa/advanced-tree-problems/advanced-hard-dp-trees/house-robber-iii/house-robber-iii.md",
+  "codeExamples": [
+    {
+      "title": "House Robber III",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/advanced-tree-problems/advanced-hard-dp-trees/house-robber-iii/code/cpp/house_robber_iii.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/advanced-tree-problems/advanced-hard-dp-trees/house-robber-iii/code/java/HouseRobberIii.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/advanced-tree-problems/advanced-hard-dp-trees/house-robber-iii/code/python/house_robber_iii.py"
+        }
+      ]
+    }
+  ]
+}

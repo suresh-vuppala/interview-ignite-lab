@@ -6,15 +6,15 @@
   "mdFile": "edit-distance.md",
   "codeExamples": [
     {
-      "title": "Edit Distance Solution",
+      "title": "Edit Distance",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/edit-distance/code/cpp/edit_distance.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/string-dp/edit-distance/code/java/EditDistance.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/string-dp/edit-distance/code/cpp/EditDistance.cpp"
         },
         {
           "language": "python",

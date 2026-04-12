@@ -6,15 +6,15 @@
   "mdFile": "minimum-path-sum.md",
   "codeExamples": [
     {
-      "title": "Minimum Path Sum Solution",
+      "title": "Minimum Path Sum",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/minimum-path-sum/code/cpp/minimum_path_sum.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/minimum-path-sum/code/java/MinimumPathSum.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/minimum-path-sum/code/cpp/MinimumPathSum.cpp"
         },
         {
           "language": "python",

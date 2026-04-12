@@ -1,12 +1,43 @@
-Find longest subsequence that first increases then decreases.
+Find the length of the longest bitonic subsequence (first increasing, then decreasing).
+
+<br>
+
+> **Key insight:** Compute LIS from left (inc[i]) and LIS from right (dec[i]). Answer = max(inc[i]+dec[i]-1).
 
 <br>
 
 ---
 
-## Solution 1: LIS from left + LIS from right — For each i: bitonic[i] = LIS_left[i] + LIS_right[i] - 1
+## Constraints
+- Typical DP constraints
 
-### Time: O(n²) | Space: O(n)
+<br>
+
+---
+
+## Solution 1: Recursion
+
+> **Drawback:** Overlapping subproblems.
+
+> **Key Insight for Improvement:** Recurrence: `bitonic[i] = inc[i] + dec[i] - 1`
+
+<br>
+
+---
+
+## Solution 2: DP — Bottom-up
+
+**Recurrence:** `bitonic[i] = inc[i] + dec[i] - 1`
+
+### Time Complexity: O(N²)
+**Why?** Each state computed once.
+
+### Space Complexity: O(N)
+
+**Example walkthrough:**
+```
+nums=[1,11,2,10,4,5,2,1] → 6 (1,2,10,4,2,1 or 1,2,5,4,2,1)
+```
 
 <br>
 
@@ -14,12 +45,17 @@ Find longest subsequence that first increases then decreases.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Two LIS passes | O(n²) | O(n) | LIS left + LIS right - 1 |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | Exponential | O(N) stack |
+| DP | O(N²) | O(N) |
 
-<br>
-<br>
+**Key Insights:**
+1. Identify states, transitions, base cases
+2. Space optimization when possible
+
+
+<br><br>
 
 ---
 

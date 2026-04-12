@@ -1,13 +1,43 @@
-Maximize profit with at most k transactions.
+At most K transactions. Maximize profit.
+
+<br>
+
+> **Key insight:** Generalized: K buy/profit pairs. If K ≥ N/2, reduce to unlimited.
 
 <br>
 
 ---
 
-## Solution 1: If k >= n/2 → unlimited (greedy)
-## Solution 2: DP — dp[t][d] = max profit on day d with t transactions. buy[t] and sell[t] states.
+## Constraints
+- Typical DP constraints
 
-### Time: O(n × k) | Space: O(k)
+<br>
+
+---
+
+## Solution 1: Recursion
+
+> **Drawback:** Overlapping subproblems.
+
+> **Key Insight for Improvement:** Recurrence: `State machine / track approach`
+
+<br>
+
+---
+
+## Solution 2: DP — Bottom-up
+
+**Recurrence:** `State machine / track approach`
+
+### Time Complexity: O(N×K)
+**Why?** Each state computed once.
+
+### Space Complexity: O(1) or O(K)
+
+**Example walkthrough:**
+```
+Single pass through prices/values tracking states
+```
 
 <br>
 
@@ -15,13 +45,17 @@ Maximize profit with at most k transactions.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Greedy (k large) | O(n) | O(1) | Unlimited when k ≥ n/2 |
-| DP states | O(nk) | O(k) | Buy/sell states per transaction |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | Exponential | O(N) stack |
+| DP | O(N×K) | O(1) or O(K) |
 
-<br>
-<br>
+**Key Insights:**
+1. Identify states, transitions, base cases
+2. Space optimization when possible
+
+
+<br><br>
 
 ---
 

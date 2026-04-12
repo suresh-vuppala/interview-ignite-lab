@@ -6,15 +6,15 @@
   "mdFile": "stock-buy-sell-iv.md",
   "codeExamples": [
     {
-      "title": "Stock Buy Sell IV Solution",
+      "title": "Stock Buy Sell IV",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-iv/code/cpp/stock_buy_sell_iv.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-iv/code/java/StockBuySellIv.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-iv/code/cpp/StockBuySellIv.cpp"
         },
         {
           "language": "python",

@@ -1,3 +1,1 @@
-class StockBuySellIii {
-    // DP solution
-}
+class Solution{public int maxProfit(int[]p){int b1=Integer.MAX_VALUE,b2=Integer.MAX_VALUE,p1=0,p2=0;for(int x:p){b1=Math.min(b1,x);p1=Math.max(p1,x-b1);b2=Math.min(b2,x-p1);p2=Math.max(p2,x-b2);}return p2;}}

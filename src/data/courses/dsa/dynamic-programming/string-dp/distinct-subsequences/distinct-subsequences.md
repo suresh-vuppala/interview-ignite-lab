@@ -2,12 +2,47 @@ Count distinct subsequences of s that equal t.
 
 <br>
 
+> Standard DP problem
+> **Key insight:** dp[i][j] = dp[i-1][j-1] + dp[i-1][j] if match, else dp[i-1][j]
+
+<br>
+
 ---
 
-## Solution 1: Recursion — O(2^n)
-## Solution 2: DP — dp[i][j] = ways to form t[0..j-1] from s[0..i-1]. If match: dp[i-1][j-1]+dp[i-1][j]. Else: dp[i-1][j].
+## Constraints
+- Typical DP constraints
 
-### Time: O(m × n) | Space: O(n) with 1D optimization
+<br>
+
+---
+
+## Solution 1: Recursion (Brute Force)
+
+### Time Complexity: O(2^N)
+
+> **Drawback:** Overlapping subproblems cause exponential recomputation.
+
+> **Key Insight for Improvement:** Memoize or tabulate. Recurrence: `dp[i][j] = dp[i-1][j] + (dp[i-1][j-1] if s[i]==t[j])`
+
+<br>
+
+---
+
+## Solution 2: DP — Bottom-up DP
+
+**Recurrence:** `dp[i][j] = dp[i-1][j] + (dp[i-1][j-1] if s[i]==t[j])`
+
+### Time Complexity: O(m×n) or O(N²)
+**Why?** Each state computed once.
+
+**Detailed breakdown:** States × transition cost
+
+### Space Complexity: O(N) or O(m×n)
+
+**Example walkthrough:**
+```
+Apply recurrence: dp[i][j] = dp[i-1][j] + (dp[i-1][j-1] if s[i]==t[j])
+```
 
 <br>
 
@@ -15,13 +50,18 @@ Count distinct subsequences of s that equal t.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Recursion | O(2^n) | O(n) | Exponential |
-| DP | O(mn) | O(n) | Count subsequence matches |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | O(2^N) | O(N) stack |
+| Memoization | O(m×n) or O(N²) | Same as tabulation |
+| Tabulation | O(m×n) or O(N²) | O(N) or O(m×n) |
 
-<br>
-<br>
+**Key Insights:**
+1. Identify recurrence and base cases
+2. Optimize space if dp[i] depends only on previous row/state
+
+
+<br><br>
 
 ---
 

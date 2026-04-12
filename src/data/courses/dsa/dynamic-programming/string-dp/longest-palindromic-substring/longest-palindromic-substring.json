@@ -6,15 +6,15 @@
   "mdFile": "longest-palindromic-substring.md",
   "codeExamples": [
     {
-      "title": "Longest Palindromic Substring Solution",
+      "title": "Longest Palindromic Substring",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/longest-palindromic-substring/code/cpp/longest_palindromic_substring.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/string-dp/longest-palindromic-substring/code/java/LongestPalindromicSubstring.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/string-dp/longest-palindromic-substring/code/cpp/LongestPalindromicSubstring.cpp"
         },
         {
           "language": "python",

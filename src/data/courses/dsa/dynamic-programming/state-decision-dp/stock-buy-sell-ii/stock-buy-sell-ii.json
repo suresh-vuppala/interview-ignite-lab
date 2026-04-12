@@ -6,15 +6,15 @@
   "mdFile": "stock-buy-sell-ii.md",
   "codeExamples": [
     {
-      "title": "Stock Buy Sell II Solution",
+      "title": "Stock Buy Sell II",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-ii/code/cpp/stock_buy_sell_ii.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-ii/code/java/StockBuySellIi.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-ii/code/cpp/StockBuySellIi.cpp"
         },
         {
           "language": "python",

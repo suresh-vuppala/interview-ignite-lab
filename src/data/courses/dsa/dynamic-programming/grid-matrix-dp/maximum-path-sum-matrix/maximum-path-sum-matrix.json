@@ -6,15 +6,15 @@
   "mdFile": "maximum-path-sum-matrix.md",
   "codeExamples": [
     {
-      "title": "Maximum Path Sum Matrix Solution",
+      "title": "Maximum Path Sum Matrix",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-path-sum-matrix/code/cpp/maximum_path_sum_matrix.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-path-sum-matrix/code/java/MaximumPathSumMatrix.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-path-sum-matrix/code/cpp/MaximumPathSumMatrix.cpp"
         },
         {
           "language": "python",

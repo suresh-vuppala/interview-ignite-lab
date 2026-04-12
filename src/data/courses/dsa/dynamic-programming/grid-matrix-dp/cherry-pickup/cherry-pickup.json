@@ -6,15 +6,15 @@
   "mdFile": "cherry-pickup.md",
   "codeExamples": [
     {
-      "title": "Cherry Pickup Solution",
+      "title": "Cherry Pickup",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/cherry-pickup/code/cpp/cherry_pickup.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/cherry-pickup/code/java/CherryPickup.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/cherry-pickup/code/cpp/CherryPickup.cpp"
         },
         {
           "language": "python",

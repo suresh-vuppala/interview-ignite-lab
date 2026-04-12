@@ -1,15 +1,43 @@
-Maximize coins from bursting balloons (when balloon i bursts, coins = nums[left] × nums[i] × nums[right]).
+Burst balloons to maximize coins. Bursting balloon i gives nums[left]×nums[i]×nums[right].
+
+<br>
+
+> **Key insight:** Think BACKWARDS: which balloon to burst LAST in range [i,j]? dp[i][j] = max(dp[i][k-1] + dp[k+1][j] + nums[i-1]*nums[k]*nums[j+1]) for k in [i,j].
 
 <br>
 
 ---
 
-## Solution 1: Backtracking — Try all orderings O(n!)
-## Solution 2: DP — Think of last balloon to burst in range [i,j]. dp[i][j] = max coins for range.
+## Constraints
+- Typical DP constraints
 
-### Time: O(n³) | Space: O(n²)
+<br>
 
-**Key insight:** Instead of first-to-burst, think LAST-to-burst. When k is last in [i,j], its neighbors are i-1 and j+1 (guaranteed to still exist).
+---
+
+## Solution 1: Recursion
+
+> **Drawback:** Overlapping subproblems.
+
+> **Key Insight for Improvement:** Recurrence: `dp[i][j] = max(dp[i][k-1] + nums[i-1]*nums[k]*nums[j+1] + dp[k+1][j])`
+
+<br>
+
+---
+
+## Solution 2: DP — Bottom-up
+
+**Recurrence:** `dp[i][j] = max(dp[i][k-1] + nums[i-1]*nums[k]*nums[j+1] + dp[k+1][j])`
+
+### Time Complexity: O(N³)
+**Why?** Each state computed once.
+
+### Space Complexity: O(N²)
+
+**Example walkthrough:**
+```
+nums=[3,1,5,8] → 167. Burst order: 1, then 5, then 3, then 8.
+```
 
 <br>
 
@@ -17,13 +45,17 @@ Maximize coins from bursting balloons (when balloon i bursts, coins = nums[left]
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Backtracking | O(n!) | O(n) | Try all orderings |
-| Interval DP | O(n³) | O(n²) | Last-to-burst insight |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | Exponential | O(N) stack |
+| DP | O(N³) | O(N²) |
 
-<br>
-<br>
+**Key Insights:**
+1. Identify states, transitions, base cases
+2. Space optimization when possible
+
+
+<br><br>
 
 ---
 

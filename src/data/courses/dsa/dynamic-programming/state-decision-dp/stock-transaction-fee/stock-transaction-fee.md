@@ -1,12 +1,43 @@
-Buy/sell with transaction fee per trade.
+Buy/sell unlimited times with transaction fee per trade.
+
+<br>
+
+> **Key insight:** Two states: cash (no stock), hold (have stock). Fee on sell.
 
 <br>
 
 ---
 
-## Solution 1: DP — hold = max(hold, cash - price), cash = max(cash, hold + price - fee)
+## Constraints
+- Typical DP constraints
 
-### Time: O(n) | Space: O(1)
+<br>
+
+---
+
+## Solution 1: Recursion
+
+> **Drawback:** Overlapping subproblems.
+
+> **Key Insight for Improvement:** Recurrence: `State machine / track approach`
+
+<br>
+
+---
+
+## Solution 2: DP — Bottom-up
+
+**Recurrence:** `State machine / track approach`
+
+### Time Complexity: O(N)
+**Why?** Each state computed once.
+
+### Space Complexity: O(1) or O(K)
+
+**Example walkthrough:**
+```
+Single pass through prices/values tracking states
+```
 
 <br>
 
@@ -14,12 +45,17 @@ Buy/sell with transaction fee per trade.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Hold/Cash DP | O(n) | O(1) | Subtract fee on sell |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | Exponential | O(N) stack |
+| DP | O(N) | O(1) or O(K) |
 
-<br>
-<br>
+**Key Insights:**
+1. Identify states, transitions, base cases
+2. Space optimization when possible
+
+
+<br><br>
 
 ---
 

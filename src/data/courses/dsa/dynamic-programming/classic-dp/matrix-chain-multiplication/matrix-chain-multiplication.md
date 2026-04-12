@@ -1,13 +1,43 @@
-Minimum cost to multiply chain of matrices.
+Find minimum number of scalar multiplications to multiply a chain of matrices.
+
+<br>
+
+> **Key insight:** dp[i][j] = min(dp[i][k] + dp[k+1][j] + dims[i-1]*dims[k]*dims[j]) for all k in [i,j). Try every split point.
 
 <br>
 
 ---
 
-## Solution 1: Recursion — Try all split points O(2^n)
-## Solution 2: DP — dp[i][j] = min cost for matrices i..j. Try all k splits.
+## Constraints
+- Typical DP constraints
 
-### Time: O(n³) | Space: O(n²)
+<br>
+
+---
+
+## Solution 1: Recursion
+
+> **Drawback:** Overlapping subproblems.
+
+> **Key Insight for Improvement:** Recurrence: `dp[i][j] = min(dp[i][k] + dp[k+1][j] + d[i-1]*d[k]*d[j])`
+
+<br>
+
+---
+
+## Solution 2: DP — Bottom-up
+
+**Recurrence:** `dp[i][j] = min(dp[i][k] + dp[k+1][j] + d[i-1]*d[k]*d[j])`
+
+### Time Complexity: O(N³)
+**Why?** Each state computed once.
+
+### Space Complexity: O(N²)
+
+**Example walkthrough:**
+```
+dims=[10,20,30,40]: dp[1][3] = min splits. Optimal: (A×B)×C or A×(B×C)
+```
 
 <br>
 
@@ -15,13 +45,17 @@ Minimum cost to multiply chain of matrices.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Recursion | O(2^n) | O(n) | Exponential |
-| DP | O(n³) | O(n²) | Fill diagonally, try all splits |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | Exponential | O(N) stack |
+| DP | O(N³) | O(N²) |
 
-<br>
-<br>
+**Key Insights:**
+1. Identify states, transitions, base cases
+2. Space optimization when possible
+
+
+<br><br>
 
 ---
 

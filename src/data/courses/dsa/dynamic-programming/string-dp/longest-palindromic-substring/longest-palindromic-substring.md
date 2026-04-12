@@ -2,15 +2,47 @@ Find the longest palindromic substring.
 
 <br>
 
+> s='babad' → 'bab' or 'aba'
+> **Key insight:** Expand around center: for each index (and each gap between indices), expand outward while palindrome. O(N²) time, O(1) space.
+
+<br>
+
 ---
 
-## Solution 1: Check All Substrings — O(n³)
-## Solution 2: DP — dp[i][j] = s[i..j] is palindrome. O(n²) time, O(n²) space
-## Solution 3: Expand Around Center (Optimal practical)
+## Constraints
+- Typical DP constraints
 
-For each center (n single + n-1 between), expand outward while palindrome.
+<br>
 
-### Time: O(n²) | Space: O(1)
+---
+
+## Solution 1: Recursion (Brute Force)
+
+### Time Complexity: O(N³)
+
+> **Drawback:** Overlapping subproblems cause exponential recomputation.
+
+> **Key Insight for Improvement:** Memoize or tabulate. Recurrence: `Expand from center`
+
+<br>
+
+---
+
+## Solution 2: DP — Expand around center
+
+**Recurrence:** `Expand from center`
+
+### Time Complexity: O(N²)
+**Why?** Each state computed once.
+
+**Detailed breakdown:** States × transition cost
+
+### Space Complexity: O(1)
+
+**Example walkthrough:**
+```
+Center at 'a'(1): expand → 'bab'. Center at 'b'(2): expand → 'aba'. Max length=3.
+```
 
 <br>
 
@@ -18,14 +50,18 @@ For each center (n single + n-1 between), expand outward while palindrome.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| All Substrings | O(n³) | O(1) | Check each substring |
-| DP | O(n²) | O(n²) | Build palindrome table |
-| Expand Center | O(n²) | O(1) | Expand from each center |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | O(N³) | O(N) stack |
+| Memoization | O(N²) | Same as tabulation |
+| Tabulation | O(N²) | O(1) |
 
-<br>
-<br>
+**Key Insights:**
+1. Identify recurrence and base cases
+2. Optimize space if dp[i] depends only on previous row/state
+
+
+<br><br>
 
 ---
 

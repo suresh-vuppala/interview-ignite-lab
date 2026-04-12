@@ -6,15 +6,15 @@
   "mdFile": "stock-transaction-fee.md",
   "codeExamples": [
     {
-      "title": "Stock with Transaction Fee Solution",
+      "title": "Stock with Transaction Fee",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-transaction-fee/code/cpp/stock_transaction_fee.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-transaction-fee/code/java/StockTransactionFee.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-transaction-fee/code/cpp/StockTransactionFee.cpp"
         },
         {
           "language": "python",

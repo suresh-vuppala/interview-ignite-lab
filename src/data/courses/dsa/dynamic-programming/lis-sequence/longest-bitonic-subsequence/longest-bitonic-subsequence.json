@@ -6,15 +6,15 @@
   "mdFile": "longest-bitonic-subsequence.md",
   "codeExamples": [
     {
-      "title": "Longest Bitonic Subsequence Solution",
+      "title": "Longest Bitonic Subsequence",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/lis-sequence/longest-bitonic-subsequence/code/cpp/longest_bitonic_subsequence.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/lis-sequence/longest-bitonic-subsequence/code/java/LongestBitonicSubsequence.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/lis-sequence/longest-bitonic-subsequence/code/cpp/LongestBitonicSubsequence.cpp"
         },
         {
           "language": "python",

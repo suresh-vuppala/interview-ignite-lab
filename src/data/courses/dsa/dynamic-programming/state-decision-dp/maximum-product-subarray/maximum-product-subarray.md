@@ -1,15 +1,43 @@
-Find contiguous subarray with largest product.
+Find the contiguous subarray with the largest product.
+
+<br>
+
+> **Key insight:** Track both curMax and curMin (negative × negative = positive). Swap on negative.
 
 <br>
 
 ---
 
-## Solution 1: Brute Force — Check all subarrays O(n²)
-## Solution 2: Track Min and Max (Optimal)
+## Constraints
+- Typical DP constraints
 
-At each step track maxProduct and minProduct (min needed because negative × negative = positive).
+<br>
 
-### Time: O(n) | Space: O(1)
+---
+
+## Solution 1: Recursion
+
+> **Drawback:** Overlapping subproblems.
+
+> **Key Insight for Improvement:** Recurrence: `State machine / track approach`
+
+<br>
+
+---
+
+## Solution 2: DP — Bottom-up
+
+**Recurrence:** `State machine / track approach`
+
+### Time Complexity: O(N)
+**Why?** Each state computed once.
+
+### Space Complexity: O(1) or O(K)
+
+**Example walkthrough:**
+```
+Single pass through prices/values tracking states
+```
 
 <br>
 
@@ -17,13 +45,17 @@ At each step track maxProduct and minProduct (min needed because negative × neg
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Brute Force | O(n²) | O(1) | All subarrays |
-| Min-Max DP | O(n) | O(1) | Track both min and max |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | Exponential | O(N) stack |
+| DP | O(N) | O(1) or O(K) |
 
-<br>
-<br>
+**Key Insights:**
+1. Identify states, transitions, base cases
+2. Space optimization when possible
+
+
+<br><br>
 
 ---
 

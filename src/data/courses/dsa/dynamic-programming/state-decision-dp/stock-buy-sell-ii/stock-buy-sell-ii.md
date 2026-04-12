@@ -1,12 +1,43 @@
-Maximize profit with unlimited transactions (buy/sell same day allowed).
+Buy and sell stock unlimited times. Maximize profit.
+
+<br>
+
+> **Key insight:** Greedy: add every positive day-over-day difference.
 
 <br>
 
 ---
 
-## Solution 1: Greedy — Add every positive difference (prices[i] - prices[i-1] if positive)
+## Constraints
+- Typical DP constraints
 
-### Time: O(n) | Space: O(1)
+<br>
+
+---
+
+## Solution 1: Recursion
+
+> **Drawback:** Overlapping subproblems.
+
+> **Key Insight for Improvement:** Recurrence: `State machine / track approach`
+
+<br>
+
+---
+
+## Solution 2: DP — Bottom-up
+
+**Recurrence:** `State machine / track approach`
+
+### Time Complexity: O(N)
+**Why?** Each state computed once.
+
+### Space Complexity: O(1) or O(K)
+
+**Example walkthrough:**
+```
+Single pass through prices/values tracking states
+```
 
 <br>
 
@@ -14,12 +45,17 @@ Maximize profit with unlimited transactions (buy/sell same day allowed).
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Greedy | O(n) | O(1) | Capture every upswing |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | Exponential | O(N) stack |
+| DP | O(N) | O(1) or O(K) |
 
-<br>
-<br>
+**Key Insights:**
+1. Identify states, transitions, base cases
+2. Space optimization when possible
+
+
+<br><br>
 
 ---
 

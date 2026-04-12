@@ -1,0 +1,1 @@
+class Solution{public:int maxProfit(vector<int>&p){int minP=INT_MAX,maxP=0;for(int x:p){minP=min(minP,x);maxP=max(maxP,x-minP);}return maxP;}};

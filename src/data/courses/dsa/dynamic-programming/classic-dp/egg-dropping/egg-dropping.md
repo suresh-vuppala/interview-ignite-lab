@@ -1,32 +1,43 @@
-Minimum trials to find critical floor with k eggs and n floors.
+Given K eggs and N floors, find minimum number of trials to find the critical floor.
+
+<br>
+
+> **Key insight:** dp[k][n] = 1 + min(max(dp[k-1][i-1], dp[k][n-i])) for i=1..n. Binary search optimization possible.
 
 <br>
 
 ---
 
-## Solution 1: Recursion — For each floor, try dropping: max(breaks, doesn't break). Take min over all floors.
-
-### Time: O(n × 2^k) | Space: O(nk)
-
-<br>
-
----
-
-## Solution 2: DP + Binary Search
-
-dp[k][n] = min trials. Binary search for optimal floor.
-
-### Time: O(k × n × log n) | Space: O(k × n)
+## Constraints
+- Typical DP constraints
 
 <br>
 
 ---
 
-## Solution 3: Reverse DP (Optimal)
+## Solution 1: Recursion
 
-dp[t][k] = max floors testable with t trials and k eggs. Increment t until dp[t][k] >= n.
+> **Drawback:** Overlapping subproblems.
 
-### Time: O(k × log n) | Space: O(k)
+> **Key Insight for Improvement:** Recurrence: `dp[k][n] = 1 + min over i of max(dp[k-1][i-1], dp[k][n-i])`
+
+<br>
+
+---
+
+## Solution 2: DP — Bottom-up
+
+**Recurrence:** `dp[k][n] = 1 + min over i of max(dp[k-1][i-1], dp[k][n-i])`
+
+### Time Complexity: O(K×N×logN) with binary search
+**Why?** Each state computed once.
+
+### Space Complexity: O(K×N)
+
+**Example walkthrough:**
+```
+K=2, N=10 → 4 trials. Optimal strategy: drop from floors 4, 7, 9, 10
+```
 
 <br>
 
@@ -34,14 +45,17 @@ dp[t][k] = max floors testable with t trials and k eggs. Increment t until dp[t]
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Recursion | O(n × 2^k) | O(nk) | Try all floors |
-| DP + Binary Search | O(kn log n) | O(kn) | Binary search for opt floor |
-| Reverse DP | O(k log n) | O(k) | Ask "how many floors?" instead |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | Exponential | O(N) stack |
+| DP | O(K×N×logN) with binary search | O(K×N) |
 
-<br>
-<br>
+**Key Insights:**
+1. Identify states, transitions, base cases
+2. Space optimization when possible
+3. **Binary search optimization:** For fixed k, the break/nobreak functions are monotonic → binary search for optimal floor
+
+<br><br>
 
 ---
 

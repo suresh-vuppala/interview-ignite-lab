@@ -1,13 +1,43 @@
-Maximize profit by cutting rod of length n into pieces.
+Given a rod of length N and prices for each length 1..N, maximize revenue by cutting into pieces.
+
+<br>
+
+> **Key insight:** Unbounded knapsack: dp[len] = max(dp[len], price[i] + dp[len-i]) for each piece length i.
 
 <br>
 
 ---
 
-## Solution 1: Recursion — Try all cut positions O(2^n)
-## Solution 2: DP — dp[i] = max profit for length i. dp[i] = max(price[j] + dp[i-j]) for j=1..i.
+## Constraints
+- Typical DP constraints
 
-### Time: O(n²) | Space: O(n)
+<br>
+
+---
+
+## Solution 1: Recursion
+
+> **Drawback:** Overlapping subproblems.
+
+> **Key Insight for Improvement:** Recurrence: `dp[l] = max(price[i] + dp[l-i]) for i=1..l`
+
+<br>
+
+---
+
+## Solution 2: DP — Bottom-up
+
+**Recurrence:** `dp[l] = max(price[i] + dp[l-i]) for i=1..l`
+
+### Time Complexity: O(N²)
+**Why?** Each state computed once.
+
+### Space Complexity: O(N)
+
+**Example walkthrough:**
+```
+prices=[1,5,8,9,10,17,17,20], N=8 → cut into 2+6=5+17=22
+```
 
 <br>
 
@@ -15,13 +45,17 @@ Maximize profit by cutting rod of length n into pieces.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Recursion | O(2^n) | O(n) | Try all cuts |
-| DP | O(n²) | O(n) | Optimal substructure |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | Exponential | O(N) stack |
+| DP | O(N²) | O(N) |
 
-<br>
-<br>
+**Key Insights:**
+1. Identify states, transitions, base cases
+2. Space optimization when possible
+
+
+<br><br>
 
 ---
 

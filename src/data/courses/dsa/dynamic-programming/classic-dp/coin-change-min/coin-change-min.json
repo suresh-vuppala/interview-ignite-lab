@@ -6,15 +6,15 @@
   "mdFile": "coin-change-min.md",
   "codeExamples": [
     {
-      "title": "Coin Change Minimum Solution",
+      "title": "Coin Change Minimum",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-min/code/cpp/coin_change_min.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-min/code/java/CoinChangeMin.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-min/code/cpp/CoinChangeMin.cpp"
         },
         {
           "language": "python",

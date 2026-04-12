@@ -1,3 +1,2 @@
-class StockBuySellIv {
-    // DP solution
-}
+class Solution{public int maxProfit(int k,int[]p){int n=p.length;if(k>=n/2){int s=0;for(int i=1;i<n;i++)s+=Math.max(0,p[i]-p[i-1]);return s;}
+int[]buy=new int[k+1],prof=new int[k+1];java.util.Arrays.fill(buy,Integer.MAX_VALUE);for(int x:p)for(int i=1;i<=k;i++){buy[i]=Math.min(buy[i],x-prof[i-1]);prof[i]=Math.max(prof[i],x-buy[i]);}return prof[k];}}

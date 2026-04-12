@@ -6,15 +6,15 @@
   "mdFile": "egg-dropping.md",
   "codeExamples": [
     {
-      "title": "Egg Dropping Problem Solution",
+      "title": "Egg Dropping Problem",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/egg-dropping/code/cpp/egg_dropping.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/classic-dp/egg-dropping/code/java/EggDropping.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/classic-dp/egg-dropping/code/cpp/EggDropping.cpp"
         },
         {
           "language": "python",

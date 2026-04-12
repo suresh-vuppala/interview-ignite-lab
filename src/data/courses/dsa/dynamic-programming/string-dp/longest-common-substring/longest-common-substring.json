@@ -6,15 +6,15 @@
   "mdFile": "longest-common-substring.md",
   "codeExamples": [
     {
-      "title": "Longest Common Substring Solution",
+      "title": "Longest Common Substring",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/longest-common-substring/code/cpp/longest_common_substring.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/string-dp/longest-common-substring/code/java/LongestCommonSubstring.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/string-dp/longest-common-substring/code/cpp/LongestCommonSubstring.cpp"
         },
         {
           "language": "python",

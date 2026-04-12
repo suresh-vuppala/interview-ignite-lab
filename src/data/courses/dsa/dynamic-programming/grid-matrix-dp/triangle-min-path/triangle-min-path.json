@@ -6,15 +6,15 @@
   "mdFile": "triangle-min-path.md",
   "codeExamples": [
     {
-      "title": "Triangle Minimum Path Sum Solution",
+      "title": "Triangle Minimum Path Sum",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/triangle-min-path/code/cpp/triangle_min_path.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/triangle-min-path/code/java/TriangleMinPath.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/triangle-min-path/code/cpp/TriangleMinPath.cpp"
         },
         {
           "language": "python",

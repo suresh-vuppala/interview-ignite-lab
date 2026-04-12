@@ -1,70 +1,43 @@
-Rob maximum from binary tree — can't rob adjacent (parent-child) nodes.
+Houses form a binary tree. Can't rob directly connected (parent-child). Maximize total.
 
 <br>
 
-> Input: [3,2,3,null,3,null,1]
-> Output: 7 (rob 3 + 3 + 1 = 7)
-
-> **Key insight:** At each node, choose: rob this node (skip children) or skip this node (take best of children).
+> **Key insight:** DFS returns (skip, take) pair. skip = max of children's skip/take. take = val + children's skip.
 
 <br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁴`
-- `0 ≤ Node.val ≤ 10⁴`
+- Typical DP constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Recursion
 
-1. **Single node:** Return its value
-2. **All same values:** Alternating levels optimal
-3. **Skewed tree:** Alternate nodes
+> **Drawback:** Overlapping subproblems.
 
-<br>
-
----
-
-## Solution 1: Naive Recursion
-
-**Intuition:**
-For each node: max(rob this + grandchildren, skip this + children).
-
-**Problem:** Recomputes grandchildren results for every node.
-
-### Time Complexity: O(2^n) — exponential
-### Space Complexity: O(h)
-
-> **Key Insight:** Memoize with hash map, or better — return both rob/skip from each call.
+> **Key Insight for Improvement:** Recurrence: `State machine / track approach`
 
 <br>
 
 ---
 
-## Solution 2: DFS Returning (rob, skip) Pair (Optimal)
+## Solution 2: DP — Bottom-up
 
-**Intuition:**
-Each DFS call returns a pair: (max if we rob this node, max if we skip this node).
+**Recurrence:** `State machine / track approach`
 
-**Algorithm:**
+### Time Complexity: O(N)
+**Why?** Each state computed once.
+
+### Space Complexity: O(1) or O(K)
+
+**Example walkthrough:**
 ```
-pair<int,int> dfs(node):
-    if null: return (0, 0)
-    left = dfs(node.left)
-    right = dfs(node.right)
-    
-    rob = node.val + left.skip + right.skip
-    skip = max(left.rob, left.skip) + max(right.rob, right.skip)
-    return (rob, skip)
+Single pass through prices/values tracking states
 ```
-
-### Time Complexity: O(n) — visit each node once
-### Space Complexity: O(h) — recursion stack
 
 <br>
 
@@ -72,15 +45,17 @@ pair<int,int> dfs(node):
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Naive Recursion | O(2^n) | O(h) | Recomputes grandchildren |
-| (Rob, Skip) Pair | O(n) | O(h) | Return both options — no recomputation |
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursion | Exponential | O(N) stack |
+| DP | O(N) | O(1) or O(K) |
 
-**Recommended:** DFS with (rob, skip) pair — O(n) time, O(h) space.
+**Key Insights:**
+1. Identify states, transitions, base cases
+2. Space optimization when possible
 
-<br>
-<br>
+
+<br><br>
 
 ---
 

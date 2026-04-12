@@ -6,15 +6,15 @@
   "mdFile": "unique-paths.md",
   "codeExamples": [
     {
-      "title": "Unique Paths Solution",
+      "title": "Unique Paths",
       "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/unique-paths/code/cpp/unique_paths.cpp"
+        },
         {
           "language": "java",
           "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/unique-paths/code/java/UniquePaths.java"
-        },
-        {
-          "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/unique-paths/code/cpp/UniquePaths.cpp"
         },
         {
           "language": "python",

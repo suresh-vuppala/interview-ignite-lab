@@ -9,16 +9,16 @@
       "title": "Longest Common Substring",
       "languages": [
         {
-          "language": "java",
-          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/longest-common-substring/code/java/LongestCommonSubstring.java"
-        },
-        {
           "language": "cpp",
           "codeFile": "courses/dsa/string-hashing-problems/substring-matching/longest-common-substring/code/cpp/longest_common_substring.cpp"
         },
         {
+          "language": "java",
+          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/longest-common-substring/code/java/LongestCommonSubstring.java"
+        },
+        {
           "language": "python",
-          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/longest-common-substring/code/python/longest-common-substring.py"
+          "codeFile": "courses/dsa/string-hashing-problems/substring-matching/longest-common-substring/code/python/longest_common_substring.py"
         }
       ]
     }
