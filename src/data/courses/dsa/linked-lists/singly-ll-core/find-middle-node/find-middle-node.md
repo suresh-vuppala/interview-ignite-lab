@@ -1,60 +1,72 @@
-## Overview
-Learn multiple approaches to find the middle node of a linked list.
+Find the middle node of a singly linked list. If two middle nodes, return the second one.
 
-## Topics Covered
-1. **Two-Pass Approach**: Count nodes then find middle
-2. **Slow-Fast Pointer**: Find middle in one pass
-3. **Handle Even Length**: Return first or second middle
-4. **Handle Odd Length**: Return exact middle
+<br>
 
-## Problem Statement
-Find the middle node of a singly linked list efficiently, handling both even and odd length lists.
+> Input: head = [1,2,3,4,5]
+> Output: node with value 3
+> **Key insight:** Slow/fast pointer technique. Slow moves 1 step, fast moves 2 steps. When fast reaches end, slow is at middle.
 
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁵`
+- `1 ≤ N ≤ 100`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Count Then Traverse — O(N), Two Passes
 
-1. **Single node:** Middle is that node
-2. **Two nodes:** Middle is first or second (depends on convention)
-3. **Even length:** Two possible middles — return second typically
-4. **Odd length:** Exact middle
-5. **Large list:** Slow-fast pointer is O(n) time O(1) space
+> **Drawback:** Two passes: first to count, second to reach middle.
+
+> **Key Insight for Improvement:** Slow/fast pointers achieve this in ONE pass. When fast reaches null or the last node, slow is at the middle.
 
 <br>
 
-## Approach
+---
 
-### 1. Two-Pass Approach
-- Count total nodes (n)
-- Traverse to n/2 position
-- Time: O(n), Space: O(1)
+## Solution 2: Slow/Fast Pointers (Optimal)
 
-### 2. Slow-Fast Pointer (Optimal)
-- Slow moves 1 step, fast moves 2 steps
-- When fast reaches end, slow is at middle
-- Time: O(n), Space: O(1)
+**Algorithm:** slow = fast = head. While fast and fast.next: slow = slow.next, fast = fast.next.next. Return slow.
 
-### 3. Even Length Lists
-- For even length, slow points to second middle
-- Adjust logic if first middle needed
+### Time Complexity: O(N)
+**Why?** Fast pointer traverses N nodes. Slow traverses N/2. Total: 3N/2 = O(N). But only ONE pass.
 
-### 4. Odd Length Lists
-- Slow naturally points to exact middle
+**Detailed breakdown:** N = 100 → 150 pointer follows
 
-## Complexity Analysis
-
-### Time Complexity: O(n)
 ### Space Complexity: O(1)
 
-## Code
+**Example walkthrough:**
+```
+1 → 2 → 3 → 4 → 5
+
+slow=1, fast=1
+slow=2, fast=3
+slow=3, fast=5 (fast.next=null → stop)
+
+Middle = 3 ✓
+```
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Passes |
+|----------|------|-------|--------|
+| Count + traverse | O(N) | O(1) | 2 |
+| Slow/Fast | O(N) | O(1) | 1 |
+
+**Key Insights:**
+1. **Slow/fast = tortoise/hare:** Fundamental linked list technique
+2. **Fast moves 2×:** When fast finishes, slow is halfway
+3. **Foundation for:** Cycle detection, palindrome check, merge sort on lists
+
+<br><br>
+
+---
 
 ```code```

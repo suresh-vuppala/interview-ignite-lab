@@ -6,11 +6,11 @@
   "mdFile": "reverse-between.md",
   "codeExamples": [
     {
-      "title": "Reverse Between Positions Solution",
+      "title": "Reverse Between Positions",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-between/code/cpp/ReverseBetween.cpp"
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-between/code/cpp/reverse_between.cpp"
         },
         {
           "language": "java",

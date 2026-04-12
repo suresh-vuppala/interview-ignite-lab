@@ -1,70 +1,51 @@
-## Overview
-Master all deletion operations in a singly linked list including deleting from beginning, end, specific position, and by value.
+Delete a node at the head, tail, by value, or at a specific position.
 
-## Topics Covered
-1. **Delete from Beginning**: Remove the first node
-2. **Delete from End**: Remove the last node
-3. **Delete at Position**: Remove node at specific index
-4. **Delete by Value**: Remove first node with given value
+<br>
 
-## Problem Statement
-Implement all four deletion operations handling edge cases like empty list, single node, and node not found.
+> Input: list = 1→2→3→4→5, deleteHead → 2→3→4→5, deleteTail → 2→3→4, deleteValue(3) → 2→4
+> **Key insight:** Find the predecessor of the node to delete. Set prev.next = target.next. Dummy node avoids special cases for head deletion.
 
+<br>
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `Node to delete exists in the list (usually)`
+- `0 ≤ N ≤ 10⁵`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution: Predecessor Rewiring (Optimal)
 
-1. **Delete head:** Update head to head.next
-2. **Delete tail:** Traverse to second-last, set next to null
-3. **Delete only node:** List becomes empty
-4. **Delete from empty list:** Handle gracefully
-5. **Delete middle node:** Standard prev.next = curr.next
-6. **Node not found:** Return list unchanged
+**Algorithm:** Find node before target. Rewire: prev.next = prev.next.next. For head: just return head.next.
+
+### Time Complexity: O(1) for head, O(N) for tail/value/position
+### Space Complexity: O(1)
+
+> **Drawback:** Must find predecessor — O(N) traversal for singly linked list. Doubly linked list gives O(1) deletion given the node.
+
+> **Key Insight for Improvement:** Dummy head avoids null checks for head deletion. Always use dummy when deletion could affect head.
 
 <br>
 
-## Approach
+---
 
-### 1. Delete from Beginning
-- Update head to head.next
-- Time: O(1)
+## Complexity Progression Summary
 
-### 2. Delete from End
-- Traverse to second-last node
-- Set its next to null
-- Time: O(n)
+| Operation | Singly | Doubly |
+|-----------|--------|--------|
+| Delete head | O(1) | O(1) |
+| Delete given node | O(N) | O(1) |
+| Delete by value | O(N) | O(N) |
 
-### 3. Delete at Position
-- Traverse to position-1
-- Adjust pointers to skip target node
-- Time: O(n)
+**Key Insights:**
+1. **Rewire, don't remove:** prev.next = prev.next.next skips the target
+2. **Memory management:** In C++, free/delete the removed node
+3. **Dummy pattern:** Handles head deletion uniformly
 
-### 4. Delete by Value
-- Find node with target value
-- Adjust pointers to remove it
-- Time: O(n)
+<br><br>
 
-## Complexity Analysis
-
-### Time Complexity
-- Delete from Beginning: O(1)
-- Delete from End: O(n)
-- Delete at Position: O(n)
-- Delete by Value: O(n)
-
-### Space Complexity
-- O(1) for all operations
-
-## Code
+---
 
 ```code```

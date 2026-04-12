@@ -1,61 +1,17 @@
-class Node {
-    int data;
-    Node next;
-    Node(int data) { this.data = data; }
-}
-
-public class ReverseKGroups {
-    private Node head;
-    
-    public void insert(int data) {
-        if (head == null) head = new Node(data);
-        else {
-            Node curr = head;
-            while (curr.next != null) curr = curr.next;
-            curr.next = new Node(data);
+// ============================================================
+// Reverse K Group
+// ============================================================
+class Solution {
+    public ListNode reverseKGroup(ListNode head, int k) {
+        ListNode dummy = new ListNode(0); dummy.next = head;
+        ListNode groupPrev = dummy;
+        while (true) {
+            ListNode kth = groupPrev;
+            for (int i = 0; i < k; i++) { kth = kth.next; if (kth == null) return dummy.next; }
+            ListNode groupNext = kth.next, prev = groupNext, curr = groupPrev.next;
+            for (int i = 0; i < k; i++) { ListNode next = curr.next; curr.next = prev; prev = curr; curr = next; }
+            ListNode oldHead = groupPrev.next;
+            groupPrev.next = prev; groupPrev = oldHead;
         }
-    }
-    
-    public void reverseKGroups(int k) {
-        head = reverseKHelper(head, k);
-    }
-    
-    private Node reverseKHelper(Node head, int k) {
-        Node curr = head;
-        int count = 0;
-        while (curr != null && count < k) {
-            curr = curr.next;
-            count++;
-        }
-        if (count == k) {
-            curr = reverseKHelper(curr, k);
-            while (count-- > 0) {
-                Node tmp = head.next;
-                head.next = curr;
-                curr = head;
-                head = tmp;
-            }
-            head = curr;
-        }
-        return head;
-    }
-    
-    public void display() {
-        Node curr = head;
-        while (curr != null) {
-            System.out.print(curr.data + " -> ");
-            curr = curr.next;
-        }
-        System.out.println("null");
-    }
-    
-    public static void main(String[] args) {
-        ReverseKGroups list = new ReverseKGroups();
-        for (int i = 1; i <= 8; i++) list.insert(i);
-        System.out.print("Original: ");
-        list.display();
-        list.reverseKGroups(3);
-        System.out.print("After reversing in groups of 3: ");
-        list.display();
     }
 }

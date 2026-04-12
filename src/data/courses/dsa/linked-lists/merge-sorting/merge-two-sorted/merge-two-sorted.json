@@ -6,11 +6,11 @@
   "mdFile": "merge-two-sorted.md",
   "codeExamples": [
     {
-      "title": "Merge Two Sorted Lists Solution",
+      "title": "Merge Two Sorted Lists",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/merge-sorting/merge-two-sorted/code/cpp/MergeTwoSorted.cpp"
+          "codeFile": "courses/dsa/linked-lists/merge-sorting/merge-two-sorted/code/cpp/merge_two_sorted.cpp"
         },
         {
           "language": "java",

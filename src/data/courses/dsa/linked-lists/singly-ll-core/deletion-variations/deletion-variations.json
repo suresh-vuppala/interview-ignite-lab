@@ -6,11 +6,11 @@
   "mdFile": "deletion-variations.md",
   "codeExamples": [
     {
-      "title": "Deletion Variations Solution",
+      "title": "Deletion Variations",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/singly-ll-core/deletion-variations/code/cpp/DeletionVariations.cpp"
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/deletion-variations/code/cpp/deletion_variations.cpp"
         },
         {
           "language": "java",

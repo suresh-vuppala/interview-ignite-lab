@@ -1,15 +1,52 @@
-Remove the nth node from the end. Return head.
+Remove the nth node from the end of a linked list.
+
+<br>
+
+> Input: head = [1,2,3,4,5], n=2
+> Output: [1,2,3,5]
+> **Key insight:** Two pointers with n-gap. Advance fast n steps ahead. Then advance both until fast reaches end. Slow is at the node BEFORE the target.
 
 <br>
 
 ---
 
-## Solution 1: Two Pass — Count length, remove at position (length - n)
-## Solution 2: Two Pointers + Dummy (Optimal)
+## Constraints
+- `1 ≤ N ≤ 30`, `1 ≤ n ≤ N`
 
-**Intuition:** Use dummy node before head. Fast advances n+1 steps. Move both until fast is null. Slow.next = slow.next.next.
+<br>
 
-### Time: O(n) | Space: O(1)
+---
+
+## Solution 1: Two-Pass — Count then traverse
+
+> **Drawback:** Two passes over the list.
+
+> **Key Insight for Improvement:** Two pointers with n-step gap — single pass. Fast is n ahead of slow. When fast reaches end, slow is at position N-n (the node before the target).
+
+<br>
+
+---
+
+## Solution 2: Two Pointers with N-Gap (Optimal)
+
+**Algorithm:** Dummy node. fast = dummy, advance n+1 steps. slow = dummy. Advance both until fast = null. slow.next = slow.next.next (skip target).
+
+### Time Complexity: O(N)
+### Space Complexity: O(1)
+
+**Example walkthrough:**
+```
+dummy → 1 → 2 → 3 → 4 → 5, n=2
+
+fast advances 3 steps: dummy → 1 → 2 → 3
+slow at dummy. Both advance:
+  slow=1, fast=4
+  slow=2, fast=5
+  slow=3, fast=null → stop
+
+slow.next = slow.next.next → skip 4
+Result: 1 → 2 → 3 → 5 ✓
+```
 
 <br>
 
@@ -17,13 +54,17 @@ Remove the nth node from the end. Return head.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Two Pass | O(n) | O(1) | Count then delete |
-| Two Pointers | O(n) | O(1) | Single pass, dummy handles edge cases |
+| Solution | Time | Space | Passes |
+|----------|------|-------|--------|
+| Two-pass | O(N) | O(1) | 2 |
+| Two-pointer gap | O(N) | O(1) | 1 |
 
-<br>
-<br>
+**Key Insights:**
+1. **N-gap technique:** Fast leads by n → when fast finishes, slow is at position N-n
+2. **Dummy node:** Handles removing head (n=length) cleanly
+3. **n+1 gap:** Slow ends one node BEFORE target for easy deletion
+
+<br><br>
 
 ---
 

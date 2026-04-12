@@ -6,11 +6,11 @@
   "mdFile": "cycle-start-node.md",
   "codeExamples": [
     {
-      "title": "Find Cycle Start Node Solution",
+      "title": "Find Cycle Start Node",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/cycle-start-node/code/cpp/CycleStartNode.cpp"
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/cycle-start-node/code/cpp/cycle_start_node.cpp"
         },
         {
           "language": "java",

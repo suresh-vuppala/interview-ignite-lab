@@ -1,49 +1,70 @@
-## Overview
-Learn to reverse a linked list using recursive approach.
+Reverse a singly linked list recursively.
 
-## Topics Covered
-1. **Recursive Logic**: Understand base case and recursive case
-2. **Call Stack**: How recursion builds and unwinds
-3. **Pointer Adjustment**: Reverse pointers during unwinding
-4. **Compare with Iterative**: Understand trade-offs
+<br>
 
-## Problem Statement
-Reverse a singly linked list using recursion.
+> Input: head = [1,2,3,4,5]
+> Output: [5,4,3,2,1]
+> **Key insight:** Recurse to the end. On the way back, each node makes its next node point to itself, then sets its own next to null.
 
+<br>
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 5000`
-- `-5000 ≤ Node.val ≤ 5000`
+- `0 ≤ N ≤ 5000`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution: Recursive Reversal (Optimal for elegance)
 
-1. **Empty list:** Return null
-2. **Single node:** Return as-is
-3. **Large list:** Recursion depth = n — potential stack overflow
-4. **Two nodes:** Base recursive case
+**Algorithm:**
+1. Base case: if head is null or single node → return head
+2. newHead = reverse(head.next) — recurse to end
+3. head.next.next = head — make successor point back to me
+4. head.next = null — break forward link
+5. Return newHead (last node, propagated back)
+
+### Time Complexity: O(N)
+### Space Complexity: O(N) recursion stack
+
+**Example walkthrough:**
+```
+reverse(1→2→3)
+  reverse(2→3)
+    reverse(3) → returns 3 (base case)
+  3.next = null, but 2.next = 3
+  head.next.next = head → 3→2
+  head.next = null → 2→null
+  return 3→2
+head.next.next = head → 2→1
+head.next = null → 1→null
+return 3→2→1 ✓
+```
+
+> **Drawback:** O(N) stack space. Stack overflow risk for very long lists.
+
+> **Key Insight for Improvement:** Iterative version uses O(1) space. But recursive version is more concise and demonstrates recursion mastery.
 
 <br>
 
-## Approach
+---
 
-### Recursive Reversal
-- Base case: If head is null or single node, return
-- Recursive case: Reverse rest of list
-- Adjust pointers during unwinding
-- Time: O(n), Space: O(n) for call stack
+## Complexity Progression Summary
 
-## Complexity Analysis
+| Solution | Time | Space |
+|----------|------|-------|
+| Recursive | O(N) | O(N) |
+| Iterative | O(N) | O(1) |
 
-### Time Complexity: O(n)
-### Space Complexity: O(n) due to recursion stack
+**Key Insights:**
+1. **head.next.next = head:** The key reversal step — successor now points to me
+2. **head.next = null:** Break the old forward link
+3. **newHead propagates back:** Last node becomes head, returned unchanged through all calls
 
-## Code
+<br><br>
+
+---
 
 ```code```

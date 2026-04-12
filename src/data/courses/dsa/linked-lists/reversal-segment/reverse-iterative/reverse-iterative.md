@@ -1,71 +1,50 @@
-Reverse a singly linked list.
+Reverse a singly linked list iteratively.
 
 <br>
 
-> Input: 1→2→3→4→5
-> Output: 5→4→3→2→1
+> Input: head = [1,2,3,4,5]
+> Output: [5,4,3,2,1]
+> **Key insight:** Three pointers: prev, curr, next. For each node: save next, point curr to prev, advance prev and curr. At end, prev is new head.
 
 <br>
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 5000`
-- `-5000 ≤ Node.val ≤ 5000`
+- `0 ≤ N ≤ 5000`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
-
-1. **Empty list:** Return null
-2. **Single node:** Return itself
-3. **Two nodes:** Simple swap
-
-<br>
-
----
-
-## Solution 1: Iterative (Three Pointers)
-
-**Intuition:**
-Walk through the list, flipping each node's `next` pointer to point backward.
+## Solution: Three-Pointer Iteration (Optimal)
 
 **Algorithm:**
 1. prev = null, curr = head
-2. While curr != null:
-   - next = curr.next (save next)
-   - curr.next = prev (reverse link)
-   - prev = curr (advance prev)
-   - curr = next (advance curr)
+2. While curr: next = curr.next, curr.next = prev, prev = curr, curr = next
 3. Return prev (new head)
 
-### Time Complexity: O(n) — single pass
-### Space Complexity: O(1) — just pointer variables
+### Time Complexity: O(N)
+**Why?** Single pass through the list.
 
-<br>
+**Detailed breakdown:** N = 5000 → 5000 iterations
 
----
+### Space Complexity: O(1)
 
-## Solution 2: Recursive
-
-**Intuition:**
-Recurse to the end. On the way back, flip pointers.
-
-**Algorithm:**
+**Example walkthrough:**
 ```
-reverse(head):
-    if head is null or head.next is null: return head
-    newHead = reverse(head.next)
-    head.next.next = head  // Flip the pointer
-    head.next = null       // Break old forward link
-    return newHead
+1 → 2 → 3 → null
+
+prev=null, curr=1: next=2, 1→null, prev=1, curr=2
+prev=1, curr=2: next=3, 2→1, prev=2, curr=3
+prev=2, curr=3: next=null, 3→2, prev=3, curr=null
+
+Result: 3 → 2 → 1 ✓
 ```
 
-### Time Complexity: O(n)
-### Space Complexity: O(n) — recursion stack
+> **Drawback:** None — O(N) time, O(1) space is optimal.
+
+> **Key Insight for Improvement:** Recursive version uses O(N) stack space but is more elegant. Iterative is preferred for interviews (no stack overflow risk).
 
 <br>
 
@@ -75,13 +54,15 @@ reverse(head):
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
-| Iterative | O(n) | O(1) | Three pointers, single pass |
-| Recursive | O(n) | O(n) | Clean but uses stack space |
+| Iterative | O(N) | O(1) | Three pointers |
+| Recursive | O(N) | O(N) | Elegant but uses stack |
 
-**Recommended:** Iterative — O(1) space.
+**Key Insights:**
+1. **Three pointers:** prev, curr, next — the holy trinity of list reversal
+2. **Save next before overwriting:** curr.next = prev destroys the forward link
+3. **FAANG top-3:** Most frequently asked linked list problem
 
-<br>
-<br>
+<br><br>
 
 ---
 

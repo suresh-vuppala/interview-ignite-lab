@@ -1,41 +1,40 @@
-Find the middle node of a linked list.
+Find the middle of a linked list (duplicate of find-middle-node but in two-pointer section). Uses slow/fast pointer.
 
 <br>
 
-> Input: 1→2→3→4→5 → Output: 3
-> Input: 1→2→3→4→5→6 → Output: 4 (second middle for even)
-
-<br>
-
----
-
-## Solution 1: Count + Traverse — Two passes: count length, then traverse n/2
-
-### Time: O(n) | Space: O(1) — Two passes
+> Input: head = [1,2,3,4,5]
+> Output: 3
+> **Key insight:** Slow/fast pointers. Same as find-middle-node.
 
 <br>
 
 ---
 
-## Solution 2: Slow & Fast Pointers (Optimal)
-
-**Intuition:** Slow moves 1 step, fast moves 2 steps. When fast reaches end, slow is at middle.
-
-### Time: O(n) | Space: O(1) — Single pass
+## Constraints
+- `1 ≤ N ≤ 100`
 
 <br>
 
 ---
 
-## Complexity Progression Summary
+## Solution: Slow/Fast Pointers (Optimal)
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Count + Traverse | O(n) | O(1) | Two passes |
-| Slow & Fast | O(n) | O(1) | Single pass |
+### Time Complexity: O(N)
+### Space Complexity: O(1)
+
+> **Drawback:** None.
+
+> **Key Insight for Improvement:** For "first middle" (in even-length lists): use while fast.next and fast.next.next. For "second middle": use while fast and fast.next.
 
 <br>
-<br>
+
+---
+
+**Key Insights:**
+1. **Two variants:** First middle vs second middle for even-length lists
+2. **Condition determines which:** fast && fast.next → second middle, fast.next && fast.next.next → first middle
+
+<br><br>
 
 ---
 

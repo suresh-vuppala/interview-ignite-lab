@@ -6,11 +6,11 @@
   "mdFile": "detect-cycle.md",
   "codeExamples": [
     {
-      "title": "Detect Cycle Solution",
+      "title": "Detect Cycle",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/detect-cycle/code/cpp/DetectCycle.cpp"
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/detect-cycle/code/cpp/detect_cycle.cpp"
         },
         {
           "language": "java",

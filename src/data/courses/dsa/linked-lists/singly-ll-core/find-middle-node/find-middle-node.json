@@ -6,11 +6,11 @@
   "mdFile": "find-middle-node.md",
   "codeExamples": [
     {
-      "title": "Find Middle Node Solution",
+      "title": "Find Middle Node",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/singly-ll-core/find-middle-node/code/cpp/FindMiddleNode.cpp"
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/find-middle-node/code/cpp/find_middle_node.cpp"
         },
         {
           "language": "java",

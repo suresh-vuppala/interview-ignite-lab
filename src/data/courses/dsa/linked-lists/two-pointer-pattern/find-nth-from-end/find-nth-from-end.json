@@ -6,11 +6,11 @@
   "mdFile": "find-nth-from-end.md",
   "codeExamples": [
     {
-      "title": "Find Nth Node from End Solution",
+      "title": "Find Nth Node from End",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/find-nth-from-end/code/cpp/FindNthFromEnd.cpp"
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/find-nth-from-end/code/cpp/find_nth_from_end.cpp"
         },
         {
           "language": "java",

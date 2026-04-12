@@ -6,11 +6,11 @@
   "mdFile": "merge-k-sorted.md",
   "codeExamples": [
     {
-      "title": "Merge K Sorted Lists Solution",
+      "title": "Merge K Sorted Lists",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/merge-sorting/merge-k-sorted/code/cpp/MergeKSorted.cpp"
+          "codeFile": "courses/dsa/linked-lists/merge-sorting/merge-k-sorted/code/cpp/merge_k_sorted.cpp"
         },
         {
           "language": "java",

@@ -6,11 +6,11 @@
   "mdFile": "sort-list.md",
   "codeExamples": [
     {
-      "title": "Sort Linked List Solution",
+      "title": "Sort Linked List",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/merge-sorting/sort-list/code/cpp/SortList.cpp"
+          "codeFile": "courses/dsa/linked-lists/merge-sorting/sort-list/code/cpp/sort_list.cpp"
         },
         {
           "language": "java",

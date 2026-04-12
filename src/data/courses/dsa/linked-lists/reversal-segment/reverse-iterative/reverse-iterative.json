@@ -6,11 +6,11 @@
   "mdFile": "reverse-iterative.md",
   "codeExamples": [
     {
-      "title": "Reverse List (Iterative) Solution",
+      "title": "Reverse List (Iterative)",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-iterative/code/cpp/ReverseIterative.cpp"
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-iterative/code/cpp/reverse_iterative.cpp"
         },
         {
           "language": "java",

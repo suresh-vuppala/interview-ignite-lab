@@ -1,27 +1,40 @@
-Find the nth node from the end.
+Find the nth node from the end of a linked list (don't remove — just return it).
+
+<br>
+
+> Input: head = [1,2,3,4,5], n=2
+> Output: node with value 4
+> **Key insight:** Same n-gap two-pointer technique. Fast leads by n. When fast reaches null, slow is at the nth from end.
 
 <br>
 
 ---
 
-## Solution 1: Count length, traverse (length - n)
-## Solution 2: Two Pointers — Advance first pointer n steps, then move both. When first reaches end, second is at target.
-
-### Time: O(n) | Space: O(1)
+## Constraints
+- `1 ≤ n ≤ N`
 
 <br>
 
 ---
 
-## Complexity Progression Summary
+## Solution: Two Pointers with N-Gap (Optimal)
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Two Pass | O(n) | O(1) | Count then traverse |
-| Two Pointers | O(n) | O(1) | Single pass with gap |
+### Time Complexity: O(N)
+### Space Complexity: O(1)
+
+> **Drawback:** None.
+
+> **Key Insight for Improvement:** Same technique as remove-nth-from-end but without deletion.
 
 <br>
-<br>
+
+---
+
+**Key Insights:**
+1. **Gap = n:** Fast is n steps ahead → when fast hits null, slow is at position N-n+1 = nth from end
+2. **No dummy needed:** Since we're just finding, not deleting
+
+<br><br>
 
 ---
 

@@ -6,11 +6,11 @@
   "mdFile": "reverse-first-k.md",
   "codeExamples": [
     {
-      "title": "Reverse First K Nodes Solution",
+      "title": "Reverse First K Nodes",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-first-k/code/cpp/ReverseFirstK.cpp"
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-first-k/code/cpp/reverse_first_k.cpp"
         },
         {
           "language": "java",

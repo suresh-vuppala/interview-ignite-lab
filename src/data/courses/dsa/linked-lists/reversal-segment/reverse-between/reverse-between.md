@@ -1,51 +1,53 @@
-## Overview
-Learn to reverse a segment of linked list between two positions.
+Reverse nodes from position left to position right (1-indexed) in a linked list.
 
-## Topics Covered
-1. **Segment Reversal**: Reverse nodes from position m to n
-2. **Maintain Connections**: Keep links before and after segment
-3. **One-Pass Solution**: Reverse in single traversal
-4. **Handle Edge Cases**: Positions at boundaries
+<br>
 
-## Problem Statement
-Reverse nodes from position m to n (1-indexed) in a linked list.
+> Input: head = [1,2,3,4,5], left=2, right=4
+> Output: [1,4,3,2,5]
+> **Key insight:** Traverse to position left-1 (the node before the reversal segment). Reverse the segment. Reconnect both ends.
 
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 500`
-- `1 ≤ left ≤ right ≤ n`
-- `-500 ≤ Node.val ≤ 500`
+- `1 ≤ left ≤ right ≤ N`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution: Find Start + Reverse Segment (Optimal)
 
-1. **left == right:** No reversal needed
-2. **left = 1:** Reverse from head — head changes
-3. **right = n:** Reverse to end
-4. **left = 1, right = n:** Reverse entire list
-5. **Single node:** Return as-is
+**Algorithm:**
+1. Use dummy node. Traverse to node at position (left-1) = prev.
+2. Reverse (right-left+1) nodes starting from prev.next.
+3. Reconnect: prev.next = new segment head, segment tail.next = remainder.
+
+### Time Complexity: O(N)
+### Space Complexity: O(1)
+
+> **Drawback:** None — single pass.
+
+> **Key Insight for Improvement:** Dummy node is essential — handles left=1 (reversing from head) cleanly.
 
 <br>
 
-## Approach
+---
 
-### Reverse Between m and n
-- Traverse to position m-1
-- Reverse nodes from m to n
-- Connect reversed segment to rest
-- Time: O(n), Space: O(1)
+## Complexity Progression Summary
 
-## Complexity Analysis
+| Solution | Time | Space |
+|----------|------|-------|
+| Single pass | O(N) | O(1) |
 
-### Time Complexity: O(n)
-### Space Complexity: O(1)
+**Key Insights:**
+1. **Dummy node:** Handles left=1 without special cases
+2. **Three-step:** Find start, reverse segment, reconnect
+3. **Foundation for:** Reverse K-Groups applies this repeatedly
 
-## Code
+<br><br>
+
+---
 
 ```code```

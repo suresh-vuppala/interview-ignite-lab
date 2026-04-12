@@ -1,49 +1,50 @@
-## Overview
-Learn to reverse only the first K nodes of a linked list.
+Reverse the first k nodes of a linked list.
 
-## Topics Covered
-1. **Partial Reversal**: Reverse only first K nodes
-2. **Connect Remaining**: Link reversed part to rest
-3. **Handle K > Length**: Deal with edge cases
-4. **Iterative Approach**: Use pointer manipulation
+<br>
 
-## Problem Statement
-Reverse the first K nodes of a linked list and keep the rest unchanged.
+> Input: head = [1,2,3,4,5], k=3
+> Output: [3,2,1,4,5]
+> **Key insight:** Reverse the first k nodes (same as full reversal but stop after k steps). Connect the reversed portion to the remaining list.
 
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ k ≤ n`
-- `1 ≤ n ≤ 10⁵`
+- `1 ≤ k ≤ N`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution: Iterative Reverse First K (Optimal)
 
-1. **k = 1:** No change
-2. **k = n:** Reverse entire list
-3. **k = 2:** Swap first two nodes
-4. **Single node, k = 1:** Return as-is
+**Algorithm:** Reverse k nodes using prev/curr/next. After k steps: original head.next = curr (connects to remainder). Return prev (new head).
+
+### Time Complexity: O(k)
+### Space Complexity: O(1)
+
+> **Drawback:** None.
+
+> **Key Insight for Improvement:** The original head becomes the "tail" of the reversed segment. It must point to the (k+1)-th node.
 
 <br>
 
-## Approach
+---
 
-### Reverse First K
-- Reverse first K nodes using standard reversal
-- Keep track of connection point
-- Link reversed part to remaining list
-- Time: O(n), Space: O(1)
+## Complexity Progression Summary
 
-## Complexity Analysis
+| Solution | Time | Space |
+|----------|------|-------|
+| Iterative | O(k) | O(1) |
 
-### Time Complexity: O(n)
-### Space Complexity: O(1)
+**Key Insights:**
+1. **Save original head:** It becomes the junction point after reversal
+2. **Connect tail to remainder:** originalHead.next = current (node after reversed part)
+3. **Foundation for:** Reverse Between, Reverse K-Groups
 
-## Code
+<br><br>
+
+---
 
 ```code```

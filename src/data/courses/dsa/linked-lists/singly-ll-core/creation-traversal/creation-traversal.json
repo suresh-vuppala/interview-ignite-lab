@@ -6,11 +6,11 @@
   "mdFile": "creation-traversal.md",
   "codeExamples": [
     {
-      "title": "Creation & Traversal Solution",
+      "title": "Creation & Traversal",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/singly-ll-core/creation-traversal/code/cpp/CreationTraversal.cpp"
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/creation-traversal/code/cpp/creation_traversal.cpp"
         },
         {
           "language": "java",

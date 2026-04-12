@@ -6,11 +6,11 @@
   "mdFile": "reverse-k-groups.md",
   "codeExamples": [
     {
-      "title": "Reverse in K-Groups Solution",
+      "title": "Reverse in K-Groups",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-k-groups/code/cpp/ReverseKGroups.cpp"
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-k-groups/code/cpp/reverse_k_groups.cpp"
         },
         {
           "language": "java",

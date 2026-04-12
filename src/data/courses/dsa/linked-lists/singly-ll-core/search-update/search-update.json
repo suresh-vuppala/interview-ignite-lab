@@ -6,11 +6,11 @@
   "mdFile": "search-update.md",
   "codeExamples": [
     {
-      "title": "Search & Update Solution",
+      "title": "Search & Update",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/singly-ll-core/search-update/code/cpp/SearchUpdate.cpp"
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/search-update/code/cpp/search_update.cpp"
         },
         {
           "language": "java",

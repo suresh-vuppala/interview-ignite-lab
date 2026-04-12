@@ -6,11 +6,11 @@
   "mdFile": "find-middle.md",
   "codeExamples": [
     {
-      "title": "Find Middle Node Solution",
+      "title": "Find Middle Node",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/find-middle/code/cpp/FindMiddle.cpp"
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/find-middle/code/cpp/find_middle.cpp"
         },
         {
           "language": "java",

@@ -1,74 +1,57 @@
-## Overview
-Learn the fundamental operations of creating a linked list from scratch and traversing through its nodes. This lesson covers three essential operations that form the foundation of linked list manipulation.
+Create a singly linked list and traverse it. Print all node values.
 
-## Topics Covered
-1. **Create Linked List**: Build a linked list by inserting nodes
-2. **Traverse & Print**: Visit each node and print its value
-3. **Count Nodes**: Calculate the total number of nodes in the list
+<br>
 
-## Problem Statement
-Implement a singly linked list with the following operations:
-- Create a linked list from an array of values
-- Traverse the list and print all elements
-- Count the total number of nodes
+> Input: values = [1, 2, 3, 4, 5]
+> Output: 1 → 2 → 3 → 4 → 5
+> **Key insight:** Each node stores a value and a pointer to the next node. Traverse by following next pointers until null.
 
+<br>
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 10⁴ (number of nodes)`
-- `-10⁵ ≤ Node.val ≤ 10⁵`
+- `0 ≤ N ≤ 10⁵`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution: Iterate with Pointer (Optimal)
 
-1. **Empty list:** Head is null
-2. **Single node:** Next is null
-3. **Traversal prints all values:** Iterate until null
-4. **Circular list (if malformed):** Infinite loop without detection
-5. **Large list:** Memory allocation for each node
+**Algorithm:** Start from head. While current ≠ null: process current, move to current.next.
+
+### Time Complexity: O(N)
+**Why?** Visit each node exactly once.
+
+**Detailed breakdown:** N = 100,000 → 100,000 pointer follows
+
+### Space Complexity: O(1) for traversal, O(N) for creation
+
+> **Drawback:** Singly linked list only supports forward traversal. No random access.
+
+> **Key Insight for Improvement:** For bidirectional traversal, use doubly linked list. For O(1) random access, use array. Linked list trades random access for O(1) insert/delete at known positions.
 
 <br>
 
-## Approach
+---
 
-### 1. Create Linked List
-- Define a Node class with data and next pointer
-- Create nodes and link them together
-- Maintain a head pointer to the first node
+## Complexity Progression Summary
 
-### 2. Traverse & Print
-- Start from the head node
-- Visit each node using the next pointer
-- Print the data of each node
-- Stop when next is null
+| Operation | Array | Linked List |
+|-----------|-------|-------------|
+| Access i-th | O(1) | O(N) |
+| Insert at head | O(N) | O(1) |
+| Insert at tail | O(1) amortized | O(1) with tail ptr |
+| Delete at known position | O(N) | O(1) |
 
-### 3. Count Nodes
-- Initialize counter to 0
-- Traverse the list
-- Increment counter for each node
-- Return the final count
+**Key Insights:**
+1. **Node = value + next pointer:** Fundamental building block
+2. **Head pointer:** Only entry point — lose it, lose the list
+3. **Null termination:** Last node's next = null signals end
 
-## Complexity Analysis
+<br><br>
 
-### Time Complexity
-- **Create**: O(n) where n is the number of elements
-- **Traverse**: O(n) to visit all nodes
-- **Count**: O(n) to count all nodes
-
-### Space Complexity
-- O(1) auxiliary space for all operations
-
-## Key Points
-- Head pointer is crucial for accessing the list
-- Traversal is the basis for most linked list operations
-- Always check for null to avoid errors
-- Creating a list requires linking nodes sequentially
-
-## Code
+---
 
 ```code```

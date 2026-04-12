@@ -1,54 +1,13 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
-class LinkedList:
-    def __init__(self):
-        self.head = None
-    
-    def insert(self, data):
-        if not self.head:
-            self.head = Node(data)
-        else:
-            curr = self.head
-            while curr.next:
-                curr = curr.next
-            curr.next = Node(data)
-    
-    def create_cycle(self, pos):
-        if not self.head:
-            return
-        tail = self.head
-        cycle_node = None
-        index = 0
-        while tail.next:
-            if index == pos:
-                cycle_node = tail
-            tail = tail.next
-            index += 1
-        if cycle_node:
-            tail.next = cycle_node
-    
-    def detect_cycle_start(self):
-        if not self.head:
-            return None
-        slow = fast = self.head
+# ============================================================
+# Cycle Start Node
+# ============================================================
+class Solution:
+    def detectCycle(self, head):
+        slow = fast = head
         while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
+            slow, fast = slow.next, fast.next.next
             if slow == fast:
-                slow = self.head
-                while slow != fast:
-                    slow = slow.next
-                    fast = fast.next
-                return slow
+                ptr = head
+                while ptr != slow: ptr, slow = ptr.next, slow.next
+                return ptr
         return None
-
-if __name__ == "__main__":
-    ll = LinkedList()
-    for i in range(1, 6):
-        ll.insert(i)
-    ll.create_cycle(2)
-    start = ll.detect_cycle_start()
-    print(f"Cycle starts at: {start.data if start else 'No cycle'}")

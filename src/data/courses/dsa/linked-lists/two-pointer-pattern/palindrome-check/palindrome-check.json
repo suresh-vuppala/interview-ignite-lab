@@ -6,11 +6,11 @@
   "mdFile": "palindrome-check.md",
   "codeExamples": [
     {
-      "title": "Check Palindrome Solution",
+      "title": "Check Palindrome",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/palindrome-check/code/cpp/PalindromeCheck.cpp"
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/palindrome-check/code/cpp/palindrome_check.cpp"
         },
         {
           "language": "java",

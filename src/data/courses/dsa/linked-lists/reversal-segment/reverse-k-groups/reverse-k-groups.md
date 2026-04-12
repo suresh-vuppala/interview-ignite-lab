@@ -1,52 +1,57 @@
-## Overview
-Learn to reverse linked list in groups of K nodes.
+Reverse nodes in k-group segments. If remaining nodes < k, leave them as-is.
 
-## Topics Covered
-1. **Group Reversal**: Reverse every K nodes
-2. **Handle Remaining**: Deal with nodes less than K at end
-3. **Recursive Approach**: Break into subproblems
-4. **Iterative Approach**: Use loops for reversal
+<br>
 
-## Problem Statement
-Reverse nodes of a linked list K at a time. If remaining nodes < K, leave them as is.
+> Input: head = [1,2,3,4,5], k=2
+> Output: [2,1,4,3,5]
+> **Key insight:** For each group of k nodes: check if k nodes exist, reverse them, connect to previous group. Repeat. The last group with < k nodes stays unchanged.
 
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 5000`
-- `1 ≤ k ≤ n`
-- `-1000 ≤ Node.val ≤ 1000`
+- `1 ≤ k ≤ N ≤ 5000`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution: Iterative Group Reversal (Optimal)
 
-1. **k = 1:** No reversal
-2. **k = n:** Reverse entire list
-3. **n not divisible by k:** Remaining < k nodes stay as-is
-4. **k = 2:** Swap pairs
-5. **Single node:** Return as-is
-6. **k > n:** No reversal (group incomplete)
+**Algorithm:**
+1. Dummy node. groupPrev = dummy.
+2. While there are k nodes ahead: find kth node, save next group start, reverse the group, reconnect (groupPrev.next = reversed head, old head.next = next group). Update groupPrev.
+
+### Time Complexity: O(N)
+**Why?** Each node reversed at most once. Counting k nodes: amortized O(N) total.
+
+**Detailed breakdown:** N = 5000 → 5000 pointer operations
+
+### Space Complexity: O(1)
+
+> **Drawback:** Complex pointer management — easy to make off-by-one errors.
+
+> **Key Insight for Improvement:** Helper function to count k nodes ahead simplifies the logic. Recursive version is cleaner but uses O(N/k) stack space.
 
 <br>
 
-## Approach
+---
 
-### Reverse K Groups
-- Count if K nodes available
-- Reverse K nodes
-- Recursively/iteratively process rest
-- Time: O(n), Space: O(1) iterative, O(n/k) recursive
+## Complexity Progression Summary
 
-## Complexity Analysis
+| Solution | Time | Space |
+|----------|------|-------|
+| Iterative | O(N) | O(1) |
+| Recursive | O(N) | O(N/k) |
 
-### Time Complexity: O(n)
-### Space Complexity: O(1) iterative, O(n/k) recursive
+**Key Insights:**
+1. **Check k nodes exist first:** Don't reverse partial group at the end
+2. **Reconnection:** groupPrev → reversed head, old head → next group start
+3. **FAANG hard:** Tests precise pointer manipulation under pressure
 
-## Code
+<br><br>
+
+---
 
 ```code```

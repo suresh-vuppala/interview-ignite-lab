@@ -1,65 +1,49 @@
-## Overview
-Learn to search for elements and update node values in a linked list.
+Search for a value in a linked list and update a node's value.
 
-## Topics Covered
-1. **Search by Value**: Find if a value exists in the list
-2. **Search by Position**: Get value at specific position
-3. **Update by Position**: Change value at specific position
-4. **Update by Value**: Change first occurrence of a value
+<br>
 
-## Problem Statement
-Implement search and update operations to query and modify linked list data.
+> Input: list = 1→2→3, search(2) → true, update(2, 99) → 1→99→3
+> **Key insight:** Linear scan — traverse until found or end. No binary search possible (no random access).
 
+<br>
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 10⁴`
-- `-10⁵ ≤ val ≤ 10⁵`
+- `0 ≤ N ≤ 10⁵`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution: Linear Scan (Optimal)
 
-1. **Value at head:** Found immediately
-2. **Value at tail:** Full traversal
-3. **Value not found:** Return -1 or false
-4. **Empty list:** Not found
-5. **Duplicate values:** Return first occurrence or update all
-6. **Update head value:** No pointer change needed
+### Time Complexity: O(N)
+**Why?** Must traverse sequentially — no random access.
+
+### Space Complexity: O(1)
+
+> **Drawback:** O(N) search. No way to do better with a basic linked list.
+
+> **Key Insight for Improvement:** For O(1) access by value, use a hash map alongside the linked list (like LRU Cache does).
 
 <br>
 
-## Approach
+---
 
-### 1. Search by Value
-- Traverse list comparing each node's data
-- Return true if found, false otherwise
-- Time: O(n)
+## Complexity Progression Summary
 
-### 2. Search by Position
-- Traverse to position
-- Return node's data
-- Time: O(n)
+| Operation | Linked List | Array | Hash Map + LL |
+|-----------|-------------|-------|---------------|
+| Search | O(N) | O(N) or O(logN) sorted | O(1) |
+| Update by value | O(N) | O(N) | O(1) |
 
-### 3. Update by Position
-- Traverse to position
-- Update node's data
-- Time: O(n)
+**Key Insights:**
+1. **No random access:** Must traverse from head
+2. **Hash map augmentation:** LRU cache = hash map + doubly linked list for O(1) ops
 
-### 4. Update by Value
-- Find node with target value
-- Update its data
-- Time: O(n)
+<br><br>
 
-## Complexity Analysis
-
-### Time Complexity: O(n) for all operations
-### Space Complexity: O(1)
-
-## Code
+---
 
 ```code```

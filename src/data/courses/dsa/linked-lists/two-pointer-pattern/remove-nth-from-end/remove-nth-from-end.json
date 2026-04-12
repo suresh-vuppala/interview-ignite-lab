@@ -6,11 +6,11 @@
   "mdFile": "remove-nth-from-end.md",
   "codeExamples": [
     {
-      "title": "Remove Nth Node from End Solution",
+      "title": "Remove Nth Node from End",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/remove-nth-from-end/code/cpp/RemoveNthFromEnd.cpp"
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/remove-nth-from-end/code/cpp/remove_nth_from_end.cpp"
         },
         {
           "language": "java",
