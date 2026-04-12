@@ -3,5 +3,24 @@
   "slug": "merge-vs-quick-sort",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "merge-vs-quick-sort.md"
+  "mdFile": "merge-vs-quick-sort.md",
+  "codeExamples": [
+    {
+      "title": "Merge Sort vs Quick Sort",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/merge-vs-quick-sort/code/cpp/MergeVsQuickSort.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/merge-vs-quick-sort/code/java/MergeVsQuickSort.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/merge-sort/sorting-comparisons/merge-vs-quick-sort/code/python/merge_vs_quick_sort.py"
+        }
+      ]
+    }
+  ]
 }

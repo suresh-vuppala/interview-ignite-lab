@@ -3,5 +3,24 @@
   "slug": "standard-sorting-algorithms",
   "isPremium": false,
   "isPosted": true,
-  "mdFile": "standard-sorting-algorithms.md"
+  "mdFile": "standard-sorting-algorithms.md",
+  "codeExamples": [
+    {
+      "title": "Standard Sorting Algorithms",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/standard-sorting-algorithms/code/cpp/StandardSortingAlgorithms.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/standard-sorting-algorithms/code/java/StandardSortingAlgorithms.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/standard-sorting-algorithms/code/python/standard_sorting_algorithms.py"
+        }
+      ]
+    }
+  ]
 }

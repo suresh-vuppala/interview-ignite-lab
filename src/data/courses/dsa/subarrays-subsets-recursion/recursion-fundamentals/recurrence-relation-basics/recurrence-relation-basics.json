@@ -1,7 +1,26 @@
 {
-    "title": "Recurrence Relation Basics",
-    "slug": "recurrence-relation-basics",
-    "isPremium": false,
-    "isPosted": true,
-    "mdFile": "recurrence-relation-basics.md"
+  "title": "Recurrence Relation Basics",
+  "slug": "recurrence-relation-basics",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "recurrence-relation-basics.md",
+  "codeExamples": [
+    {
+      "title": "Recurrence Relation Basics",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/recursion-fundamentals/recurrence-relation-basics/code/cpp/recurrence_relation_basics.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/recursion-fundamentals/recurrence-relation-basics/code/java/RecurrenceRelationBasics.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/recursion-fundamentals/recurrence-relation-basics/code/python/recurrence-relation-basics.py"
+        }
+      ]
+    }
+  ]
 }

@@ -1,7 +1,26 @@
 {
-    "title": "Recursion Tree Understanding",
-    "slug": "recursion-tree-understanding",
-    "isPremium": false,
-    "isPosted": true,
-    "mdFile": "recursion-tree-understanding.md"
+  "title": "Recursion Tree Understanding",
+  "slug": "recursion-tree-understanding",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "recursion-tree-understanding.md",
+  "codeExamples": [
+    {
+      "title": "Recursion Tree Understanding",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/recursion-fundamentals/recursion-tree-understanding/code/cpp/recursion_tree_understanding.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/recursion-fundamentals/recursion-tree-understanding/code/java/RecursionTreeUnderstanding.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/subarrays-subsets-recursion/recursion-fundamentals/recursion-tree-understanding/code/python/recursion-tree-understanding.py"
+        }
+      ]
+    }
+  ]
 }
