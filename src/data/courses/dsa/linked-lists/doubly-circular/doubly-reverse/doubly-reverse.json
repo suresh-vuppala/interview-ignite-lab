@@ -6,11 +6,11 @@
   "mdFile": "doubly-reverse.md",
   "codeExamples": [
     {
-      "title": "Reverse Doubly LL Solution",
+      "title": "Reverse Doubly LL",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-reverse/code/cpp/DoublyReverse.cpp"
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-reverse/code/cpp/doubly_reverse.cpp"
         },
         {
           "language": "java",

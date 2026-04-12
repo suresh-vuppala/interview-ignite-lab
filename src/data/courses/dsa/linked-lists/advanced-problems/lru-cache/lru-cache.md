@@ -1,64 +1,58 @@
-## Overview
-Design and implement a Least Recently Used (LRU) cache with O(1) get and put operations.
+Design a Least Recently Used (LRU) cache. O(1) for get and put. When capacity exceeded, evict the least recently used item.
 
-## Topics Covered
-1. **Doubly Linked List**: Store key-value pairs in order of use
-2. **HashMap**: Quick access to nodes
-3. **Get Operation**: Move accessed node to front
-4. **Put Operation**: Add/update and evict least recently used
+<br>
 
-## Problem Statement
-Implement LRUCache class with:
-- `get(key)`: Return value if exists, else -1
-- `put(key, value)`: Insert or update, evict LRU if capacity exceeded
+> Input: capacity=2, put(1,1), put(2,2), get(1)→1, put(3,3), get(2)→-1 (evicted)
+> **Key insight:** Hash map (O(1) lookup) + Doubly linked list (O(1) remove/insert). Most recently used at head, least recently used at tail. On access: move to head. On eviction: remove tail.
 
+<br>
 
 ---
 
 ## Constraints
-
 - `1 ≤ capacity ≤ 3000`
-- `0 ≤ key ≤ 10⁴`
-- `0 ≤ value ≤ 10⁵`
-- `At most 2 × 10⁵ calls to get and put`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution: Hash Map + Doubly Linked List (Optimal)
 
-1. **Get non-existent key:** Return -1
-2. **Put when at capacity:** Evict LRU item
-3. **Get moves item to most recent:** Subsequent eviction skips it
-4. **Put existing key:** Update value and move to front
-5. **Capacity = 1:** Every new put evicts the previous
-6. **Sequential access pattern:** LRU always evicts earliest inserted
+**Algorithm:**
+- get(key): if in map → move node to head, return value. Else -1.
+- put(key, value): if in map → update value, move to head. Else create node, add to head, add to map. If over capacity → remove tail, remove from map.
+
+### Time Complexity: O(1) per operation
+**Why?** Hash map: O(1) lookup. DLL: O(1) insert/remove at head/tail.
+
+**Detailed breakdown:** 3000 capacity → O(1) per get/put regardless
+
+### Space Complexity: O(capacity)
+
+> **Drawback:** Doubly linked list + hash map is complex to implement correctly. But it's the only way to achieve O(1) for all operations.
+
+> **Key Insight for Improvement:** Sentinel nodes (dummy head and tail) simplify edge cases — no null checks for first/last element.
 
 <br>
 
-## Approach
+---
 
-### Data Structures
-- Doubly linked list: Maintain access order (most recent at head)
-- HashMap: Map keys to list nodes for O(1) access
+## Complexity Progression Summary
 
-### Get Operation
-- If key exists: Move node to head, return value
-- Else: Return -1
-- Time: O(1)
+| Solution | get | put | Space |
+|----------|-----|-----|-------|
+| Array scan | O(N) | O(N) | O(N) |
+| OrderedDict (Python) | O(1) | O(1) | O(N) |
+| HashMap + DLL | O(1) | O(1) | O(N) |
 
-### Put Operation
-- If key exists: Update value, move to head
-- If new key and at capacity: Remove tail node
-- Add new node at head
-- Time: O(1)
+**Key Insights:**
+1. **HashMap + DLL = O(1) everything:** The classic data structure design pattern
+2. **Sentinel nodes:** Dummy head and tail eliminate all null checks
+3. **Move to head on access:** Maintains recency ordering
+4. **FAANG top-3 design:** Asked at Google, Amazon, Meta, Microsoft
 
-## Complexity Analysis
+<br><br>
 
-### Time Complexity: O(1) for both get and put
-### Space Complexity: O(capacity)
-
-## Code
+---
 
 ```code```

@@ -6,11 +6,11 @@
   "mdFile": "reorder-list.md",
   "codeExamples": [
     {
-      "title": "Reorder List Solution",
+      "title": "Reorder List",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/structural-transformations/reorder-list/code/cpp/ReorderList.cpp"
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/reorder-list/code/cpp/reorder_list.cpp"
         },
         {
           "language": "java",

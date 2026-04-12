@@ -1,13 +1,35 @@
+# ============================================================
+# LFU Cache
+# ============================================================
 from collections import defaultdict, OrderedDict
 class LFUCache:
-    def __init__(self, capacity): self.cap=capacity; self.keyToVal={}; self.keyToFreq={}; self.freqToKeys=defaultdict(OrderedDict); self.minFreq=0
-    def update_freq(self, key): freq=self.keyToFreq[key]; del self.freqToKeys[freq][key]; [self.freqToKeys.pop(freq) or (self.minFreq:=self.minFreq+1) for _ in [1] if not self.freqToKeys[freq] and self.minFreq==freq]; self.keyToFreq[key]=freq+1; self.freqToKeys[freq+1][key]=None
+    def __init__(self, capacity):
+        self.cap = capacity
+        self.key_val = {}    # key -> (val, freq)
+        self.freq_keys = defaultdict(OrderedDict)  # freq -> OrderedDict of keys
+        self.min_freq = 0
+
+    def _touch(self, key):
+        val, freq = self.key_val[key]
+        del self.freq_keys[freq][key]
+        if not self.freq_keys[freq] and self.min_freq == freq:
+            self.min_freq += 1
+        self.key_val[key] = (val, freq + 1)
+        self.freq_keys[freq + 1][key] = None
+
     def get(self, key):
-        if key not in self.keyToVal: return -1
-        self.update_freq(key); return self.keyToVal[key]
-    def put(self, key, val):
-        if self.cap<=0: return
-        if key in self.keyToVal: self.keyToVal[key]=val; self.update_freq(key); return
-        if len(self.keyToVal)>=self.cap: evict=next(iter(self.freqToKeys[self.minFreq])); del self.freqToKeys[self.minFreq][evict]; del self.keyToVal[evict]; del self.keyToFreq[evict]
-        self.keyToVal[key]=val; self.keyToFreq[key]=1; self.freqToKeys[1][key]=None; self.minFreq=1
-if __name__=="__main__": c=LFUCache(2); c.put(1,1); c.put(2,2); print(c.get(1)); c.put(3,3); print(c.get(2))
+        if key not in self.key_val: return -1
+        self._touch(key)
+        return self.key_val[key][0]
+
+    def put(self, key, value):
+        if self.cap <= 0: return
+        if key in self.key_val:
+            self.key_val[key] = (value, self.key_val[key][1])
+            self._touch(key); return
+        if len(self.key_val) >= self.cap:
+            evict, _ = self.freq_keys[self.min_freq].popitem(last=False)
+            del self.key_val[evict]
+        self.key_val[key] = (value, 1)
+        self.freq_keys[1][key] = None
+        self.min_freq = 1

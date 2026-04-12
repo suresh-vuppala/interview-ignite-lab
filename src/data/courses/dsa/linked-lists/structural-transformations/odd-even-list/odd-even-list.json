@@ -6,11 +6,11 @@
   "mdFile": "odd-even-list.md",
   "codeExamples": [
     {
-      "title": "Odd-Even Linked List Solution",
+      "title": "Odd-Even Linked List",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/structural-transformations/odd-even-list/code/cpp/OddEvenList.cpp"
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/odd-even-list/code/cpp/odd_even_list.cpp"
         },
         {
           "language": "java",

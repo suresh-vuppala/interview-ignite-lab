@@ -6,11 +6,11 @@
   "mdFile": "rotate-list.md",
   "codeExamples": [
     {
-      "title": "Rotate Linked List Solution",
+      "title": "Rotate Linked List",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/structural-transformations/rotate-list/code/cpp/RotateList.cpp"
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/rotate-list/code/cpp/rotate_list.cpp"
         },
         {
           "language": "java",

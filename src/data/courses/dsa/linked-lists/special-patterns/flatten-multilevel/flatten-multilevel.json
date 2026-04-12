@@ -6,11 +6,11 @@
   "mdFile": "flatten-multilevel.md",
   "codeExamples": [
     {
-      "title": "Flatten Multilevel List Solution",
+      "title": "Flatten Multilevel List",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/special-patterns/flatten-multilevel/code/cpp/FlattenMultilevel.cpp"
+          "codeFile": "courses/dsa/linked-lists/special-patterns/flatten-multilevel/code/cpp/flatten_multilevel.cpp"
         },
         {
           "language": "java",

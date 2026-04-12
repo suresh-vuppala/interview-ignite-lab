@@ -6,11 +6,11 @@
   "mdFile": "copy-random-pointer.md",
   "codeExamples": [
     {
-      "title": "Copy List with Random Pointer Solution",
+      "title": "Copy List with Random Pointer",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/special-patterns/copy-random-pointer/code/cpp/CopyRandomPointer.cpp"
+          "codeFile": "courses/dsa/linked-lists/special-patterns/copy-random-pointer/code/cpp/copy_random_pointer.cpp"
         },
         {
           "language": "java",

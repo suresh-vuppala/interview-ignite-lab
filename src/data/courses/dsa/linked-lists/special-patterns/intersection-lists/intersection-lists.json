@@ -6,11 +6,11 @@
   "mdFile": "intersection-lists.md",
   "codeExamples": [
     {
-      "title": "Intersection of Lists Solution",
+      "title": "Intersection of Lists",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/special-patterns/intersection-lists/code/cpp/IntersectionLists.cpp"
+          "codeFile": "courses/dsa/linked-lists/special-patterns/intersection-lists/code/cpp/intersection_lists.cpp"
         },
         {
           "language": "java",

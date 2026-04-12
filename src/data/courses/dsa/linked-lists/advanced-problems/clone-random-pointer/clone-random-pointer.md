@@ -1,59 +1,44 @@
-## Overview
-Create a deep copy of a linked list where each node has a next and random pointer.
+Clone a linked list with random pointer (same as copy-random-pointer, in advanced section). Deep copy with both next and random pointers preserved.
 
-## Topics Covered
-1. **Interweaving Technique**: Insert copies between original nodes
-2. **Copy Random Pointers**: Use interweaved structure to set random
-3. **Separate Lists**: Extract the copied list
-4. **HashMap Alternative**: Map original to copy nodes
+<br>
 
-## Problem Statement
-Given a linked list where each node has:
-- `next`: Points to next node
-- `random`: Points to any node or null
+> Input: list with random pointers
+> Output: deep copy
+> **Key insight:** Hash map approach: map each original node to its clone. Two passes: create clones, then set next and random pointers using the map.
 
-Create a deep copy of the list.
-
+<br>
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 1000`
-- `-10⁴ ≤ Node.val ≤ 10⁴`
+- `0 ≤ N ≤ 1000`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution: Hash Map (Simple and Clean)
 
-1. **Empty list:** Return null
-2. **All random = null:** Simple copy
-3. **Random points to self:** Must handle self-reference in clone
-4. **Random points to next node:** Straightforward mapping
-5. **Interleaving technique:** O(1) space solution weaves cloned nodes
+**Algorithm:** Pass 1: create clone for each node, store in map. Pass 2: for each node, clone.next = map[node.next], clone.random = map[node.random].
+
+### Time Complexity: O(N)
+### Space Complexity: O(N)
+
+> **Drawback:** O(N) extra space for map. Interleave technique gives O(1) space (see copy-random-pointer).
+
+> **Key Insight for Improvement:** Hash map approach is simpler to implement. Interleave approach saves space but is harder to get right.
 
 <br>
 
-## Approach
+---
 
-### Method 1: Interweaving (O(1) space)
-1. Insert copy nodes: A->A'->B->B'->C->C'
-2. Set random pointers: A'.random = A.random.next
-3. Separate lists: Extract A'->B'->C'
-- Time: O(n), Space: O(1)
+**Key Insights:**
+1. **Two approaches:** Hash map (O(N) space, simple) vs Interleave (O(1) space, complex)
+2. **Map original→clone:** Enables O(1) lookup for random pointer assignment
+3. **Two passes:** Create all clones first, then wire pointers
 
-### Method 2: HashMap (O(n) space)
-1. First pass: Create all nodes, map original to copy
-2. Second pass: Set next and random using map
-- Time: O(n), Space: O(n)
+<br><br>
 
-## Complexity Analysis
-
-### Time Complexity: O(n)
-### Space Complexity: O(1) interweaving, O(n) hashmap
-
-## Code
+---
 
 ```code```

@@ -1,14 +1,36 @@
+# ============================================================
+# LRU Cache
+# ============================================================
 class Node:
-    def __init__(self, k, v): self.key=k; self.val=v; self.prev=None; self.next=None
+    def __init__(self, key=0, val=0):
+        self.key, self.val = key, val
+        self.prev = self.next = None
+
 class LRUCache:
-    def __init__(self, capacity): self.map={}; self.cap=capacity; self.head=Node(0,0); self.tail=Node(0,0); self.head.next=self.tail; self.tail.prev=self.head
-    def remove(self, n): n.prev.next=n.next; n.next.prev=n.prev
-    def insert(self, n): n.next=self.head.next; n.prev=self.head; self.head.next.prev=n; self.head.next=n
+    def __init__(self, capacity):
+        self.cap = capacity
+        self.map = {}
+        self.head, self.tail = Node(), Node()
+        self.head.next, self.tail.prev = self.tail, self.head
+
+    def _add(self, node):
+        node.next, node.prev = self.head.next, self.head
+        self.head.next.prev = node; self.head.next = node
+
+    def _remove(self, node):
+        node.prev.next, node.next.prev = node.next, node.prev
+
     def get(self, key):
         if key not in self.map: return -1
-        n=self.map[key]; self.remove(n); self.insert(n); return n.val
-    def put(self, key, val):
-        if key in self.map: self.remove(self.map[key])
-        n=Node(key,val); self.map[key]=n; self.insert(n)
-        if len(self.map)>self.cap: lru=self.tail.prev; self.remove(lru); del self.map[lru.key]
-if __name__=="__main__": c=LRUCache(2); c.put(1,1); c.put(2,2); print(c.get(1)); c.put(3,3); print(c.get(2))
+        node = self.map[key]
+        self._remove(node); self._add(node)
+        return node.val
+
+    def put(self, key, value):
+        if key in self.map:
+            self._remove(self.map[key])
+        node = Node(key, value)
+        self._add(node); self.map[key] = node
+        if len(self.map) > self.cap:
+            lru = self.tail.prev
+            self._remove(lru); del self.map[lru.key]

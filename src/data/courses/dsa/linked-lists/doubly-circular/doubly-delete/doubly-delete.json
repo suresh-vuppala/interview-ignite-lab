@@ -6,11 +6,11 @@
   "mdFile": "doubly-delete.md",
   "codeExamples": [
     {
-      "title": "Doubly LL Delete Solution",
+      "title": "Doubly LL Delete",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-delete/code/cpp/DoublyDelete.cpp"
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-delete/code/cpp/doubly_delete.cpp"
         },
         {
           "language": "java",

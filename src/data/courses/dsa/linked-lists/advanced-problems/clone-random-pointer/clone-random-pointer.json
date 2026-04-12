@@ -2,14 +2,27 @@
   "title": "Clone Linked List with Random Pointer",
   "description": "Create a deep copy of a linked list where each node has next and random pointers",
   "difficulty": "medium",
-  "tags": ["linked-list", "hash-map", "deep-copy"],
+  "tags": [
+    "linked-list",
+    "hash-map",
+    "deep-copy"
+  ],
   "codeExamples": [
     {
-      "title": "Clone with Interweaving",
+      "title": "Clone Linked List with Random Pointer",
       "languages": [
-        {"language": "java", "codeFile": "courses/dsa/linked-lists/advanced-problems/clone-random-pointer/code/java/CloneRandomPointer.java"},
-        {"language": "cpp", "codeFile": "courses/dsa/linked-lists/advanced-problems/clone-random-pointer/code/cpp/CloneRandomPointer.cpp"},
-        {"language": "python", "codeFile": "courses/dsa/linked-lists/advanced-problems/clone-random-pointer/code/python/clone_random_pointer.py"}
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/linked-lists/advanced-problems/clone-random-pointer/code/cpp/clone_random_pointer.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/linked-lists/advanced-problems/clone-random-pointer/code/java/CloneRandomPointer.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/linked-lists/advanced-problems/clone-random-pointer/code/python/clone_random_pointer.py"
+        }
       ]
     }
   ]

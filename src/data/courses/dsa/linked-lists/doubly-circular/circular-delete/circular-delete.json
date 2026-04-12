@@ -6,11 +6,11 @@
   "mdFile": "circular-delete.md",
   "codeExamples": [
     {
-      "title": "Circular LL Delete Solution",
+      "title": "Circular LL Delete",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/doubly-circular/circular-delete/code/cpp/CircularDelete.cpp"
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/circular-delete/code/cpp/circular_delete.cpp"
         },
         {
           "language": "java",

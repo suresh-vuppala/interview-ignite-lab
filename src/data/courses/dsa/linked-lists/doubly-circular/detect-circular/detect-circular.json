@@ -6,11 +6,11 @@
   "mdFile": "detect-circular.md",
   "codeExamples": [
     {
-      "title": "Detect Circular LL Solution",
+      "title": "Detect Circular LL",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/doubly-circular/detect-circular/code/cpp/DetectCircular.cpp"
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/detect-circular/code/cpp/detect_circular.cpp"
         },
         {
           "language": "java",

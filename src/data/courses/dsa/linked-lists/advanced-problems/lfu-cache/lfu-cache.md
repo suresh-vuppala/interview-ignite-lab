@@ -1,66 +1,54 @@
-## Overview
-Design and implement a Least Frequently Used (LFU) cache with O(1) get and put operations.
+Design a Least Frequently Used (LFU) cache. O(1) for get and put. When capacity exceeded, evict the least frequently used item (ties broken by least recently used).
 
-## Topics Covered
-1. **Frequency Tracking**: Count access frequency for each key
-2. **Multiple Data Structures**: HashMap + Doubly Linked Lists
-3. **Get Operation**: Increment frequency, return value
-4. **Put Operation**: Add/update and evict least frequently used
+<br>
 
-## Problem Statement
-Implement LFUCache class with:
-- `get(key)`: Return value and increment frequency, else -1
-- `put(key, value)`: Insert/update, evict LFU (tie-break by LRU) if capacity exceeded
+> Input: capacity=2, put(1,1), put(2,2), get(1)→1, put(3,3), get(2)→-1
+> **Key insight:** Hash map for key→node. Hash map for freq→DLL (ordered by recency). Track minimum frequency. On access: move node from freq list to freq+1 list.
 
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ capacity ≤ 10⁴`
-- `0 ≤ key ≤ 10⁵`
-- `0 ≤ value ≤ 10⁵`
-- `At most 2 × 10⁵ calls`
+- `0 ≤ capacity ≤ 10⁴`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution: Two Hash Maps + DLLs (Optimal)
 
-1. **Get non-existent key:** Return -1
-2. **Put when at capacity:** Evict least frequently used
-3. **Tie in frequency:** Evict LRU among tied items
-4. **Capacity = 1:** Frequent evictions
-5. **Same key accessed many times:** Frequency increases, harder to evict
-6. **All keys accessed once:** LRU tie-breaking among all
+**Algorithm:**
+- get: lookup in map, increase frequency, move to new freq list, return value
+- put: if exists → update + get logic. New → add at freq=1. If over capacity → evict from min_freq list's tail.
+
+### Time Complexity: O(1) per operation
+**Why?** All operations are hash map lookups + DLL insert/remove.
+
+### Space Complexity: O(capacity)
+
+> **Drawback:** More complex than LRU. Three data structures to maintain.
+
+> **Key Insight for Improvement:** Track min_freq: on new insert, min_freq = 1. When min_freq list becomes empty, min_freq++. This avoids scanning for the minimum.
 
 <br>
 
-## Approach
+---
 
-### Data Structures
-- keyToVal: Map key to value
-- keyToFreq: Map key to frequency
-- freqToKeys: Map frequency to doubly linked list of keys
-- minFreq: Track minimum frequency
+## Complexity Progression Summary
 
-### Get Operation
-- If key exists: Increment frequency, update structures, return value
-- Else: Return -1
-- Time: O(1)
+| Cache | get | put | Eviction Policy |
+|-------|-----|-----|----------------|
+| LRU | O(1) | O(1) | Least recently used |
+| LFU | O(1) | O(1) | Least frequently used (LRU for ties) |
 
-### Put Operation
-- If key exists: Update value and frequency
-- If new key and at capacity: Remove LFU key (use minFreq)
-- Add new key with frequency 1
-- Time: O(1)
+**Key Insights:**
+1. **freq→DLL map:** Each frequency has its own recency-ordered list
+2. **min_freq tracking:** Avoids scanning for minimum frequency
+3. **Frequency update:** Remove from old freq list, add to freq+1 list
 
-## Complexity Analysis
+<br><br>
 
-### Time Complexity: O(1) for both get and put
-### Space Complexity: O(capacity)
-
-## Code
+---
 
 ```code```

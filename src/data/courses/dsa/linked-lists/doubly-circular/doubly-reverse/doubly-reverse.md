@@ -2,26 +2,35 @@ Reverse a doubly linked list.
 
 <br>
 
----
-
-## Solution 1: Swap prev/next for each node
-
-Traverse, swap prev and next pointers. Update head to last node.
-
-### Time: O(n) | Space: O(1)
+> Example: 1↔2↔3↔4 → 4↔3↔2↔1
+> **Key insight:** Swap prev and next pointers for every node. The last node processed becomes the new head.
 
 <br>
 
 ---
 
-## Complexity Progression Summary
+## Constraints
+- `0 ≤ N ≤ 10⁵`
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Swap Pointers | O(n) | O(1) | Swap prev/next at each node |
+## Solution: Swap Prev/Next (Optimal)
+
+### Time Complexity: O(N)
+### Space Complexity: O(1)
+
+> **Drawback:** None — O(N) is optimal.
+
+> **Key Insight for Improvement:** Unlike singly LL reversal (3 pointers), DLL reversal just swaps each node's prev and next. Simpler!
 
 <br>
-<br>
+
+---
+
+**Key Insights:**
+1. **Swap prev↔next for each node:** That's the entire algorithm
+2. **Move direction flips:** After swapping, "next" is the old "prev"
+3. **Track new head:** Last processed node = new head
+
+<br><br>
 
 ---
 

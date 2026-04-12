@@ -6,11 +6,11 @@
   "mdFile": "add-two-numbers.md",
   "codeExamples": [
     {
-      "title": "Add Two Numbers Solution",
+      "title": "Add Two Numbers",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/special-patterns/add-two-numbers/code/cpp/AddTwoNumbers.cpp"
+          "codeFile": "courses/dsa/linked-lists/special-patterns/add-two-numbers/code/cpp/add_two_numbers.cpp"
         },
         {
           "language": "java",

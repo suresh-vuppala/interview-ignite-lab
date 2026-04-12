@@ -6,11 +6,11 @@
   "mdFile": "doubly-insert.md",
   "codeExamples": [
     {
-      "title": "Doubly LL Insert Solution",
+      "title": "Doubly LL Insert",
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-insert/code/cpp/DoublyInsert.cpp"
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-insert/code/cpp/doubly_insert.cpp"
         },
         {
           "language": "java",
