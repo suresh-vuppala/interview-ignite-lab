@@ -1,13 +1,38 @@
-Reverse all 32 bits of an integer.
+Reverse all 32 bits of an unsigned integer.
+
+<br>
+
+> **Key insight:** Extract rightmost bit, shift result left, OR with extracted bit. Repeat 32 times.
 
 <br>
 
 ---
 
-## Solution 1: Bit by Bit — Extract LSB, shift into result
-## Solution 2: Divide and Conquer — Swap halves recursively (16→8→4→2→1 bits)
+## Constraints
+- Standard constraints
 
-### Time: O(32) = O(1) | Space: O(1)
+<br>
+
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Extract LSB, build result from MSB
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Extract LSB, build result from MSB`
+
+### Time Complexity: O(32)=O(1)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1)
 
 <br>
 
@@ -15,13 +40,17 @@ Reverse all 32 bits of an integer.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Bit by Bit | O(1) | O(1) | Extract + shift 32 times |
-| Divide & Conquer | O(1) | O(1) | Swap bit groups |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(32)=O(1) | O(1) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

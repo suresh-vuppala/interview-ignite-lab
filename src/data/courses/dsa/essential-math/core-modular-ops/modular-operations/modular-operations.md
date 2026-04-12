@@ -1,49 +1,56 @@
-## Overview
-Perform arithmetic operations under modulo including fast modular exponentiation.
+Modular arithmetic: addition, subtraction, multiplication.
 
-## Topics Covered
-1. **(a + b) % m**: Modular addition
-2. **(a - b) % m**: Modular subtraction
-3. **(a * b) % m**: Modular multiplication
-4. **Fast Modular Exponentiation**: Compute (a^b) % m efficiently
+<br>
 
-## Approach
-### Basic Operations
-- (a + b) % m = ((a % m) + (b % m)) % m
-- (a - b) % m = ((a % m) - (b % m) + m) % m
-- (a * b) % m = ((a % m) * (b % m)) % m
+> **Key insight:** (a+b)%m = (a%m + b%m)%m. Same for multiplication. Subtraction: add m before mod.
 
-### Fast Modular Exponentiation
-- Use binary exponentiation with modulo
-- Time: O(log b)
-
-## Complexity Analysis
-### Time: O(1) for basic ops, O(log b) for power
-
-## Code
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁹ (for number theory problems)`
-- `Results may need modular arithmetic`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **n = 0:** Check base case definition
-2. **n = 1:** Smallest valid input
-3. **Prime number input:** Special behavior in factorization/sieve
-4. **Power of 2:** Special case in many algorithms
-5. **Very large n:** Needs O(√n) or O(log n) algorithm
-6. **n = 0 or 1 in GCD:** GCD(a,0) = a, GCD(1,b) = 1
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Distribute mod over +, -, ×
 
 <br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Distribute mod over +, -, ×`
+
+### Time Complexity: O(1) per op
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(1) per op | O(1) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

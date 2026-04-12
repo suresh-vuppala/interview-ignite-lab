@@ -1,40 +1,56 @@
-Hashing maps data to fixed-size values using a hash function. Used in hash tables, sets, and maps for O(1) average lookup.
+Introduction to string hashing concepts.
 
-## Key Concepts
-- Hash function converts key to index
-- Collision handling: chaining, open addressing
-- Load factor affects performance
+<br>
 
-## Applications
-- Fast lookup/insert/delete
-- Caching, databases
-- Cryptography
+> **Key insight:** Hash function maps string to integer. Useful for O(1) string comparison.
 
-## Code
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ s.length ≤ 10⁵`
-- `s consists of lowercase English letters (typically)`
-- `Hash collisions must be handled`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **Empty string:** Return '' or 0
-2. **Single character:** Trivial case
-3. **All same characters:** Hash/pattern matching is straightforward
-4. **No match found:** Return -1 or empty
-5. **Multiple matches:** Return all or first depending on problem
-6. **Very long string:** Need efficient O(n) algorithm
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Rolling hash: h = (h * base + char) % mod
 
 <br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Rolling hash: h = (h * base + char) % mod`
+
+### Time Complexity: O(N) to compute
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N) to compute | O(1) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

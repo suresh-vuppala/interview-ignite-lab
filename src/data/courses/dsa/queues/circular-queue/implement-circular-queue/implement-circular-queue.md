@@ -1,14 +1,38 @@
-Implement circular queue operations (enqueue, dequeue, front, rear, isEmpty, isFull).
+Implement a circular queue with fixed capacity.
+
+<br>
+
+> **Key insight:** Use array with front/rear pointers that wrap around using modulo.
 
 <br>
 
 ---
 
-## Solution 1: Array with Modulo
+## Constraints
+- Standard constraints
 
-Same as design-circular-queue. Key: next = (current + 1) % capacity.
+<br>
 
-### Time: O(1) all operations | Space: O(k)
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** front=(front+1)%k, rear=(rear+1)%k
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `front=(front+1)%k, rear=(rear+1)%k`
+
+### Time Complexity: O(1) per op
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(k)
 
 <br>
 
@@ -16,12 +40,17 @@ Same as design-circular-queue. Key: next = (current + 1) % capacity.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Modulo Array | O(1) all ops | O(k) | Circular indexing |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(1) per op | O(k) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

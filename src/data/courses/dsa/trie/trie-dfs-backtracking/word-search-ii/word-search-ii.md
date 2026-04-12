@@ -1,51 +1,56 @@
-## Problem Statement
-Find all words from dictionary that exist in a 2D board. Words can be formed by sequentially adjacent cells.
+Find all words from dictionary in a grid.
 
-## Approach
+<br>
 
-### Trie + DFS
-- Build trie from dictionary
-- For each cell:
-  - Start DFS with trie root
-  - Move to adjacent cells
-  - Follow trie path
-  - Add word when end node reached
-- Time: O(M*N*4^L) where M*N=board size, L=max word length
+> **Key insight:** Build trie from words. DFS from each cell, follow trie.
 
-### Optimization
-- Remove found words from trie
-- Prune dead branches
-- Mark visited cells
-
-## Complexity
-- Build Trie: O(W*L) for W words
-- DFS: O(M*N*4^L)
-- Space: O(W*L)
-
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ number of words ≤ 3 × 10⁴`
-- `1 ≤ word length ≤ 2000`
-- `Words consist of lowercase English letters (unless stated otherwise)`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **Empty trie:** Search returns false, prefix returns false
-2. **Single character words:** Trie depth = 1
-3. **All same word inserted:** Count or flag must handle duplicates
-4. **Prefix is also a complete word:** isEnd flag must be separate from having children
-5. **Very long word:** Deep trie path
-6. **No matching prefix:** Return false or empty list
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Trie + grid DFS, prune branches with no children
 
 <br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Trie + grid DFS, prune branches with no children`
+
+### Time Complexity: O(M×N×4^L)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(W×L)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(M×N×4^L) | O(W×L) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

@@ -1,15 +1,38 @@
-Search for target in rotated sorted array.
+Search target in rotated sorted array.
+
+<br>
+
+> **Key insight:** Binary search: determine which half is sorted, check if target is in sorted half.
 
 <br>
 
 ---
 
-## Solution 1: Find Pivot + Binary Search — O(2 log n) = O(log n)
-## Solution 2: Modified Binary Search (Optimal)
+## Constraints
+- Standard constraints
 
-Identify which half is sorted. Check if target is in sorted half → narrow search.
+<br>
 
-### Time: O(log n) | Space: O(1)
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Find sorted half, check if target in range, narrow search
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Find sorted half, check if target in range, narrow search`
+
+### Time Complexity: O(log N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1)
 
 <br>
 
@@ -17,13 +40,17 @@ Identify which half is sorted. Check if target is in sorted half → narrow sear
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Pivot + BS | O(log n) | O(1) | Two binary searches |
-| Single Modified BS | O(log n) | O(1) | One-pass identification |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(log N) | O(1) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

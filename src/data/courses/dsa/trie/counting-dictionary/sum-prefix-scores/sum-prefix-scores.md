@@ -1,12 +1,38 @@
-Count sum of prefix scores for each word.
+For each word, sum count of words having each of its prefixes.
+
+<br>
+
+> **Key insight:** Trie with prefix count. For each word, sum counts along its path.
 
 <br>
 
 ---
 
-## Solution 1: Trie with Count — During insertion, increment count at each node. Query: sum counts along path.
+## Constraints
+- Standard constraints
 
-### Time: O(n × L) | Space: O(n × L)
+<br>
+
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Trie prefix counting
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Trie prefix counting`
+
+### Time Complexity: O(N×L)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N×L)
 
 <br>
 
@@ -14,12 +40,17 @@ Count sum of prefix scores for each word.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Trie + Count | O(nL) | O(nL) | Count during insertion |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N×L) | O(N×L) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

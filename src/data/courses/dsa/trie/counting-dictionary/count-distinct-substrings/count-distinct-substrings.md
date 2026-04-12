@@ -1,13 +1,38 @@
-Count distinct substrings using Trie.
+Count distinct substrings of a string.
+
+<br>
+
+> **Key insight:** Insert all suffixes into trie. Each trie node = distinct prefix = distinct substring.
 
 <br>
 
 ---
 
-## Solution 1: HashSet — Store all substrings O(n³ space)
-## Solution 2: Trie Insertion — Insert all suffixes, count trie nodes
+## Constraints
+- Standard constraints
 
-### Time: O(n²) | Space: O(n²)
+<br>
+
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Trie of all suffixes, count nodes
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Trie of all suffixes, count nodes`
+
+### Time Complexity: O(N²)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N²)
 
 <br>
 
@@ -15,13 +40,17 @@ Count distinct substrings using Trie.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| HashSet | O(n³) | O(n³) | Store all substrings |
-| Trie | O(n²) | O(n²) | Shared prefixes save space |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N²) | O(N²) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

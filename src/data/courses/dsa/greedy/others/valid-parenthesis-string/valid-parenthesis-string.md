@@ -1,22 +1,38 @@
-Check if string with '(', ')', '*' can be valid. * can be '(', ')', or empty.
+Check if string with '(', ')' and '*' (* can be (, ), or empty) is valid.
+
+<br>
+
+> **Key insight:** Track range [lo, hi] of possible open count. lo = max(0, lo-1 on ), hi = hi+1 on (.
 
 <br>
 
 ---
 
-## Solution 1: Brute Force / DP — Try all possibilities for *
-
-### Time: O(3^n) or O(n²) with DP
+## Constraints
+- Standard constraints
 
 <br>
 
 ---
 
-## Solution 2: Min-Max Open Count (Optimal)
+## Solution 1: Brute Force
 
-Track range [minOpen, maxOpen]. For '(': both++. For ')': both--. For '*': min--, max++. Clamp min ≥ 0.
+> **Drawback:** Suboptimal time complexity.
 
-### Time: O(n) | Space: O(1)
+> **Key Insight for Improvement:** Range tracking: lo,hi of possible open parens count
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Range tracking: lo,hi of possible open parens count`
+
+### Time Complexity: O(N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1)
 
 <br>
 
@@ -24,13 +40,17 @@ Track range [minOpen, maxOpen]. For '(': both++. For ')': both--. For '*': min--
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| DP | O(n²) | O(n) | Track possible open counts |
-| Min-Max | O(n) | O(1) | Range tracking replaces all states |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N) | O(1) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

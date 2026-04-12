@@ -1,15 +1,38 @@
-Find minimum in each sliding window of size k (complement of sliding window maximum).
+Find minimum in each sliding window of size k.
+
+<br>
+
+> **Key insight:** Monotonic deque: maintain increasing deque of indices. Front = current min.
 
 <br>
 
 ---
 
-## Solution 1: Brute Force — Scan k elements per window O(nk)
-## Solution 2: Monotonic Deque (Optimal)
+## Constraints
+- Standard constraints
 
-Maintain increasing deque. Front = minimum. Remove from front if expired, back if larger than incoming.
+<br>
 
-### Time: O(n) | Space: O(k)
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Deque stores indices in increasing value order
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Deque stores indices in increasing value order`
+
+### Time Complexity: O(N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(k)
 
 <br>
 
@@ -17,13 +40,17 @@ Maintain increasing deque. Front = minimum. Remove from front if expired, back i
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Brute Force | O(nk) | O(1) | Scan each window |
-| Monotonic Deque | O(n) | O(k) | Increasing deque tracks minimums |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N) | O(k) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

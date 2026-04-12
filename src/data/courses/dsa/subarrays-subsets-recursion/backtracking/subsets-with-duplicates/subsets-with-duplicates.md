@@ -1,12 +1,38 @@
-Generate all subsets of array with duplicates.
+Generate unique subsets when array has duplicates.
+
+<br>
+
+> **Key insight:** Sort. Skip consecutive duplicates at same recursion level.
 
 <br>
 
 ---
 
-## Solution 1: Sort + Backtracking — Sort first, skip duplicates at same level
+## Constraints
+- Standard constraints
 
-### Time: O(n × 2^n) | Space: O(n)
+<br>
+
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Sort + skip nums[i]==nums[i-1] at same level
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Sort + skip nums[i]==nums[i-1] at same level`
+
+### Time Complexity: O(2^N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N)
 
 <br>
 
@@ -14,12 +40,17 @@ Generate all subsets of array with duplicates.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Sort + Backtrack | O(n×2^n) | O(n) | Skip duplicates via sorting |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(2^N) | O(N) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

@@ -1,17 +1,38 @@
-Insert a new interval into sorted non-overlapping intervals, merging if necessary.
+Insert a new interval into sorted non-overlapping intervals, merge if needed.
+
+<br>
+
+> **Key insight:** Find position, merge overlapping intervals on both sides.
 
 <br>
 
 ---
 
-## Solution 1: Linear Scan — Three phases
+## Constraints
+- Standard constraints
 
-**Algorithm:**
-1. Add all intervals ending before new interval starts
-2. Merge overlapping intervals with new interval
-3. Add remaining intervals
+<br>
 
-### Time: O(n) | Space: O(n) for result
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Linear scan: skip before, merge overlapping, add after
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Linear scan: skip before, merge overlapping, add after`
+
+### Time Complexity: O(N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N)
 
 <br>
 
@@ -19,12 +40,17 @@ Insert a new interval into sorted non-overlapping intervals, merging if necessar
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Three Phase | O(n) | O(n) | Before → merge → after |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N) | O(N) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

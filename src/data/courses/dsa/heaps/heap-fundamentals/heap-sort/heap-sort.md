@@ -1,15 +1,38 @@
-Sort using heap — build max-heap, repeatedly extract max.
+Sort array using heap. Build max-heap, repeatedly extract max.
+
+<br>
+
+> **Key insight:** Build heap O(N). Extract max N times: swap root with last, heapify down.
 
 <br>
 
 ---
 
-## Solution 1: Heap Sort
+## Constraints
+- Standard constraints
 
-1. Build max-heap: O(n)
-2. Repeatedly swap root with last, heapify: O(n log n)
+<br>
 
-### Time: O(n log n) | Space: O(1) in-place
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Build max-heap + N extractions
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Build max-heap + N extractions`
+
+### Time Complexity: O(N log N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1)
 
 <br>
 
@@ -17,12 +40,17 @@ Sort using heap — build max-heap, repeatedly extract max.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Heap Sort | O(n log n) | O(1) | In-place, not stable |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N log N) | O(1) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

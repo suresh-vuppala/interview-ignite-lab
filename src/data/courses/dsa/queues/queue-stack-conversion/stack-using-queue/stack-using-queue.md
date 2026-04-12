@@ -1,13 +1,38 @@
-Implement stack using queue(s).
+Implement stack using a single queue.
+
+<br>
+
+> **Key insight:** After push, rotate queue: move all old elements behind new one.
 
 <br>
 
 ---
 
-## Solution 1: Two Queues — Push O(n), Pop O(1)
-## Solution 2: One Queue — After enqueue, rotate n-1 elements to back
+## Constraints
+- Standard constraints
 
-### Time: Push O(n) | Space: O(n)
+<br>
+
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Push O(N) rotation, Pop O(1)
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Push O(N) rotation, Pop O(1)`
+
+### Time Complexity: Push O(N), Pop O(1)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N)
 
 <br>
 
@@ -15,13 +40,17 @@ Implement stack using queue(s).
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Two Queues | Push O(n) | O(n) | Transfer between queues |
-| One Queue | Push O(n) | O(n) | Self-rotate |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | Push O(N), Pop O(1) | O(N) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

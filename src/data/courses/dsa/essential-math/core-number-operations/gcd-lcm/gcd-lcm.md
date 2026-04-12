@@ -1,55 +1,57 @@
-## Overview
-Learn to compute Greatest Common Divisor (GCD) using Euclidean algorithm and Least Common Multiple (LCM) using GCD.
+Compute GCD (Euclidean algorithm) and LCM.
 
-## Topics Covered
-1. **GCD (Euclidean Algorithm)**: Find greatest common divisor
-2. **LCM using GCD**: Calculate LCM efficiently
-3. **Check Coprime**: Determine if two numbers are coprime
-4. **Extended Euclidean Algorithm**: Find coefficients for Bezout's identity
+<br>
 
-## Approach
+> **Key insight:** gcd(a,b) = gcd(b, a%b). LCM = a*b / gcd(a,b).
 
-### GCD - Euclidean Algorithm
-- gcd(a, b) = gcd(b, a % b)
-- Base case: gcd(a, 0) = a
-- Time: O(log(min(a,b)))
-
-### LCM using GCD
-- lcm(a, b) = (a * b) / gcd(a, b)
-- Time: O(log(min(a,b)))
-
-### Coprime Check
-- Two numbers are coprime if gcd(a, b) = 1
-
-### Extended Euclidean
-- Find x, y such that ax + by = gcd(a, b)
-- Used for modular inverse
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁹ (for number theory problems)`
-- `Results may need modular arithmetic`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **n = 0:** Check base case definition
-2. **n = 1:** Smallest valid input
-3. **Prime number input:** Special behavior in factorization/sieve
-4. **Power of 2:** Special case in many algorithms
-5. **Very large n:** Needs O(√n) or O(log n) algorithm
-6. **n = 0 or 1 in GCD:** GCD(a,0) = a, GCD(1,b) = 1
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Euclidean: gcd(a,b) = gcd(b, a%b), base: gcd(a,0)=a
 
 <br>
 
-## Complexity Analysis
-### Time: O(log n), Space: O(1)
+---
 
-## Code
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Euclidean: gcd(a,b) = gcd(b, a%b), base: gcd(a,0)=a`
+
+### Time Complexity: O(log(min(a,b)))
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(log(min(a,b))) | O(1) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
+
+---
+
 ```code```

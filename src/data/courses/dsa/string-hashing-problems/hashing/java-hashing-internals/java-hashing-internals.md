@@ -1,42 +1,56 @@
-Java uses `HashMap` and `HashSet` backed by hash tables.
+Java HashMap/HashSet internals.
 
-## Hash Function
-- `hashCode()` method
-- Bucket index: `hash & (n-1)`
+<br>
 
-## Collision Resolution
-- Chaining with linked lists
-- Tree conversion (Java 8+) when bucket size > 8
+> **Key insight:** hashCode(), equals(), treeification at bucket size 8.
 
-## Complexity
-- Average O(1) operations
-- Worst O(log n) with tree conversion
-
-## Code
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ s.length ≤ 10⁵`
-- `s consists of lowercase English letters (typically)`
-- `Hash collisions must be handled`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **Empty string:** Return '' or 0
-2. **Single character:** Trivial case
-3. **All same characters:** Hash/pattern matching is straightforward
-4. **No match found:** Return -1 or empty
-5. **Multiple matches:** Return all or first depending on problem
-6. **Very long string:** Need efficient O(n) algorithm
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Hash + equals contract, tree buckets for collision
 
 <br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Hash + equals contract, tree buckets for collision`
+
+### Time Complexity: O(1) average
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(1) average | O(N) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

@@ -1,15 +1,38 @@
-Distribute candies: each child gets ≥ 1, higher-rated gets more than neighbors.
+Distribute minimum candies. Higher-rated child gets more than neighbors.
+
+<br>
+
+> **Key insight:** Two passes: left-to-right (handle left neighbor), right-to-left (handle right neighbor). Take max.
 
 <br>
 
 ---
 
-## Solution 1: Two-Pass (Left + Right)
+## Constraints
+- Standard constraints
 
-Pass 1 (left→right): if rating[i] > rating[i-1], candy[i] = candy[i-1]+1.
-Pass 2 (right→left): if rating[i] > rating[i+1], candy[i] = max(candy[i], candy[i+1]+1).
+<br>
 
-### Time: O(n) | Space: O(n)
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Two passes: L→R for left constraint, R→L for right
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Two passes: L→R for left constraint, R→L for right`
+
+### Time Complexity: O(N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N)
 
 <br>
 
@@ -17,12 +40,17 @@ Pass 2 (right→left): if rating[i] > rating[i+1], candy[i] = max(candy[i], cand
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Two-Pass | O(n) | O(n) | Left constraint then right constraint |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N) | O(N) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

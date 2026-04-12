@@ -1,14 +1,38 @@
-Design a circular queue with fixed capacity.
+Design circular queue supporting all operations in O(1).
+
+<br>
+
+> **Key insight:** Same as circular queue with isFull/isEmpty checks.
 
 <br>
 
 ---
 
-## Solution 1: Array with Front/Rear Pointers
+## Constraints
+- Standard constraints
 
-Use array of fixed size. front and rear indices wrap around using modulo. Track count or use front == rear with size.
+<br>
 
-### Time: O(1) all operations | Space: O(k)
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** count tracks size; full when count==k
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `count tracks size; full when count==k`
+
+### Time Complexity: O(1) per op
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(k)
 
 <br>
 
@@ -16,12 +40,17 @@ Use array of fixed size. front and rear indices wrap around using modulo. Track 
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Circular Array | O(1) all ops | O(k) | Modulo-based wrap-around |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(1) per op | O(k) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

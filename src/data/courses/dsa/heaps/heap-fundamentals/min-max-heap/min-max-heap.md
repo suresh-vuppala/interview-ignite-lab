@@ -1,51 +1,57 @@
-## Overview
+Implement min-heap and max-heap with insert and extract operations.
 
-Min heap maintains smallest element at root. Max heap maintains largest at root.
+<br>
 
-## Operations
+> **Key insight:** Complete binary tree stored in array. Parent=i/2, children=2i,2i+1. Heapify up on insert, down on extract.
 
-- **Insert**: Add and bubble up - O(log n)
-- **Extract**: Remove root and bubble down - O(log n)
-- **Peek**: View root - O(1)
-
-## Applications
-
-- Priority queues
-- Sorting algorithms
-- Graph algorithms (Dijkstra, Prim)
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `-10⁴ ≤ nums[i] ≤ 10⁴`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **Single element:** It is both min and max
-2. **All same elements:** Heap operations trivial
-3. **Already a valid heap:** No restructuring needed
-4. **k = 1:** Find min/max directly
-5. **k = n:** Need to process entire heap
-6. **Negative values:** Min heap with negatives
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Heapify: swap with parent/child to maintain heap property
 
 <br>
 
-## Complexity Analysis
+---
 
-### Time Complexity
-- Insert: O(log n)
-- Extract: O(log n)
-- Peek: O(1)
+## Solution 2: Optimal
 
-### Space Complexity: O(n)
+**Recurrence/Approach:** `Heapify: swap with parent/child to maintain heap property`
 
-## Code
+### Time Complexity: O(log N) per op
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(log N) per op | O(N) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
+
+---
 
 ```code```

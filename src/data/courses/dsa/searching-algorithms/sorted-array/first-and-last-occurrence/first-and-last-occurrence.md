@@ -1,67 +1,56 @@
-
-Find the first and last position of a given target value in a sorted integer array.
-If the target does not exist in the array, return `[-1, -1]`.
-
-> **Input:**
->
-> nums = [5,7,7,8,8,10]
-> target = 8
->
-
-
-
-> **Output:**
-> 
-> [3, 4]
-> 
-
-> **Explanation:**
-> The value `8` first appears at index `3` and last appears at index `4`.
+Find first and last position of target in sorted array.
 
 <br>
 
----
-
-## Approach
-
-Because the array is already sorted, we can use **binary search** to locate the boundaries
-in logarithmic time. We perform two modified binary searches:
-
-1. **First occurrence** – when we see the target we record the index and continue
-   searching the left half to look for an earlier appearance.
-2. **Last occurrence** – when we see the target we record the index and continue
-   searching the right half to look for a later appearance.
-
-Both searches require _O(log n)_ time and constant extra space.
+> **Key insight:** Two binary searches: one for first occurrence, one for last.
 
 <br>
-
----
-
-
 
 ---
 
 ## Constraints
-
-- `0 ≤ nums.length ≤ 10⁵`
-- `-10⁹ ≤ nums[i] ≤ 10⁹`
-- `nums is sorted in non-decreasing order`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **Target not found:** Return [-1, -1]
-2. **Single occurrence:** First == Last
-3. **All elements are target:** First=0, Last=n-1
-4. **Target at boundaries:** First or last position only
-5. **Empty array:** Return [-1, -1]
-6. **Large run of target:** Must binary search for both ends
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Two binary searches with different conditions
 
 <br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Two binary searches with different conditions`
+
+### Time Complexity: O(log N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(log N) | O(1) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

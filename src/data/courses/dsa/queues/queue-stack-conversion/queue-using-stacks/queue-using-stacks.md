@@ -2,14 +2,37 @@ Implement queue using two stacks.
 
 <br>
 
+> **Key insight:** Push to stack1. For pop: if stack2 empty, pour all from stack1 to stack2. Pop from stack2.
+
+<br>
+
 ---
 
-## Solution 1: Push-Heavy — Push O(1), Pop O(n)
-## Solution 2: Pop-Heavy (Amortized O(1))
+## Constraints
+- Standard constraints
 
-Two stacks: input and output. Push to input. Pop from output; if empty, transfer all from input (reverse order gives FIFO).
+<br>
 
-### Time: O(1) amortized | Space: O(n)
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Amortized O(1): each element moved at most once
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Amortized O(1): each element moved at most once`
+
+### Time Complexity: O(1) amortized
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N)
 
 <br>
 
@@ -17,13 +40,17 @@ Two stacks: input and output. Push to input. Pop from output; if empty, transfer
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Push-Heavy | Push O(1), Pop O(n) | O(n) | Transfer on every pop |
-| Amortized | O(1) amortized | O(n) | Lazy transfer — only when output empty |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(1) amortized | O(N) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

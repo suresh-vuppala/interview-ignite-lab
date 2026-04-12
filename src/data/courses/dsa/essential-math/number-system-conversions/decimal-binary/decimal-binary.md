@@ -1,56 +1,57 @@
-## Overview
-Convert between decimal and binary number systems, check power of two, count set bits, and perform fast exponentiation.
+Convert between decimal and binary representations.
 
-## Topics Covered
-1. **Decimal to Binary**: Convert decimal to binary string
-2. **Binary to Decimal**: Convert binary string to decimal
-3. **Power of Two Check**: Check if number is power of 2
-4. **Count Set Bits**: Count 1s in binary representation
-5. **Fast Exponentiation**: Compute a^b efficiently
+<br>
 
-## Approach
+> **Key insight:** Decimal→Binary: divide by 2, collect remainders. Binary→Decimal: multiply by powers of 2.
 
-### Decimal to Binary
-- Repeatedly divide by 2, collect remainders
-- Time: O(log n)
-
-### Power of Two
-- n & (n-1) == 0 and n != 0
-- Time: O(1)
-
-### Count Set Bits
-- Use Brian Kernighan's algorithm: n & (n-1)
-- Time: O(number of set bits)
-
-### Fast Exponentiation
-- Binary exponentiation: a^b = (a^2)^(b/2) if b even
-- Time: O(log b)
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁹ (for number theory problems)`
-- `Results may need modular arithmetic`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **n = 0:** Check base case definition
-2. **n = 1:** Smallest valid input
-3. **Prime number input:** Special behavior in factorization/sieve
-4. **Power of 2:** Special case in many algorithms
-5. **Very large n:** Needs O(√n) or O(log n) algorithm
-6. **n = 0 or 1 in GCD:** GCD(a,0) = a, GCD(1,b) = 1
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Repeated division by 2 / positional value sum
 
 <br>
 
-## Complexity Analysis
-### Time: O(log n), Space: O(1)
+---
 
-## Code
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Repeated division by 2 / positional value sum`
+
+### Time Complexity: O(log N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(log N)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(log N) | O(log N) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
+
+---
+
 ```code```

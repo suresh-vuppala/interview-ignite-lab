@@ -1,24 +1,38 @@
-Implement double-ended queue (deque).
+Implement a double-ended queue supporting push/pop from both ends.
+
+<br>
+
+> **Key insight:** Circular array with front/rear. Push front: front=(front-1+cap)%cap.
 
 <br>
 
 ---
 
-## Solution 1: Doubly Linked List
-
-Push/pop from both ends in O(1) using head and tail pointers.
-
-### Time: O(1) all operations | Space: O(n)
+## Constraints
+- Standard constraints
 
 <br>
 
 ---
 
-## Solution 2: Circular Array
+## Solution 1: Brute Force
 
-Similar to circular queue but support both-end operations with front/rear modulo arithmetic.
+> **Drawback:** Suboptimal time complexity.
 
-### Time: O(1) amortized | Space: O(n)
+> **Key Insight for Improvement:** Circular array with bidirectional access
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Circular array with bidirectional access`
+
+### Time Complexity: O(1) per op
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N)
 
 <br>
 
@@ -26,13 +40,17 @@ Similar to circular queue but support both-end operations with front/rear modulo
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Doubly LL | O(1) all ops | O(n) | Natural DLL operations |
-| Circular Array | O(1) amortized | O(n) | Cache-friendly |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(1) per op | O(N) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

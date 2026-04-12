@@ -1,49 +1,57 @@
-## Overview
-Calculate combinations (nCr) and permutations (nPr) with and without modulo.
+Compute combinations and permutations.
 
-## Topics Covered
-1. **nCr Calculation**: Combinations formula
-2. **nPr Calculation**: Permutations formula
-3. **Pascal's Triangle**: Dynamic programming approach
-4. **nCr % m**: Modular combinations
+<br>
 
-## Approach
-### nCr = n! / (r! * (n-r)!)
-- Optimize by canceling terms
-- Time: O(r)
+> **Key insight:** nCr = n! / (r! × (n-r)!). Use Pascal's triangle or multiplicative formula.
 
-### nPr = n! / (n-r)!
-- Time: O(r)
-
-### Pascal's Triangle
-- C(n,r) = C(n-1,r-1) + C(n-1,r)
-- Time: O(n*r), Space: O(n*r)
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁹ (for number theory problems)`
-- `Results may need modular arithmetic`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **n = 0:** Check base case definition
-2. **n = 1:** Smallest valid input
-3. **Prime number input:** Special behavior in factorization/sieve
-4. **Power of 2:** Special case in many algorithms
-5. **Very large n:** Needs O(√n) or O(log n) algorithm
-6. **n = 0 or 1 in GCD:** GCD(a,0) = a, GCD(1,b) = 1
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Pascal's triangle or multiplicative with modular inverse
 
 <br>
 
-## Complexity Analysis
-### Time: O(r) direct, O(n*r) DP
+---
 
-## Code
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Pascal's triangle or multiplicative with modular inverse`
+
+### Time Complexity: O(N) or O(R)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1) or O(N)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N) or O(R) | O(1) or O(N) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
+
+---
+
 ```code```

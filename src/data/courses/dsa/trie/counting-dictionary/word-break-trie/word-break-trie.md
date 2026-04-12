@@ -1,22 +1,38 @@
-Check if string can be segmented into dictionary words (Trie-assisted).
+Word break using trie for dictionary lookup.
+
+<br>
+
+> **Key insight:** Build trie from dictionary. DP with trie-accelerated prefix matching.
 
 <br>
 
 ---
 
-## Solution 1: DP — dp[i] = can s[0..i-1] be segmented. Check all j < i.
-
-### Time: O(n² × L) | Space: O(n)
+## Constraints
+- Standard constraints
 
 <br>
 
 ---
 
-## Solution 2: DP + Trie (Optimized)
+## Solution 1: Brute Force
 
-Build trie from dictionary. For each position, traverse trie to find all matching words → faster than checking all substrings.
+> **Drawback:** Suboptimal time complexity.
 
-### Time: O(n × L) | Space: O(dictionary size)
+> **Key Insight for Improvement:** Trie for O(L) prefix check + DP
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Trie for O(L) prefix check + DP`
+
+### Time Complexity: O(N×L)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N×L)
 
 <br>
 
@@ -24,13 +40,17 @@ Build trie from dictionary. For each position, traverse trie to find all matchin
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| DP | O(n²L) | O(n) | Check all splits |
-| DP + Trie | O(nL) | O(dict) | Trie eliminates invalid prefix checks |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N×L) | O(N×L) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

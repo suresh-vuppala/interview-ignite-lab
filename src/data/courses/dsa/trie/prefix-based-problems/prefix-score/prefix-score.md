@@ -1,100 +1,56 @@
-Calculate sum of scores where score of a string is the number of non-empty prefixes that are also present in the array.
+Sum of scores of all prefixes of each word.
 
 <br>
 
-> Input:
-> words = ["abc", "ab", "bc", "b"]
-
-> Output:
-> 5
-
-> Explanation:
-> - "abc": prefixes "a", "ab", "abc" → "ab" exists → score = 1
-> - "ab": prefixes "a", "ab" → "ab" exists → score = 1
-> - "bc": prefixes "b", "bc" → "b" exists → score = 1
-> - "b": prefix "b" → "b" exists → score = 1
-> - Total: 1 + 1 + 1 + 1 = 4 (actually sum of all prefix counts)
-> 
-> **Key insight:** Use prefix counts to calculate scores efficiently.
+> **Key insight:** Trie with count at each node = how many words pass through.
 
 <br>
-
 
 ---
 
 ## Constraints
-
-- `1 ≤ number of words ≤ 3 × 10⁴`
-- `1 ≤ word length ≤ 2000`
-- `Words consist of lowercase English letters (unless stated otherwise)`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **Empty trie:** Search returns false, prefix returns false
-2. **Single character words:** Trie depth = 1
-3. **All same word inserted:** Count or flag must handle duplicates
-4. **Prefix is also a complete word:** isEnd flag must be separate from having children
-5. **Very long word:** Deep trie path
-6. **No matching prefix:** Return false or empty list
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Trie: sum counts along path for each word
 
 <br>
 
 ---
 
-## Solution: Trie with Prefix Count
+## Solution 2: Optimal
 
-Use trie to count prefix occurrences:
-1. Insert all words, increment prefixCount at each node
-2. For each word:
-   - Traverse trie and sum all prefixCounts along path
-   - This gives total score for that word
-3. Return sum of all scores
+**Recurrence/Approach:** `Trie: sum counts along path for each word`
 
-**Key insight:** prefixCount at each node = how many words share this prefix.
+### Time Complexity: O(N×L)
+**Why?** Each element/state processed efficiently.
 
+### Space Complexity: O(N×L)
 
-
-<br>
-
-### Time Complexity Analysis
-
-**Overall: O(N×L)**
-
-**Build Trie: O(N×L)**
-- Insert N words
-- Each word length L
-- Increment prefixCount at each character
-
-**Calculate Scores: O(N×L)**
-- Traverse each word: O(L)
-- Sum prefix counts along path: O(L)
-- Total: N × L
-
-**Why Trie is efficient?**
-- Brute force: Check each prefix against all words O(N²×L²)
-- Trie: Prefix counts maintained during insertion O(N×L)
-- Single traversal to calculate scores
-
-**Space Complexity: O(N×L)**
-- Trie stores N words
-- Each node has prefixCount integer
-
-**Applications:**
-- Text analysis
-- Search ranking
-- Autocomplete scoring
-
-> **Time Complexity:** O(N×L) for N words of length L
-> **Space Complexity:** O(N×L) for trie storage
-
-<br>
 <br>
 
 ---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N×L) | O(N×L) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

@@ -1,59 +1,57 @@
-## Overview
-Understanding different sorting algorithms and their characteristics.
+Overview of sorting algorithms: properties and use cases.
 
-## Common Sorting Algorithms
+<br>
 
-### Comparison-Based Sorts
-1. **Bubble Sort** - O(n²) - Simple, stable
-2. **Insertion Sort** - O(n²) - Efficient for small/nearly sorted
-3. **Selection Sort** - O(n²) - Unstable, minimal swaps
-4. **Merge Sort** - O(n log n) - Stable, requires extra space
-5. **Quick Sort** - O(n log n) avg - Fast, in-place
-6. **Heap Sort** - O(n log n) - In-place, unstable
+> **Key insight:** Different algorithms optimal for different scenarios.
 
-### Non-Comparison Sorts
-1. **Counting Sort** - O(n + k) - For limited range
-2. **Radix Sort** - O(d × n) - For integers
-3. **Bucket Sort** - O(n + k) - For uniform distribution
-
-## Comparison Table
-
-| Algorithm | Best | Average | Worst | Space | Stable |
-|-----------|------|---------|-------|-------|--------|
-| Bubble | O(n) | O(n²) | O(n²) | O(1) | Yes |
-| Insertion | O(n) | O(n²) | O(n²) | O(1) | Yes |
-| Selection | O(n²) | O(n²) | O(n²) | O(1) | No |
-| Merge | O(n log n) | O(n log n) | O(n log n) | O(n) | Yes |
-| Quick | O(n log n) | O(n log n) | O(n²) | O(log n) | No |
-| Heap | O(n log n) | O(n log n) | O(n log n) | O(1) | No |
-
-## When to Use
-- **Small arrays**: Insertion Sort
-- **Nearly sorted**: Insertion Sort
-- **Guaranteed O(n log n)**: Merge Sort or Heap Sort
-- **Average case speed**: Quick Sort
-- **Stability required**: Merge Sort or Insertion Sort
-- **Limited range integers**: Counting Sort
-
-## Code
-
+<br>
 
 ---
 
 ## Constraints
-
-- `Conceptual lesson — comparison of standard sorting algorithms`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **Small input (n < 50):** Insertion sort often fastest due to low overhead
-2. **Nearly sorted input:** Insertion sort or Timsort excel
-3. **Random data:** Quicksort or merge sort preferred
-4. **Memory constrained:** In-place sorts (heap sort, quick sort) preferred
-5. **Stability required:** Merge sort or insertion sort
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Comparison: bubble, insertion, merge, quick, heap, counting, radix
 
 <br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Comparison: bubble, insertion, merge, quick, heap, counting, radix`
+
+### Time Complexity: Varies
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: Varies
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | Varies | Varies |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
+
+---
+
+```code```

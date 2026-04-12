@@ -1,51 +1,57 @@
-## Overview
-Solve common mathematical pattern problems including trailing zeros, Fibonacci, and perfect squares.
+Common math patterns in competitive programming.
 
-## Topics Covered
-1. **Trailing Zeros in Factorial**: Count zeros at end of n!
-2. **Fibonacci Fast Doubling**: Compute Fib(n) in O(log n)
-3. **Check Perfect Square**: Determine if number is perfect square
-4. **Happy Number**: Check if number reaches 1 through digit square sum
+<br>
 
-## Approach
-### Trailing Zeros
-- Count factors of 5 in n!
-- Time: O(log n)
+> **Key insight:** Fibonacci, Catalan numbers, modular arithmetic, fast exponentiation.
 
-### Fibonacci Fast Doubling
-- F(2k) = F(k)[2F(k+1) - F(k)]
-- F(2k+1) = F(k+1)^2 + F(k)^2
-- Time: O(log n)
-
-### Perfect Square
-- Check if sqrt(n)^2 == n
-- Time: O(1)
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁹ (for number theory problems)`
-- `Results may need modular arithmetic`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **n = 0:** Check base case definition
-2. **n = 1:** Smallest valid input
-3. **Prime number input:** Special behavior in factorization/sieve
-4. **Power of 2:** Special case in many algorithms
-5. **Very large n:** Needs O(√n) or O(log n) algorithm
-6. **n = 0 or 1 in GCD:** GCD(a,0) = a, GCD(1,b) = 1
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Pattern recognition + mathematical formulas
 
 <br>
 
-## Complexity Analysis
-### Time: O(log n) for most operations
+---
 
-## Code
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Pattern recognition + mathematical formulas`
+
+### Time Complexity: Varies
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: Varies
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | Varies | Varies |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
+
+---
+
 ```code```

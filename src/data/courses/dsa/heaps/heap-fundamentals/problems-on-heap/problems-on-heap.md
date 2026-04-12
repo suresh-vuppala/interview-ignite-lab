@@ -1,50 +1,57 @@
-## Common Heap Problems
+Basic heap problems: kth largest, sort k-sorted array, merge k lists.
 
-### Top K Elements
-- Use min/max heap of size k
-- Maintain k largest or smallest elements
+<br>
 
-### Merge K Sorted Arrays
-- Use min heap with one element from each array
-- Extract min and add next from same array
+> **Key insight:** Heap maintains top-k or merges k streams efficiently.
 
-### Running Median
-- Two heaps: max heap for lower half, min heap for upper half
-- Balance heaps to find median
-
-## Problem Patterns
-
-1. **Top K Pattern**: Min heap of size k for k largest, max heap for k smallest
-2. **Merge Pattern**: Min heap to merge sorted sequences
-3. **Two Heap Pattern**: Balance two heaps for median/percentile
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `-10⁴ ≤ nums[i] ≤ 10⁴`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **Single element:** It is both min and max
-2. **All same elements:** Heap operations trivial
-3. **Already a valid heap:** No restructuring needed
-4. **k = 1:** Find min/max directly
-5. **k = n:** Need to process entire heap
-6. **Negative values:** Min heap with negatives
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Min/max heap for streaming top-k problems
 
 <br>
 
-## Complexity Analysis
+---
 
-Most heap problems: O(n log k) time, O(k) space
+## Solution 2: Optimal
 
-## Code
+**Recurrence/Approach:** `Min/max heap for streaming top-k problems`
+
+### Time Complexity: O(N log K)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(K)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N log K) | O(K) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
+
+---
 
 ```code```

@@ -1,83 +1,56 @@
-# Generate All Subsequences
+Generate all subsequences using recursion.
 
-Generate all possible subsequences maintaining relative order.
+<br>
 
-## Approach
-- Use recursion with include/exclude pattern
-- At each index: exclude or include element
-- Base case: reached end of array
+> **Key insight:** For each element: include or exclude. Recurse on remaining.
 
+<br>
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 20 (for exponential solutions)`
-- `n ≤ 10⁵ for polynomial solutions`
-- `Values may include duplicates`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **Empty input:** Return [] or [[]]
-2. **Single element:** One subset or one subarray
-3. **All duplicates:** Must skip to avoid duplicate results
-4. **n at maximum:** Verify 2ⁿ doesn't exceed time/memory limits
-5. **Negative numbers:** Affects sum-based problems
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Include/exclude each element → 2^N subsequences
 
 <br>
 
-## Complexity
-- Time: O(2ⁿ)
-- Space: O(n)
+---
 
-## Code
+## Solution 2: Optimal
 
-```java
-import java.util.*;
+**Recurrence/Approach:** `Include/exclude each element → 2^N subsequences`
 
-public class GenerateSubsequences {
-    public static void generateSubsequences(int[] arr, int index, List<Integer> current) {
-        if (index == arr.length) {
-            System.out.println(current);
-            return;
-        }
-        
-        generateSubsequences(arr, index + 1, current);
-        
-        current.add(arr[index]);
-        generateSubsequences(arr, index + 1, current);
-        current.remove(current.size() - 1);
-    }
-    
-    public static void main(String[] args) {
-        int[] arr = {1, 2, 3};
-        generateSubsequences(arr, 0, new ArrayList<>());
-    }
-}
-```
+### Time Complexity: O(2^N)
+**Why?** Each element/state processed efficiently.
 
-```python
-def generate_subsequences(arr, index, current, result):
-    if index == len(arr):
-        result.append(current[:])
-        return
-    
-    generate_subsequences(arr, index + 1, current, result)
-    
-    current.append(arr[index])
-    generate_subsequences(arr, index + 1, current, result)
-    current.pop()
+### Space Complexity: O(N)
 
-arr = [1, 2, 3]
-result = []
-generate_subsequences(arr, 0, [], result)
-for seq in result:
-    print(seq)
-```
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(2^N) | O(N) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

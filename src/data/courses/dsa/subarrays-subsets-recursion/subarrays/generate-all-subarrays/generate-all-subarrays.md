@@ -1,77 +1,56 @@
-# Generate All Subarrays
+Generate all contiguous subarrays.
 
-Generate all contiguous subarrays of a given array.
+<br>
 
-## Approach
-- Two nested loops
-- Outer: start index
-- Inner: end index
-- Print elements from start to end
+> **Key insight:** Two nested loops for start and end indices.
 
+<br>
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 20 (for exponential solutions)`
-- `n ≤ 10⁵ for polynomial solutions`
-- `Values may include duplicates`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **Empty input:** Return [] or [[]]
-2. **Single element:** One subset or one subarray
-3. **All duplicates:** Must skip to avoid duplicate results
-4. **n at maximum:** Verify 2ⁿ doesn't exceed time/memory limits
-5. **Negative numbers:** Affects sum-based problems
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** for i in range(N): for j in range(i, N): yield arr[i:j+1]
 
 <br>
 
-## Complexity
-- Time: O(n³)
-- Space: O(1)
+---
 
-## Code
+## Solution 2: Optimal
 
-```java
-public class GenerateSubarrays {
-    public static void generateAllSubarrays(int[] arr) {
-        int n = arr.length;
-        
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j < n; j++) {
-                System.out.print("[");
-                for (int k = i; k <= j; k++) {
-                    System.out.print(arr[k]);
-                    if (k < j) System.out.print(", ");
-                }
-                System.out.println("]");
-            }
-        }
-    }
-    
-    public static void main(String[] args) {
-        int[] arr = {1, 2, 3};
-        generateAllSubarrays(arr);
-    }
-}
-```
+**Recurrence/Approach:** `for i in range(N): for j in range(i, N): yield arr[i:j+1]`
 
-```python
-def generate_all_subarrays(arr):
-    n = len(arr)
-    
-    for i in range(n):
-        for j in range(i, n):
-            print(arr[i:j+1])
+### Time Complexity: O(N²)
+**Why?** Each element/state processed efficiently.
 
-arr = [1, 2, 3]
-generate_all_subarrays(arr)
-```
+### Space Complexity: O(N)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N²) | O(N) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

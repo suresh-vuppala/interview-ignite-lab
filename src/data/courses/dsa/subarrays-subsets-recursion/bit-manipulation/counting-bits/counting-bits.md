@@ -1,13 +1,38 @@
-Count number of 1-bits for every number from 0 to n.
+For each number 0..N, count set bits.
+
+<br>
+
+> **Key insight:** dp[i] = dp[i>>1] + (i&1). Right-shift removes last bit, add back if it was 1.
 
 <br>
 
 ---
 
-## Solution 1: Pop Count per Number — O(n log n)
-## Solution 2: DP: dp[i] = dp[i >> 1] + (i & 1) — O(n)
+## Constraints
+- Standard constraints
 
-### Time: O(n) | Space: O(n)
+<br>
+
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** dp[i] = dp[i/2] + (i%2)
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `dp[i] = dp[i/2] + (i%2)`
+
+### Time Complexity: O(N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N)
 
 <br>
 
@@ -15,13 +40,17 @@ Count number of 1-bits for every number from 0 to n.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Pop Count | O(n log n) | O(n) | Count bits per number |
-| DP | O(n) | O(n) | Reuse result of i/2 |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N) | O(N) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

@@ -1,12 +1,38 @@
-Fractional knapsack — take fractions of items to maximize value.
+Maximize value with fractional items allowed.
+
+<br>
+
+> **Key insight:** Sort by value/weight ratio. Take items greedily, fraction of last if needed.
 
 <br>
 
 ---
 
-## Solution 1: Sort by Value/Weight Ratio — Take greedily from highest ratio
+## Constraints
+- Standard constraints
 
-### Time: O(n log n) | Space: O(1)
+<br>
+
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Sort by value/weight ratio descending
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Sort by value/weight ratio descending`
+
+### Time Complexity: O(N log N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1)
 
 <br>
 
@@ -14,12 +40,17 @@ Fractional knapsack — take fractions of items to maximize value.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Sort + Greedy | O(n log n) | O(1) | Value density sorting |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N log N) | O(1) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

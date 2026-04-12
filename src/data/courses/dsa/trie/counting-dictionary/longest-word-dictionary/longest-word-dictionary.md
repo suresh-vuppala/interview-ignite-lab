@@ -1,13 +1,38 @@
-Find longest word buildable one character at a time.
+Find longest word where every prefix is also in dictionary.
+
+<br>
+
+> **Key insight:** Trie insert all words. DFS/BFS to find longest word with all prefixes present (isEnd at each step).
 
 <br>
 
 ---
 
-## Solution 1: Sort + HashSet — Sort by length, check each prefix exists
-## Solution 2: Trie + DFS — Insert all words, DFS for longest path where every prefix is a word
+## Constraints
+- Standard constraints
 
-### Time: O(sum of word lengths) | Space: O(same)
+<br>
+
+---
+
+## Solution 1: Brute Force
+
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Trie + DFS checking isEnd at each level
+
+<br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Trie + DFS checking isEnd at each level`
+
+### Time Complexity: O(N×L)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N×L)
 
 <br>
 
@@ -15,13 +40,17 @@ Find longest word buildable one character at a time.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Sort + Set | O(n log n + total) | O(total) | Check prefixes in set |
-| Trie + DFS | O(total) | O(total) | DFS on trie structure |
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N×L) | O(N×L) |
 
-<br>
-<br>
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

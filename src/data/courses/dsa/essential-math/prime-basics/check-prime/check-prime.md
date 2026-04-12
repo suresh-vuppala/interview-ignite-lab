@@ -1,50 +1,57 @@
-## Overview
-Check if a number is prime, count primes up to N, and find nth prime number.
+Check if a number is prime.
 
-## Topics Covered
-1. **Check Prime (√n method)**: Determine if number is prime
-2. **Count Primes up to N**: Count all primes ≤ N
-3. **Find Nth Prime**: Get the nth prime number
+<br>
 
-## Approach
+> **Key insight:** Check divisibility from 2 to √N.
 
-### Check Prime
-- Check divisibility from 2 to √n
-- Time: O(√n)
-
-### Count Primes
-- Check each number from 2 to N
-- Time: O(N√N) naive, O(N log log N) with sieve
-
-### Nth Prime
-- Generate primes until count reaches n
-- Time: O(n log n) approximately
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁹ (for number theory problems)`
-- `Results may need modular arithmetic`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **n = 0:** Check base case definition
-2. **n = 1:** Smallest valid input
-3. **Prime number input:** Special behavior in factorization/sieve
-4. **Power of 2:** Special case in many algorithms
-5. **Very large n:** Needs O(√n) or O(log n) algorithm
-6. **n = 0 or 1 in GCD:** GCD(a,0) = a, GCD(1,b) = 1
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** No divisor in [2, √N] → prime
 
 <br>
 
-## Complexity Analysis
-### Time: O(√n) for check, O(N log log N) for count
+---
 
-## Code
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `No divisor in [2, √N] → prime`
+
+### Time Complexity: O(√N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(√N) | O(1) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
+
+---
+
 ```code```

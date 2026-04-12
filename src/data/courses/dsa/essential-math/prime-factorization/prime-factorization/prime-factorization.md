@@ -1,51 +1,57 @@
-## Overview
-Find prime factorization, count distinct and total prime factors, and use SPF array method.
+Find all prime factors of N.
 
-## Topics Covered
-1. **Prime Factorization**: Break number into prime factors
-2. **Count Distinct Prime Factors**: Count unique primes
-3. **Count Total Prime Factors**: Count with multiplicity
-4. **SPF Array Method**: Smallest Prime Factor approach
+<br>
 
-## Approach
+> **Key insight:** Divide by smallest prime repeatedly. Use sieve for precomputation.
 
-### Prime Factorization
-- Divide by primes from 2 to √n
-- Time: O(√n)
-
-### Count Factors
-- Track unique primes and their counts
-- Time: O(√n)
-
-### SPF Method
-- Precompute smallest prime factor for each number
-- Time: O(n log log n) preprocessing, O(log n) per query
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁹ (for number theory problems)`
-- `Results may need modular arithmetic`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **n = 0:** Check base case definition
-2. **n = 1:** Smallest valid input
-3. **Prime number input:** Special behavior in factorization/sieve
-4. **Power of 2:** Special case in many algorithms
-5. **Very large n:** Needs O(√n) or O(log n) algorithm
-6. **n = 0 or 1 in GCD:** GCD(a,0) = a, GCD(1,b) = 1
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Divide by 2, then odd numbers up to √N
 
 <br>
 
-## Complexity Analysis
-### Time: O(√n) per number, O(n log log n) with SPF
+---
 
-## Code
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Divide by 2, then odd numbers up to √N`
+
+### Time Complexity: O(√N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(√N) | O(1) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
+
+---
+
 ```code```

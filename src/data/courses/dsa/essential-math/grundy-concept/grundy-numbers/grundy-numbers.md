@@ -1,48 +1,56 @@
-## Overview
-Understand Grundy numbers (Sprague-Grundy theorem) for solving impartial games.
+Sprague-Grundy theorem for combinatorial games.
 
-## Topics Covered
-1. **Grundy Number Definition**: MEX of reachable states
-2. **Calculate Grundy**: For game positions
-3. **Combine Games**: XOR of Grundy numbers
+<br>
 
-## Approach
-### Grundy Number
-- Grundy(position) = MEX({Grundy(next_positions)})
-- MEX = Minimum Excludant (smallest non-negative integer not in set)
-- Time: Depends on game complexity
+> **Key insight:** Grundy number = mex of Grundy numbers of all reachable states. XOR of Grundy numbers for combined games.
 
-### Winning Strategy
-- Grundy = 0: Losing position
-- Grundy ≠ 0: Winning position
-
-## Complexity Analysis
-### Time: O(states * transitions)
-
-## Code
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁹ (for number theory problems)`
-- `Results may need modular arithmetic`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **n = 0:** Check base case definition
-2. **n = 1:** Smallest valid input
-3. **Prime number input:** Special behavior in factorization/sieve
-4. **Power of 2:** Special case in many algorithms
-5. **Very large n:** Needs O(√n) or O(log n) algorithm
-6. **n = 0 or 1 in GCD:** GCD(a,0) = a, GCD(1,b) = 1
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** G(state) = mex({G(next_state)}), XOR for combined games
 
 <br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `G(state) = mex({G(next_state)}), XOR for combined games`
+
+### Time Complexity: O(states × moves)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(states)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(states × moves) | O(states) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

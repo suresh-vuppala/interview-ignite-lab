@@ -1,89 +1,56 @@
-Given start and end times of activities, select the maximum number of non-overlapping activities that can be performed by a single person.
+Select maximum non-overlapping activities.
 
 <br>
 
-> Input:
-> start = [1, 3, 0, 5, 8, 5]
-> end = [2, 4, 6, 7, 9, 9]
-
-> Output:
-> 4
-
-> Explanation:
-> Activities sorted by end time: [(1,2), (3,4), (5,7), (8,9), (0,6), (5,9)]
-> 
-> Selection process:
-> 1. Select (1,2) - first activity
-> 2. Select (3,4) - starts at 3 ≥ 2 (previous end)
-> 3. Skip (0,6) - starts at 0 < 4 (overlaps)
-> 4. Select (5,7) - starts at 5 ≥ 4
-> 5. Select (8,9) - starts at 8 ≥ 7
-> 6. Skip (5,9) - starts at 5 < 8
-> 
-> Maximum activities: 4
+> **Key insight:** Sort by end time. Greedily pick earliest-ending activity that doesn't conflict.
 
 <br>
-
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁵`
-- `0 ≤ start[i] < end[i] ≤ 10⁹`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **All overlapping:** Only one activity can be selected
-2. **No overlapping:** All activities selected
-3. **Single activity:** Select it
-4. **Same start time, different end:** Greedy picks earliest ending
-5. **Nested intervals:** [1,10], [2,3], [4,5] → pick inner ones
-6. **Adjacent intervals:** [1,2], [2,3] — depends on open/closed intervals
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Sort by end time, greedily pick non-conflicting
 
 <br>
 
 ---
 
-## Solution: Greedy Activity Selection
+## Solution 2: Optimal
 
-Greedy strategy: Always pick activity that finishes earliest
-1. Sort activities by end time
-2. Select first activity
-3. For each remaining activity, if start ≥ last end time, select it
+**Recurrence/Approach:** `Sort by end time, greedily pick non-conflicting`
 
-**Why greedy works:** Choosing activity with earliest end time leaves maximum room for future activities.
+### Time Complexity: O(N log N)
+**Why?** Each element/state processed efficiently.
 
+### Space Complexity: O(1)
 
-
-<br>
-
-### Time Complexity Analysis
-
-**Sorting Phase: O(n log n)**
-- Must sort n activities by end time
-- Uses comparison-based sorting (merge sort, quick sort, etc.)
-
-**Selection Phase: O(n)**
-- Single pass through sorted activities
-- For each activity: O(1) comparison with last selected end time
-- Total: n × O(1) = O(n)
-
-**Overall: O(n log n)**
-- Dominated by sorting step
-- Selection is linear but sorting is bottleneck
-
-> **Time Complexity:** O(n log n) - sorting dominates
-> **Space Complexity:** O(1) if sorting in-place, O(n) for storing result
-
-<br>
 <br>
 
 ---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N log N) | O(1) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

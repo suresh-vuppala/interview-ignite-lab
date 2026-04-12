@@ -2,99 +2,55 @@ Replace words in sentence with their shortest root from dictionary.
 
 <br>
 
-> Input:
-> dictionary = ["cat", "bat", "rat"]
-> sentence = "the cattle was rattled by the battery"
-
-> Output:
-> "the cat was rat by the bat"
-
-> Explanation:
-> - "cattle" → "cat" (root found)
-> - "rattled" → "rat" (root found)
-> - "battery" → "bat" (root found)
-> - Other words unchanged
-> 
-> **Key insight:** Trie finds shortest root by stopping at first isEnd flag.
+> **Key insight:** Build trie from dictionary. For each word, find shortest prefix in trie.
 
 <br>
-
 
 ---
 
 ## Constraints
-
-- `1 ≤ number of words ≤ 3 × 10⁴`
-- `1 ≤ word length ≤ 2000`
-- `Words consist of lowercase English letters (unless stated otherwise)`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **Empty trie:** Search returns false, prefix returns false
-2. **Single character words:** Trie depth = 1
-3. **All same word inserted:** Count or flag must handle duplicates
-4. **Prefix is also a complete word:** isEnd flag must be separate from having children
-5. **Very long word:** Deep trie path
-6. **No matching prefix:** Return false or empty list
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Trie of roots, search for shortest prefix match
 
 <br>
 
 ---
 
-## Solution: Trie with Early Termination
+## Solution 2: Optimal
 
-Use trie to find shortest roots:
-1. Insert all dictionary roots into trie
-2. For each word in sentence:
-   - Traverse trie character by character
-   - Stop at first root found (isEnd = true)
-   - Replace word with root if found
-3. Join words back into sentence
+**Recurrence/Approach:** `Trie of roots, search for shortest prefix match`
 
-**Key insight:** First isEnd encountered = shortest root.
+### Time Complexity: O(N×L)
+**Why?** Each element/state processed efficiently.
 
+### Space Complexity: O(D×L)
 
-
-<br>
-
-### Time Complexity Analysis
-
-**Overall: O(D×L + S)**
-
-**Build Trie: O(D×L)**
-- Insert D dictionary words
-- Each word average length L
-
-**Process Sentence: O(S)**
-- S = total characters in sentence
-- Each character processed once
-- Early termination at root
-
-**Why Trie is efficient?**
-- Finds shortest root in O(L) per word
-- No need to check all dictionary words
-- Alternative: HashSet O(D×L) per word
-
-**Space Complexity: O(D×L)**
-- Trie stores D dictionary words
-- Shared prefixes reduce space
-
-**Applications:**
-- Text normalization
-- Stemming algorithms
-- Search query processing
-
-> **Time Complexity:** O(D×L + S) for D roots and S sentence length
-> **Space Complexity:** O(D×L) for trie storage
-
-<br>
 <br>
 
 ---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(N×L) | O(D×L) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

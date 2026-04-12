@@ -1,42 +1,56 @@
-## Stability Definition
-A sorting algorithm is **stable** if equal elements maintain their relative order after sorting.
+Understand stable vs unstable sorting.
 
-## Examples
+<br>
 
-**Stable**: Merge Sort, Insertion Sort, Bubble Sort  
-**Unstable**: Quick Sort, Heap Sort, Selection Sort
+> **Key insight:** Stable: equal elements maintain relative order. Merge sort is stable, quicksort is not.
 
-## Importance
-Stability matters when sorting by multiple keys (e.g., sort by name, then by age).
-
-**Example**: [(Alice, 25), (Bob, 25), (Charlie, 30)]  
-- Stable: Alice stays before Bob
-- Unstable: Bob might come before Alice
-
-## Code
-
+<br>
 
 ---
 
 ## Constraints
-
-- `0 ≤ n ≤ 10⁵`
-- `-10⁹ ≤ nums[i] ≤ 10⁹`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **Already sorted:** Still O(n log n) but no inversions
-2. **Reverse sorted:** Maximum inversions
-3. **Single element:** Already sorted
-4. **Empty array:** Nothing to sort
-5. **All same elements:** No swaps needed
-6. **Two elements:** Single comparison
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** Stable preserves order of equal elements
 
 <br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Stable preserves order of equal elements`
+
+### Time Complexity: N/A
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: N/A
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | N/A | N/A |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

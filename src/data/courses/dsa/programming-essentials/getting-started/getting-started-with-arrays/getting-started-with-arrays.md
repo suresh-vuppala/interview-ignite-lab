@@ -1,104 +1,56 @@
----
+Introduction to arrays: creation, access, basic operations.
 
-Arrays and strings are the `fundamental building blocks` of programming. Mastering these data structures is crucial for succeeding in technical interviews at top tech companies like `Google`, `Facebook`, `Amazon`, and `Microsoft`.
+<br>
 
-![Array Data Structure Visualization](https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=400&fit=crop)
+> **Key insight:** Arrays store elements contiguously. O(1) random access, O(N) insert/delete.
 
-## Why Arrays & Strings Matter
-
-Arrays and strings appear in approximately `60%` of all coding interview questions. They serve as the foundation for more complex data structures and algorithms.
----
-### Key Characteristics
-
-**Arrays:**
-- **Contiguous memory allocation** - Elements are stored in adjacent memory locations
-- **`O(1)` random access** - Direct access to any element using index
-- **Fixed size** in most languages (dynamic in `Python`, `JavaScript`)
-- **Cache-friendly** due to memory locality
-
-**Strings:**
-- **Immutable** in most languages (`Java`, `Python`, `C#`)
-- **Character arrays** under the hood
-- **Unicode support** - Modern strings support international characters
-- **Special operations** - `Concatenation`, `substring`, `pattern matching`
-
-## Common Patterns
-
-### 1. Two Pointers Technique
-Perfect for problems involving `pairs`, `palindromes`, or `sorted arrays`.
-
-**When to use:**
-- Finding pairs with specific sum
-- Checking palindromes
-- Merging sorted arrays
-- Removing duplicates
-
-### 2. Sliding Window
-Ideal for `subarray/substring` problems with constraints.
-
-**When to use:**
-- `Maximum/minimum` subarray problems
-- Substring with specific properties
-- Moving average calculations
-- Fixed-size window problems
-
-### 3. Prefix Sum
-Efficient for `range sum queries` and cumulative operations.
-
-**When to use:**
-- Range sum queries
-- `Subarray sum` problems
-- Cumulative frequency
-- 2D matrix operations
-
-## Real-World Applications
-
-- **Text Processing** - Search engines, word processors
-- **Image Processing** - Pixel manipulation, filters
-- **Database Indexing** - B-trees, hash tables
-- **Network Protocols** - Packet parsing, data transmission
-- **Game Development** - Collision detection, pathfinding
-
-
+<br>
 
 ---
 
 ## Constraints
-
-- `Introductory lessons — basic constraints`
-
-<br>
-
----
-
-## All Possible Edge Cases
-
-1. **Empty input:** Handle base case
-2. **Single element:** Trivial case
-3. **Large input:** Consider time complexity
+- Standard constraints
 
 <br>
 
 ---
 
+## Solution 1: Brute Force
 
+> **Drawback:** Suboptimal time complexity.
 
-## Practice Strategy
+> **Key Insight for Improvement:** Contiguous memory, index-based access
 
-1. **Start with basic operations** - `Insert`, `delete`, `search`
-2. **Master the patterns** - `Two pointers`, `sliding window`, `prefix sum`
-3. **Solve classic problems** - `Two Sum`, `Valid Palindrome`, `Longest Substring`
-4. **Analyze time/space complexity** - Always consider `Big O notation`
-5. **Handle edge cases** - Empty arrays, null inputs, single elements
+<br>
 
-> **💡 Pro Tip:** Always draw out examples on paper or whiteboard. Visualization helps identify `patterns` and `edge cases`!
-
-
-
-## Next Steps
 ---
 
-In the following lessons, we'll dive deep into each pattern with **real interview questions** from top tech companies. You'll learn not just how to solve problems, but how to **think like an interviewer** and approach new problems systematically.
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Contiguous memory, index-based access`
+
+### Time Complexity: O(1) access
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(N)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(1) access | O(N) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

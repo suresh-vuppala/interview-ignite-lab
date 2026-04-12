@@ -1,132 +1,56 @@
-Estimating the square root of a number using binary search is a classical application of the technique. By treating the problem as searching for a value whose square is close to a target, we can efficiently approximate roots.
-
-This lesson walks through the formulation and implementation of square root estimation using binary search.
-
-## Problem
-
-Given a non-negative integer `n`, find the **integer square root** (floor of the square root).
-In other words, find the largest integer `x` such that `x * x <= n`.
-
-> **Input:**
->
-> n = 16
-
-> **Output:**
->
-> 4
-
-> **Explanation:**
-> 4 * 4 = 16, so the square root is 4.
-
-> **Input:**
->
-> n = 17
-
-> **Output:**
->
-> 4
-
-> **Explanation:**
-> 4 * 4 = 16 < 17, and 5 * 5 = 25 > 17, so floor(√17) = 4.
+Find integer square root of N.
 
 <br>
 
----
-
-## Approach
-
-We use **binary search** on the answer space. The search space is all integers from 0 to n.
-
-**Algorithm:**
-1. Initialize `left = 0`, `right = n`
-2. While `left <= right`:
-   - Compute `mid = left + (right - left) / 2`
-   - Compute `square = mid * mid`
-   - If `square == n`, return `mid` (exact square root found)
-   - If `square < n`, move left = mid + 1 (answer is larger)
-   - If `square > n`, move right = mid - 1 (answer is smaller)
-3. Return `right` (largest integer whose square <= n)
-
-**Why This Works:**
-- We search for a **condition**: "mid * mid <= n"
-- When loop ends, `right` is the largest value satisfying the condition
-- Binary search efficiently narrows down the answer in logarithmic time
+> **Key insight:** Binary search on answer: find largest x where x*x <= N.
 
 <br>
-
----
-
 
 ---
 
 ## Constraints
-
-- `0 ≤ x ≤ 2³¹ - 1`
-
-<br>
-
----
-
-## All Possible Edge Cases
-
-1. **x = 0:** Return 0
-2. **x = 1:** Return 1
-3. **Perfect square:** sqrt(16) = 4 exact
-4. **Non-perfect square:** sqrt(8) = 2 (floor)
-5. **Large input:** x = INT_MAX — watch for overflow in mid*mid
-6. **x = 2:** Return 1 (floor of 1.414)
-
-<br>
-
-## Complexity Analysis
-
-### Time Complexity: O(log n)
-
-**Detailed Explanation:**
-- **Best Case: O(1)** - n is a perfect square and answer is at middle
-- **Worst Case: O(log n)** - n is very large and we need multiple iterations
-
-**Why Logarithmic?**
-We're doing binary search on the number line from 0 to n:
-- After 1st iteration: n/2 candidates remain
-- After 2nd iteration: n/4 candidates remain
-- ... continues ...
-- Total iterations: log₂(n)
-
-**Example:** For n = 1,000,000:
-- Iteration 1: Check 500,000 → mid * mid vs 1,000,000
-- Iteration 2: Check 250,000 → mid * mid vs 1,000,000
-- ... continues ...
-- Maximum ~20 iterations
-
-### Space Complexity: **O(1)**
-
-**Detailed Explanation:**
-- We only use fixed variables: `left`, `right`, `mid`
-- No extra data structures
-- Space is completely independent of input
-
-**Memory Breakdown:**
-- `left`, `right`, `mid`: 3 integers = O(1)
-- `square`: 1 long integer = O(1)
-- **Total extra space:** constant = O(1)
+- Standard constraints
 
 <br>
 
 ---
 
-## Advantages Over Math.sqrt()
+## Solution 1: Brute Force
 
-✅ **Using Binary Search:**
-- Works with integer arithmetic (no floating-point errors)
-- More educational (learns binary search pattern)
-- Consistent with other "search for answer" problems
+> **Drawback:** Suboptimal time complexity.
 
-❌ **Using Built-in sqrt():**
-- May have precision issues with floating-point
-- Less applicable to similar problem patterns
+> **Key Insight for Improvement:** Binary search: if mid*mid <= n, search right
 
 <br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `Binary search: if mid*mid <= n, search right`
+
+### Time Complexity: O(log N)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(log N) | O(1) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 

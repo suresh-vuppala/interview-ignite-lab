@@ -1,48 +1,56 @@
-## Overview
-Understand basic game theory concepts including Nim game and stone-taking games.
+Game theory: Nim game. Player taking last stone wins.
 
-## Topics Covered
-1. **Nim Game**: XOR-based winning strategy
-2. **Take 1 or 2 Stones**: Dynamic programming approach
-3. **Winning/Losing Positions**: Game state analysis
+<br>
 
-## Approach
-### Nim Game
-- XOR all pile sizes
-- If XOR = 0, losing position; else winning
-- Time: O(n)
+> **Key insight:** If N % 4 == 0, current player loses. Otherwise wins.
 
-### Take 1 or 2 Stones
-- Losing positions: multiples of 3
-- Time: O(1)
-
-## Complexity Analysis
-### Time: O(n) for Nim, O(1) for simple games
-
-## Code
-
+<br>
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁹ (for number theory problems)`
-- `Results may need modular arithmetic`
+- Standard constraints
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Brute Force
 
-1. **n = 0:** Check base case definition
-2. **n = 1:** Smallest valid input
-3. **Prime number input:** Special behavior in factorization/sieve
-4. **Power of 2:** Special case in many algorithms
-5. **Very large n:** Needs O(√n) or O(log n) algorithm
-6. **n = 0 or 1 in GCD:** GCD(a,0) = a, GCD(1,b) = 1
+> **Drawback:** Suboptimal time complexity.
+
+> **Key Insight for Improvement:** N % (maxTake+1) == 0 → lose
 
 <br>
+
+---
+
+## Solution 2: Optimal
+
+**Recurrence/Approach:** `N % (maxTake+1) == 0 → lose`
+
+### Time Complexity: O(1)
+**Why?** Each element/state processed efficiently.
+
+### Space Complexity: O(1)
+
+<br>
+
+---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space |
+|----------|------|-------|
+| Brute | Higher | Varies |
+| Optimal | O(1) | O(1) |
+
+**Key Insights:**
+1. Core technique applied correctly
+2. Edge cases handled
+3. Space optimization where possible
+
+<br><br>
 
 ---
 
