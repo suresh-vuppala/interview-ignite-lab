@@ -1,1 +1,27 @@
-{"title":"LCA in BST","slug":"lca-bst","isPremium":false,"isPosted":true,"description":"Find lowest common ancestor in BST","mdFile":"dsa/binary-search-trees/bst-core-operations/lca-bst/lca-bst.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/lca-bst/code/cpp/LowestCommonAncestorBST.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/lca-bst/code/java/LowestCommonAncestorBST.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/lca-bst/code/python/lca_bst.py","language":"python"}],"title":"LCA in BST Solution"}]}
+{
+  "title": "LCA in BST",
+  "slug": "lca-bst",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find lowest common ancestor in BST",
+  "mdFile": "dsa/binary-search-trees/bst-core-operations/lca-bst/lca-bst.md",
+  "codeExamples": [
+    {
+      "title": "LCA in BST",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/lca-bst/code/cpp/lca_bst.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/lca-bst/code/java/LcaBst.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/lca-bst/code/python/lca_bst.py"
+        }
+      ]
+    }
+  ]
+}

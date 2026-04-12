@@ -1,1 +1,27 @@
-{"title":"Sorted Array to BST","slug":"sorted-array-to-bst","isPremium":false,"isPosted":true,"description":"Convert sorted array to balanced BST","mdFile":"dsa/binary-search-trees/bst-transformations/sorted-array-to-bst/sorted-array-to-bst.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/sorted-array-to-bst/code/cpp/SortedArrayToBST.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/sorted-array-to-bst/code/java/SortedArrayToBST.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/sorted-array-to-bst/code/python/sorted_array_to_bst.py","language":"python"}],"title":"Sorted Array to BST Solution"}]}
+{
+  "title": "Sorted Array to BST",
+  "slug": "sorted-array-to-bst",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Convert sorted array to balanced BST",
+  "mdFile": "dsa/binary-search-trees/bst-transformations/sorted-array-to-bst/sorted-array-to-bst.md",
+  "codeExamples": [
+    {
+      "title": "Sorted Array to BST",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/sorted-array-to-bst/code/cpp/sorted_array_to_bst.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/sorted-array-to-bst/code/java/SortedArrayToBst.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/sorted-array-to-bst/code/python/sorted_array_to_bst.py"
+        }
+      ]
+    }
+  ]
+}

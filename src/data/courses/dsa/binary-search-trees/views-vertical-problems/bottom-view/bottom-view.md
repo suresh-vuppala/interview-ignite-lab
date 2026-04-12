@@ -1,12 +1,32 @@
-Bottom view — last node at each horizontal distance.
+Return the bottom view — last node at each horizontal distance (overwrite as BFS goes deeper).
+
+<br>
+
+> **Key insight:** BFS with horizontal distance. LAST node at each HD wins (unlike top view where first wins). Just overwrite the map value at each level.
 
 <br>
 
 ---
 
-## Solution 1: BFS + HashMap — Update map at each HD (last update wins = bottom view)
+## Constraints
+- `0 ≤ N ≤ 10⁴`
 
-### Time: O(n) | Space: O(n)
+<br>
+
+---
+
+## Solution: BFS + HD Map — Overwrite (Optimal)
+
+### Time Complexity: O(N)
+**Why?** Each node visited at most once during traversal.
+
+**Detailed breakdown:** N = 10,000 → ~10,000 operations
+
+### Space Complexity: O(N)
+
+> **Drawback:** None — O(N) traversal is optimal since we must visit all nodes.
+
+> **Key Insight for Improvement:** BFS (level-order) is often simpler than DFS for view problems because it naturally processes level by level.
 
 <br>
 
@@ -14,12 +34,16 @@ Bottom view — last node at each horizontal distance.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| BFS + Map | O(n) | O(n) | Last visit at each HD wins |
+| Solution | Time | Space |
+|----------|------|-------|
+| BFS/DFS | O(N) | O(N) |
 
-<br>
-<br>
+**Key Insights:**
+1. Views use BFS level-order as the primary technique
+2. Column-based problems (top/bottom/vertical) assign horizontal distance
+3. First/last at each level determines left/right view
+
+<br><br>
 
 ---
 

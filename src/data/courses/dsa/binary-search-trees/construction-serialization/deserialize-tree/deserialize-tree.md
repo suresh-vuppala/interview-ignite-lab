@@ -1,27 +1,41 @@
-Deserialize — reconstruct tree from serialized string. See serialize-tree.
+Deserialize a string back to a binary tree.
+
+<br>
+
+> Input: "1,2,3,null,null,4,5"
+> Output: tree [1,2,3,null,null,4,5]
+> **Key insight:** Reverse of serialization. BFS: parse values, use queue of parents. Each parent gets next two values as children.
 
 <br>
 
 ---
 
-## Solution 1: Preorder Token Parsing — Parse tokens recursively, "#" = null
-## Solution 2: Level-Order Queue — Parse tokens into BFS queue reconstruction
-
-### Time: O(n) | Space: O(n)
+## Constraints
+- `0 ≤ N ≤ 10⁴`
 
 <br>
 
 ---
 
-## Complexity Progression Summary
+## Solution: BFS Deserialization (Optimal)
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Preorder Parse | O(n) | O(n) | Recursive token consumption |
-| BFS Parse | O(n) | O(n) | Queue-based reconstruction |
+### Time Complexity: O(N)
+### Space Complexity: O(N)
+
+> **Drawback:** None.
+
+> **Key Insight for Improvement:** Must match serialization format exactly. BFS serialize → BFS deserialize. Preorder serialize → preorder deserialize.
 
 <br>
-<br>
+
+---
+
+**Key Insights:**
+1. **Queue mirrors serialization:** Parents processed in same order
+2. **Two values per parent:** Left child, then right child
+3. **"null" = no child:** Skip node creation
+
+<br><br>
 
 ---
 

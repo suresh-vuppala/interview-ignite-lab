@@ -1,20 +1,36 @@
-Find LCA in BST — simpler than general BT since we have ordering.
+Find the Lowest Common Ancestor of two nodes in a BST. Exploit BST property for O(H) solution.
+
+<br>
+
+> Input: root = [6,2,8,0,4,7,9,null,null,3,5], p=2, q=8
+> Output: 6
+> **Key insight:** BST property: if both p,q < node → LCA is in left. If both > node → LCA is in right. If split (one left, one right) → current node is LCA.
 
 <br>
 
 ---
 
-## Solution 1: General BT LCA — O(n) DFS
+## Constraints
+- All values unique, p ≠ q, both exist
 
 <br>
 
 ---
 
-## Solution 2: BST Property (Optimal)
+## Solution: BST-Guided Search (Optimal)
 
-If both p,q < node → go left. If both > node → go right. Otherwise current node is LCA.
+**Algorithm:** Start at root. If both p,q < root → go left. If both > root → go right. Otherwise → root is LCA (split point).
 
-### Time: O(h) | Space: O(1) iterative
+### Time Complexity: O(H)
+**Why?** Follow ONE path down — no branching. Much better than O(N) general BT LCA.
+
+**Detailed breakdown:** Balanced BST, N=100,000 → H ≈ 17 comparisons
+
+### Space Complexity: O(1) iterative
+
+> **Drawback:** None — O(H) is optimal for BST LCA.
+
+> **Key Insight for Improvement:** General BT LCA is O(N) because no ordering info. BST's ordering makes it O(H). Always clarify: "Is this a BST?" in interviews.
 
 <br>
 
@@ -22,13 +38,17 @@ If both p,q < node → go left. If both > node → go right. Otherwise current n
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| General DFS | O(n) | O(h) | Visit all nodes |
-| BST Property | O(h) | O(1) | Order guides direction |
+| Tree Type | LCA Time | Method |
+|-----------|----------|--------|
+| General BT | O(N) | Recursive split check |
+| BST | O(H) | Value-guided descent |
 
-<br>
-<br>
+**Key Insights:**
+1. **Split point = LCA:** When p and q are on different sides
+2. **No recursion needed:** Iterative O(1) space
+3. **Simpler than BT LCA:** No need to search both subtrees
+
+<br><br>
 
 ---
 

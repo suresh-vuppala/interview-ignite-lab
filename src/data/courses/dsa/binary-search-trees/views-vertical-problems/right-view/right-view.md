@@ -1,13 +1,32 @@
-Right view — last node at each level.
+Return the right view of a binary tree — last node visible at each level when viewed from the right.
+
+<br>
+
+> **Key insight:** BFS level-order: last node at each level is visible from the right.
 
 <br>
 
 ---
 
-## Solution 1: BFS — Last node of each level
-## Solution 2: DFS — Visit right subtree first, first node at each depth is right view
+## Constraints
+- `0 ≤ N ≤ 10⁴`
 
-### Time: O(n) | Space: O(h) or O(n)
+<br>
+
+---
+
+## Solution: BFS — Last Node per Level (Optimal)
+
+### Time Complexity: O(N)
+**Why?** Each node visited at most once during traversal.
+
+**Detailed breakdown:** N = 10,000 → ~10,000 operations
+
+### Space Complexity: O(W)
+
+> **Drawback:** None — O(N) traversal is optimal since we must visit all nodes.
+
+> **Key Insight for Improvement:** BFS (level-order) is often simpler than DFS for view problems because it naturally processes level by level.
 
 <br>
 
@@ -15,13 +34,16 @@ Right view — last node at each level.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| BFS | O(n) | O(n) | Last in level |
-| DFS Right-First | O(n) | O(h) | Right subtree priority |
+| Solution | Time | Space |
+|----------|------|-------|
+| BFS/DFS | O(N) | O(W) |
 
-<br>
-<br>
+**Key Insights:**
+1. Views use BFS level-order as the primary technique
+2. Column-based problems (top/bottom/vertical) assign horizontal distance
+3. First/last at each level determines left/right view
+
+<br><br>
 
 ---
 

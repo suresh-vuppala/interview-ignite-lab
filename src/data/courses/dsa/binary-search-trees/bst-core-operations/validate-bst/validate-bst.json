@@ -1,1 +1,27 @@
-{"title":"Validate BST","slug":"validate-bst","isPremium":false,"isPosted":true,"description":"Validate if a binary tree is a valid BST","mdFile":"dsa/binary-search-trees/bst-core-operations/validate-bst/validate-bst.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/validate-bst/code/cpp/ValidateBST.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/validate-bst/code/java/ValidateBST.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/validate-bst/code/python/validate_bst.py","language":"python"}],"title":"Validate BST Solution"}]}
+{
+  "title": "Validate BST",
+  "slug": "validate-bst",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Validate if a binary tree is a valid BST",
+  "mdFile": "dsa/binary-search-trees/bst-core-operations/validate-bst/validate-bst.md",
+  "codeExamples": [
+    {
+      "title": "Validate BST",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/validate-bst/code/cpp/validate_bst.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/validate-bst/code/java/ValidateBst.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/validate-bst/code/python/validate_bst.py"
+        }
+      ]
+    }
+  ]
+}

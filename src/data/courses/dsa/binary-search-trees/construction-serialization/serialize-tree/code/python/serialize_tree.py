@@ -1,10 +1,13 @@
-﻿class TreeNode:
-    def __init__(self, val=0):
-        self.val = val
-        self.left = None
-        self.right = None
-
-# Solution
-
-if __name__ == "__main__":
-    pass
+from collections import deque
+class Solution:
+    def serialize(self, root):
+        if not root: return 'null'
+        result, queue = [], deque([root])
+        while queue:
+            node = queue.popleft()
+            if node:
+                result.append(str(node.val))
+                queue.append(node.left); queue.append(node.right)
+            else:
+                result.append('null')
+        return ','.join(result)

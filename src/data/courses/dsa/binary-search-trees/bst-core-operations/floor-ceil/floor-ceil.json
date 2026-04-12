@@ -1,1 +1,27 @@
-{"title":"Floor and Ceil","slug":"floor-ceil","isPremium":false,"isPosted":true,"description":"Find floor and ceil of a value in BST","mdFile":"dsa/binary-search-trees/bst-core-operations/floor-ceil/floor-ceil.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/floor-ceil/code/cpp/FloorCeil.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/floor-ceil/code/java/FloorCeil.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/floor-ceil/code/python/floor_ceil.py","language":"python"}],"title":"Floor and Ceil Solution"}]}
+{
+  "title": "Floor and Ceil",
+  "slug": "floor-ceil",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find floor and ceil of a value in BST",
+  "mdFile": "dsa/binary-search-trees/bst-core-operations/floor-ceil/floor-ceil.md",
+  "codeExamples": [
+    {
+      "title": "Floor and Ceil",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/floor-ceil/code/cpp/floor_ceil.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/floor-ceil/code/java/FloorCeil.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/floor-ceil/code/python/floor_ceil.py"
+        }
+      ]
+    }
+  ]
+}

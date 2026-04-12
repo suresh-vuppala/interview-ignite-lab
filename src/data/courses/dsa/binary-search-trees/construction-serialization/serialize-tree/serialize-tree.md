@@ -1,38 +1,41 @@
-Serialize and deserialize a binary tree.
+Serialize a binary tree to a string representation.
+
+<br>
+
+> Input: root = [1,2,3,null,null,4,5]
+> Output: "1,2,3,null,null,4,5"
+> **Key insight:** BFS level-order serialization including nulls. Or preorder DFS with null markers. Must include nulls to preserve structure.
 
 <br>
 
 ---
 
-## Solution 1: Preorder with Nulls
-
-Serialize: preorder traversal, mark nulls as "#". Deserialize: parse tokens, reconstruct preorder.
-
-### Time: O(n) | Space: O(n)
+## Constraints
+- `0 ≤ N ≤ 10⁴`
 
 <br>
 
 ---
 
-## Solution 2: Level-Order (BFS)
+## Solution: BFS Serialization (Optimal)
 
-Serialize: BFS, include null markers. Deserialize: BFS reconstruction.
+### Time Complexity: O(N)
+### Space Complexity: O(N)
 
-### Time: O(n) | Space: O(n)
+> **Drawback:** None.
+
+> **Key Insight for Improvement:** Must include null markers — without them, tree structure is ambiguous. Preorder + null markers uniquely determines a tree.
 
 <br>
 
 ---
 
-## Complexity Progression Summary
+**Key Insights:**
+1. **Include nulls:** "1,2,3,null,null,4,5" — nulls mark missing children
+2. **BFS = level-order format:** Same as LeetCode representation
+3. **Paired with deserialize:** Must use same format for both
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Preorder | O(n) | O(n) | DFS with null markers |
-| Level-Order | O(n) | O(n) | BFS with null markers |
-
-<br>
-<br>
+<br><br>
 
 ---
 

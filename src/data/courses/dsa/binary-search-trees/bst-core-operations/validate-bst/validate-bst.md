@@ -1,122 +1,64 @@
-Determine if a binary tree is a valid Binary Search Tree (BST). A valid BST satisfies: for every node, all values in left subtree < node value < all values in right subtree.
+Determine if a binary tree is a valid BST. Every node must satisfy: left subtree values < node < right subtree values.
 
 <br>
 
-> Input:
-> Tree structure:
->     2
->    / \
->   1   3
-
-> Output:
-> true
-
-> Explanation:
-> - Node 2: left child (1) < 2 < right child (3) ✓
-> - Node 1: leaf node, valid ✓
-> - Node 3: leaf node, valid ✓
-> Valid BST
+> Input: root = [5,1,4,null,null,3,6]
+> Output: false (4 < 5 but 3 is in right subtree of 5)
+> **Key insight:** Pass valid range (min, max) down. Each node must be within its range. Left child: range (min, parent). Right child: range (parent, max). Or: inorder traversal must be strictly increasing.
 
 <br>
-
-> Input:
-> Tree structure:
->     5
->    / \
->   1   4
->      / \
->     3   6
-
-> Output:
-> false
-
-> Explanation:
-> - Node 5: left child (1) < 5, but right child (4) < 5 ✗
-> - Node 4 should be > 5 to be in right subtree
-> - Even though 4 > 1 and 4's children are valid, 4 < 5 violates BST property
-> Invalid BST
-
-<br>
-
 
 ---
 
 ## Constraints
-
-- `1 ≤ n ≤ 10⁴`
-- `-2³¹ ≤ Node.val ≤ 2³¹ - 1`
+- `1 ≤ N ≤ 10⁴`
 
 <br>
 
 ---
 
-## All Possible Edge Cases
+## Solution 1: Range Validation (Optimal)
 
-1. **Single node:** Always valid BST
-2. **All left:** Valid if descending
-3. **Equal values:** Not valid BST (strict inequality)
-4. **INT_MIN/INT_MAX values:** Watch for boundary overflow in comparisons
-5. **Valid but not balanced:** Still a valid BST
+**Algorithm:** isValid(node, min, max). If node.val ≤ min or node.val ≥ max → false. Recurse: left with (min, node.val), right with (node.val, max).
+
+### Time Complexity: O(N)
+**Why?** Visit each node once.
+
+**Detailed breakdown:** N = 10,000 → 10,000 comparisons
+
+### Space Complexity: O(H)
+
+> **Drawback:** Must handle INT_MIN/INT_MAX boundaries carefully.
+
+> **Key Insight for Improvement:** Inorder traversal alternative: traverse and check if each value > previous. Simpler to implement, same O(N).
 
 <br>
 
 ---
 
-## Solution: Range Validation (Min-Max Approach)
+## Solution 2: Inorder Check — Must Be Strictly Increasing
 
-Use recursive DFS with valid range tracking:
-1. Each node must be within valid range [min, max]
-2. Left subtree: range becomes [min, node.val)
-3. Right subtree: range becomes (node.val, max]
-4. Start with range [-∞, +∞] for root
+### Time Complexity: O(N)
+### Space Complexity: O(H)
 
-**Key insight:** Not enough to check immediate children; must validate entire subtree ranges.
-
-
-
-<br>
-
-### Time Complexity Analysis
-
-**DFS Traversal: O(n)**
-- Visit each node exactly once
-- At each node:
-  - Compare value with min/max bounds: O(1)
-  - Recursive call to left child: T(n/2)
-  - Recursive call to right child: T(n/2)
-- Total: T(n) = T(n/2) + T(n/2) + O(1) = O(n)
-
-**Why must visit all nodes?**
-- Cannot determine validity without checking every node
-- One invalid node anywhere makes entire tree invalid
-- Must validate all subtree ranges
-
-**Space Complexity: O(h)**
-- Recursion stack depth = height of tree
-- Best case (balanced): O(log n)
-- Worst case (skewed): O(n)
-- Only stores min/max bounds per recursive call
-
-**Alternative: Inorder Traversal**
-- Inorder of valid BST is sorted array
-- Traverse and check if strictly increasing
-- Same O(n) time, O(h) space
-- Less intuitive but also correct
-
-**Common mistake:**
-- Only checking node.left < node < node.right is WRONG
-- Must ensure ALL left descendants < node < ALL right descendants
-- Example: Node 5 with left=1, right=4 where 4 has left=3, right=6
-  - 1 < 5 < 4? No! But 3 < 4 < 6? Yes!
-  - Still invalid because 4 < 5 (right child must be > parent)
-
-> **Time Complexity:** O(n) - visit each node once to validate
-> **Space Complexity:** O(h) - recursion stack for tree height
-
-<br>
 <br>
 
 ---
+
+## Complexity Progression Summary
+
+| Solution | Time | Space | Method |
+|----------|------|-------|--------|
+| Range validation | O(N) | O(H) | Pass (min, max) bounds |
+| Inorder check | O(N) | O(H) | Prev value tracking |
+
+**Key Insights:**
+1. **Common mistake:** Only checking node > left AND node < right is WRONG — must check entire subtree range
+2. **Range narrows:** Each level narrows the valid range
+3. **Inorder = sorted:** If inorder traversal is strictly increasing → valid BST
+4. **FAANG classic:** Tests understanding of BST invariant
+
+<br><br>
 
 ---
 

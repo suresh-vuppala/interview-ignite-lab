@@ -1,1 +1,27 @@
-{"title":"BST Core Operations","slug":"bst-core-ops","isPremium":false,"isPosted":true,"description":"Fundamental operations on binary search trees","mdFile":"dsa/binary-search-trees/bst-core-operations/bst-core-ops/bst-core-ops.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/bst-core-ops/code/cpp/BSTCoreOperations.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/bst-core-ops/code/java/BSTCoreOperations.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/bst-core-ops/code/python/bst_core_ops.py","language":"python"}],"title":"BST Core Operations Solution"}]}
+{
+  "title": "BST Core Operations",
+  "slug": "bst-core-ops",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Fundamental operations on binary search trees",
+  "mdFile": "dsa/binary-search-trees/bst-core-operations/bst-core-ops/bst-core-ops.md",
+  "codeExamples": [
+    {
+      "title": "BST Core Operations",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/bst-core-ops/code/cpp/bst_core_ops.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/bst-core-ops/code/java/BstCoreOps.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/bst-core-ops/code/python/bst_core_ops.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,1 +1,27 @@
-{"title":"BST to Doubly Linked List","slug":"bst-to-dll","isPremium":false,"isPosted":true,"description":"Convert BST to doubly linked list in-place","mdFile":"dsa/binary-search-trees/bst-transformations/bst-to-dll/bst-to-dll.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/bst-to-dll/code/cpp/BSTToDLL.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/bst-to-dll/code/java/BSTToDLL.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/bst-to-dll/code/python/bst_to_dll.py","language":"python"}],"title":"BST to Doubly Linked List Solution"}]}
+{
+  "title": "BST to Doubly Linked List",
+  "slug": "bst-to-dll",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Convert BST to doubly linked list in-place",
+  "mdFile": "dsa/binary-search-trees/bst-transformations/bst-to-dll/bst-to-dll.md",
+  "codeExamples": [
+    {
+      "title": "BST to Doubly Linked List",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/bst-to-dll/code/cpp/bst_to_dll.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/bst-to-dll/code/java/BstToDll.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/bst-to-dll/code/python/bst_to_dll.py"
+        }
+      ]
+    }
+  ]
+}

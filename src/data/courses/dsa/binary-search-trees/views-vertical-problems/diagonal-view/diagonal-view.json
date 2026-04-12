@@ -1,1 +1,27 @@
-{"title":"Diagonal View","slug":"diagonal-view","isPremium":false,"isPosted":true,"description":"Diagonal view of binary tree","mdFile":"dsa/binary-search-trees/views-vertical-problems/diagonal-view/diagonal-view.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/diagonal-view/code/cpp/DiagonalView.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/diagonal-view/code/java/DiagonalView.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/diagonal-view/code/python/diagonal_view.py","language":"python"}],"title":"Diagonal View Solution"}]}
+{
+  "title": "Diagonal View",
+  "slug": "diagonal-view",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Diagonal view of binary tree",
+  "mdFile": "dsa/binary-search-trees/views-vertical-problems/diagonal-view/diagonal-view.md",
+  "codeExamples": [
+    {
+      "title": "Diagonal View",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/diagonal-view/code/cpp/diagonal_view.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/diagonal-view/code/java/DiagonalView.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/diagonal-view/code/python/diagonal_view.py"
+        }
+      ]
+    }
+  ]
+}

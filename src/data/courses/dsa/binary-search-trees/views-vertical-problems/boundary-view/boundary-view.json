@@ -1,1 +1,27 @@
-{"title":"Boundary View","slug":"boundary-view","isPremium":false,"isPosted":true,"description":"Boundary traversal of binary tree","mdFile":"dsa/binary-search-trees/views-vertical-problems/boundary-view/boundary-view.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/boundary-view/code/cpp/BoundaryView.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/boundary-view/code/java/BoundaryView.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/boundary-view/code/python/boundary_view.py","language":"python"}],"title":"Boundary View Solution"}]}
+{
+  "title": "Boundary View",
+  "slug": "boundary-view",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Boundary traversal of binary tree",
+  "mdFile": "dsa/binary-search-trees/views-vertical-problems/boundary-view/boundary-view.md",
+  "codeExamples": [
+    {
+      "title": "Boundary View",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/boundary-view/code/cpp/boundary_view.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/boundary-view/code/java/BoundaryView.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/boundary-view/code/python/boundary_view.py"
+        }
+      ]
+    }
+  ]
+}

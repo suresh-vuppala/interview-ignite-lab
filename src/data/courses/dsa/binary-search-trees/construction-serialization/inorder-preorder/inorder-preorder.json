@@ -1,1 +1,27 @@
-{"title":"Inorder and Preorder Construction","slug":"inorder-preorder","isPremium":false,"isPosted":true,"description":"Construct tree from inorder and preorder traversals","mdFile":"dsa/binary-search-trees/construction-serialization/inorder-preorder/inorder-preorder.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/construction-serialization/inorder-preorder/code/cpp/InorderPreorder.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/construction-serialization/inorder-preorder/code/java/InorderPreorder.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/construction-serialization/inorder-preorder/code/python/inorder_preorder.py","language":"python"}],"title":"Inorder and Preorder Construction Solution"}]}
+{
+  "title": "Inorder and Preorder Construction",
+  "slug": "inorder-preorder",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Construct tree from inorder and preorder traversals",
+  "mdFile": "dsa/binary-search-trees/construction-serialization/inorder-preorder/inorder-preorder.md",
+  "codeExamples": [
+    {
+      "title": "Inorder and Preorder Construction",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/construction-serialization/inorder-preorder/code/cpp/inorder_preorder.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/construction-serialization/inorder-preorder/code/java/InorderPreorder.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/construction-serialization/inorder-preorder/code/python/inorder_preorder.py"
+        }
+      ]
+    }
+  ]
+}

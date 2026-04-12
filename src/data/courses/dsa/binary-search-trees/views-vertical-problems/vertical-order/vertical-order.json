@@ -1,1 +1,27 @@
-{"title":"Vertical Order Traversal","slug":"vertical-order","isPremium":false,"isPosted":true,"description":"Vertical order traversal of binary tree","mdFile":"dsa/binary-search-trees/views-vertical-problems/vertical-order/vertical-order.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/vertical-order/code/cpp/VerticalOrder.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/vertical-order/code/java/VerticalOrder.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/vertical-order/code/python/vertical_order.py","language":"python"}],"title":"Vertical Order Traversal Solution"}]}
+{
+  "title": "Vertical Order Traversal",
+  "slug": "vertical-order",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Vertical order traversal of binary tree",
+  "mdFile": "dsa/binary-search-trees/views-vertical-problems/vertical-order/vertical-order.md",
+  "codeExamples": [
+    {
+      "title": "Vertical Order Traversal",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/vertical-order/code/cpp/vertical_order.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/vertical-order/code/java/VerticalOrder.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/vertical-order/code/python/vertical_order.py"
+        }
+      ]
+    }
+  ]
+}

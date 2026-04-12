@@ -1,1 +1,27 @@
-{"title":"Left View","slug":"left-view","isPremium":false,"isPosted":true,"description":"Find left view of binary tree","mdFile":"dsa/binary-search-trees/views-vertical-problems/left-view/left-view.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/left-view/code/cpp/LeftView.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/left-view/code/java/LeftView.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/left-view/code/python/left_view.py","language":"python"}],"title":"Left View Solution"}]}
+{
+  "title": "Left View",
+  "slug": "left-view",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find left view of binary tree",
+  "mdFile": "dsa/binary-search-trees/views-vertical-problems/left-view/left-view.md",
+  "codeExamples": [
+    {
+      "title": "Left View",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/left-view/code/cpp/left_view.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/left-view/code/java/LeftView.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/left-view/code/python/left_view.py"
+        }
+      ]
+    }
+  ]
+}

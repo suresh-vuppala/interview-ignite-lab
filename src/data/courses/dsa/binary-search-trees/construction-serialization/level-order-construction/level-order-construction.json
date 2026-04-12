@@ -1,1 +1,27 @@
-{"title":"Level Order Construction","slug":"level-order-construction","isPremium":false,"isPosted":true,"description":"Construct tree from level order traversal","mdFile":"dsa/binary-search-trees/construction-serialization/level-order-construction/level-order-construction.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/construction-serialization/level-order-construction/code/cpp/LevelOrderConstruction.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/construction-serialization/level-order-construction/code/java/LevelOrderConstruction.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/construction-serialization/level-order-construction/code/python/level_order_construction.py","language":"python"}],"title":"Level Order Construction Solution"}]}
+{
+  "title": "Level Order Construction",
+  "slug": "level-order-construction",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Construct tree from level order traversal",
+  "mdFile": "dsa/binary-search-trees/construction-serialization/level-order-construction/level-order-construction.md",
+  "codeExamples": [
+    {
+      "title": "Level Order Construction",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/construction-serialization/level-order-construction/code/cpp/level_order_construction.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/construction-serialization/level-order-construction/code/java/LevelOrderConstruction.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/construction-serialization/level-order-construction/code/python/level_order_construction.py"
+        }
+      ]
+    }
+  ]
+}

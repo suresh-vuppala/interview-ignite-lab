@@ -1,1 +1,27 @@
-{"title":"Right View","slug":"right-view","isPremium":false,"isPosted":true,"description":"Find right view of binary tree","mdFile":"dsa/binary-search-trees/views-vertical-problems/right-view/right-view.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/right-view/code/cpp/RightView.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/right-view/code/java/RightView.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/right-view/code/python/right_view.py","language":"python"}],"title":"Right View Solution"}]}
+{
+  "title": "Right View",
+  "slug": "right-view",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find right view of binary tree",
+  "mdFile": "dsa/binary-search-trees/views-vertical-problems/right-view/right-view.md",
+  "codeExamples": [
+    {
+      "title": "Right View",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/right-view/code/cpp/right_view.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/right-view/code/java/RightView.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/right-view/code/python/right_view.py"
+        }
+      ]
+    }
+  ]
+}

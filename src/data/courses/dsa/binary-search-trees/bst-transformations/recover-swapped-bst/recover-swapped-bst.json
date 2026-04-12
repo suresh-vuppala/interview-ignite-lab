@@ -1,1 +1,27 @@
-{"title":"Recover Swapped BST","slug":"recover-swapped-bst","isPremium":false,"isPosted":true,"description":"Recover BST with swapped nodes","mdFile":"dsa/binary-search-trees/bst-transformations/recover-swapped-bst/recover-swapped-bst.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/recover-swapped-bst/code/cpp/RecoverSwappedBST.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/recover-swapped-bst/code/java/RecoverSwappedBST.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/recover-swapped-bst/code/python/recover_swapped_bst.py","language":"python"}],"title":"Recover Swapped BST Solution"}]}
+{
+  "title": "Recover Swapped BST",
+  "slug": "recover-swapped-bst",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Recover BST with swapped nodes",
+  "mdFile": "dsa/binary-search-trees/bst-transformations/recover-swapped-bst/recover-swapped-bst.md",
+  "codeExamples": [
+    {
+      "title": "Recover Swapped BST",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/recover-swapped-bst/code/cpp/recover_swapped_bst.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/recover-swapped-bst/code/java/RecoverSwappedBst.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/recover-swapped-bst/code/python/recover_swapped_bst.py"
+        }
+      ]
+    }
+  ]
+}

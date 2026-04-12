@@ -1,1 +1,27 @@
-{"title":"Top View","slug":"top-view","isPremium":false,"isPosted":true,"description":"Find top view of binary tree","mdFile":"dsa/binary-search-trees/views-vertical-problems/top-view/top-view.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/top-view/code/cpp/TopView.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/top-view/code/java/TopView.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/top-view/code/python/top_view.py","language":"python"}],"title":"Top View Solution"}]}
+{
+  "title": "Top View",
+  "slug": "top-view",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find top view of binary tree",
+  "mdFile": "dsa/binary-search-trees/views-vertical-problems/top-view/top-view.md",
+  "codeExamples": [
+    {
+      "title": "Top View",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/top-view/code/cpp/top_view.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/top-view/code/java/TopView.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/top-view/code/python/top_view.py"
+        }
+      ]
+    }
+  ]
+}

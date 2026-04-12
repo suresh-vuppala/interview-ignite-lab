@@ -1,14 +1,23 @@
-import java.util.*;
-
-public class FloorCeil {
-    static class TreeNode {
-        int val;
-        TreeNode left, right;
-        TreeNode(int x) { val = x; }
+// ============================================================
+// Floor and Ceil in BST
+// ============================================================
+class Solution {
+    public int floor(TreeNode root, int key) {
+        int res = -1;
+        while (root != null) {
+            if (root.val == key) return key;
+            if (root.val < key) { res = root.val; root = root.right; }
+            else root = root.left;
+        }
+        return res;
     }
-    
-    // Solution
-    
-    public static void main(String[] args) {
+    public int ceil(TreeNode root, int key) {
+        int res = -1;
+        while (root != null) {
+            if (root.val == key) return key;
+            if (root.val > key) { res = root.val; root = root.left; }
+            else root = root.right;
+        }
+        return res;
     }
 }

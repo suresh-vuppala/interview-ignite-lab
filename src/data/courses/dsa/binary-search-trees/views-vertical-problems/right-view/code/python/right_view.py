@@ -1,10 +1,13 @@
-﻿class TreeNode:
-    def __init__(self, val=0):
-        self.val = val
-        self.left = None
-        self.right = None
-
-# Solution
-
-if __name__ == "__main__":
-    pass
+from collections import deque
+class Solution:
+    def rightSideView(self, root):
+        if not root: return []
+        result, queue = [], deque([root])
+        while queue:
+            size = len(queue)
+            for i in range(size):
+                node = queue.popleft()
+                if i == size - 1: result.append(node.val)
+                if node.left: queue.append(node.left)
+                if node.right: queue.append(node.right)
+        return result

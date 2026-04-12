@@ -1,1 +1,27 @@
-{"title":"BST from Preorder","slug":"bst-from-preorder","isPremium":false,"isPosted":true,"description":"Construct BST from preorder traversal","mdFile":"dsa/binary-search-trees/bst-transformations/bst-from-preorder/bst-from-preorder.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/bst-from-preorder/code/cpp/BSTFromPreorder.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/bst-from-preorder/code/java/BSTFromPreorder.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/bst-from-preorder/code/python/bst_from_preorder.py","language":"python"}],"title":"BST from Preorder Solution"}]}
+{
+  "title": "BST from Preorder",
+  "slug": "bst-from-preorder",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Construct BST from preorder traversal",
+  "mdFile": "dsa/binary-search-trees/bst-transformations/bst-from-preorder/bst-from-preorder.md",
+  "codeExamples": [
+    {
+      "title": "BST from Preorder",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/bst-from-preorder/code/cpp/bst_from_preorder.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/bst-from-preorder/code/java/BstFromPreorder.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/bst-from-preorder/code/python/bst_from_preorder.py"
+        }
+      ]
+    }
+  ]
+}

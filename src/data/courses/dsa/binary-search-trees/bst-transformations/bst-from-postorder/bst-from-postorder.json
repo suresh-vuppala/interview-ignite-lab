@@ -1,1 +1,27 @@
-{"title":"BST from Postorder","slug":"bst-from-postorder","isPremium":false,"isPosted":true,"description":"Construct BST from postorder traversal","mdFile":"dsa/binary-search-trees/bst-transformations/bst-from-postorder/bst-from-postorder.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/bst-from-postorder/code/cpp/BSTFromPostorder.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/bst-from-postorder/code/java/BSTFromPostorder.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/bst-transformations/bst-from-postorder/code/python/bst_from_postorder.py","language":"python"}],"title":"BST from Postorder Solution"}]}
+{
+  "title": "BST from Postorder",
+  "slug": "bst-from-postorder",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Construct BST from postorder traversal",
+  "mdFile": "dsa/binary-search-trees/bst-transformations/bst-from-postorder/bst-from-postorder.md",
+  "codeExamples": [
+    {
+      "title": "BST from Postorder",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/bst-from-postorder/code/cpp/bst_from_postorder.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/bst-from-postorder/code/java/BstFromPostorder.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/bst-transformations/bst-from-postorder/code/python/bst_from_postorder.py"
+        }
+      ]
+    }
+  ]
+}

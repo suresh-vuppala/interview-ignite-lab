@@ -1,29 +1,45 @@
-Construct BST from preorder traversal.
+Construct a BST from a given preorder traversal.
+
+<br>
+
+> Input: preorder = [8,5,1,7,10,12]
+> Output: BST with root=8, left subtree [5,1,7], right subtree [10,12]
+> **Key insight:** First element = root. Use upper bound to determine which elements go left vs right. Recursive: build(preorder, bound). If next element > bound → return null (belongs to parent's right).
 
 <br>
 
 ---
 
-## Solution 1: Sort → Inorder, use Preorder+Inorder — O(n log n)
-## Solution 2: Recursive with Bounds (Optimal)
-
-Use upper bound to determine when to stop. First element is root, recurse with bounds.
-
-### Time: O(n) | Space: O(h)
+## Constraints
+- `1 ≤ N ≤ 10⁴`
 
 <br>
 
 ---
 
-## Complexity Progression Summary
+## Solution: Recursive with Upper Bound (Optimal)
 
-| Solution | Time | Space | Key Improvement |
-|----------|------|-------|----------------|
-| Sort + Build | O(n log n) | O(n) | Get inorder by sorting |
-| Bounds Recursion | O(n) | O(h) | Upper bound guides construction |
+**Algorithm:** Maintain index i. build(bound): if i >= n or preorder[i] > bound → null. Create node with preorder[i++]. Left = build(node.val). Right = build(bound).
+
+### Time Complexity: O(N)
+**Why?** Each element processed exactly once (index advances monotonically).
+
+### Space Complexity: O(H)
+
+> **Drawback:** None — O(N) is optimal.
+
+> **Key Insight for Improvement:** The upper bound trick elegantly splits left/right without searching. preorder[i] > bound means this element belongs to an ancestor's right subtree.
 
 <br>
-<br>
+
+---
+
+**Key Insights:**
+1. **Preorder: root comes first:** Process root, then left subtree, then right
+2. **Upper bound determines split:** Left children must be < root, right children must be < ancestor's bound
+3. **O(N) vs O(N²):** Bound approach avoids scanning for split point each time
+
+<br><br>
 
 ---
 

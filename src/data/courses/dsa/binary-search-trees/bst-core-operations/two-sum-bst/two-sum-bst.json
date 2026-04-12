@@ -1,1 +1,27 @@
-{"title":"Two Sum in BST","slug":"two-sum-bst","isPremium":false,"isPosted":true,"description":"Find two elements in BST that sum to target","mdFile":"dsa/binary-search-trees/bst-core-operations/two-sum-bst/two-sum-bst.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/two-sum-bst/code/cpp/TwoSumBST.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/two-sum-bst/code/java/TwoSumBST.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/bst-core-operations/two-sum-bst/code/python/two_sum_bst.py","language":"python"}],"title":"Two Sum in BST Solution"}]}
+{
+  "title": "Two Sum in BST",
+  "slug": "two-sum-bst",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Find two elements in BST that sum to target",
+  "mdFile": "dsa/binary-search-trees/bst-core-operations/two-sum-bst/two-sum-bst.md",
+  "codeExamples": [
+    {
+      "title": "Two Sum in BST",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/two-sum-bst/code/cpp/two_sum_bst.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/two-sum-bst/code/java/TwoSumBst.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/bst-core-operations/two-sum-bst/code/python/two_sum_bst.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,1 +1,27 @@
-{"title":"Serialize Tree","slug":"serialize-tree","isPremium":false,"isPosted":true,"description":"Serialize binary tree to string","mdFile":"dsa/binary-search-trees/construction-serialization/serialize-tree/serialize-tree.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/construction-serialization/serialize-tree/code/cpp/SerializeTree.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/construction-serialization/serialize-tree/code/java/SerializeTree.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/construction-serialization/serialize-tree/code/python/serialize_tree.py","language":"python"}],"title":"Serialize Tree Solution"}]}
+{
+  "title": "Serialize Tree",
+  "slug": "serialize-tree",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Serialize binary tree to string",
+  "mdFile": "dsa/binary-search-trees/construction-serialization/serialize-tree/serialize-tree.md",
+  "codeExamples": [
+    {
+      "title": "Serialize Tree",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/construction-serialization/serialize-tree/code/cpp/serialize_tree.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/construction-serialization/serialize-tree/code/java/SerializeTree.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/construction-serialization/serialize-tree/code/python/serialize_tree.py"
+        }
+      ]
+    }
+  ]
+}

@@ -1,1 +1,27 @@
-{"title":"Vertical Sum","slug":"vertical-sum","isPremium":false,"isPosted":true,"description":"Vertical sum of nodes in binary tree","mdFile":"dsa/binary-search-trees/views-vertical-problems/vertical-sum/vertical-sum.md","codeExamples":[{"languages":[{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/vertical-sum/code/cpp/VerticalSum.cpp","language":"cpp"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/vertical-sum/code/java/VerticalSum.java","language":"java"},{"codeFile":"courses/dsa/binary-search-trees/views-vertical-problems/vertical-sum/code/python/vertical_sum.py","language":"python"}],"title":"Vertical Sum Solution"}]}
+{
+  "title": "Vertical Sum",
+  "slug": "vertical-sum",
+  "isPremium": false,
+  "isPosted": true,
+  "description": "Vertical sum of nodes in binary tree",
+  "mdFile": "dsa/binary-search-trees/views-vertical-problems/vertical-sum/vertical-sum.md",
+  "codeExamples": [
+    {
+      "title": "Vertical Sum",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/vertical-sum/code/cpp/vertical_sum.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/vertical-sum/code/java/VerticalSum.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/binary-search-trees/views-vertical-problems/vertical-sum/code/python/vertical_sum.py"
+        }
+      ]
+    }
+  ]
+}
