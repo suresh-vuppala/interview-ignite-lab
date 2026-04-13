@@ -87,6 +87,13 @@ Step 4: Reverse suffix [i+1..end]: [7,6,4,3,1] → [1,3,4,6,7]
 **Why?**
 - All operations are in-place swaps and reversal
 
+> **Drawback:**
+> If you don't know the three-step algorithm, you might try generating all permutations — O(N!) which is infeasible.
+
+> **Key Insight for Improvement:**
+> Find the rightmost "dip" (nums[i] < nums[i+1]), swap with the smallest-larger element to its right, and reverse the suffix. This directly constructs the next permutation in O(N).
+
+
 <br>
 
 ---

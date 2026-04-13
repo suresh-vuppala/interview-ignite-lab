@@ -64,6 +64,13 @@ Use a dynamic array. Push adds to the end, pop removes from the end. Both are O(
 **Why?**
 - Stores N elements in the array
 
+> **Drawback:**
+> Using a linked list adds pointer overhead per element. For fixed-size scenarios, array is more cache-friendly.
+
+> **Key Insight for Improvement:**
+> Dynamic array (vector/ArrayList): push/pop at the END for O(1) amortized. Array-based stack is the standard implementation.
+
+
 <br>
 
 ---

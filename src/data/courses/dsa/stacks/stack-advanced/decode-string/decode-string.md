@@ -57,6 +57,13 @@ Result: "accaccacc" ✓
 
 ### Space Complexity: O(N) for stack depth
 
+> **Drawback:**
+> Recursive approach without explicit stack can be harder to manage with deeply nested brackets and tricky edge cases.
+
+> **Key Insight for Improvement:**
+> Stack-based iteration: push current string and multiplier on '[', pop and build on ']'. Clean O(N) with explicit state management.
+
+
 <br>
 
 ---

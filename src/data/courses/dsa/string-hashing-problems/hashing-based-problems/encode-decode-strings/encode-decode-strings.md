@@ -96,6 +96,13 @@ Edge case: ["a#b", "c"]
 - Only index variables for decoding
 - Output strings are required
 
+> **Drawback:**
+> Using a delimiter (like comma) fails if strings contain the delimiter character. Escaping adds complexity.
+
+> **Key Insight for Improvement:**
+> Length-prefix encoding: store length + separator + string. Works for ANY character set since length tells decoder exactly how many chars to read.
+
+
 **Why this is robust:**
 - Length prefix makes it immune to any character in the strings
 - Even "#", digits, or empty strings are handled correctly

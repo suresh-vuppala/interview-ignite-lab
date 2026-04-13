@@ -65,6 +65,13 @@ Build each row from the previous one. First/last elements are 1. Middle elements
 - Only the result structure (which is required output)
 - No auxiliary data structures
 
+> **Drawback:**
+> Generating Pascal's triangle by computing combinations C(n,k) directly involves factorials — overflow risk and slower.
+
+> **Key Insight for Improvement:**
+> Use the additive property: each element = sum of two elements above it. Build row by row in O(numRows²) with no factorial computation.
+
+
 **Example walkthrough:**
 ```
 numRows = 5

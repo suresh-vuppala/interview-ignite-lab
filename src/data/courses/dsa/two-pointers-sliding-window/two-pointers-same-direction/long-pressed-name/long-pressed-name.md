@@ -80,6 +80,13 @@ i=4 == name.length=4 → true ✓
 **Why?**
 - Only two pointer variables
 
+> **Drawback:**
+> Checking all possible long-press combinations is exponential.
+
+> **Key Insight for Improvement:**
+> Two pointers: advance both on match, advance only typed pointer on long-press repeat. Single pass O(N).
+
+
 <br>
 
 ---
