@@ -2,6 +2,8 @@ Find all nodes at distance K from a target node in a binary tree.
 
 <br>
 
+> root=[3,5,1,6,2,0,8,null,null,7,4], target=5, K=2 → [7,4,1]
+>
 > **Key insight:** Convert tree to graph (add parent pointers). BFS from target for K levels.
 
 <br>
@@ -9,28 +11,47 @@ Find all nodes at distance K from a target node in a binary tree.
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: DFS from every node checking distance
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N²)
 
-> **Key Insight for Improvement:** Parent map + BFS from target K levels
+> **Drawback:**
+> Checking from every node is quadratic.
+
+> **Key Insight for Improvement:**
+> Parent map + BFS: build parent pointers, then BFS from target K levels in all directions (children + parent).
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Parent Map + BFS (Optimal)
 
-**Recurrence/Approach:** `Parent map + BFS from target K levels`
+**Intuition:** Convert tree to graph (add parent pointers). BFS from target for K levels.
+
+**Algorithm:**
+1. DFS to build parent map: parent[child] = parent_node
+2. BFS from target node, K levels
+3. Track visited to avoid revisiting
+4. All nodes at level K = answer
 
 ### Time Complexity: O(N)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+Target=5, K=2: BFS level 0=[5], level 1=[6,2,3(parent)], level 2=[7,4,1] ✓
+```
 
 ### Space Complexity: O(N)
 
@@ -40,15 +61,17 @@ Find all nodes at distance K from a target node in a binary tree.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N) | O(N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS from every node checking distance | O(N²) | Varies | Baseline |
+| Parent Map + BFS | O(N) | O(N) | Optimal |
+
+**Recommended Solution:** Parent Map + BFS
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Parent map:** Enables upward traversal in tree
+2. **BFS K levels:** Distance = BFS level
+3. **Visited set:** Prevents going back to already-explored nodes
 
 <br><br>
 

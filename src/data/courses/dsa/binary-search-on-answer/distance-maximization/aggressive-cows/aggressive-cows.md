@@ -1,36 +1,67 @@
-Place cows maximizing minimum distance between any two.
+Place C cows in N stalls maximizing the minimum distance between any two cows.
 
 <br>
 
-> **Key insight:** Binary search on answer (min distance). Greedy placement check.
+> stalls=[1,2,4,8,9], cows=3 → 3 (place at 1,4,8→min dist=3)
+>
+> **Key insight:** Binary search on minimum distance. Greedy: place cows left-to-right, skip stalls too close.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** Binary search on min distance, greedy placement
+## All Possible Edge Cases
+1. **Empty/single element input**
+2. **Boundary values** (min/max of range)
+3. **All elements same / sorted / reverse sorted**
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 1: Try all placements
 
-**Recurrence/Approach:** `Binary search on min distance, greedy placement`
+### Time Complexity: O(C(N,C))
+
+> **Drawback:**
+> Combinatorial — infeasible.
+
+> **Key Insight for Improvement:**
+> BS on min distance: lo=1, hi=max-min. Greedy placement: place cow at first valid stall (≥ last + mid distance).
+
+<br>
+
+---
+
+## Solution 2: BS on Answer + Greedy Placement (Optimal)
+
+**Intuition:** Binary search on minimum distance. Greedy: place cows left-to-right, skip stalls too close.
+
+**Algorithm:**
+1. Sort stalls. lo=1, hi=stalls[N-1]-stalls[0]
+2. For each mid: greedily place cows with ≥ mid distance
+3. If placed ≥ C → ans=mid, lo=mid+1 (try larger)
+4. Else → hi=mid-1
 
 ### Time Complexity: O(N log D)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently via the core technique.
+
+**Detailed breakdown:**
+Operations scale with input size as described by the complexity.
+
+**Example walkthrough:**
+```
+stalls=[1,2,4,8,9] C=3 mid=3:
+Place at 1. Next ≥ 1+3=4 → place at 4. Next ≥ 4+3=7 → place at 8. Placed 3 ✓
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +71,17 @@ Place cows maximizing minimum distance between any two.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N log D) | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Try all placements | O(C(N,C)) | Varies | Baseline |
+| BS on Answer + Greedy Placement | O(N log D) | O(1) | Optimal approach |
+
+**Recommended Solution:** BS on Answer + Greedy Placement — O(N log D) time.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Maximize minimum:** BS on the minimum distance
+2. **Greedy: leftmost valid:** Place each cow at earliest valid stall
+3. **Sort stalls first:** Enables greedy left-to-right placement
 
 <br><br>
 

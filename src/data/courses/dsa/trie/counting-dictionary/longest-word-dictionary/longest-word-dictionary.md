@@ -1,36 +1,58 @@
-Find longest word where every prefix is also in dictionary.
+Find longest word in dictionary where every prefix is also a word in dictionary.
 
 <br>
 
-> **Key insight:** Trie insert all words. DFS/BFS to find longest word with all prefixes present (isEnd at each step).
+> words=['w','wo','wor','worl','world'] → 'world'
+>
+> **Key insight:** Build trie. DFS/BFS: only follow paths where every intermediate node has isEnd=true. Longest such path = answer.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Sort + check each word's prefixes
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N×L×N)
 
-> **Key Insight for Improvement:** Trie + DFS checking isEnd at each level
+> **Drawback:**
+> Checking each prefix against the dictionary is expensive.
+
+> **Key Insight for Improvement:**
+> Trie + DFS: only traverse nodes with isEnd=true (every prefix is a valid word). Track longest valid path.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Trie + DFS with isEnd Check (Optimal)
 
-**Recurrence/Approach:** `Trie + DFS checking isEnd at each level`
+**Intuition:** Build trie. DFS/BFS: only follow paths where every intermediate node has isEnd=true. Longest such path = answer.
+
+**Algorithm:**
+1. Insert all words into trie
+2. DFS from root: only visit children with isEnd=true
+3. Track longest path found
+4. For ties: lexicographically smallest (DFS in alphabetical order)
 
 ### Time Complexity: O(N×L)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+words=['a','app','ap','apple','apply']: Trie path a(end)→p(end)→p(end)→l→e(end),y(end)
+DFS: a→ap→app→appl? 'appl' not in dict → stop. apple if 'appl' is end? Check...
+```
 
 ### Space Complexity: O(N×L)
 
@@ -40,15 +62,17 @@ Find longest word where every prefix is also in dictionary.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N×L) | O(N×L) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Sort + check each word's prefixes | O(N×L×N) | Varies | Baseline |
+| Trie + DFS with isEnd Check | O(N×L) | O(N×L) | Optimal |
+
+**Recommended Solution:** Trie + DFS with isEnd Check
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Every prefix must be a word:** Only follow isEnd nodes
+2. **DFS in order:** Lexicographic tiebreaking
+3. **BFS alternative:** Process level by level, only extend valid words
 
 <br><br>
 

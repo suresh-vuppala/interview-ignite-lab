@@ -1,36 +1,54 @@
-Generate all subsets (power set).
+Generate all subsets (power set) using recursion.
 
 <br>
 
-> **Key insight:** Same as subsequences but collect unordered sets.
+> Same as generate-all-subsequences — subsets ARE unordered subsequences
+>
+> **Key insight:** Include/exclude pattern. Same algorithm as subsequences.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Same
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N×2^N)
 
-> **Key Insight for Improvement:** Backtracking: include/exclude each element
+> **Drawback:**
+> Can't avoid 2^N subsets.
+
+> **Key Insight for Improvement:**
+> Same include/exclude recursion.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Backtracking (Optimal)
 
-**Recurrence/Approach:** `Backtracking: include/exclude each element`
+**Intuition:** Include/exclude pattern. Same algorithm as subsequences.
 
-### Time Complexity: O(2^N)
-**Why?** Each element/state processed efficiently.
+**Algorithm:**
+Same as subsequences
+
+### Time Complexity: O(N×2^N)
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+Same as subsequences
+```
 
 ### Space Complexity: O(N)
 
@@ -40,15 +58,17 @@ Generate all subsets (power set).
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(2^N) | O(N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Same | O(N×2^N) | Varies | Baseline |
+| Backtracking | O(N×2^N) | O(N) | Optimal |
+
+**Recommended Solution:** Backtracking
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Subsets = Power Set:** 2^N total
+2. **Same algorithm as subsequences**
+3. **Alternative:** Bitmask enumeration (iterative)
 
 <br><br>
 

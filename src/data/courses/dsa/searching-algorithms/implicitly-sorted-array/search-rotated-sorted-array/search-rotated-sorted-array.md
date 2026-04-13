@@ -1,36 +1,73 @@
-Search target in rotated sorted array.
+Search for target in a rotated sorted array.
 
 <br>
 
-> **Key insight:** Binary search: determine which half is sorted, check if target is in sorted half.
+> nums=[4,5,6,7,0,1,2], target=0 → index 4
+>
+> **Key insight:** Binary search: determine which half is sorted. Check if target falls in the sorted half's range. Search that half or the other.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** Find sorted half, check if target in range, narrow search
+## All Possible Edge Cases
+1. **Empty/single element input**
+2. **Boundary values** (min/max of range)
+3. **All elements same / sorted / reverse sorted**
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 1: Linear scan
 
-**Recurrence/Approach:** `Find sorted half, check if target in range, narrow search`
+### Time Complexity: O(N)
+
+> **Drawback:**
+> Ignores sorted structure.
+
+> **Key Insight for Improvement:**
+> Identify sorted half → check if target is in its range → narrow search to correct half.
+
+<br>
+
+---
+
+## Solution 2: Binary Search — Identify Sorted Half (Optimal)
+
+**Intuition:** Binary search: determine which half is sorted. Check if target falls in the sorted half's range. Search that half or the other.
+
+**Algorithm:**
+1. lo=0, hi=N-1
+2. While lo ≤ hi:
+   - mid = lo+(hi-lo)/2
+   - If nums[mid] == target → return mid
+   - If nums[lo] ≤ nums[mid] (left sorted):
+     - If nums[lo] ≤ target < nums[mid] → hi=mid-1
+     - Else → lo=mid+1
+   - Else (right sorted):
+     - If nums[mid] < target ≤ nums[hi] → lo=mid+1
+     - Else → hi=mid-1
 
 ### Time Complexity: O(log N)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently via the core technique.
+
+**Detailed breakdown:**
+Operations scale with input size as described by the complexity.
+
+**Example walkthrough:**
+```
+[4,5,6,7,0,1,2] target=0: left [4,5,6,7] sorted, 0 not in [4,7]→lo=mid+1
+Right half [0,1,2] sorted, 0 in [0,2]→found at index 4 ✓
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +77,17 @@ Search target in rotated sorted array.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(log N) | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Linear scan | O(N) | Varies | Baseline |
+| Binary Search — Identify Sorted Half | O(log N) | O(1) | Optimal approach |
+
+**Recommended Solution:** Binary Search — Identify Sorted Half — O(log N) time.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **One half always sorted:** In rotated array, at least one half is sorted
+2. **Check target in sorted range:** Determines which half to search
+3. **FAANG classic:** Tests binary search mastery
 
 <br><br>
 

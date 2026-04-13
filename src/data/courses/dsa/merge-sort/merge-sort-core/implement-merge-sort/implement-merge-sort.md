@@ -9,7 +9,7 @@ Divide array in half, sort each, merge sorted halves.
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
@@ -17,7 +17,7 @@ Divide array in half, sort each, merge sorted halves.
 
 ## Solution 1: Brute Force
 
-> **Drawback:** Suboptimal time complexity.
+> **Drawback:** Baseline approach is less efficient — see optimal solution below.
 
 > **Key Insight for Improvement:** Split, recursively sort, merge
 

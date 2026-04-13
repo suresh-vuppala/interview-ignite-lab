@@ -1,36 +1,57 @@
-Find maximum XOR with a number ≤ constraint.
+Find maximum XOR of a number with any array element ≤ a constraint.
 
 <br>
 
-> **Key insight:** Binary trie with range constraints.
+> nums with constraint limit
+>
+> **Key insight:** Binary trie with range constraint checking — only follow paths that keep value ≤ limit.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Check all valid pairs
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N²)
 
-> **Key Insight for Improvement:** Binary trie with constraint checking
+> **Drawback:**
+> Quadratic.
+
+> **Key Insight for Improvement:**
+> Binary trie: at each bit, check if choosing opposite bit keeps value ≤ constraint. If not, must choose same bit.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Constrained Binary Trie (Optimal)
 
-**Recurrence/Approach:** `Binary trie with constraint checking`
+**Intuition:** Binary trie with range constraint checking — only follow paths that keep value ≤ limit.
+
+**Algorithm:**
+1. Insert numbers into trie
+2. Query: at each bit, try opposite bit first
+3. If taking opposite would exceed constraint → must take same bit
+4. Track accumulated value to check constraint
 
 ### Time Complexity: O(N×32)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+Similar to max XOR but with constraint checking at each level
+```
 
 ### Space Complexity: O(N×32)
 
@@ -40,15 +61,16 @@ Find maximum XOR with a number ≤ constraint.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N×32) | O(N×32) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Check all valid pairs | O(N²) | Varies | Baseline |
+| Constrained Binary Trie | O(N×32) | O(N×32) | Optimal |
+
+**Recommended Solution:** Constrained Binary Trie
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Constraint check at each level:** Can we afford to take the XOR-maximizing path?
+2. **Fallback to same bit:** When opposite would violate constraint
 
 <br><br>
 

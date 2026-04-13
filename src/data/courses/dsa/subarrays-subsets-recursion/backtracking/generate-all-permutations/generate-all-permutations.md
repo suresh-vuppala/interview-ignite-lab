@@ -1,38 +1,61 @@
-Generate all permutations of an array.
+Generate all N! permutations of an array.
 
 <br>
 
-> **Key insight:** Backtracking: for each position, try all unused elements. Swap-based approach.
+> nums=[1,2,3] → [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+>
+> **Key insight:** Backtracking: for each position, try all unused elements. Swap-based: swap element at current position with each remaining.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Same — backtracking IS the approach
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N×N!)
 
-> **Key Insight for Improvement:** Swap element at pos with each remaining, recurse
+> **Drawback:**
+> N! permutations exist — must generate all.
+
+> **Key Insight for Improvement:**
+> Swap-based backtracking: swap current position with each element from current to end, recurse, swap back.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Swap-Based Backtracking (Optimal)
 
-**Recurrence/Approach:** `Swap element at pos with each remaining, recurse`
+**Intuition:** Backtracking: for each position, try all unused elements. Swap-based: swap element at current position with each remaining.
 
-### Time Complexity: O(N!)
-**Why?** Each element/state processed efficiently.
+**Algorithm:**
+1. permute(index):
+2. If index == N: add arr copy to result
+3. For i = index to N-1:
+   - Swap arr[index] and arr[i]
+   - permute(index + 1)
+   - Swap back (backtrack)
 
-### Space Complexity: O(N)
+### Time Complexity: O(N × N!)
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+[1,2,3]: swap(0,0)→[1,2,3]→permute(1)→...6 permutations
+```
+
+### Space Complexity: O(N) stack
 
 <br>
 
@@ -40,15 +63,17 @@ Generate all permutations of an array.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N!) | O(N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Same — backtracking IS the approach | O(N×N!) | Varies | Baseline |
+| Swap-Based Backtracking | O(N × N!) | O(N) stack | Optimal |
+
+**Recommended Solution:** Swap-Based Backtracking
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Swap-based:** In-place, no extra used[] array needed
+2. **N! total:** Each of N positions has decreasing choices
+3. **FAANG classic:** Foundation for permutation problems
 
 <br><br>
 

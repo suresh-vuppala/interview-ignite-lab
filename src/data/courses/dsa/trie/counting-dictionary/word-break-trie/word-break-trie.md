@@ -1,38 +1,63 @@
-Word break using trie for dictionary lookup.
+Word break problem using trie for efficient dictionary lookup.
 
 <br>
 
-> **Key insight:** Build trie from dictionary. DP with trie-accelerated prefix matching.
+> Same as word-break in DP section but using trie for O(L) prefix checks
+>
+> **Key insight:** Build trie from dictionary. DP: dp[i] = true if s[0..i-1] can be segmented. At each position, walk trie to find matching prefixes.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: DP with hash set lookup
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N²×L)
 
-> **Key Insight for Improvement:** Trie for O(L) prefix check + DP
+> **Drawback:**
+> Hash set lookup for each substring is O(L) creating + O(1) lookup.
+
+> **Key Insight for Improvement:**
+> Trie: walk from current position following trie. Each isEnd = valid word ending. Combine with DP.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Trie + DP (Optimal)
 
-**Recurrence/Approach:** `Trie for O(L) prefix check + DP`
+**Intuition:** Build trie from dictionary. DP: dp[i] = true if s[0..i-1] can be segmented. At each position, walk trie to find matching prefixes.
+
+**Algorithm:**
+1. Build trie from wordDict
+2. dp[0]=true
+3. For i=0 to N-1: if dp[i]:
+   - Walk trie from position i
+   - For each isEnd reached at position j: dp[j+1]=true
+4. Return dp[N]
 
 ### Time Complexity: O(N×L)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
 
-### Space Complexity: O(N×L)
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+s='leetcode', dict=['leet','code']
+Trie walk from 0: l→e→e→t(end!)→dp[4]=true
+Trie walk from 4: c→o→d→e(end!)→dp[8]=true ✓
+```
+
+### Space Complexity: O(N×L + N)
 
 <br>
 
@@ -40,15 +65,17 @@ Word break using trie for dictionary lookup.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N×L) | O(N×L) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DP with hash set lookup | O(N²×L) | Varies | Baseline |
+| Trie + DP | O(N×L) | O(N×L + N) | Optimal |
+
+**Recommended Solution:** Trie + DP
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Trie walks forward:** No substring creation needed
+2. **Multiple matches per position:** Trie finds all valid prefixes in one walk
+3. **O(N×L) vs O(N²):** Trie walk is bounded by max word length
 
 <br><br>
 

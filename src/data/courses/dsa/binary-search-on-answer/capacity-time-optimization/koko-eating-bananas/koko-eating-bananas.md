@@ -1,36 +1,67 @@
-Minimum eating speed to finish all bananas in H hours.
+Minimum eating speed K to finish all banana piles in H hours.
 
 <br>
 
-> **Key insight:** Binary search on speed. At speed k, time = sum(ceil(pile/k)).
+> piles=[3,6,7,11], H=8 → 4
+>
+> **Key insight:** Binary search on speed. At speed K: hours = sum(ceil(pile/K)). If hours ≤ H → feasible.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** Binary search on speed, sum ceil(pile/k) <= H
+## All Possible Edge Cases
+1. **Empty/single element input**
+2. **Boundary values** (min/max of range)
+3. **All elements same / sorted / reverse sorted**
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 1: Try all speeds 1..max
 
-**Recurrence/Approach:** `Binary search on speed, sum ceil(pile/k) <= H`
+### Time Complexity: O(max × N)
+
+> **Drawback:**
+> Linear search over all speeds.
+
+> **Key Insight for Improvement:**
+> BS on speed: lo=1, hi=max(piles). Time = sum(ceil(pile/K)). If ≤ H → try slower.
+
+<br>
+
+---
+
+## Solution 2: BS on Answer (Optimal)
+
+**Intuition:** Binary search on speed. At speed K: hours = sum(ceil(pile/K)). If hours ≤ H → feasible.
+
+**Algorithm:**
+1. lo=1, hi=max(piles)
+2. hours(K) = sum(ceil(pile/K) for pile in piles)
+3. If hours ≤ H → ans=K, hi=K-1
+4. Else → lo=K+1
 
 ### Time Complexity: O(N log M)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently via the core technique.
+
+**Detailed breakdown:**
+Operations scale with input size as described by the complexity.
+
+**Example walkthrough:**
+```
+piles=[3,6,7,11] H=8 K=4:
+ceil(3/4)+ceil(6/4)+ceil(7/4)+ceil(11/4)=1+2+2+3=8 ≤ 8 → ans=4 ✓
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +71,17 @@ Minimum eating speed to finish all bananas in H hours.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N log M) | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Try all speeds 1..max | O(max × N) | Varies | Baseline |
+| BS on Answer | O(N log M) | O(1) | Optimal approach |
+
+**Recommended Solution:** BS on Answer — O(N log M) time.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Ceiling division:** (pile+K-1)/K or ceil(pile/K)
+2. **lo=1:** Minimum possible speed
+3. **LeetCode 875:** Classic BS-on-answer
 
 <br><br>
 

@@ -2,35 +2,55 @@ Convert between decimal and binary representations.
 
 <br>
 
-> **Key insight:** Decimal→Binary: divide by 2, collect remainders. Binary→Decimal: multiply by powers of 2.
+> 13 → '1101', '1101' → 13
+>
+> **Key insight:** Decimal→Binary: repeatedly divide by 2, collect remainders. Binary→Decimal: positional value sum.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** Repeated division by 2 / positional value sum
-
-<br>
-
----
-
-## Solution 2: Optimal
-
-**Recurrence/Approach:** `Repeated division by 2 / positional value sum`
+## Solution 1: N/A — direct conversion
 
 ### Time Complexity: O(log N)
-**Why?** Each element/state processed efficiently.
+
+> **Drawback:**
+> Already efficient.
+
+> **Key Insight for Improvement:**
+> Standard conversion algorithms.
+
+<br>
+
+---
+
+## Solution 2: Division/Multiplication (Optimal)
+
+**Intuition:** Decimal→Binary: repeatedly divide by 2, collect remainders. Binary→Decimal: positional value sum.
+
+**Algorithm:**
+Dec→Bin: while n>0: bits.append(n%2), n=n//2, reverse
+Bin→Dec: for each bit: result = result*2 + bit
+
+### Time Complexity: O(log N)
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+13: 13%2=1, 6%2=0, 3%2=1, 1%2=1 → reverse: 1101
+1101: 1×8+1×4+0×2+1×1=13
+```
 
 ### Space Complexity: O(log N)
 
@@ -40,15 +60,17 @@ Convert between decimal and binary representations.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(log N) | O(log N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| N/A — direct conversion | O(log N) | Varies | Baseline |
+| Division/Multiplication | O(log N) | O(log N) | Optimal |
+
+**Recommended Solution:** Division/Multiplication
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **%2 gives LSB:** Build binary right-to-left, reverse at end
+2. **×2 + bit:** Horner's method for binary→decimal
+3. **Foundation:** Understanding bit manipulation
 
 <br><br>
 

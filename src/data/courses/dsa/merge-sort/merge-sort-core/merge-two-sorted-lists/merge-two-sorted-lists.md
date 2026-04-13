@@ -9,7 +9,7 @@ Merge two sorted arrays into one.
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
@@ -17,7 +17,7 @@ Merge two sorted arrays into one.
 
 ## Solution 1: Brute Force
 
-> **Drawback:** Suboptimal time complexity.
+> **Drawback:** Baseline approach is less efficient — see optimal solution below.
 
 > **Key Insight for Improvement:** Two-pointer merge
 

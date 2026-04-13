@@ -1,36 +1,54 @@
-Find all dictionary words in grid.
+Find all dictionary words present in grid.
 
 <br>
 
-> **Key insight:** Trie + DFS backtracking.
+> Same as word-search-ii
+>
+> **Key insight:** Same trie + grid DFS approach.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Brute force per word
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(W×M×N×4^L)
 
-> **Key Insight for Improvement:** Trie + grid DFS
+> **Drawback:**
+> Same redundancy.
+
+> **Key Insight for Improvement:**
+> Same trie + DFS.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Trie + Grid DFS (Optimal)
 
-**Recurrence/Approach:** `Trie + grid DFS`
+**Intuition:** Same trie + grid DFS approach.
+
+**Algorithm:**
+Same algorithm
 
 ### Time Complexity: O(M×N×4^L)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+Same approach
+```
 
 ### Space Complexity: O(W×L)
 
@@ -40,15 +58,15 @@ Find all dictionary words in grid.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(M×N×4^L) | O(W×L) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute force per word | O(W×M×N×4^L) | Varies | Baseline |
+| Trie + Grid DFS | O(M×N×4^L) | O(W×L) | Optimal |
+
+**Recommended Solution:** Trie + Grid DFS
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Same family:** word-search-ii = boggle = find-words-grid
 
 <br><br>
 

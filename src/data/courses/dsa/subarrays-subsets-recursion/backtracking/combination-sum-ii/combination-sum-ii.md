@@ -1,36 +1,62 @@
-Find unique combinations summing to target (each number used once).
+Find unique combinations summing to target. Each number used AT MOST ONCE. No duplicate combinations.
 
 <br>
 
-> **Key insight:** Sort + backtracking. Skip duplicates at same level.
+> candidates=[10,1,2,7,6,1,5], target=8 → [[1,1,6],[1,2,5],[1,7],[2,6]]
+>
+> **Key insight:** Sort + backtracking. Skip duplicates at same level. Recurse with i+1 (no reuse).
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Generate all then filter
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(2^N × N)
 
-> **Key Insight for Improvement:** Sort + skip duplicates + backtrack with next index
+> **Drawback:**
+> Generates duplicates then filters.
+
+> **Key Insight for Improvement:**
+> Sort + skip consecutive duplicates at same level + recurse with i+1 (no reuse).
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Sort + Skip + No Reuse (Optimal)
 
-**Recurrence/Approach:** `Sort + skip duplicates + backtrack with next index`
+**Intuition:** Sort + backtracking. Skip duplicates at same level. Recurse with i+1 (no reuse).
+
+**Algorithm:**
+1. Sort candidates
+2. backtrack(start, remaining, current):
+3. If remaining == 0: add current
+4. For i = start to N-1:
+   - If i > start and candidates[i]==candidates[i-1]: continue
+   - If candidates[i] > remaining: break
+   - Add, recurse(i+1, ...), remove
 
 ### Time Complexity: O(2^N)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+[1,1,2,5,6,7,10] target=8:
+pick 1(idx0)→pick 1(idx1)→pick 6→[1,1,6] ✓
+pick 1(idx0)→skip 1(idx1, dup at same level)→pick 2→pick 5→[1,2,5] ✓
+```
 
 ### Space Complexity: O(N)
 
@@ -40,15 +66,17 @@ Find unique combinations summing to target (each number used once).
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(2^N) | O(N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Generate all then filter | O(2^N × N) | Varies | Baseline |
+| Sort + Skip + No Reuse | O(2^N) | O(N) | Optimal |
+
+**Recommended Solution:** Sort + Skip + No Reuse
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **i+1 not i:** No element reuse
+2. **i > start for skip:** Only skip at same recursion level
+3. **Sort + break when too large:** Efficient pruning
 
 <br><br>
 

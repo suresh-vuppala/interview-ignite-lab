@@ -1,36 +1,56 @@
-Find modular multiplicative inverse.
+Find modular multiplicative inverse of a under mod m.
 
 <br>
 
-> **Key insight:** Fermat's little theorem: a^(-1) = a^(m-2) mod m (when m is prime).
+> a⁻¹ mod m: a × a⁻¹ ≡ 1 (mod m)
+>
+> **Key insight:** Fermat's little theorem: if m is prime, a⁻¹ = a^(m-2) mod m. Use fast exponentiation.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Try all values
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(m)
 
-> **Key Insight for Improvement:** a^(m-2) mod m using fast exponentiation
+> **Drawback:**
+> Linear search for inverse.
+
+> **Key Insight for Improvement:**
+> Fermat's: a^(m-2) mod m via binary exponentiation in O(log m).
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Fermat's + Fast Exponentiation (Optimal)
 
-**Recurrence/Approach:** `a^(m-2) mod m using fast exponentiation`
+**Intuition:** Fermat's little theorem: if m is prime, a⁻¹ = a^(m-2) mod m. Use fast exponentiation.
+
+**Algorithm:**
+1. Compute a^(m-2) mod m using binary exponentiation
+2. Binary exp: result=1, while exp>0: if exp&1 → result×=base; base×=base; exp>>=1
+3. All operations mod m
 
 ### Time Complexity: O(log m)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+3⁻¹ mod 7: 3^5 mod 7 = 243 mod 7 = 5. Check: 3×5=15≡1(mod 7) ✓
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +60,17 @@ Find modular multiplicative inverse.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(log m) | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Try all values | O(m) | Varies | Baseline |
+| Fermat's + Fast Exponentiation | O(log m) | O(1) | Optimal |
+
+**Recommended Solution:** Fermat's + Fast Exponentiation
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Only works when m is prime:** Fermat's little theorem requirement
+2. **Extended GCD alternative:** Works for any coprime a,m
+3. **Binary exponentiation:** O(log m) via squaring
 
 <br><br>
 

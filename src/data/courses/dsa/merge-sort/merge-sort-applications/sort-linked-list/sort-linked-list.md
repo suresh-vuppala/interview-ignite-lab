@@ -9,7 +9,7 @@ Sort a linked list in O(N log N).
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
@@ -17,7 +17,7 @@ Sort a linked list in O(N log N).
 
 ## Solution 1: Brute Force
 
-> **Drawback:** Suboptimal time complexity.
+> **Drawback:** Baseline approach is less efficient — see optimal solution below.
 
 > **Key Insight for Improvement:** Merge sort on linked list — split at middle
 

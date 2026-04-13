@@ -1,36 +1,65 @@
-Count the number of 1-bits in an integer.
+Count the number of 1-bits (set bits) in an integer.
 
 <br>
 
-> **Key insight:** Brian Kernighan's: n = n & (n-1) removes lowest set bit. Count iterations.
+> n=11 (1011) → 3
+>
+> **Key insight:** Brian Kernighan's trick: n & (n-1) clears the lowest set bit. Count iterations until n=0.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** n & (n-1) clears lowest set bit each time
+## All Possible Edge Cases
+1. **Empty/single element input**
+2. **Boundary values** (min/max of range)
+3. **All elements same / sorted / reverse sorted**
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 1: Check each of 32 bits
 
-**Recurrence/Approach:** `n & (n-1) clears lowest set bit each time`
+### Time Complexity: O(32)
+
+> **Drawback:**
+> Always checks all 32 bits even if few are set.
+
+> **Key Insight for Improvement:**
+> Brian Kernighan's: n = n & (n-1) removes exactly one set bit per step. Loop count = set bits.
+
+<br>
+
+---
+
+## Solution 2: Brian Kernighan's Algorithm (Optimal)
+
+**Intuition:** Brian Kernighan's trick: n & (n-1) clears the lowest set bit. Count iterations until n=0.
+
+**Algorithm:**
+1. count = 0
+2. While n > 0: n = n & (n-1), count++
+3. Return count
 
 ### Time Complexity: O(set bits)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently via the core technique.
+
+**Detailed breakdown:**
+Operations scale with input size as described by the complexity.
+
+**Example walkthrough:**
+```
+n=11(1011): 1011&1010=1010(count=1), 1010&1001=1000(count=2), 1000&0111=0(count=3)
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +69,17 @@ Count the number of 1-bits in an integer.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(set bits) | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Check each of 32 bits | O(32) | Varies | Baseline |
+| Brian Kernighan's Algorithm | O(set bits) | O(1) | Optimal approach |
+
+**Recommended Solution:** Brian Kernighan's Algorithm — O(set bits) time.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **n & (n-1):** Clears lowest set bit — elegant trick
+2. **O(set bits):** Only loops for actual 1-bits, not all 32
+3. **Also called:** popcount, Hamming weight
 
 <br><br>
 

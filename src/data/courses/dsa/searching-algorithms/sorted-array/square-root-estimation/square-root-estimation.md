@@ -1,36 +1,67 @@
-Find integer square root of N.
+Find the integer square root of N (largest x where x² ≤ N).
 
 <br>
 
-> **Key insight:** Binary search on answer: find largest x where x*x <= N.
+> N=8 → 2 (2²=4≤8, 3²=9>8)
+>
+> **Key insight:** Binary search on answer: find largest x where x*x ≤ N.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** Binary search: if mid*mid <= n, search right
+## All Possible Edge Cases
+1. **Empty/single element input**
+2. **Boundary values** (min/max of range)
+3. **All elements same / sorted / reverse sorted**
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 1: Try all x from 1
 
-**Recurrence/Approach:** `Binary search: if mid*mid <= n, search right`
+### Time Complexity: O(√N)
+
+> **Drawback:**
+> Linear scan up to √N.
+
+> **Key Insight for Improvement:**
+> Binary search: lo=1, hi=N. If mid*mid ≤ N → ans=mid, lo=mid+1. Else hi=mid-1. O(log N).
+
+<br>
+
+---
+
+## Solution 2: Binary Search on Answer (Optimal)
+
+**Intuition:** Binary search on answer: find largest x where x*x ≤ N.
+
+**Algorithm:**
+1. lo=1, hi=N, ans=0
+2. While lo ≤ hi:
+   - mid = lo+(hi-lo)/2
+   - If mid ≤ N/mid: ans=mid, lo=mid+1 (use N/mid to avoid overflow)
+   - Else: hi=mid-1
 
 ### Time Complexity: O(log N)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently via the core technique.
+
+**Detailed breakdown:**
+Operations scale with input size as described by the complexity.
+
+**Example walkthrough:**
+```
+N=8: lo=1,hi=8, mid=4→16>8→hi=3, mid=2→4≤8→ans=2,lo=3, mid=3→9>8→hi=2→done. ans=2 ✓
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +71,17 @@ Find integer square root of N.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(log N) | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Try all x from 1 | O(√N) | Varies | Baseline |
+| Binary Search on Answer | O(log N) | O(1) | Optimal approach |
+
+**Recommended Solution:** Binary Search on Answer — O(log N) time.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **mid ≤ N/mid:** Avoids mid*mid overflow
+2. **Binary search on answer:** Classic template — search in value space
+3. **Foundation for:** All BS-on-answer problems
 
 <br><br>
 

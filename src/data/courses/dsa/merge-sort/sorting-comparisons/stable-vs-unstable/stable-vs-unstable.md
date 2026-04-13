@@ -9,7 +9,7 @@ Understand stable vs unstable sorting.
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
@@ -17,7 +17,7 @@ Understand stable vs unstable sorting.
 
 ## Solution 1: Brute Force
 
-> **Drawback:** Suboptimal time complexity.
+> **Drawback:** Baseline approach is less efficient — see optimal solution below.
 
 > **Key Insight for Improvement:** Stable preserves order of equal elements
 

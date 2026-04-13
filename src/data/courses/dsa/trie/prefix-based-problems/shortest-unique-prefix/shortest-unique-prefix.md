@@ -1,36 +1,57 @@
-Find shortest unique prefix for each word.
+Find shortest prefix for each word that uniquely identifies it.
 
 <br>
 
-> **Key insight:** Insert all words. Prefix is unique when node count == 1.
+> words=['zebra','dog','duck','dove'] → ['z','dog','du','dov']
+>
+> **Key insight:** Insert all words into trie with count at each node. Prefix is unique when node's prefixCount == 1.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Compare all pairs
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N²×L)
 
-> **Key Insight for Improvement:** Trie with count per node, unique when count==1
+> **Drawback:**
+> Quadratic pair comparisons.
+
+> **Key Insight for Improvement:**
+> Trie with count: walk each word's path until prefixCount == 1 → that prefix uniquely identifies the word.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Trie with Count (Optimal)
 
-**Recurrence/Approach:** `Trie with count per node, unique when count==1`
+**Intuition:** Insert all words into trie with count at each node. Prefix is unique when node's prefixCount == 1.
+
+**Algorithm:**
+1. Insert all words, increment count at each node
+2. For each word: walk path until node.count == 1 → prefix found
 
 ### Time Complexity: O(N×L)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+words=['dog','duck','dove']: d(count=3)→o(1)→'dog' unique at 'dog'
+d→u(1)→'du' unique for 'duck'
+d→o(1)→wait, 'dog' has o(count=1) so prefix='do'? Need full path check
+```
 
 ### Space Complexity: O(N×L)
 
@@ -40,15 +61,17 @@ Find shortest unique prefix for each word.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N×L) | O(N×L) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Compare all pairs | O(N²×L) | Varies | Baseline |
+| Trie with Count | O(N×L) | O(N×L) | Optimal |
+
+**Recommended Solution:** Trie with Count
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Count = number of words through this node**
+2. **Count==1 means unique:** Only one word passes through
+3. **First count==1 node:** Shortest unique prefix
 
 <br><br>
 

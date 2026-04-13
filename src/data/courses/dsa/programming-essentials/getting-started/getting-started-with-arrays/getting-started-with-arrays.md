@@ -1,36 +1,59 @@
-Introduction to arrays: creation, access, basic operations.
+Introduction to arrays: creation, access, insertion, deletion, traversal.
 
 <br>
 
-> **Key insight:** Arrays store elements contiguously. O(1) random access, O(N) insert/delete.
+> arr=[1,2,3,4,5], access arr[2]→3, insert at index 2→shift elements
+>
+> **Key insight:** Arrays store elements in contiguous memory. O(1) random access by index. O(N) insert/delete (shifting required).
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: N/A — foundational
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: Varies
 
-> **Key Insight for Improvement:** Contiguous memory, index-based access
+> **Drawback:**
+> Understanding tradeoffs is key.
+
+> **Key Insight for Improvement:**
+> Arrays: fast access O(1), slow insert/delete O(N). Dynamic arrays (vector/ArrayList) handle resizing.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Array Fundamentals (Optimal)
 
-**Recurrence/Approach:** `Contiguous memory, index-based access`
+**Intuition:** Arrays store elements in contiguous memory. O(1) random access by index. O(N) insert/delete (shifting required).
+
+**Algorithm:**
+Access: arr[i] — O(1)
+Insert at i: shift [i..N-1] right — O(N)
+Delete at i: shift [i+1..N-1] left — O(N)
+Append: O(1) amortized (dynamic array)
+Search: O(N) unsorted, O(log N) sorted
 
 ### Time Complexity: O(1) access
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+arr=[1,2,3,4,5]: arr[2]=3 (O(1))
+Insert 99 at index 2: [1,2,99,3,4,5] — shifted 3 elements
+```
 
 ### Space Complexity: O(N)
 
@@ -40,15 +63,17 @@ Introduction to arrays: creation, access, basic operations.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(1) access | O(N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| N/A — foundational | Varies | Varies | Baseline |
+| Array Fundamentals | O(1) access | O(N) | Optimal |
+
+**Recommended Solution:** Array Fundamentals
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Contiguous memory:** Cache-friendly, O(1) index access
+2. **Fixed vs dynamic:** Static arrays vs vector/ArrayList
+3. **Foundation:** Most data structures build on arrays
 
 <br><br>
 

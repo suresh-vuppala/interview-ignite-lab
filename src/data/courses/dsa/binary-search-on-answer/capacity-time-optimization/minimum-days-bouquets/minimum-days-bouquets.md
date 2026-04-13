@@ -2,35 +2,64 @@ Minimum days to make M bouquets of K adjacent flowers.
 
 <br>
 
-> **Key insight:** Binary search on days. Check if enough adjacent bloomed flowers.
+> bloomDay=[1,10,3,10,2], m=3, k=1 → 3
+>
+> **Key insight:** Binary search on days. For each candidate day, count adjacent bloomed flowers greedily.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** Binary search on days, greedy adjacent counting
+## All Possible Edge Cases
+1. **Empty/single element input**
+2. **Boundary values** (min/max of range)
+3. **All elements same / sorted / reverse sorted**
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 1: Try all days
 
-**Recurrence/Approach:** `Binary search on days, greedy adjacent counting`
+### Time Complexity: O(D × N)
+
+> **Drawback:**
+> Linear scan over all possible days.
+
+> **Key Insight for Improvement:**
+> BS on days: lo=min(bloomDay), hi=max(bloomDay). Count bouquets of K adjacent flowers bloomed by day mid.
+
+<br>
+
+---
+
+## Solution 2: BS on Answer + Adjacent Count (Optimal)
+
+**Intuition:** Binary search on days. For each candidate day, count adjacent bloomed flowers greedily.
+
+**Algorithm:**
+1. lo=min(bloom), hi=max(bloom)
+2. For each mid: count adjacent groups of K bloomed flowers
+3. If bouquets ≥ M → ans=mid, hi=mid-1
 
 ### Time Complexity: O(N log D)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently via the core technique.
+
+**Detailed breakdown:**
+Operations scale with input size as described by the complexity.
+
+**Example walkthrough:**
+```
+[1,10,3,10,2] m=3,k=1 day=3: bloomed=[1,_,3,_,2]→positions 0,2,4→3 bouquets ✓
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +69,17 @@ Minimum days to make M bouquets of K adjacent flowers.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N log D) | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Try all days | O(D × N) | Varies | Baseline |
+| BS on Answer + Adjacent Count | O(N log D) | O(1) | Optimal approach |
+
+**Recommended Solution:** BS on Answer + Adjacent Count — O(N log D) time.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Adjacent constraint:** Must be K consecutive bloomed flowers
+2. **Reset count on gap:** Non-bloomed flower resets adjacent count
+3. **Impossible check:** If M*K > N → return -1
 
 <br><br>
 

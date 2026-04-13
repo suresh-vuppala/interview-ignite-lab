@@ -1,36 +1,68 @@
-Every element appears twice except two. Find both.
+Every element appears twice except two. Find both unique numbers.
 
 <br>
 
-> **Key insight:** XOR all → x^y. Find a set bit (differentiator). Split into two groups by that bit. XOR each group.
+> nums=[1,2,1,3,2,5] → [3,5]
+>
+> **Key insight:** XOR all → x^y (both uniques XORed). Find a set bit (differentiator). Split array by that bit. XOR each group → get x and y separately.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** XOR all → x^y. Split by differentiating bit, XOR each group
+## All Possible Edge Cases
+1. **Empty/single element input**
+2. **Boundary values** (min/max of range)
+3. **All elements same / sorted / reverse sorted**
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 1: Hash map counting
 
-**Recurrence/Approach:** `XOR all → x^y. Split by differentiating bit, XOR each group`
+### Time Complexity: O(N) time, O(N) space
+
+> **Drawback:**
+> Extra space.
+
+> **Key Insight for Improvement:**
+> XOR all gives x^y. A set bit in x^y means x and y differ at that position. Split and XOR each group.
+
+<br>
+
+---
+
+## Solution 2: XOR + Bit Split (Optimal)
+
+**Intuition:** XOR all → x^y (both uniques XORed). Find a set bit (differentiator). Split array by that bit. XOR each group → get x and y separately.
+
+**Algorithm:**
+1. XOR all → xorAll = x^y
+2. Find any set bit: diff = xorAll & (-xorAll) (lowest set bit)
+3. Group 1: elements with that bit set → XOR gives x
+4. Group 2: elements without → XOR gives y
 
 ### Time Complexity: O(N)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently via the core technique.
+
+**Detailed breakdown:**
+Operations scale with input size as described by the complexity.
+
+**Example walkthrough:**
+```
+[1,2,1,3,2,5]: xorAll=3^5=6=110
+Lowest set bit: 110&010=010
+Group(bit set): [2,2,3]→XOR=3. Group(not set): [1,1,5]→XOR=5. Result=[3,5] ✓
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +72,17 @@ Every element appears twice except two. Find both.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N) | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Hash map counting | O(N) time, O(N) space | Varies | Baseline |
+| XOR + Bit Split | O(N) | O(1) | Optimal approach |
+
+**Recommended Solution:** XOR + Bit Split — O(N) time.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **XOR all gives x^y:** But can't separate them directly
+2. **Differentiating bit:** x and y differ at this bit position
+3. **Split into groups:** Each group has one unique + pairs that cancel
 
 <br><br>
 

@@ -1,36 +1,55 @@
-Search words matching both prefix and suffix patterns.
+Find words matching both a prefix and suffix pattern.
 
 <br>
 
-> **Key insight:** Use trie with combined key: for each word, insert all (suffix+'#'+word) variants.
+> words=['apple'], prefix='a', suffix='e' → ['apple']
+>
+> **Key insight:** Insert all suffix#word combinations into trie. Query suffix#prefix in trie.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Check each word for both conditions
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N×L)
 
-> **Key Insight for Improvement:** Suffix#Word trick in trie for prefix+suffix search
+> **Drawback:**
+> Linear scan — acceptable but trie enables faster repeated queries.
+
+> **Key Insight for Improvement:**
+> Trick: for each word, insert all suffix#word variants. Query suffix#prefix finds matches.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Suffix#Word Trie (Optimal)
 
-**Recurrence/Approach:** `Suffix#Word trick in trie for prefix+suffix search`
+**Intuition:** Insert all suffix#word combinations into trie. Query suffix#prefix in trie.
 
-### Time Complexity: O(N×L²)
-**Why?** Each element/state processed efficiently.
+**Algorithm:**
+Insert: for word 'apple', insert 'e#apple','le#apple','ple#apple','pple#apple','apple#apple'
+Query: search 'e#a' prefix in trie → finds 'apple'
+
+### Time Complexity: O(N×L²) build, O(L) query
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+word='apple': insert 'e#apple' etc. Query suffix='e',prefix='a' → search 'e#a' in trie → found
+```
 
 ### Space Complexity: O(N×L²)
 
@@ -40,15 +59,17 @@ Search words matching both prefix and suffix patterns.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N×L²) | O(N×L²) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Check each word for both conditions | O(N×L) | Varies | Baseline |
+| Suffix#Word Trie | O(N×L²) build, O(L) query | O(N×L²) | Optimal |
+
+**Recommended Solution:** Suffix#Word Trie
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **suffix#word trick:** Encodes both prefix and suffix into single trie path
+2. **Space tradeoff:** L² insertions per word but O(L) queries
+3. **LeetCode 745:** WordFilter problem
 
 <br><br>
 

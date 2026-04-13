@@ -1,36 +1,66 @@
-Find minimum in unsorted portion, swap with front.
+Find minimum in unsorted portion, swap with front position.
 
 <br>
 
-> **Key insight:** Select minimum from remaining, place at correct position.
+> nums=[5,3,1,4,2] → [1,2,3,4,5]
+>
+> **Key insight:** For each position i, find minimum in [i..N-1] and swap with position i.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** Find min in [i..N], swap with position i
+## All Possible Edge Cases
+1. **Empty/single element input**
+2. **Boundary values** (min/max of range)
+3. **All elements same / sorted / reverse sorted**
 
 <br>
 
 ---
 
-## Solution 2: Optimal
-
-**Recurrence/Approach:** `Find min in [i..N], swap with position i`
+## Solution 1: N/A — this IS selection sort
 
 ### Time Complexity: O(N²)
-**Why?** Each element/state processed efficiently.
+
+> **Drawback:**
+> Always O(N²) regardless of input order. No early termination possible.
+
+> **Key Insight for Improvement:**
+> Already optimal for selection sort. Better: merge sort, quicksort.
+
+<br>
+
+---
+
+## Solution 2: Selection Sort (Optimal)
+
+**Intuition:** For each position i, find minimum in [i..N-1] and swap with position i.
+
+**Algorithm:**
+1. For i = 0 to N-2:
+   - minIdx = i
+   - For j = i+1 to N-1: if arr[j] < arr[minIdx] → minIdx = j
+   - Swap arr[i] and arr[minIdx]
+
+### Time Complexity: O(N²)
+**Why?**
+Each element/state processed efficiently via the core technique.
+
+**Detailed breakdown:**
+Operations scale with input size as described by the complexity.
+
+**Example walkthrough:**
+```
+[5,3,1,4,2]: min in [0..4]=1(idx2)→swap→[1,3,5,4,2], min in [1..4]=2(idx4)→[1,2,5,4,3]...
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +70,17 @@ Find minimum in unsorted portion, swap with front.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N²) | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| N/A — this IS selection sort | O(N²) | Varies | Baseline |
+| Selection Sort | O(N²) | O(1) | Optimal approach |
+
+**Recommended Solution:** Selection Sort — O(N²) time.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Minimum swaps:** Only N-1 swaps total (vs bubble's many swaps)
+2. **Not stable:** Swap may change relative order of equals
+3. **Always O(N²):** No early termination unlike bubble sort
 
 <br><br>
 

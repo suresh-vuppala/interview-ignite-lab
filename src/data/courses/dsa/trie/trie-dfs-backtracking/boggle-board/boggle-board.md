@@ -1,36 +1,54 @@
-Find all valid words in a Boggle board.
+Find all valid dictionary words in a Boggle board.
 
 <br>
 
-> **Key insight:** Same as word-search-ii: Trie + DFS.
+> Same as word-search-ii — trie + grid DFS
+>
+> **Key insight:** Same approach: trie of dictionary + DFS from each cell.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Search each word separately
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(W×M×N×4^L)
 
-> **Key Insight for Improvement:** Trie of dictionary + grid DFS
+> **Drawback:**
+> Redundant traversals.
+
+> **Key Insight for Improvement:**
+> Trie + grid DFS — identical to word-search-ii.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Trie + Grid DFS (Optimal)
 
-**Recurrence/Approach:** `Trie of dictionary + grid DFS`
+**Intuition:** Same approach: trie of dictionary + DFS from each cell.
+
+**Algorithm:**
+Same as word-search-ii
 
 ### Time Complexity: O(M×N×4^L)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+Same as word-search-ii
+```
 
 ### Space Complexity: O(W×L)
 
@@ -40,15 +58,16 @@ Find all valid words in a Boggle board.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(M×N×4^L) | O(W×L) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Search each word separately | O(W×M×N×4^L) | Varies | Baseline |
+| Trie + Grid DFS | O(M×N×4^L) | O(W×L) | Optimal |
+
+**Recommended Solution:** Trie + Grid DFS
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Identical to word-search-ii:** Boggle = word search on grid
+2. **Trie + DFS:** Standard approach for grid word finding
 
 <br><br>
 

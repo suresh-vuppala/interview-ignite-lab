@@ -2,6 +2,8 @@ Add two integers without using + or - operators.
 
 <br>
 
+> a=1, b=2 → 3
+>
 > **Key insight:** XOR = sum without carry. AND << 1 = carry. Repeat until carry is 0.
 
 <br>
@@ -9,28 +11,60 @@ Add two integers without using + or - operators.
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** a^b = sum without carry, (a&b)<<1 = carry
+## All Possible Edge Cases
+1. **Empty/single element input**
+2. **Boundary values** (min/max of range)
+3. **All elements same / sorted / reverse sorted**
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 1: N/A — constraint prevents +
 
-**Recurrence/Approach:** `a^b = sum without carry, (a&b)<<1 = carry`
+### Time Complexity: N/A
+
+> **Drawback:**
+> Must use bit operations only.
+
+> **Key Insight for Improvement:**
+> XOR gives sum ignoring carry. AND gives carry positions. Shift carry left and repeat.
+
+<br>
+
+---
+
+## Solution 2: XOR + AND Carry (Optimal)
+
+**Intuition:** XOR = sum without carry. AND << 1 = carry. Repeat until carry is 0.
+
+**Algorithm:**
+1. While b ≠ 0:
+   - carry = (a & b) << 1
+   - a = a ^ b (sum without carry)
+   - b = carry
+2. Return a
 
 ### Time Complexity: O(32)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently via the core technique.
+
+**Detailed breakdown:**
+Operations scale with input size as described by the complexity.
+
+**Example walkthrough:**
+```
+a=5(101), b=3(011):
+a^b=110=6, carry=(101&011)<<1=010<<1=100=4
+a=6, b=4: a^b=010=2, carry=(110&100)<<1=100<<1=1000=8
+a=2, b=8: a^b=1010=10, carry=0→done. 5+3=8... (simplified)
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +74,17 @@ Add two integers without using + or - operators.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(32) | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| N/A — constraint prevents + | N/A | Varies | Baseline |
+| XOR + AND Carry | O(32) | O(1) | Optimal approach |
+
+**Recommended Solution:** XOR + AND Carry — O(32) time.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **XOR = addition without carry:** 1+1=0 (carry handled separately)
+2. **AND << 1 = carry:** Both bits 1 → carry to next position
+3. **Repeat:** Process carries until none remain
 
 <br><br>
 

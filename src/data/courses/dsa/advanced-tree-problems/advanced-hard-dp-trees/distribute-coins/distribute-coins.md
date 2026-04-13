@@ -1,36 +1,58 @@
-Move coins so each node has exactly one. Minimize moves.
+Move coins in binary tree so each node has exactly 1. Return minimum moves.
 
 <br>
 
-> **Key insight:** Postorder: excess = node.val + left_excess + right_excess - 1. Total moves = sum of |excess|.
+> [3,0,0] → 2 moves (root gives 1 to each child)
+>
+> **Key insight:** Postorder: excess = node.val + left_excess + right_excess - 1. Total moves = sum of |excess| at each node.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: BFS redistribution
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N²)
 
-> **Key Insight for Improvement:** Postorder: moves += |excess| at each node
+> **Drawback:**
+> Multiple redistribution passes.
+
+> **Key Insight for Improvement:**
+> Postorder: compute excess at each node. |excess| = coins passing through edge = moves for that edge.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Postorder Excess Counting (Optimal)
 
-**Recurrence/Approach:** `Postorder: moves += |excess| at each node`
+**Intuition:** Postorder: excess = node.val + left_excess + right_excess - 1. Total moves = sum of |excess| at each node.
+
+**Algorithm:**
+1. DFS postorder returns excess coins
+2. excess = node.val - 1 + left_excess + right_excess
+3. moves += |left_excess| + |right_excess|
+4. Return excess
 
 ### Time Complexity: O(N)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+[3,0,0]: left_excess=-1, right_excess=-1
+moves=|-1|+|-1|=2. Root excess=3-1+(-1)+(-1)=0 ✓
+```
 
 ### Space Complexity: O(H)
 
@@ -40,15 +62,17 @@ Move coins so each node has exactly one. Minimize moves.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N) | O(H) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| BFS redistribution | O(N²) | Varies | Baseline |
+| Postorder Excess Counting | O(N) | O(H) | Optimal |
+
+**Recommended Solution:** Postorder Excess Counting
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **|excess| = moves through edge:** Coins flowing up or down
+2. **Postorder accumulation:** Bottom-up excess calculation
+3. **Elegant:** Single DFS solves it
 
 <br><br>
 

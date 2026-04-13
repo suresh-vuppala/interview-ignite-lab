@@ -1,36 +1,54 @@
-Dictionary supporting wildcard search.
+Dictionary supporting wildcard '.' search.
 
 <br>
 
-> **Key insight:** Same as search-wildcard: trie + DFS on '.'.
+> Same as search-wildcard — AddWord/SearchWord design
+>
+> **Key insight:** Same DFS branching on '.' in trie.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Linear scan all words
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N×L)
 
-> **Key Insight for Improvement:** Trie + DFS branching on wildcards
+> **Drawback:**
+> Slow for repeated queries.
+
+> **Key Insight for Improvement:**
+> Trie + DFS branching on '.'
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: DFS Trie (Optimal)
 
-**Recurrence/Approach:** `Trie + DFS branching on wildcards`
+**Intuition:** Same DFS branching on '.' in trie.
+
+**Algorithm:**
+Same as search-wildcard
 
 ### Time Complexity: O(26^dots × L)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+Same as search-wildcard
+```
 
 ### Space Complexity: O(N×L)
 
@@ -40,15 +58,15 @@ Dictionary supporting wildcard search.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(26^dots × L) | O(N×L) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Linear scan all words | O(N×L) | Varies | Baseline |
+| DFS Trie | O(26^dots × L) | O(N×L) | Optimal |
+
+**Recommended Solution:** DFS Trie
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Same as search-wildcard / LeetCode 211**
 
 <br><br>
 

@@ -2,35 +2,55 @@ Modular arithmetic: addition, subtraction, multiplication.
 
 <br>
 
-> **Key insight:** (a+b)%m = (a%m + b%m)%m. Same for multiplication. Subtraction: add m before mod.
+> (a+b)%m, (a-b+m)%m, (a*b)%m
+>
+> **Key insight:** Distribute mod over +, -, ×. Subtraction: add m before mod to handle negatives.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Direct computation
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: Overflow risk
 
-> **Key Insight for Improvement:** Distribute mod over +, -, ×
+> **Drawback:**
+> Large numbers can overflow before taking mod.
+
+> **Key Insight for Improvement:**
+> Apply mod at each step to prevent overflow.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Modular Properties (Optimal)
 
-**Recurrence/Approach:** `Distribute mod over +, -, ×`
+**Intuition:** Distribute mod over +, -, ×. Subtraction: add m before mod to handle negatives.
 
-### Time Complexity: O(1) per op
-**Why?** Each element/state processed efficiently.
+**Algorithm:**
+(a+b)%m = ((a%m)+(b%m))%m
+(a-b)%m = ((a%m)-(b%m)+m)%m
+(a*b)%m = ((a%m)*(b%m))%m
+
+### Time Complexity: O(1)
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+(7+5)%3 = ((7%3)+(5%3))%3 = (1+2)%3 = 0 ✓
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +60,17 @@ Modular arithmetic: addition, subtraction, multiplication.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(1) per op | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Direct computation | Overflow risk | Varies | Baseline |
+| Modular Properties | O(1) | O(1) | Optimal |
+
+**Recommended Solution:** Modular Properties
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Distribute mod:** Apply to each operand first
+2. **Add m for subtraction:** Prevents negative results
+3. **Overflow prevention:** Mod after each multiplication
 
 <br><br>
 

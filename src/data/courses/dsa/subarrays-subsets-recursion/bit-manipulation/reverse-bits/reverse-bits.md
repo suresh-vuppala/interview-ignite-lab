@@ -2,35 +2,69 @@ Reverse all 32 bits of an unsigned integer.
 
 <br>
 
-> **Key insight:** Extract rightmost bit, shift result left, OR with extracted bit. Repeat 32 times.
+> n=43261596 → 964176192
+>
+> **Key insight:** Extract LSB, build result from MSB. Shift result left, OR with extracted bit. Repeat 32 times.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** Extract LSB, build result from MSB
+## All Possible Edge Cases
+1. **Empty/single element input**
+2. **Boundary values** (min/max of range)
+3. **All elements same / sorted / reverse sorted**
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 1: Convert to string, reverse
 
-**Recurrence/Approach:** `Extract LSB, build result from MSB`
+### Time Complexity: O(32)
 
-### Time Complexity: O(32)=O(1)
-**Why?** Each element/state processed efficiently.
+> **Drawback:**
+> String conversion overhead.
+
+> **Key Insight for Improvement:**
+> Bit-by-bit: extract rightmost bit of n, shift result left and OR. Shift n right.
+
+<br>
+
+---
+
+## Solution 2: Bit-by-Bit Reversal (Optimal)
+
+**Intuition:** Extract LSB, build result from MSB. Shift result left, OR with extracted bit. Repeat 32 times.
+
+**Algorithm:**
+1. result = 0
+2. For 32 iterations:
+   - result = (result << 1) | (n & 1)
+   - n >>= 1
+3. Return result
+
+### Time Complexity: O(32) = O(1)
+**Why?**
+Each element/state processed efficiently via the core technique.
+
+**Detailed breakdown:**
+Operations scale with input size as described by the complexity.
+
+**Example walkthrough:**
+```
+n=1011: iter1: result=1, n=101
+iter2: result=11, n=10
+iter3: result=110, n=1
+iter4: result=1101 → reversed!
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +74,17 @@ Reverse all 32 bits of an unsigned integer.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(32)=O(1) | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Convert to string, reverse | O(32) | Varies | Baseline |
+| Bit-by-Bit Reversal | O(32) = O(1) | O(1) | Optimal approach |
+
+**Recommended Solution:** Bit-by-Bit Reversal — O(32) = O(1) time.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Extract LSB:** n & 1 gets rightmost bit
+2. **Build from left:** result << 1 shifts, OR appends new bit
+3. **32 iterations:** Fixed — always process all bits
 
 <br><br>
 

@@ -1,38 +1,61 @@
-Move N disks from source to destination using auxiliary peg.
+Move N disks from source to destination using auxiliary peg. Only smaller disk can go on larger.
 
 <br>
 
-> **Key insight:** Move N-1 disks to aux, move Nth to dest, move N-1 from aux to dest.
+> N=3 → 7 moves
+>
+> **Key insight:** Recursive: move N-1 disks to aux, move Nth disk to dest, move N-1 from aux to dest. T(N) = 2T(N-1)+1 = 2^N-1 moves.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** Recursive: move N-1, move largest, move N-1
-
-<br>
-
----
-
-## Solution 2: Optimal
-
-**Recurrence/Approach:** `Recursive: move N-1, move largest, move N-1`
+## Solution 1: N/A — recursive is optimal
 
 ### Time Complexity: O(2^N)
-**Why?** Each element/state processed efficiently.
 
-### Space Complexity: O(N)
+> **Drawback:**
+> Cannot do better — 2^N-1 moves is proven minimum.
+
+> **Key Insight for Improvement:**
+> Recursive solution IS optimal. Classic divide-and-conquer.
+
+<br>
+
+---
+
+## Solution 2: Recursive (Optimal)
+
+**Intuition:** Recursive: move N-1 disks to aux, move Nth disk to dest, move N-1 from aux to dest. T(N) = 2T(N-1)+1 = 2^N-1 moves.
+
+**Algorithm:**
+1. hanoi(N, source, dest, aux):
+2. If N==1: move disk from source to dest
+3. hanoi(N-1, source, aux, dest) — move N-1 to aux
+4. Move disk N from source to dest
+5. hanoi(N-1, aux, dest, source) — move N-1 to dest
+
+### Time Complexity: O(2^N)
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+N=3: move 2 disks A→B, move disk3 A→C, move 2 disks B→C
+= 3+1+3 = 7 moves
+```
+
+### Space Complexity: O(N) stack
 
 <br>
 
@@ -40,15 +63,17 @@ Move N disks from source to destination using auxiliary peg.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(2^N) | O(N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| N/A — recursive is optimal | O(2^N) | Varies | Baseline |
+| Recursive | O(2^N) | O(N) stack | Optimal |
+
+**Recommended Solution:** Recursive
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **2^N-1 moves:** Proven optimal — can't do fewer
+2. **Divide and conquer:** Break into moving N-1 disks
+3. **Classic recursion:** First problem in many CS courses
 
 <br><br>
 

@@ -1,36 +1,59 @@
-Find all words from dictionary in a grid.
+Find all words from a dictionary that exist in a grid by traversing adjacent cells.
 
 <br>
 
-> **Key insight:** Build trie from words. DFS from each cell, follow trie.
+> board=[['o','a','a','n'],['e','t','a','e']], words=['oath','pea','eat','rain'] → ['oath','eat']
+>
+> **Key insight:** Build trie from words. DFS from each cell following trie paths. Prune dead branches.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: DFS per word separately
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(W × M×N × 4^L)
 
-> **Key Insight for Improvement:** Trie + grid DFS, prune branches with no children
+> **Drawback:**
+> Searching each word independently is slow — redundant grid traversal.
+
+> **Key Insight for Improvement:**
+> Single trie of all words + single grid DFS. Trie guides the search — only explore paths that match prefixes in the trie.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Trie + Grid DFS (Optimal)
 
-**Recurrence/Approach:** `Trie + grid DFS, prune branches with no children`
+**Intuition:** Build trie from words. DFS from each cell following trie paths. Prune dead branches.
 
-### Time Complexity: O(M×N×4^L)
-**Why?** Each element/state processed efficiently.
+**Algorithm:**
+1. Build trie from all words
+2. For each cell (i,j): DFS with trie node
+3. At each cell: if char matches trie child → continue DFS to neighbors
+4. If isEnd → found word, add to result
+5. Prune: remove trie branches with no remaining words
+
+### Time Complexity: O(M×N × 4^L)
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+Start at 'o'→trie has 'oath'→DFS: o→a(right)→t(down)→h... found 'oath'
+Start at 'e'→trie has 'eat'→e→a(up)→t(left)→found 'eat'
+```
 
 ### Space Complexity: O(W×L)
 
@@ -40,15 +63,17 @@ Find all words from dictionary in a grid.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(M×N×4^L) | O(W×L) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| DFS per word separately | O(W × M×N × 4^L) | Varies | Baseline |
+| Trie + Grid DFS | O(M×N × 4^L) | O(W×L) | Optimal |
+
+**Recommended Solution:** Trie + Grid DFS
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Trie guides DFS:** Only explore paths matching dictionary prefixes
+2. **Pruning:** Remove found words from trie to avoid duplicates and dead branches
+3. **FAANG hard:** Combines trie + grid DFS + backtracking
 
 <br><br>
 

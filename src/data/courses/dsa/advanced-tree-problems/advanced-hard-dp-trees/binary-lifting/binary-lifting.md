@@ -1,36 +1,58 @@
-Precompute 2^k-th ancestors for O(log N) ancestor queries.
+Precompute 2^k-th ancestors for O(log N) ancestor/LCA queries.
 
 <br>
 
-> **Key insight:** up[node][k] = up[up[node][k-1]][k-1]. Precompute in O(N log N).
+> Tree with N nodes → answer ancestor queries in O(log N)
+>
+> **Key insight:** up[v][k] = 2^k-th ancestor of v. up[v][k] = up[up[v][k-1]][k-1]. Precompute in O(N log N).
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Walk up one ancestor at a time
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N) per query
 
-> **Key Insight for Improvement:** up[v][k] = up[up[v][k-1]][k-1], query by decomposing k into powers of 2
+> **Drawback:**
+> Linear walk is slow for deep trees with many queries.
+
+> **Key Insight for Improvement:**
+> Binary lifting: precompute 2^k ancestors. For query, decompose distance into powers of 2 and jump.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Binary Lifting Table (Optimal)
 
-**Recurrence/Approach:** `up[v][k] = up[up[v][k-1]][k-1], query by decomposing k into powers of 2`
+**Intuition:** up[v][k] = 2^k-th ancestor of v. up[v][k] = up[up[v][k-1]][k-1]. Precompute in O(N log N).
+
+**Algorithm:**
+1. up[v][0] = parent[v]
+2. up[v][k] = up[up[v][k-1]][k-1] for k=1..LOG
+3. Query kth ancestor: decompose k in binary, jump for each set bit
+4. LCA: lift both to same depth, then lift together until meeting
 
 ### Time Complexity: O(N log N) prep, O(log N) query
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+up[v][0]=parent, up[v][1]=grandparent, up[v][2]=4th ancestor
+Query 5th ancestor: 5=101₂ → jump 2⁰=1 then 2²=4
+```
 
 ### Space Complexity: O(N log N)
 
@@ -40,15 +62,17 @@ Precompute 2^k-th ancestors for O(log N) ancestor queries.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N log N) prep, O(log N) query | O(N log N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Walk up one ancestor at a time | O(N) per query | Varies | Baseline |
+| Binary Lifting Table | O(N log N) prep, O(log N) query | O(N log N) | Optimal |
+
+**Recommended Solution:** Binary Lifting Table
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **2^k jumps:** Decompose any distance into O(log N) jumps
+2. **LCA:** Equalize depths, then binary search for meeting point
+3. **Foundation:** Heavy-light decomposition, Euler tour queries
 
 <br><br>
 

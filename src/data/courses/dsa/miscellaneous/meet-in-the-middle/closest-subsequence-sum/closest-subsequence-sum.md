@@ -2,35 +2,53 @@ Find subsequence sum closest to a goal.
 
 <br>
 
-> **Key insight:** Meet in the middle: generate all sums for each half, sort, two-pointer.
+> nums, goal → closest achievable sum
+>
+> **Key insight:** Meet in the middle: generate all sums for each half, sort one, binary search for closest to (goal - other_sum).
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Try all subsequences
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(2^N)
 
-> **Key Insight for Improvement:** Meet in middle + sort + two-pointer for closest
+> **Drawback:**
+> Exponential.
+
+> **Key Insight for Improvement:**
+> Same MITM as subset-sum but find closest instead of exact match. Binary search finds nearest value.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Meet in the Middle + Closest (Optimal)
 
-**Recurrence/Approach:** `Meet in middle + sort + two-pointer for closest`
+**Intuition:** Meet in the middle: generate all sums for each half, sort one, binary search for closest to (goal - other_sum).
 
-### Time Complexity: O(2^(N/2) log)
-**Why?** Each element/state processed efficiently.
+**Algorithm:**
+Same as subset-sum-mitm but binary search for closest value to (goal - left_sum) in sorted right sums
+
+### Time Complexity: O(2^(N/2) × N)
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+For each left_sum: find right_sum closest to (goal - left_sum). Track global minimum difference.
+```
 
 ### Space Complexity: O(2^(N/2))
 
@@ -40,15 +58,17 @@ Find subsequence sum closest to a goal.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(2^(N/2) log) | O(2^(N/2)) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Try all subsequences | O(2^N) | Varies | Baseline |
+| Meet in the Middle + Closest | O(2^(N/2) × N) | O(2^(N/2)) | Optimal |
+
+**Recommended Solution:** Meet in the Middle + Closest
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Closest variant:** Binary search returns nearest, not exact
+2. **Two candidates:** Check both lower_bound and predecessor
+3. **LeetCode 1755:** Hard — MITM is the key technique
 
 <br><br>
 

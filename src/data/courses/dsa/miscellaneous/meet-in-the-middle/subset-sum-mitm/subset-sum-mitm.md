@@ -1,36 +1,58 @@
-Subset sum using Meet in the Middle for large N.
+Subset sum for large N using Meet in the Middle.
 
 <br>
 
-> **Key insight:** Split array in half. Generate all subset sums for each half. Two-pointer or binary search to find target.
+> Large N (up to 40) where 2^N is too slow
+>
+> **Key insight:** Split array in half. Generate all subset sums for each half (2^(N/2) each). Sort one half, binary search for complement.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Standard DP/recursion
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(2^N)
 
-> **Key Insight for Improvement:** Split, enumerate both halves, two-pointer match
+> **Drawback:**
+> 2^40 is too large.
+
+> **Key Insight for Improvement:**
+> Split in half → 2 × 2^20 ≈ 2M operations. Sort one half, binary search for (target - sum) from other half.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Meet in the Middle (Optimal)
 
-**Recurrence/Approach:** `Split, enumerate both halves, two-pointer match`
+**Intuition:** Split array in half. Generate all subset sums for each half (2^(N/2) each). Sort one half, binary search for complement.
 
-### Time Complexity: O(2^(N/2))
-**Why?** Each element/state processed efficiently.
+**Algorithm:**
+1. Split array into left half and right half
+2. Generate all subset sums for left: O(2^(N/2))
+3. Generate all subset sums for right: O(2^(N/2))
+4. Sort right sums
+5. For each left sum: binary search for (target - left_sum) in right
+
+### Time Complexity: O(2^(N/2) × N)
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+N=40: 2^20 ≈ 1M per half. Total ≈ 2M operations vs 2^40 ≈ 1T
+```
 
 ### Space Complexity: O(2^(N/2))
 
@@ -40,15 +62,17 @@ Subset sum using Meet in the Middle for large N.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(2^(N/2)) | O(2^(N/2)) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Standard DP/recursion | O(2^N) | Varies | Baseline |
+| Meet in the Middle | O(2^(N/2) × N) | O(2^(N/2)) | Optimal |
+
+**Recommended Solution:** Meet in the Middle
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Square root trick:** 2^(N/2) instead of 2^N
+2. **Binary search for complement:** Efficient matching
+3. **N up to 40:** Standard DP can't handle, MITM can
 
 <br><br>
 

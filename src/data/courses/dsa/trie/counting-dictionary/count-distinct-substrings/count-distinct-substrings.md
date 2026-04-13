@@ -1,36 +1,59 @@
-Count distinct substrings of a string.
+Count the number of distinct substrings of a given string.
 
 <br>
 
-> **Key insight:** Insert all suffixes into trie. Each trie node = distinct prefix = distinct substring.
+> s='abab' → 7 distinct substrings: a,b,ab,ba,aba,bab,abab (plus empty)
+>
+> **Key insight:** Insert ALL suffixes into a trie. Each node in the trie represents a unique prefix of some suffix = a unique substring. Count = number of nodes.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Generate all substrings + hash set
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N²) time, O(N²) space
 
-> **Key Insight for Improvement:** Trie of all suffixes, count nodes
+> **Drawback:**
+> Hash set approach works but has high constant factor and collision risk.
+
+> **Key Insight for Improvement:**
+> Suffix trie: insert s[0..], s[1..], ..., s[N-1..]. Each trie node = distinct substring. Count nodes = count distinct substrings.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Suffix Trie — Count Nodes (Optimal)
 
-**Recurrence/Approach:** `Trie of all suffixes, count nodes`
+**Intuition:** Insert ALL suffixes into a trie. Each node in the trie represents a unique prefix of some suffix = a unique substring. Count = number of nodes.
+
+**Algorithm:**
+1. For i = 0 to N-1: insert suffix s[i..N-1] into trie
+2. Count total nodes in trie (excluding root)
+3. Each node = one distinct substring
+4. Add 1 for empty string if needed
 
 ### Time Complexity: O(N²)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+s='aba': suffixes = 'aba', 'ba', 'a'
+Trie: root→a(→b→a), root→b(→a)
+Nodes: a, ab, aba, b, ba = 5 distinct substrings + empty = 6
+```
 
 ### Space Complexity: O(N²)
 
@@ -40,15 +63,17 @@ Count distinct substrings of a string.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N²) | O(N²) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Generate all substrings + hash set | O(N²) time, O(N²) space | Varies | Baseline |
+| Suffix Trie — Count Nodes | O(N²) | O(N²) | Optimal |
+
+**Recommended Solution:** Suffix Trie — Count Nodes
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Each trie node = unique substring:** Fundamental trie property
+2. **N suffixes × avg L/2 length:** O(N²) nodes worst case
+3. **Suffix array alternative:** O(N log N) with LCP array for counting
 
 <br><br>
 

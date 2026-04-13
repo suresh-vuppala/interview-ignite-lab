@@ -1,36 +1,57 @@
-Design autocomplete: given prefix, return top-3 hot sentences.
+Design autocomplete: given prefix, return top-3 hot sentences by frequency.
 
 <br>
 
-> **Key insight:** Trie + frequency tracking. DFS from prefix node to find all completions.
+> Input: sentences with frequencies. Type prefix → return top 3 matches
+>
+> **Key insight:** Trie storing full sentences. Each node tracks frequency. DFS from prefix node collects all completions, sort by frequency.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Scan all sentences each query
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N×L) per query
 
-> **Key Insight for Improvement:** Trie + DFS from prefix node, sort by frequency
+> **Drawback:**
+> Scanning all sentences for every keystroke is too slow.
+
+> **Key Insight for Improvement:**
+> Trie + DFS from prefix endpoint. Collect all completions with frequencies, return top 3.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Trie + DFS Collection (Optimal)
 
-**Recurrence/Approach:** `Trie + DFS from prefix node, sort by frequency`
+**Intuition:** Trie storing full sentences. Each node tracks frequency. DFS from prefix node collects all completions, sort by frequency.
 
-### Time Complexity: O(P + N log N)
-**Why?** Each element/state processed efficiently.
+**Algorithm:**
+1. Build trie from sentences with frequency
+2. On input prefix: traverse to prefix end node
+3. DFS from that node → collect all (sentence, frequency) pairs
+4. Sort by frequency desc, return top 3
+
+### Time Complexity: O(P + N log N) per query
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+Type 'i': navigate to 'i' node → DFS finds all sentences starting with 'i' → sort by freq → top 3
+```
 
 ### Space Complexity: O(N×L)
 
@@ -40,15 +61,17 @@ Design autocomplete: given prefix, return top-3 hot sentences.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(P + N log N) | O(N×L) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Scan all sentences each query | O(N×L) per query | Varies | Baseline |
+| Trie + DFS Collection | O(P + N log N) per query | O(N×L) | Optimal |
+
+**Recommended Solution:** Trie + DFS Collection
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **DFS from prefix node:** Finds all completions
+2. **Frequency tracking:** Enables ranking by popularity
+3. **Optimization:** Store pre-computed top-3 at each node for O(P) query
 
 <br><br>
 

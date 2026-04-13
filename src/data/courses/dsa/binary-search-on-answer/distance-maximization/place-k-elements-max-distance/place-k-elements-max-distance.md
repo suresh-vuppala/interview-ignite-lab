@@ -1,36 +1,63 @@
-Place K elements maximizing minimum distance.
+Place K elements maximizing minimum distance. Generic version of aggressive cows.
 
 <br>
 
-> **Key insight:** Binary search on minimum distance. Greedy check feasibility.
+> Positions array, K elements → maximize minimum gap
+>
+> **Key insight:** Same BS-on-answer + greedy placement pattern.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** Binary search + greedy placement
+## All Possible Edge Cases
+1. **Empty/single element input**
+2. **Boundary values** (min/max of range)
+3. **All elements same / sorted / reverse sorted**
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 1: Brute force all placements
 
-**Recurrence/Approach:** `Binary search + greedy placement`
+### Time Complexity: O(C(N,K))
+
+> **Drawback:**
+> Combinatorial.
+
+> **Key Insight for Improvement:**
+> BS on min distance + greedy sequential placement.
+
+<br>
+
+---
+
+## Solution 2: BS on Answer (Optimal)
+
+**Intuition:** Same BS-on-answer + greedy placement pattern.
+
+**Algorithm:**
+Same as aggressive cows / magnetic force
 
 ### Time Complexity: O(N log D)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently via the core technique.
+
+**Detailed breakdown:**
+Operations scale with input size as described by the complexity.
+
+**Example walkthrough:**
+```
+Same pattern as aggressive cows
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +67,16 @@ Place K elements maximizing minimum distance.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N log D) | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute force all placements | O(C(N,K)) | Varies | Baseline |
+| BS on Answer | O(N log D) | O(1) | Optimal approach |
+
+**Recommended Solution:** BS on Answer — O(N log D) time.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Family of problems:** Aggressive cows = magnetic force = place K elements
+2. **All use:** Sort + BS on min distance + greedy placement check
 
 <br><br>
 

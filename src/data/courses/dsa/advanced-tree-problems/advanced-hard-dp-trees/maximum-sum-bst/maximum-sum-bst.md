@@ -1,36 +1,54 @@
-Find maximum sum of any BST subtree.
+Find the maximum sum of any BST subtree in a binary tree.
 
 <br>
 
-> **Key insight:** Same as largest BST but track sum instead of size.
+> Track sum instead of size in postorder validation
+>
+> **Key insight:** Same postorder approach as largest-bst but track sum instead of size.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Check every subtree
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N²)
 
-> **Key Insight for Improvement:** Postorder: track sum + BST validity
+> **Drawback:**
+> Same redundancy.
+
+> **Key Insight for Improvement:**
+> Same postorder, track sum instead of size.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Postorder + Sum (Optimal)
 
-**Recurrence/Approach:** `Postorder: track sum + BST validity`
+**Intuition:** Same postorder approach as largest-bst but track sum instead of size.
+
+**Algorithm:**
+Same as largest-bst but return sum instead of size
 
 ### Time Complexity: O(N)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+Same bottom-up approach
+```
 
 ### Space Complexity: O(H)
 
@@ -40,15 +58,16 @@ Find maximum sum of any BST subtree.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N) | O(H) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Check every subtree | O(N²) | Varies | Baseline |
+| Postorder + Sum | O(N) | O(H) | Optimal |
+
+**Recommended Solution:** Postorder + Sum
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Same algorithm, different metric:** Sum vs size
+2. **Handle negative values:** BST with negative sum shouldn't override positive non-BST
 
 <br><br>
 

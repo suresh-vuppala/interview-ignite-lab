@@ -1,36 +1,58 @@
-Search target in row-sorted, column-sorted matrix.
+Search for target in a matrix where each row is sorted and first element of each row > last of previous.
 
 <br>
 
-> **Key insight:** Start from top-right. If target < current → go left. If target > current → go down.
+> matrix=[[1,3,5,7],[10,11,16,20],[23,30,34,60]], target=3 → true
+>
+> **Key insight:** Treat as 1D sorted array. Binary search with index mapping: row=mid/cols, col=mid%cols.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Scan entire matrix
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(M×N)
 
-> **Key Insight for Improvement:** Staircase search from top-right corner
+> **Drawback:**
+> Linear scan ignores sorted structure.
+
+> **Key Insight for Improvement:**
+> Single binary search: treat M×N matrix as sorted 1D array. Map index: row=mid/N, col=mid%N.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Flattened Binary Search (Optimal)
 
-**Recurrence/Approach:** `Staircase search from top-right corner`
+**Intuition:** Treat as 1D sorted array. Binary search with index mapping: row=mid/cols, col=mid%cols.
 
-### Time Complexity: O(M+N)
-**Why?** Each element/state processed efficiently.
+**Algorithm:**
+1. lo=0, hi=M×N-1
+2. While lo ≤ hi:
+   - mid = lo+(hi-lo)/2
+   - val = matrix[mid/N][mid%N]
+   - Compare with target → narrow search
+
+### Time Complexity: O(log(M×N))
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+3×4 matrix, target=11: lo=0,hi=11, mid=5→matrix[1][1]=11 ✓
+```
 
 ### Space Complexity: O(1)
 
@@ -40,15 +62,17 @@ Search target in row-sorted, column-sorted matrix.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(M+N) | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Scan entire matrix | O(M×N) | Varies | Baseline |
+| Flattened Binary Search | O(log(M×N)) | O(1) | Optimal |
+
+**Recommended Solution:** Flattened Binary Search
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **row=mid/cols, col=mid%cols:** Index mapping for flattened view
+2. **O(log(MN)):** Single binary search over all elements
+3. **Alternative:** Binary search row, then binary search column
 
 <br><br>
 

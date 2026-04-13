@@ -1,36 +1,54 @@
-Design structure supporting prefix and suffix queries.
+Design structure for queries matching prefix AND suffix.
 
 <br>
 
-> **Key insight:** Trie of all suffix#word combinations.
+> Same as search-prefix-suffix — WordFilter design
+>
+> **Key insight:** Same suffix#word trie approach.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Scan all words per query
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N×L) per query
 
-> **Key Insight for Improvement:** Insert suffix#word for all suffixes
+> **Drawback:**
+> Slow for repeated queries.
+
+> **Key Insight for Improvement:**
+> Precompute suffix#word trie for O(L) queries.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Suffix#Word Trie (Optimal)
 
-**Recurrence/Approach:** `Insert suffix#word for all suffixes`
+**Intuition:** Same suffix#word trie approach.
 
-### Time Complexity: O(N×L²)
-**Why?** Each element/state processed efficiently.
+**Algorithm:**
+Same as search-prefix-suffix
+
+### Time Complexity: O(N×L²) build, O(L) query
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+Same approach
+```
 
 ### Space Complexity: O(N×L²)
 
@@ -40,15 +58,15 @@ Design structure supporting prefix and suffix queries.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N×L²) | O(N×L²) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Scan all words per query | O(N×L) per query | Varies | Baseline |
+| Suffix#Word Trie | O(N×L²) build, O(L) query | O(N×L²) | Optimal |
+
+**Recommended Solution:** Suffix#Word Trie
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Same as search-prefix-suffix:** LeetCode 745 design problem
 
 <br><br>
 

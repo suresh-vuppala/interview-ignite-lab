@@ -1,36 +1,58 @@
-Find tree diameter using DP on the tree.
+Find tree diameter (longest path between any two nodes) using DP.
 
 <br>
 
-> **Key insight:** For each node: diameter through it = two longest paths to leaves. Track global max.
+> Tree with edges → diameter = longest path
+>
+> **Key insight:** For each node: diameter through it = two longest paths down to leaves. Track global max.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: BFS from every node
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N²)
 
-> **Key Insight for Improvement:** dp[v] = 1 + max child depth, diameter = max(d1+d2) across all nodes
+> **Drawback:**
+> N BFS runs.
+
+> **Key Insight for Improvement:**
+> Single DFS: at each node, track two longest child depths. Diameter candidate = depth1 + depth2. Global max = answer.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: DFS Max Two Depths (Optimal)
 
-**Recurrence/Approach:** `dp[v] = 1 + max child depth, diameter = max(d1+d2) across all nodes`
+**Intuition:** For each node: diameter through it = two longest paths down to leaves. Track global max.
+
+**Algorithm:**
+1. DFS returns max depth from node to leaf
+2. At each node: collect child depths, take top 2
+3. Candidate diameter = depth1 + depth2
+4. Return max(depth1, depth2) + 1 to parent
 
 ### Time Complexity: O(N)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+Node with children depths 3 and 2: diameter through this node = 3+2=5
+Return max(3,2)+1=4 to parent
+```
 
 ### Space Complexity: O(N)
 
@@ -40,15 +62,17 @@ Find tree diameter using DP on the tree.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N) | O(N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| BFS from every node | O(N²) | Varies | Baseline |
+| DFS Max Two Depths | O(N) | O(N) | Optimal |
+
+**Recommended Solution:** DFS Max Two Depths
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Two longest child paths:** Their sum = diameter through this node
+2. **Return only max:** Parent only needs the longest path downward
+3. **Alternative:** Two BFS: first from any node, then from farthest found
 
 <br><br>
 

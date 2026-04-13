@@ -1,38 +1,58 @@
-Compute combinations and permutations.
+Compute combinations nCr and permutations nPr.
 
 <br>
 
-> **Key insight:** nCr = n! / (r! × (n-r)!). Use Pascal's triangle or multiplicative formula.
+> C(5,2)=10, P(5,2)=20
+>
+> **Key insight:** nCr = n!/(r!×(n-r)!). Pascal's triangle: C(n,r)=C(n-1,r-1)+C(n-1,r). nPr = n!/(n-r)!.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
+## Solution 1: Direct factorial
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N) but overflow risk
 
-> **Key Insight for Improvement:** Pascal's triangle or multiplicative with modular inverse
+> **Drawback:**
+> Factorials grow fast — overflow even for moderate N.
+
+> **Key Insight for Improvement:**
+> Multiplicative formula with modular inverse, or Pascal's triangle for exact values.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Pascal's Triangle / Multiplicative (Optimal)
 
-**Recurrence/Approach:** `Pascal's triangle or multiplicative with modular inverse`
+**Intuition:** nCr = n!/(r!×(n-r)!). Pascal's triangle: C(n,r)=C(n-1,r-1)+C(n-1,r). nPr = n!/(n-r)!.
 
-### Time Complexity: O(N) or O(R)
-**Why?** Each element/state processed efficiently.
+**Algorithm:**
+C(n,r) = (n × (n-1) × ... × (n-r+1)) / (r × (r-1) × ... × 1)
+With mod: multiply then apply modular inverse for division
 
-### Space Complexity: O(1) or O(N)
+### Time Complexity: O(R) or O(N²) for Pascal's
+**Why?**
+Each element/state processed efficiently.
+
+**Detailed breakdown:**
+Operations scale as described by the complexity.
+
+**Example walkthrough:**
+```
+C(5,2) = (5×4)/(2×1) = 10
+P(5,2) = 5×4 = 20
+```
+
+### Space Complexity: O(1) or O(N²)
 
 <br>
 
@@ -40,15 +60,17 @@ Compute combinations and permutations.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N) or O(R) | O(1) or O(N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Direct factorial | O(N) but overflow risk | Varies | Baseline |
+| Pascal's Triangle / Multiplicative | O(R) or O(N²) for Pascal's | O(1) or O(N²) | Optimal |
+
+**Recommended Solution:** Pascal's Triangle / Multiplicative
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Pascal's triangle:** No division needed, exact integers
+2. **Multiplicative + mod inverse:** For large N with mod
+3. **Lucas' theorem:** For very large N with prime mod
 
 <br><br>
 
