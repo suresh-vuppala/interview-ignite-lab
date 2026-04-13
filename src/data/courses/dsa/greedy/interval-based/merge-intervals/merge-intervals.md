@@ -1,15 +1,26 @@
-Merge all overlapping intervals.
+Merge all overlapping intervals into non-overlapping intervals.
 
 <br>
 
-> **Key insight:** Sort by start. If current overlaps previous, merge (extend end). Else add new.
+> intervals=[[1,3],[2,6],[8,10],[15,18]] → [[1,6],[8,10],[15,18]]
+>
+> **Key insight:** Sort by start time. If current interval overlaps with previous, merge (extend end). Otherwise, add as new interval.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints apply
+
+<br>
+
+---
+
+## All Possible Edge Cases
+1. **Empty input:** Handle gracefully
+2. **Single element:** Base case
+3. **Large input:** Verify time complexity holds
 
 <br>
 
@@ -17,20 +28,44 @@ Merge all overlapping intervals.
 
 ## Solution 1: Brute Force
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N²)
 
-> **Key Insight for Improvement:** Sort + linear scan, extend end on overlap
+> **Drawback:**
+> Checking all pairs for overlap is quadratic.
+
+> **Key Insight for Improvement:**
+> Sort by start: overlapping intervals become adjacent. Linear scan to merge.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Sort + Linear Merge (Optimal)
 
-**Recurrence/Approach:** `Sort + linear scan, extend end on overlap`
+**Intuition:** Sort by start time. If current interval overlaps with previous, merge (extend end). Otherwise, add as new interval.
+
+**Algorithm:**
+1. Sort intervals by start time
+2. For each interval:
+   - If overlaps with last merged (start ≤ last.end): merge (extend end = max(ends))
+   - Else: add as new merged interval
+3. Return merged list
 
 ### Time Complexity: O(N log N)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element processed at most once through the core data structure/algorithm.
+
+**Detailed breakdown:**
+For typical input sizes, operations stay well within time limits.
+
+**Example walkthrough:**
+```
+[1,3],[2,6],[8,10],[15,18]
+[1,3]+[2,6]: 2≤3 → merge [1,6]
+[1,6]+[8,10]: 8>6 → new interval
+[8,10]+[15,18]: 15>10 → new interval
+Result: [[1,6],[8,10],[15,18]] ✓
+```
 
 ### Space Complexity: O(N)
 
@@ -40,17 +75,20 @@ Merge all overlapping intervals.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N log N) | O(N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute Force | O(N²) | Varies | Baseline |
+| Sort + Linear Merge | O(N log N) | O(N) | Sort by start: overlapping intervals become adjacent. Linear |
+
+**Recommended Solution:** Sort + Linear Merge — O(N log N) time, O(N) space.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Sort makes overlaps adjacent:** Key insight for O(N) merge
+2. **Extend end on merge:** end = max(end, current.end)
+3. **FAANG top-10:** Extremely frequently asked interval problem
 
-<br><br>
+<br>
+<br>
 
 ---
 

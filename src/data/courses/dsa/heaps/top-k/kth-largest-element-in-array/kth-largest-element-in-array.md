@@ -1,38 +1,71 @@
-Find the Kth largest element.
+Find the Kth largest element in an unsorted array.
 
 <br>
 
-> **Key insight:** Min-heap of size K. After processing all elements, heap top = Kth largest. Or QuickSelect O(N) avg.
+> nums=[3,2,1,5,6,4], k=2 → 5
+>
+> **Key insight:** QuickSelect: partition like quicksort but only recurse into the side containing k. O(N) average. Min-heap of size K: O(N log K).
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints apply
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** Min-heap size K or QuickSelect partition
+## All Possible Edge Cases
+1. **Empty input:** Handle gracefully
+2. **Single element:** Base case
+3. **Large input:** Verify time complexity holds
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 1: Sort then index
 
-**Recurrence/Approach:** `Min-heap size K or QuickSelect partition`
+### Time Complexity: O(N log N)
+
+> **Drawback:**
+> Full sorting to find a single element is overkill.
+
+> **Key Insight for Improvement:**
+> QuickSelect: partition array. If pivot at position N-K → found! If pivot too right → recurse left. Too left → recurse right. O(N) average.
+
+<br>
+
+---
+
+## Solution 2: QuickSelect / Min-Heap (Optimal)
+
+**Intuition:** QuickSelect: partition like quicksort but only recurse into the side containing k. O(N) average. Min-heap of size K: O(N log K).
+
+**Algorithm:**
+1. QuickSelect: choose pivot, partition
+   - If pivotIndex == N-K → return pivot
+   - If pivotIndex < N-K → search right half
+   - If pivotIndex > N-K → search left half
+2. Min-heap alternative: push all, maintain size K. Top = Kth largest.
 
 ### Time Complexity: O(N) avg QuickSelect
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element processed at most once through the core data structure/algorithm.
 
-### Space Complexity: O(1)
+**Detailed breakdown:**
+For typical input sizes, operations stay well within time limits.
+
+**Example walkthrough:**
+```
+nums=[3,2,1,5,6,4], k=2, target_idx=4
+Partition around 4: [3,2,1,|4|,6,5] → pivotIdx=3
+3 < 4 → search right: [6,5] → partition → 5 at idx 4 → Kth=5 ✓
+```
+
+### Space Complexity: O(1) QuickSelect
 
 <br>
 
@@ -40,17 +73,21 @@ Find the Kth largest element.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N) avg QuickSelect | O(1) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Sort then index | O(N log N) | Varies | Baseline |
+| QuickSelect / Min-Heap | O(N) avg QuickSelect | O(1) QuickSelect | QuickSelect: partition array. If pivot at position N-K → fou |
+
+**Recommended Solution:** QuickSelect / Min-Heap — O(N) avg QuickSelect time, O(1) QuickSelect space.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **QuickSelect = partial QuickSort:** Only recurse into one half → O(N) avg
+2. **Worst case O(N²):** Random pivot or median-of-3 helps
+3. **Min-heap alternative:** O(N log K) guaranteed, simpler to implement
+4. **FAANG top-10:** Tests understanding of selection algorithms
 
-<br><br>
+<br>
+<br>
 
 ---
 

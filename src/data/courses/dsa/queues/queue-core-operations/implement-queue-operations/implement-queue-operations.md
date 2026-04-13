@@ -1,36 +1,69 @@
-Implement queue with enqueue, dequeue, front, isEmpty operations.
+Implement a queue supporting enqueue, dequeue, front, and isEmpty operations.
 
 <br>
 
-> **Key insight:** Use array/linked list. Enqueue at back, dequeue from front. Circular array avoids shifting.
+> enqueue(1), enqueue(2), front()→1, dequeue()→1, front()→2
+>
+> **Key insight:** FIFO: First In, First Out. Use circular array or linked list. Enqueue at rear, dequeue from front.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints apply
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** Circular array: front=(front+1)%cap, rear=(rear+1)%cap
+## All Possible Edge Cases
+1. **Empty input:** Handle gracefully
+2. **Single element:** Base case
+3. **Large input:** Verify time complexity holds
 
 <br>
 
 ---
 
-## Solution 2: Optimal
-
-**Recurrence/Approach:** `Circular array: front=(front+1)%cap, rear=(rear+1)%cap`
+## Solution 1: Linked List Queue
 
 ### Time Complexity: O(1) per op
-**Why?** Each element/state processed efficiently.
+
+> **Drawback:**
+> Linked list has pointer overhead per node. For fixed-size scenarios, circular array is more cache-friendly.
+
+> **Key Insight for Improvement:**
+> Circular array: front and rear pointers wrap around using modulo, avoiding element shifting.
+
+<br>
+
+---
+
+## Solution 2: Circular Array Queue (Optimal)
+
+**Intuition:** FIFO: First In, First Out. Use circular array or linked list. Enqueue at rear, dequeue from front.
+
+**Algorithm:**
+1. Use array of fixed capacity with front/rear indices
+2. enqueue: arr[rear] = val, rear = (rear+1) % capacity
+3. dequeue: val = arr[front], front = (front+1) % capacity
+4. Track size to distinguish full from empty
+
+### Time Complexity: O(1) per op
+**Why?**
+Each element processed at most once through the core data structure/algorithm.
+
+**Detailed breakdown:**
+For typical input sizes, operations stay well within time limits.
+
+**Example walkthrough:**
+```
+enqueue(1): rear=0→1, arr=[1,_,_]
+enqueue(2): rear=1→2, arr=[1,2,_]
+dequeue(): front=0→1, returns 1
+front(): returns arr[1] = 2
+```
 
 ### Space Complexity: O(N)
 
@@ -40,17 +73,20 @@ Implement queue with enqueue, dequeue, front, isEmpty operations.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(1) per op | O(N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Linked List Queue | O(1) per op | Varies | Baseline |
+| Circular Array Queue | O(1) per op | O(N) | Circular array: front and rear pointers wrap around using mo |
+
+**Recommended Solution:** Circular Array Queue — O(1) per op time, O(N) space.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **FIFO principle:** Queue = line at a store — first person served first
+2. **Circular avoids shifting:** Modulo wraps pointers instead of moving elements
+3. **Applications:** BFS, task scheduling, buffering, printer queue
 
-<br><br>
+<br>
+<br>
 
 ---
 

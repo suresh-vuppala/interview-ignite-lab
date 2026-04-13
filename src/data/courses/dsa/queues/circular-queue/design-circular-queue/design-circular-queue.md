@@ -1,36 +1,63 @@
-Design circular queue supporting all operations in O(1).
+Design a circular queue class with all standard operations.
 
 <br>
 
-> **Key insight:** Same as circular queue with isFull/isEmpty checks.
+> Same as implement-circular-queue with full OOP design
+>
+> **Key insight:** Same circular array technique. This is the LeetCode 622 version.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints apply
 
 <br>
 
 ---
 
-## Solution 1: Brute Force
-
-> **Drawback:** Suboptimal time complexity.
-
-> **Key Insight for Improvement:** count tracks size; full when count==k
+## All Possible Edge Cases
+1. **Empty input:** Handle gracefully
+2. **Single element:** Base case
+3. **Large input:** Verify time complexity holds
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 1: Linear array
 
-**Recurrence/Approach:** `count tracks size; full when count==k`
+### Time Complexity: O(N) dequeue
+
+> **Drawback:**
+> Same shifting problem as basic queue.
+
+> **Key Insight for Improvement:**
+> Circular array with modulo indexing — O(1) all operations.
+
+<br>
+
+---
+
+## Solution 2: Circular Array OOP (Optimal)
+
+**Intuition:** Same circular array technique. This is the LeetCode 622 version.
+
+**Algorithm:**
+Full class with constructor(k), enQueue(val), deQueue(), Front(), Rear(), isEmpty(), isFull()
 
 ### Time Complexity: O(1) per op
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element processed at most once through the core data structure/algorithm.
+
+**Detailed breakdown:**
+For typical input sizes, operations stay well within time limits.
+
+**Example walkthrough:**
+```
+Same as circular queue implementation — modulo wrapping
+```
 
 ### Space Complexity: O(k)
 
@@ -40,17 +67,20 @@ Design circular queue supporting all operations in O(1).
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(1) per op | O(k) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Linear array | O(N) dequeue | Varies | Baseline |
+| Circular Array OOP | O(1) per op | O(k) | Circular array with modulo indexing — O(1) all operations. |
+
+**Recommended Solution:** Circular Array OOP — O(1) per op time, O(k) space.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **OOP design:** Clean interface with capacity set at construction
+2. **Thread safety:** For production, add mutex locks
+3. **LeetCode 622:** Exact problem specification
 
-<br><br>
+<br>
+<br>
 
 ---
 

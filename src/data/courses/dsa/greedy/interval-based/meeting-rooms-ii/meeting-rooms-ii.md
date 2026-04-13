@@ -1,15 +1,26 @@
-Find minimum meeting rooms required.
+Find the minimum number of meeting rooms required for a schedule.
 
 <br>
 
-> **Key insight:** Sort events by time. Use min-heap of end times. If earliest end ≤ new start, reuse room.
+> intervals=[[0,30],[5,10],[15,20]] → 2
+>
+> **Key insight:** Sort by start time. Use min-heap of end times to track active meetings. If earliest ending meeting ends before new one starts → reuse room.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints apply
+
+<br>
+
+---
+
+## All Possible Edge Cases
+1. **Empty input:** Handle gracefully
+2. **Single element:** Base case
+3. **Large input:** Verify time complexity holds
 
 <br>
 
@@ -17,20 +28,45 @@ Find minimum meeting rooms required.
 
 ## Solution 1: Brute Force
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(2^N)
 
-> **Key Insight for Improvement:** Min-heap of end times tracks active meetings
+> **Drawback:**
+> Trying all room assignments is exponential.
+
+> **Key Insight for Improvement:**
+> Min-heap of end times: if heap.top ≤ current.start → room freed (pop). Always push current end. Heap size = rooms needed.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Sort + Min-Heap of End Times (Optimal)
 
-**Recurrence/Approach:** `Min-heap of end times tracks active meetings`
+**Intuition:** Sort by start time. Use min-heap of end times to track active meetings. If earliest ending meeting ends before new one starts → reuse room.
+
+**Algorithm:**
+1. Sort meetings by start time
+2. Min-heap of end times
+3. For each meeting:
+   - If heap not empty and heap.top ≤ start → pop (room freed)
+   - Push current end time
+4. Heap size = minimum rooms needed
 
 ### Time Complexity: O(N log N)
-**Why?** Each element/state processed efficiently.
+**Why?**
+Each element processed at most once through the core data structure/algorithm.
+
+**Detailed breakdown:**
+For typical input sizes, operations stay well within time limits.
+
+**Example walkthrough:**
+```
+[[0,30],[5,10],[15,20]] sorted by start
+push 30 → heap=[30], rooms=1
+5<30 → push 10 → heap=[10,30], rooms=2
+15>10 → pop 10, push 20 → heap=[20,30], rooms=2
+Answer: 2 ✓
+```
 
 ### Space Complexity: O(N)
 
@@ -40,17 +76,20 @@ Find minimum meeting rooms required.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N log N) | O(N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute Force | O(2^N) | Varies | Baseline |
+| Sort + Min-Heap of End Times | O(N log N) | O(N) | Min-heap of end times: if heap.top ≤ current.start → room fr |
+
+**Recommended Solution:** Sort + Min-Heap of End Times — O(N log N) time, O(N) space.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Min-heap tracks earliest ending meeting:** Can we free a room?
+2. **Heap size = concurrent meetings = rooms needed**
+3. **Alternative:** Sweep line — sort start/end events, track running count
 
-<br><br>
+<br>
+<br>
 
 ---
 

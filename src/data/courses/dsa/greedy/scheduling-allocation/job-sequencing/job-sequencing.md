@@ -1,15 +1,26 @@
-Schedule jobs with deadlines and profits to maximize profit.
+Schedule jobs with deadlines and profits to maximize total profit. Each job takes 1 unit of time.
 
 <br>
 
-> **Key insight:** Sort by profit descending. For each job, find latest available slot before deadline.
+> jobs=[(1,4,20),(2,1,10),(3,1,40),(4,1,30)], deadlines → max profit=60
+>
+> **Key insight:** Sort by profit descending. For each job, find the latest available slot before its deadline.
 
 <br>
 
 ---
 
 ## Constraints
-- Standard constraints
+- Typical problem constraints apply
+
+<br>
+
+---
+
+## All Possible Edge Cases
+1. **Empty input:** Handle gracefully
+2. **Single element:** Base case
+3. **Large input:** Verify time complexity holds
 
 <br>
 
@@ -17,22 +28,46 @@ Schedule jobs with deadlines and profits to maximize profit.
 
 ## Solution 1: Brute Force
 
-> **Drawback:** Suboptimal time complexity.
+### Time Complexity: O(N!)
 
-> **Key Insight for Improvement:** Sort by profit, greedily assign to latest available slot
+> **Drawback:**
+> Factorial permutations — completely infeasible.
+
+> **Key Insight for Improvement:**
+> Greedy: highest profit first. For each job, find latest available time slot ≤ deadline. This maximizes profit.
 
 <br>
 
 ---
 
-## Solution 2: Optimal
+## Solution 2: Sort by Profit + Greedy Slot Assignment (Optimal)
 
-**Recurrence/Approach:** `Sort by profit, greedily assign to latest available slot`
+**Intuition:** Sort by profit descending. For each job, find the latest available slot before its deadline.
 
-### Time Complexity: O(N²) or O(N log N) with DSU
-**Why?** Each element/state processed efficiently.
+**Algorithm:**
+1. Sort jobs by profit descending
+2. Create slots array of size maxDeadline (all free)
+3. For each job: find latest free slot ≤ deadline
+   - If found: assign job, mark slot used, add profit
+   - If not: skip job
+4. Return total profit
 
-### Space Complexity: O(N)
+### Time Complexity: O(N² or N log N with DSU)
+**Why?**
+Each element processed at most once through the core data structure/algorithm.
+
+**Detailed breakdown:**
+For typical input sizes, operations stay well within time limits.
+
+**Example walkthrough:**
+```
+Jobs sorted by profit: (40,d=1),(30,d=1),(20,d=4),(10,d=1)
+Slot 1: assign job(40). Slot 1 taken.
+Job(30,d=1): slot 1 taken → skip
+Job(20,d=4): slot 4 free → assign. Profit=40+20=60 ✓
+```
+
+### Space Complexity: O(maxDeadline)
 
 <br>
 
@@ -40,17 +75,20 @@ Schedule jobs with deadlines and profits to maximize profit.
 
 ## Complexity Progression Summary
 
-| Solution | Time | Space |
-|----------|------|-------|
-| Brute | Higher | Varies |
-| Optimal | O(N²) or O(N log N) with DSU | O(N) |
+| Solution | Time | Space | Key Improvement |
+|----------|------|-------|----------------|
+| Brute Force | O(N!) | Varies | Baseline |
+| Sort by Profit + Greedy Slot Assignment | O(N² or N log N with DSU) | O(maxDeadline) | Greedy: highest profit first. For each job, find latest avai |
+
+**Recommended Solution:** Sort by Profit + Greedy Slot Assignment — O(N² or N log N with DSU) time, O(maxDeadline) space.
 
 **Key Insights:**
-1. Core technique applied correctly
-2. Edge cases handled
-3. Space optimization where possible
+1. **Highest profit first:** Greedy ensures most valuable jobs considered first
+2. **Latest slot:** Leaves earlier slots open for shorter-deadline jobs
+3. **DSU optimization:** O(log N) slot finding instead of O(N) scan
 
-<br><br>
+<br>
+<br>
 
 ---
 
