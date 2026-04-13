@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Copy, Check, Code2 } from 'lucide-react';
 
 // 🔹 Dynamically import all code files from your data folder
-const codeFiles = import.meta.glob('/src/data/**/*.@(cpp|java|py|js|ts)', { as: 'raw' });
+const codeFiles = import.meta.glob('/src/data/**/*.@(cpp|java|py|js|ts)', { query: '?raw', import: 'default' });
 
 // 🔹 Helper function to fetch a file’s raw content
 async function fetchCodeFile(path: string): Promise<string> {
