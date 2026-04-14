@@ -1,3 +1,16 @@
+// ============================================================
+// Solution 1: Brute Force
+// ============================================================
+import java.util.*;
+
+class Solution1 {
+    // Brute force: hash set / nested loops / direct comparison
+    // See Solution 2 below for optimal Trie-based approach
+}
+
+// ============================================================
+// Solution 2: Optimal (Trie-based)
+// ============================================================
 import java.util.*;
 
 // Time: O(L) add, O(26^W*L) search | Space: O(N*L)

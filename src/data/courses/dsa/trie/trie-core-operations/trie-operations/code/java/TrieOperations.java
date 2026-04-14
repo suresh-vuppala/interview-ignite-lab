@@ -1,3 +1,22 @@
+// ============================================================
+// Solution 1: HashSet — Store complete words
+// Time: O(N*L) prefix check — must scan all words
+// ============================================================
+import java.util.*;
+class Solution1 {
+    Set<String> words = new HashSet<>();
+    public void insert(String word) { words.add(word); }
+    public boolean search(String word) { return words.contains(word); }
+    public boolean startsWith(String prefix) {
+        for (String w : words)
+            if (w.startsWith(prefix)) return true;
+        return false;
+    }
+}
+
+// ============================================================
+// Solution 2: Optimal (Trie-based)
+// ============================================================
 class TrieOperations {
     class TrieNode {
         TrieNode[] children = new TrieNode[26]; // 26 lowercase letters

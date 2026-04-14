@@ -1,3 +1,19 @@
+# ============================================================
+# Solution 1: Hash Set — Store complete words
+# Time: O(N*L) prefix check — must scan all words
+# ============================================================
+class Solution1:
+    def __init__(self):
+        self.words = set()
+    def insert(self, word): self.words.add(word)
+    def search(self, word): return word in self.words
+    def startsWith(self, prefix):
+        return any(w.startswith(prefix) for w in self.words)  # O(N*L)!
+
+
+# ============================================================
+# Solution 2: Optimal (Trie-based)
+# ============================================================
 class TrieNode:
     def __init__(self):
         self.children = {}  # Dictionary for child nodes

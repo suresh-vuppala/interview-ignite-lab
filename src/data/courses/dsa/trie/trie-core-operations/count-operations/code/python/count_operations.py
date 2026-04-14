@@ -1,3 +1,18 @@
+# ============================================================
+# Solution 1: Dict counting — O(N*L) prefix count
+# ============================================================
+from collections import Counter
+class Solution1:
+    def __init__(self): self.words = Counter()
+    def insert(self, word): self.words[word] += 1
+    def countWordsEqualTo(self, word): return self.words[word]
+    def countWordsStartingWith(self, prefix):
+        return sum(c for w, c in self.words.items() if w.startswith(prefix))
+
+
+# ============================================================
+# Solution 2: Optimal (Trie-based)
+# ============================================================
 class TrieNode:
     def __init__(self):
         self.children = {}  # Dictionary for child nodes
