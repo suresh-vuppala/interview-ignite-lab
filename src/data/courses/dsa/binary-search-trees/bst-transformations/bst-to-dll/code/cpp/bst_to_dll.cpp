@@ -1,24 +1,34 @@
-// ============================================================
-// BST to Sorted Doubly Linked List
-// ============================================================
 struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
-
-class Solution {
-    TreeNode* prev = nullptr;
-    TreeNode* head = nullptr;
+#include <vector>
+using namespace std;
+// ============================================================
+// Solution 1: Inorder to array, build DLL — O(N) Space
+// ============================================================
+class Solution1 {
+    void inorder(TreeNode* n, vector<TreeNode*>& v) { if(!n)return; inorder(n->left,v); v.push_back(n); inorder(n->right,v); }
 public:
-    TreeNode* treeToDoublyList(TreeNode* root) {
-        if (!root) return nullptr;
-        prev = nullptr; head = nullptr;
-        inorder(root);
-        return head;
+    TreeNode* bstToDoublyList(TreeNode* root) {
+        vector<TreeNode*> nodes; inorder(root, nodes);
+        for (int i = 0; i < (int)nodes.size(); i++) {
+            nodes[i]->left = i > 0 ? nodes[i-1] : nullptr;
+            nodes[i]->right = i < (int)nodes.size()-1 ? nodes[i+1] : nullptr;
+        }
+        return nodes.empty() ? nullptr : nodes[0];
     }
-    void inorder(TreeNode* node) {
-        if (!node) return;
-        inorder(node->left);
-        if (!prev) head = node;
-        else { prev->right = node; node->left = prev; }
-        prev = node;
-        inorder(node->right);
+};
+
+// ============================================================
+// Solution 2: In-place with prev pointer — O(N) Time, O(H) Stack
+// ============================================================
+class Solution2 {
+    TreeNode *prev = nullptr, *head = nullptr;
+    void inorder(TreeNode* n) {
+        if (!n) return;
+        inorder(n->left);
+        if (!prev) head = n; else { prev->right = n; n->left = prev; }
+        prev = n;
+        inorder(n->right);
     }
+public:
+    TreeNode* bstToDoublyList(TreeNode* root) { prev = head = nullptr; inorder(root); return head; }
 };

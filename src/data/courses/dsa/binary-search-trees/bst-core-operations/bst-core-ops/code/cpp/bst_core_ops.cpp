@@ -1,22 +1,21 @@
-// ============================================================
-// BST Core Operations
-// ============================================================
 struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
-
-class Solution {
+using namespace std;
+// ============================================================
+// Solution 1: Recursive insert/search/delete — O(H) avg, O(N) worst
+// ============================================================
+class Solution1 {
 public:
-    TreeNode* search(TreeNode* root, int val) {
-        if (!root || root->val == val) return root;
-        return val < root->val ? search(root->left, val) : search(root->right, val);
-    }
-
     TreeNode* insert(TreeNode* root, int val) {
         if (!root) return new TreeNode(val);
         if (val < root->val) root->left = insert(root->left, val);
-        else if (val > root->val) root->right = insert(root->right, val);
+        else root->right = insert(root->right, val);
         return root;
     }
-
+    bool search(TreeNode* root, int val) {
+        if (!root) return false;
+        if (val == root->val) return true;
+        return val < root->val ? search(root->left, val) : search(root->right, val);
+    }
     TreeNode* deleteNode(TreeNode* root, int key) {
         if (!root) return nullptr;
         if (key < root->val) root->left = deleteNode(root->left, key);
@@ -31,7 +30,25 @@ public:
         }
         return root;
     }
+};
 
-    int findMin(TreeNode* root) { while (root->left) root = root->left; return root->val; }
-    int findMax(TreeNode* root) { while (root->right) root = root->right; return root->val; }
+// ============================================================
+// Solution 2: Iterative insert/search — O(H) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    TreeNode* insert(TreeNode* root, int val) {
+        TreeNode* node = new TreeNode(val);
+        if (!root) return node;
+        TreeNode* cur = root;
+        while (true) {
+            if (val < cur->val) { if (!cur->left) { cur->left = node; break; } cur = cur->left; }
+            else { if (!cur->right) { cur->right = node; break; } cur = cur->right; }
+        }
+        return root;
+    }
+    bool search(TreeNode* root, int val) {
+        while (root) { if (val == root->val) return true; root = val < root->val ? root->left : root->right; }
+        return false;
+    }
 };
