@@ -1,47 +1,31 @@
-// ============================================================
-// Maximum Depth (Height) of Binary Tree
-// ============================================================
-
-#include <queue>
-#include <algorithm>
-using namespace std;
-
 struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
-
+#include <algorithm>
+#include <queue>
+using namespace std;
 // ============================================================
-// Solution 1: Recursive DFS
-// Time: O(N) | Space: O(H)
+// Solution 1: Recursive — O(N) Time, O(H) Space
 // ============================================================
 class Solution1 {
 public:
-    int maxDepth(TreeNode* root) {
-        if (!root) return 0; // Base case: null → height 0
-        int leftH = maxDepth(root->left);
-        int rightH = maxDepth(root->right);
-        return 1 + max(leftH, rightH); // 1 (current) + taller subtree
+    int height(TreeNode* root) {
+        if (!root) return -1; // or 0 depending on definition
+        return 1 + max(height(root->left), height(root->right));
     }
 };
 
 // ============================================================
-// Solution 2: Iterative BFS — Count Levels
-// Time: O(N) | Space: O(W)
+// Solution 2: Iterative BFS level count — O(N) Time, O(W) Space
 // ============================================================
 class Solution2 {
 public:
-    int maxDepth(TreeNode* root) {
-        if (!root) return 0;
-        queue<TreeNode*> q;
-        q.push(root);
-        int depth = 0;
+    int height(TreeNode* root) {
+        if (!root) return -1;
+        int h = -1;
+        queue<TreeNode*> q; q.push(root);
         while (!q.empty()) {
-            int size = q.size();
-            for (int i = 0; i < size; i++) {
-                TreeNode* node = q.front(); q.pop();
-                if (node->left) q.push(node->left);
-                if (node->right) q.push(node->right);
-            }
-            depth++; // One level processed
+            h++; int sz = q.size();
+            while (sz--) { auto n=q.front();q.pop(); if(n->left)q.push(n->left); if(n->right)q.push(n->right); }
         }
-        return depth;
+        return h;
     }
 };

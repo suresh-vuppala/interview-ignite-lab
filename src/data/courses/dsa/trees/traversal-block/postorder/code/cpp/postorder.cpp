@@ -1,44 +1,27 @@
-// ============================================================
-// Binary Tree Postorder Traversal
-// ============================================================
-
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
 #include <vector>
 #include <stack>
 #include <algorithm>
 using namespace std;
-
-struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
-
+// ============================================================
+// Solution 1: Recursive — O(N) Time, O(H) Stack
+// ============================================================
 class Solution1 {
 public:
-    vector<int> postorderTraversal(TreeNode* root) {
-        vector<int> result;
-        dfs(root, result); return result;
-    }
-    void dfs(TreeNode* node, vector<int>& r) {
-        if (!node) return;
-        dfs(node->left, r); dfs(node->right, r); r.push_back(node->val);
-    }
+    void postorder(TreeNode* r, vector<int>& res) { if(!r)return; postorder(r->left,res); postorder(r->right,res); res.push_back(r->val); }
+    vector<int> postorderTraversal(TreeNode* r) { vector<int> res; postorder(r,res); return res; }
 };
 
+// ============================================================
+// Solution 2: Iterative — modified preorder (root-right-left) then reverse
+// ============================================================
 class Solution2 {
 public:
     vector<int> postorderTraversal(TreeNode* root) {
         if (!root) return {};
-        vector<int> result;
-        stack<TreeNode*> st;
-        st.push(root);
-
-        while (!st.empty()) {
-            TreeNode* node = st.top(); st.pop();
-            result.push_back(node->val);
-            // Push LEFT first (so RIGHT is processed next → Root→R→L)
-            if (node->left) st.push(node->left);
-            if (node->right) st.push(node->right);
-        }
-
-        // Reverse: Root→R→L becomes L→R→Root = Postorder
-        reverse(result.begin(), result.end());
-        return result;
+        vector<int> res; stack<TreeNode*> st; st.push(root);
+        while (!st.empty()) { auto n=st.top();st.pop(); res.push_back(n->val); if(n->left)st.push(n->left); if(n->right)st.push(n->right); }
+        reverse(res.begin(), res.end()); // root-right-left reversed = left-right-root
+        return res;
     }
 };

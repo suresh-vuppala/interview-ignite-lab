@@ -1,39 +1,34 @@
-// ============================================================
-// Binary Tree Level Order Traversal
-// ============================================================
-
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
 #include <vector>
 #include <queue>
 using namespace std;
-
-struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
+// ============================================================
+// Solution 1: DFS with depth tracking — O(N) Time, O(N) Space
+// ============================================================
+class Solution1 {
+    void dfs(TreeNode* n, int depth, vector<vector<int>>& res) {
+        if (!n) return;
+        if (depth >= (int)res.size()) res.push_back({});
+        res[depth].push_back(n->val);
+        dfs(n->left, depth+1, res); dfs(n->right, depth+1, res);
+    }
+public:
+    vector<vector<int>> levelOrder(TreeNode* root) { vector<vector<int>> res; dfs(root,0,res); return res; }
+};
 
 // ============================================================
-// Solution: BFS with Queue
-// Time: O(N) | Space: O(W)
+// Solution 2: BFS with queue — O(N) Time, O(W) Space
 // ============================================================
-class Solution {
+class Solution2 {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
         if (!root) return {};
-        vector<vector<int>> result;
-        queue<TreeNode*> q;
-        q.push(root);
-
+        vector<vector<int>> res; queue<TreeNode*> q; q.push(root);
         while (!q.empty()) {
-            int size = q.size(); // Nodes at current level
-            vector<int> level;
-
-            for (int i = 0; i < size; i++) {
-                TreeNode* node = q.front(); q.pop();
-                level.push_back(node->val);
-                if (node->left) q.push(node->left);
-                if (node->right) q.push(node->right);
-            }
-
-            result.push_back(level);
+            int sz=q.size(); vector<int> level;
+            while (sz--) { auto n=q.front();q.pop(); level.push_back(n->val); if(n->left)q.push(n->left); if(n->right)q.push(n->right); }
+            res.push_back(level);
         }
-
-        return result;
+        return res;
     }
 };

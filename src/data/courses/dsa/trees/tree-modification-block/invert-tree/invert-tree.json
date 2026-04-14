@@ -11,7 +11,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trees/tree-modification-block/invert-tree/code/cpp/invert_tree.cpp"
+          "codeFile": "courses/dsa/trees/tree-modification-block/invert-tree/code/cpp/InvertTree.cpp"
         },
         {
           "language": "java",

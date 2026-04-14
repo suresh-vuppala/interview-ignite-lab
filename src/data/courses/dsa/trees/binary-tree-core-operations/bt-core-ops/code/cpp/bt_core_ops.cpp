@@ -1,47 +1,47 @@
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
+#include <queue>
+using namespace std;
 // ============================================================
-// Binary Tree Core Operations (BST)
+// Solution 1: Recursive creation + traversal — O(N) each
 // ============================================================
-
-struct TreeNode {
-    int val;
-    TreeNode* left;
-    TreeNode* right;
-    TreeNode(int v) : val(v), left(nullptr), right(nullptr) {}
-};
-
-class BSTOperations {
+class Solution1 {
 public:
-    // INSERT: O(H) — create node at correct position
     TreeNode* insert(TreeNode* root, int val) {
         if (!root) return new TreeNode(val);
-        if (val < root->val) root->left = insert(root->left, val);
-        else if (val > root->val) root->right = insert(root->right, val);
-        return root; // Duplicate: do nothing
-    }
-
-    // SEARCH: O(H) — follow BST property
-    bool search(TreeNode* root, int val) {
-        if (!root) return false;
-        if (val == root->val) return true;
-        if (val < root->val) return search(root->left, val);
-        return search(root->right, val);
-    }
-
-    // DELETE: O(H) — handle 3 cases
-    TreeNode* deleteNode(TreeNode* root, int val) {
-        if (!root) return nullptr;
-        if (val < root->val) root->left = deleteNode(root->left, val);
-        else if (val > root->val) root->right = deleteNode(root->right, val);
-        else {
-            // Case 1 & 2: Leaf or one child
-            if (!root->left) return root->right;
-            if (!root->right) return root->left;
-            // Case 3: Two children — replace with inorder successor
-            TreeNode* succ = root->right;
-            while (succ->left) succ = succ->left; // Find smallest in right
-            root->val = succ->val;
-            root->right = deleteNode(root->right, succ->val);
+        queue<TreeNode*> q; q.push(root);
+        while (!q.empty()) {
+            TreeNode* n = q.front(); q.pop();
+            if (!n->left) { n->left = new TreeNode(val); return root; }
+            else q.push(n->left);
+            if (!n->right) { n->right = new TreeNode(val); return root; }
+            else q.push(n->right);
         }
         return root;
+    }
+    int size(TreeNode* root) { return root ? 1 + size(root->left) + size(root->right) : 0; }
+};
+
+// ============================================================
+// Solution 2: Level-order insert + iterative size — O(N)
+// ============================================================
+class Solution2 {
+public:
+    TreeNode* insert(TreeNode* root, int val) {
+        if (!root) return new TreeNode(val);
+        queue<TreeNode*> q; q.push(root);
+        while (!q.empty()) {
+            TreeNode* n = q.front(); q.pop();
+            if (!n->left) { n->left = new TreeNode(val); break; }
+            q.push(n->left);
+            if (!n->right) { n->right = new TreeNode(val); break; }
+            q.push(n->right);
+        }
+        return root;
+    }
+    int size(TreeNode* root) {
+        if (!root) return 0;
+        int c = 0; queue<TreeNode*> q; q.push(root);
+        while (!q.empty()) { c++; auto n=q.front(); q.pop(); if(n->left)q.push(n->left); if(n->right)q.push(n->right); }
+        return c;
     }
 };

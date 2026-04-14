@@ -1,40 +1,30 @@
-// ============================================================
-// Symmetric Tree
-// ============================================================
-
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
 #include <queue>
 using namespace std;
-
-struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
-
+// ============================================================
+// Solution 1: Recursive mirror check — O(N) Time, O(H) Space
+// ============================================================
 class Solution1 {
+    bool isMirror(TreeNode* a, TreeNode* b) {
+        if(!a&&!b) return true; if(!a||!b) return false;
+        return a->val==b->val && isMirror(a->left,b->right) && isMirror(a->right,b->left);
+    }
 public:
-    bool isSymmetric(TreeNode* root) {
-        if (!root) return true;
-        return isMirror(root->left, root->right);
-    }
-    bool isMirror(TreeNode* l, TreeNode* r) {
-        if (!l && !r) return true;           // Both null — symmetric
-        if (!l || !r) return false;          // One null — not symmetric
-        return l->val == r->val              // Values must match
-            && isMirror(l->left, r->right)   // Outer children
-            && isMirror(l->right, r->left);  // Inner children
-    }
+    bool isSymmetric(TreeNode* root) { return !root || isMirror(root->left,root->right); }
 };
 
+// ============================================================
+// Solution 2: Iterative BFS with queue — O(N) Time, O(W) Space
+// ============================================================
 class Solution2 {
 public:
     bool isSymmetric(TreeNode* root) {
-        if (!root) return true;
-        queue<TreeNode*> q;
-        q.push(root->left); q.push(root->right);
-        while (!q.empty()) {
-            TreeNode* l = q.front(); q.pop();
-            TreeNode* r = q.front(); q.pop();
-            if (!l && !r) continue;
-            if (!l || !r || l->val != r->val) return false;
-            q.push(l->left); q.push(r->right);  // Outer pair
-            q.push(l->right); q.push(r->left);  // Inner pair
+        if(!root) return true;
+        queue<TreeNode*> q; q.push(root->left); q.push(root->right);
+        while(!q.empty()) {
+            auto a=q.front();q.pop(); auto b=q.front();q.pop();
+            if(!a&&!b) continue; if(!a||!b||a->val!=b->val) return false;
+            q.push(a->left);q.push(b->right);q.push(a->right);q.push(b->left);
         }
         return true;
     }

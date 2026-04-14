@@ -1,103 +1,38 @@
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
 #include <queue>
-#include <utility>
 using namespace std;
-
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-};
-
-class CousinsInBinaryTree {
+// ============================================================
+// Solution 1: BFS — find depth and parent of both nodes — O(N)
+// ============================================================
+class Solution1 {
 public:
-    
-    // ==================== SOLUTION 1: DFS TWO PASS ====================
-    // Time: O(N) | Space: O(H)
-    
-    static bool isCousinsDFSTwoPass(TreeNode* root, int x, int y) {
-        auto xInfo = findNode(root, x, nullptr, 0);
-        auto yInfo = findNode(root, y, nullptr, 0);
-        
-        if (!xInfo.first || !yInfo.first) return false;
-        
-        return xInfo.first == yInfo.first && xInfo.second != yInfo.second;
-    }
-    
-    static pair<int, TreeNode*> findNode(TreeNode* node, int target, TreeNode* parent, int depth) {
-        if (!node) return {-1, nullptr};
-        if (node->val == target) return {depth, parent};
-        
-        auto left = findNode(node->left, target, node, depth + 1);
-        if (left.first != -1) return left;
-        return findNode(node->right, target, node, depth + 1);
-    }
-    
-    
-    // ==================== SOLUTION 2: DFS SINGLE PASS ====================
-    // Time: O(N) | Space: O(H)
-    
-    static bool isCousinsDFSSinglePass(TreeNode* root, int x, int y) {
-        int xDepth = -1, yDepth = -1;
-        TreeNode *xParent = nullptr, *yParent = nullptr;
-        
-        dfs(root, nullptr, 0, x, y, xDepth, yDepth, xParent, yParent);
-        
-        return xDepth == yDepth && xParent != yParent;
-    }
-    
-    static void dfs(TreeNode* node, TreeNode* parent, int depth, int x, int y,
-                   int& xDepth, int& yDepth, TreeNode*& xParent, TreeNode*& yParent) {
-        if (!node) return;
-        
-        if (node->val == x) {
-            xDepth = depth;
-            xParent = parent;
-        }
-        if (node->val == y) {
-            yDepth = depth;
-            yParent = parent;
-        }
-        
-        if (xDepth != -1 && yDepth != -1) return;
-        
-        dfs(node->left, node, depth + 1, x, y, xDepth, yDepth, xParent, yParent);
-        dfs(node->right, node, depth + 1, x, y, xDepth, yDepth, xParent, yParent);
-    }
-    
-    
-    // ==================== SOLUTION 3: BFS LEVEL ORDER ====================
-    // Time: O(N) | Space: O(W)
-    
-    static bool isCousins(TreeNode* root, int x, int y) {
-        if (!root) return false;
-        
-        queue<pair<TreeNode*, TreeNode*>> q;
-        q.push({root, nullptr});
-        
-        while (!q.empty()) {
-            int size = q.size();
-            TreeNode *xParent = nullptr, *yParent = nullptr;
-            
-            for (int i = 0; i < size; i++) {
-                auto [node, parent] = q.front();
-                q.pop();
-                
-                if (node->val == x) xParent = parent;
-                if (node->val == y) yParent = parent;
-                
-                if (node->left) q.push({node->left, node});
-                if (node->right) q.push({node->right, node});
+    bool isCousins(TreeNode* root, int x, int y) {
+        if(!root) return false;
+        queue<pair<TreeNode*,TreeNode*>> q; q.push({root,nullptr});
+        while(!q.empty()) {
+            int sz=q.size(); TreeNode *px=nullptr,*py=nullptr;
+            while(sz--) {
+                auto[n,par]=q.front();q.pop();
+                if(n->val==x)px=par; if(n->val==y)py=par;
+                if(n->left)q.push({n->left,n}); if(n->right)q.push({n->right,n});
             }
-            
-            if (xParent && yParent) {
-                return xParent != yParent;
-            }
-            if (xParent || yParent) {
-                return false;
-            }
+            if(px&&py) return px!=py; // Same depth, different parents
+            if(px||py) return false;   // Different depths
         }
-        
         return false;
     }
+};
+
+// ============================================================
+// Solution 2: DFS — record depth and parent — O(N)
+// ============================================================
+class Solution2 {
+    int dx=-1,dy=-1; TreeNode *px=nullptr,*py=nullptr;
+    void dfs(TreeNode* n, TreeNode* par, int d, int x, int y) {
+        if(!n) return;
+        if(n->val==x){dx=d;px=par;} if(n->val==y){dy=d;py=par;}
+        dfs(n->left,n,d+1,x,y); dfs(n->right,n,d+1,x,y);
+    }
+public:
+    bool isCousins(TreeNode* root, int x, int y) { dfs(root,nullptr,0,x,y); return dx==dy&&px!=py; }
 };

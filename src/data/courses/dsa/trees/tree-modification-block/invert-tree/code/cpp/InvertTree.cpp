@@ -1,31 +1,28 @@
-﻿#include <iostream>
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
 using namespace std;
-
-struct TreeNode {
-    int val;
-    TreeNode *left, *right;
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+// ============================================================
+// Solution 1: Recursive — O(N) Time, O(H) Space
+// ============================================================
+class Solution1 {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        if(!root) return nullptr;
+        TreeNode* l = invertTree(root->left), *r = invertTree(root->right);
+        root->left = r; root->right = l;
+        return root;
+    }
 };
 
-TreeNode* invertTree(TreeNode* root) {
-    if (!root) return nullptr;
-    
-    // Swap children
-    swap(root->left, root->right);
-    
-    // Recursively invert subtrees
-    invertTree(root->left);
-    invertTree(root->right);
-    
-    return root;
-}
-
-int main() {
-    TreeNode* root = new TreeNode(2);
-    root->left = new TreeNode(1);
-    root->right = new TreeNode(3);
-    
-    invertTree(root);
-    cout << "Tree inverted. Root: " << root->val << endl;
-    return 0;
-}
+// ============================================================
+// Solution 2: Iterative BFS — O(N) Time, O(W) Space
+// ============================================================
+#include <queue>
+class Solution2 {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        if(!root) return nullptr;
+        queue<TreeNode*> q; q.push(root);
+        while(!q.empty()) { auto n=q.front();q.pop(); swap(n->left,n->right); if(n->left)q.push(n->left); if(n->right)q.push(n->right); }
+        return root;
+    }
+};

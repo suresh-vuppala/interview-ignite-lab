@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trees/path-relationship-problems/cousins-in-binary-tree/code/cpp/cousins_in_binary_tree.cpp"
+          "codeFile": "courses/dsa/trees/path-relationship-problems/cousins-in-binary-tree/code/cpp/CousinsInBinaryTree.cpp"
         },
         {
           "language": "java",

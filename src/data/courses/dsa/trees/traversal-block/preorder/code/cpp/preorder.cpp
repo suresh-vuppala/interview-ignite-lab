@@ -1,42 +1,25 @@
-// ============================================================
-// Binary Tree Preorder Traversal
-// ============================================================
-
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
 #include <vector>
 #include <stack>
 using namespace std;
-
-struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
-
+// ============================================================
+// Solution 1: Recursive — O(N) Time, O(H) Stack
+// ============================================================
 class Solution1 {
 public:
-    vector<int> preorderTraversal(TreeNode* root) {
-        vector<int> result;
-        dfs(root, result); return result;
-    }
-    void dfs(TreeNode* node, vector<int>& r) {
-        if (!node) return;
-        r.push_back(node->val); dfs(node->left, r); dfs(node->right, r);
-    }
+    void preorder(TreeNode* r, vector<int>& res) { if(!r)return; res.push_back(r->val); preorder(r->left,res); preorder(r->right,res); }
+    vector<int> preorderTraversal(TreeNode* r) { vector<int> res; preorder(r,res); return res; }
 };
 
+// ============================================================
+// Solution 2: Iterative with stack — O(N) Time, O(H) Space
+// ============================================================
 class Solution2 {
 public:
     vector<int> preorderTraversal(TreeNode* root) {
         if (!root) return {};
-        vector<int> result;
-        stack<TreeNode*> st;
-        st.push(root);
-
-        while (!st.empty()) {
-            TreeNode* node = st.top(); st.pop();
-            result.push_back(node->val); // Process root first
-
-            // Push right first so left is processed next (LIFO)
-            if (node->right) st.push(node->right);
-            if (node->left) st.push(node->left);
-        }
-
-        return result;
+        vector<int> res; stack<TreeNode*> st; st.push(root);
+        while (!st.empty()) { auto n=st.top();st.pop(); res.push_back(n->val); if(n->right)st.push(n->right); if(n->left)st.push(n->left); }
+        return res;
     }
 };
