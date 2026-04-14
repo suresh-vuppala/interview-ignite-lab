@@ -19,7 +19,26 @@ Find all words from a dictionary that exist in a grid by traversing adjacent cel
 
 ## Solution 1: DFS per word separately
 
+**Intuition:**
+The most straightforward approach. Searching each word independently is slow — redundant grid traversal.
+
+**Algorithm:**
+1. Define recursive function with current state
+2. At each step, try all possible choices
+3. Recurse on remaining subproblem
+4. Base case: return when subproblem is solved
+
 ### Time Complexity: O(W × M×N × 4^L)
+**Why?**
+Two factors multiply: one from iterating elements, one from the operation per element.
+Total = product of both factors.
+
+**Detailed breakdown:**
+Depends on both dimensions of the input.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Searching each word independently is slow — redundant grid traversal.

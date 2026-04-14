@@ -19,7 +19,26 @@ Find tree diameter (longest path between any two nodes) using DP.
 
 ## Solution 1: BFS from every node
 
+**Intuition:**
+The most straightforward approach. N BFS runs.
+
+**Algorithm:**
+1. Initialize queue with starting state
+2. While queue not empty: dequeue, process, enqueue neighbors
+3. Track visited states to avoid cycles
+4. Return result when target state reached
+
 ### Time Complexity: O(N²)
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
+
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > N BFS runs.

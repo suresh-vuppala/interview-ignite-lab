@@ -19,7 +19,26 @@ Sprague-Grundy theorem for solving combinatorial games.
 
 ## Solution 1: Minimax on full game tree
 
+**Intuition:**
+The most straightforward approach. Full tree exploration.
+
+**Algorithm:**
+1. Iterate through all possible candidates/states
+2. For each candidate, evaluate the required condition
+3. Track the best result seen so far
+4. Return the optimal answer
+
 ### Time Complexity: Exponential
+**Why?**
+Each element has multiple choices (include/exclude, take/skip), leading to exponential branching.
+For N elements, the total states explored grow as 2^N or worse.
+
+**Detailed breakdown:**
+For N=20: ~1 million states. For N=30: ~1 billion states — too slow.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Full tree exploration.

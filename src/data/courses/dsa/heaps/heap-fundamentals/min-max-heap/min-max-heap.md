@@ -28,7 +28,25 @@ Implement min-heap and max-heap with insert, extract-min/max, and peek operation
 
 ## Solution 1: Unsorted array
 
+**Intuition:**
+The most straightforward approach. Finding min/max requires scanning entire array each time.
+
+**Algorithm:**
+1. Sort the input array
+2. Iterate through the sorted array
+3. Check the required condition at each step
+
 ### Time Complexity: O(N) extract, O(1) insert
+**Why?**
+Single pass through the input, doing O(1) work per element.
+Total: N elements × O(1) per element = O(N).
+
+**Detailed breakdown:**
+For N=100,000: ~100,000 operations — very efficient.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Finding min/max requires scanning entire array each time. O(N) per extraction.

@@ -42,13 +42,25 @@ Given an array nums of n integers and a target, find all unique quadruplets [a, 
 ## Solution 1: Brute Force — All Quadruplets
 
 **Intuition:**
-Try all C(n,4) combinations of four elements.
+The most straightforward approach. O(N⁴) is very slow.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
 
 ### Time Complexity: O(N⁴)
-### Space Complexity: O(1)
+**Why?**
+Single pass through the input, doing O(1) work per element.
+Total: N elements × O(1) per element = O(N).
 
 **Detailed breakdown:**
-- N = 200 → C(200,4) ≈ 64,000,000 — slow but within limit barely
+For N=100,000: ~100,000 operations — very efficient.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > O(N⁴) is very slow. The inner two elements are essentially a Two Sum problem that we can solve in O(N) with two pointers.

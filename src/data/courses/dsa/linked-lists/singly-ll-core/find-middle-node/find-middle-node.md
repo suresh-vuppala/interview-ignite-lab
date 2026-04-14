@@ -19,9 +19,32 @@ Find the middle node of a singly linked list. If two middle nodes, return the se
 
 ## Solution 1: Count Then Traverse — O(N), Two Passes
 
-> **Drawback:** Two passes: first to count, second to reach middle.
+**Intuition:**
+The most straightforward approach — try all possibilities and check each one.
 
-> **Key Insight for Improvement:** Slow/fast pointers achieve this in ONE pass. When fast reaches null or the last node, slow is at the middle.
+**Algorithm:**
+1. Iterate through all possible candidates/states
+2. For each candidate, evaluate the required condition
+3. Track the best result seen so far
+4. Return the optimal answer
+
+### Time Complexity: O(N²)
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
+
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
+
+> **Drawback:**
+> Suboptimal time complexity for large inputs. Redundant work is performed.
+
+> **Key Insight for Improvement:**
+> Use a more efficient data structure or algorithm to reduce redundant computation.
 
 <br>
 

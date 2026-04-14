@@ -19,7 +19,26 @@ Subset sum for large N using Meet in the Middle.
 
 ## Solution 1: Standard DP/recursion
 
+**Intuition:**
+The most straightforward approach. 2^40 is too large.
+
+**Algorithm:**
+1. Define recursive function with current state
+2. At each step, try all possible choices
+3. Recurse on remaining subproblem
+4. Base case: return when subproblem is solved
+
 ### Time Complexity: O(2^N)
+**Why?**
+Each element has multiple choices (include/exclude, take/skip), leading to exponential branching.
+For N elements, the total states explored grow as 2^N or worse.
+
+**Detailed breakdown:**
+For N=20: ~1 million states. For N=30: ~1 billion states — too slow.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > 2^40 is too large.

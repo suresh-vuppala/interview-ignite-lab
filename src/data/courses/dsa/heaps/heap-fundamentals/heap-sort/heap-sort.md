@@ -28,7 +28,26 @@ Sort an array using a heap. Build max-heap, then repeatedly extract maximum to b
 
 ## Solution 1: Naive: extract min N times into new array
 
+**Intuition:**
+The most straightforward approach. Using extra array wastes O(N) space.
+
+**Algorithm:**
+1. Iterate through all possible candidates/states
+2. For each candidate, evaluate the required condition
+3. Track the best result seen so far
+4. Return the optimal answer
+
 ### Time Complexity: O(N log N) + O(N) space
+**Why?**
+Sorting or divide-and-conquer requires O(N log N).
+Each of log N levels processes N elements.
+
+**Detailed breakdown:**
+For N=100,000: ~1.7 million operations — efficient.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Using extra array wastes O(N) space. We can sort in-place.

@@ -28,7 +28,26 @@ Implement a LIFO stack using a single queue.
 
 ## Solution 1: Two queues alternating
 
+**Intuition:**
+The most straightforward approach. Using two queues adds unnecessary complexity.
+
+**Algorithm:**
+1. Initialize queue with starting state
+2. While queue not empty: dequeue, process, enqueue neighbors
+3. Track visited states to avoid cycles
+4. Return result when target state reached
+
 ### Time Complexity: O(N) per push or pop
+**Why?**
+Single pass through the input, doing O(1) work per element.
+Total: N elements × O(1) per element = O(N).
+
+**Detailed breakdown:**
+For N=100,000: ~100,000 operations — very efficient.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Using two queues adds unnecessary complexity. One queue with rotation works.

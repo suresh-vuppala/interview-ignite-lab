@@ -19,7 +19,26 @@ Trie with countWordsEqualTo and countWordsStartingWith.
 
 ## Solution 1: HashMap counting
 
+**Intuition:**
+The most straightforward approach. HashMap can't count prefix matches without scanning all keys.
+
+**Algorithm:**
+1. Initialize a hash set/map for tracking
+2. Iterate through each element
+3. Check against the hash set/map for the required condition
+4. Update the hash set/map with the current element
+
 ### Time Complexity: O(1) lookup but O(N) prefix count
+**Why?**
+Single pass through the input, doing O(1) work per element.
+Total: N elements × O(1) per element = O(N).
+
+**Detailed breakdown:**
+For N=100,000: ~100,000 operations — very efficient.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > HashMap can't count prefix matches without scanning all keys.

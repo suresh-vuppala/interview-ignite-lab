@@ -23,11 +23,32 @@ Given an array, find the Previous Greater Element (PGE) and Previous Smaller Ele
 
 ## Solution 1: Brute Force — Scan Left
 
+**Intuition:**
+The most straightforward approach — try all possibilities and check each one.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
+
 ### Time Complexity: O(N²) for each (PGE and PSE)
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
 
-> **Drawback:** Scanning left for each element.
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
 
-> **Key Insight for Improvement:** Stack maintains elements in monotonic order. For PGE: decreasing stack — pop smaller elements, top = PGE. For PSE: increasing stack — pop larger, top = PSE.
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
+
+> **Drawback:**
+> Suboptimal time complexity for large inputs. Redundant work is performed.
+
+> **Key Insight for Improvement:**
+> Use a more efficient data structure or algorithm to reduce redundant computation.
 
 <br>
 

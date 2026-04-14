@@ -19,7 +19,26 @@ Replace words in sentence with their shortest root from a dictionary.
 
 ## Solution 1: Check each root against each word
 
+**Intuition:**
+The most straightforward approach. Checking every root against every word is slow.
+
+**Algorithm:**
+1. Enumerate all possible candidates
+2. For each candidate, verify if it satisfies the condition
+3. Track the best valid result
+4. Return the optimal answer
+
 ### Time Complexity: O(D×N×L)
+**Why?**
+Two factors multiply: one from iterating elements, one from the operation per element.
+Total = product of both factors.
+
+**Detailed breakdown:**
+Depends on both dimensions of the input.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Checking every root against every word is slow.

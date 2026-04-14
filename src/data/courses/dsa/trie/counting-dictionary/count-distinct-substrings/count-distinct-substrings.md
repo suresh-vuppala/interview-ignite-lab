@@ -19,7 +19,26 @@ Count the number of distinct substrings of a given string.
 
 ## Solution 1: Generate all substrings + hash set
 
+**Intuition:**
+The most straightforward approach. Hash set approach works but has high constant factor and collision risk.
+
+**Algorithm:**
+1. Initialize a hash set/map for tracking
+2. Iterate through each element
+3. Check against the hash set/map for the required condition
+4. Update the hash set/map with the current element
+
 ### Time Complexity: O(N²) time, O(N²) space
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
+
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Hash set approach works but has high constant factor and collision risk.

@@ -19,14 +19,32 @@ Detect if a directed graph contains a cycle.
 
 ## Solution 1: DFS with Three Colors (Optimal)
 
-**Algorithm:** Color nodes: 0=white, 1=gray (in stack), 2=black (done). If we encounter a gray node → back edge → cycle.
+**Intuition:**
+The most straightforward approach — try all possibilities and check each one.
+
+**Algorithm:**
+1. Define recursive function with current state
+2. At each step, try all possible choices
+3. Recurse on remaining subproblem
+4. Base case: return when subproblem is solved
 
 ### Time Complexity: O(V + E)
-### Space Complexity: O(V)
+**Why?**
+The approach processes each state/element with the work described by the complexity.
+Total operations scale accordingly with input size.
 
-> **Drawback:** None.
+**Detailed breakdown:**
+Verify against constraint limits to ensure it passes within time.
 
-> **Key Insight for Improvement:** Kahn's BFS alternative: compute in-degrees, process nodes with in-degree 0. If processed < V → cycle exists.
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
+
+> **Drawback:**
+> Suboptimal time complexity for large inputs. Redundant work is performed.
+
+> **Key Insight for Improvement:**
+> Use a more efficient data structure or algorithm to reduce redundant computation.
 
 <br>
 

@@ -19,7 +19,26 @@ Generate all letter combinations from phone number digit mapping.
 
 ## Solution 1: Same — backtracking IS the approach
 
+**Intuition:**
+The most straightforward approach. Can't avoid — must generate all combinations.
+
+**Algorithm:**
+1. Define recursive function with current state
+2. At each step, try all possible choices
+3. Recurse on remaining subproblem
+4. Base case: return when subproblem is solved
+
 ### Time Complexity: O(4^N)
+**Why?**
+Single pass through the input, doing O(1) work per element.
+Total: N elements × O(1) per element = O(N).
+
+**Detailed breakdown:**
+For N=100,000: ~100,000 operations — very efficient.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Can't avoid — must generate all combinations.

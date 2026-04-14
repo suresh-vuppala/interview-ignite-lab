@@ -19,7 +19,26 @@ For each word, compute sum of scores where score of prefix = count of words havi
 
 ## Solution 1: Count each prefix manually
 
+**Intuition:**
+The most straightforward approach. Checking each prefix against all words.
+
+**Algorithm:**
+1. Enumerate all possible candidates
+2. For each candidate, verify if it satisfies the condition
+3. Track the best valid result
+4. Return the optimal answer
+
 ### Time Complexity: O(N²×L)
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
+
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Checking each prefix against all words.

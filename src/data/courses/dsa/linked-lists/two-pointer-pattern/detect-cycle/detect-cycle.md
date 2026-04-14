@@ -19,9 +19,32 @@ Detect if a linked list has a cycle.
 
 ## Solution 1: Hash Set — O(N) time, O(N) space
 
-> **Drawback:** O(N) extra space for the hash set.
+**Intuition:**
+The most straightforward approach — try all possibilities and check each one.
 
-> **Key Insight for Improvement:** Floyd's tortoise and hare: slow/fast pointers. If cycle exists, fast will eventually "lap" slow and they'll meet. O(1) space.
+**Algorithm:**
+1. Initialize a hash set/map for tracking
+2. Iterate through each element
+3. Check against the hash set/map for the required condition
+4. Update the hash set/map with the current element
+
+### Time Complexity: O(N²)
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
+
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
+
+> **Drawback:**
+> Suboptimal time complexity for large inputs. Redundant work is performed.
+
+> **Key Insight for Improvement:**
+> Use a more efficient data structure or algorithm to reduce redundant computation.
 
 <br>
 

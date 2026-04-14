@@ -19,7 +19,26 @@ Find all unique combinations that sum to target. Each number can be used unlimit
 
 ## Solution 1: Try all combinations
 
+**Intuition:**
+The most straightforward approach. Exponential but necessary — must explore all valid combinations.
+
+**Algorithm:**
+1. Enumerate all possible candidates
+2. For each candidate, verify if it satisfies the condition
+3. Track the best valid result
+4. Return the optimal answer
+
 ### Time Complexity: O(N^(T/min))
+**Why?**
+Single pass through the input, doing O(1) work per element.
+Total: N elements × O(1) per element = O(N).
+
+**Detailed breakdown:**
+For N=100,000: ~100,000 operations — very efficient.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Exponential but necessary — must explore all valid combinations.

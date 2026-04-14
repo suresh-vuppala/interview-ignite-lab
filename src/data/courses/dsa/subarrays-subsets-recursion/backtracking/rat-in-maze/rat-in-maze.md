@@ -19,7 +19,26 @@ Find all paths from (0,0) to (N-1,N-1) in a maze with blocked cells.
 
 ## Solution 1: Same DFS approach
 
+**Intuition:**
+The most straightforward approach. Exponential — must explore all paths.
+
+**Algorithm:**
+1. Define recursive function with current state
+2. At each step, try all possible choices
+3. Recurse on remaining subproblem
+4. Base case: return when subproblem is solved
+
 ### Time Complexity: O(4^(N²))
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
+
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Exponential — must explore all paths.

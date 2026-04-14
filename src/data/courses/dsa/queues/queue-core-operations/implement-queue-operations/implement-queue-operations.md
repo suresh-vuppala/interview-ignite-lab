@@ -28,7 +28,26 @@ Implement a queue supporting enqueue, dequeue, front, and isEmpty operations.
 
 ## Solution 1: Linked List Queue
 
+**Intuition:**
+The most straightforward approach. Linked list has pointer overhead per node.
+
+**Algorithm:**
+1. Initialize queue with starting state
+2. While queue not empty: dequeue, process, enqueue neighbors
+3. Track visited states to avoid cycles
+4. Return result when target state reached
+
 ### Time Complexity: O(1) per op
+**Why?**
+The approach processes each state/element with the work described by the complexity.
+Total operations scale accordingly with input size.
+
+**Detailed breakdown:**
+Verify against constraint limits to ensure it passes within time.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Linked list has pointer overhead per node. For fixed-size scenarios, circular array is more cache-friendly.

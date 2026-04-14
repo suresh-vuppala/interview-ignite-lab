@@ -41,12 +41,26 @@ Given a list of daily temperatures, return how many days you have to wait until 
 
 ## Solution 1: Brute Force — Scan Right for Each
 
+**Intuition:**
+The most straightforward approach. Same as NGE — scanning right from scratch for each position.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
+
 ### Time Complexity: O(N²)
 **Why?**
-- For each day, scan all future days
-- N = 100,000 → up to 5 billion operations
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
 
-### Space Complexity: O(1) extra
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Same as NGE — scanning right from scratch for each position. The monotonic stack resolves all pending positions in one pass.

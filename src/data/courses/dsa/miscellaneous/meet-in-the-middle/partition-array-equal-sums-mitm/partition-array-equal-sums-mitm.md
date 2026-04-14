@@ -19,7 +19,26 @@ Partition array into two equal-sum subsets using MITM for large N.
 
 ## Solution 1: Standard DP
 
+**Intuition:**
+The most straightforward approach. Sum can be too large for DP.
+
+**Algorithm:**
+1. Define state: what information captures the subproblem
+2. Define base cases
+3. For each state, compute value using recurrence relation
+4. Return dp[final_state]
+
 ### Time Complexity: O(N × sum)
+**Why?**
+Two factors multiply: one from iterating elements, one from the operation per element.
+Total = product of both factors.
+
+**Detailed breakdown:**
+Depends on both dimensions of the input.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Sum can be too large for DP.

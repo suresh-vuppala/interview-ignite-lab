@@ -19,9 +19,32 @@ Remove the nth node from the end of a linked list.
 
 ## Solution 1: Two-Pass — Count then traverse
 
-> **Drawback:** Two passes over the list.
+**Intuition:**
+The most straightforward approach — try all possibilities and check each one.
 
-> **Key Insight for Improvement:** Two pointers with n-step gap — single pass. Fast is n ahead of slow. When fast reaches end, slow is at position N-n (the node before the target).
+**Algorithm:**
+1. Iterate through all possible candidates/states
+2. For each candidate, evaluate the required condition
+3. Track the best result seen so far
+4. Return the optimal answer
+
+### Time Complexity: O(N²)
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
+
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
+
+> **Drawback:**
+> Suboptimal time complexity for large inputs. Redundant work is performed.
+
+> **Key Insight for Improvement:**
+> Use a more efficient data structure or algorithm to reduce redundant computation.
 
 <br>
 

@@ -19,7 +19,26 @@ Implement ternary search tree as a trie alternative.
 
 ## Solution 1: 26-children trie
 
+**Intuition:**
+The most straightforward approach. 26 children per node wastes space for sparse alphabets.
+
+**Algorithm:**
+1. Iterate through all possible candidates/states
+2. For each candidate, evaluate the required condition
+3. Track the best result seen so far
+4. Return the optimal answer
+
 ### Time Complexity: O(L) per op, O(N×26×L) space
+**Why?**
+Two factors multiply: one from iterating elements, one from the operation per element.
+Total = product of both factors.
+
+**Detailed breakdown:**
+Depends on both dimensions of the input.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > 26 children per node wastes space for sparse alphabets.

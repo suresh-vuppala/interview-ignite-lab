@@ -19,7 +19,26 @@ Fill a 9×9 Sudoku grid following row, column, and 3×3 box uniqueness rules.
 
 ## Solution 1: Try all assignments
 
+**Intuition:**
+The most straightforward approach. Most assignments are invalid.
+
+**Algorithm:**
+1. Enumerate all possible candidates
+2. For each candidate, verify if it satisfies the condition
+3. Track the best valid result
+4. Return the optimal answer
+
 ### Time Complexity: O(9^81)
+**Why?**
+The approach processes each state/element with the work described by the complexity.
+Total operations scale accordingly with input size.
+
+**Detailed breakdown:**
+Verify against constraint limits to ensure it passes within time.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Most assignments are invalid.

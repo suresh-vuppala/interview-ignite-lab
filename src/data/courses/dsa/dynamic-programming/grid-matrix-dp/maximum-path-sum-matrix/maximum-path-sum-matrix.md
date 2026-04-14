@@ -18,11 +18,32 @@ Find maximum sum path from any cell in first row to any cell in last row. Can mo
 
 ## Solution 1: Recursion (Brute Force)
 
+**Intuition:**
+The most straightforward approach — try all possibilities and check each one.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
+
 ### Time Complexity: O(3^m)
+**Why?**
+The approach processes each state/element with the work described by the complexity.
+Total operations scale accordingly with input size.
 
-> **Drawback:** Overlapping subproblems cause exponential recomputation.
+**Detailed breakdown:**
+Verify against constraint limits to ensure it passes within time.
 
-> **Key Insight for Improvement:** Memoize or tabulate. Recurrence: `dp[i][j] = mat[i][j] + max(dp[i-1][j-1..j+1])`
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
+
+> **Drawback:**
+> Suboptimal time complexity for large inputs. Redundant work is performed.
+
+> **Key Insight for Improvement:**
+> Use a more efficient data structure or algorithm to reduce redundant computation.
 
 <br>
 

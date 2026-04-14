@@ -19,7 +19,25 @@ Design simplified Twitter: postTweet, getNewsFeed, follow, unfollow.
 
 ## Solution 1: Scan all tweets
 
+**Intuition:**
+The most straightforward approach. Scanning all tweets for every feed request.
+
+**Algorithm:**
+1. Scan through each element from left to right
+2. For each element, check the required condition
+3. Track and return the best result
+
 ### Time Complexity: O(all tweets)
+**Why?**
+The approach processes each state/element with the work described by the complexity.
+Total operations scale accordingly with input size.
+
+**Detailed breakdown:**
+Verify against constraint limits to ensure it passes within time.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Scanning all tweets for every feed request.

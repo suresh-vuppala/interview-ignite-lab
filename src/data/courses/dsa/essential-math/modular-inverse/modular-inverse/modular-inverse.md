@@ -19,7 +19,26 @@ Find modular multiplicative inverse of a under mod m.
 
 ## Solution 1: Try all values
 
+**Intuition:**
+The most straightforward approach. Linear search for inverse.
+
+**Algorithm:**
+1. Enumerate all possible candidates
+2. For each candidate, verify if it satisfies the condition
+3. Track the best valid result
+4. Return the optimal answer
+
 ### Time Complexity: O(m)
+**Why?**
+The approach processes each state/element with the work described by the complexity.
+Total operations scale accordingly with input size.
+
+**Detailed breakdown:**
+Verify against constraint limits to ensure it passes within time.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Linear search for inverse.

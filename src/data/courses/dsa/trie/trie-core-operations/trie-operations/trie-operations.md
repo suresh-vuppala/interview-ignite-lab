@@ -19,7 +19,26 @@ Implement Trie with insert, search, and startsWith operations.
 
 ## Solution 1: Hash Set of words
 
+**Intuition:**
+The most straightforward approach. Hash set doesn't support prefix queries efficiently.
+
+**Algorithm:**
+1. Initialize a hash set/map for tracking
+2. Iterate through each element
+3. Check against the hash set/map for the required condition
+4. Update the hash set/map with the current element
+
 ### Time Complexity: O(N×L) search
+**Why?**
+Two factors multiply: one from iterating elements, one from the operation per element.
+Total = product of both factors.
+
+**Detailed breakdown:**
+Depends on both dimensions of the input.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Hash set doesn't support prefix queries efficiently.

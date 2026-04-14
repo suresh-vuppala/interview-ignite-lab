@@ -19,11 +19,32 @@ Break a positive integer n into at least two positive integers that sum to n. Ma
 
 ## Solution 1: Recursion (Brute Force)
 
+**Intuition:**
+The most straightforward approach — try all possibilities and check each one.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
+
 ### Time Complexity: O(N²)
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
 
-> **Drawback:** Overlapping subproblems cause exponential recomputation. The same state is computed many times.
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
 
-> **Key Insight for Improvement:** Memoize computed states (top-down) or build bottom-up (tabulation). Recurrence: dp[i] = max(j * max(i-j, dp[i-j])) for j=1..i-1
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
+
+> **Drawback:**
+> Suboptimal time complexity for large inputs. Redundant work is performed.
+
+> **Key Insight for Improvement:**
+> Use a more efficient data structure or algorithm to reduce redundant computation.
 
 <br>
 

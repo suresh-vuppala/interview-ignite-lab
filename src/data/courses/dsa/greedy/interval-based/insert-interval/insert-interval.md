@@ -28,7 +28,26 @@ Insert a new interval into a sorted list of non-overlapping intervals, merging i
 
 ## Solution 1: Brute Force
 
+**Intuition:**
+The most straightforward approach. Already optimal at O(N) since we must examine all intervals.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
+
 ### Time Complexity: O(N)
+**Why?**
+Single pass through the input, doing O(1) work per element.
+Total: N elements × O(1) per element = O(N).
+
+**Detailed breakdown:**
+For N=100,000: ~100,000 operations — very efficient.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Already optimal at O(N) since we must examine all intervals.

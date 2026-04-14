@@ -19,7 +19,26 @@ Check if a word exists in grid by following adjacent cells (each cell used once)
 
 ## Solution 1: Check all paths
 
+**Intuition:**
+The most straightforward approach. Same — must try all starting cells and paths.
+
+**Algorithm:**
+1. Enumerate all possible candidates
+2. For each candidate, verify if it satisfies the condition
+3. Track the best valid result
+4. Return the optimal answer
+
 ### Time Complexity: O(M×N×4^L)
+**Why?**
+Two factors multiply: one from iterating elements, one from the operation per element.
+Total = product of both factors.
+
+**Detailed breakdown:**
+Depends on both dimensions of the input.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Same — must try all starting cells and paths.

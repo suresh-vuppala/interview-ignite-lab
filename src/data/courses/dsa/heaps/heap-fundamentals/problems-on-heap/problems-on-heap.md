@@ -28,7 +28,25 @@ Classic heap problems: find kth largest in stream, sort a nearly-sorted array, m
 
 ## Solution 1: Sort then index
 
+**Intuition:**
+The most straightforward approach. Full sorting is overkill when we only need the kth element or partial ordering.
+
+**Algorithm:**
+1. Sort the input array
+2. Iterate through the sorted array
+3. Check the required condition at each step
+
 ### Time Complexity: O(N log N)
+**Why?**
+Sorting or divide-and-conquer requires O(N log N).
+Each of log N levels processes N elements.
+
+**Detailed breakdown:**
+For N=100,000: ~1.7 million operations — efficient.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Full sorting is overkill when we only need the kth element or partial ordering.

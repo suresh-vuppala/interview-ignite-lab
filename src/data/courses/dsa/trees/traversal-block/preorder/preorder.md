@@ -22,11 +22,32 @@ Return the preorder traversal of a binary tree (Root → Left → Right).
 
 ## Solution 1: Recursive
 
+**Intuition:**
+The most straightforward approach — try all possibilities and check each one.
+
+**Algorithm:**
+1. Define recursive function with current state
+2. At each step, try all possible choices
+3. Recurse on remaining subproblem
+4. Base case: return when subproblem is solved
+
 ### Time Complexity: O(N) | Space: O(H)
+**Why?**
+Single pass through the input, doing O(1) work per element.
+Total: N elements × O(1) per element = O(N).
 
-> **Drawback:** O(H) stack space.
+**Detailed breakdown:**
+For N=100,000: ~100,000 operations — very efficient.
 
-> **Key Insight for Improvement:** Iterative with stack: push root, pop → process → push right then left. Simple and clean.
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
+
+> **Drawback:**
+> Suboptimal time complexity for large inputs. Redundant work is performed.
+
+> **Key Insight for Improvement:**
+> Use a more efficient data structure or algorithm to reduce redundant computation.
 
 <br>
 

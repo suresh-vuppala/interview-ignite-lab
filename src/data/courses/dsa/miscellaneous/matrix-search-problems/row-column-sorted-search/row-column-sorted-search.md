@@ -19,7 +19,25 @@ Search in matrix where each row and column is independently sorted (not globally
 
 ## Solution 1: Scan entire matrix
 
+**Intuition:**
+The most straightforward approach. Ignores sorted structure.
+
+**Algorithm:**
+1. Scan through each element from left to right
+2. For each element, check the required condition
+3. Track and return the best result
+
 ### Time Complexity: O(M×N)
+**Why?**
+Two factors multiply: one from iterating elements, one from the operation per element.
+Total = product of both factors.
+
+**Detailed breakdown:**
+Depends on both dimensions of the input.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Ignores sorted structure.

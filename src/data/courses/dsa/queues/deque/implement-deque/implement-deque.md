@@ -28,7 +28,26 @@ Implement a double-ended queue supporting push/pop from both front and back.
 
 ## Solution 1: Linked List Deque
 
+**Intuition:**
+The most straightforward approach. Linked list works but has higher constant factor due to pointer overhead and cache misses.
+
+**Algorithm:**
+1. Iterate through all possible candidates/states
+2. For each candidate, evaluate the required condition
+3. Track the best result seen so far
+4. Return the optimal answer
+
 ### Time Complexity: O(1) per op
+**Why?**
+The approach processes each state/element with the work described by the complexity.
+Total operations scale accordingly with input size.
+
+**Detailed breakdown:**
+Verify against constraint limits to ensure it passes within time.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Linked list works but has higher constant factor due to pointer overhead and cache misses.

@@ -28,7 +28,26 @@ Implement a FIFO queue using only two LIFO stacks.
 
 ## Solution 1: Pour on every dequeue
 
+**Intuition:**
+The most straightforward approach. Pouring from stack1 to stack2 on every dequeue is wasteful if stack2 still has elements.
+
+**Algorithm:**
+1. Initialize queue with starting state
+2. While queue not empty: dequeue, process, enqueue neighbors
+3. Track visited states to avoid cycles
+4. Return result when target state reached
+
 ### Time Complexity: O(N) per dequeue
+**Why?**
+Single pass through the input, doing O(1) work per element.
+Total: N elements × O(1) per element = O(N).
+
+**Detailed breakdown:**
+For N=100,000: ~100,000 operations — very efficient.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Pouring from stack1 to stack2 on every dequeue is wasteful if stack2 still has elements.

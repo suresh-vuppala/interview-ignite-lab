@@ -28,7 +28,25 @@ Find the kth smallest element in an N×N matrix where each row and column is sor
 
 ## Solution 1: Flatten and sort
 
+**Intuition:**
+The most straightforward approach. Flattening ignores the sorted structure of the matrix entirely.
+
+**Algorithm:**
+1. Sort the input array
+2. Iterate through the sorted array
+3. Check the required condition at each step
+
 ### Time Complexity: O(N² log N²)
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
+
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Flattening ignores the sorted structure of the matrix entirely.

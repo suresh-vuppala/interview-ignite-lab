@@ -20,11 +20,32 @@ Find the shortest path from a source vertex to all other vertices in a weighted 
 
 ## Solution 1: Basic — O(V²) with Array
 
+**Intuition:**
+The most straightforward approach — try all possibilities and check each one.
+
+**Algorithm:**
+1. Iterate through all possible candidates/states
+2. For each candidate, evaluate the required condition
+3. Track the best result seen so far
+4. Return the optimal answer
+
 ### Time Complexity: O(V²)
+**Why?**
+The approach processes each state/element with the work described by the complexity.
+Total operations scale accordingly with input size.
 
-> **Drawback:** Scans all V nodes to find minimum distance each iteration. For sparse graphs, this is wasteful.
+**Detailed breakdown:**
+Verify against constraint limits to ensure it passes within time.
 
-> **Key Insight for Improvement:** Use a min-heap (priority queue) to extract minimum in O(log V). Total: O((V+E) log V).
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
+
+> **Drawback:**
+> Suboptimal time complexity for large inputs. Redundant work is performed.
+
+> **Key Insight for Improvement:**
+> Use a more efficient data structure or algorithm to reduce redundant computation.
 
 <br>
 

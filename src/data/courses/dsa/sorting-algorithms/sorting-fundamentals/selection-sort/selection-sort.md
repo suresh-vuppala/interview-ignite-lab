@@ -28,7 +28,25 @@ Find minimum in unsorted portion, swap with front position.
 
 ## Solution 1: N/A — this IS selection sort
 
+**Intuition:**
+The most straightforward approach. Always O(N²) regardless of input order.
+
+**Algorithm:**
+1. Sort the input array
+2. Iterate through the sorted array
+3. Check the required condition at each step
+
 ### Time Complexity: O(N²)
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
+
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Always O(N²) regardless of input order. No early termination possible.

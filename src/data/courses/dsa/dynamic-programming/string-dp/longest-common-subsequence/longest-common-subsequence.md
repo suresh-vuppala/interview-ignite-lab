@@ -18,11 +18,32 @@ Find the length of the longest common subsequence of two strings.
 
 ## Solution 1: Recursion (Brute Force)
 
+**Intuition:**
+The most straightforward approach — try all possibilities and check each one.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
+
 ### Time Complexity: O(2^(m+n))
+**Why?**
+Each element has multiple choices (include/exclude, take/skip), leading to exponential branching.
+For N elements, the total states explored grow as 2^N or worse.
 
-> **Drawback:** Overlapping subproblems cause exponential recomputation.
+**Detailed breakdown:**
+For N=20: ~1 million states. For N=30: ~1 billion states — too slow.
 
-> **Key Insight for Improvement:** Memoize or tabulate. Recurrence: `dp[i][j] = dp[i-1][j-1]+1 if s1[i]==s2[j], else max(dp[i-1][j], dp[i][j-1])`
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
+
+> **Drawback:**
+> Suboptimal time complexity for large inputs. Redundant work is performed.
+
+> **Key Insight for Improvement:**
+> Use a more efficient data structure or algorithm to reduce redundant computation.
 
 <br>
 

@@ -28,7 +28,25 @@ Find the peak element in a mountain (bitonic) array.
 
 ## Solution 1: Linear scan for max
 
+**Intuition:**
+The most straightforward approach. Doesn't exploit the mountain structure.
+
+**Algorithm:**
+1. Scan through each element from left to right
+2. For each element, check the required condition
+3. Track and return the best result
+
 ### Time Complexity: O(N)
+**Why?**
+Single pass through the input, doing O(1) work per element.
+Total: N elements × O(1) per element = O(N).
+
+**Detailed breakdown:**
+For N=100,000: ~100,000 operations — very efficient.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Doesn't exploit the mountain structure.

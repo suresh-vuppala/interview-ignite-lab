@@ -19,7 +19,26 @@ Place minimum cameras on tree nodes to monitor all nodes. A camera monitors pare
 
 ## Solution 1: DFS try all placements
 
+**Intuition:**
+The most straightforward approach. Exponential.
+
+**Algorithm:**
+1. Define recursive function with current state
+2. At each step, try all possible choices
+3. Recurse on remaining subproblem
+4. Base case: return when subproblem is solved
+
 ### Time Complexity: O(2^N)
+**Why?**
+Each element has multiple choices (include/exclude, take/skip), leading to exponential branching.
+For N elements, the total states explored grow as 2^N or worse.
+
+**Detailed breakdown:**
+For N=20: ~1 million states. For N=30: ~1 billion states — too slow.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Exponential.

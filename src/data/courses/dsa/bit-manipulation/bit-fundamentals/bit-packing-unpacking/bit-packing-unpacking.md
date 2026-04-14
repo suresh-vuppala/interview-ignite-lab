@@ -245,24 +245,38 @@ If you shift this, the sign bit propagates.
 
 ### Solution 1: Offset to Make Positive
 
-```cpp
-// If range is [-1000, 1000]
-int OFFSET = 1000;
+**Intuition:**
+The most straightforward approach — try all possibilities and check each one.
 
-// Pack
-int i_positive = i + OFFSET;  // Convert to [0, 2000]
-int j_positive = j + OFFSET;
+**Algorithm:**
+1. Initialize a hash set/map for tracking
+2. Iterate through each element
+3. Check against the hash set/map for the required condition
+4. Update the hash set/map with the current element
 
-long long packed = ((long long)i_positive << BITS) | j_positive;
+### Time Complexity: O(N²)
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
 
-// Unpack
-int i = (packed >> BITS) - OFFSET;
-int j = (packed & ((1LL << BITS) - 1)) - OFFSET;
-```
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
+
+> **Drawback:**
+> Suboptimal time complexity for large inputs. Redundant work is performed.
+
+> **Key Insight for Improvement:**
+> Use a more efficient data structure or algorithm to reduce redundant computation.
 
 <br>
 
-### Solution 2: Use Unsigned Integers
+---
+
+## Solution 2: Use Unsigned Integers
 
 ```cpp
 // Cast to unsigned to avoid sign extension

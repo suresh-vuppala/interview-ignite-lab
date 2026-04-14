@@ -28,7 +28,26 @@ Every element appears twice except one. Find the single one.
 
 ## Solution 1: Hash set tracking
 
+**Intuition:**
+The most straightforward approach. Extra space for the set.
+
+**Algorithm:**
+1. Initialize a hash set/map for tracking
+2. Iterate through each element
+3. Check against the hash set/map for the required condition
+4. Update the hash set/map with the current element
+
 ### Time Complexity: O(N) time, O(N) space
+**Why?**
+Single pass through the input, doing O(1) work per element.
+Total: N elements × O(1) per element = O(N).
+
+**Detailed breakdown:**
+For N=100,000: ~100,000 operations — very efficient.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Extra space for the set.

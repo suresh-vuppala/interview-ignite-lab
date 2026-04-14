@@ -39,7 +39,26 @@ Count the number of distinct elements in every window of size k.
 
 ## Solution 1: Brute Force — Set per Window
 
+**Intuition:**
+The most straightforward approach. Building a set from scratch for each window — O(K) per window.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
+
 ### Time Complexity: O(N × K)
+**Why?**
+Two factors multiply: one from iterating elements, one from the operation per element.
+Total = product of both factors.
+
+**Detailed breakdown:**
+Depends on both dimensions of the input.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Building a set from scratch for each window — O(K) per window. Adjacent windows share K-1 elements; rebuilding wastes this overlap.

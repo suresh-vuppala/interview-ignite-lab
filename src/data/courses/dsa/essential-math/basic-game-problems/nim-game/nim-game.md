@@ -19,7 +19,26 @@ Game theory: player taking last stone wins. Can take 1-3 stones per turn.
 
 ## Solution 1: Minimax simulation
 
+**Intuition:**
+The most straightforward approach. Exponential game tree.
+
+**Algorithm:**
+1. Iterate through all possible candidates/states
+2. For each candidate, evaluate the required condition
+3. Track the best result seen so far
+4. Return the optimal answer
+
 ### Time Complexity: O(2^N)
+**Why?**
+Each element has multiple choices (include/exclude, take/skip), leading to exponential branching.
+For N elements, the total states explored grow as 2^N or worse.
+
+**Detailed breakdown:**
+For N=20: ~1 million states. For N=30: ~1 billion states — too slow.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Exponential game tree.

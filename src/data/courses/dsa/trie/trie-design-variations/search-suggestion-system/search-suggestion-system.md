@@ -19,7 +19,25 @@ As user types each character, suggest top-3 lexicographically matching products.
 
 ## Solution 1: Sort + binary search per prefix
 
+**Intuition:**
+The most straightforward approach. Binary search per prefix keystroke.
+
+**Algorithm:**
+1. Sort the input array
+2. Iterate through the sorted array
+3. Check the required condition at each step
+
 ### Time Complexity: O(M × N log N)
+**Why?**
+Sorting or divide-and-conquer requires O(N log N).
+Each of log N levels processes N elements.
+
+**Detailed breakdown:**
+For N=100,000: ~1.7 million operations — efficient.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Binary search per prefix keystroke.

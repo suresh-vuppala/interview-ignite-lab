@@ -42,14 +42,26 @@ Given an array of integers (may include negatives) and a target sum k, find the 
 
 ## Solution 1: Brute Force — Check All Subarrays
 
+**Intuition:**
+The most straightforward approach. Checking all O(N²) subarrays.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
+
 ### Time Complexity: O(N²)
 **Why?**
-- O(N²) subarrays, each sum can be computed incrementally in O(1)
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
 
 **Detailed breakdown:**
-- N = 100,000 → ~5,000,000,000 — TLE
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
 
-### Space Complexity: O(1)
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Checking all O(N²) subarrays. We can't use sliding window because negative numbers break the monotonic sum property (shrinking doesn't guarantee sum decreases).

@@ -19,7 +19,26 @@ Find all occurrences of pattern in text using KMP or Rabin-Karp.
 
 ## Solution 1: Brute force
 
+**Intuition:**
+The most straightforward approach. Restart comparison from beginning on mismatch.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
+
 ### Time Complexity: O(N×M)
+**Why?**
+Two factors multiply: one from iterating elements, one from the operation per element.
+Total = product of both factors.
+
+**Detailed breakdown:**
+Depends on both dimensions of the input.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Restart comparison from beginning on mismatch.

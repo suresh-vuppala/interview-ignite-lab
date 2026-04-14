@@ -28,7 +28,26 @@ Schedule jobs with deadlines and profits to maximize total profit. Each job take
 
 ## Solution 1: Brute Force
 
+**Intuition:**
+The most straightforward approach. Factorial permutations — completely infeasible.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
+
 ### Time Complexity: O(N!)
+**Why?**
+Generating all permutations requires N! arrangements.
+Each permutation requires O(N) work to construct and verify.
+
+**Detailed breakdown:**
+For N=10: ~3.6 million. For N=12: ~479 million. For N=15: ~1.3 trillion — infeasible.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Factorial permutations — completely infeasible.

@@ -28,7 +28,26 @@ Distribute minimum candies: each child gets ≥1, higher-rated child gets more t
 
 ## Solution 1: Brute Force
 
+**Intuition:**
+The most straightforward approach. Trying all valid distributions is infeasible.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
+
 ### Time Complexity: O(N × max_rating)
+**Why?**
+Two factors multiply: one from iterating elements, one from the operation per element.
+Total = product of both factors.
+
+**Detailed breakdown:**
+Depends on both dimensions of the input.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Trying all valid distributions is infeasible.

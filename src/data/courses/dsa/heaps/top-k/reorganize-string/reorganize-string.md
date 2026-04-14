@@ -28,7 +28,26 @@ Rearrange string so no two adjacent characters are the same. Return empty if imp
 
 ## Solution 1: Try all permutations
 
+**Intuition:**
+The most straightforward approach. Brute-force permutation checking is exponential.
+
+**Algorithm:**
+1. Enumerate all possible candidates
+2. For each candidate, verify if it satisfies the condition
+3. Track the best valid result
+4. Return the optimal answer
+
 ### Time Complexity: O(N!)
+**Why?**
+Generating all permutations requires N! arrangements.
+Each permutation requires O(N) work to construct and verify.
+
+**Detailed breakdown:**
+For N=10: ~3.6 million. For N=12: ~479 million. For N=15: ~1.3 trillion — infeasible.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Brute-force permutation checking is exponential.

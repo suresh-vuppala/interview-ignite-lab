@@ -19,9 +19,32 @@ Find the intersection node of two singly linked lists.
 
 ## Solution 1: Hash Set — O(N+M) time, O(N) space
 
-> **Drawback:** O(N) extra space.
+**Intuition:**
+The most straightforward approach — try all possibilities and check each one.
 
-> **Key Insight for Improvement:** Two pointers: pA starts at headA, pB at headB. When pA reaches end → redirect to headB. When pB reaches end → redirect to headA. They'll meet at intersection after traversing N+M nodes each.
+**Algorithm:**
+1. Initialize a hash set/map for tracking
+2. Iterate through each element
+3. Check against the hash set/map for the required condition
+4. Update the hash set/map with the current element
+
+### Time Complexity: O(N²)
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
+
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
+
+> **Drawback:**
+> Suboptimal time complexity for large inputs. Redundant work is performed.
+
+> **Key Insight for Improvement:**
+> Use a more efficient data structure or algorithm to reduce redundant computation.
 
 <br>
 

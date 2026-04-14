@@ -19,7 +19,26 @@ Generate all N! permutations of an array.
 
 ## Solution 1: Same — backtracking IS the approach
 
+**Intuition:**
+The most straightforward approach. N! permutations exist — must generate all.
+
+**Algorithm:**
+1. Define recursive function with current state
+2. At each step, try all possible choices
+3. Recurse on remaining subproblem
+4. Base case: return when subproblem is solved
+
 ### Time Complexity: O(N×N!)
+**Why?**
+Generating all permutations requires N! arrangements.
+Each permutation requires O(N) work to construct and verify.
+
+**Detailed breakdown:**
+For N=10: ~3.6 million. For N=12: ~479 million. For N=15: ~1.3 trillion — infeasible.
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > N! permutations exist — must generate all.

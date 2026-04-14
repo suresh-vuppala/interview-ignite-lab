@@ -41,7 +41,26 @@ Given an array of positive integers and a target, find the minimal length subarr
 
 ## Solution 1: Brute Force — All Subarrays
 
+**Intuition:**
+The most straightforward approach. Checking all starting positions.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
+
 ### Time Complexity: O(N²)
+**Why?**
+Two nested loops each running up to N iterations.
+Outer loop: N iterations × Inner loop: up to N iterations = N² total operations.
+
+**Detailed breakdown:**
+For N=1,000: ~1 million operations (OK). For N=10,000: ~100 million (borderline TLE).
+
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
 
 > **Drawback:**
 > Checking all starting positions. Once a subarray sum ≥ target, extending it further only makes the length larger — we should stop and try shrinking from the left instead.

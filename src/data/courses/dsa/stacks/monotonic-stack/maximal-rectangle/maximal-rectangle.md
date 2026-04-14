@@ -22,11 +22,32 @@ Given a binary matrix filled with 0's and 1's, find the largest rectangle contai
 
 ## Solution 1: Brute Force — Check All Rectangles
 
+**Intuition:**
+The most straightforward approach — try all possibilities and check each one.
+
+**Algorithm:**
+1. For each element i (outer loop):
+   - For each element j (inner loop):
+     - Check if the pair/condition is satisfied
+2. Return the best result found
+
 ### Time Complexity: O(R² × C²)
+**Why?**
+Two factors multiply: one from iterating elements, one from the operation per element.
+Total = product of both factors.
 
-> **Drawback:** Checking all possible rectangles. We can reduce to O(R×C) by building on Largest Rectangle in Histogram.
+**Detailed breakdown:**
+Depends on both dimensions of the input.
 
-> **Key Insight for Improvement:** For each row, build a "histogram" of heights — height[j] = consecutive 1s above (including current row). Apply the O(C) Largest Rectangle in Histogram per row. Total: O(R×C).
+### Space Complexity: O(1) extra (or O(N) if using auxiliary structures)
+**Why?**
+Depends on whether auxiliary data structures are used. Pure brute force typically uses O(1) extra space beyond the input.
+
+> **Drawback:**
+> Suboptimal time complexity for large inputs. Redundant work is performed.
+
+> **Key Insight for Improvement:**
+> Use a more efficient data structure or algorithm to reduce redundant computation.
 
 <br>
 
