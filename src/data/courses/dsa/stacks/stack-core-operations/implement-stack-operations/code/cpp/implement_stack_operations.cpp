@@ -1,46 +1,28 @@
-// ============================================================
-// Implement Stack Operations
-// ============================================================
-
 #include <vector>
-#include <stdexcept>
 using namespace std;
-
 // ============================================================
-// Solution: Array-Based Stack
-// All operations O(1) amortized
+// Solution 1: Linked List stack — O(1) per op, pointer overhead
 // ============================================================
-class MyStack {
-private:
-    vector<int> data;
-
+struct Node { int val; Node* next; Node(int v,Node*n=nullptr):val(v),next(n){} };
+class Solution1 {
+    Node* top_ = nullptr; int sz = 0;
 public:
-    // Push element onto stack — O(1) amortized
-    void push(int x) {
-        data.push_back(x);
-    }
+    void push(int x) { top_ = new Node(x, top_); sz++; }
+    int pop() { int v=top_->val; Node*t=top_; top_=top_->next; delete t; sz--; return v; }
+    int top() { return top_->val; }
+    bool empty() { return !top_; }
+    int size() { return sz; }
+};
 
-    // Remove and return top element — O(1)
-    int pop() {
-        if (isEmpty()) throw runtime_error("Stack underflow");
-        int top = data.back();
-        data.pop_back();
-        return top;
-    }
-
-    // Return top element without removing — O(1)
-    int top() {
-        if (isEmpty()) throw runtime_error("Stack is empty");
-        return data.back();
-    }
-
-    // Check if stack is empty — O(1)
-    bool isEmpty() {
-        return data.empty();
-    }
-
-    // Return number of elements — O(1)
-    int size() {
-        return data.size();
-    }
+// ============================================================
+// Solution 2: Dynamic array (vector) stack — O(1) amortized, cache-friendly
+// ============================================================
+class Solution2 {
+    vector<int> data;
+public:
+    void push(int x) { data.push_back(x); }
+    int pop() { int v=data.back(); data.pop_back(); return v; }
+    int top() { return data.back(); }
+    bool empty() { return data.empty(); }
+    int size() { return data.size(); }
 };

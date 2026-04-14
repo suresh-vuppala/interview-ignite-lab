@@ -1,73 +1,26 @@
-// ============================================================
-// Min Stack
-// ============================================================
-
 #include <stack>
 #include <algorithm>
 using namespace std;
-
 // ============================================================
-// Solution 1: Two Stacks — Main + Min Stack
-// All operations O(1) | Space: O(2N)
+// Solution 1: Store min with each element — O(1) per op, O(N) extra
 // ============================================================
-class MinStack1 {
-    stack<int> mainStack;
-    stack<int> minStack;
-
+class Solution1 {
+    stack<pair<int,int>> st; // {val, min_at_this_level}
 public:
-    MinStack1() {}
-
-    void push(int val) {
-        mainStack.push(val);
-        // Min stack tracks minimum at each level
-        if (minStack.empty()) {
-            minStack.push(val);
-        } else {
-            minStack.push(min(val, minStack.top()));
-        }
-    }
-
-    void pop() {
-        mainStack.pop();
-        minStack.pop(); // Both stacks stay in sync
-    }
-
-    int top() {
-        return mainStack.top();
-    }
-
-    int getMin() {
-        return minStack.top(); // O(1) minimum access
-    }
+    void push(int val) { int mn=st.empty()?val:min(val,st.top().second); st.push({val,mn}); }
+    void pop() { st.pop(); }
+    int top() { return st.top().first; }
+    int getMin() { return st.top().second; }
 };
 
 // ============================================================
-// Solution 2: Optimized — Push Min Only When Needed
-// All operations O(1) | Space: O(N) average
+// Solution 2: Two stacks — main + min tracking — O(1) per op
 // ============================================================
-class MinStack2 {
-    stack<int> mainStack;
-    stack<int> minStack;
-
+class Solution2 {
+    stack<int> main_, min_;
 public:
-    MinStack2() {}
-
-    void push(int val) {
-        mainStack.push(val);
-        // Only push when val is new minimum (or equal)
-        if (minStack.empty() || val <= minStack.top()) {
-            minStack.push(val);
-        }
-    }
-
-    void pop() {
-        // Only pop min when main's value matches current min
-        if (mainStack.top() == minStack.top()) {
-            minStack.pop();
-        }
-        mainStack.pop();
-    }
-
-    int top() { return mainStack.top(); }
-    int getMin() { return minStack.top(); }
+    void push(int val) { main_.push(val); if(min_.empty()||val<=min_.top())min_.push(val); }
+    void pop() { if(main_.top()==min_.top())min_.pop(); main_.pop(); }
+    int top() { return main_.top(); }
+    int getMin() { return min_.top(); }
 };

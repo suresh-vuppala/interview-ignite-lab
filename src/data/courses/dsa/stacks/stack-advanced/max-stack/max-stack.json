@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-advanced/max-stack/code/cpp/max_stack.cpp"
+          "codeFile": "courses/dsa/stacks/stack-advanced/max-stack/code/cpp/MaxStack.cpp"
         },
         {
           "language": "java",

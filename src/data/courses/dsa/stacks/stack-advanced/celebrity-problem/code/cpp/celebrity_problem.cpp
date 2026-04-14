@@ -1,49 +1,39 @@
-// ============================================================
-// Celebrity Problem
-// ============================================================
-
-#include <stack>
 #include <vector>
+#include <stack>
 using namespace std;
-
-// Assume knows(a, b) is provided
-bool knows(int a, int b);
-
+// ============================================================
+// Solution 1: Brute Force — check each person — O(N²)
+// ============================================================
 class Solution1 {
 public:
-    int findCelebrity(int n) {
-        for (int i = 0; i < n; i++) {
-            bool isCeleb = true;
-            for (int j = 0; j < n; j++) {
-                if (i == j) continue;
-                if (knows(i, j) || !knows(j, i)) { isCeleb = false; break; }
+    int findCelebrity(vector<vector<int>>& matrix) {
+        int n=matrix.size();
+        for(int i=0;i<n;i++){
+            bool isCeleb=true;
+            for(int j=0;j<n;j++){
+                if(i==j)continue;
+                if(matrix[i][j]==1||matrix[j][i]==0){isCeleb=false;break;}
             }
-            if (isCeleb) return i;
+            if(isCeleb) return i;
         }
         return -1;
     }
 };
 
+// ============================================================
+// Solution 2: Stack — eliminate candidates — O(N) Time
+// ============================================================
 class Solution2 {
 public:
-    int findCelebrity(int n) {
-        stack<int> st;
-        for (int i = 0; i < n; i++) st.push(i);
-
-        // Eliminate: each comparison removes one person
-        while (st.size() > 1) {
-            int a = st.top(); st.pop();
-            int b = st.top(); st.pop();
-            if (knows(a, b)) st.push(b); // A knows B → A not celebrity
-            else st.push(a);             // A doesn't know B → B not celebrity
-        }
-
-        // Verify the candidate
-        int candidate = st.top();
-        for (int i = 0; i < n; i++) {
-            if (i == candidate) continue;
-            if (knows(candidate, i) || !knows(i, candidate)) return -1;
-        }
-        return candidate;
+    int findCelebrity(vector<vector<int>>& matrix) {
+        int n=matrix.size();
+        stack<int> st; for(int i=0;i<n;i++)st.push(i);
+        // Eliminate: if A knows B → A is not celebrity, else B is not
+        while(st.size()>1){int a=st.top();st.pop();int b=st.top();st.pop();
+            if(matrix[a][b])st.push(b);else st.push(a);}
+        int cand=st.top();
+        // Verify candidate
+        for(int i=0;i<n;i++){if(i==cand)continue;if(matrix[cand][i]==1||matrix[i][cand]==0)return -1;}
+        return cand;
     }
 };
