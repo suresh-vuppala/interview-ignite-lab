@@ -6,17 +6,21 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Copy, Check, Code2 } from 'lucide-react';
 
-// 🔹 Dynamically import all code files from your data folder
-const codeFiles = import.meta.glob('/src/data/**/*.@(cpp|java|py|js|ts)', { query: '?raw', import: 'default' });
+// 🔹 Eagerly import all code files as raw strings
+const codeFiles: Record<string, string> = import.meta.glob(
+  '/src/data/**/*.{cpp,java,py,js,ts}',
+  { as: 'raw', eager: true }
+);
 
-// 🔹 Helper function to fetch a file’s raw content
+// 🔹 Helper function to fetch a file's raw content (now synchronous via eager)
 async function fetchCodeFile(path: string): Promise<string> {
-  const loader = codeFiles[path];
-  if (!loader) {
-    console.warn(`⚠️ Code file not found: ${path}`);
-    return '// Code file not found';
+  if (codeFiles[path]) return codeFiles[path];
+  const suffix = path.split('/').slice(-3).join('/');
+  for (const key of Object.keys(codeFiles)) {
+    if (key.endsWith(suffix)) return codeFiles[key];
   }
-  return await loader();
+  console.warn('Code file not found:', path, 'Total files loaded:', Object.keys(codeFiles).length);
+  return '// Code file not found';
 }
 
 interface CodeLanguage {
