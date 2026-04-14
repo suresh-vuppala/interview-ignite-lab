@@ -11,16 +11,16 @@ Generate all subsets of an array using bitmask enumeration.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ N ≤ 20
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Empty array:** one empty subset
+2. **N = 20:** 2^20 ≈ 1 million subsets
+3. **Each bit represents include/exclude**
 
 <br>
 

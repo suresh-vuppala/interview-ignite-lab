@@ -11,7 +11,9 @@ Search in trie with '.' matching any single character.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁴
+- 1 ≤ word.length ≤ 25
+- '.' matches any letter
 
 <br>
 

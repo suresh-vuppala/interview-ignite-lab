@@ -11,7 +11,8 @@ Find maximum XOR of a number with any array element ≤ a constraint.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N, Q ≤ 10⁵
+- 0 ≤ values ≤ 10⁹
 
 <br>
 

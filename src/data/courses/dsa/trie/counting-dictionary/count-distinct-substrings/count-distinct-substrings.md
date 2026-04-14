@@ -11,7 +11,8 @@ Count the number of distinct substrings of a given string.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 1000
+- Lowercase letters
 
 <br>
 

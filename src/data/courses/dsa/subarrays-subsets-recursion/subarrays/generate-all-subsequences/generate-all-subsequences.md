@@ -11,7 +11,7 @@ Generate all subsequences using recursion (include/exclude pattern).
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ N ≤ 20
 
 <br>
 

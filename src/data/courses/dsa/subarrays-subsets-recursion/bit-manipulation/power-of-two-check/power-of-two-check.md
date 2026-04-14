@@ -11,16 +11,16 @@ Check if a number is a power of 2.
 ---
 
 ## Constraints
-- Typical problem constraints
+- -2³¹ ≤ N ≤ 2³¹ - 1
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **N = 0:** NOT power of 2
+2. **N negative:** NOT power of 2
+3. **N = 1:** IS power of 2
 
 <br>
 

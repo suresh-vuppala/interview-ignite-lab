@@ -11,16 +11,16 @@ Implement a LIFO stack using a single queue.
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 100 operations apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Push then immediate pop**
+2. **Multiple pushes then pop**
+3. **Empty stack operations**
 
 <br>
 

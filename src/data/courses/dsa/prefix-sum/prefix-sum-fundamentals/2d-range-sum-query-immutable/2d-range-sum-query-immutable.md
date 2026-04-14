@@ -11,16 +11,19 @@
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ M, N ≤ 200
+- -10⁵ ≤ matrix[i][j] ≤ 10⁵
+- Up to 10⁴ queries
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Single cell query:** row1=row2, col1=col2
+2. **Full matrix query**
+3. **Row or column query**
+4. **Negative values in matrix**
 
 <br>
 

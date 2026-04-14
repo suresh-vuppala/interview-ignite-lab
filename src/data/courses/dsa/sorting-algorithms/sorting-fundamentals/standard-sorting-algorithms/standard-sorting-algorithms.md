@@ -11,16 +11,15 @@ Overview and comparison of all standard sorting algorithms.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Comparison-based lower bound: Ω(N log N)
+- Non-comparison (counting/radix): O(N+K)
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **N/A — reference/comparison material**
 
 <br>
 

@@ -11,7 +11,7 @@ Find the size of the largest BST subtree within a binary tree.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
 
 <br>
 

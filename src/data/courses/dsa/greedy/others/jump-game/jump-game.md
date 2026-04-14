@@ -11,16 +11,18 @@ Can you reach the last index? Each element = maximum jump length from that posit
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁴
+- 0 ≤ nums[i] ≤ 10⁵ apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Single element:** always reachable
+2. **All zeros (except first):** unreachable if N>1
+3. **First element = N-1:** one jump
+4. **Zero in the middle blocking path**
 
 <br>
 

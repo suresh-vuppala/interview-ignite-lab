@@ -11,7 +11,9 @@ Find subsequence sum closest to a goal.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 40
+- -10⁷ ≤ nums[i] ≤ 10⁷
+- -10⁹ ≤ goal ≤ 10⁹
 
 <br>
 

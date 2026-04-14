@@ -11,7 +11,9 @@ Word break problem using trie for efficient dictionary lookup.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 300 (string length)
+- 1 ≤ dict.length ≤ 1000
+- 1 ≤ word.length ≤ 20
 
 <br>
 

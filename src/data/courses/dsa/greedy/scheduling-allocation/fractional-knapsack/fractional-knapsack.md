@@ -11,16 +11,18 @@ Maximize value with weight capacity W. Items can be taken fractionally.
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁵
+- 1 ≤ weight[i], value[i] ≤ 10⁴
+- 1 ≤ W ≤ 10⁹ apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **All items fit:** take everything
+2. **Single item too heavy:** take fraction
+3. **All same value/weight ratio**
 
 <br>
 

@@ -11,7 +11,8 @@ Find maximum XOR of any two numbers in an array.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 2 × 10⁵
+- 0 ≤ nums[i] ≤ 2³¹ - 1
 
 <br>
 

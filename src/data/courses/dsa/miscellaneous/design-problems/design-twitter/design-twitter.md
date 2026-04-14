@@ -11,7 +11,8 @@ Design simplified Twitter: postTweet, getNewsFeed, follow, unfollow.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ userId, tweetId ≤ 500
+- Up to 3 × 10⁴ calls
 
 <br>
 

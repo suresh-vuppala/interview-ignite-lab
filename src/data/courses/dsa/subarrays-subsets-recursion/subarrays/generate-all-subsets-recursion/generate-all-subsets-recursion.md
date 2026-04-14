@@ -11,7 +11,7 @@ Generate all subsets (power set) using recursion.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ N ≤ 20
 
 <br>
 

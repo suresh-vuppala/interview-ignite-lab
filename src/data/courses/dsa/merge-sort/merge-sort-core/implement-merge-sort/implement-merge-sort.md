@@ -9,7 +9,7 @@ Divide array in half, sort each, merge sorted halves.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
 
 <br>
 

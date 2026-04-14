@@ -11,16 +11,16 @@ Find minimum in unsorted portion, swap with front position.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁴
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Already sorted:** still O(N²) — no early exit
+2. **Single element**
+3. **All equal**
 
 <br>
 

@@ -11,7 +11,9 @@ Introduction to string hashing concepts and applications.
 ---
 
 ## Constraints
-- Typical problem constraints
+- String hashing fundamentals
+- base typically 31 or 37
+- mod typically 10⁹+7 or 10⁹+9
 
 <br>
 

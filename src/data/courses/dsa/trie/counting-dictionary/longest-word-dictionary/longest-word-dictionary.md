@@ -11,7 +11,8 @@ Find longest word in dictionary where every prefix is also a word in dictionary.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 1000
+- 1 ≤ word.length ≤ 30
 
 <br>
 

@@ -11,7 +11,8 @@ Count pairs (i,j) where word[i] is both prefix AND suffix of word[j].
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
+- 1 ≤ word.length ≤ 10⁵
 
 <br>
 

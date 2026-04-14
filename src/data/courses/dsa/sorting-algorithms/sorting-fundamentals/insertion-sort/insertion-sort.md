@@ -11,16 +11,16 @@ Insert each element into its correct position in the sorted prefix.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁴
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Nearly sorted:** O(N) — best case for insertion sort
+2. **Reverse sorted:** worst case O(N²)
+3. **All equal**
 
 <br>
 

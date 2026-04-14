@@ -11,16 +11,18 @@ Count subarrays with sum divisible by K.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 3 × 10⁴
+- -10⁴ ≤ nums[i] ≤ 10⁴
+- 2 ≤ K ≤ 10⁴
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Negative numbers:** handle negative mod correctly
+2. **K = 1:** all subarrays
+3. **All elements divisible by K**
 
 <br>
 

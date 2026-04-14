@@ -11,16 +11,18 @@ Split array into K subarrays minimizing the maximum subarray sum.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 1000
+- 0 ≤ nums[i] ≤ 10⁶
+- 1 ≤ K ≤ min(50, N)
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **K = 1:** sum of entire array
+2. **K = N:** max single element
+3. **All elements equal**
 
 <br>
 

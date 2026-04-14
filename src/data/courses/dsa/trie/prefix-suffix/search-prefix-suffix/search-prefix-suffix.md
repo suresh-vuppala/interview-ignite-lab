@@ -11,7 +11,8 @@ Find words matching both a prefix and suffix pattern.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁴
+- 1 ≤ word.length ≤ 7
 
 <br>
 

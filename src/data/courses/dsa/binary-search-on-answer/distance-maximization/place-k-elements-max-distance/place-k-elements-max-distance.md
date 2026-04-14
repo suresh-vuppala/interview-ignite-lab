@@ -11,16 +11,14 @@ Place K elements maximizing minimum distance. Generic version of aggressive cows
 ---
 
 ## Constraints
-- Typical problem constraints
+- Same constraints as aggressive cows / magnetic force
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Same edge cases as aggressive cows**
 
 <br>
 

@@ -11,16 +11,16 @@ Implement a double-ended queue supporting push/pop from both front and back.
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁵ operations apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Push/pop from both ends**
+2. **Empty deque operations**
+3. **Single element — pop from either end**
 
 <br>
 

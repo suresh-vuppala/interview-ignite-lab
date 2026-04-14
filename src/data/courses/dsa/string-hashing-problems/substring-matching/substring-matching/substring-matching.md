@@ -11,7 +11,8 @@ Find all occurrences of pattern in text using KMP or Rabin-Karp.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵ (text)
+- 1 ≤ M ≤ N (pattern)
 
 <br>
 

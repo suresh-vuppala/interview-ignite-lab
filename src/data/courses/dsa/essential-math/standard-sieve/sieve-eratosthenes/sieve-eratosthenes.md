@@ -11,7 +11,7 @@ Find all primes up to N using the Sieve of Eratosthenes.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 2 ≤ N ≤ 10⁷
 
 <br>
 

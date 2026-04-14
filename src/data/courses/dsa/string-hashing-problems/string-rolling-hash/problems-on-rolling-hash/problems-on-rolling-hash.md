@@ -11,7 +11,8 @@ String matching and duplicate substring problems using rolling hash.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ text.length ≤ 10⁵
+- 1 ≤ pattern.length ≤ text.length
 
 <br>
 

@@ -11,7 +11,7 @@ Implement ternary search tree as a trie alternative.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Sparser alphabets benefit most
 
 <br>
 

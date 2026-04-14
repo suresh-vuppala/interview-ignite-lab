@@ -11,16 +11,17 @@ Check if kth bit is set, set it, unset it, or toggle it.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ N ≤ 2³¹ - 1
+- 0 ≤ K ≤ 30
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **K beyond bit width**
+2. **N = 0:** no bits set
+3. **All bits set**
 
 <br>
 

@@ -11,7 +11,7 @@ Solve tree DP for all possible roots efficiently in O(N).
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
 
 <br>
 

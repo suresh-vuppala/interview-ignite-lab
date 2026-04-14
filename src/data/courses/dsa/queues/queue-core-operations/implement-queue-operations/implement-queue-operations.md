@@ -11,16 +11,16 @@ Implement a queue supporting enqueue, dequeue, front, and isEmpty operations.
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁵ operations apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Dequeue from empty queue**
+2. **Single element enqueue/dequeue**
+3. **Alternating enqueue/dequeue**
 
 <br>
 

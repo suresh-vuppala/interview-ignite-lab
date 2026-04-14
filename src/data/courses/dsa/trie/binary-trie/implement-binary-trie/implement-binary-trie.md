@@ -11,7 +11,8 @@ Binary trie storing integers bit by bit for XOR operations.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ values ≤ 2³¹ - 1
+- 32-bit integers
 
 <br>
 

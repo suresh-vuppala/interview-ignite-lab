@@ -9,7 +9,7 @@ Understand stable vs unstable sorting.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Comparison reference
 
 <br>
 

@@ -11,7 +11,7 @@ Generate all contiguous subarrays of an array.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 100
 
 <br>
 

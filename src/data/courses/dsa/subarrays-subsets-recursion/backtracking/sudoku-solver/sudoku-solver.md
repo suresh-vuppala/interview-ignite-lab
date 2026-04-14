@@ -11,7 +11,9 @@ Fill a 9×9 Sudoku grid following row, column, and 3×3 box uniqueness rules.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 9×9 grid
+- Partially filled with digits 1-9
+- Exactly one solution guaranteed
 
 <br>
 

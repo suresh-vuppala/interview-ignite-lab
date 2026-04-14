@@ -11,16 +11,17 @@ Find the minimum number of meeting rooms required for a schedule.
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁴
+- 0 ≤ start < end ≤ 10⁶ apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **No overlaps:** 1 room
+2. **All overlap:** N rooms
+3. **Back-to-back meetings [0,10],[10,20]:** share room
 
 <br>
 

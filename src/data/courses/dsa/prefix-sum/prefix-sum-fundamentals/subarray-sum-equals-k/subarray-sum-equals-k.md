@@ -11,16 +11,19 @@ Count subarrays with sum equal to K.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 2 × 10⁴
+- -1000 ≤ nums[i] ≤ 1000
+- -10⁷ ≤ K ≤ 10⁷
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **K = 0:** count subarrays summing to zero
+2. **Negative numbers:** sliding window won't work
+3. **Single element equals K**
+4. **All elements same**
 
 <br>
 

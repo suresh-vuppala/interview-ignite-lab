@@ -11,7 +11,9 @@ Find all words from a dictionary that exist in a grid by traversing adjacent cel
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ M, N ≤ 12
+- 1 ≤ words.length ≤ 3 × 10⁴
+- 1 ≤ word.length ≤ 10
 
 <br>
 

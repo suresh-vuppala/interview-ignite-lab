@@ -11,7 +11,8 @@ Subset sum for large N using Meet in the Middle.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 40
+- -10⁹ ≤ nums[i] ≤ 10⁹
 
 <br>
 

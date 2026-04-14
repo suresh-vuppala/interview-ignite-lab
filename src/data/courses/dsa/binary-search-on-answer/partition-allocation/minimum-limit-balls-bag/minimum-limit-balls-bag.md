@@ -11,16 +11,18 @@ Minimize the max balls in any bag after at most K operations (each splits one ba
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
+- 1 ≤ nums[i] ≤ 10⁹
+- 1 ≤ maxOps ≤ 10⁹
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **maxOps = 0:** answer = max element
+2. **maxOps ≥ sum:** answer = 1
+3. **Single bag**
 
 <br>
 

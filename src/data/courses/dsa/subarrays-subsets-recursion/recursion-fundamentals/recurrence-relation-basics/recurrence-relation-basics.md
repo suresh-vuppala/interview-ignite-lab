@@ -11,7 +11,7 @@ Solve recurrence relations using Master Theorem and substitution.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Conceptual — Master Theorem
 
 <br>
 

@@ -11,16 +11,17 @@ Find the integer square root of N (largest x where x² ≤ N).
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ N ≤ 2³¹ - 1
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **N = 0:** return 0
+2. **N = 1:** return 1
+3. **Perfect square:** exact answer
+4. **Large N:** avoid overflow in mid*mid
 
 <br>
 

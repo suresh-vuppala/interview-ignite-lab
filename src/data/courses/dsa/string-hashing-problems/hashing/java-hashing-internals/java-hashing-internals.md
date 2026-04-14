@@ -11,7 +11,8 @@ Java HashMap internals: hashCode, equals, tree buckets.
 ---
 
 ## Constraints
-- Typical problem constraints
+- java.util.HashMap internals
+- Treeification threshold: 8
 
 <br>
 

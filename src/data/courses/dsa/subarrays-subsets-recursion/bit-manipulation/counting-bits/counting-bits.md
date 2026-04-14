@@ -11,16 +11,15 @@ For each number 0 to N, count the number of set bits.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ N ≤ 10⁵
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **N = 0:** result = [0]
+2. **Power of 2:** bits reset to 1
 
 <br>
 

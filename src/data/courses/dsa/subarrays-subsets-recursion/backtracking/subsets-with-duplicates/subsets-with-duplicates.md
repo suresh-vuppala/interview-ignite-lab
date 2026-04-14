@@ -11,7 +11,8 @@ Generate unique subsets when array has duplicate elements.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ N ≤ 10
+- -10 ≤ nums[i] ≤ 10
 
 <br>
 

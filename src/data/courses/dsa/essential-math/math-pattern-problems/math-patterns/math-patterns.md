@@ -11,7 +11,7 @@ Common mathematical patterns in competitive programming.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Pattern-specific constraints
 
 <br>
 

@@ -9,7 +9,7 @@ Merge two sorted arrays into one.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ N, M ≤ 50
 
 <br>
 

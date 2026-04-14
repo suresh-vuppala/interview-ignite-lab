@@ -11,7 +11,8 @@ Find the row with maximum number of 1s in a binary matrix (rows sorted, 0s then 
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ M, N ≤ 100
+- Rows sorted (0s then 1s)
 
 <br>
 

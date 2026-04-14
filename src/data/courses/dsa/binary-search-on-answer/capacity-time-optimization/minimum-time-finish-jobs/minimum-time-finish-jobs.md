@@ -11,16 +11,17 @@ Minimize maximum working time distributing jobs to workers.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ K ≤ N ≤ 12
+- 1 ≤ jobs[i] ≤ 10⁷
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **K = 1:** sum of all jobs
+2. **K = N:** max single job
+3. **All jobs equal**
 
 <br>
 

@@ -11,16 +11,19 @@ Search in sorted array by halving search space each step.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
+- Array is sorted in ascending order
+- Elements are distinct (for basic version)
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Target not in array:** return -1
+2. **Target at boundaries:** first or last element
+3. **Single element array**
+4. **Integer overflow in mid calculation:** use lo + (hi-lo)/2
 
 <br>
 

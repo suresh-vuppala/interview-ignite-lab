@@ -9,7 +9,7 @@ Count pairs (i,j) where i<j but a[i]>a[j].
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
 
 <br>
 

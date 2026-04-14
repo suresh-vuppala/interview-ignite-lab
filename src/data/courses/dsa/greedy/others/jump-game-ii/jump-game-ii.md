@@ -11,16 +11,18 @@ Find MINIMUM number of jumps to reach the last index.
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁴
+- 0 ≤ nums[i] ≤ 1000
+- Guaranteed reachable apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Already at end:** 0 jumps
+2. **Single jump reaches end**
+3. **Must take maximum jumps**
 
 <br>
 

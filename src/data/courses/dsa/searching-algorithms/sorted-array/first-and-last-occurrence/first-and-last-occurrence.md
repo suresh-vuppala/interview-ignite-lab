@@ -11,16 +11,19 @@ Find first and last position of target in sorted array.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ N ≤ 10⁵
+- Array sorted ascending
+- -10⁹ ≤ nums[i] ≤ 10⁹
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Target not present:** return [-1, -1]
+2. **Single occurrence:** first == last
+3. **All elements are target**
+4. **Empty array**
 
 <br>
 

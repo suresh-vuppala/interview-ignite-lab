@@ -11,7 +11,7 @@ Compute combinations nCr and permutations nPr.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ R ≤ N ≤ 10⁶
 
 <br>
 

@@ -11,16 +11,17 @@ Count subarrays with odd sum and even sum.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
+- 1 ≤ nums[i] ≤ 10⁵
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **All even numbers:** only even-sum subarrays
+2. **All odd numbers:** alternating parity sums
+3. **Single element**
 
 <br>
 

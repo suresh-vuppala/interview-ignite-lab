@@ -11,7 +11,9 @@ Find unique combinations summing to target. Each number used AT MOST ONCE. No du
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 100
+- 1 ≤ candidates[i] ≤ 50
+- 1 ≤ target ≤ 30
 
 <br>
 

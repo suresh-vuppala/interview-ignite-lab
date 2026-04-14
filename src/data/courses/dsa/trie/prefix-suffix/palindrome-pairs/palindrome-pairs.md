@@ -11,7 +11,8 @@ Find all index pairs where words[i]+words[j] forms a palindrome.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 5000
+- 0 ≤ word.length ≤ 300
 
 <br>
 

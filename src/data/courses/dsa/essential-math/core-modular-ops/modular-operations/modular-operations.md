@@ -11,7 +11,8 @@ Modular arithmetic: addition, subtraction, multiplication.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ a, b ≤ 10⁹
+- 1 ≤ M ≤ 10⁹
 
 <br>
 

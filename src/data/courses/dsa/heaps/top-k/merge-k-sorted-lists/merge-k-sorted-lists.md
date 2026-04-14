@@ -11,16 +11,19 @@ Merge K sorted linked lists into one sorted list.
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 0 ≤ K ≤ 10⁴
+- 0 ≤ total nodes ≤ 10⁴
+- Lists are sorted ascending apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Empty lists array**
+2. **Some lists empty**
+3. **K = 1:** return the single list
+4. **All lists have one element**
 
 <br>
 

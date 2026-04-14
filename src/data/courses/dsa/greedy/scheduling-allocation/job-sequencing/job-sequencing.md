@@ -11,16 +11,18 @@ Schedule jobs with deadlines and profits to maximize total profit. Each job take
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁵
+- 1 ≤ deadline ≤ N
+- 1 ≤ profit ≤ 500 apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **All same deadline:** pick highest profit
+2. **All different deadlines:** assign each
+3. **More jobs than max deadline**
 
 <br>
 

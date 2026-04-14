@@ -9,7 +9,7 @@ Analyze time complexity of sorting algorithms.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Analysis reference
 
 <br>
 

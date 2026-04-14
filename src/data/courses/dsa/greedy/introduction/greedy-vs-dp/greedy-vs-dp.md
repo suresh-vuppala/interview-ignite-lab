@@ -11,16 +11,14 @@ Understand when to use greedy vs dynamic programming.
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- Conceptual — no specific constraints apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **N/A — conceptual comparison**
 
 <br>
 

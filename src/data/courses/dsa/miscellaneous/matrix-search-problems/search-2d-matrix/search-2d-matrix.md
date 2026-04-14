@@ -11,7 +11,9 @@ Search for target in a matrix where each row is sorted and first element of each
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ M, N ≤ 100
+- -10⁴ ≤ matrix[i][j] ≤ 10⁴
+- Rows and columns sorted, globally sorted
 
 <br>
 

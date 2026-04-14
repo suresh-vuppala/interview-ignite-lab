@@ -11,7 +11,7 @@ Partition array into two equal-sum subsets using MITM for large N.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 40
 
 <br>
 

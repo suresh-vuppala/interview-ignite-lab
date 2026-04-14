@@ -11,7 +11,8 @@ Move coins in binary tree so each node has exactly 1. Return minimum moves.
 ---
 
 ## Constraints
-- Typical problem constraints
+- N nodes, N total coins
+- 0 ≤ node.val ≤ N
 
 <br>
 

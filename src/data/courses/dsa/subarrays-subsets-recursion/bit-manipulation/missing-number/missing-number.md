@@ -11,16 +11,17 @@ Array of 0..N with one missing. Find it.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ N ≤ 10⁴
+- Array contains N distinct numbers from [0, N]
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Missing 0:** all numbers 1 to N present
+2. **Missing N:** all numbers 0 to N-1 present
+3. **N = 0:** empty array, missing 0
 
 <br>
 

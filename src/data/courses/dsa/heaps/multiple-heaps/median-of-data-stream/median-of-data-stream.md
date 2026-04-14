@@ -11,16 +11,18 @@ Find the median from a data stream. Support addNum and findMedian in O(log N) / 
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- -10⁵ ≤ num ≤ 10⁵
+- Up to 5 × 10⁴ calls apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Single element:** median = that element
+2. **Two elements:** average of both
+3. **All same values**
+4. **Sorted insertion order**
 
 <br>
 
