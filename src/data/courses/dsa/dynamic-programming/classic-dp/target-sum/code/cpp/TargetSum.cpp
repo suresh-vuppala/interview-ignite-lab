@@ -1,3 +1,0 @@
-class TargetSum {
-    // DP solution
-};

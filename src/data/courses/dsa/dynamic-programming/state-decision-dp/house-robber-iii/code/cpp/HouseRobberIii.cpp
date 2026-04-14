@@ -1,3 +1,0 @@
-class HouseRobberIii {
-    // DP solution
-};

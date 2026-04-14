@@ -1,3 +1,0 @@
-class StockTransactionFee {
-    // DP solution
-};

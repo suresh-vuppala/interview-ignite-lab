@@ -1,3 +1,0 @@
-class RussianDollEnvelopes {
-    // DP solution
-};

@@ -1,3 +1,0 @@
-class UniquePaths {
-    // DP solution
-};

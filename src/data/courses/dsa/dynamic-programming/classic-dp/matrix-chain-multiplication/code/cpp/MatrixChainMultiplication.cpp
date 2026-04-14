@@ -1,3 +1,0 @@
-class MatrixChainMultiplication {
-    // DP solution
-};

@@ -1,3 +1,0 @@
-class EggDropping {
-    // DP solution
-};

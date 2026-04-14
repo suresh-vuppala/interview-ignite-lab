@@ -1,3 +1,0 @@
-class NumberOfLis {
-    // DP solution
-};

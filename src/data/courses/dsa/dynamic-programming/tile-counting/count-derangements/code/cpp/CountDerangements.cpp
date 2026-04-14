@@ -1,3 +1,0 @@
-class CountDerangements {
-    // DP solution
-};

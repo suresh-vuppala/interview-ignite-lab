@@ -1,3 +1,0 @@
-class StockCooldown {
-    // DP solution
-};

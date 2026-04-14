@@ -1,3 +1,0 @@
-class BurstBalloons {
-    // DP solution
-};

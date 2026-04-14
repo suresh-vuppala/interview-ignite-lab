@@ -1,3 +1,0 @@
-class UnboundedKnapsack {
-    // DP solution
-};

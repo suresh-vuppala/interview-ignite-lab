@@ -1,3 +1,0 @@
-class DistinctSubsequences {
-    // DP solution
-};

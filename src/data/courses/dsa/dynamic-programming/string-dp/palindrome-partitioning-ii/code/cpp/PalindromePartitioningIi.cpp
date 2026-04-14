@@ -1,3 +1,0 @@
-class PalindromePartitioningIi {
-    // DP solution
-};

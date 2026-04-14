@@ -1,3 +1,0 @@
-class StockBuySellIv {
-    // DP solution
-};
