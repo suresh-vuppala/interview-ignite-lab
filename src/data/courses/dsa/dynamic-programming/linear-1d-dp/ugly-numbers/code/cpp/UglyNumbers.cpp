@@ -1,25 +1,41 @@
 #include <vector>
-#include <unordered_map>
+#include <algorithm>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Brute Force — check each number — O(N * ???)
+// ============================================================
+class Solution1 {
+    bool isUgly(int n) {
+        while(n>1) {
+            if(n%2==0) n/=2;
+            else if(n%3==0) n/=3;
+            else if(n%5==0) n/=5;
+            else return false;
+        }
+        return n==1;
+    }
 public:
-    // ============ TABULATION (BOTTOM-UP) ============
     int nthUglyNumber(int n) {
-        dp = [0] * n;
-        dp[0] = 1;
-        i2 = i3 = i5 = 0;
-        for i in range(1, n)) {
-            next2 = dp[i2] * 2;
-            next3 = dp[i3] * 3;
-            next5 = dp[i5] * 5;
-            dp[i] = min(next2, next3, next5);
-            if (dp[i] == next2) {
-                i2 += 1;
-            if (dp[i] == next3) {
-                i3 += 1;
-            if (dp[i] == next5) {
-                i5 += 1;
+        int count=0, num=0;
+        while(count<n) { num++; if(isUgly(num)) count++; }
+        return num;
+    }
+};
+
+// ============================================================
+// Solution 2: DP — Three-pointer merge — O(N) Time, O(N) Space
+// ============================================================
+class Solution2 {
+public:
+    int nthUglyNumber(int n) {
+        vector<int> dp(n); dp[0]=1;
+        int i2=0, i3=0, i5=0;
+        for(int i=1;i<n;i++) {
+            dp[i]=min({dp[i2]*2, dp[i3]*3, dp[i5]*5});
+            if(dp[i]==dp[i2]*2) i2++;
+            if(dp[i]==dp[i3]*3) i3++;
+            if(dp[i]==dp[i5]*5) i5++;
+        }
         return dp[n-1];
     }
 };

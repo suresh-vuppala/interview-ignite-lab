@@ -1,43 +1,33 @@
 #include <vector>
-#include <unordered_map>
 #include <algorithm>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Recursion — O(2^N) Time, O(N) Space
+// ============================================================
+class Solution1 {
 public:
-    // ============ MEMOIZATION (TOP-DOWN) ============
-    int minCostClimbingStairsMemo(vector<int>& cost) {
-        unordered_map<int, int> memo;
-        return min(dpMemo(0, cost, memo), dpMemo(1, cost, memo));
+    int solve(vector<int>& cost, int i) {
+        if (i <= 1) return cost[i];
+        return cost[i] + min(solve(cost, i-1), solve(cost, i-2));
     }
-    
-    int dpMemo(int i, vector<int>& cost, unordered_map<int, int>& memo) {
-        if (i >= cost.size()) return 0;
-        if (memo.count(i)) return memo[i];
-        memo[i] = cost[i] + min(dpMemo(i+1, cost, memo), dpMemo(i+2, cost, memo));
-        return memo[i];
-    }
-    
-    // ============ TABULATION (BOTTOM-UP) ============
-    int minCostClimbingStairsTab(vector<int>& cost) {
-        int n = cost.size();
-        vector<int> dp(n + 1, 0);
-        
-        for (int i = 2; i <= n; i++) {
-            dp[i] = min(dp[i-1] + cost[i-1], dp[i-2] + cost[i-2]);
-        }
-        return dp[n];
-    }
-    
-    // ============ SPACE OPTIMIZED ============
     int minCostClimbingStairs(vector<int>& cost) {
-        int prev2 = 0, prev1 = 0;
-        
-        for (int i = 2; i <= cost.size(); i++) {
-            int curr = min(prev1 + cost[i-1], prev2 + cost[i-2]);
-            prev2 = prev1;
-            prev1 = curr;
+        int n = cost.size();
+        return min(solve(cost, n-1), solve(cost, n-2));
+    }
+};
+
+// ============================================================
+// Solution 2: DP — Bottom-up with two variables — O(N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    int minCostClimbingStairs(vector<int>& cost) {
+        int n = cost.size();
+        int prev2 = cost[0], prev1 = cost[1];
+        for (int i = 2; i < n; i++) {
+            int curr = cost[i] + min(prev1, prev2);
+            prev2 = prev1; prev1 = curr;
         }
-        return prev1;
+        return min(prev1, prev2);
     }
 };

@@ -1,45 +1,37 @@
+#include <string>
 #include <vector>
-#include <unordered_map>
+#include <algorithm>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Recursion — O(2^(M+N)) Time
+// ============================================================
+class Solution1 {
 public:
-    // ============ MEMOIZATION (TOP-DOWN) ============
-    int longestCommonSubsequenceMemo(int text1, int text2) {
-        m = len(text1);
-        n = len(text2);
-        unordered_map<int, int> memo;
+    int lcs(string& a, string& b, int i, int j) {
+        if (i < 0 || j < 0) return 0;
+        if (a[i] == b[j]) return 1 + lcs(a, b, i-1, j-1);
+        return max(lcs(a, b, i-1, j), lcs(a, b, i, j-1));
     }
-    // ============ TABULATION (BOTTOM-UP) ============
-    int longestCommonSubsequence(int text1, int text2) {
-        m = len(text1);
-        n = len(text2);
-        dp = [[0] * (n + 1) for _ in range(m + 1)];
-        for i in range(1, m + 1)) {
-            for j in range(1, n + 1)) {
-                if (text1[i-1] == text2[j-1]) {
-                    dp[i][j] = 1 + dp[i-1][j-1];
-                else) {
-                    dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
-        return dp[m][n];
-    }
-    int longestCommonSubsequenceOptimized(int text1, int text2) {
-        m = len(text1);
-        n = len(text2);
-        if (m < n) {
-            text1 = text2;
-            text2 = text1;
-            m = n;
-            n = m;
-        prev = [0] * (n + 1);
-        for i in range(1, m + 1)) {
-            curr = [0] * (n + 1);
-            for j in range(1, n + 1)) {
-                if (text1[i-1] == text2[j-1]) {
-                    curr[j] = 1 + prev[j-1];
-                else) {
-                    curr[j] = max(prev[j], curr[j-1]);
-            prev = curr;
-        return prev[n];
+    int longestCommonSubsequence(string a, string b) { return lcs(a, b, a.size()-1, b.size()-1); }
+};
+
+// ============================================================
+// Solution 2: DP — 1D space optimization — O(M*N) Time, O(min(M,N)) Space
+// ============================================================
+class Solution2 {
+public:
+    int longestCommonSubsequence(string a, string b) {
+        if (a.size() < b.size()) swap(a, b);
+        int m = a.size(), n = b.size();
+        vector<int> dp(n+1, 0);
+        for (int i = 1; i <= m; i++) {
+            int prev = 0;
+            for (int j = 1; j <= n; j++) {
+                int tmp = dp[j];
+                dp[j] = (a[i-1]==b[j-1]) ? prev+1 : max(dp[j], dp[j-1]);
+                prev = tmp;
+            }
+        }
+        return dp[n];
     }
 };

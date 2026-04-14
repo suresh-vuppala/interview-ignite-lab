@@ -1,41 +1,26 @@
 #include <vector>
-#include <unordered_map>
+#include <algorithm>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Recursion — O(2^N) Time
+// ============================================================
+class Solution1 {
 public:
-    // ============ MEMOIZATION (TOP-DOWN) ============
-    int maxSumNonAdjacentMemo(int arr) {
-        n = len(arr);
-        if (n == 0) {
-            return 0;
-        unordered_map<int, int> memo;
+    int solve(vector<int>& nums, int i) {
+        if (i < 0) return 0;
+        return max(solve(nums, i-1), nums[i] + solve(nums, i-2));
     }
-    // ============ TABULATION (BOTTOM-UP) ============
-    int maxSumNonAdjacentTab(int arr) {
-        n = len(arr);
-        if (n == 0) {
-            return 0;
-        if (n == 1) {
-            return arr[0];
-        dp = [0] * n;
-        dp[0] = arr[0];
-        dp[1] = max(arr[0], arr[1]);
-        for i in range(2, n)) {
-            dp[i] = max(arr[i] + dp[i-2], dp[i-1]);
-        return dp[n-1];
-    }
-    int maxSumNonAdjacent(int arr) {
-        if (!arr) {
-            return 0;
-        if (len(arr) == 1) {
-            return arr[0];
-        prev2 = arr[0];
-        prev1 = max(arr[0];
-        for i in range(2, len(arr))) {
-            curr = max(arr[i] + prev2, prev1);
-            prev2 = prev1;
-            prev1 = curr;
+    int maxSum(vector<int>& nums) { return solve(nums, nums.size()-1); }
+};
+
+// ============================================================
+// Solution 2: DP — Bottom-up with two variables — O(N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    int maxSum(vector<int>& nums) {
+        int prev2 = 0, prev1 = 0;
+        for (int x : nums) { int c = max(prev1, x+prev2); prev2=prev1; prev1=c; }
         return prev1;
     }
 };

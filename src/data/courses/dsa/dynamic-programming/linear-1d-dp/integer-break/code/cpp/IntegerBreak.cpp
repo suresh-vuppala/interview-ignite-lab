@@ -1,29 +1,30 @@
 #include <vector>
-#include <unordered_map>
+#include <algorithm>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Recursion — try all breaks — O(2^N)
+// ============================================================
+class Solution1 {
 public:
-    // ============ MEMOIZATION (TOP-DOWN) ============
-    int integerBreakMemo(int n) {
-        unordered_map<int, int> memo;
+    int solve(int n) {
+        if(n<=1) return 1;
+        int res=0;
+        for(int i=1;i<n;i++) res=max(res, i*max(n-i, solve(n-i)));
+        return res;
     }
-    // ============ TABULATION (BOTTOM-UP) ============
+    int integerBreak(int n) { return solve(n); }
+};
+
+// ============================================================
+// Solution 2: DP — O(N²) Time, O(N) Space
+// ============================================================
+class Solution2 {
+public:
     int integerBreak(int n) {
-        vector<int> dp(n + 1, 0);
-        dp[1] = 1;
-        for i in range(2, n + 1)) {
-            for j in range(1, i)) {
-                dp[i] = max(dp[i], j * (i - j), j * dp[i - j]);
+        vector<int> dp(n+1,0); dp[1]=1;
+        for(int i=2;i<=n;i++)
+            for(int j=1;j<i;j++)
+                dp[i]=max(dp[i], j*max(i-j, dp[i-j]));
         return dp[n];
-    }
-    int integerBreakOptimized(int n) {
-        if (n <= 3) {
-            return n - 1;
-        product = 1;
-        while n > 4) {
-            product *= 3;
-            n -= 3;
-        return product * n;
     }
 };

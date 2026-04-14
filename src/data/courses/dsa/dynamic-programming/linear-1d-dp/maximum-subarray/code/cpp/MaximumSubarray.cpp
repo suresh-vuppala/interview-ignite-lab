@@ -1,30 +1,36 @@
 #include <vector>
-#include <unordered_map>
+#include <algorithm>
+#include <climits>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Brute Force — Check all subarrays — O(N²) Time
+// ============================================================
+class Solution1 {
 public:
-    // ============ MEMOIZATION (TOP-DOWN) ============
-    int maxSubArrayMemo(int nums) {
-        n = len(nums);
-        unordered_map<int, int> memo;
+    int maxSubArray(vector<int>& nums) {
+        int maxSum = INT_MIN, n = nums.size();
+        for (int i = 0; i < n; i++) {
+            int sum = 0;
+            for (int j = i; j < n; j++) {
+                sum += nums[j];
+                maxSum = max(maxSum, sum);
+            }
+        }
+        return maxSum;
     }
-    // ============ TABULATION (BOTTOM-UP) ============
-    int maxSubArrayTab(int nums) {
-        n = len(nums);
-        dp = [0] * n;
-        dp[0] = nums[0];
-        max_sum = dp[0];
-        for i in range(1, n)) {
-            dp[i] = max(nums[i], nums[i] + dp[i-1]);
-            max_sum = max(max_sum, dp[i]);
-        return max_sum;
-    }
-    int maxSubArray(int nums) {
-        max_ending_here = max_so_far = nums[0];
-        for i in range(1, len(nums))) {
-            max_ending_here = max(nums[i], max_ending_here + nums[i]);
-            max_so_far = max(max_so_far, max_ending_here);
-        return max_so_far;
+};
+
+// ============================================================
+// Solution 2: Kadane's Algorithm — O(N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int maxSum = nums[0], curSum = nums[0];
+        for (int i = 1; i < (int)nums.size(); i++) {
+            curSum = max(nums[i], curSum + nums[i]);
+            maxSum = max(maxSum, curSum);
+        }
+        return maxSum;
     }
 };

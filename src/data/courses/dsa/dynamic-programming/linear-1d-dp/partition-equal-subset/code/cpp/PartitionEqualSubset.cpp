@@ -1,46 +1,35 @@
 #include <vector>
-#include <unordered_map>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Recursion — O(2^N) Time
+// ============================================================
+class Solution1 {
 public:
-    // ============ MEMOIZATION (TOP-DOWN) ============
-    int canPartitionMemo(int nums) {
-        total = sum(nums);
-        if (total % 2 != 0) {
-            return false;
-        target = total // 2;
-        n = len(nums);
-        unordered_map<int, int> memo;
+    bool solve(vector<int>& nums, int target, int i) {
+        if (target == 0) return true;
+        if (i < 0 || target < 0) return false;
+        return solve(nums, target, i-1) || solve(nums, target-nums[i], i-1);
     }
-    // ============ TABULATION (BOTTOM-UP) ============
-    int canPartitionTab(int nums) {
-        total = sum(nums);
-        if (total % 2 != 0) {
-            return false;
-        target = total // 2;
-        n = len(nums);
-        dp = [[false] * (target + 1) for _ in range(n + 1)];
-        for i in range(n + 1)) {
-            dp[i][0] = true;
-        for i in range(1, n + 1)) {
-            for j in range(1, target + 1)) {
-                if (nums[i-1] <= j) {
-                    dp[i][j] = dp[i-1][j] || dp[i-1][j - nums[i-1]];
-                else) {
-                    dp[i][j] = dp[i-1][j];
-        return dp[n][target];
+    bool canPartition(vector<int>& nums) {
+        int sum = 0; for (int x : nums) sum += x;
+        if (sum % 2) return false;
+        return solve(nums, sum/2, nums.size()-1);
     }
-    int canPartition(int nums) {
-        total = sum(nums);
-        if (total % 2 != 0) {
-            return false;
-        target = total // 2;
-        dp = [false] * (target + 1);
-        dp[0] = true;
-        for num in nums) {
-            for j in range(target, num - 1, -1)) {
-                dp[j] = dp[j] || dp[j - num];
+};
+
+// ============================================================
+// Solution 2: DP — 1D boolean array — O(N*S) Time, O(S) Space
+// ============================================================
+class Solution2 {
+public:
+    bool canPartition(vector<int>& nums) {
+        int sum = 0; for (int x : nums) sum += x;
+        if (sum % 2) return false;
+        int target = sum / 2;
+        vector<bool> dp(target+1, false); dp[0] = true;
+        for (int x : nums)
+            for (int t = target; t >= x; t--)
+                dp[t] = dp[t] || dp[t-x];
         return dp[target];
     }
 };

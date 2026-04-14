@@ -1,13 +1,30 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-class Solution {
+// ============================================================
+// Solution 1: Recursion — O(2^W) Time (items reusable)
+// ============================================================
+class Solution1 {
 public:
-    int unboundedKnapsack(int W, vector<int>& wt, vector<int>& val) {
-        vector<int> dp(W + 1, 0);
-        for (int i = 0; i < (int)wt.size(); i++)
-            for (int w = wt[i]; w <= W; w++) // LEFT to RIGHT — allows reuse
-                dp[w] = max(dp[w], dp[w - wt[i]] + val[i]);
+    int solve(vector<int>& wt, vector<int>& val, int W, int i) {
+        if (i < 0 || W == 0) return 0;
+        if (wt[i] > W) return solve(wt, val, W, i-1);
+        return max(solve(wt, val, W, i-1), val[i] + solve(wt, val, W-wt[i], i)); // i not i-1
+    }
+    int knapsack(vector<int>& wt, vector<int>& val, int W) { return solve(wt, val, W, wt.size()-1); }
+};
+
+// ============================================================
+// Solution 2: DP — 1D bottom-up — O(N*W) Time, O(W) Space
+// ============================================================
+class Solution2 {
+public:
+    int knapsack(vector<int>& wt, vector<int>& val, int W) {
+        int n = wt.size();
+        vector<int> dp(W+1, 0);
+        for (int i = 0; i < n; i++)
+            for (int w = wt[i]; w <= W; w++) // left to right for unbounded
+                dp[w] = max(dp[w], val[i] + dp[w-wt[i]]);
         return dp[W];
     }
 };

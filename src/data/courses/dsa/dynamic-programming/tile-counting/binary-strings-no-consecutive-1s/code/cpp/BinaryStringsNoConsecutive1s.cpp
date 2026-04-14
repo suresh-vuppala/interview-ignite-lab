@@ -1,50 +1,30 @@
-#include <vector>
-#include <unordered_map>
-using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Recursion — O(2^N) Time
+// ============================================================
+class Solution1 {
 public:
-    // ==================== SOLUTION 1: RECURSIVE (BRUTE FORCE) ====================
-    // Time: O(2^n) | Space: O(n)
-    int binaryStringsRecursive(int n) {
+    int solve(int n, int last) {
+        if(n==0) return 1;
+        int res=solve(n-1,0); // place 0
+        if(last!=1) res+=solve(n-1,1); // place 1 if last wasn't 1
+        return res;
     }
-    // ==================== SOLUTION 2: MEMOIZATION (TOP-DOWN DP) ====================
-    // Time: O(n) | Space: O(n)
-    int binaryStringsMemo(int n) {
-        memo0 = {}
-        memo1 = {}
-    }
-    // ==================== SOLUTION 3: TABULATION (BOTTOM-UP DP) ====================
-    // Time: O(n) | Space: O(n)
-    int binaryStringsTab(int n) {
-        if (n == 1) { return 2;
-        end0 = [0] * (n + 1);
-        end1 = [0] * (n + 1);
-        end0[1] = 1;
-        end1[1] = 1;
-        for i in range(2, n + 1)) {
-            end0[i] = end0[i-1] + end1[i-1];
-            end1[i] = end0[i-1];
-        return end0[n] + end1[n];
-    }
-    int countBinaryStrings(int n) {
-        if (n == 1) { return 2;
-        prev_end0 = 1;
-        prev_end1 = 1;
-        for i in range(2, n + 1)) {
-            curr_end0 = prev_end0 + prev_end1;
-            curr_end1 = prev_end0;
-            prev_end0 = curr_end0;
-            prev_end1 = curr_end1;
-        return prev_end0 + prev_end1;
-    }
-    int countBinaryStringsFib(int n) {
-        if (n == 1) { return 2;
-        prev2, prev1 = 2, 3  # f(1)=2, f(2)=3;
-        for i in range(3, n + 1)) {
-            curr = prev1 + prev2;
-            prev2 = prev1;
-            prev1 = curr;
-        return prev1;
+    int countStrings(int n) { return solve(n,0); }
+};
+
+// ============================================================
+// Solution 2: DP — Fibonacci variant — O(N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    int countStrings(int n) {
+        // end0[i]=strings of len i ending in 0, end1[i]=ending in 1
+        int end0=1, end1=1;
+        for(int i=2;i<=n;i++) {
+            int new0=end0+end1;
+            int new1=end0;
+            end0=new0; end1=new1;
+        }
+        return end0+end1;
     }
 };
