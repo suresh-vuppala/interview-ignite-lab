@@ -17,7 +17,36 @@ Flatten a multilevel doubly linked list. Nodes may have a child pointer to anoth
 
 ---
 
-## Solution: Iterative DFS (Optimal)
+## Solution 1: Recursive DFS collecting all values
+
+**Intuition:**
+The most straightforward approach — collecting values then rebuilding wastes space.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) time, O(N) space
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Collecting values then rebuilding wastes space. In-place pointer manipulation is cleaner.
+
+> **Key Insight for Improvement:**
+> Use Iterative DFS (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Iterative DFS (Optimal)
 
 **Algorithm:** For each node with a child: find tail of child list, connect tail.next = curr.next, curr.next.prev = tail (if exists), curr.next = child, child.prev = curr, child = null.
 

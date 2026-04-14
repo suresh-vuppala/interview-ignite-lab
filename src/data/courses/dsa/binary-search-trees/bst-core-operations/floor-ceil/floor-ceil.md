@@ -17,7 +17,36 @@ Find the floor (largest value ≤ key) and ceil (smallest value ≥ key) in a BS
 
 ---
 
-## Solution: BST Traversal (Optimal)
+## Solution 1: Inorder traversal to sorted array, binary search
+
+**Intuition:**
+The most straightforward approach — full inorder wastes time.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Full inorder wastes time. BST property enables O(H) direct search.
+
+> **Key Insight for Improvement:**
+> Use BST Traversal (Optimal) for O(H) time.
+
+<br>
+
+---
+
+## Solution 2: BST Traversal (Optimal)
 
 **Algorithm:**
 - Floor: if node.val == key → return. If node.val < key → update floor, go right. If node.val > key → go left.

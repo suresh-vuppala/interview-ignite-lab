@@ -20,7 +20,36 @@ Invert a binary tree (mirror it). Swap every left and right child.
 
 ---
 
-## Solution: Recursive Swap (Optimal)
+## Solution 1: BFS level-order swap
+
+**Intuition:**
+The most straightforward approach — both bfs and recursive dfs work.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Both BFS and recursive DFS work. Recursive is more elegant.
+
+> **Key Insight for Improvement:**
+> Use Recursive Swap (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Recursive Swap (Optimal)
 
 **Algorithm:**
 1. If root null → return null

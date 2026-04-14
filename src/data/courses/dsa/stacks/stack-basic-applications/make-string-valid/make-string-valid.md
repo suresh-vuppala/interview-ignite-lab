@@ -30,7 +30,33 @@ Given a string of '(' and ')', return the minimum number of parentheses to add t
 
 ---
 
-## Solution 1: Counter — Track Unmatched (Optimal)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Less efficient approach exists.
+
+> **Key Insight for Improvement:**
+> Use Counter — Track Unmatched (Optimal) for optimal performance.
+
+<br>
+
+---
+
+## Solution 2: Counter — Track Unmatched (Optimal)
 
 **Intuition:** open tracks unmatched '('. When ')' arrives: if open > 0, it matches an open (open--). Otherwise, it's unmatched (close++). At the end: need open closes + close opens.
 

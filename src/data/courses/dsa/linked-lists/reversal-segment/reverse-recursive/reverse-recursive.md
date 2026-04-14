@@ -17,7 +17,36 @@ Reverse a singly linked list recursively.
 
 ---
 
-## Solution: Recursive Reversal (Optimal for elegance)
+## Solution 1: Iterative with extra array
+
+**Intuition:**
+The most straightforward approach — copy values to array, reverse array, copy back.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) time, O(N) space
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Copy values to array, reverse array, copy back. Two extra passes and O(N) space.
+
+> **Key Insight for Improvement:**
+> Use Recursive Reversal (Optimal for elegance) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Recursive Reversal (Optimal for elegance)
 
 **Algorithm:**
 1. Base case: if head is null or single node → return head

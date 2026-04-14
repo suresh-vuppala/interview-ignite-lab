@@ -16,7 +16,36 @@ Rotate a linked list to the right by k places.
 
 ---
 
-## Solution: Optimal
+## Solution 1: Rotate one position K times
+
+**Intuition:**
+The most straightforward approach — rotating one position at a time is o(n) per rotation.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N×K)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Rotating one position at a time is O(N) per rotation. Circular list technique is O(N) total.
+
+> **Key Insight for Improvement:**
+> Use Optimal for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Optimal
 
 **Algorithm:**
 1. Find length and tail

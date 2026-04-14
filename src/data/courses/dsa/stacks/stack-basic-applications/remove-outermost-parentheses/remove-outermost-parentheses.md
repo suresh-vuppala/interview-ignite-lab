@@ -30,7 +30,33 @@ Remove the outermost parentheses of every primitive valid parentheses decomposit
 
 ---
 
-## Solution 1: Depth Counter (Optimal)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Less efficient approach exists.
+
+> **Key Insight for Improvement:**
+> Use Depth Counter (Optimal) for optimal performance.
+
+<br>
+
+---
+
+## Solution 2: Depth Counter (Optimal)
 
 **Intuition:** Track depth. Opening bracket at depth 0 is outermost (skip). Closing bracket that brings depth to 0 is outermost (skip). Everything else: include.
 

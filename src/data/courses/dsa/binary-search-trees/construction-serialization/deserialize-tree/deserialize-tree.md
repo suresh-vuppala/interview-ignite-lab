@@ -17,7 +17,36 @@ Deserialize a string back to a binary tree.
 
 ---
 
-## Solution: BFS Deserialization (Optimal)
+## Solution 1: Parse preorder string recursively
+
+**Intuition:**
+The most straightforward approach — both approaches work.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Both approaches work. Must match serialization format.
+
+> **Key Insight for Improvement:**
+> Use BFS Deserialization (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: BFS Deserialization (Optimal)
 
 ### Time Complexity: O(N)
 ### Space Complexity: O(N)

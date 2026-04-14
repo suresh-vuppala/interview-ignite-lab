@@ -16,7 +16,36 @@ Group odd-indexed nodes before even-indexed nodes.
 
 ---
 
-## Solution: Optimal
+## Solution 1: Create two new lists, concatenate
+
+**Intuition:**
+The most straightforward approach — extra space for two new lists.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) time, O(N) space
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Extra space for two new lists. Can be done in-place by rewiring pointers.
+
+> **Key Insight for Improvement:**
+> Use Optimal for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Optimal
 
 **Algorithm:**
 odd=head, even=head.next, evenHead=even. While even and even.next: odd.next=even.next, odd=odd.next, even.next=odd.next, even=even.next. odd.next=evenHead.

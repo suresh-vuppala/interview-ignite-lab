@@ -31,7 +31,33 @@ Evaluate a postfix (Reverse Polish Notation) expression. Tokens are integers and
 
 ---
 
-## Solution 1: Stack — Process Tokens (Optimal)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Less efficient approach exists.
+
+> **Key Insight for Improvement:**
+> Use Stack — Process Tokens (Optimal) for optimal performance.
+
+<br>
+
+---
+
+## Solution 2: Stack — Process Tokens (Optimal)
 
 **Intuition:** Scan left to right. Numbers: push. Operators: pop two operands (b then a), compute a op b, push result. Final stack element is the answer.
 

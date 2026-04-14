@@ -17,7 +17,36 @@ Perform a flood fill on an image. Starting from pixel (sr, sc), change all conne
 
 ---
 
-## Solution: DFS Fill (Optimal)
+## Solution 1: BFS with queue
+
+**Intuition:**
+The most straightforward approach — bfs works but dfs recursive is simpler for flood fill.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(M×N)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> BFS works but DFS recursive is simpler for flood fill.
+
+> **Key Insight for Improvement:**
+> Use DFS Fill (Optimal) for O(M × N) time.
+
+<br>
+
+---
+
+## Solution 2: DFS Fill (Optimal)
 
 **Algorithm:** Record original color. If same as newColor → return (no-op). DFS: change color, recurse 4 directions.
 

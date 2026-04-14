@@ -17,7 +17,36 @@ Return a topological ordering using Kahn's algorithm (BFS-based). Also detects c
 
 ---
 
-## Solution: Kahn's BFS (Optimal)
+## Solution 1: DFS-based topological sort
+
+**Intuition:**
+The most straightforward approach — dfs with finish-time ordering.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(V+E)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> DFS with finish-time ordering. Kahn's BFS is more intuitive for detecting cycles.
+
+> **Key Insight for Improvement:**
+> Use Kahn's BFS (Optimal) for O(V + E) time.
+
+<br>
+
+---
+
+## Solution 2: Kahn's BFS (Optimal)
 
 **Algorithm:**
 1. Compute in-degrees. Enqueue all nodes with in-degree 0.

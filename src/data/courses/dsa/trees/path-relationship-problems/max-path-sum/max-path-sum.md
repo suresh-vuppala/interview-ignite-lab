@@ -20,7 +20,36 @@ Find the maximum path sum in a binary tree. A path can start and end at ANY node
 
 ---
 
-## Solution: DFS — Track Global Max While Computing Gains (Optimal)
+## Solution 1: Check all paths between all pairs
+
+**Intuition:**
+The most straightforward approach — checking every pair of nodes is quadratic.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N²)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Checking every pair of nodes is quadratic. Single DFS postorder is O(N).
+
+> **Key Insight for Improvement:**
+> Use DFS — Track Global Max While Computing Gains (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: DFS — Track Global Max While Computing Gains (Optimal)
 
 **Algorithm:**
 1. Helper returns max gain from this node downward (single path)

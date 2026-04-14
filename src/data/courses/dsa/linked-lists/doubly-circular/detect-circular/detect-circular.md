@@ -12,7 +12,36 @@ Detect if a linked list is circular (last node points back to head, not just any
 ## Constraints
 - `0 ≤ N ≤ 10⁵`
 
-## Solution: Traverse and Check (Optimal)
+## Solution 1: Hash Set of visited nodes
+
+**Intuition:**
+The most straightforward approach — o(n) space for hash set.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) time, O(N) space
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> O(N) space for hash set. Simple traversal checking curr==head is O(1) space.
+
+> **Key Insight for Improvement:**
+> Use Traverse and Check (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Traverse and Check (Optimal)
 
 ### Time Complexity: O(N)
 ### Space Complexity: O(1)

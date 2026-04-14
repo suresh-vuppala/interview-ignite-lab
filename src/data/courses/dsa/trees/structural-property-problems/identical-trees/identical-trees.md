@@ -20,7 +20,36 @@ Given two binary trees, check if they are structurally identical and have the sa
 
 ---
 
-## Solution: Recursive Comparison (Optimal)
+## Solution 1: Serialize both, compare strings
+
+**Intuition:**
+The most straightforward approach — string comparison uses o(n) space.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) time, O(N) space
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> String comparison uses O(N) space. Recursive comparison is O(1) extra.
+
+> **Key Insight for Improvement:**
+> Use Recursive Comparison (Optimal) for O(min(N, M)) time.
+
+<br>
+
+---
+
+## Solution 2: Recursive Comparison (Optimal)
 
 **Algorithm:**
 1. If both null → true

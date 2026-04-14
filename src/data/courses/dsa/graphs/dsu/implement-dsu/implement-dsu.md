@@ -16,7 +16,36 @@ Implement Disjoint Set Union (Union-Find) with path compression and union by ran
 
 ---
 
-## Solution: Path Compression + Union by Rank (Optimal)
+## Solution 1: Brute Force / Naive Approach
+
+**Intuition:**
+The most straightforward approach — straightforward but suboptimal.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N²) or higher
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Straightforward but suboptimal. Does redundant work that can be avoided with a better algorithm or data structure.
+
+> **Key Insight for Improvement:**
+> Use Path Compression + Union by Rank (Optimal) for O(α(N)) ≈ O(1) amortized per operation time.
+
+<br>
+
+---
+
+## Solution 2: Path Compression + Union by Rank (Optimal)
 
 **Algorithm:**
 - find(x): Follow parent pointers to root. Path compression: point all nodes on path directly to root.

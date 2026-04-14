@@ -17,7 +17,36 @@ Merge two sorted linked lists into one sorted list.
 
 ---
 
-## Solution: Merge with Dummy Node (Optimal)
+## Solution 1: Copy to array, sort, rebuild
+
+**Intuition:**
+The most straightforward approach — loses the sorted structure.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N log N)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Loses the sorted structure. Merging directly is O(N) and uses existing nodes.
+
+> **Key Insight for Improvement:**
+> Use Merge with Dummy Node (Optimal) for O(N + M) time.
+
+<br>
+
+---
+
+## Solution 2: Merge with Dummy Node (Optimal)
 
 **Algorithm:** Dummy node. Compare l1.val vs l2.val. Append smaller. Advance that pointer. After loop, append remaining.
 

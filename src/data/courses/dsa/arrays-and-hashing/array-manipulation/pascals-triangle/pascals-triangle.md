@@ -36,7 +36,33 @@ Given an integer numRows, return the first numRows of Pascal's triangle. Each nu
 
 ---
 
-## Solution 1: Row-by-Row Construction (Optimal)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Generating Pascal's triangle by computing combinations C(n,k) directly involves factorials — overflow risk and slower.
+
+> **Key Insight for Improvement:**
+> Use the additive property: each element = sum of two elements above it. Build row by row in O(numRows²) with no factorial computation.
+
+<br>
+
+---
+
+## Solution 2: Row-by-Row Construction (Optimal)
 
 **Intuition:**
 Build each row from the previous one. First/last elements are 1. Middle elements are the sum of two elements from the previous row.

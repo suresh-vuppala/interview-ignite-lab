@@ -39,7 +39,33 @@ Rearrange numbers into the lexicographically next greater permutation. If no gre
 
 ---
 
-## Solution 1: Three-Step Algorithm (Optimal)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> If you don't know the three-step algorithm, you might try generating all permutations — O(N!) which is infeasible.
+
+> **Key Insight for Improvement:**
+> Find the rightmost "dip" (nums[i] < nums[i+1]), swap with the smallest-larger element to its right, and reverse the suffix. This directly constructs the next permutation in O(N).
+
+<br>
+
+---
+
+## Solution 2: Three-Step Algorithm (Optimal)
 
 **Intuition:**
 To find the next permutation, we need the smallest increase. Find the rightmost position where we can make an increase (the "dip"), make the smallest possible swap, then minimize the suffix.

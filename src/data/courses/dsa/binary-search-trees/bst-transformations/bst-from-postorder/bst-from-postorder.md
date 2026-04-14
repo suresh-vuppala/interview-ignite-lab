@@ -17,7 +17,36 @@ Construct a BST from a given postorder traversal.
 
 ---
 
-## Solution: Reverse Iteration with Lower Bound (Optimal)
+## Solution 1: Insert elements one by one
+
+**Intuition:**
+The most straightforward approach — same as preorder — sequential insertion can be o(n²).
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N²) worst case
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Same as preorder — sequential insertion can be O(N²). Reverse bound approach is O(N).
+
+> **Key Insight for Improvement:**
+> Use Reverse Iteration with Lower Bound (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Reverse Iteration with Lower Bound (Optimal)
 
 **Algorithm:** Start from last element (root). build(lower_bound): if idx < 0 or postorder[idx] < bound → null. Create node. Right = build(node.val). Left = build(bound).
 

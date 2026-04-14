@@ -17,7 +17,36 @@ Implement Breadth-First Search (BFS) on a graph. Return nodes in BFS order.
 
 ---
 
-## Solution: Queue + Visited Set (Optimal)
+## Solution 1: DFS (alternative traversal)
+
+**Intuition:**
+The most straightforward approach — dfs explores depth-first.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(V+E)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> DFS explores depth-first. BFS is needed when shortest path or level-order is required.
+
+> **Key Insight for Improvement:**
+> Use Queue + Visited Set (Optimal) for O(V + E) time.
+
+<br>
+
+---
+
+## Solution 2: Queue + Visited Set (Optimal)
 
 **Algorithm:**
 1. Queue = [start], visited = {start}

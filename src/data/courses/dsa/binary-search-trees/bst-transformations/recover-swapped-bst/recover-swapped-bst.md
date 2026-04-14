@@ -17,7 +17,36 @@ Two nodes in a BST are swapped by mistake. Recover the BST without changing its 
 
 ---
 
-## Solution: Inorder + Find Two Violations (Optimal)
+## Solution 1: Inorder to array, find swapped, fix
+
+**Intuition:**
+The most straightforward approach — array copy uses o(n) space.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) time, O(N) space
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Array copy uses O(N) space. Inorder with prev pointer uses O(1) extra.
+
+> **Key Insight for Improvement:**
+> Use Inorder + Find Two Violations (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Inorder + Find Two Violations (Optimal)
 
 **Algorithm:** Inorder traversal tracking prev. If prev.val > curr.val → violation. First violation: first = prev. Second violation: second = curr. After traversal: swap first.val and second.val.
 

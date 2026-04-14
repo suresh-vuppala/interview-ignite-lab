@@ -30,7 +30,33 @@ Convert an infix expression (e.g., "a+b*c") to postfix notation (e.g., "abc*+") 
 
 ---
 
-## Solution 1: Operator Stack (Shunting-Yard Algorithm)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Less efficient approach exists.
+
+> **Key Insight for Improvement:**
+> Use Operator Stack (Shunting-Yard Algorithm) for optimal performance.
+
+<br>
+
+---
+
+## Solution 2: Operator Stack (Shunting-Yard Algorithm)
 
 **Intuition:** Operands go directly to output. Operators go to stack, but first pop higher/equal precedence operators. Parentheses: '(' pushes, ')' pops until '('.
 

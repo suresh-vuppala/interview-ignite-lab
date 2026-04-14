@@ -17,7 +17,36 @@ Create a singly linked list and traverse it. Print all node values.
 
 ---
 
-## Solution: Iterate with Pointer (Optimal)
+## Solution 1: Array-based simulation
+
+**Intuition:**
+The most straightforward approach — store elements in array.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Store elements in array. Simulates linked list without actual pointer structure. Loses O(1) insert/delete advantage.
+
+> **Key Insight for Improvement:**
+> Use Iterate with Pointer (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Iterate with Pointer (Optimal)
 
 **Algorithm:** Start from head. While current ≠ null: process current, move to current.next.
 

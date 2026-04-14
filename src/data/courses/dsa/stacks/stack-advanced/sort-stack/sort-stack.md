@@ -20,7 +20,33 @@ Sort a stack such that the smallest elements are on the top. You can only use on
 
 ---
 
-## Solution 1: Auxiliary Stack — Insertion Sort (Optimal with constraint)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Less efficient approach exists.
+
+> **Key Insight for Improvement:**
+> Use Auxiliary Stack — Insertion Sort (Optimal with constraint) for optimal performance.
+
+<br>
+
+---
+
+## Solution 2: Auxiliary Stack — Insertion Sort (Optimal with constraint)
 
 **Intuition:** Move elements to auxiliary stack in sorted order. For each element from input: while aux.top() > current, move back to input. Then push current to aux.
 

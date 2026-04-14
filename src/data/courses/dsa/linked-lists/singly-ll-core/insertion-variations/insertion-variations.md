@@ -16,7 +16,36 @@ Insert a node at the head, tail, or a specific position in a singly linked list.
 
 ---
 
-## Solution: Pointer Manipulation (Optimal)
+## Solution 1: Rebuild entire list
+
+**Intuition:**
+The most straightforward approach — create new list with element inserted.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Create new list with element inserted. Copy all elements. Wasteful when we only need to rewire one pointer.
+
+> **Key Insight for Improvement:**
+> Use Pointer Manipulation (Optimal) for O(1) for head, O(N) for tail/position time.
+
+<br>
+
+---
+
+## Solution 2: Pointer Manipulation (Optimal)
 
 **Algorithm:**
 - Head: O(1) — new.next = head, head = new

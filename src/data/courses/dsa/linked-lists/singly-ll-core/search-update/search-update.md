@@ -16,7 +16,36 @@ Search for a value in a linked list and update a node's value.
 
 ---
 
-## Solution: Linear Scan (Optimal)
+## Solution 1: N/A for search — linear scan is already optimal
+
+**Intuition:**
+The most straightforward approach — linear scan is the only option for unsorted linked list.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Linear scan is the only option for unsorted linked list. No way to binary search without random access.
+
+> **Key Insight for Improvement:**
+> Use Linear Scan (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Linear Scan (Optimal)
 
 ### Time Complexity: O(N)
 **Why?** Must traverse sequentially — no random access.

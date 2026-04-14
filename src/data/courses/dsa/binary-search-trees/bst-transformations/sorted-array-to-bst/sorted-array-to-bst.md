@@ -17,7 +17,36 @@ Convert a sorted array to a height-balanced BST.
 
 ---
 
-## Solution: Recursive Mid-Split (Optimal)
+## Solution 1: Insert elements one by one
+
+**Intuition:**
+The most straightforward approach — sequential insertion may create skewed tree.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N log N)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Sequential insertion may create skewed tree. Mid-split guarantees balance.
+
+> **Key Insight for Improvement:**
+> Use Recursive Mid-Split (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Recursive Mid-Split (Optimal)
 
 **Algorithm:** mid = (left+right)/2. root = nums[mid]. root.left = build(left, mid-1). root.right = build(mid+1, right).
 

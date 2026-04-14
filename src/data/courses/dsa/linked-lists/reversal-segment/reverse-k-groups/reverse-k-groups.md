@@ -17,7 +17,36 @@ Reverse nodes in k-group segments. If remaining nodes < k, leave them as-is.
 
 ---
 
-## Solution: Iterative Group Reversal (Optimal)
+## Solution 1: Recursive with array copy per group
+
+**Intuition:**
+The most straightforward approach — array-based reversal per group adds unnecessary space overhead.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) time, O(K) space
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Array-based reversal per group adds unnecessary space overhead.
+
+> **Key Insight for Improvement:**
+> Use Iterative Group Reversal (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Iterative Group Reversal (Optimal)
 
 **Algorithm:**
 1. Dummy node. groupPrev = dummy.

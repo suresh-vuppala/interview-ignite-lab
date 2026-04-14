@@ -17,7 +17,36 @@ Clone a linked list with random pointer (same as copy-random-pointer, in advance
 
 ---
 
-## Solution: Hash Map (Simple and Clean)
+## Solution 1: Hash Map: original→clone
+
+**Intuition:**
+The most straightforward approach — o(n) space for the map.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) time, O(N) space
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> O(N) space for the map. Interleave technique uses O(1) extra space.
+
+> **Key Insight for Improvement:**
+> Use Hash Map (Simple and Clean) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Hash Map (Simple and Clean)
 
 **Algorithm:** Pass 1: create clone for each node, store in map. Pass 2: for each node, clone.next = map[node.next], clone.random = map[node.random].
 

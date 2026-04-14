@@ -21,7 +21,33 @@ Implement a LIFO stack using only two queues. Support push, pop, top, and empty.
 
 ---
 
-## Solution 1: Push O(N), Pop O(1)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Less efficient approach exists.
+
+> **Key Insight for Improvement:**
+> Use Push O(N), Pop O(1) for optimal performance.
+
+<br>
+
+---
+
+## Solution 2: Push O(N), Pop O(1)
 
 **Intuition:** On push, add to queue then rotate N-1 elements to the back. Front is always the most recent.
 

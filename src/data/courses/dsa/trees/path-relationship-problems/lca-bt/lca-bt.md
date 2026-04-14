@@ -20,7 +20,36 @@ Find the Lowest Common Ancestor (LCA) of two nodes p and q in a binary tree.
 
 ---
 
-## Solution: Recursive DFS (Optimal)
+## Solution 1: Store paths, compare
+
+**Intuition:**
+The most straightforward approach — find paths root→p and root→q, compare for last common node.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) time, O(N) space
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Find paths root→p and root→q, compare for last common node. Uses O(N) space for paths.
+
+> **Key Insight for Improvement:**
+> Use Recursive DFS (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Recursive DFS (Optimal)
 
 **Algorithm:**
 1. If root is null or root == p or root == q → return root

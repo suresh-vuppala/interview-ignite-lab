@@ -16,7 +16,36 @@ Partition list around value x: all nodes < x come before nodes ≥ x.
 
 ---
 
-## Solution: Optimal
+## Solution 1: Copy to array, partition, rebuild
+
+**Intuition:**
+The most straightforward approach — extra space.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) time, O(N) space
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Extra space. Two-pointer partition rewires in-place.
+
+> **Key Insight for Improvement:**
+> Use Optimal for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Optimal
 
 **Algorithm:**
 Dummy before, dummy after. For each node: if val < x → append to before, else → append to after. Connect. Set after-tail.next = null.

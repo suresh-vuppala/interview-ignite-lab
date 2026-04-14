@@ -16,7 +16,36 @@ Design a Least Recently Used (LRU) cache. O(1) for get and put. When capacity ex
 
 ---
 
-## Solution: Hash Map + Doubly Linked List (Optimal)
+## Solution 1: Array + linear search for LRU
+
+**Intuition:**
+The most straightforward approach — linear scan to find and evict lru item.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) per get/put
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Linear scan to find and evict LRU item. HashMap + DLL achieves O(1).
+
+> **Key Insight for Improvement:**
+> Use Hash Map + Doubly Linked List (Optimal) for O(1) per operation time.
+
+<br>
+
+---
+
+## Solution 2: Hash Map + Doubly Linked List (Optimal)
 
 **Algorithm:**
 - get(key): if in map → move node to head, return value. Else -1.

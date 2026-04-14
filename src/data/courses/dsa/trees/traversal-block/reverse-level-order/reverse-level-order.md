@@ -20,7 +20,36 @@ Return the reverse level-order traversal — nodes level by level from bottom to
 
 ---
 
-## Solution: BFS + Reverse (Optimal)
+## Solution 1: Level order then reverse result
+
+**Intuition:**
+The most straightforward approach — bfs + reverse at end.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> BFS + reverse at end. Can also use BFS with front-insertion.
+
+> **Key Insight for Improvement:**
+> Use BFS + Reverse (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: BFS + Reverse (Optimal)
 
 **Algorithm:** Standard level-order BFS. After collecting all levels, reverse the result list.
 

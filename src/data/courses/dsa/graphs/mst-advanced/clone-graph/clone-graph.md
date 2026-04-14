@@ -17,7 +17,36 @@ Given a reference to a node in a connected undirected graph, return a deep copy 
 
 ---
 
-## Solution: DFS/BFS with HashMap (Optimal)
+## Solution 1: BFS + HashMap
+
+**Intuition:**
+The most straightforward approach — bfs approach is valid.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(V+E)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> BFS approach is valid. DFS is simpler recursively.
+
+> **Key Insight for Improvement:**
+> Use DFS/BFS with HashMap (Optimal) for O(V + E) time.
+
+<br>
+
+---
+
+## Solution 2: DFS/BFS with HashMap (Optimal)
 
 **Algorithm:** Map: original node → cloned node. DFS: create clone, recurse on neighbors. If neighbor already in map, use existing clone.
 

@@ -17,7 +17,36 @@ Construct a binary tree from inorder and postorder traversal arrays.
 
 ---
 
-## Solution: Recursive Split — Reverse of Preorder Approach (Optimal)
+## Solution 1: Try all possible trees
+
+**Intuition:**
+The most straightforward approach — same exponential approach.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(Catalan(N))
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Same exponential approach. HashMap + reverse processing is O(N).
+
+> **Key Insight for Improvement:**
+> Use Recursive Split — Reverse of Preorder Approach (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Recursive Split — Reverse of Preorder Approach (Optimal)
 
 ### Time Complexity: O(N)
 ### Space Complexity: O(N)

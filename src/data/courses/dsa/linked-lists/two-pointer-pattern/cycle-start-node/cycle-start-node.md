@@ -17,7 +17,36 @@ Find the node where the cycle begins in a linked list.
 
 ---
 
-## Solution: Floyd's + Phase 2 (Optimal)
+## Solution 1: Hash Set
+
+**Intuition:**
+The most straightforward approach — store all visited nodes in hash set.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) time, O(N) space
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Store all visited nodes in hash set. First revisited = cycle start. Uses O(N) extra space.
+
+> **Key Insight for Improvement:**
+> Use Floyd's + Phase 2 (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Floyd's + Phase 2 (Optimal)
 
 **Algorithm:**
 1. Phase 1: Detect cycle using slow/fast. Find meeting point.

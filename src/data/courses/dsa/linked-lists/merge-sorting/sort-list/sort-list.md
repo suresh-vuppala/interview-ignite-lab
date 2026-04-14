@@ -17,7 +17,36 @@ Sort a linked list in O(N log N) time and O(1) space.
 
 ---
 
-## Solution: Merge Sort (Optimal for linked list)
+## Solution 1: Copy to array, sort, rebuild
+
+**Intuition:**
+The most straightforward approach — extra o(n) space for array.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N log N) + O(N) space
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Extra O(N) space for array. Merge sort on list uses O(log N) stack only.
+
+> **Key Insight for Improvement:**
+> Use Merge Sort (Optimal for linked list) for O(N log N) time.
+
+<br>
+
+---
+
+## Solution 2: Merge Sort (Optimal for linked list)
 
 **Algorithm:**
 1. Base case: empty or single node → return

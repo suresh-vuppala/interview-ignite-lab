@@ -17,7 +17,36 @@ Reverse nodes from position left to position right (1-indexed) in a linked list.
 
 ---
 
-## Solution: Find Start + Reverse Segment (Optimal)
+## Solution 1: Copy to array, reverse segment, rebuild
+
+**Intuition:**
+The most straightforward approach — extra space for array copy.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Extra space for array copy. Pointer manipulation does it in-place.
+
+> **Key Insight for Improvement:**
+> Use Find Start + Reverse Segment (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Find Start + Reverse Segment (Optimal)
 
 **Algorithm:**
 1. Use dummy node. Traverse to node at position (left-1) = prev.

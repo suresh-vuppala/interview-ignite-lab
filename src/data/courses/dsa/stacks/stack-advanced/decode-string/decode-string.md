@@ -21,7 +21,33 @@ Given an encoded string like "3[a2[c]]", decode it. The pattern is k[encoded_str
 
 ---
 
-## Solution 1: Stack (Optimal)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Recursive approach without explicit stack can be harder to manage with deeply nested brackets and tricky edge cases.
+
+> **Key Insight for Improvement:**
+> Stack-based iteration: push current string and multiplier on '[', pop and build on ']'. Clean O(N) with explicit state management.
+
+<br>
+
+---
+
+## Solution 2: Stack (Optimal)
 
 **Intuition:** Build current string. When '[' encountered: save current state (string + count) on stack, reset. When ']': pop previous state, multiply current string by count, append to previous string.
 

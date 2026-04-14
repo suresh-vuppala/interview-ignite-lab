@@ -17,7 +17,36 @@ Find ALL shortest transformation sequences from beginWord to endWord.
 
 ---
 
-## Solution: BFS (parent map) + DFS (backtrack paths) (Optimal)
+## Solution 1: Brute Force / Naive Approach
+
+**Intuition:**
+The most straightforward approach — straightforward but suboptimal.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N²) or higher
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Straightforward but suboptimal. Does redundant work that can be avoided with a better algorithm or data structure.
+
+> **Key Insight for Improvement:**
+> Use BFS (parent map) + DFS (backtrack paths) (Optimal) for O(N × L × 26 + P) where P = total path length output time.
+
+<br>
+
+---
+
+## Solution 2: BFS (parent map) + DFS (backtrack paths) (Optimal)
 
 **Algorithm:**
 1. BFS from beginWord. For each word, track ALL parents (words that led to it at minimum distance).

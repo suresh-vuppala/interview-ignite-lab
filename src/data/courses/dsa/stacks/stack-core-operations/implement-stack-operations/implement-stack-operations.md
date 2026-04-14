@@ -38,7 +38,33 @@ Design a stack that supports push, pop, top, and isEmpty operations. All operati
 
 ---
 
-## Solution 1: Array-Based Stack (Optimal)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Using a linked list adds pointer overhead per element. For fixed-size scenarios, array is more cache-friendly.
+
+> **Key Insight for Improvement:**
+> Dynamic array (vector/ArrayList): push/pop at the END for O(1) amortized. Array-based stack is the standard implementation.
+
+<br>
+
+---
+
+## Solution 2: Array-Based Stack (Optimal)
 
 **Intuition:**
 Use a dynamic array. Push adds to the end, pop removes from the end. Both are O(1) amortized because array resizing doubles capacity.

@@ -20,7 +20,33 @@ Return the zigzag level order traversal — alternate left-to-right and right-to
 
 ---
 
-## Solution 1: BFS + Reverse Alternate Levels (Optimal)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Less efficient approach exists.
+
+> **Key Insight for Improvement:**
+> Use BFS + Reverse Alternate Levels (Optimal) for optimal performance.
+
+<br>
+
+---
+
+## Solution 2: BFS + Reverse Alternate Levels (Optimal)
 
 **Algorithm:** Standard level-order BFS. After collecting each level, if level index is odd → reverse the level list.
 

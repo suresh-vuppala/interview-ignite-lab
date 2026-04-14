@@ -17,7 +17,36 @@ Convert a binary tree to a doubly linked list using inorder traversal. Left poin
 
 ---
 
-## Solution: Inorder DFS with Prev Pointer (Optimal)
+## Solution 1: Inorder to array, build DLL
+
+**Intuition:**
+The most straightforward approach — array intermediate wastes space.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) time, O(N) space
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Array intermediate wastes space. In-place prev pointer technique is O(1) extra.
+
+> **Key Insight for Improvement:**
+> Use Inorder DFS with Prev Pointer (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Inorder DFS with Prev Pointer (Optimal)
 
 **Algorithm:** Inorder traversal. Maintain prev. First node (prev == null) = head. For each subsequent node: node.left = prev, prev.right = node. Update prev.
 

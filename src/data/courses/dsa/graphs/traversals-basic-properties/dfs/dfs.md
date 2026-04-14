@@ -17,7 +17,36 @@ Implement Depth-First Search (DFS) on a graph. Return nodes in DFS order.
 
 ---
 
-## Solution: Recursive DFS (Optimal)
+## Solution 1: BFS (alternative traversal)
+
+**Intuition:**
+The most straightforward approach — bfs explores breadth-first.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(V+E)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> BFS explores breadth-first. DFS is needed for cycle detection, topological sort, etc.
+
+> **Key Insight for Improvement:**
+> Use Recursive DFS (Optimal) for O(V + E) time.
+
+<br>
+
+---
+
+## Solution 2: Recursive DFS (Optimal)
 
 **Algorithm:**
 1. Mark start as visited, process it

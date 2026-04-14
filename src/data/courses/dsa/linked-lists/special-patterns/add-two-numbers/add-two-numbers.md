@@ -17,7 +17,36 @@ Add two numbers represented as linked lists (digits in reverse order).
 
 ---
 
-## Solution: Digit-by-Digit Addition with Carry (Optimal)
+## Solution 1: Convert to integers, add, convert back
+
+**Intuition:**
+The most straightforward approach — integer overflow for very long numbers.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N)
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Integer overflow for very long numbers. Digit-by-digit addition handles any length.
+
+> **Key Insight for Improvement:**
+> Use Digit-by-Digit Addition with Carry (Optimal) for O(max(N, M)) time.
+
+<br>
+
+---
+
+## Solution 2: Digit-by-Digit Addition with Carry (Optimal)
 
 **Algorithm:** Traverse both lists. sum = l1.val + l2.val + carry. digit = sum%10, carry = sum/10. Create new node with digit.
 

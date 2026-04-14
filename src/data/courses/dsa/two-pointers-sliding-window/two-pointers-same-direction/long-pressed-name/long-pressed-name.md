@@ -39,7 +39,33 @@ Your friend is typing their name on a keyboard. Sometimes keys are long pressed 
 
 ---
 
-## Solution 1: Two Pointers (Optimal)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Checking all possible long-press combinations is exponential.
+
+> **Key Insight for Improvement:**
+> Two pointers: advance both on match, advance only typed pointer on long-press repeat. Single pass O(N).
+
+<br>
+
+---
+
+## Solution 2: Two Pointers (Optimal)
 
 **Intuition:**
 Pointer i for name, j for typed. If characters match → advance both. If typed[j] matches typed[j-1] (long press) → advance only j. Otherwise → false.

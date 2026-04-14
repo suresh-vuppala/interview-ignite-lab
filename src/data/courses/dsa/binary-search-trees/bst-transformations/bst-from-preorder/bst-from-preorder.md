@@ -17,7 +17,36 @@ Construct a BST from a given preorder traversal.
 
 ---
 
-## Solution: Recursive with Upper Bound (Optimal)
+## Solution 1: Insert elements one by one into BST
+
+**Intuition:**
+The most straightforward approach — sequential insertion is o(n²) for sorted input.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N²) worst case
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Sequential insertion is O(N²) for sorted input. Bound-based recursion is O(N).
+
+> **Key Insight for Improvement:**
+> Use Recursive with Upper Bound (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Recursive with Upper Bound (Optimal)
 
 **Algorithm:** Maintain index i. build(bound): if i >= n or preorder[i] > bound → null. Create node with preorder[i++]. Left = build(node.val). Right = build(bound).
 

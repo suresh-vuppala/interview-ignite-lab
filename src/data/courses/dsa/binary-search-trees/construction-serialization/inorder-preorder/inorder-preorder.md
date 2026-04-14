@@ -17,7 +17,36 @@ Construct a binary tree from inorder and preorder traversal arrays.
 
 ---
 
-## Solution: Recursive Split with HashMap (Optimal)
+## Solution 1: Try all possible trees
+
+**Intuition:**
+The most straightforward approach — exponential — trying all structures.
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(Catalan(N))
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Exponential — trying all structures. HashMap + index approach is O(N).
+
+> **Key Insight for Improvement:**
+> Use Recursive Split with HashMap (Optimal) for O(N) time.
+
+<br>
+
+---
+
+## Solution 2: Recursive Split with HashMap (Optimal)
 
 **Algorithm:** preorder[0] = root. Find root index in inorder (hash map). Left subtree = inorder[0..rootIdx-1]. Right = inorder[rootIdx+1..end]. Recurse with correct preorder slices.
 

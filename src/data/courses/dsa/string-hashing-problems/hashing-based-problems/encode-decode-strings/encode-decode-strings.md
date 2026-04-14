@@ -44,7 +44,33 @@ Design an algorithm to encode a list of strings to a single string and decode it
 
 ---
 
-## Solution 1: Length-Prefix Encoding (Optimal)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Using a delimiter (like comma) fails if strings contain the delimiter character. Escaping adds complexity.
+
+> **Key Insight for Improvement:**
+> Length-prefix encoding: store length + separator + string. Works for ANY character set since length tells decoder exactly how many chars to read.
+
+<br>
+
+---
+
+## Solution 2: Length-Prefix Encoding (Optimal)
 
 **Intuition:**
 Prefix each string with its length followed by a '#' delimiter. To decode, read the length, skip past '#', then extract exactly that many characters.

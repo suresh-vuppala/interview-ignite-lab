@@ -29,7 +29,33 @@ Return the level-order (BFS) traversal of a binary tree — nodes grouped by lev
 
 ---
 
-## Solution 1: BFS with Queue (Optimal)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Less efficient approach exists.
+
+> **Key Insight for Improvement:**
+> Use BFS with Queue (Optimal) for optimal performance.
+
+<br>
+
+---
+
+## Solution 2: BFS with Queue (Optimal)
 
 **Intuition:** Queue processes nodes in FIFO order. At each level, the queue contains exactly the nodes at that level. Process them all, add their children, move to next level.
 

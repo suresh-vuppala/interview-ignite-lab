@@ -20,7 +20,33 @@ Design a stack that supports push, pop, top, and retrieving the maximum element,
 
 ---
 
-## Solution 1: Two Stacks — Main + Max Stack (Optimal for getMax/push/pop)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Less efficient approach exists.
+
+> **Key Insight for Improvement:**
+> Use Two Stacks — Main + Max Stack (Optimal for getMax/push/pop) for optimal performance.
+
+<br>
+
+---
+
+## Solution 2: Two Stacks — Main + Max Stack (Optimal for getMax/push/pop)
 
 **Intuition:** Parallel stack where max[i] = max of all elements at level i and below.
 

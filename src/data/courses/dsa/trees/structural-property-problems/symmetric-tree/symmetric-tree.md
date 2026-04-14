@@ -20,7 +20,33 @@ Check whether a binary tree is a mirror of itself (symmetric around its center).
 
 ---
 
-## Solution 1: Recursive Mirror Check (Optimal)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Less efficient approach exists.
+
+> **Key Insight for Improvement:**
+> Use Recursive Mirror Check (Optimal) for optimal performance.
+
+<br>
+
+---
+
+## Solution 2: Recursive Mirror Check (Optimal)
 
 **Algorithm:**
 1. isMirror(left, right):

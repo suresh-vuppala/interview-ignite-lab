@@ -20,7 +20,33 @@ Given two binary trees root and subRoot, check if subRoot is a subtree of root.
 
 ---
 
-## Solution 1: DFS + isSameTree Helper (Optimal for interviews)
+## Solution 1: Naive / Brute Force Approach
+
+**Intuition:**
+Try the most straightforward method without optimization.
+
+**Algorithm:**
+1. Apply the direct/naive approach
+2. May involve extra space, multiple passes, or higher time complexity
+3. Serves as baseline to understand the problem before optimizing
+
+### Time Complexity: Higher than optimal
+**Why?**
+Does not exploit key structural properties of the problem.
+
+### Space Complexity: May use extra space
+
+> **Drawback:**
+> Less efficient approach exists.
+
+> **Key Insight for Improvement:**
+> Use DFS + isSameTree Helper (Optimal for interviews) for optimal performance.
+
+<br>
+
+---
+
+## Solution 2: DFS + isSameTree Helper (Optimal for interviews)
 
 **Algorithm:**
 1. If root null → return false

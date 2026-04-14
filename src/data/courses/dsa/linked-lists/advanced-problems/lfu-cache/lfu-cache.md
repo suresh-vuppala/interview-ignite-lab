@@ -16,7 +16,36 @@ Design a Least Frequently Used (LFU) cache. O(1) for get and put. When capacity 
 
 ---
 
-## Solution: Two Hash Maps + DLLs (Optimal)
+## Solution 1: Array + frequency counter
+
+**Intuition:**
+The most straightforward approach — scanning for minimum frequency is o(n).
+
+**Algorithm:**
+1. Apply the naive/brute approach as described
+2. Check all possibilities or use a simpler data structure
+3. Return the result
+
+### Time Complexity: O(N) per get/put
+**Why?**
+The brute approach doesn't exploit the problem's structure efficiently, leading to redundant work.
+
+**Detailed breakdown:**
+For typical constraint sizes, this approach may be too slow or use too much space.
+
+### Space Complexity: O(1) or O(N) depending on approach
+
+> **Drawback:**
+> Scanning for minimum frequency is O(N). Two hashmaps + DLL per freq = O(1).
+
+> **Key Insight for Improvement:**
+> Use Two Hash Maps + DLLs (Optimal) for O(1) per operation time.
+
+<br>
+
+---
+
+## Solution 2: Two Hash Maps + DLLs (Optimal)
 
 **Algorithm:**
 - get: lookup in map, increase frequency, move to new freq list, return value
