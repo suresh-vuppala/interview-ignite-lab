@@ -17,6 +17,16 @@ Find the MST using Prim's algorithm. Grows the MST one vertex at a time from a s
 
 ---
 
+## All Possible Edge Cases
+1. **Single vertex:** MST weight = 0
+2. **All edges same weight:** any spanning tree works
+3. **Dense graph:** Prim's with adjacency matrix is O(V²)
+4. **Sparse graph:** Prim's with priority queue is O(E log V)
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

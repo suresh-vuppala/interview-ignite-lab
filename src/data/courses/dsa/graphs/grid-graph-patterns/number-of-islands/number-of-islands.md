@@ -17,6 +17,18 @@ Given a 2D grid of '1's (land) and '0's (water), count the number of islands. An
 
 ---
 
+## All Possible Edge Cases
+1. **All water:** grid is entirely '0' → 0 islands
+2. **All land:** grid is entirely '1' → 1 island
+3. **Single cell:** 1×1 grid
+4. **Diagonal only:** diagonally adjacent land cells are separate islands
+5. **Islands touching borders**
+6. **Large grid:** 300×300 = 90,000 cells
+
+<br>
+
+---
+
 ## Solution 1: BFS flood fill
 
 **Intuition:**

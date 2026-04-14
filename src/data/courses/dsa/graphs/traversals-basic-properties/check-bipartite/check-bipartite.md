@@ -17,6 +17,18 @@ Check if a graph is bipartite — can nodes be colored with 2 colors such that n
 
 ---
 
+## All Possible Edge Cases
+1. **Odd-length cycle:** NOT bipartite
+2. **Even-length cycle:** bipartite
+3. **Tree:** always bipartite
+4. **Disconnected graph:** check each component
+5. **Single node:** bipartite (trivially)
+6. **Self-loop:** NOT bipartite
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

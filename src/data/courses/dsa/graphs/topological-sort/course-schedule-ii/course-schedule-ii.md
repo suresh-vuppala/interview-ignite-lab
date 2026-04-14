@@ -17,6 +17,16 @@ Return the ordering of courses to take to finish all courses. If impossible (cyc
 
 ---
 
+## All Possible Edge Cases
+1. **Cycle present:** return empty array
+2. **No prerequisites:** any order works
+3. **Linear chain:** unique ordering
+4. **Multiple valid orderings**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

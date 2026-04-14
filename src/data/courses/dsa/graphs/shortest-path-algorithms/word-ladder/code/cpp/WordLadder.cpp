@@ -1,152 +1,65 @@
-#include <vector>
 #include <string>
-#include <unordered_set>
-#include <unordered_map>
+#include <vector>
 #include <queue>
-#include <algorithm>
+#include <unordered_set>
 using namespace std;
-
-class WordLadder {
+// ============================================================
+// Solution 1: BFS — try all single-char changes — O(N * L * 26)
+// ============================================================
+class Solution1 {
 public:
-    
-    // ==================== SOLUTION 1: BFS WITH NEIGHBOR GENERATION ====================
-    // Time: O(N×L²×26) | Space: O(N×L)
-    
-    static int ladderLengthBFS(string beginWord, string endWord, vector<string>& wordList) {
-        /*
-         * Generate all possible one-letter changes for each word.
-         * Try all 26 letters at each position.
-         */
-        unordered_set<string> wordSet(wordList.begin(), wordList.end());
-        if (wordSet.find(endWord) == wordSet.end()) return 0;
-        
-        queue<pair<string, int>> q;
-        unordered_set<string> visited;
+    int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
+        unordered_set<string> dict(wordList.begin(), wordList.end());
+        if (!dict.count(endWord)) return 0;
+        queue<pair<string,int>> q;
         q.push({beginWord, 1});
-        visited.insert(beginWord);
-        
+        dict.erase(beginWord);
         while (!q.empty()) {
-            auto [word, level] = q.front();
-            q.pop();
-            
-            if (word == endWord) return level;
-            
-            string nextWord = word;
-            for (int i = 0; i < word.length(); i++) {
-                char old = nextWord[i];
+            auto [word, steps] = q.front(); q.pop();
+            if (word == endWord) return steps;
+            for (int i = 0; i < (int)word.size(); i++) {
+                char orig = word[i];
                 for (char c = 'a'; c <= 'z'; c++) {
-                    nextWord[i] = c;
-                    if (wordSet.find(nextWord) != wordSet.end() && 
-                        visited.find(nextWord) == visited.end()) {
-                        visited.insert(nextWord);
-                        q.push({nextWord, level + 1});
+                    word[i] = c;
+                    if (dict.count(word)) {
+                        dict.erase(word);
+                        q.push({word, steps + 1});
                     }
                 }
-                nextWord[i] = old;
+                word[i] = orig;
             }
         }
         return 0;
     }
-    
-    
-    // ==================== SOLUTION 2: BFS WITH PATTERN MATCHING ====================
-    // Time: O(N×L²) | Space: O(N×L²)
-    
-    static int ladderLengthPattern(string beginWord, string endWord, vector<string>& wordList) {
-        /*
-         * Preprocess words into patterns (e.g., "hot" -> "*ot", "h*t", "ho*").
-         * Words sharing a pattern are neighbors.
-         */
-        unordered_set<string> wordSet(wordList.begin(), wordList.end());
-        if (wordSet.find(endWord) == wordSet.end()) return 0;
-        
-        unordered_map<string, vector<string>> patternMap;
-        for (const string& word : wordList) {
-            for (int i = 0; i < word.length(); i++) {
-                string pattern = word.substr(0, i) + "*" + word.substr(i + 1);
-                patternMap[pattern].push_back(word);
-            }
-        }
-        
-        queue<pair<string, int>> q;
-        unordered_set<string> visited;
-        q.push({beginWord, 1});
-        visited.insert(beginWord);
-        
-        while (!q.empty()) {
-            auto [word, level] = q.front();
-            q.pop();
-            
-            if (word == endWord) return level;
-            
-            for (int i = 0; i < word.length(); i++) {
-                string pattern = word.substr(0, i) + "*" + word.substr(i + 1);
-                if (patternMap.find(pattern) != patternMap.end()) {
-                    for (const string& neighbor : patternMap[pattern]) {
-                        if (visited.find(neighbor) == visited.end()) {
-                            visited.insert(neighbor);
-                            q.push({neighbor, level + 1});
-                        }
-                    }
-                }
-            }
-        }
-        return 0;
-    }
-    
-    
-    // ==================== SOLUTION 3: BIDIRECTIONAL BFS (OPTIMAL) ====================
-    // Time: O(N×L²) | Space: O(N×L)
-    
-    static int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
-        /*
-         * Search from both beginWord and endWord simultaneously.
-         * When searches meet, we found the shortest path.
-         * Explores exponentially fewer nodes.
-         */
-        unordered_set<string> wordSet(wordList.begin(), wordList.end());
-        if (wordSet.find(endWord) == wordSet.end()) return 0;
-        
-        unordered_set<string> beginSet, endSet, visited;
-        beginSet.insert(beginWord);
-        endSet.insert(endWord);
-        int level = 1;
-        
-        while (!beginSet.empty() && !endSet.empty()) {
-            // Always expand smaller set
-            if (beginSet.size() > endSet.size()) {
-                swap(beginSet, endSet);
-            }
-            
-            unordered_set<string> nextSet;
-            for (const string& word : beginSet) {
-                string nextWord = word;
-                
-                for (int i = 0; i < word.length(); i++) {
-                    char old = nextWord[i];
-                    
+};
+
+// ============================================================
+// Solution 2: Bidirectional BFS — O(N * L * 26) but ~half the states
+// ============================================================
+class Solution2 {
+public:
+    int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
+        unordered_set<string> dict(wordList.begin(), wordList.end());
+        if (!dict.count(endWord)) return 0;
+        unordered_set<string> front = {beginWord}, back = {endWord};
+        dict.erase(beginWord); dict.erase(endWord);
+        int steps = 1;
+        while (!front.empty() && !back.empty()) {
+            if (front.size() > back.size()) swap(front, back);
+            unordered_set<string> next;
+            for (string word : front) {
+                for (int i = 0; i < (int)word.size(); i++) {
+                    char orig = word[i];
                     for (char c = 'a'; c <= 'z'; c++) {
-                        nextWord[i] = c;
-                        
-                        if (endSet.find(nextWord) != endSet.end()) {
-                            return level + 1;
-                        }
-                        
-                        if (wordSet.find(nextWord) != wordSet.end() && 
-                            visited.find(nextWord) == visited.end()) {
-                            visited.insert(nextWord);
-                            nextSet.insert(nextWord);
-                        }
+                        word[i] = c;
+                        if (back.count(word)) return steps + 1;
+                        if (dict.count(word)) { dict.erase(word); next.insert(word); }
                     }
-                    
-                    nextWord[i] = old;
+                    word[i] = orig;
                 }
             }
-            
-            beginSet = nextSet;
-            level++;
+            front = next; steps++;
         }
-        
         return 0;
     }
 };

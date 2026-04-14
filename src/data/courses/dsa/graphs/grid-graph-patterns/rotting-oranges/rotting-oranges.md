@@ -17,6 +17,17 @@ In a grid, fresh oranges (1) rot when adjacent to rotten oranges (2) each minute
 
 ---
 
+## All Possible Edge Cases
+1. **No fresh oranges:** return 0 immediately
+2. **No rotten oranges but fresh exist:** return -1 (impossible)
+3. **Fresh orange unreachable:** blocked by empty cells → -1
+4. **All rotten already:** 0 minutes
+5. **Single cell**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

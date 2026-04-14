@@ -17,6 +17,18 @@ Implement Breadth-First Search (BFS) on a graph. Return nodes in BFS order.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty graph:** No vertices or edges
+2. **Single vertex:** No edges to traverse
+3. **Disconnected graph:** BFS from one component doesn't reach others
+4. **Self-loops:** Vertex connected to itself
+5. **Cycle:** Must track visited to avoid infinite loop
+6. **Complete graph:** Every vertex connected to every other
+
+<br>
+
+---
+
 ## Solution 1: DFS (alternative traversal)
 
 **Intuition:**

@@ -17,6 +17,17 @@ Return a topological ordering using Kahn's algorithm (BFS-based). Also detects c
 
 ---
 
+## All Possible Edge Cases
+1. **Graph with cycle:** no valid topological order exists
+2. **Single node:** trivial ordering
+3. **Linear chain:** only one valid order (A→B→C)
+4. **Multiple valid orderings:** parallel independent nodes
+5. **Disconnected DAG:** multiple components
+
+<br>
+
+---
+
 ## Solution 1: DFS-based topological sort
 
 **Intuition:**

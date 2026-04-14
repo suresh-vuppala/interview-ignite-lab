@@ -17,6 +17,16 @@ Detect if a directed graph contains a cycle.
 
 ---
 
+## All Possible Edge Cases
+1. **DAG (no cycle):** valid topological order exists
+2. **Self-loop:** immediate cycle
+3. **Back edge in DFS tree:** confirms cycle
+4. **Disconnected components:** check each
+
+<br>
+
+---
+
 ## Solution 1: DFS with Three Colors (Optimal)
 
 **Intuition:**

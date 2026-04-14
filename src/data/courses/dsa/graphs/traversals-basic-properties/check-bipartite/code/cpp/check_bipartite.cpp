@@ -1,31 +1,44 @@
-// ============================================================
-// Check Bipartite Graph
-// ============================================================
 #include <vector>
 #include <queue>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: DFS — 2-coloring — O(V+E) Time
+// ============================================================
+class Solution1 {
+    bool dfs(vector<vector<int>>& adj, int u, vector<int>& color, int c) {
+        color[u] = c;
+        for (int v : adj[u]) {
+            if (color[v] == -1) { if (!dfs(adj, v, color, 1-c)) return false; }
+            else if (color[v] == c) return false;  // Same color = not bipartite
+        }
+        return true;
+    }
 public:
     bool isBipartite(vector<vector<int>>& adj) {
-        int n = adj.size();
-        vector<int> color(n, -1); // -1 = uncolored
+        int V = adj.size();
+        vector<int> color(V, -1);
+        for (int i = 0; i < V; i++)
+            if (color[i] == -1 && !dfs(adj, i, color, 0)) return false;
+        return true;
+    }
+};
 
-        for (int i = 0; i < n; i++) {
-            if (color[i] != -1) continue; // Already colored
-            // BFS 2-coloring
-            queue<int> q;
-            q.push(i);
-            color[i] = 0;
+// ============================================================
+// Solution 2: BFS — 2-coloring — O(V+E) Time
+// ============================================================
+class Solution2 {
+public:
+    bool isBipartite(vector<vector<int>>& adj) {
+        int V = adj.size();
+        vector<int> color(V, -1);
+        for (int start = 0; start < V; start++) {
+            if (color[start] != -1) continue;
+            queue<int> q; q.push(start); color[start] = 0;
             while (!q.empty()) {
-                int node = q.front(); q.pop();
-                for (int nb : adj[node]) {
-                    if (color[nb] == -1) {
-                        color[nb] = 1 - color[node]; // Opposite color
-                        q.push(nb);
-                    } else if (color[nb] == color[node]) {
-                        return false; // Same color conflict!
-                    }
+                int u = q.front(); q.pop();
+                for (int v : adj[u]) {
+                    if (color[v] == -1) { color[v] = 1 - color[u]; q.push(v); }
+                    else if (color[v] == color[u]) return false;
                 }
             }
         }

@@ -17,6 +17,17 @@ Given a reference to a node in a connected undirected graph, return a deep copy 
 
 ---
 
+## All Possible Edge Cases
+1. **Empty graph:** null input → return null
+2. **Single node:** no neighbors
+3. **Two nodes connected:** simplest edge case
+4. **Complete graph:** every node connected to every other
+5. **Graph with cycle:** must handle visited nodes
+
+<br>
+
+---
+
 ## Solution 1: BFS + HashMap
 
 **Intuition:**

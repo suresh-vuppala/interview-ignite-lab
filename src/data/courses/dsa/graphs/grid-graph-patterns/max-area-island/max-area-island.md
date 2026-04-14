@@ -17,6 +17,16 @@ Find the maximum area of an island in a 2D grid. Area = number of '1' cells in t
 
 ---
 
+## All Possible Edge Cases
+1. **No islands:** all 0s → return 0
+2. **Single cell island:** area = 1
+3. **Entire grid is one island:** area = M*N
+4. **L-shaped / irregular islands**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

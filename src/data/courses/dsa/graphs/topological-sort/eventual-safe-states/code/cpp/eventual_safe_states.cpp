@@ -1,24 +1,41 @@
-// ============================================================
-// Find Eventual Safe States
-// ============================================================
 #include <vector>
+#include <queue>
 using namespace std;
-class Solution {
+// ============================================================
+// Solution 1: DFS with 3-color — O(V+E)
+// ============================================================
+class Solution1 {
+    bool isSafe(vector<vector<int>>& adj, int u, vector<int>& color) {
+        color[u]=1;
+        for(int v:adj[u]){
+            if(color[v]==1) return false;
+            if(color[v]==0&&!isSafe(adj,v,color)) return false;
+        }
+        color[u]=2; return true;
+    }
 public:
     vector<int> eventualSafeNodes(vector<vector<int>>& graph) {
-        int n = graph.size();
-        vector<int> color(n, 0); // 0=white, 1=gray, 2=black(safe)
-        vector<int> result;
-        for (int i = 0; i < n; i++)
-            if (isSafe(i, graph, color)) result.push_back(i);
+        int n=graph.size(); vector<int> color(n,0),result;
+        for(int i=0;i<n;i++) if(color[i]==0) isSafe(graph,i,color);
+        for(int i=0;i<n;i++) if(color[i]==2) result.push_back(i);
         return result;
     }
-    bool isSafe(int node, vector<vector<int>>& graph, vector<int>& color) {
-        if (color[node] != 0) return color[node] == 2; // Already determined
-        color[node] = 1; // Gray — being processed
-        for (int nb : graph[node])
-            if (!isSafe(nb, graph, color)) return false; // Unsafe neighbor
-        color[node] = 2; // All paths lead to terminal → safe
-        return true;
+};
+
+// ============================================================
+// Solution 2: Reverse graph + Kahn's BFS — O(V+E)
+// ============================================================
+class Solution2 {
+public:
+    vector<int> eventualSafeNodes(vector<vector<int>>& graph) {
+        int n=graph.size();
+        vector<vector<int>> rev(n); vector<int> outDeg(n,0);
+        for(int u=0;u<n;u++){outDeg[u]=graph[u].size();for(int v:graph[u])rev[v].push_back(u);}
+        queue<int> q;
+        for(int i=0;i<n;i++) if(outDeg[i]==0) q.push(i);
+        vector<bool> safe(n,false);
+        while(!q.empty()){int u=q.front();q.pop();safe[u]=true;for(int v:rev[u])if(--outDeg[v]==0)q.push(v);}
+        vector<int> result; for(int i=0;i<n;i++) if(safe[i]) result.push_back(i);
+        return result;
     }
 };

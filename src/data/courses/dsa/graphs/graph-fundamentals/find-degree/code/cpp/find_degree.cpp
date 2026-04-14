@@ -1,28 +1,28 @@
-// ============================================================
-// Find Degree of Nodes
-// ============================================================
 #include <vector>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Count from adjacency matrix — O(V²)
+// ============================================================
+class Solution1 {
 public:
-    // Undirected graph degree
-    vector<int> findDegree(int n, vector<vector<int>>& edges) {
-        vector<int> degree(n, 0);
-        for (auto& e : edges) {
-            degree[e[0]]++;
-            degree[e[1]]++;
-        }
-        return degree;
+    vector<int> findDegrees(vector<vector<int>>& matrix) {
+        int V = matrix.size();
+        vector<int> deg(V, 0);
+        for (int i = 0; i < V; i++)
+            for (int j = 0; j < V; j++) deg[i] += matrix[i][j];
+        return deg;
     }
+};
 
-    // Directed: in-degree and out-degree
-    pair<vector<int>,vector<int>> findDirectedDegree(int n, vector<vector<int>>& edges) {
-        vector<int> inDeg(n, 0), outDeg(n, 0);
-        for (auto& e : edges) {
-            outDeg[e[0]]++;
-            inDeg[e[1]]++;
-        }
-        return {inDeg, outDeg};
+// ============================================================
+// Solution 2: Count from adjacency list — O(V+E)
+// ============================================================
+class Solution2 {
+public:
+    vector<int> findDegrees(vector<vector<int>>& adj) {
+        int V = adj.size();
+        vector<int> deg(V);
+        for (int i = 0; i < V; i++) deg[i] = adj[i].size();
+        return deg;
     }
 };

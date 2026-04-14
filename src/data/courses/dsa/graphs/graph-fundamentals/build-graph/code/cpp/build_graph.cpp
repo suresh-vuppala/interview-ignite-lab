@@ -1,27 +1,26 @@
-// ============================================================
-// Build Graph — Adjacency List
-// ============================================================
 #include <vector>
+#include <list>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Adjacency Matrix — O(V²) Space
+// ============================================================
+class Solution1 {
 public:
-    // Undirected graph from edge list
-    vector<vector<int>> buildGraph(int n, vector<vector<int>>& edges) {
-        vector<vector<int>> adj(n);
-        for (auto& e : edges) {
-            adj[e[0]].push_back(e[1]); // u → v
-            adj[e[1]].push_back(e[0]); // v → u (undirected)
-        }
-        return adj;
+    vector<vector<int>> buildGraph(int V, vector<pair<int,int>>& edges) {
+        vector<vector<int>> matrix(V, vector<int>(V, 0));
+        for (auto [u, v] : edges) { matrix[u][v] = 1; matrix[v][u] = 1; }
+        return matrix;  // O(V²) space — wasteful for sparse graphs
     }
+};
 
-    // Directed graph from edge list
-    vector<vector<int>> buildDirectedGraph(int n, vector<vector<int>>& edges) {
-        vector<vector<int>> adj(n);
-        for (auto& e : edges) {
-            adj[e[0]].push_back(e[1]); // u → v only
-        }
-        return adj;
+// ============================================================
+// Solution 2: Adjacency List — O(V+E) Space
+// ============================================================
+class Solution2 {
+public:
+    vector<vector<int>> buildGraph(int V, vector<pair<int,int>>& edges) {
+        vector<vector<int>> adj(V);
+        for (auto [u, v] : edges) { adj[u].push_back(v); adj[v].push_back(u); }
+        return adj;  // O(V+E) space — efficient for sparse graphs
     }
 };

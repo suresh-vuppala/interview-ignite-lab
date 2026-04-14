@@ -18,6 +18,18 @@ Find the shortest path from a source vertex to all other vertices in a weighted 
 
 ---
 
+## All Possible Edge Cases
+1. **Source == destination:** distance = 0
+2. **Unreachable vertex:** distance = ∞
+3. **Graph with 0-weight edges:** still works correctly
+4. **Negative weights:** Dijkstra FAILS — use Bellman-Ford
+5. **Disconnected graph:** some vertices unreachable
+6. **Single vertex**
+
+<br>
+
+---
+
 ## Solution 1: Basic — O(V²) with Array
 
 **Intuition:**
