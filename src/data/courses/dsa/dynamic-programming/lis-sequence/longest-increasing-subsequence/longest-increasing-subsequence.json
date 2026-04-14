@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/lis-sequence/longest-increasing-subsequence/code/cpp/longest_increasing_subsequence.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/lis-sequence/longest-increasing-subsequence/code/cpp/LongestIncreasingSubsequence.cpp"
         },
         {
           "language": "java",

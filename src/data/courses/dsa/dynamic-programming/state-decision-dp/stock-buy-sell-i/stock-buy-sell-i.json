@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-i/code/cpp/stock_buy_sell_i.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/state-decision-dp/stock-buy-sell-i/code/cpp/StockBuySellI.cpp"
         },
         {
           "language": "java",

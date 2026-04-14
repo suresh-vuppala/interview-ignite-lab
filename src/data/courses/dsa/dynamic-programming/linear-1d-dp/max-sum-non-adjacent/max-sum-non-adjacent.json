@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/max-sum-non-adjacent/code/cpp/max_sum_non_adjacent.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/max-sum-non-adjacent/code/cpp/MaxSumNonAdjacent.cpp"
         },
         {
           "language": "java",

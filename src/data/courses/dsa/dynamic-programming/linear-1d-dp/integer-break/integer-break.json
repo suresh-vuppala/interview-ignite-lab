@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/integer-break/code/cpp/integer_break.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/integer-break/code/cpp/IntegerBreak.cpp"
         },
         {
           "language": "java",

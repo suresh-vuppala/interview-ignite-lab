@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/string-dp/longest-common-subsequence/code/cpp/longest_common_subsequence.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/longest-common-subsequence/code/cpp/LongestCommonSubsequenceNew.cpp"
         },
         {
           "language": "java",

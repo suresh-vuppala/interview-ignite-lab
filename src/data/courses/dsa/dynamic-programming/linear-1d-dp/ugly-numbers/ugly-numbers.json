@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/ugly-numbers/code/cpp/ugly_numbers.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/ugly-numbers/code/cpp/UglyNumbers.cpp"
         },
         {
           "language": "java",

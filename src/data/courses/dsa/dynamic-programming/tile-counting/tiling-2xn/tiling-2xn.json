@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/tile-counting/tiling-2xn/code/cpp/tiling_2xn.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/tiling-2xn/code/cpp/Tiling2xn.cpp"
         },
         {
           "language": "java",

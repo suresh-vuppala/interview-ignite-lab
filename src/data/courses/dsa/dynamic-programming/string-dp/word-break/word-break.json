@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/string-dp/word-break/code/cpp/word_break.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/word-break/code/cpp/WordBreak.cpp"
         },
         {
           "language": "java",

@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/partition-equal-subset/code/cpp/partition_equal_subset.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/partition-equal-subset/code/cpp/PartitionEqualSubset.cpp"
         },
         {
           "language": "java",

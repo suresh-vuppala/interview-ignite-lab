@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/unique-paths-ii/code/cpp/unique_paths_ii.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/unique-paths-ii/code/cpp/UniquePathsIi.cpp"
         },
         {
           "language": "java",

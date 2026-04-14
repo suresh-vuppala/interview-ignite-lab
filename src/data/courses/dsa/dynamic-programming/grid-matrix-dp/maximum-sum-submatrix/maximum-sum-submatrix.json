@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-sum-submatrix/code/cpp/maximum_sum_submatrix.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-sum-submatrix/code/cpp/MaximumSumSubmatrix.cpp"
         },
         {
           "language": "java",

@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/minimum-path-sum/code/cpp/minimum_path_sum.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/minimum-path-sum/code/cpp/MinimumPathSum.cpp"
         },
         {
           "language": "java",

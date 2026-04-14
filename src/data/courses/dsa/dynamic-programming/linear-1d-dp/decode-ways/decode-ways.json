@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/decode-ways/code/cpp/decode_ways.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/decode-ways/code/cpp/DecodeWays.cpp"
         },
         {
           "language": "java",

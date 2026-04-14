@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/tile-counting/ways-reach-nth-stair/code/cpp/ways_reach_nth_stair.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/ways-reach-nth-stair/code/cpp/WaysReachNthStair.cpp"
         },
         {
           "language": "java",

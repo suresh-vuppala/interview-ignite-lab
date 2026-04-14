@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-min/code/cpp/coin_change_min.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/coin-change-min/code/cpp/CoinChangeMinNew.cpp"
         },
         {
           "language": "java",

@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/cherry-pickup/code/cpp/cherry_pickup.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/cherry-pickup/code/cpp/CherryPickup.cpp"
         },
         {
           "language": "java",

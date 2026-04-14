@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-path-sum-matrix/code/cpp/maximum_path_sum_matrix.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/maximum-path-sum-matrix/code/cpp/MaximumPathSumMatrix.cpp"
         },
         {
           "language": "java",

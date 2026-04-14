@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/string-dp/edit-distance/code/cpp/edit_distance.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/string-dp/edit-distance/code/cpp/EditDistance.cpp"
         },
         {
           "language": "java",

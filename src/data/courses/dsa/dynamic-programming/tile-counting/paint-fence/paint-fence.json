@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/tile-counting/paint-fence/code/cpp/paint_fence.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/paint-fence/code/cpp/PaintFence.cpp"
         },
         {
           "language": "java",

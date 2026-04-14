@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/dungeon-game/code/cpp/dungeon_game.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/grid-matrix-dp/dungeon-game/code/cpp/DungeonGame.cpp"
         },
         {
           "language": "java",

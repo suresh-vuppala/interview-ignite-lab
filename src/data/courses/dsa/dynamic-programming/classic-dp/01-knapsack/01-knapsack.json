@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/classic-dp/01-knapsack/code/cpp/01_knapsack.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/classic-dp/01-knapsack/code/cpp/01KnapsackNew.cpp"
         },
         {
           "language": "java",

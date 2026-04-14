@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/tile-counting/tiling-dominoes-trominoes/code/cpp/tiling_dominoes_trominoes.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/tile-counting/tiling-dominoes-trominoes/code/cpp/TilingDominoesTrominoes.cpp"
         },
         {
           "language": "java",

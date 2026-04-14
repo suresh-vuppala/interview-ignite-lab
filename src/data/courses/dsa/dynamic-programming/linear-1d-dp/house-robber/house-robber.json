@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/house-robber/code/cpp/house_robber.cpp"
+          "codeFile": "courses/dsa/dynamic-programming/linear-1d-dp/house-robber/code/cpp/HouseRobber.cpp"
         },
         {
           "language": "java",
