@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/singly-ll-core/creation-traversal/code/cpp/creation_traversal.cpp"
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/creation-traversal/code/cpp/CreationTraversal.cpp"
         },
         {
           "language": "java",

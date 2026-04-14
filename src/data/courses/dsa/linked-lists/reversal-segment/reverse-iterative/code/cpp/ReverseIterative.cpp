@@ -1,54 +1,26 @@
-#include <iostream>
+struct ListNode { int val; ListNode* next; ListNode(int v):val(v),next(nullptr){} };
 using namespace std;
-
-struct Node {
-    int data;
-    Node* next;
-    Node(int val) : data(val), next(nullptr) {}
-};
-
-class LinkedList {
-    Node* head;
+// ============================================================
+// Solution 1: Copy to array, build reversed list — O(N) Space
+// ============================================================
+#include <vector>
+class Solution1 {
 public:
-    LinkedList() : head(nullptr) {}
-    
-    void insert(int data) {
-        if (!head) head = new Node(data);
-        else {
-            Node* curr = head;
-            while (curr->next) curr = curr->next;
-            curr->next = new Node(data);
-        }
-    }
-    
-    void reverse() {
-        Node *prev = nullptr, *curr = head, *next;
-        while (curr) {
-            next = curr->next;
-            curr->next = prev;
-            prev = curr;
-            curr = next;
-        }
-        head = prev;
-    }
-    
-    void display() {
-        Node* curr = head;
-        while (curr) {
-            cout << curr->data << " -> ";
-            curr = curr->next;
-        }
-        cout << "null" << endl;
+    ListNode* reverseList(ListNode* head) {
+        vector<int> vals; for(auto c=head;c;c=c->next)vals.push_back(c->val);
+        ListNode*cur=head; for(int i=vals.size()-1;i>=0;i--){cur->val=vals[i];cur=cur->next;}
+        return head;
     }
 };
 
-int main() {
-    LinkedList list;
-    for (int i = 1; i <= 5; i++) list.insert(i);
-    cout << "Original: ";
-    list.display();
-    list.reverse();
-    cout << "Reversed: ";
-    list.display();
-    return 0;
-}
+// ============================================================
+// Solution 2: Three-pointer in-place — O(N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode *prev=nullptr, *cur=head;
+        while(cur){ListNode*nxt=cur->next;cur->next=prev;prev=cur;cur=nxt;}
+        return prev;
+    }
+};

@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/structural-transformations/odd-even-list/code/cpp/odd_even_list.cpp"
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/odd-even-list/code/cpp/OddEvenList.cpp"
         },
         {
           "language": "java",

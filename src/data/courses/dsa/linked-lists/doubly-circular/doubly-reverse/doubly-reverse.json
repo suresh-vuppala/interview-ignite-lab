@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-reverse/code/cpp/doubly_reverse.cpp"
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-reverse/code/cpp/DoublyReverse.cpp"
         },
         {
           "language": "java",

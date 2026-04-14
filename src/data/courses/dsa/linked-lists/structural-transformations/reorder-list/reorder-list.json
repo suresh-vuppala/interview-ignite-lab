@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/structural-transformations/reorder-list/code/cpp/reorder_list.cpp"
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/reorder-list/code/cpp/ReorderList.cpp"
         },
         {
           "language": "java",

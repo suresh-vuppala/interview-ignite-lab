@@ -1,55 +1,26 @@
-#include <iostream>
+struct ListNode { int val; ListNode* next; ListNode(int v):val(v),next(nullptr){} };
 using namespace std;
-
-struct Node {
-    int data;
-    Node* next;
-    Node(int val) : data(val), next(nullptr) {}
-};
-
-class LinkedList {
-    Node* head;
+// ============================================================
+// Solution 1: HashSet — store visited nodes — O(N) Time+Space
+// ============================================================
+#include <unordered_set>
+class Solution1 {
 public:
-    LinkedList() : head(nullptr) {}
-    
-    void insert(int data) {
-        if (!head) head = new Node(data);
-        else {
-            Node* curr = head;
-            while (curr->next) curr = curr->next;
-            curr->next = new Node(data);
-        }
-    }
-    
-    void createCycle(int pos) {
-        if (!head) return;
-        Node *tail = head, *cycleNode = nullptr;
-        int index = 0;
-        while (tail->next) {
-            if (index == pos) cycleNode = tail;
-            tail = tail->next;
-            index++;
-        }
-        if (cycleNode) tail->next = cycleNode;
-    }
-    
-    bool hasCycle() {
-        if (!head) return false;
-        Node *slow = head, *fast = head;
-        while (fast && fast->next) {
-            slow = slow->next;
-            fast = fast->next->next;
-            if (slow == fast) return true;
-        }
+    bool hasCycle(ListNode* head) {
+        unordered_set<ListNode*> seen;
+        while(head){if(seen.count(head))return true;seen.insert(head);head=head->next;}
         return false;
     }
 };
 
-int main() {
-    LinkedList list;
-    for (int i = 1; i <= 5; i++) list.insert(i);
-    cout << "Has cycle: " << list.hasCycle() << endl;
-    list.createCycle(2);
-    cout << "Has cycle after creating: " << list.hasCycle() << endl;
-    return 0;
-}
+// ============================================================
+// Solution 2: Floyd's slow/fast pointers — O(N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    bool hasCycle(ListNode* head) {
+        ListNode *slow=head,*fast=head;
+        while(fast&&fast->next){slow=slow->next;fast=fast->next->next;if(slow==fast)return true;}
+        return false;
+    }
+};

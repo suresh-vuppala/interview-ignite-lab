@@ -1,18 +1,33 @@
+struct Node { int val; Node *next, *random; Node(int v):val(v),next(nullptr),random(nullptr){} };
+#include <unordered_map>
+using namespace std;
 // ============================================================
-// Copy List with Random Pointer
+// Solution 1: HashMap clone — O(N) Time+Space
 // ============================================================
-class Node{public:int val;Node*next,*random;Node(int v):val(v),next(nullptr),random(nullptr){}};
-class Solution{public:
-    Node*copyRandomList(Node*head){
+class Solution1 {
+public:
+    Node* copyRandomList(Node* head) {
+        unordered_map<Node*,Node*> m;
+        for(auto c=head;c;c=c->next)m[c]=new Node(c->val);
+        for(auto c=head;c;c=c->next){m[c]->next=m[c->next];m[c]->random=m[c->random];}
+        return m[head];
+    }
+};
+
+// ============================================================
+// Solution 2: Interleave — O(N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    Node* copyRandomList(Node* head) {
         if(!head)return nullptr;
-        // Pass 1: Interleave clones
-        Node*curr=head;
-        while(curr){Node*clone=new Node(curr->val);clone->next=curr->next;curr->next=clone;curr=clone->next;}
-        // Pass 2: Set random pointers
-        curr=head;
-        while(curr){if(curr->random)curr->next->random=curr->random->next;curr=curr->next->next;}
-        // Pass 3: Separate lists
-        Node*cloneHead=head->next;curr=head;
-        while(curr){Node*clone=curr->next;curr->next=clone->next;curr=curr->next;if(curr)clone->next=curr->next;}
-        return cloneHead;
-    }};
+        // Step 1: Interleave copies
+        for(auto c=head;c;){auto copy=new Node(c->val);copy->next=c->next;c->next=copy;c=copy->next;}
+        // Step 2: Set random pointers
+        for(auto c=head;c;c=c->next->next)if(c->random)c->next->random=c->random->next;
+        // Step 3: Separate lists
+        Node*newHead=head->next;
+        for(auto c=head;c;){auto copy=c->next;c->next=copy->next;copy->next=copy->next?copy->next->next:nullptr;c=c->next;}
+        return newHead;
+    }
+};

@@ -1,7 +1,28 @@
-#include <iostream>
+struct DNode { int val; DNode *prev, *next; DNode(int v):val(v),prev(nullptr),next(nullptr){} };
 using namespace std;
-struct Node { int data; Node *next, *prev; Node(int v):data(v),next(nullptr),prev(nullptr){} };
-class DLL { Node* head; public: DLL():head(nullptr){} void insert(int d) { Node* n=new Node(d); if(!head) head=n; else { Node* c=head; while(c->next) c=c->next; c->next=n; n->prev=c; }}
-void reverse() { Node *c=head,*t=nullptr; while(c) { t=c->prev; c->prev=c->next; c->next=t; c=c->prev; } if(t) head=t->prev; }
-void display() { Node* c=head; while(c) { cout<<c->data<<" "; c=c->next; } cout<<endl; }};
-int main() { DLL dl; for(int i=1;i<=4;i++) dl.insert(i); dl.reverse(); dl.display(); return 0; }
+// ============================================================
+// Solution 1: Collect to array, rebuild reversed — O(N) Space
+// ============================================================
+#include <vector>
+class Solution1 {
+public:
+    DNode* reverse(DNode* head) {
+        vector<int> vals;for(auto c=head;c;c=c->next)vals.push_back(c->val);
+        auto c=head;for(int i=vals.size()-1;i>=0;i--){c->val=vals[i];c=c->next;}return head;
+    }
+};
+
+// ============================================================
+// Solution 2: Swap prev/next pointers — O(N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    DNode* reverse(DNode* head) {
+        DNode*cur=head;while(cur){
+            DNode*tmp=cur->prev;cur->prev=cur->next;cur->next=tmp;
+            if(!cur->prev)head=cur; // New head is last node processed
+            cur=cur->prev; // Move forward (prev is now next)
+        }
+        return head;
+    }
+};

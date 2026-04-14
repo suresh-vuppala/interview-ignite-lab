@@ -1,31 +1,29 @@
-// ============================================================
-// Clone Random Pointer (Hash Map approach)
-// ============================================================
+struct RNode { int val; RNode *next, *random; RNode(int v):val(v),next(nullptr),random(nullptr){} };
 #include <unordered_map>
 using namespace std;
-class Node{public:int val;Node*next,*random;Node(int v):val(v),next(nullptr),random(nullptr){}};
-
-class Solution {
+// ============================================================
+// Solution 1: HashMap — O(N) Time, O(N) Space
+// ============================================================
+class Solution1 {
 public:
-    Node* copyRandomList(Node* head) {
-        if (!head) return nullptr;
-        unordered_map<Node*, Node*> map;
+    RNode* clone(RNode* head) {
+        unordered_map<RNode*,RNode*> m;
+        for(auto c=head;c;c=c->next)m[c]=new RNode(c->val);
+        for(auto c=head;c;c=c->next){m[c]->next=m[c->next];m[c]->random=m[c->random];}
+        return m[head];
+    }
+};
 
-        // Pass 1: Create all clones
-        Node* curr = head;
-        while (curr) {
-            map[curr] = new Node(curr->val);
-            curr = curr->next;
-        }
-
-        // Pass 2: Set pointers
-        curr = head;
-        while (curr) {
-            map[curr]->next = map[curr->next];
-            map[curr]->random = map[curr->random];
-            curr = curr->next;
-        }
-
-        return map[head];
+// ============================================================
+// Solution 2: Interleave technique — O(N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    RNode* clone(RNode* head) {
+        if(!head)return nullptr;
+        for(auto c=head;c;){auto cp=new RNode(c->val);cp->next=c->next;c->next=cp;c=cp->next;}
+        for(auto c=head;c;c=c->next->next)if(c->random)c->next->random=c->random->next;
+        RNode*nh=head->next;for(auto c=head;c;){auto cp=c->next;c->next=cp->next;cp->next=cp->next?cp->next->next:nullptr;c=c->next;}
+        return nh;
     }
 };

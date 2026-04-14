@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/singly-ll-core/search-update/code/cpp/search_update.cpp"
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/search-update/code/cpp/SearchUpdate.cpp"
         },
         {
           "language": "java",

@@ -1,13 +1,27 @@
+struct ListNode { int val; ListNode* next; ListNode(int v):val(v),next(nullptr){} };
+using namespace std;
 // ============================================================
-// Intersection of Two Linked Lists
+// Solution 1: HashSet — store all nodes of list1, check list2 — O(M+N) Space
 // ============================================================
-struct ListNode{int val;ListNode*next;ListNode(int v):val(v),next(nullptr){}};
-class Solution{public:
-    ListNode*getIntersectionNode(ListNode*headA,ListNode*headB){
+#include <unordered_set>
+class Solution1 {
+public:
+    ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
+        unordered_set<ListNode*> seen;
+        while(headA){seen.insert(headA);headA=headA->next;}
+        while(headB){if(seen.count(headB))return headB;headB=headB->next;}
+        return nullptr;
+    }
+};
+
+// ============================================================
+// Solution 2: Two pointers — switch lists at end — O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
         ListNode*a=headA,*b=headB;
-        while(a!=b){
-            a=a?a->next:headB; // Redirect to other list's head
-            b=b?b->next:headA;
-        }
-        return a; // Intersection or null
-    }};
+        while(a!=b){a=a?a->next:headB;b=b?b->next:headA;}
+        return a; // Meet at intersection or both null
+    }
+};

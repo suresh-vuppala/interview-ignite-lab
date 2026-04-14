@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/singly-ll-core/insertion-variations/code/cpp/insertion_variations.cpp"
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/insertion-variations/code/cpp/InsertionVariations.cpp"
         },
         {
           "language": "java",

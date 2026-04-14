@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/doubly-circular/circular-delete/code/cpp/circular_delete.cpp"
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/circular-delete/code/cpp/CircularDelete.cpp"
         },
         {
           "language": "java",

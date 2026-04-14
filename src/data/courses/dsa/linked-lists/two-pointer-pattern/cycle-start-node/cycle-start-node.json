@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/cycle-start-node/code/cpp/cycle_start_node.cpp"
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/cycle-start-node/code/cpp/CycleStartNode.cpp"
         },
         {
           "language": "java",

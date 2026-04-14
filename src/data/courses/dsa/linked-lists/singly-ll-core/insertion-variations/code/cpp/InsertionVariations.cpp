@@ -1,84 +1,33 @@
-#include <iostream>
+struct ListNode { int val; ListNode* next; ListNode(int v):val(v),next(nullptr){} };
 using namespace std;
-
-struct Node {
-    int data;
-    Node* next;
-    Node(int val) : data(val), next(nullptr) {}
-};
-
-class LinkedList {
-private:
-    Node* head;
+// ============================================================
+// Solution 1: Create new list with element — O(N) Space
+// ============================================================
+class Solution1 {
 public:
-    LinkedList() : head(nullptr) {}
-    
-    void insertAtBeginning(int data) {
-        Node* newNode = new Node(data);
-        newNode->next = head;
-        head = newNode;
+    ListNode* insertAtHead(ListNode* head, int val) { ListNode* n=new ListNode(val); n->next=head; return n; }
+    ListNode* insertAtTail(ListNode* head, int val) {
+        ListNode* n=new ListNode(val); if(!head) return n;
+        ListNode* cur=head; while(cur->next)cur=cur->next; cur->next=n; return head;
     }
-    
-    void insertAtEnd(int data) {
-        Node* newNode = new Node(data);
-        if (!head) {
-            head = newNode;
-            return;
-        }
-        Node* current = head;
-        while (current->next) current = current->next;
-        current->next = newNode;
-    }
-    
-    void insertAtPosition(int data, int position) {
-        if (position == 0) {
-            insertAtBeginning(data);
-            return;
-        }
-        Node* newNode = new Node(data);
-        Node* current = head;
-        for (int i = 0; i < position - 1 && current; i++) {
-            current = current->next;
-        }
-        if (!current) {
-            cout << "Invalid position" << endl;
-            return;
-        }
-        newNode->next = current->next;
-        current->next = newNode;
-    }
-    
-    void insertAfterNode(int targetData, int newData) {
-        Node* current = head;
-        while (current && current->data != targetData) {
-            current = current->next;
-        }
-        if (!current) {
-            cout << "Node not found" << endl;
-            return;
-        }
-        Node* newNode = new Node(newData);
-        newNode->next = current->next;
-        current->next = newNode;
-    }
-    
-    void display() {
-        Node* current = head;
-        while (current) {
-            cout << current->data << " -> ";
-            current = current->next;
-        }
-        cout << "null" << endl;
+    ListNode* insertAtPos(ListNode* head, int val, int pos) {
+        if(pos==0) return insertAtHead(head,val);
+        ListNode* cur=head; for(int i=0;i<pos-1&&cur;i++) cur=cur->next;
+        if(!cur) return head;
+        ListNode* n=new ListNode(val); n->next=cur->next; cur->next=n; return head;
     }
 };
 
-int main() {
-    LinkedList list;
-    list.insertAtEnd(3);
-    list.insertAtEnd(5);
-    list.insertAtBeginning(1);
-    list.insertAtPosition(2, 1);
-    list.insertAfterNode(3, 4);
-    list.display();
-    return 0;
-}
+// ============================================================
+// Solution 2: Dummy head simplifies edge cases — O(1) per insert
+// ============================================================
+class Solution2 {
+public:
+    ListNode* insertAtPos(ListNode* head, int val, int pos) {
+        ListNode dummy(0); dummy.next = head;
+        ListNode* prev = &dummy;
+        for (int i = 0; i < pos && prev->next; i++) prev = prev->next;
+        ListNode* n = new ListNode(val); n->next = prev->next; prev->next = n;
+        return dummy.next;  // Dummy head handles pos=0 naturally
+    }
+};
