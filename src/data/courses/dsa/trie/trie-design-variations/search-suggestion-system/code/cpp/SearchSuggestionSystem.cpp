@@ -1,15 +1,30 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Sort + binary search per prefix
+// Time: O(N log N + M * N * L) | Space: O(1) extra
 // ============================================================
 #include <vector>
 #include <string>
-#include <unordered_set>
+#include <algorithm>
 using namespace std;
 
 class Solution1 {
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    vector<vector<string>> suggestedProducts(vector<string>& products, string word) {
+        sort(products.begin(), products.end());
+        vector<vector<string>> result;
+        string prefix = "";
+        for (char c : word) {
+            prefix += c;
+            vector<string> matches;
+            for (auto& p : products) {  // Scan all products per keystroke!
+                if (p.size() >= prefix.size() && p.substr(0, prefix.size()) == prefix)
+                    matches.push_back(p);
+                if (matches.size() == 3) break;
+            }
+            result.push_back(matches);
+        }
+        return result;
+    }
 };
 
 // ============================================================

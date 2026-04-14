@@ -1,15 +1,25 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Brute Force — Linear scan all words O(N*L)
 // ============================================================
 import java.util.*;
-
 class Solution1 {
-    // Brute force: hash set / nested loops / direct comparison
-    // See Solution 2 below for optimal Trie-based approach
+    List<String> words = new ArrayList<>();
+    public void addWord(String word) { words.add(word); }
+    public List<String> search(String query) {
+        List<String> result = new ArrayList<>();
+        for (String w : words) {
+            boolean match = w.length() == query.length();
+            if (match) for (int i = 0; i < query.length(); i++)
+                if (query.charAt(i) != '.' && query.charAt(i) != w.charAt(i)) { match = false; break; }
+            if (match) result.add(w);
+        }
+        return result;
+    }
 }
-
 // ============================================================
 // Solution 2: Optimal (Trie-based)
+// ============================================================
+: Optimal (Trie-based)
 // ============================================================
 import java.util.*;
 

@@ -1,15 +1,19 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Brute Force — Check all pairs O(N²)
 // ============================================================
-import java.util.*;
-
 class Solution1 {
-    // Brute force: hash set / nested loops / direct comparison
-    // See Solution 2 below for optimal Trie-based approach
+    public int solve(int[] nums) {
+        int result = 0;
+        for (int i = 0; i < nums.length; i++)
+            for (int j = i+1; j < nums.length; j++)
+                result = Math.max(result, nums[i] ^ nums[j]);
+        return result;
+    }
 }
-
 // ============================================================
 // Solution 2: Optimal (Trie-based)
+// ============================================================
+: Optimal (Trie-based)
 // ============================================================
 import java.util.*;
 

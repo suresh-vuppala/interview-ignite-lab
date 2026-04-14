@@ -1,15 +1,25 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Store words in vector, linear scan with matching
+// Time: O(N * L) per search | Space: O(N * L)
 // ============================================================
-#include <vector>
 #include <string>
-#include <unordered_set>
+#include <vector>
 using namespace std;
 
 class Solution1 {
+    vector<string> words;
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    void addWord(string word) { words.push_back(word); }
+    bool search(string pattern) {
+        for (auto& w : words) {
+            if (w.size() != pattern.size()) continue;
+            bool ok = true;
+            for (int i = 0; i < (int)w.size(); i++)
+                if (pattern[i] != '.' && pattern[i] != w[i]) { ok = false; break; }
+            if (ok) return true;
+        }
+        return false;
+    }
 };
 
 // ============================================================

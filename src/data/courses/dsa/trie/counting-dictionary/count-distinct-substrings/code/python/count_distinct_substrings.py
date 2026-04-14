@@ -1,33 +1,27 @@
 # ============================================================
-# Solution 1: Brute Force
+# Solution 1: HashSet — O(N³) generate all substrings
 # ============================================================
-
 class Solution1:
-    # Brute force: hash set / nested loops / direct comparison
-    # See Solution 2 below for optimal Trie-based approach
-    pass
-
+    def countDistinct(self, s):
+        substrings = set()
+        n = len(s)
+        for i in range(n):
+            for j in range(i + 1, n + 1):
+                substrings.add(s[i:j])  # O(N) per substring creation
+        return len(substrings)
 
 # ============================================================
-# Solution 2: Optimal (Trie-based)
+# Solution 2: Suffix Trie — O(N²) insert suffixes, count nodes
 # ============================================================
-class TrieNode:
-    def __init__(self):
-        self.children = {}
-
-class CountDistinctSubstrings:
-    def countDistinct(self, s: str) -> int:
-        root = TrieNode()
+class Solution2:
+    def countDistinct(self, s):
+        root = {}
         count = 0
-        
-        # Insert all substrings
         for i in range(len(s)):
             node = root
             for j in range(i, len(s)):
-                c = s[j]
-                if c not in node.children:
-                    node.children[c] = TrieNode()
-                    count += 1  # New unique substring
-                node = node.children[c]
-        
-        return count + 1  # +1 for empty string
+                if s[j] not in node:
+                    node[s[j]] = {}
+                    count += 1  # New node = new distinct substring
+                node = node[s[j]]
+        return count

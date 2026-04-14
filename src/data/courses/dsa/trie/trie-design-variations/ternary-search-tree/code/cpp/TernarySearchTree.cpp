@@ -1,15 +1,24 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Standard 26-children Trie
+// Time: O(L) per op | Space: O(N * L * 26) — sparse waste
 // ============================================================
-#include <vector>
 #include <string>
-#include <unordered_set>
 using namespace std;
 
 class Solution1 {
+    struct Node { Node* ch[26] = {}; bool end = false; };
+    Node* root = new Node();
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    void insert(string word) {
+        Node* n = root;
+        for (char c : word) {
+            if (!n->ch[c-'a']) n->ch[c-'a'] = new Node();
+            n = n->ch[c-'a'];
+        }
+        n->end = true;
+        // 26 children per node — wastes memory for sparse alphabets
+        // TST uses only 3 pointers per node
+    }
 };
 
 // ============================================================

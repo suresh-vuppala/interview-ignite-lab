@@ -1,15 +1,25 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Check all pairs naively
+// Time: O(N² * L) | Space: O(1)
 // ============================================================
 #include <vector>
 #include <string>
-#include <unordered_set>
 using namespace std;
 
 class Solution1 {
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    int countPrefixSuffixPairs(vector<string>& words) {
+        int count = 0, n = words.size();
+        for (int i = 0; i < n; i++)
+            for (int j = i + 1; j < n; j++) {
+                string& a = words[i], & b = words[j];
+                if (a.size() <= b.size() &&
+                    b.substr(0, a.size()) == a &&        // is prefix
+                    b.substr(b.size() - a.size()) == a)  // is suffix
+                    count++;
+            }
+        return count;  // O(N²*L) — check every pair
+    }
 };
 
 // ============================================================

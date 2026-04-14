@@ -1,67 +1,57 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Check all pairs — O(N²)
 // ============================================================
 #include <vector>
-#include <string>
-#include <unordered_set>
+#include <algorithm>
 using namespace std;
 
 class Solution1 {
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    int findMaximumXOR(vector<int>& nums) {
+        int maxXor = 0;
+        for (int i = 0; i < (int)nums.size(); i++)
+            for (int j = i + 1; j < (int)nums.size(); j++)
+                maxXor = max(maxXor, nums[i] ^ nums[j]);
+        return maxXor;
+    }
 };
 
 // ============================================================
-// Solution 2: Optimal (Trie-based)
+// Solution 2: Binary Trie — O(N × 32) = O(N)
 // ============================================================
-#include <vector>
-using namespace std;
-
-class MaximumXorTwoNumbers {
-    struct TrieNode {
-        TrieNode* children[2] = {}; // 0 and 1 for binary
-    };
-    
+class Solution2 {
+    struct TrieNode { TrieNode* ch[2] = {}; };
     TrieNode* root = new TrieNode();
     
     void insert(int num) {
         TrieNode* node = root;
         for (int i = 31; i >= 0; i--) {
             int bit = (num >> i) & 1;
-            if (!node->children[bit]) {
-                node->children[bit] = new TrieNode();
-            }
-            node = node->children[bit];
+            if (!node->ch[bit]) node->ch[bit] = new TrieNode();
+            node = node->ch[bit];
         }
     }
     
     int getMaxXor(int num) {
         TrieNode* node = root;
-        int xor_val = 0;
+        int xorVal = 0;
         for (int i = 31; i >= 0; i--) {
             int bit = (num >> i) & 1;
-            int opposite = 1 - bit; // Choose opposite for max XOR
-            if (node->children[opposite]) {
-                xor_val |= (1 << i); // Set bit in result
-                node = node->children[opposite];
+            int opposite = 1 - bit; // Want opposite bit for max XOR
+            if (node->ch[opposite]) {
+                xorVal |= (1 << i); // Set this bit in result
+                node = node->ch[opposite];
             } else {
-                node = node->children[bit];
+                node = node->ch[bit];
             }
         }
-        return xor_val;
+        return xorVal;
     }
-    
 public:
     int findMaximumXOR(vector<int>& nums) {
-        // Insert all numbers into trie
         for (int num : nums) insert(num);
-        
-        // Find max XOR for each number
         int maxXor = 0;
-        for (int num : nums) {
-            maxXor = max(maxXor, getMaxXor(num));
-        }
+        for (int num : nums) maxXor = max(maxXor, getMaxXor(num));
         return maxXor;
     }
 };

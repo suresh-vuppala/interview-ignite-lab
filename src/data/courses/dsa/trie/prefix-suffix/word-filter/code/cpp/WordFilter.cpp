@@ -1,15 +1,25 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Linear scan for prefix+suffix match
+// Time: O(N * L) per query | Space: O(N * L)
 // ============================================================
 #include <vector>
 #include <string>
-#include <unordered_set>
 using namespace std;
 
 class Solution1 {
+    vector<string> words;
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    Solution1(vector<string>& w) : words(w) {}
+    int f(string prefix, string suffix) {
+        for (int i = words.size() - 1; i >= 0; i--) {
+            string& w = words[i];
+            if (w.size() >= prefix.size() && w.size() >= suffix.size() &&
+                w.substr(0, prefix.size()) == prefix &&
+                w.substr(w.size() - suffix.size()) == suffix)
+                return i;
+        }
+        return -1;  // O(N*L) per query
+    }
 };
 
 // ============================================================

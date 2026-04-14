@@ -1,57 +1,25 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Check all pairs — O(N²)
 // ============================================================
-import java.util.*;
-
 class Solution1 {
-    // Brute force: hash set / nested loops / direct comparison
-    // See Solution 2 below for optimal Trie-based approach
+    public int findMaximumXOR(int[] nums) {
+        int max = 0;
+        for (int i = 0; i < nums.length; i++)
+            for (int j = i+1; j < nums.length; j++)
+                max = Math.max(max, nums[i] ^ nums[j]);
+        return max;
+    }
 }
 
 // ============================================================
-// Solution 2: Optimal (Trie-based)
+// Solution 2: Binary Trie — O(N*32) = O(N)
 // ============================================================
-class MaximumXorTwoNumbers {
-    class TrieNode {
-        TrieNode[] children = new TrieNode[2];
-    }
-    
-    private TrieNode root = new TrieNode();
-    
+class Solution2 {
+    int[][] ch = new int[3200001][2]; int cnt = 0;
+    void insert(int num) { int n=0; for(int i=31;i>=0;i--){int b=(num>>i)&1;if(ch[n][b]==0)ch[n][b]=++cnt;n=ch[n][b];}}
+    int query(int num) { int n=0,xor_val=0; for(int i=31;i>=0;i--){int b=(num>>i)&1,opp=1-b;if(ch[n][opp]!=0){xor_val|=(1<<i);n=ch[n][opp];}else n=ch[n][b];}return xor_val;}
     public int findMaximumXOR(int[] nums) {
-        for (int num : nums) insert(num);
-        
-        int maxXor = 0;
-        for (int num : nums) {
-            maxXor = Math.max(maxXor, getMaxXor(num));
-        }
-        return maxXor;
-    }
-    
-    private void insert(int num) {
-        TrieNode node = root;
-        for (int i = 31; i >= 0; i--) {
-            int bit = (num >> i) & 1;
-            if (node.children[bit] == null) {
-                node.children[bit] = new TrieNode();
-            }
-            node = node.children[bit];
-        }
-    }
-    
-    private int getMaxXor(int num) {
-        TrieNode node = root;
-        int xor = 0;
-        for (int i = 31; i >= 0; i--) {
-            int bit = (num >> i) & 1;
-            int opposite = 1 - bit;
-            if (node.children[opposite] != null) {
-                xor |= (1 << i);
-                node = node.children[opposite];
-            } else {
-                node = node.children[bit];
-            }
-        }
-        return xor;
+        for(int num:nums) insert(num);
+        int max=0; for(int num:nums) max=Math.max(max,query(num)); return max;
     }
 }

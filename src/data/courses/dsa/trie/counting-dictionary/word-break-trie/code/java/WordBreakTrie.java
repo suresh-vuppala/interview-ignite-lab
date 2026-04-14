@@ -1,64 +1,37 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Brute Force Recursion — O(2^N)
 // ============================================================
 import java.util.*;
-
 class Solution1 {
-    // Brute force: hash set / nested loops / direct comparison
-    // See Solution 2 below for optimal Trie-based approach
+    public boolean wordBreak(String s, List<String> wordDict) {
+        return canBreak(s, 0, new HashSet<>(wordDict));
+    }
+    boolean canBreak(String s, int start, Set<String> dict) {
+        if (start == s.length()) return true;
+        for (int end = start+1; end <= s.length(); end++)
+            if (dict.contains(s.substring(start, end)) && canBreak(s, end, dict)) return true;
+        return false;
+    }
 }
 
 // ============================================================
-// Solution 2: Optimal (Trie-based)
+// Solution 2: Trie + DP — O(N*L)
 // ============================================================
-import java.util.*;
-
-class WordBreakTrie {
-    class TrieNode {
-        TrieNode[] children = new TrieNode[26];
-        boolean isEnd = false;
-    }
-    
-    private TrieNode root = new TrieNode();
-    
+class Solution2 {
+    int[][] ch = new int[100001][26]; boolean[] isEnd = new boolean[100001]; int cnt = 0;
+    void insert(String w) { int n=0; for(char c:w.toCharArray()){if(ch[n][c-'a']==0)ch[n][c-'a']=++cnt;n=ch[n][c-'a'];}isEnd[n]=true; }
     public boolean wordBreak(String s, List<String> wordDict) {
-        // Build trie
-        for (String word : wordDict) insert(word);
-        
-        // DP to check if string can be segmented
-        boolean[] dp = new boolean[s.length() + 1];
-        dp[0] = true; // Empty string
-        
-        for (int i = 1; i <= s.length(); i++) {
-            for (int j = 0; j < i; j++) {
-                if (dp[j] && search(s.substring(j, i))) {
-                    dp[i] = true;
-                    break;
-                }
+        for (String w : wordDict) insert(w);
+        boolean[] dp = new boolean[s.length()+1]; dp[0] = true;
+        for (int i = 0; i < s.length(); i++) {
+            if (!dp[i]) continue;
+            int node = 0;
+            for (int j = i; j < s.length(); j++) {
+                if (ch[node][s.charAt(j)-'a']==0) break;
+                node = ch[node][s.charAt(j)-'a'];
+                if (isEnd[node]) dp[j+1] = true;
             }
         }
         return dp[s.length()];
-    }
-    
-    private void insert(String word) {
-        TrieNode node = root;
-        for (char c : word.toCharArray()) {
-            int idx = c - 'a';
-            if (node.children[idx] == null) {
-                node.children[idx] = new TrieNode();
-            }
-            node = node.children[idx];
-        }
-        node.isEnd = true;
-    }
-    
-    private boolean search(String word) {
-        TrieNode node = root;
-        for (char c : word.toCharArray()) {
-            int idx = c - 'a';
-            if (node.children[idx] == null) return false;
-            node = node.children[idx];
-        }
-        return node.isEnd;
     }
 }

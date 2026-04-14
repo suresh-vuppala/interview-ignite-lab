@@ -1,15 +1,21 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Brute Force — Check all pairs for XOR
+// Time: O(N²) | Space: O(N)
 // ============================================================
 #include <vector>
-#include <string>
-#include <unordered_set>
+#include <algorithm>
 using namespace std;
 
 class Solution1 {
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    // Store all numbers, XOR check all pairs for queries
+    vector<int> nums;
+    void insert(int num) { nums.push_back(num); }
+    int getMaxXor(int x) {
+        int maxXor = 0;
+        for (int n : nums) maxXor = max(maxXor, n ^ x);
+        return maxXor;  // O(N) per query — no trie!
+    }
 };
 
 // ============================================================

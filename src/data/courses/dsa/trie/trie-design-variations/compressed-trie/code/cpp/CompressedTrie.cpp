@@ -1,15 +1,28 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Standard Trie (one char per node)
+// Time: O(L) per op | Space: O(N * L * 26) — wastes nodes
 // ============================================================
-#include <vector>
 #include <string>
-#include <unordered_set>
 using namespace std;
 
 class Solution1 {
+    struct Node { Node* ch[26] = {}; bool end = false; };
+    Node* root = new Node();
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    void insert(string word) {
+        Node* n = root;
+        for (char c : word) {
+            if (!n->ch[c-'a']) n->ch[c-'a'] = new Node();
+            n = n->ch[c-'a'];
+        }
+        n->end = true;
+        // Standard trie: one node per character — wastes space on long chains
+    }
+    bool search(string word) {
+        Node* n = root;
+        for (char c : word) { if (!n->ch[c-'a']) return false; n = n->ch[c-'a']; }
+        return n->end;
+    }
 };
 
 // ============================================================

@@ -1,66 +1,49 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Vertical Scanning — O(N*L) time, O(1) space
 // ============================================================
 import java.util.*;
 
 class Solution1 {
-    // Brute force: hash set / nested loops / direct comparison
-    // See Solution 2 below for optimal Trie-based approach
+    public String longestCommonPrefix(String[] strs) {
+        if (strs.length == 0) return "";
+        for (int i = 0; i < strs[0].length(); i++) {
+            char c = strs[0].charAt(i);
+            for (int j = 1; j < strs.length; j++)
+                if (i >= strs[j].length() || strs[j].charAt(i) != c)
+                    return strs[0].substring(0, i);
+        }
+        return strs[0];
+    }
 }
 
 // ============================================================
-// Solution 2: Optimal (Trie-based)
+// Solution 2: Trie — Insert all, walk single-child path
 // ============================================================
-class LongestCommonPrefix {
-    class TrieNode {
-        TrieNode[] children = new TrieNode[26];
-        boolean isEnd = false;
-    }
-    
-    private TrieNode root = new TrieNode();
-    
+class Solution2 {
+    int[][] children = new int[100001][26];
+    int[] childCount = new int[100001];
+    boolean[] isEnd = new boolean[100001];
+    int cnt = 0;
+
+    int newNode() { cnt++; return cnt; }
+
     public String longestCommonPrefix(String[] strs) {
-        if (strs == null || strs.length == 0) return "";
-        
-        // Insert all words into trie
-        for (String word : strs) {
-            insert(word);
-        }
-        
-        // Traverse trie to find common prefix
-        StringBuilder prefix = new StringBuilder();
-        TrieNode node = root;
-        
-        while (true) {
-            // Count non-null children
-            int childCount = 0;
-            int childIdx = -1;
-            for (int i = 0; i < 26; i++) {
-                if (node.children[i] != null) {
-                    childCount++;
-                    childIdx = i;
-                }
+        cnt = 0; int root = newNode();
+        for (String s : strs) {
+            int node = root;
+            for (char c : s.toCharArray()) {
+                int idx = c - 'a';
+                if (children[node][idx] == 0) { children[node][idx] = newNode(); childCount[node]++; }
+                node = children[node][idx];
             }
-            
-            // Stop if branching or end of word
-            if (childCount != 1 || node.isEnd) break;
-            
-            prefix.append((char)('a' + childIdx)); // Add character to prefix
-            node = node.children[childIdx]; // Move to child
+            isEnd[node] = true;
         }
-        
-        return prefix.toString();
-    }
-    
-    private void insert(String word) {
-        TrieNode node = root;
-        for (char c : word.toCharArray()) {
-            int idx = c - 'a';
-            if (node.children[idx] == null) {
-                node.children[idx] = new TrieNode();
-            }
-            node = node.children[idx];
+        StringBuilder sb = new StringBuilder();
+        int node = root;
+        while (childCount[node] == 1 && !isEnd[node]) {
+            for (int i = 0; i < 26; i++)
+                if (children[node][i] != 0) { sb.append((char)('a'+i)); node = children[node][i]; break; }
         }
-        node.isEnd = true; // Mark end of word
+        return sb.toString();
     }
 }

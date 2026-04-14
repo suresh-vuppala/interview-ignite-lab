@@ -1,15 +1,35 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: DFS per word separately (same as boggle brute)
+// Time: O(W * M * N * 4^L) | Space: O(L)
 // ============================================================
 #include <vector>
 #include <string>
-#include <unordered_set>
 using namespace std;
 
 class Solution1 {
+    int m, n;
+    bool dfs(vector<vector<char>>& board, string& word, int i, int j, int k) {
+        if (k == (int)word.size()) return true;
+        if (i < 0 || i >= m || j < 0 || j >= n || board[i][j] != word[k]) return false;
+        char tmp = board[i][j]; board[i][j] = '#';
+        bool found = dfs(board,word,i+1,j,k+1) || dfs(board,word,i-1,j,k+1) ||
+                     dfs(board,word,i,j+1,k+1) || dfs(board,word,i,j-1,k+1);
+        board[i][j] = tmp;
+        return found;
+    }
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
+        m = board.size(); n = board[0].size();
+        vector<string> result;
+        for (auto& w : words) {
+            bool found = false;
+            for (int i = 0; i < m && !found; i++)
+                for (int j = 0; j < n && !found; j++)
+                    if (dfs(board, w, i, j, 0)) found = true;
+            if (found) result.push_back(w);
+        }
+        return result;
+    }
 };
 
 // ============================================================

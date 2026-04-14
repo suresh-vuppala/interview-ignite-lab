@@ -1,37 +1,32 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: HashSet — O(N³) generate all substrings
 // ============================================================
 import java.util.*;
-
 class Solution1 {
-    // Brute force: hash set / nested loops / direct comparison
-    // See Solution 2 below for optimal Trie-based approach
+    public int countDistinct(String s) {
+        Set<String> set = new HashSet<>();
+        for (int i = 0; i < s.length(); i++)
+            for (int j = i + 1; j <= s.length(); j++)
+                set.add(s.substring(i, j));
+        return set.size();
+    }
 }
 
 // ============================================================
-// Solution 2: Optimal (Trie-based)
+// Solution 2: Suffix Trie — O(N²) insert suffixes, count nodes
 // ============================================================
-class CountDistinctSubstrings {
-    class TrieNode {
-        TrieNode[] children = new TrieNode[26];
-    }
-    
+class Solution2 {
     public int countDistinct(String s) {
-        TrieNode root = new TrieNode();
-        int count = 0;
-        
-        // Insert all substrings
+        int[][] ch = new int[s.length() * s.length() + 1][26];
+        int cnt = 0, count = 0;
         for (int i = 0; i < s.length(); i++) {
-            TrieNode node = root;
+            int node = 0;
             for (int j = i; j < s.length(); j++) {
                 int idx = s.charAt(j) - 'a';
-                if (node.children[idx] == null) {
-                    node.children[idx] = new TrieNode();
-                    count++; // New unique substring
-                }
-                node = node.children[idx];
+                if (ch[node][idx] == 0) { ch[node][idx] = ++cnt; count++; }
+                node = ch[node][idx];
             }
         }
-        return count + 1; // +1 for empty string
+        return count;
     }
 }

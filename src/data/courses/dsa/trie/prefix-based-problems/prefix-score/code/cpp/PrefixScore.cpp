@@ -1,15 +1,26 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Count prefix matches by scanning all words
+// Time: O(N² * L) | Space: O(1) extra
 // ============================================================
 #include <vector>
 #include <string>
-#include <unordered_set>
 using namespace std;
 
 class Solution1 {
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    vector<int> sumPrefixScores(vector<string>& words) {
+        int n = words.size();
+        vector<int> scores(n, 0);
+        for (int i = 0; i < n; i++) {
+            for (int len = 1; len <= (int)words[i].size(); len++) {
+                string prefix = words[i].substr(0, len);
+                for (auto& w : words)
+                    if (w.size() >= prefix.size() && w.substr(0, len) == prefix)
+                        scores[i]++;
+            }
+        }
+        return scores;
+    }
 };
 
 // ============================================================

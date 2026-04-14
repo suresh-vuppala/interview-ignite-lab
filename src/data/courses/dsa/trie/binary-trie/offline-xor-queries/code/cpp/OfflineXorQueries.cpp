@@ -1,15 +1,25 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Brute Force — Process each query by scanning all valid nums
+// Time: O(Q * N) | Space: O(N)
 // ============================================================
 #include <vector>
-#include <string>
-#include <unordered_set>
+#include <algorithm>
 using namespace std;
 
 class Solution1 {
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    vector<int> maximizeXor(vector<int>& nums, vector<vector<int>>& queries) {
+        vector<int> ans(queries.size());
+        for (int i = 0; i < (int)queries.size(); i++) {
+            int xi = queries[i][0], mi = queries[i][1];
+            ans[i] = -1;
+            for (int n : nums) {
+                if (n <= mi)
+                    ans[i] = max(ans[i], n ^ xi);
+            }
+        }
+        return ans;  // O(Q*N) — no sorting, no trie
+    }
 };
 
 // ============================================================

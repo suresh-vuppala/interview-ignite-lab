@@ -1,4 +1,18 @@
 # ============================================================
+# Solution 1: Brute Force — Linear scan all words O(N*L)
+# ============================================================
+class Solution1:
+    def __init__(self): self.words = []
+    def addWord(self, word): self.words.append(word)
+    def search(self, query):
+        result = []
+        for w in self.words:
+            if len(w) != len(query): continue
+            if all(q == '.' or q == c for q, c in zip(query, w)):
+                result.append(w)
+        return result
+
+# ============================================================
 # Solution 1: Brute Force
 # ============================================================
 

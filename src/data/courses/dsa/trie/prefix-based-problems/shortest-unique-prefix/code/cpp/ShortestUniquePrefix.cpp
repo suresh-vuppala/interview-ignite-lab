@@ -1,15 +1,29 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: For each word, compare against all other words
+// Time: O(N² * L) | Space: O(N * L)
 // ============================================================
 #include <vector>
 #include <string>
-#include <unordered_set>
 using namespace std;
 
 class Solution1 {
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    vector<string> shortestUniquePrefixes(vector<string>& words) {
+        int n = words.size();
+        vector<string> result;
+        for (int i = 0; i < n; i++) {
+            for (int len = 1; len <= (int)words[i].size(); len++) {
+                string prefix = words[i].substr(0, len);
+                bool unique = true;
+                for (int j = 0; j < n; j++) {
+                    if (i != j && words[j].substr(0, len) == prefix)
+                        { unique = false; break; }
+                }
+                if (unique) { result.push_back(prefix); break; }
+            }
+        }
+        return result;  // O(N²*L) — compare each prefix against all words
+    }
 };
 
 // ============================================================

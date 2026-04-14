@@ -1,15 +1,21 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Brute Force — All pairs with constraint check
+// Time: O(N²) per query | Space: O(N)
 // ============================================================
 #include <vector>
-#include <string>
-#include <unordered_set>
+#include <algorithm>
 using namespace std;
 
 class Solution1 {
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    int maxXorWithConstraint(vector<int>& nums, int x, int limit) {
+        int maxXor = -1;
+        for (int n : nums) {
+            if (n <= limit)  // Only consider nums within constraint
+                maxXor = max(maxXor, n ^ x);
+        }
+        return maxXor;  // O(N) per query, O(Q*N) total
+    }
 };
 
 // ============================================================

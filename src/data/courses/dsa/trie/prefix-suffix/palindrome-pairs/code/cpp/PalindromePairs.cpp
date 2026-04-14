@@ -1,15 +1,31 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Check all pairs for palindrome concatenation
+// Time: O(N² * L) | Space: O(L)
 // ============================================================
 #include <vector>
 #include <string>
-#include <unordered_set>
+#include <algorithm>
 using namespace std;
 
 class Solution1 {
+    bool isPalindrome(const string& s) {
+        int l = 0, r = s.size() - 1;
+        while (l < r) { if (s[l++] != s[r--]) return false; }
+        return true;
+    }
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    vector<vector<int>> palindromePairs(vector<string>& words) {
+        vector<vector<int>> result;
+        int n = words.size();
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++) {
+                if (i == j) continue;
+                string concat = words[i] + words[j];
+                if (isPalindrome(concat))
+                    result.push_back({i, j});
+            }
+        return result;  // O(N²*L) — check every pair
+    }
 };
 
 // ============================================================

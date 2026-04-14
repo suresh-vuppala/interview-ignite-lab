@@ -1,4 +1,15 @@
 # ============================================================
+# Solution 1: Brute Force — Check all pairs O(N²)
+# ============================================================
+class Solution1:
+    def solve(self, nums):
+        result = 0
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                result = max(result, nums[i] ^ nums[j])
+        return result
+
+# ============================================================
 # Solution 1: Brute Force
 # ============================================================
 

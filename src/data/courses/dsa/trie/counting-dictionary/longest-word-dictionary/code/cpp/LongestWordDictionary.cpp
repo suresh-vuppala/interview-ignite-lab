@@ -1,15 +1,29 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Sort + HashSet prefix check
+// Time: O(N * L²) | Space: O(N * L)
 // ============================================================
 #include <vector>
 #include <string>
 #include <unordered_set>
+#include <algorithm>
 using namespace std;
 
 class Solution1 {
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    string longestWord(vector<string>& words) {
+        sort(words.begin(), words.end());
+        unordered_set<string> built;
+        built.insert("");
+        string result = "";
+        for (auto& w : words) {
+            string prefix = w.substr(0, w.size() - 1);
+            if (built.count(prefix)) {  // Every prefix must be a word
+                built.insert(w);
+                if (w.size() > result.size()) result = w;
+            }
+        }
+        return result;  // O(N*L) — HashSet instead of Trie
+    }
 };
 
 // ============================================================

@@ -1,15 +1,21 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Brute Force — HashSet / Direct comparison
+// Time: O(N*L) or O(N²*L) | Space: O(N*L)
 // ============================================================
 import java.util.*;
-
 class Solution1 {
-    // Brute force: hash set / nested loops / direct comparison
-    // See Solution 2 below for optimal Trie-based approach
+    Set<String> words = new HashSet<>();
+    public void insert(String word) { words.add(word); }
+    public boolean hasPrefix(String prefix) {
+        for (String w : words)
+            if (w.startsWith(prefix)) return true;
+        return false;
+    }
 }
-
 // ============================================================
 // Solution 2: Optimal (Trie-based)
+// ============================================================
+: Optimal (Trie-based)
 // ============================================================
 import java.util.*;
 

@@ -1,58 +1,34 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: HashSet — Check all prefixes O(W*L²)
 // ============================================================
 import java.util.*;
-
 class Solution1 {
-    // Brute force: hash set / nested loops / direct comparison
-    // See Solution 2 below for optimal Trie-based approach
+    public String replaceWords(List<String> dict, String sentence) {
+        Set<String> roots = new HashSet<>(dict);
+        StringBuilder sb = new StringBuilder();
+        for (String word : sentence.split(" ")) {
+            String rep = word;
+            for (int i = 1; i <= word.length(); i++) {
+                if (roots.contains(word.substring(0, i))) { rep = word.substring(0, i); break; }
+            }
+            if (sb.length() > 0) sb.append(" ");
+            sb.append(rep);
+        }
+        return sb.toString();
+    }
 }
 
 // ============================================================
-// Solution 2: Optimal (Trie-based)
+// Solution 2: Trie — O(L) prefix match per word
 // ============================================================
-import java.util.*;
-
-class ReplaceWords {
-    class TrieNode {
-        TrieNode[] children = new TrieNode[26];
-        boolean isEnd = false;
-    }
-    
-    private TrieNode root = new TrieNode();
-    
-    public String replaceWords(List<String> dictionary, String sentence) {
-        for (String word : dictionary) insert(word);
-        
-        String[] words = sentence.split(" ");
-        for (int i = 0; i < words.length; i++) {
-            words[i] = getRoot(words[i]);
-        }
-        return String.join(" ", words);
-    }
-    
-    private void insert(String word) {
-        TrieNode node = root;
-        for (char c : word.toCharArray()) {
-            int idx = c - 'a';
-            if (node.children[idx] == null) {
-                node.children[idx] = new TrieNode();
-            }
-            node = node.children[idx];
-        }
-        node.isEnd = true;
-    }
-    
-    private String getRoot(String word) {
-        TrieNode node = root;
-        StringBuilder prefix = new StringBuilder();
-        for (char c : word.toCharArray()) {
-            int idx = c - 'a';
-            if (node.children[idx] == null) break;
-            prefix.append(c);
-            node = node.children[idx];
-            if (node.isEnd) return prefix.toString();
-        }
-        return word;
+class Solution2 {
+    int[][] ch = new int[100001][26]; boolean[] isEnd = new boolean[100001]; int cnt = 0;
+    void insert(String s) { int n=0; for (char c:s.toCharArray()) { if(ch[n][c-'a']==0) ch[n][c-'a']=++cnt; n=ch[n][c-'a']; } isEnd[n]=true; }
+    String find(String w) { int n=0; for (int i=0;i<w.length();i++) { if(ch[n][w.charAt(i)-'a']==0) break; n=ch[n][w.charAt(i)-'a']; if(isEnd[n]) return w.substring(0,i+1); } return w; }
+    public String replaceWords(List<String> dict, String sentence) {
+        for (String d:dict) insert(d);
+        StringBuilder sb = new StringBuilder();
+        for (String w : sentence.split(" ")) { if(sb.length()>0) sb.append(" "); sb.append(find(w)); }
+        return sb.toString();
     }
 }

@@ -1,52 +1,38 @@
 # ============================================================
-# Solution 1: Brute Force
+# Solution 1: Check all pairs — O(N²)
 # ============================================================
-
 class Solution1:
-    # Brute force: hash set / nested loops / direct comparison
-    # See Solution 2 below for optimal Trie-based approach
-    pass
-
+    def findMaximumXOR(self, nums):
+        max_xor = 0
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                max_xor = max(max_xor, nums[i] ^ nums[j])
+        return max_xor
 
 # ============================================================
-# Solution 2: Optimal (Trie-based)
+# Solution 2: Binary Trie — O(N*32) = O(N)
 # ============================================================
-class TrieNode:
-    def __init__(self):
-        self.children = [None, None]  # 0 and 1 for binary
-
-class MaximumXorTwoNumbers:
-    def __init__(self):
-        self.root = TrieNode()
-    
-    def insert(self, num: int) -> None:
-        node = self.root
-        for i in range(31, -1, -1):
-            bit = (num >> i) & 1
-            if not node.children[bit]:
-                node.children[bit] = TrieNode()
-            node = node.children[bit]
-    
-    def getMaxXor(self, num: int) -> int:
-        node = self.root
-        xor_val = 0
-        for i in range(31, -1, -1):
-            bit = (num >> i) & 1
-            opposite = 1 - bit  # Choose opposite for max XOR
-            if node.children[opposite]:
-                xor_val |= (1 << i)  # Set bit in result
-                node = node.children[opposite]
-            else:
-                node = node.children[bit]
-        return xor_val
-    
-    def findMaximumXOR(self, nums: list[int]) -> int:
-        # Insert all numbers into trie
+class Solution2:
+    def findMaximumXOR(self, nums):
+        root = {}
+        # Insert all numbers bit by bit (MSB first)
         for num in nums:
-            self.insert(num)
-        
-        # Find max XOR for each number
+            node = root
+            for i in range(31, -1, -1):
+                bit = (num >> i) & 1
+                if bit not in node: node[bit] = {}
+                node = node[bit]
+        # Query max XOR for each number
         max_xor = 0
         for num in nums:
-            max_xor = max(max_xor, self.getMaxXor(num))
+            node, xor_val = root, 0
+            for i in range(31, -1, -1):
+                bit = (num >> i) & 1
+                opp = 1 - bit  # Want opposite for max XOR
+                if opp in node:
+                    xor_val |= (1 << i)
+                    node = node[opp]
+                else:
+                    node = node[bit]
+            max_xor = max(max_xor, xor_val)
         return max_xor

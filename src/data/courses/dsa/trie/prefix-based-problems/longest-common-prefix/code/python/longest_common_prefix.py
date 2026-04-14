@@ -1,55 +1,36 @@
 # ============================================================
-# Solution 1: Brute Force
+# Solution 1: Vertical Scanning — O(N*L) time, O(1) space
 # ============================================================
-
 class Solution1:
-    # Brute force: hash set / nested loops / direct comparison
-    # See Solution 2 below for optimal Trie-based approach
-    pass
-
+    def longestCommonPrefix(self, strs):
+        if not strs: return ""
+        for i in range(len(strs[0])):
+            c = strs[0][i]
+            for s in strs[1:]:
+                if i >= len(s) or s[i] != c:
+                    return strs[0][:i]
+        return strs[0]
 
 # ============================================================
-# Solution 2: Optimal (Trie-based)
+# Solution 2: Trie — Insert all, walk single-child path
 # ============================================================
 class TrieNode:
     def __init__(self):
         self.children = {}
         self.is_end = False
 
-class LongestCommonPrefix:
-    def __init__(self):
-        self.root = TrieNode()
-    
-    def insert(self, word: str) -> None:
-        node = self.root
-        for c in word:
-            if c not in node.children:
-                node.children[c] = TrieNode()
-            node = node.children[c]
-        node.is_end = True  # Mark end of word
-    
-    def longestCommonPrefix(self, strs: list[str]) -> str:
-        if not strs:
-            return ""
-        
-        # Insert all words into trie
-        for word in strs:
-            self.insert(word)
-        
-        # Traverse trie to find common prefix
-        prefix = []
-        node = self.root
-        
-        while True:
-            # Count children
-            children_list = list(node.children.keys())
-            
-            # Stop if branching or end of word
-            if len(children_list) != 1 or node.is_end:
-                break
-            
-            char = children_list[0]
-            prefix.append(char)  # Add character to prefix
-            node = node.children[char]  # Move to child
-        
-        return ''.join(prefix)
+class Solution2:
+    def longestCommonPrefix(self, strs):
+        if not strs: return ""
+        root = TrieNode()
+        for s in strs:
+            node = root
+            for c in s:
+                if c not in node.children: node.children[c] = TrieNode()
+                node = node.children[c]
+            node.is_end = True
+        prefix, node = "", root
+        while len(node.children) == 1 and not node.is_end:
+            c = next(iter(node.children))
+            prefix += c; node = node.children[c]
+        return prefix

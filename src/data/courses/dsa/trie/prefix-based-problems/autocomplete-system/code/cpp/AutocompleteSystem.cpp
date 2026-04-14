@@ -1,15 +1,34 @@
 // ============================================================
-// Solution 1: Brute Force
+// Solution 1: Linear scan all sentences for each prefix
+// Time: O(N * L) per input | Space: O(N * L)
 // ============================================================
 #include <vector>
 #include <string>
-#include <unordered_set>
+#include <algorithm>
+#include <unordered_map>
 using namespace std;
 
 class Solution1 {
+    unordered_map<string, int> freq;
+    string current;
 public:
-    // Brute force: use hash set / nested loops / direct comparison
-    // See Solution 2 below for the optimal Trie-based approach
+    Solution1(vector<string>& sentences, vector<int>& times) {
+        for (int i = 0; i < (int)sentences.size(); i++)
+            freq[sentences[i]] = times[i];
+    }
+    vector<string> input(char c) {
+        if (c == '#') { freq[current]++; current = ""; return {}; }
+        current += c;
+        vector<pair<int,string>> matches;
+        for (auto& [s, f] : freq)  // Scan ALL sentences each keystroke!
+            if (s.substr(0, current.size()) == current)
+                matches.push_back({-f, s});
+        sort(matches.begin(), matches.end());
+        vector<string> result;
+        for (int i = 0; i < min(3, (int)matches.size()); i++)
+            result.push_back(matches[i].second);
+        return result;  // O(N*L) per keystroke — no trie!
+    }
 };
 
 // ============================================================
