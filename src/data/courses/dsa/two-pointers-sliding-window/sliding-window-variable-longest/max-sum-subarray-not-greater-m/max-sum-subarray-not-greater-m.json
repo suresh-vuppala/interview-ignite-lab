@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-sum-subarray-not-greater-m/code/cpp/max_sum_subarray_not_greater_m.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-sum-subarray-not-greater-m/code/cpp/MaxSumNotGreaterM.cpp"
         },
         {
           "language": "java",

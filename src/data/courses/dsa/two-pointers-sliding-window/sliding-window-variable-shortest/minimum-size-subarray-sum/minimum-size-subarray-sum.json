@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/cpp/minimum_size_subarray_sum.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-size-subarray-sum/code/cpp/MinimumSizeSubarraySum.cpp"
         },
         {
           "language": "java",

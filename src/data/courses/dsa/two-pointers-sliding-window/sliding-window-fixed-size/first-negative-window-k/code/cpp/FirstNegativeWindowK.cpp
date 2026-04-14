@@ -1,69 +1,40 @@
 #include <vector>
 #include <deque>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Brute Force — scan each window for first negative — O(N*K)
+// ============================================================
+class Solution1 {
 public:
-    // ==================== SOLUTION 1: BRUTE FORCE ====================
-    // Time: O(n×k) | Space: O(1)
-    vector<int> firstNegativeBruteForce(vector<int>& arr, int k) {
-        int n = arr.size();
+    vector<int> firstNegative(vector<int>& nums, int k) {
+        int n = nums.size();
         vector<int> result;
-        
-        // For each window
         for (int i = 0; i <= n - k; i++) {
-            // Find first negative in window
-            int firstNeg = 0;
-            for (int j = i; j < i + k; j++) {
-                if (arr[j] < 0) {
-                    firstNeg = arr[j];
-                    break;
-                }
-            }
-            result.push_back(firstNeg);
+            int found = 0;
+            for (int j = i; j < i + k; j++)
+                if (nums[j] < 0) { found = nums[j]; break; }
+            result.push_back(found);
         }
-        
         return result;
     }
-    
-    // ==================== SOLUTION 2: SLIDING WINDOW WITH DEQUE - OPTIMAL ====================
-    // Time: O(n) | Space: O(k)
-    vector<int> firstNegativeDeque(vector<int>& arr, int k) {
-        int n = arr.size();
+};
+
+// ============================================================
+// Solution 2: Deque of negative indices — O(N) Time
+// ============================================================
+class Solution2 {
+public:
+    vector<int> firstNegative(vector<int>& nums, int k) {
+        int n = nums.size();
+        deque<int> negIdx; // Indices of negatives in current window
         vector<int> result;
-        deque<int> dq;  // Store indices of negative numbers
-        
-        // Process first window
-        for (int i = 0; i < k; i++) {
-            if (arr[i] < 0) {
-                dq.push_back(i);
+        for (int i = 0; i < n; i++) {
+            if (nums[i] < 0) negIdx.push_back(i);
+            if (i >= k - 1) {
+                while (!negIdx.empty() && negIdx.front() < i - k + 1) negIdx.pop_front();
+                result.push_back(negIdx.empty() ? 0 : nums[negIdx.front()]);
             }
         }
-        
-        // First window result
-        result.push_back(dq.empty() ? 0 : arr[dq.front()]);
-        
-        // Process remaining windows
-        for (int i = k; i < n; i++) {
-            // Remove indices outside current window
-            while (!dq.empty() && dq.front() <= i - k) {
-                dq.pop_front();
-            }
-            
-            // Add current element if negative
-            if (arr[i] < 0) {
-                dq.push_back(i);
-            }
-            
-            // First negative in current window
-            result.push_back(dq.empty() ? 0 : arr[dq.front()]);
-        }
-        
         return result;
-    }
-    
-    // ==================== MAIN SOLUTION (RECOMMENDED) ====================
-    vector<int> firstNegative(vector<int>& arr, int k) {
-        return firstNegativeDeque(arr, k);
     }
 };
