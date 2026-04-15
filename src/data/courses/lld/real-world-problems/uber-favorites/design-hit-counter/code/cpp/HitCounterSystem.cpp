@@ -1,13 +1,13 @@
-#include <iostream>
 #include <vector>
 #include <atomic>
 #include <mutex>
 #include <deque>
+#include <iostream>
 using namespace std;
 
-// ========== Approach 1: Circular Array — O(1) hit, O(W) getHits ==========
+// ========== CIRCULAR ARRAY APPROACH ==========
 class HitCounter {
-    static const int WINDOW = 300;
+    static constexpr int WINDOW = 300;
     int timestamps[300] = {};
     atomic<int> hits[300] = {};
     mutex mtx;
@@ -22,7 +22,6 @@ public:
             hits[idx].fetch_add(1);
         }
     }
-    
     int getHits(int timestamp) const {
         int total = 0;
         for (int i = 0; i < WINDOW; i++)
@@ -32,7 +31,7 @@ public:
     }
 };
 
-// ========== Approach 2: Queue-based ==========
+// ========== QUEUE-BASED APPROACH ==========
 class HitCounterQueue {
     deque<int> queue;
     mutex mtx;
@@ -41,7 +40,6 @@ public:
         lock_guard<mutex> lock(mtx);
         queue.push_back(timestamp);
     }
-    
     int getHits(int timestamp) {
         lock_guard<mutex> lock(mtx);
         while (!queue.empty() && timestamp - queue.front() >= 300)

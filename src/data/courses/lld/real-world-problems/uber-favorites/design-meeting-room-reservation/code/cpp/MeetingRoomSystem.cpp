@@ -1,33 +1,26 @@
-#include <iostream>
 #include <string>
 #include <vector>
-#include <unordered_map>
-#include <unordered_set>
-#include <algorithm>
+#include <map>
+#include <set>
 #include <mutex>
+#include <chrono>
+#include <algorithm>
+#include <iostream>
+#include <memory>
 using namespace std;
 
-struct TimeSlot {
-    int startHour, startMin, endHour, endMin; // Simplified to hour:min
-    bool overlaps(const TimeSlot& other) const {
-        int s1 = startHour * 60 + startMin, e1 = endHour * 60 + endMin;
-        int s2 = other.startHour * 60 + other.startMin, e2 = other.endHour * 60 + other.endMin;
-        return s1 < e2 && s2 < e1;
-    }
-};
-
-class MeetingRoom {
+struct MeetingRoom {
     string id, name;
     int capacity, floor;
-    unordered_set<string> amenities;
-public:
-    MeetingRoom(const string& id, const string& name, int cap, int floor, 
-                initializer_list<string> amens)
-        : id(id), name(name), capacity(cap), floor(floor), amenities(amens) {}
-    const string& getId() const { return id; }
-    const string& getName() const { return name; }
-    int getCapacity() const { return capacity; }
+    set<string> amenities;
     bool hasAmenity(const string& a) const { return amenities.count(a); }
+};
+
+struct TimeSlot {
+    long startMin, endMin; // Minutes from epoch for simplicity
+    bool overlaps(const TimeSlot& other) const {
+        return startMin < other.endMin && other.startMin < endMin;
+    }
 };
 
 struct Booking {
@@ -39,49 +32,52 @@ struct Booking {
 };
 
 class MeetingScheduler {
-    vector<MeetingRoom> rooms;
-    unordered_map<string, vector<Booking>> roomBookings;
+    vector<unique_ptr<MeetingRoom>> rooms;
+    map<string, vector<unique_ptr<Booking>>> roomBookings; // roomId -> bookings
     int bookingCounter = 0;
     mutex mtx;
 public:
-    void addRoom(MeetingRoom room) {
-        roomBookings[room.getId()] = {};
+    void addRoom(unique_ptr<MeetingRoom> room) {
+        roomBookings[room->id] = {};
         rooms.push_back(move(room));
     }
-    
-    Booking book(const string& roomId, const string& organizer, 
-                 vector<string> attendees, TimeSlot slot) {
+
+    Booking* book(const string& roomId, const string& organizer, vector<string> attendees, TimeSlot slot) {
         lock_guard<mutex> lock(mtx);
-        auto& bookings = roomBookings.at(roomId);
-        for (auto& b : bookings)
-            if (b.slot.overlaps(slot))
-                throw runtime_error("Room already booked for this time");
-        
+        auto it = roomBookings.find(roomId);
+        if (it == roomBookings.end()) throw runtime_error("Room not found");
+        for (auto& b : it->second)
+            if (b->slot.overlaps(slot)) throw runtime_error("Room already booked");
         MeetingRoom* room = nullptr;
-        for (auto& r : rooms) if (r.getId() == roomId) { room = &r; break; }
-        if (!room) throw runtime_error("Room not found");
-        
-        Booking booking{"BK-" + to_string(++bookingCounter), room, organizer, move(attendees), slot};
-        bookings.push_back(booking);
-        cout << "Booked " << room->getName() << " for " << organizer << endl;
-        return booking;
+        for (auto& r : rooms) if (r->id == roomId) { room = r.get(); break; }
+        auto booking = make_unique<Booking>();
+        booking->id = "BK-" + to_string(++bookingCounter);
+        booking->room = room;
+        booking->organizer = organizer;
+        booking->attendees = move(attendees);
+        booking->slot = slot;
+        auto* ptr = booking.get();
+        it->second.push_back(move(booking));
+        cout << "Booked " << room->name << " for " << organizer << endl;
+        return ptr;
     }
-    
+
     void cancel(const string& bookingId) {
         lock_guard<mutex> lock(mtx);
-        for (auto& [roomId, bookings] : roomBookings)
+        for (auto& [rid, bookings] : roomBookings)
             bookings.erase(remove_if(bookings.begin(), bookings.end(),
-                [&](const Booking& b) { return b.id == bookingId; }), bookings.end());
+                [&](auto& b) { return b->id == bookingId; }), bookings.end());
+        cout << "Cancelled " << bookingId << endl;
     }
-    
+
     vector<MeetingRoom*> findAvailable(TimeSlot slot, int minCapacity) {
         vector<MeetingRoom*> result;
         for (auto& r : rooms) {
-            if (r.getCapacity() < minCapacity) continue;
-            bool conflict = false;
-            for (auto& b : roomBookings[r.getId()])
-                if (b.slot.overlaps(slot)) { conflict = true; break; }
-            if (!conflict) result.push_back(&r);
+            if (r->capacity < minCapacity) continue;
+            bool free = true;
+            for (auto& b : roomBookings[r->id])
+                if (b->slot.overlaps(slot)) { free = false; break; }
+            if (free) result.push_back(r.get());
         }
         return result;
     }

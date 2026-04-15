@@ -1,34 +1,40 @@
-#include <iostream>
 #include <string>
-#include <memory>
 #include <chrono>
 #include <ctime>
-#include <iomanip>
-#include <sstream>
+#include <iostream>
+#include <memory>
 #include <thread>
+#include <sstream>
+#include <iomanip>
 using namespace std;
 
 enum class LogLevel { DEBUG, INFO, WARN, ERROR, FATAL };
 
-string logLevelStr(LogLevel l) {
-    switch(l) { case LogLevel::DEBUG:return"DEBUG"; case LogLevel::INFO:return"INFO";
-    case LogLevel::WARN:return"WARN"; case LogLevel::ERROR:return"ERROR"; case LogLevel::FATAL:return"FATAL"; }
-    return"";
+string logLevelToString(LogLevel level) {
+    switch (level) {
+        case LogLevel::DEBUG: return "DEBUG";
+        case LogLevel::INFO: return "INFO";
+        case LogLevel::WARN: return "WARN";
+        case LogLevel::ERROR: return "ERROR";
+        case LogLevel::FATAL: return "FATAL";
+    }
+    return "UNKNOWN";
 }
 
 struct LogMessage {
     LogLevel level;
-    string message, threadName;
+    string message;
+    string threadName;
     string timestamp;
-    
-    LogMessage(LogLevel lvl, const string& msg) : level(lvl), message(msg) {
+
+    LogMessage(LogLevel level, string msg) : level(level), message(move(msg)) {
         auto now = chrono::system_clock::now();
         auto t = chrono::system_clock::to_time_t(now);
-        stringstream ss; ss << put_time(localtime(&t), "%Y-%m-%d %H:%M:%S");
-        timestamp = ss.str();
-        
-        stringstream tid; tid << this_thread::get_id();
-        threadName = "Thread-" + tid.str();
+        ostringstream oss;
+        oss << put_time(localtime(&t), "%Y-%m-%d %H:%M:%S");
+        timestamp = oss.str();
+        ostringstream tid; tid << this_thread::get_id();
+        threadName = "thread-" + tid.str();
     }
 };
 
@@ -42,15 +48,15 @@ public:
 class PlainFormatter : public LogFormatter {
 public:
     string format(const LogMessage& msg) const override {
-        return "[" + msg.timestamp + "] [" + logLevelStr(msg.level) + "] [" + msg.threadName + "] " + msg.message;
+        return "[" + msg.timestamp + "] [" + logLevelToString(msg.level) + "] [" + msg.threadName + "] " + msg.message;
     }
 };
 
 class JSONFormatter : public LogFormatter {
 public:
     string format(const LogMessage& msg) const override {
-        return "{"timestamp":"" + msg.timestamp + "","level":"" + logLevelStr(msg.level) + 
-               "","thread":"" + msg.threadName + "","message":"" + msg.message + ""}";
+        return "{"timestamp":"" + msg.timestamp + "","level":"" + logLevelToString(msg.level)
+             + "","thread":"" + msg.threadName + "","message":"" + msg.message + ""}";
     }
 };
 
@@ -59,32 +65,36 @@ class LogHandler {
 protected:
     LogLevel minLevel;
     shared_ptr<LogHandler> next;
-    shared_ptr<LogFormatter> formatter;
+    unique_ptr<LogFormatter> formatter;
 public:
-    LogHandler(LogLevel minLvl, shared_ptr<LogFormatter> fmt) : minLevel(minLvl), formatter(fmt) {}
+    LogHandler(LogLevel minLevel, unique_ptr<LogFormatter> fmt)
+        : minLevel(minLevel), formatter(move(fmt)) {}
     virtual ~LogHandler() = default;
-    
-    shared_ptr<LogHandler> setNext(shared_ptr<LogHandler> handler) { next = handler; return handler; }
-    
+
+    LogHandler* setNext(shared_ptr<LogHandler> handler) {
+        next = move(handler);
+        return next.get();
+    }
+
     void handle(const LogMessage& msg) {
         if ((int)msg.level >= (int)minLevel) write(formatter->format(msg));
         if (next) next->handle(msg);
     }
-    
-    virtual void write(const string& formatted) = 0;
+
+    virtual void write(const string& formattedMsg) = 0;
 };
 
 class ConsoleHandler : public LogHandler {
 public:
-    ConsoleHandler(LogLevel min, shared_ptr<LogFormatter> fmt) : LogHandler(min, fmt) {}
+    ConsoleHandler(LogLevel min, unique_ptr<LogFormatter> fmt) : LogHandler(min, move(fmt)) {}
     void write(const string& msg) override { cout << msg << endl; }
 };
 
 class FileHandler : public LogHandler {
     string filename;
 public:
-    FileHandler(LogLevel min, shared_ptr<LogFormatter> fmt, const string& file)
-        : LogHandler(min, fmt), filename(file) {}
+    FileHandler(LogLevel min, unique_ptr<LogFormatter> fmt, string fn)
+        : LogHandler(min, move(fmt)), filename(move(fn)) {}
     void write(const string& msg) override { cout << "[FILE:" << filename << "] " << msg << endl; }
 };
 
@@ -96,9 +106,8 @@ public:
     static Logger& getInstance() { static Logger instance; return instance; }
     Logger(const Logger&) = delete;
     Logger& operator=(const Logger&) = delete;
-    
-    void setHandlerChain(shared_ptr<LogHandler> chain) { handlerChain = chain; }
-    
+
+    void setHandlerChain(shared_ptr<LogHandler> chain) { handlerChain = move(chain); }
     void log(LogLevel level, const string& message) {
         if (handlerChain) handlerChain->handle(LogMessage(level, message));
     }
@@ -108,12 +117,3 @@ public:
     void error(const string& msg) { log(LogLevel::ERROR, msg); }
     void fatal(const string& msg) { log(LogLevel::FATAL, msg); }
 };
-
-// Setup:
-// auto plainFmt = make_shared<PlainFormatter>();
-// auto jsonFmt = make_shared<JSONFormatter>();
-// auto console = make_shared<ConsoleHandler>(LogLevel::DEBUG, plainFmt);
-// auto file = make_shared<FileHandler>(LogLevel::INFO, jsonFmt, "app.log");
-// console->setNext(file);
-// Logger::getInstance().setHandlerChain(console);
-// Logger::getInstance().info("Server started");
