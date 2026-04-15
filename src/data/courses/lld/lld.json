@@ -136,27 +136,27 @@
             {
               "title": "Single Responsibility Principle",
               "slug": "single-responsibility",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Open-Closed Principle",
               "slug": "open-closed",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Liskov Substitution Principle",
               "slug": "liskov-substitution",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Interface Segregation Principle",
               "slug": "interface-segregation",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Dependency Inversion Principle",
               "slug": "dependency-inversion",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -167,27 +167,27 @@
             {
               "title": "Separation of Concerns (SoC)",
               "slug": "separation-of-concerns",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "DRY vs DIE vs Abstraction (Nuance)",
               "slug": "dry-vs-die-vs-abstraction",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Composition over Inheritance",
               "slug": "composition-over-inheritance",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Law of Demeter (Principle of Least Knowledge)",
               "slug": "law-of-demeter",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Encapsulation & Information Hiding (Deep Dive)",
               "slug": "encapsulation-information-hiding",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         }

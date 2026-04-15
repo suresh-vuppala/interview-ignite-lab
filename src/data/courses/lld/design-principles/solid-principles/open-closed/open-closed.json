@@ -1,0 +1,27 @@
+{
+  "title": "Open-Closed Principle",
+  "description": "Open for extension, closed for modification",
+  "difficulty": "Intermediate",
+  "tags": [
+    "SOLID",
+    "OCP",
+    "Design Principles"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP Concepts"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Open-Closed Principle Example",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-principles/solid-principles/open-closed/code/java/PricingOCP.java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Interface Segregation Principle",
+  "description": "No client should be forced to depend on methods it doesn't use",
+  "difficulty": "Intermediate",
+  "tags": [
+    "SOLID",
+    "ISP",
+    "Design Principles"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP Concepts"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Interface Segregation Principle Example",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-principles/solid-principles/interface-segregation/code/java/DocumentISP.java"
+        }
+      ]
+    }
+  ]
+}

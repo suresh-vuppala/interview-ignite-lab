@@ -1,0 +1,27 @@
+{
+  "title": "Single Responsibility Principle",
+  "description": "A class should have only one reason to change",
+  "difficulty": "Intermediate",
+  "tags": [
+    "SOLID",
+    "SRP",
+    "Design Principles"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP Concepts"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Single Responsibility Principle Example",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-principles/solid-principles/single-responsibility/code/java/OrderSRP.java"
+        }
+      ]
+    }
+  ]
+}

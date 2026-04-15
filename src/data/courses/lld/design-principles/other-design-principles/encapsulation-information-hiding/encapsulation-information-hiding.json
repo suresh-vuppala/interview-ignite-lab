@@ -1,0 +1,17 @@
+{
+  "title": "Encapsulation & Information Hiding (Deep Dive)",
+  "description": "Advanced encapsulation \u2014 defensive copies, immutability, and information hiding strategies",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Principles",
+    "Encapsulation",
+    "Immutability"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP Concepts"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Separation of Concerns (SoC)",
+  "description": "Divide a program into distinct sections, each addressing a separate concern",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Principles",
+    "SoC",
+    "Architecture"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP Concepts"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

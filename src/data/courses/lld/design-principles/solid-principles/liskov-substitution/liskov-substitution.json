@@ -1,0 +1,27 @@
+{
+  "title": "Liskov Substitution Principle",
+  "description": "Subtypes must be substitutable for their base types without breaking behavior",
+  "difficulty": "Intermediate",
+  "tags": [
+    "SOLID",
+    "LSP",
+    "Design Principles"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP Concepts"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Liskov Substitution Principle Example",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-principles/solid-principles/liskov-substitution/code/java/NotificationLSP.java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Law of Demeter (Principle of Least Knowledge)",
+  "description": "Only talk to your immediate friends \u2014 don't reach through objects",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Principles",
+    "LoD",
+    "Coupling"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP Concepts"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

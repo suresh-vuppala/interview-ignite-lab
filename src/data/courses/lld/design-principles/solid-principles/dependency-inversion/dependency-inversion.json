@@ -1,0 +1,28 @@
+{
+  "title": "Dependency Inversion Principle",
+  "description": "High-level modules should not depend on low-level modules \u2014 both should depend on abstractions",
+  "difficulty": "Intermediate",
+  "tags": [
+    "SOLID",
+    "DIP",
+    "Dependency Injection",
+    "Design Principles"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP Concepts"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Dependency Inversion Principle Example",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-principles/solid-principles/dependency-inversion/code/java/StorageDIP.java"
+        }
+      ]
+    }
+  ]
+}

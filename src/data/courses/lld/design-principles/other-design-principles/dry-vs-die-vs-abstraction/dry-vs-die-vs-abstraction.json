@@ -1,0 +1,17 @@
+{
+  "title": "DRY vs DIE vs Abstraction (Nuance)",
+  "description": "When DRY goes wrong and premature abstraction hurts more than duplication",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Principles",
+    "DRY",
+    "Abstraction"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP Concepts"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

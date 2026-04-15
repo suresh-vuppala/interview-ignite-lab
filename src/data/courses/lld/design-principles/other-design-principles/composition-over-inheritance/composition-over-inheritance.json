@@ -1,0 +1,27 @@
+{
+  "title": "Composition over Inheritance",
+  "description": "Favor object composition over class inheritance for flexibility",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Principles",
+    "Composition",
+    "Inheritance"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP Concepts"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Composition over Inheritance Example",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-principles/other-design-principles/composition-over-inheritance/code/java/CompositionGame.java"
+        }
+      ]
+    }
+  ]
+}
