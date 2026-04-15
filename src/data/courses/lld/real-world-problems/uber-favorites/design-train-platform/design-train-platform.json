@@ -1,0 +1,29 @@
+{
+  "title": "Design a Train Platform Management System",
+  "description": "Design a system to manage train arrivals/departures and platform allocation",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Greedy",
+    "Strategy"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/uber-favorites/design-train-platform/code/java/TrainPlatformSystem.java"
+        }
+      ]
+    }
+  ]
+}

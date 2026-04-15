@@ -361,17 +361,17 @@
             {
               "title": "Design for Amazon Alexa Devices",
               "slug": "design-alexa-devices",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design a Vending Machine",
               "slug": "design-vending-machine",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design Tic-Tac-Toe",
               "slug": "design-tic-tac-toe",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -382,52 +382,52 @@
             {
               "title": "Uber Driver Dispatch System",
               "slug": "uber-driver-dispatch",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design a Hit Counter (Concurrent)",
               "slug": "design-hit-counter",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design a Meeting Room Reservation System",
               "slug": "design-meeting-room-reservation",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design a File System (cd with '*')",
               "slug": "design-file-system",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design a Leaderboard (Top K)",
               "slug": "design-leaderboard",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design a Train Platform Management System",
               "slug": "design-train-platform",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design a Rate Limiter (Token Bucket, Sliding Window)",
               "slug": "design-rate-limiter",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design a Movie Ticket Booking System",
               "slug": "design-movie-ticket-booking",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design a Logging Framework (Chain of Responsibility)",
               "slug": "design-logging-framework",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design a Cache System (LRU, LFU)",
               "slug": "design-cache-system",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         }

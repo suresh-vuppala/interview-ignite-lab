@@ -1,0 +1,30 @@
+{
+  "title": "Design for Amazon Alexa Devices",
+  "description": "Design a smart home voice assistant device system",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Command",
+    "Observer",
+    "Strategy"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-alexa-devices/code/java/AlexaDeviceSystem.java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Design Tic-Tac-Toe",
+  "description": "Design a Tic-Tac-Toe game with extensible board sizes and player types",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Strategy",
+    "Factory"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-tic-tac-toe/code/java/TicTacToeGame.java"
+        }
+      ]
+    }
+  ]
+}

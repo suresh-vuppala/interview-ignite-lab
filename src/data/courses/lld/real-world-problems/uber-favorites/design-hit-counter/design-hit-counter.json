@@ -1,0 +1,29 @@
+{
+  "title": "Design a Hit Counter (Concurrent)",
+  "description": "Design a thread-safe hit counter that counts events in a sliding time window",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Concurrency",
+    "Sliding Window"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/uber-favorites/design-hit-counter/code/java/HitCounterSystem.java"
+        }
+      ]
+    }
+  ]
+}

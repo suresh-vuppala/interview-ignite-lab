@@ -1,0 +1,29 @@
+{
+  "title": "Uber Driver Dispatch System",
+  "description": "Design a driver dispatch system that matches riders with nearby available drivers",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Strategy",
+    "Observer"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/uber-favorites/uber-driver-dispatch/code/java/UberDispatchSystem.java"
+        }
+      ]
+    }
+  ]
+}

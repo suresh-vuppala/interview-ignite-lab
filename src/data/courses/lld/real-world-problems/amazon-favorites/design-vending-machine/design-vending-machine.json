@@ -1,0 +1,29 @@
+{
+  "title": "Design a Vending Machine",
+  "description": "Design a vending machine with product selection, payment, and dispensing",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "State",
+    "Strategy"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-vending-machine/code/java/VendingMachineSystem.java"
+        }
+      ]
+    }
+  ]
+}

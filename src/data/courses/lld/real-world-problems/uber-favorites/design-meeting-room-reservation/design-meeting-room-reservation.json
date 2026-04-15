@@ -1,0 +1,29 @@
+{
+  "title": "Design a Meeting Room Reservation System",
+  "description": "Design a system to book meeting rooms with conflict detection and recurring meetings",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Strategy",
+    "Observer"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/uber-favorites/design-meeting-room-reservation/code/java/MeetingRoomSystem.java"
+        }
+      ]
+    }
+  ]
+}

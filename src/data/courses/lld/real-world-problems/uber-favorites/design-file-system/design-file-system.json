@@ -1,0 +1,29 @@
+{
+  "title": "Design a File System (cd with '*')",
+  "description": "Design an in-memory file system with directory navigation and wildcard support",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Composite",
+    "Iterator"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/uber-favorites/design-file-system/code/java/InMemoryFileSystem.java"
+        }
+      ]
+    }
+  ]
+}

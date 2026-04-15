@@ -1,0 +1,30 @@
+{
+  "title": "Design a Movie Ticket Booking System",
+  "description": "Design a movie ticket booking system with seat selection and concurrent booking handling",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Strategy",
+    "Observer",
+    "Concurrency"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/uber-favorites/design-movie-ticket-booking/code/java/MovieTicketBooking.java"
+        }
+      ]
+    }
+  ]
+}

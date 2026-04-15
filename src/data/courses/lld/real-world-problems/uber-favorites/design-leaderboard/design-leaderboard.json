@@ -1,0 +1,29 @@
+{
+  "title": "Design a Leaderboard (Top K)",
+  "description": "Design a real-time leaderboard that supports score updates and top-K queries",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Heap",
+    "TreeMap"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/uber-favorites/design-leaderboard/code/java/LeaderboardSystem.java"
+        }
+      ]
+    }
+  ]
+}

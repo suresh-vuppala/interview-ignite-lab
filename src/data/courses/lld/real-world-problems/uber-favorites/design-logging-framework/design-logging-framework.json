@@ -1,0 +1,30 @@
+{
+  "title": "Design a Logging Framework (Chain of Responsibility)",
+  "description": "Design a flexible logging framework with multiple log levels and output targets",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Chain of Responsibility",
+    "Strategy",
+    "Singleton"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/uber-favorites/design-logging-framework/code/java/LoggingFramework.java"
+        }
+      ]
+    }
+  ]
+}

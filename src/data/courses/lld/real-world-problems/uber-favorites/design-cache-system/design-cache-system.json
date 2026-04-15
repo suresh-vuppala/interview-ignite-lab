@@ -1,0 +1,30 @@
+{
+  "title": "Design a Cache System (LRU, LFU)",
+  "description": "Design a flexible cache system supporting LRU and LFU eviction policies",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Strategy",
+    "LinkedHashMap",
+    "DoublyLinkedList"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/uber-favorites/design-cache-system/code/java/CacheSystem.java"
+        }
+      ]
+    }
+  ]
+}
