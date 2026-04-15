@@ -1,0 +1,20 @@
+{
+  "title": "Mock Interview Drills (Timed Practice)",
+  "description": "Practice LLD interviews with structured time management and self-evaluation",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Interview",
+    "Practice",
+    "Mock",
+    "Timing"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

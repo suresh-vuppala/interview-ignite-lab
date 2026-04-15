@@ -1,0 +1,20 @@
+{
+  "title": "API/Interface Design",
+  "description": "Define the public interface of your system \u2014 what methods are exposed and how",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Interview",
+    "API",
+    "Interface",
+    "Contract"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

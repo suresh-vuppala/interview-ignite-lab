@@ -1,0 +1,19 @@
+{
+  "title": "Class Diagram Drawing",
+  "description": "Quickly and clearly draw class diagrams during interviews",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Interview",
+    "UML",
+    "Class Diagram"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

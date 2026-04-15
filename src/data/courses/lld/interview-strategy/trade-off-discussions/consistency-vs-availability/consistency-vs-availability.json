@@ -1,0 +1,20 @@
+{
+  "title": "Consistency vs Availability (in LLD context)",
+  "description": "Handle concurrent access decisions \u2014 strong consistency vs eventual consistency in object design",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Interview",
+    "Trade-offs",
+    "Concurrency",
+    "Consistency"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

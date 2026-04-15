@@ -1,0 +1,19 @@
+{
+  "title": "Memory vs CPU",
+  "description": "Navigate the classic space-time trade-off in LLD design decisions",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Interview",
+    "Trade-offs",
+    "Performance"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

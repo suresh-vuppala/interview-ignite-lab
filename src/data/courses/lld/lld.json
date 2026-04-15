@@ -562,27 +562,27 @@
             {
               "title": "Requirement Clarification (Functional vs Non-functional)",
               "slug": "requirement-clarification",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Entity Identification",
               "slug": "entity-identification",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "API/Interface Design",
               "slug": "api-interface-design",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Class Diagram Drawing",
               "slug": "class-diagram-drawing",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Sequence Diagram for Critical Flows",
               "slug": "sequence-diagram-critical-flows",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -593,17 +593,17 @@
             {
               "title": "Pattern X vs Pattern Y (Strategy vs State)",
               "slug": "pattern-comparisons",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Memory vs CPU",
               "slug": "memory-vs-cpu",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Consistency vs Availability (in LLD context)",
               "slug": "consistency-vs-availability",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -614,7 +614,7 @@
             {
               "title": "Mock Interview Drills (Timed Practice)",
               "slug": "timed-practice",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         }

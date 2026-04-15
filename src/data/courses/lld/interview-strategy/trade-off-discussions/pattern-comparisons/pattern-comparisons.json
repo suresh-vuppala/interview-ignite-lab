@@ -1,0 +1,19 @@
+{
+  "title": "Pattern X vs Pattern Y (Strategy vs State)",
+  "description": "Compare design patterns and justify your choices \u2014 the senior engineer signal",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Interview",
+    "Trade-offs",
+    "Design Patterns"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

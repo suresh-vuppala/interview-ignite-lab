@@ -1,0 +1,20 @@
+{
+  "title": "Entity Identification",
+  "description": "Extract the key classes and objects from requirements systematically",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Interview",
+    "Entities",
+    "Nouns",
+    "OOP"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

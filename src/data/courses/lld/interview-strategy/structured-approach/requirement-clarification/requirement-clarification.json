@@ -1,0 +1,19 @@
+{
+  "title": "Requirement Clarification (Functional vs Non-functional)",
+  "description": "The first and most critical step \u2014 ask the right questions before designing",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Interview",
+    "Requirements",
+    "Clarification"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

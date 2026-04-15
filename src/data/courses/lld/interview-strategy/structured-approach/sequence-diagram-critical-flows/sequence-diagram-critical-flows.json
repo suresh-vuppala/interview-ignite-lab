@@ -1,0 +1,19 @@
+{
+  "title": "Sequence Diagram for Critical Flows",
+  "description": "Walk through the most important use case step by step",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Interview",
+    "Sequence Diagram",
+    "Flow"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}
