@@ -208,4 +208,4 @@ Design a system for booking movie tickets with show management, seat selection, 
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including Seat with TTL-based locking, all-or-nothing multi-seat lock, Show with seat grid, and Booking with cancellation and refund policy.
+```code```

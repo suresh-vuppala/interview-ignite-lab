@@ -203,4 +203,4 @@ Design a voice assistant system that processes voice commands, controls smart ho
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including Command pattern for device actions, Composite for device groups, Macro command for routines, and undo support via command history stack.
+```code```

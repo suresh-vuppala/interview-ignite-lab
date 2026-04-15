@@ -182,4 +182,4 @@ Design an in-memory file system with directory navigation, wildcard support, and
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including Composite-based file tree, wildcard pattern matching, path resolution with `.` and `..`, and all standard operations.
+```code```

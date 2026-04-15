@@ -152,4 +152,4 @@ Design a thread-safe hit counter that counts events in a sliding time window.
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including circular array approach with AtomicIntegerArray and the alternative Queue-based approach for comparison.
+```code```

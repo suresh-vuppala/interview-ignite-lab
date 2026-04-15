@@ -191,4 +191,4 @@ Idle  HasMoney  Dispensing  Maintenance
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including State pattern for machine flow, Product/ProductSlot inventory management, and change calculation logic.
+```code```

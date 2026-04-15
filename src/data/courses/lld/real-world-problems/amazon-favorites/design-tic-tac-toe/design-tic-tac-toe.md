@@ -200,4 +200,4 @@ This gives **O(1) win detection** per move instead of O(N²).
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including Board with O(1) win detection, Strategy-based player types (Human + AI), and the game loop with validation.
+```code```

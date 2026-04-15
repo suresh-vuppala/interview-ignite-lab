@@ -163,4 +163,4 @@ Design a real-time leaderboard system that supports score updates and efficient 
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including dual HashMap+TreeMap approach, thread-safe score updates, top-K sum query, and rank calculation with tie handling.
+```code```

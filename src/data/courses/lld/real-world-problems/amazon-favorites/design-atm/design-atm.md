@@ -211,4 +211,4 @@ Idle  CardInserted  Authenticated  Transaction
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including State pattern for ATM flow, Chain of Responsibility for cash dispensing, and Account management with PIN verification and daily limits.
+```code```

@@ -199,4 +199,4 @@ Time complexity: O(N log N) for sorting
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including Strategy-based platform allocation, the minimum-platforms sweep algorithm, and Station orchestration.
+```code```

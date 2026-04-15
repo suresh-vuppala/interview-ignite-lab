@@ -197,4 +197,4 @@ Percentage   Flat   BOGO
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including Decorator-based toppings, Strategy-based discounts, and the PizzaOrder class with receipt generation.
+```code```

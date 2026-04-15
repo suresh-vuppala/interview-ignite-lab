@@ -218,4 +218,4 @@ Design a library management system that handles book cataloging, member manageme
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including Library singleton, Book/BookItem hierarchy, Member with borrowing limits, Strategy-based fine calculation, and reservation queue.
+```code```

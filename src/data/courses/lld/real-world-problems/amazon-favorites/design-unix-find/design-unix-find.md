@@ -204,4 +204,4 @@ Design a file search utility similar to the Unix `find` command that can search 
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including FileSystemEntry hierarchy, all Filter implementations (Name, Extension, Size, AND/OR composite), and the recursive Finder class.
+```code```

@@ -208,4 +208,4 @@ LRUCache  LFUCache
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including LRU with LinkedHashMap (simple) and manual DLL (interview-style), plus LFU with frequency-bucketed LinkedHashSets.
+```code```

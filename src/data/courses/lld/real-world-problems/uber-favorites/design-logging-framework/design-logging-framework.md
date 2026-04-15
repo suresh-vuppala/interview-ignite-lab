@@ -210,4 +210,4 @@ Plain   JSON  XML
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including Chain of Responsibility handler chain, Strategy-based formatters (Plain + JSON), Singleton logger, and log level filtering.
+```code```

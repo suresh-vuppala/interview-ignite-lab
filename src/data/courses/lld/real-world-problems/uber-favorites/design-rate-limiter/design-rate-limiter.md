@@ -193,4 +193,4 @@ TokenBucket     SlidingWindow    FixedWindow
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including Token Bucket (with lazy refill), Sliding Window (with Deque), Fixed Window, and the Factory for creating limiter instances.
+```code```

@@ -193,4 +193,4 @@ Design a meeting room booking system with conflict detection, capacity filtering
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including TimeSlot overlap detection, synchronized booking, available room search, and MeetingRoom with amenities.
+```code```

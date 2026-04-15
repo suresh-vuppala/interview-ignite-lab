@@ -215,4 +215,4 @@ Design a driver dispatch system that matches ride requests with the nearest avai
 
 ## Implementation
 
-> See the **Java code tab** for the complete implementation including Location with distance calculation, Strategy-based driver matching, FareCalculator, and RideService orchestration.
+```code```
