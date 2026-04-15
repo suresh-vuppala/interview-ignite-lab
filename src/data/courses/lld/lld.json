@@ -1,0 +1,624 @@
+{
+  "id": "lld",
+  "title": "Low Level Design",
+  "description": "Master object-oriented design principles, design patterns, and real-world system design problems for technical interviews.",
+  "modules": [
+    {
+      "title": "Building a Strong Foundation",
+      "slug": "building-foundation",
+      "icon": "Building",
+      "sections": [
+        {
+          "title": "Core OOP Concepts",
+          "slug": "core-oop-concepts",
+          "lessons": [
+            {
+              "title": "Encapsulation",
+              "slug": "encapsulation",
+              "isPosted": false
+            },
+            {
+              "title": "Inheritance",
+              "slug": "inheritance",
+              "isPosted": false
+            },
+            {
+              "title": "Polymorphism (Overloading vs Overriding)",
+              "slug": "polymorphism",
+              "isPosted": false
+            },
+            {
+              "title": "Abstraction (Abstract Classes vs Interfaces)",
+              "slug": "abstraction",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "Class Relationships",
+          "slug": "class-relationships",
+          "lessons": [
+            {
+              "title": "Association",
+              "slug": "association",
+              "isPosted": false
+            },
+            {
+              "title": "Aggregation",
+              "slug": "aggregation",
+              "isPosted": false
+            },
+            {
+              "title": "Composition",
+              "slug": "composition",
+              "isPosted": false
+            },
+            {
+              "title": "Dependency",
+              "slug": "dependency",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "UML Diagrams",
+          "slug": "uml-diagrams",
+          "lessons": [
+            {
+              "title": "Class Diagrams (Visibility, Multiplicity, Relationships)",
+              "slug": "class-diagrams",
+              "isPosted": false
+            },
+            {
+              "title": "Sequence Diagrams (Lifelines, Messages)",
+              "slug": "sequence-diagrams",
+              "isPosted": false
+            },
+            {
+              "title": "Activity Diagrams",
+              "slug": "activity-diagrams",
+              "isPosted": false
+            },
+            {
+              "title": "State Diagrams",
+              "slug": "state-diagrams",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "Clean Code Principles",
+          "slug": "clean-code-principles",
+          "lessons": [
+            {
+              "title": "DRY (Don't Repeat Yourself)",
+              "slug": "dry-principle",
+              "isPosted": false
+            },
+            {
+              "title": "KISS (Keep It Simple, Stupid)",
+              "slug": "kiss-principle",
+              "isPosted": false
+            },
+            {
+              "title": "YAGNI (You Aren't Gonna Need It)",
+              "slug": "yagni-principle",
+              "isPosted": false
+            },
+            {
+              "title": "Meaningful Naming & Readability",
+              "slug": "meaningful-naming",
+              "isPosted": false
+            },
+            {
+              "title": "Function Length & Cohesion",
+              "slug": "function-length-cohesion",
+              "isPosted": false
+            },
+            {
+              "title": "Commenting vs Self-documenting Code",
+              "slug": "commenting-vs-self-documenting",
+              "isPosted": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Mastering Design Principles",
+      "slug": "design-principles",
+      "icon": "Lightbulb",
+      "sections": [
+        {
+          "title": "SOLID Principles",
+          "slug": "solid-principles",
+          "lessons": [
+            {
+              "title": "Single Responsibility Principle",
+              "slug": "single-responsibility",
+              "isPosted": false
+            },
+            {
+              "title": "Open-Closed Principle",
+              "slug": "open-closed",
+              "isPosted": false
+            },
+            {
+              "title": "Liskov Substitution Principle",
+              "slug": "liskov-substitution",
+              "isPosted": false
+            },
+            {
+              "title": "Interface Segregation Principle",
+              "slug": "interface-segregation",
+              "isPosted": false
+            },
+            {
+              "title": "Dependency Inversion Principle",
+              "slug": "dependency-inversion",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "Other Design Principles",
+          "slug": "other-design-principles",
+          "lessons": [
+            {
+              "title": "Separation of Concerns (SoC)",
+              "slug": "separation-of-concerns",
+              "isPosted": false
+            },
+            {
+              "title": "DRY vs DIE vs Abstraction (Nuance)",
+              "slug": "dry-vs-die-vs-abstraction",
+              "isPosted": false
+            },
+            {
+              "title": "Composition over Inheritance",
+              "slug": "composition-over-inheritance",
+              "isPosted": false
+            },
+            {
+              "title": "Law of Demeter (Principle of Least Knowledge)",
+              "slug": "law-of-demeter",
+              "isPosted": false
+            },
+            {
+              "title": "Encapsulation & Information Hiding (Deep Dive)",
+              "slug": "encapsulation-information-hiding",
+              "isPosted": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Learning Essential Design Patterns",
+      "slug": "design-patterns",
+      "icon": "Puzzle",
+      "sections": [
+        {
+          "title": "Creational Patterns",
+          "slug": "creational-patterns",
+          "lessons": [
+            {
+              "title": "Singleton (Thread-safe, Double-checked Locking)",
+              "slug": "singleton",
+              "isPosted": false
+            },
+            {
+              "title": "Factory Method",
+              "slug": "factory-method",
+              "isPosted": false
+            },
+            {
+              "title": "Abstract Factory",
+              "slug": "abstract-factory",
+              "isPosted": false
+            },
+            {
+              "title": "Builder",
+              "slug": "builder",
+              "isPosted": false
+            },
+            {
+              "title": "Prototype",
+              "slug": "prototype",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "Structural Patterns",
+          "slug": "structural-patterns",
+          "lessons": [
+            {
+              "title": "Adapter",
+              "slug": "adapter",
+              "isPosted": false
+            },
+            {
+              "title": "Decorator",
+              "slug": "decorator",
+              "isPosted": false
+            },
+            {
+              "title": "Facade",
+              "slug": "facade",
+              "isPosted": false
+            },
+            {
+              "title": "Composite",
+              "slug": "composite",
+              "isPosted": false
+            },
+            {
+              "title": "Proxy",
+              "slug": "proxy",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "Behavioral Patterns",
+          "slug": "behavioral-patterns",
+          "lessons": [
+            {
+              "title": "Strategy",
+              "slug": "strategy",
+              "isPosted": false
+            },
+            {
+              "title": "Observer",
+              "slug": "observer",
+              "isPosted": false
+            },
+            {
+              "title": "Command",
+              "slug": "command",
+              "isPosted": false
+            },
+            {
+              "title": "State",
+              "slug": "state",
+              "isPosted": false
+            },
+            {
+              "title": "Template Method",
+              "slug": "template-method",
+              "isPosted": false
+            },
+            {
+              "title": "Chain of Responsibility",
+              "slug": "chain-of-responsibility",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "Concurrency Patterns",
+          "slug": "concurrency-patterns",
+          "lessons": [
+            {
+              "title": "Producer-Consumer",
+              "slug": "producer-consumer",
+              "isPosted": false
+            },
+            {
+              "title": "Thread Pool",
+              "slug": "thread-pool",
+              "isPosted": false
+            },
+            {
+              "title": "Future/Promise",
+              "slug": "future-promise",
+              "isPosted": false
+            },
+            {
+              "title": "Read-Write Lock",
+              "slug": "read-write-lock",
+              "isPosted": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Practice with Real-World Problems",
+      "slug": "real-world-problems",
+      "icon": "Briefcase",
+      "sections": [
+        {
+          "title": "Amazon Favorites",
+          "slug": "amazon-favorites",
+          "lessons": [
+            {
+              "title": "Design a Parking Lot",
+              "slug": "design-parking-lot",
+              "isPosted": true
+            },
+            {
+              "title": "Design Unix 'find' Command",
+              "slug": "design-unix-find",
+              "isPosted": false
+            },
+            {
+              "title": "Design a Pizza Pricing System",
+              "slug": "design-pizza-pricing",
+              "isPosted": false
+            },
+            {
+              "title": "Design an ATM",
+              "slug": "design-atm",
+              "isPosted": false
+            },
+            {
+              "title": "Design a Library Management System",
+              "slug": "design-library-management",
+              "isPosted": false
+            },
+            {
+              "title": "Design for Amazon Alexa Devices",
+              "slug": "design-alexa-devices",
+              "isPosted": false
+            },
+            {
+              "title": "Design a Vending Machine",
+              "slug": "design-vending-machine",
+              "isPosted": false
+            },
+            {
+              "title": "Design Tic-Tac-Toe",
+              "slug": "design-tic-tac-toe",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "Uber Favorites",
+          "slug": "uber-favorites",
+          "lessons": [
+            {
+              "title": "Uber Driver Dispatch System",
+              "slug": "uber-driver-dispatch",
+              "isPosted": false
+            },
+            {
+              "title": "Design a Hit Counter (Concurrent)",
+              "slug": "design-hit-counter",
+              "isPosted": false
+            },
+            {
+              "title": "Design a Meeting Room Reservation System",
+              "slug": "design-meeting-room-reservation",
+              "isPosted": false
+            },
+            {
+              "title": "Design a File System (cd with '*')",
+              "slug": "design-file-system",
+              "isPosted": false
+            },
+            {
+              "title": "Design a Leaderboard (Top K)",
+              "slug": "design-leaderboard",
+              "isPosted": false
+            },
+            {
+              "title": "Design a Train Platform Management System",
+              "slug": "design-train-platform",
+              "isPosted": false
+            },
+            {
+              "title": "Design a Rate Limiter (Token Bucket, Sliding Window)",
+              "slug": "design-rate-limiter",
+              "isPosted": false
+            },
+            {
+              "title": "Design a Movie Ticket Booking System",
+              "slug": "design-movie-ticket-booking",
+              "isPosted": false
+            },
+            {
+              "title": "Design a Logging Framework (Chain of Responsibility)",
+              "slug": "design-logging-framework",
+              "isPosted": false
+            },
+            {
+              "title": "Design a Cache System (LRU, LFU)",
+              "slug": "design-cache-system",
+              "isPosted": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Advanced Topics & Mastery",
+      "slug": "advanced-topics",
+      "icon": "GraduationCap",
+      "sections": [
+        {
+          "title": "Concurrency & Multithreading (Deep Dive)",
+          "slug": "concurrency-multithreading",
+          "lessons": [
+            {
+              "title": "Thread-safety",
+              "slug": "thread-safety",
+              "isPosted": false
+            },
+            {
+              "title": "Synchronization (synchronized, Lock, Atomic)",
+              "slug": "synchronization",
+              "isPosted": false
+            },
+            {
+              "title": "Deadlock & Avoidance",
+              "slug": "deadlock-avoidance",
+              "isPosted": false
+            },
+            {
+              "title": "Immutability",
+              "slug": "immutability",
+              "isPosted": false
+            },
+            {
+              "title": "Concurrent Collections (ConcurrentHashMap, BlockingQueue)",
+              "slug": "concurrent-collections",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "Refactoring",
+          "slug": "refactoring",
+          "lessons": [
+            {
+              "title": "Code Smells (Long Method, Switch Statements, Primitive Obsession)",
+              "slug": "code-smells",
+              "isPosted": false
+            },
+            {
+              "title": "Refactoring Techniques (Extract Method, Replace Conditional with Polymorphism)",
+              "slug": "refactoring-techniques",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "Unit Testing for LLD",
+          "slug": "unit-testing",
+          "lessons": [
+            {
+              "title": "Writing Testable Code (Dependency Injection)",
+              "slug": "writing-testable-code",
+              "isPosted": false
+            },
+            {
+              "title": "Mocking Frameworks (Mockito)",
+              "slug": "mocking-frameworks",
+              "isPosted": false
+            },
+            {
+              "title": "Testing Concurrency",
+              "slug": "testing-concurrency",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "Database & Repository Pattern",
+          "slug": "database-repository",
+          "lessons": [
+            {
+              "title": "DAO vs Repository",
+              "slug": "dao-vs-repository",
+              "isPosted": false
+            },
+            {
+              "title": "In-memory Storage vs Real DB",
+              "slug": "in-memory-vs-real-db",
+              "isPosted": false
+            },
+            {
+              "title": "Schema Design for LLD Problems",
+              "slug": "schema-design",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "Other Advanced Topics",
+          "slug": "other-advanced-topics",
+          "lessons": [
+            {
+              "title": "Exception Handling & Logging",
+              "slug": "exception-handling-logging",
+              "isPosted": false
+            },
+            {
+              "title": "Serialization & Versioning",
+              "slug": "serialization-versioning",
+              "isPosted": false
+            },
+            {
+              "title": "Anti-Patterns (God Object, Poltergeist, etc.)",
+              "slug": "anti-patterns",
+              "isPosted": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Interview Strategy & Communication",
+      "slug": "interview-strategy",
+      "icon": "MessageSquare",
+      "sections": [
+        {
+          "title": "Structured Approach for LLD Interviews",
+          "slug": "structured-approach",
+          "lessons": [
+            {
+              "title": "Requirement Clarification (Functional vs Non-functional)",
+              "slug": "requirement-clarification",
+              "isPosted": false
+            },
+            {
+              "title": "Entity Identification",
+              "slug": "entity-identification",
+              "isPosted": false
+            },
+            {
+              "title": "API/Interface Design",
+              "slug": "api-interface-design",
+              "isPosted": false
+            },
+            {
+              "title": "Class Diagram Drawing",
+              "slug": "class-diagram-drawing",
+              "isPosted": false
+            },
+            {
+              "title": "Sequence Diagram for Critical Flows",
+              "slug": "sequence-diagram-critical-flows",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "Trade-off Discussions",
+          "slug": "trade-off-discussions",
+          "lessons": [
+            {
+              "title": "Pattern X vs Pattern Y (Strategy vs State)",
+              "slug": "pattern-comparisons",
+              "isPosted": false
+            },
+            {
+              "title": "Memory vs CPU",
+              "slug": "memory-vs-cpu",
+              "isPosted": false
+            },
+            {
+              "title": "Consistency vs Availability (in LLD context)",
+              "slug": "consistency-vs-availability",
+              "isPosted": false
+            }
+          ]
+        },
+        {
+          "title": "Mock Interview Drills",
+          "slug": "mock-interview-drills",
+          "lessons": [
+            {
+              "title": "Mock Interview Drills (Timed Practice)",
+              "slug": "timed-practice",
+              "isPosted": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

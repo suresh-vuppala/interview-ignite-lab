@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
-import { LogOut, Crown, Sun, Moon, BookOpen, Menu, Database, Brain } from 'lucide-react';
+import { LogOut, Crown, Sun, Moon, BookOpen, Menu, Database, Brain, Building } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import {
@@ -26,6 +26,7 @@ import { useTheme } from "next-themes";
 
 const courses = [
   { id: 'dsa', title: 'DSA', description: 'Data Structures & Algorithms', icon: Database },
+  { id: 'lld', title: 'Low Level Design', description: 'Object-Oriented Design & Patterns', icon: Building },
   { id: 'system-design', title: 'System Design (HLD)', description: 'High Level Design', icon: Brain },
   { id: 'system-design-interview', title: 'System Design Interview', description: 'Interview Questions & Case Studies', icon: Brain },
 ];

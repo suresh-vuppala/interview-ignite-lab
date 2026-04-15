@@ -1,0 +1,35 @@
+{
+  "title": "Design a Parking Lot",
+  "description": "Design a comprehensive parking lot system with multiple floors, vehicle types, and concurrent operations",
+  "difficulty": "Medium",
+  "tags": ["OOP", "Design Patterns", "Concurrency", "System Design"],
+  "estimatedTime": "45 minutes",
+  "prerequisites": ["OOP Concepts", "SOLID Principles", "Design Patterns"],
+  "learningObjectives": [
+    "Apply OOP principles to real-world system design",
+    "Implement multiple design patterns (Singleton, Factory, Strategy, Observer)",
+    "Handle concurrency and thread safety",
+    "Design scalable and extensible systems",
+    "Practice requirement analysis and entity modeling"
+  ],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-parking-lot/code/cpp/ParkingLot.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-parking-lot/code/java/ParkingLotSystem.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-parking-lot/code/python/parking_lot_system.py"
+        }
+      ]
+    }
+  ]
+}
