@@ -1,34 +1,30 @@
-#include <iostream>
 #include <vector>
+#include <functional>
 using namespace std;
-
-/**
- * Find first true in sorted boolean array
- * Time: O(log n), Space: O(1)
- */
-int findFirstTrue(vector<bool>& arr) {
-    int left = 0, right = arr.size() - 1;
-    int result = -1;
-    
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-        
-        if (arr[mid]) {
-            result = mid;   // Record this as potential answer
-            right = mid - 1; // Continue searching left
-        } else {
-            left = mid + 1;  // Search right
-        }
+// ============================================================
+// Solution 1: Linear scan — O(N) Time
+// ============================================================
+class Solution1 {
+public:
+    int findFirstTrue(vector<bool>& arr) {
+        for (int i = 0; i < (int)arr.size(); i++)
+            if (arr[i]) return i;
+        return -1;
     }
-    
-    return result;
-}
+};
 
-int main() {
-    vector<bool> arr = {false, false, false, true, true, true};
-    
-    int result = findFirstTrue(arr);
-    cout << "Index: " << result << endl; // Output: 3
-    
-    return 0;
-}
+// ============================================================
+// Solution 2: Binary search on monotonic boolean — O(log N) Time
+// ============================================================
+class Solution2 {
+public:
+    int findFirstTrue(vector<bool>& arr) {
+        int lo = 0, hi = arr.size() - 1, ans = -1;
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (arr[mid]) { ans = mid; hi = mid - 1; } // Go left for earlier true
+            else lo = mid + 1;
+        }
+        return ans;
+    }
+};

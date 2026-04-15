@@ -1,6 +1,22 @@
-class Solution {
+#include <vector>
+using namespace std;
+// ============================================================
+// Solution 1: Linear scan — O(N) Time
+// ============================================================
+class Solution1 {
 public:
-    // O(log n) — Binary search: min is where sorted order breaks
+    int findMin(vector<int>& nums) {
+        int mn = nums[0];
+        for (int x : nums) mn = min(mn, x);
+        return mn;
+    }
+};
+
+// ============================================================
+// Solution 2: Binary search — O(log N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
     int findMin(vector<int>& nums) {
         int lo = 0, hi = nums.size() - 1;
         while (lo < hi) {
