@@ -1,0 +1,19 @@
+{
+  "title": "Mocking Frameworks (Mockito)",
+  "description": "Use mocking to isolate units under test from their dependencies",
+  "difficulty": "Advanced",
+  "tags": [
+    "Testing",
+    "Mockito",
+    "Mocking"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

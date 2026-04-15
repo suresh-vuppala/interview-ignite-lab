@@ -1,0 +1,19 @@
+{
+  "title": "Writing Testable Code (Dependency Injection)",
+  "description": "Design code that's easy to test by using dependency injection and interfaces",
+  "difficulty": "Advanced",
+  "tags": [
+    "Testing",
+    "DI",
+    "Testability"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

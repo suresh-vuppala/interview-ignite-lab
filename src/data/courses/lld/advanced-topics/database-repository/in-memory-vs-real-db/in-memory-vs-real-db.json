@@ -1,0 +1,20 @@
+{
+  "title": "In-memory Storage vs Real DB",
+  "description": "When and how to use in-memory storage in LLD interviews",
+  "difficulty": "Advanced",
+  "tags": [
+    "Database",
+    "In-Memory",
+    "HashMap",
+    "Persistence"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

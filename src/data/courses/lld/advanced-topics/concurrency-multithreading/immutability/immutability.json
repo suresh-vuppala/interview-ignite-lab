@@ -1,0 +1,19 @@
+{
+  "title": "Immutability",
+  "description": "Design immutable objects that are inherently thread-safe",
+  "difficulty": "Advanced",
+  "tags": [
+    "Concurrency",
+    "Immutability",
+    "Thread Safety"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

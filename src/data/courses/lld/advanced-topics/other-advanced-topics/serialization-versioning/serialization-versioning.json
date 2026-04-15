@@ -1,0 +1,20 @@
+{
+  "title": "Serialization & Versioning",
+  "description": "Handle object serialization and version compatibility in evolving systems",
+  "difficulty": "Advanced",
+  "tags": [
+    "Serialization",
+    "Versioning",
+    "JSON",
+    "Protobuf"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

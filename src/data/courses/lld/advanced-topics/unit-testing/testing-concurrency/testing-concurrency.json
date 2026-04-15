@@ -1,0 +1,19 @@
+{
+  "title": "Testing Concurrency",
+  "description": "Strategies for testing multi-threaded code reliably",
+  "difficulty": "Advanced",
+  "tags": [
+    "Testing",
+    "Concurrency",
+    "Race Conditions"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

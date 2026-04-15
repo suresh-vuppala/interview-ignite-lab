@@ -1,0 +1,19 @@
+{
+  "title": "Exception Handling & Logging",
+  "description": "Design robust error handling and logging strategies for LLD systems",
+  "difficulty": "Advanced",
+  "tags": [
+    "Error Handling",
+    "Exceptions",
+    "Logging"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

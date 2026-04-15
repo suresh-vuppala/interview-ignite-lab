@@ -1,0 +1,29 @@
+{
+  "title": "Thread-safety",
+  "description": "Ensure correct behavior when multiple threads access shared data",
+  "difficulty": "Advanced",
+  "tags": [
+    "Concurrency",
+    "Thread Safety",
+    "Synchronization"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Thread-safety",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/advanced-topics/concurrency-multithreading/thread-safety/code/java/ThreadSafetyExamples.java"
+        }
+      ]
+    }
+  ]
+}

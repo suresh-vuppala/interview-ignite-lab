@@ -1,0 +1,20 @@
+{
+  "title": "DAO vs Repository",
+  "description": "Understand the difference between Data Access Object and Repository patterns",
+  "difficulty": "Advanced",
+  "tags": [
+    "Database",
+    "DAO",
+    "Repository",
+    "Persistence"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

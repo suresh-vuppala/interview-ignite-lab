@@ -1,0 +1,19 @@
+{
+  "title": "Anti-Patterns (God Object, Poltergeist, etc.)",
+  "description": "Recognize and avoid common design anti-patterns",
+  "difficulty": "Advanced",
+  "tags": [
+    "Anti-Patterns",
+    "Design",
+    "Code Quality"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

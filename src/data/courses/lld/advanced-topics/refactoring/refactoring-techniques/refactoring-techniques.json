@@ -1,0 +1,19 @@
+{
+  "title": "Refactoring Techniques (Extract Method, Replace Conditional with Polymorphism)",
+  "description": "Systematic techniques to improve code structure without changing behavior",
+  "difficulty": "Advanced",
+  "tags": [
+    "Refactoring",
+    "Extract Method",
+    "Polymorphism"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

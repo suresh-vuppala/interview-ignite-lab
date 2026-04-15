@@ -1,0 +1,19 @@
+{
+  "title": "Schema Design for LLD Problems",
+  "description": "Translate OOP entities to database schema for LLD interview problems",
+  "difficulty": "Advanced",
+  "tags": [
+    "Database",
+    "Schema",
+    "Normalization"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

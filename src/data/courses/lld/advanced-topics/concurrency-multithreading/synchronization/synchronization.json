@@ -1,0 +1,20 @@
+{
+  "title": "Synchronization (synchronized, Lock, Atomic)",
+  "description": "Coordinate thread access to shared resources using Java's synchronization primitives",
+  "difficulty": "Advanced",
+  "tags": [
+    "Concurrency",
+    "synchronized",
+    "Lock",
+    "Atomic"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

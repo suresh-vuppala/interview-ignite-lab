@@ -1,0 +1,19 @@
+{
+  "title": "Deadlock & Avoidance",
+  "description": "Understand, detect, and prevent deadlocks in concurrent systems",
+  "difficulty": "Advanced",
+  "tags": [
+    "Concurrency",
+    "Deadlock",
+    "Prevention"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Concurrent Collections (ConcurrentHashMap, BlockingQueue)",
+  "description": "Thread-safe collection classes for concurrent access",
+  "difficulty": "Advanced",
+  "tags": [
+    "Concurrency",
+    "ConcurrentHashMap",
+    "BlockingQueue"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

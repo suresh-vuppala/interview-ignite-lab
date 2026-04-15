@@ -1,0 +1,19 @@
+{
+  "title": "Code Smells (Long Method, Switch Statements, Primitive Obsession)",
+  "description": "Recognize common code smells that indicate deeper design problems",
+  "difficulty": "Advanced",
+  "tags": [
+    "Refactoring",
+    "Code Smells",
+    "Clean Code"
+  ],
+  "estimatedTime": "20 minutes",
+  "prerequisites": [
+    "OOP",
+    "SOLID",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

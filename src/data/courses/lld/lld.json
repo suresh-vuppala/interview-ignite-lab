@@ -445,27 +445,27 @@
             {
               "title": "Thread-safety",
               "slug": "thread-safety",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Synchronization (synchronized, Lock, Atomic)",
               "slug": "synchronization",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Deadlock & Avoidance",
               "slug": "deadlock-avoidance",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Immutability",
               "slug": "immutability",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Concurrent Collections (ConcurrentHashMap, BlockingQueue)",
               "slug": "concurrent-collections",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -476,12 +476,12 @@
             {
               "title": "Code Smells (Long Method, Switch Statements, Primitive Obsession)",
               "slug": "code-smells",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Refactoring Techniques (Extract Method, Replace Conditional with Polymorphism)",
               "slug": "refactoring-techniques",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -492,17 +492,17 @@
             {
               "title": "Writing Testable Code (Dependency Injection)",
               "slug": "writing-testable-code",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Mocking Frameworks (Mockito)",
               "slug": "mocking-frameworks",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Testing Concurrency",
               "slug": "testing-concurrency",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -513,17 +513,17 @@
             {
               "title": "DAO vs Repository",
               "slug": "dao-vs-repository",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "In-memory Storage vs Real DB",
               "slug": "in-memory-vs-real-db",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Schema Design for LLD Problems",
               "slug": "schema-design",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -534,17 +534,17 @@
             {
               "title": "Exception Handling & Logging",
               "slug": "exception-handling-logging",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Serialization & Versioning",
               "slug": "serialization-versioning",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Anti-Patterns (God Object, Poltergeist, etc.)",
               "slug": "anti-patterns",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         }
