@@ -1,8 +1,34 @@
-#include <iostream>
 #include <vector>
-#include <set>
 using namespace std;
-vector<int> factorize(int n) { vector<int> f; for(int i=2;i*i<=n;i++) while(n%i==0) { f.push_back(i); n/=i; } if(n>1) f.push_back(n); return f; }
-int countDistinct(int n) { set<int> s; for(int i=2;i*i<=n;i++) { if(n%i==0) s.insert(i); while(n%i==0) n/=i; } if(n>1) s.insert(n); return s.size(); }
-int countTotal(int n) { int c=0; for(int i=2;i*i<=n;i++) while(n%i==0) { c++; n/=i; } if(n>1) c++; return c; }
-int main() { cout<<"Distinct factors of 60: "<<countDistinct(60)<<endl; cout<<"Total factors of 60: "<<countTotal(60)<<endl; return 0; }
+// ============================================================
+// Solution 1: Divide by every number from 2 to N — O(N)
+// ============================================================
+class Solution1 {
+public:
+    vector<pair<int,int>> primeFactors(int n) {
+        vector<pair<int,int>> factors;
+        for (int i = 2; i <= n; i++) {
+            int count = 0;
+            while (n % i == 0) { count++; n /= i; }
+            if (count > 0) factors.push_back({i, count});
+        }
+        return factors;
+    }
+};
+
+// ============================================================
+// Solution 2: Divide up to √N, handle remaining prime — O(√N)
+// ============================================================
+class Solution2 {
+public:
+    vector<pair<int,int>> primeFactors(int n) {
+        vector<pair<int,int>> factors;
+        for (int i = 2; (long long)i * i <= n; i++) {
+            int count = 0;
+            while (n % i == 0) { count++; n /= i; }
+            if (count > 0) factors.push_back({i, count});
+        }
+        if (n > 1) factors.push_back({n, 1}); // Remaining large prime
+        return factors; // O(√N) — much faster for large primes
+    }
+};

@@ -1,7 +1,35 @@
-#include <iostream>
 #include <vector>
 using namespace std;
-vector<bool> sieve(int n) { vector<bool> p(n+1,true); p[0]=p[1]=false; for(int i=2;i*i<=n;i++) if(p[i]) for(int j=i*i;j<=n;j+=i) p[j]=false; return p; }
-int countPrimes(int n) { auto p=sieve(n); int c=0; for(bool b:p) if(b) c++; return c; }
-vector<int> spfArray(int n) { vector<int> spf(n+1); for(int i=0;i<=n;i++) spf[i]=i; for(int i=2;i*i<=n;i++) if(spf[i]==i) for(int j=i*i;j<=n;j+=i) if(spf[j]==j) spf[j]=i; return spf; }
-int main() { cout<<"Primes up to 30: "<<countPrimes(30)<<endl; return 0; }
+// ============================================================
+// Solution 1: Check each number individually — O(N√N)
+// ============================================================
+class Solution1 {
+    bool isPrime(int n) {
+        if (n <= 1) return false;
+        for (int i = 2; (long long)i * i <= n; i++) if (n % i == 0) return false;
+        return true;
+    }
+public:
+    vector<int> allPrimes(int n) {
+        vector<int> primes;
+        for (int i = 2; i <= n; i++) if (isPrime(i)) primes.push_back(i);
+        return primes; // O(N * √N)
+    }
+};
+
+// ============================================================
+// Solution 2: Sieve of Eratosthenes — O(N log log N)
+// ============================================================
+class Solution2 {
+public:
+    vector<int> allPrimes(int n) {
+        vector<bool> is_prime(n + 1, true);
+        is_prime[0] = is_prime[1] = false;
+        for (int i = 2; (long long)i * i <= n; i++)
+            if (is_prime[i])
+                for (int j = i * i; j <= n; j += i) is_prime[j] = false; // Mark multiples
+        vector<int> primes;
+        for (int i = 2; i <= n; i++) if (is_prime[i]) primes.push_back(i);
+        return primes; // O(N log log N) — near-linear!
+    }
+};

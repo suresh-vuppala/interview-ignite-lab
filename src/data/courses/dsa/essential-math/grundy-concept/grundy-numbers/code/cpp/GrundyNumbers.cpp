@@ -1,6 +1,49 @@
-#include <iostream>
-#include <set>
+#include <vector>
+#include <unordered_set>
 using namespace std;
-int mex(set<int>& s) { int m=0; while(s.count(m)) m++; return m; }
-int grundy(int n, int moves[], int sz) { if(n==0) return 0; set<int> s; for(int i=0;i<sz;i++) if(n>=moves[i]) s.insert(grundy(n-moves[i],moves,sz)); return mex(s); }
-int main() { int moves[]={1,2,3}; cout<<"Grundy(5): "<<grundy(5,moves,3)<<endl; return 0; }
+// ============================================================
+// Solution 1: Recursive Grundy with memoization — O(N * moves)
+// ============================================================
+class Solution1 {
+    vector<int> memo;
+    int grundy(int n, vector<int>& moves) {
+        if (n == 0) return 0;
+        if (memo[n] != -1) return memo[n];
+        unordered_set<int> reachable;
+        for (int m : moves)
+            if (n >= m) reachable.insert(grundy(n - m, moves));
+        int mex = 0;
+        while (reachable.count(mex)) mex++; // Minimum excludant
+        return memo[n] = mex;
+    }
+public:
+    int computeGrundy(int n, vector<int>& moves) {
+        memo.assign(n + 1, -1);
+        return grundy(n, moves);
+    }
+};
+
+// ============================================================
+// Solution 2: Bottom-up Grundy table — O(N * moves)
+// ============================================================
+class Solution2 {
+public:
+    int computeGrundy(int n, vector<int>& moves) {
+        vector<int> grundy(n + 1, 0);
+        for (int i = 1; i <= n; i++) {
+            unordered_set<int> reachable;
+            for (int m : moves)
+                if (i >= m) reachable.insert(grundy[i - m]);
+            int mex = 0;
+            while (reachable.count(mex)) mex++;
+            grundy[i] = mex;
+        }
+        return grundy[n];
+    }
+    // For combined games: XOR all Grundy values
+    bool firstPlayerWins(vector<int>& piles, vector<int>& moves) {
+        int xorSum = 0;
+        for (int pile : piles) xorSum ^= computeGrundy(pile, moves);
+        return xorSum != 0; // Non-zero XOR → first player wins
+    }
+};

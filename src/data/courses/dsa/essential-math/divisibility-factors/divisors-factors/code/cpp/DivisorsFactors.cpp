@@ -1,8 +1,39 @@
-#include <iostream>
 #include <vector>
-#include <algorithm>
+#include <cmath>
 using namespace std;
-int countDivisors(int n) { int c=0; for(int i=1;i*i<=n;i++) if(n%i==0) c+=i*i==n?1:2; return c; }
-int sumDivisors(int n) { int s=0; for(int i=1;i*i<=n;i++) if(n%i==0) s+=i*i==n?i:i+n/i; return s; }
-vector<int> allFactors(int n) { vector<int> f; for(int i=1;i*i<=n;i++) if(n%i==0) { f.push_back(i); if(i*i!=n) f.push_back(n/i); } sort(f.begin(),f.end()); return f; }
-int main() { cout<<"Divisors of 36: "<<countDivisors(36)<<endl; cout<<"Sum of divisors of 36: "<<sumDivisors(36)<<endl; return 0; }
+// ============================================================
+// Solution 1: Check every number from 1 to N — O(N)
+// ============================================================
+class Solution1 {
+public:
+    vector<int> findDivisors(int n) {
+        vector<int> divs;
+        for (int i = 1; i <= n; i++)
+            if (n % i == 0) divs.push_back(i);
+        return divs; // O(N) — slow for large N
+    }
+};
+
+// ============================================================
+// Solution 2: Check up to √N, add pairs — O(√N)
+// ============================================================
+class Solution2 {
+public:
+    vector<int> findDivisors(int n) {
+        vector<int> small, large;
+        for (int i = 1; i * i <= n; i++) {
+            if (n % i == 0) {
+                small.push_back(i);
+                if (i != n / i) large.push_back(n / i);
+            }
+        }
+        for (int i = large.size() - 1; i >= 0; i--) small.push_back(large[i]);
+        return small; // O(√N) — much faster
+    }
+    int countDivisors(int n) {
+        int count = 0;
+        for (int i = 1; i * i <= n; i++)
+            if (n % i == 0) count += (i == n / i) ? 1 : 2;
+        return count;
+    }
+};
