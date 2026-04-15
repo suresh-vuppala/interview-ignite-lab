@@ -1,0 +1,15 @@
+{
+  "title": "YAGNI (You Aren't Gonna Need It)",
+  "description": "Clean code principle: YAGNI (You Aren't Gonna Need It)",
+  "difficulty": "Beginner",
+  "tags": [
+    "Clean Code",
+    "Best Practices",
+    "LLD"
+  ],
+  "estimatedTime": "15 minutes",
+  "prerequisites": [],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

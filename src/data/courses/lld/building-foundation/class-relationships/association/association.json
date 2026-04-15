@@ -1,0 +1,15 @@
+{
+  "title": "Association",
+  "description": "Objects that know about each other \u2014 the most general relationship",
+  "difficulty": "Beginner",
+  "tags": [
+    "OOP",
+    "Relationships",
+    "Association"
+  ],
+  "estimatedTime": "15 minutes",
+  "prerequisites": [],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

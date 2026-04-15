@@ -1,0 +1,25 @@
+{
+  "title": "Inheritance",
+  "description": "Code reuse through IS-A relationships and class hierarchies",
+  "difficulty": "Beginner",
+  "tags": [
+    "OOP",
+    "Inheritance",
+    "Polymorphism"
+  ],
+  "estimatedTime": "15 minutes",
+  "prerequisites": [],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Inheritance Example",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/building-foundation/core-oop-concepts/inheritance/code/java/PaymentHierarchy.java"
+        }
+      ]
+    }
+  ]
+}

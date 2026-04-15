@@ -1,0 +1,25 @@
+{
+  "title": "Encapsulation",
+  "description": "Bundling data and methods together while hiding internal state",
+  "difficulty": "Beginner",
+  "tags": [
+    "OOP",
+    "Encapsulation",
+    "Access Modifiers"
+  ],
+  "estimatedTime": "15 minutes",
+  "prerequisites": [],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Encapsulation Example",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/building-foundation/core-oop-concepts/encapsulation/code/java/BankAccount.java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Polymorphism (Overloading vs Overriding)",
+  "description": "One interface, multiple implementations \u2014 compile-time and runtime polymorphism",
+  "difficulty": "Beginner",
+  "tags": [
+    "OOP",
+    "Polymorphism",
+    "Overloading",
+    "Overriding"
+  ],
+  "estimatedTime": "15 minutes",
+  "prerequisites": [],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Polymorphism (Overloading vs Overriding) Example",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/building-foundation/core-oop-concepts/polymorphism/code/java/ShippingPolymorphism.java"
+        }
+      ]
+    }
+  ]
+}

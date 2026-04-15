@@ -1,0 +1,15 @@
+{
+  "title": "KISS (Keep It Simple, Stupid)",
+  "description": "Clean code principle: KISS (Keep It Simple, Stupid)",
+  "difficulty": "Beginner",
+  "tags": [
+    "Clean Code",
+    "Best Practices",
+    "LLD"
+  ],
+  "estimatedTime": "15 minutes",
+  "prerequisites": [],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

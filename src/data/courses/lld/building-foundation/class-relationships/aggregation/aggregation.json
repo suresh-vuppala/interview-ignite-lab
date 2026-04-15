@@ -1,0 +1,15 @@
+{
+  "title": "Aggregation",
+  "description": "Whole-part relationship where parts can exist independently \u2014 HAS-A with independent lifecycle",
+  "difficulty": "Beginner",
+  "tags": [
+    "OOP",
+    "Relationships",
+    "Aggregation"
+  ],
+  "estimatedTime": "15 minutes",
+  "prerequisites": [],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Abstraction (Abstract Classes vs Interfaces)",
+  "description": "Hiding complexity behind simple interfaces \u2014 abstract classes vs interfaces",
+  "difficulty": "Beginner",
+  "tags": [
+    "OOP",
+    "Abstraction",
+    "Interface",
+    "Abstract Class"
+  ],
+  "estimatedTime": "15 minutes",
+  "prerequisites": [],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Abstraction (Abstract Classes vs Interfaces) Example",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/building-foundation/core-oop-concepts/abstraction/code/java/NotificationAbstraction.java"
+        }
+      ]
+    }
+  ]
+}

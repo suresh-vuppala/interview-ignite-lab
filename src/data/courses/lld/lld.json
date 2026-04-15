@@ -15,22 +15,22 @@
             {
               "title": "Encapsulation",
               "slug": "encapsulation",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Inheritance",
               "slug": "inheritance",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Polymorphism (Overloading vs Overriding)",
               "slug": "polymorphism",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Abstraction (Abstract Classes vs Interfaces)",
               "slug": "abstraction",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -41,22 +41,22 @@
             {
               "title": "Association",
               "slug": "association",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Aggregation",
               "slug": "aggregation",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Composition",
               "slug": "composition",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Dependency",
               "slug": "dependency",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -67,22 +67,22 @@
             {
               "title": "Class Diagrams (Visibility, Multiplicity, Relationships)",
               "slug": "class-diagrams",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Sequence Diagrams (Lifelines, Messages)",
               "slug": "sequence-diagrams",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Activity Diagrams",
               "slug": "activity-diagrams",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "State Diagrams",
               "slug": "state-diagrams",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -93,32 +93,32 @@
             {
               "title": "DRY (Don't Repeat Yourself)",
               "slug": "dry-principle",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "KISS (Keep It Simple, Stupid)",
               "slug": "kiss-principle",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "YAGNI (You Aren't Gonna Need It)",
               "slug": "yagni-principle",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Meaningful Naming & Readability",
               "slug": "meaningful-naming",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Function Length & Cohesion",
               "slug": "function-length-cohesion",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Commenting vs Self-documenting Code",
               "slug": "commenting-vs-self-documenting",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         }

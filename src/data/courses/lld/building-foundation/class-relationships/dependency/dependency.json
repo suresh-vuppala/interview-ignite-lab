@@ -1,0 +1,15 @@
+{
+  "title": "Dependency",
+  "description": "Weakest relationship \u2014 one class temporarily uses another",
+  "difficulty": "Beginner",
+  "tags": [
+    "OOP",
+    "Relationships",
+    "Dependency"
+  ],
+  "estimatedTime": "15 minutes",
+  "prerequisites": [],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Commenting vs Self-documenting Code",
+  "description": "Clean code principle: Commenting vs Self-documenting Code",
+  "difficulty": "Beginner",
+  "tags": [
+    "Clean Code",
+    "Best Practices",
+    "LLD"
+  ],
+  "estimatedTime": "15 minutes",
+  "prerequisites": [],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

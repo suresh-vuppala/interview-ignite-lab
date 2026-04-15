@@ -1,0 +1,15 @@
+{
+  "title": "Composition",
+  "description": "Strong whole-part relationship where parts cannot exist without the whole",
+  "difficulty": "Beginner",
+  "tags": [
+    "OOP",
+    "Relationships",
+    "Composition"
+  ],
+  "estimatedTime": "15 minutes",
+  "prerequisites": [],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

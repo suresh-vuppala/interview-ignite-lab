@@ -1,0 +1,15 @@
+{
+  "title": "Function Length & Cohesion",
+  "description": "Clean code principle: Function Length & Cohesion",
+  "difficulty": "Beginner",
+  "tags": [
+    "Clean Code",
+    "Best Practices",
+    "LLD"
+  ],
+  "estimatedTime": "15 minutes",
+  "prerequisites": [],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}
