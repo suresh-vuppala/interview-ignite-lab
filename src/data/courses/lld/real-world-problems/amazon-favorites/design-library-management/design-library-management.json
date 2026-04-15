@@ -1,0 +1,30 @@
+{
+  "title": "Design a Library Management System",
+  "description": "Design a library system with book catalog, member management, borrowing, and fine calculation",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Strategy",
+    "Observer",
+    "Singleton"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-library-management/code/java/LibraryManagementSystem.java"
+        }
+      ]
+    }
+  ]
+}

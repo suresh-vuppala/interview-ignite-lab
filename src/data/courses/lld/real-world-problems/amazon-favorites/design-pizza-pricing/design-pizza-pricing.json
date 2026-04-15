@@ -1,0 +1,30 @@
+{
+  "title": "Design a Pizza Pricing System",
+  "description": "Design a pricing system for a pizza shop with customizable toppings and sizes",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Decorator",
+    "Strategy",
+    "Builder"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-pizza-pricing/code/java/PizzaPricingSystem.java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Design an ATM",
+  "description": "Design an ATM system with cash withdrawal, deposit, balance inquiry, and PIN management",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "State",
+    "Chain of Responsibility",
+    "Strategy"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-atm/code/java/ATMSystem.java"
+        }
+      ]
+    }
+  ]
+}

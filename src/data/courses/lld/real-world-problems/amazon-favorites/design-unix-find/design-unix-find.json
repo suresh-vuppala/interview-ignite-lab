@@ -1,0 +1,30 @@
+{
+  "title": "Design Unix 'find' Command",
+  "description": "Design a file search utility similar to the Unix find command",
+  "difficulty": "Medium",
+  "tags": [
+    "OOP",
+    "Composite",
+    "Strategy",
+    "Visitor"
+  ],
+  "estimatedTime": "45 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles",
+    "Design Patterns"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Complete Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-unix-find/code/java/UnixFindSystem.java"
+        }
+      ]
+    }
+  ]
+}

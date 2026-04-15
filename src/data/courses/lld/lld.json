@@ -341,22 +341,22 @@
             {
               "title": "Design Unix 'find' Command",
               "slug": "design-unix-find",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design a Pizza Pricing System",
               "slug": "design-pizza-pricing",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design an ATM",
               "slug": "design-atm",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design a Library Management System",
               "slug": "design-library-management",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Design for Amazon Alexa Devices",
