@@ -1,33 +1,35 @@
 #include <vector>
 #include <queue>
-#include <unordered_map>
+#include <algorithm>
 using namespace std;
-
-class ProblemsOnHeap {
+// ============================================================
+// Solution 1: Sort entire array — O(N log N)
+// ============================================================
+class Solution1 {
 public:
-    vector<int> topKFrequent(vector<int>& nums, int k) {
-        unordered_map<int, int> count;
-        for (int num : nums) {
-            count[num]++;
-        }
-        
-        auto cmp = [&count](int a, int b) {
-            return count[a] > count[b];
-        };
-        priority_queue<int, vector<int>, decltype(cmp)> heap(cmp);
-        
-        for (auto& p : count) {
-            heap.push(p.first);
-            if (heap.size() > k) {
-                heap.pop();
-            }
-        }
-        
-        vector<int> result;
-        while (!heap.empty()) {
-            result.push_back(heap.top());
-            heap.pop();
-        }
-        return result;
+    int kthSmallest(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end());
+        return nums[k-1];
+    }
+    int kthLargest(vector<int>& nums, int k) {
+        sort(nums.rbegin(), nums.rend());
+        return nums[k-1];
+    }
+};
+
+// ============================================================
+// Solution 2: Min/Max heap of size K — O(N log K)
+// ============================================================
+class Solution2 {
+public:
+    int kthSmallest(vector<int>& nums, int k) {
+        priority_queue<int> maxH; // Max-heap of size k
+        for (int x : nums) { maxH.push(x); if ((int)maxH.size() > k) maxH.pop(); }
+        return maxH.top();
+    }
+    int kthLargest(vector<int>& nums, int k) {
+        priority_queue<int,vector<int>,greater<>> minH;
+        for (int x : nums) { minH.push(x); if ((int)minH.size() > k) minH.pop(); }
+        return minH.top();
     }
 };

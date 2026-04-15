@@ -1,64 +1,23 @@
-// Time: O(1) per operation | Space: O(1)
-
-#include <vector>
-#include <iostream>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Arithmetic approach — division/modulo
+// ============================================================
+class Solution1 {
 public:
-    // Demonstrate all 6 bitwise operators
-    void demonstrateOperators(int a, int b) {
-        cout << "AND: " << a << " & " << b << " = " << (a & b) << endl;
-        cout << "OR: " << a << " | " << b << " = " << (a | b) << endl;
-        cout << "XOR: " << a << " ^ " << b << " = " << (a ^ b) << endl;
-        cout << "NOT: ~" << a << " = " << (~a) << endl;
-        cout << "Left Shift: " << a << " << 2 = " << (a << 2) << endl;
-        cout << "Right Shift: " << a << " >> 1 = " << (a >> 1) << endl;
-    }
-    
-    // Basic bit operations
-    bool checkBit(int n, int k) {
-        return (n & (1 << k)) != 0;
-    }
-    
-    int setBit(int n, int k) {
-        return n | (1 << k);
-    }
-    
-    int clearBit(int n, int k) {
-        return n & ~(1 << k);
-    }
-    
-    int toggleBit(int n, int k) {
-        return n ^ (1 << k);
-    }
-    
-    int rightmostSetBit(int n) {
-        return n & -n;
-    }
-    
-    int clearRightmostSetBit(int n) {
-        return n & (n - 1);
-    }
-    
-    bool isPowerOf2(int n) {
-        return n > 0 && (n & (n - 1)) == 0;
-    }
-    
-    int countSetBits(int n) {
-        int count = 0;
-        while (n > 0) {
-            n &= (n - 1);
-            count++;
-        }
-        return count;
-    }
-    
-    int findSingleNumber(vector<int>& arr) {
-        int result = 0;
-        for (int num : arr) {
-            result ^= num;
-        }
-        return result;
-    }
+    int getBit(int n, int k) { return (n / (1 << k)) % 2; }
+    int setBit(int n, int k) { if (getBit(n,k)==0) n += (1<<k); return n; }
+    int clearBit(int n, int k) { if (getBit(n,k)==1) n -= (1<<k); return n; }
+};
+
+// ============================================================
+// Solution 2: Bitwise operators — O(1) each
+// ============================================================
+class Solution2 {
+public:
+    int getBit(int n, int k) { return (n >> k) & 1; }
+    int setBit(int n, int k) { return n | (1 << k); }
+    int clearBit(int n, int k) { return n & ~(1 << k); }
+    int toggleBit(int n, int k) { return n ^ (1 << k); }
+    int clearLSB(int n) { return n & (n - 1); } // Clear lowest set bit
+    int isolateLSB(int n) { return n & (-n); }   // Get lowest set bit
 };

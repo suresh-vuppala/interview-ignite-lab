@@ -1,32 +1,35 @@
 #include <vector>
 #include <queue>
+#include <algorithm>
 using namespace std;
+// ============================================================
+// Solution 1: Flatten + sort — O(N² log N²)
+// ============================================================
+class Solution1 {
+public:
+    int kthSmallest(vector<vector<int>>& matrix, int k) {
+        vector<int> flat;
+        for (auto& row : matrix) for (int x : row) flat.push_back(x);
+        sort(flat.begin(), flat.end());
+        return flat[k-1];
+    }
+};
 
-class KthSmallestElementInSortedMatrix {
+// ============================================================
+// Solution 2: Min-heap — merge sorted rows — O(K log N)
+// ============================================================
+class Solution2 {
 public:
     int kthSmallest(vector<vector<int>>& matrix, int k) {
         int n = matrix.size();
-        auto cmp = [](const vector<int>& a, const vector<int>& b) {
-            return a[0] > b[0];
-        };
-        priority_queue<vector<int>, vector<vector<int>>, decltype(cmp)> minHeap(cmp);
-        
-        for (int i = 0; i < min(n, k); i++) {
-            minHeap.push({matrix[i][0], i, 0});
-        }
-        
+        priority_queue<tuple<int,int,int>, vector<tuple<int,int,int>>, greater<>> pq;
+        for (int i = 0; i < n; i++) pq.push({matrix[i][0], i, 0});
         int result = 0;
-        for (int i = 0; i < k; i++) {
-            auto curr = minHeap.top();
-            minHeap.pop();
-            result = curr[0];
-            int row = curr[1], col = curr[2];
-            
-            if (col + 1 < n) {
-                minHeap.push({matrix[row][col + 1], row, col + 1});
-            }
+        while (k-- > 0) {
+            auto [val, r, c] = pq.top(); pq.pop();
+            result = val;
+            if (c + 1 < n) pq.push({matrix[r][c+1], r, c+1});
         }
-        
         return result;
     }
 };

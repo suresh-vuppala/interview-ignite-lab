@@ -1,30 +1,34 @@
 #include <vector>
 #include <queue>
-#include <cmath>
+#include <algorithm>
 using namespace std;
-
-class KClosestPoints {
+// ============================================================
+// Solution 1: Sort by distance — O(N log N)
+// ============================================================
+class Solution1 {
 public:
     vector<vector<int>> kClosest(vector<vector<int>>& points, int k) {
-        auto cmp = [](const pair<int, vector<int>>& a, const pair<int, vector<int>>& b) {
-            return a.first < b.first;
-        };
-        
-        priority_queue<pair<int, vector<int>>, vector<pair<int, vector<int>>>, decltype(cmp)> maxHeap(cmp);
-        
-        for (auto& point : points) {
-            int dist = point[0] * point[0] + point[1] * point[1];
-            maxHeap.push({dist, point});
-            if (maxHeap.size() > k) {
-                maxHeap.pop();
-            }
+        sort(points.begin(), points.end(), [](auto& a, auto& b){
+            return a[0]*a[0]+a[1]*a[1] < b[0]*b[0]+b[1]*b[1];
+        });
+        return vector<vector<int>>(points.begin(), points.begin()+k);
+    }
+};
+
+// ============================================================
+// Solution 2: Max-heap of size K — O(N log K)
+// ============================================================
+class Solution2 {
+public:
+    vector<vector<int>> kClosest(vector<vector<int>>& points, int k) {
+        auto dist = [](vector<int>& p){ return p[0]*p[0]+p[1]*p[1]; };
+        priority_queue<pair<int,int>> maxH; // {dist, index}
+        for (int i = 0; i < (int)points.size(); i++) {
+            maxH.push({dist(points[i]), i});
+            if ((int)maxH.size() > k) maxH.pop();
         }
-        
-        vector<vector<int>> result;
-        while (!maxHeap.empty()) {
-            result.push_back(maxHeap.top().second);
-            maxHeap.pop();
-        }
-        return result;
+        vector<vector<int>> res;
+        while (!maxH.empty()) { res.push_back(points[maxH.top().second]); maxH.pop(); }
+        return res;
     }
 };

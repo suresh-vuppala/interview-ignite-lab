@@ -1,21 +1,39 @@
-// Time: O(N * 2^N) | Space: O(N * 2^N)
-
 #include <vector>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Recursive backtracking — O(2^N)
+// ============================================================
+class Solution1 {
+    void backtrack(vector<int>& nums, int i, vector<int>& cur, vector<vector<int>>& res) {
+        res.push_back(cur);
+        for (int j = i; j < (int)nums.size(); j++) {
+            cur.push_back(nums[j]);
+            backtrack(nums, j + 1, cur, res);
+            cur.pop_back();
+        }
+    }
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
-        vector<vector<int>> result;
+        vector<vector<int>> res; vector<int> cur;
+        backtrack(nums, 0, cur, res);
+        return res;
+    }
+};
+
+// ============================================================
+// Solution 2: Bitmask enumeration — O(2^N * N)
+// ============================================================
+class Solution2 {
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
         int n = nums.size();
+        vector<vector<int>> res;
         for (int mask = 0; mask < (1 << n); mask++) {
-            vector<int> subset;
-            for (int i = 0; i < n; i++) {
-                if (mask & (1 << i))
-                    subset.push_back(nums[i]);
-            }
-            result.push_back(subset);
+            vector<int> sub;
+            for (int i = 0; i < n; i++)
+                if (mask & (1 << i)) sub.push_back(nums[i]);
+            res.push_back(sub);
         }
-        return result;
+        return res; // Each bit = include/exclude decision
     }
 };
