@@ -1,0 +1,28 @@
+{
+  "title": "Thread Pool",
+  "description": "Manage a pool of reusable threads to execute tasks efficiently",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Concurrency",
+    "Thread Pool"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Thread Pool Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/concurrency-patterns/thread-pool/code/java/HttpServerPool.java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "State",
+  "description": "Allow an object to alter its behavior when its internal state changes \u2014 the object appears to change its class",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Behavioral",
+    "State"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "State Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/behavioral-patterns/state/code/java/OrderState.java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Singleton (Thread-safe, Double-checked Locking)",
+  "description": "Ensure a class has only one instance and provide a global point of access",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Creational",
+    "Singleton"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Singleton (Thread-safe, Double-checked Locking) Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/creational-patterns/singleton/code/java/ConnectionPool.java"
+        }
+      ]
+    }
+  ]
+}

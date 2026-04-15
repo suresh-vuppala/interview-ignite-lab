@@ -1,0 +1,19 @@
+{
+  "title": "Future/Promise",
+  "description": "Represent the result of an asynchronous computation that will be available in the future",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Concurrency",
+    "Future",
+    "CompletableFuture"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": []
+}

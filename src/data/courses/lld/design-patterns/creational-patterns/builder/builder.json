@@ -1,0 +1,28 @@
+{
+  "title": "Builder",
+  "description": "Construct complex objects step by step, separating construction from representation",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Creational",
+    "Builder"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Builder Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/creational-patterns/builder/code/java/UserProfileBuilder.java"
+        }
+      ]
+    }
+  ]
+}

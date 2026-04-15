@@ -1,0 +1,28 @@
+{
+  "title": "Factory Method",
+  "description": "Define an interface for creating objects, but let subclasses decide which class to instantiate",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Creational",
+    "Factory"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Factory Method Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/creational-patterns/factory-method/code/java/PaymentFactory.java"
+        }
+      ]
+    }
+  ]
+}

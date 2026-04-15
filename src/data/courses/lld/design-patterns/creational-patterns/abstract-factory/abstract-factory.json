@@ -1,0 +1,28 @@
+{
+  "title": "Abstract Factory",
+  "description": "Create families of related objects without specifying their concrete classes",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Creational",
+    "Abstract Factory"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Abstract Factory Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/creational-patterns/abstract-factory/code/java/DatabaseAbstractFactory.java"
+        }
+      ]
+    }
+  ]
+}

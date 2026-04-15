@@ -1,0 +1,28 @@
+{
+  "title": "Producer-Consumer",
+  "description": "Decouple production and consumption of data using a shared buffer",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Concurrency",
+    "Producer-Consumer"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Producer-Consumer Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/concurrency-patterns/producer-consumer/code/java/TaskProcessor.java"
+        }
+      ]
+    }
+  ]
+}

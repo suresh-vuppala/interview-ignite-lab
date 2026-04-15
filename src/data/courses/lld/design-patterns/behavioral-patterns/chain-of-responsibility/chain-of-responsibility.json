@@ -1,0 +1,28 @@
+{
+  "title": "Chain of Responsibility",
+  "description": "Pass a request along a chain of handlers \u2014 each handler decides to process it or pass it on",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Behavioral",
+    "Chain of Responsibility"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Chain of Responsibility Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/behavioral-patterns/chain-of-responsibility/code/java/LoggingChain.java"
+        }
+      ]
+    }
+  ]
+}

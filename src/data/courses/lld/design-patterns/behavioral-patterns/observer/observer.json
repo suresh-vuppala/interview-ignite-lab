@@ -1,0 +1,28 @@
+{
+  "title": "Observer",
+  "description": "Define a one-to-many dependency so that when one object changes state, all dependents are notified",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Behavioral",
+    "Observer"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Observer Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/behavioral-patterns/observer/code/java/EventBusObserver.java"
+        }
+      ]
+    }
+  ]
+}

@@ -205,27 +205,27 @@
             {
               "title": "Singleton (Thread-safe, Double-checked Locking)",
               "slug": "singleton",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Factory Method",
               "slug": "factory-method",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Abstract Factory",
               "slug": "abstract-factory",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Builder",
               "slug": "builder",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Prototype",
               "slug": "prototype",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -236,27 +236,27 @@
             {
               "title": "Adapter",
               "slug": "adapter",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Decorator",
               "slug": "decorator",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Facade",
               "slug": "facade",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Composite",
               "slug": "composite",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Proxy",
               "slug": "proxy",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -267,32 +267,32 @@
             {
               "title": "Strategy",
               "slug": "strategy",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Observer",
               "slug": "observer",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Command",
               "slug": "command",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "State",
               "slug": "state",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Template Method",
               "slug": "template-method",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Chain of Responsibility",
               "slug": "chain-of-responsibility",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         },
@@ -303,22 +303,22 @@
             {
               "title": "Producer-Consumer",
               "slug": "producer-consumer",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Thread Pool",
               "slug": "thread-pool",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Future/Promise",
               "slug": "future-promise",
-              "isPosted": false
+              "isPosted": true
             },
             {
               "title": "Read-Write Lock",
               "slug": "read-write-lock",
-              "isPosted": false
+              "isPosted": true
             }
           ]
         }

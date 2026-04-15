@@ -1,0 +1,28 @@
+{
+  "title": "Strategy",
+  "description": "Define a family of algorithms, encapsulate each one, and make them interchangeable",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Behavioral",
+    "Strategy"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Strategy Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/behavioral-patterns/strategy/code/java/ShippingStrategy.java"
+        }
+      ]
+    }
+  ]
+}

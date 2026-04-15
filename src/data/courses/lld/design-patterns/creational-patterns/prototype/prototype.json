@@ -1,0 +1,28 @@
+{
+  "title": "Prototype",
+  "description": "Create new objects by copying existing ones \u2014 cloning instead of constructing",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Creational",
+    "Prototype"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Prototype Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/creational-patterns/prototype/code/java/DocumentPrototype.java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Proxy",
+  "description": "Provide a surrogate or placeholder for another object to control access",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Structural",
+    "Proxy"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Proxy Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/structural-patterns/proxy/code/java/ImageProxy.java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Command",
+  "description": "Encapsulate a request as an object \u2014 enables undo, redo, queuing, and logging",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Behavioral",
+    "Command"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Command Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/behavioral-patterns/command/code/java/SmartHomeCommand.java"
+        }
+      ]
+    }
+  ]
+}

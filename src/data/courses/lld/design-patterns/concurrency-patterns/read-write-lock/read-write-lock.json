@@ -1,0 +1,28 @@
+{
+  "title": "Read-Write Lock",
+  "description": "Allow multiple concurrent readers but exclusive access for writers",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Concurrency",
+    "ReadWriteLock"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Read-Write Lock Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/concurrency-patterns/read-write-lock/code/java/ConfigStore.java"
+        }
+      ]
+    }
+  ]
+}

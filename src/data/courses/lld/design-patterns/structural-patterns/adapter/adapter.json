@@ -1,0 +1,28 @@
+{
+  "title": "Adapter",
+  "description": "Convert the interface of a class into another interface clients expect",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Structural",
+    "Adapter"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Adapter Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/structural-patterns/adapter/code/java/XMLToJSONAdapter.java"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Composite",
+  "description": "Compose objects into tree structures to represent part-whole hierarchies",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Design Patterns",
+    "Structural",
+    "Composite"
+  ],
+  "estimatedTime": "25 minutes",
+  "prerequisites": [
+    "OOP Concepts",
+    "SOLID Principles"
+  ],
+  "learningObjectives": [],
+  "isPosted": true,
+  "codeExamples": [
+    {
+      "title": "Composite Implementation",
+      "languages": [
+        {
+          "language": "java",
+          "codeFile": "courses/lld/design-patterns/structural-patterns/composite/code/java/OrganizationComposite.java"
+        }
+      ]
+    }
+  ]
+}
