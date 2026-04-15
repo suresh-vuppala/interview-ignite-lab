@@ -1,10 +1,10 @@
 Allocate N books to M students minimizing the maximum pages any student reads.
-
+- Each student gets at least one book.
+- Each book should be allocated to only one student.
+- Book allocation should be in a contiguous manner.
 <br>
 
 > books=[12,34,67,90], students=2 → 113 (12+34+67=113, 90=90)
->
-> **Key insight:** Binary search on the answer (maximum pages). For each candidate max, greedily check if allocation is feasible with M students.
 
 <br>
 
@@ -70,6 +70,10 @@ Depends on whether auxiliary data structures are used. Pure brute force typicall
    - If canAllocate(mid, M): ans=mid, hi=mid-1
    - Else: lo=mid+1
 3. canAllocate: greedily assign books until sum > limit, then new student
+
+
+
+
 
 ### Time Complexity: O(N log S)
 **Why?**

@@ -81,6 +81,18 @@ Arrays.sort(words, (a, b) -> a.length() - b.length());
 // Result: ["pie", "cat", "apple", "banana"]
 ```
 
+**With alphabetical tie-breaker:**
+```java
+String[] words = {"apple", "pie", "banana", "cat", "dog"};
+
+Arrays.sort(words, (a, b) -> {
+    if (a.length() != b.length())
+        return a.length() - b.length();
+    return a.compareTo(b);  // Alphabetical tie-breaker
+});
+// Result: ["cat", "dog", "pie", "apple", "banana"]
+```
+
 <br>
 
 ### 2. Comparator.comparing() (Java 8+)

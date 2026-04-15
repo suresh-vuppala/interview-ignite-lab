@@ -125,8 +125,17 @@ arr.sort(key=lambda x: abs(x))
 **Example: Sort strings by length**
 ```python
 words = ["apple", "pie", "banana", "cat"]
+
 words.sort(key=lambda x: len(x))
 # Result: ['pie', 'cat', 'apple', 'banana']
+```
+
+**With alphabetical tie-breaker:**
+```python
+words = ["apple", "pie", "banana", "cat", "dog"]
+
+words.sort(key=lambda x: (len(x), x))  # Tuple: (length, word)
+# Result: ['cat', 'dog', 'pie', 'apple', 'banana']
 ```
 
 <br>

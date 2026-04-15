@@ -68,10 +68,22 @@ sort(arr.begin(), arr.end(), [](int a, int b) {
 ```cpp
 vector<string> words = {"apple", "pie", "banana", "cat"};
 
-sort(words.begin(), words.end(), [](string a, string b) {
+sort(words.begin(), words.end(), [](const string& a, const string& b) {
     return a.length() < b.length();
 });
 // Result: ["pie", "cat", "apple", "banana"]
+```
+
+**With alphabetical tie-breaker:**
+```cpp
+vector<string> words = {"apple", "pie", "banana", "cat", "dog"};
+
+sort(words.begin(), words.end(), [](const string& a, const string& b) {
+    if (a.length() != b.length())
+        return a.length() < b.length();
+    return a < b;  // Alphabetical tie-breaker
+});
+// Result: ["cat", "dog", "pie", "apple", "banana"]
 ```
 
 <br>

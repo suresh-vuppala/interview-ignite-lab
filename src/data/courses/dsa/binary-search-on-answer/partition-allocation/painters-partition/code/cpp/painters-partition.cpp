@@ -8,36 +8,55 @@ using namespace std;
 
 class Solution {
 public:
-    int paintersPartition(vector<int>& arr, int m) {
-        if (m > arr.size()) return -1;
+    int paintersPartition(vector<int>& boards, int m) {
+        int n = boards.size();
         
-        int left = *max_element(arr.begin(), arr.end());
-        int right = accumulate(arr.begin(), arr.end(), 0);
-        int result = right;
+        // Edge case: More painters than boards
+        if (m > n) return -1;
         
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-            if (canPaint(arr, m, mid)) {
-                result = mid;
-                right = mid - 1;
+        // Binary search range
+        int low = *max_element(boards.begin(), boards.end());  // Minimum possible answer
+        int high = accumulate(boards.begin(), boards.end(), 0); // Maximum possible answer
+        int result = high;
+        
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            
+            // Check if we can paint with max time = mid
+            if (canPaint(boards, n, m, mid)) {
+                result = mid;      // This works, try smaller
+                high = mid - 1;
             } else {
-                left = mid + 1;
+                low = mid + 1;     // Too small, need larger limit
             }
         }
+        
         return result;
     }
     
 private:
-    bool canPaint(vector<int>& arr, int m, int maxTime) {
-        int painters = 1, currentTime = 0;
-        for (int time : arr) {
-            if (currentTime + time > maxTime) {
-                painters++;
-                currentTime = time;
+    bool canPaint(vector<int>& boards, int n, int m, int maxTime) {
+        int painterCount = 1;      // Start with first painter
+        int currentTime = 0;       // Time assigned to current painter
+        
+        for (int i = 0; i < n; i++) {
+            // If a single board takes more time than our limit, impossible
+            if (boards[i] > maxTime) return false;
+            
+            // Try to assign current board to current painter
+            if (currentTime + boards[i] <= maxTime) {
+                currentTime += boards[i];  // Assign to current painter
             } else {
-                currentTime += time;
+                // Current painter's limit reached, assign to next painter
+                painterCount++;
+                currentTime = boards[i];   // Start new painter with current board
+                
+                // If we need more painters than available, this limit is too small
+                if (painterCount > m) return false;
             }
         }
-        return painters <= m;
+        
+        // Successfully painted all boards within the limit
+        return true;
     }
 };

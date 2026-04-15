@@ -2,27 +2,45 @@
 # Space: O(1)
 
 def splitArray(nums, k):
-    left, right = max(nums), sum(nums)
-    result = right
+    n = len(nums)
     
-    while left <= right:
-        mid = (left + right) // 2
-        if canSplit(nums, k, mid):
-            result = mid
-            right = mid - 1
+    # Binary search range
+    low = max(nums)   # Minimum possible answer
+    high = sum(nums)  # Maximum possible answer
+    result = high
+    
+    while low <= high:
+        mid = (low + high) // 2
+        
+        # Check if we can split with max sum = mid
+        if canSplit(nums, n, k, mid):
+            result = mid      # This works, try smaller
+            high = mid - 1
         else:
-            left = mid + 1
+            low = mid + 1     # Too small, need larger limit
     
     return result
 
-def canSplit(nums, k, maxSum):
-    subarrays, currentSum = 1, 0
+def canSplit(nums, n, k, maxSum):
+    subarrayCount = 1     # Start with first subarray
+    currentSum = 0        # Sum of current subarray
     
-    for num in nums:
-        if currentSum + num > maxSum:
-            subarrays += 1
-            currentSum = num
+    for i in range(n):
+        # If a single element is larger than our limit, impossible
+        if nums[i] > maxSum:
+            return False
+        
+        # Try to add current element to current subarray
+        if currentSum + nums[i] <= maxSum:
+            currentSum += nums[i]  # Add to current subarray
         else:
-            currentSum += num
+            # Current subarray's limit reached, start new subarray
+            subarrayCount += 1
+            currentSum = nums[i]   # Start new subarray with current element
+            
+            # If we need more subarrays than allowed, this limit is too small
+            if subarrayCount > k:
+                return False
     
-    return subarrays <= k
+    # Successfully split into k or fewer subarrays within the limit
+    return True

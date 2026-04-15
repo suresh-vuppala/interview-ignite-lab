@@ -1,31 +1,50 @@
 # Time: O(N * log(sum - max))
 # Space: O(1)
 
-def paintersPartition(arr, m):
-    if m > len(arr):
+def paintersPartition(boards, m):
+    n = len(boards)
+    
+    # Edge case: More painters than boards
+    if m > n:
         return -1
     
-    left, right = max(arr), sum(arr)
-    result = right
+    # Binary search range
+    low = max(boards)   # Minimum possible answer
+    high = sum(boards)  # Maximum possible answer
+    result = high
     
-    while left <= right:
-        mid = (left + right) // 2
-        if canPaint(arr, m, mid):
-            result = mid
-            right = mid - 1
+    while low <= high:
+        mid = (low + high) // 2
+        
+        # Check if we can paint with max time = mid
+        if canPaint(boards, n, m, mid):
+            result = mid      # This works, try smaller
+            high = mid - 1
         else:
-            left = mid + 1
+            low = mid + 1     # Too small, need larger limit
     
     return result
 
-def canPaint(arr, m, maxTime):
-    painters, currentTime = 1, 0
+def canPaint(boards, n, m, maxTime):
+    painterCount = 1      # Start with first painter
+    currentTime = 0       # Time assigned to current painter
     
-    for time in arr:
-        if currentTime + time > maxTime:
-            painters += 1
-            currentTime = time
+    for i in range(n):
+        # If a single board takes more time than our limit, impossible
+        if boards[i] > maxTime:
+            return False
+        
+        # Try to assign current board to current painter
+        if currentTime + boards[i] <= maxTime:
+            currentTime += boards[i]  # Assign to current painter
         else:
-            currentTime += time
+            # Current painter's limit reached, assign to next painter
+            painterCount += 1
+            currentTime = boards[i]   # Start new painter with current board
+            
+            # If we need more painters than available, this limit is too small
+            if painterCount > m:
+                return False
     
-    return painters <= m
+    # Successfully painted all boards within the limit
+    return True

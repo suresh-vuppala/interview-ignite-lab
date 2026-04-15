@@ -603,9 +603,14 @@
           ]
         },
         {
-          "title": "Partition / Allocation Type",
-          "slug": "partition-allocation",
+          "title": "Minimize Maximum (Partition/Allocation)",
+          "slug": "minimize-maximum",
           "lessons": [
+            {
+              "title": "Introduction to Minimize Maximum Pattern",
+              "slug": "intro-minimize-maximum",
+              "isPosted": true
+            },
             {
               "title": "Allocate Minimum Number of Pages (Book Problem)",
               "slug": "allocate-minimum-pages",
@@ -629,35 +634,14 @@
           ]
         },
         {
-          "title": "Capacity / Time Optimization",
-          "slug": "capacity-time-optimization",
+          "title": "Maximize Minimum (Distance Maximization)",
+          "slug": "maximize-minimum",
           "lessons": [
             {
-              "title": "Capacity To Ship Packages Within D Days",
-              "slug": "capacity-ship-packages",
+              "title": "Introduction to Maximize Minimum Pattern",
+              "slug": "intro-maximize-minimum",
               "isPosted": true
             },
-            {
-              "title": "Minimum Time to Finish All Jobs",
-              "slug": "minimum-time-finish-jobs",
-              "isPosted": true
-            },
-            {
-              "title": "Koko Eating Bananas",
-              "slug": "koko-eating-bananas",
-              "isPosted": true
-            },
-            {
-              "title": "Minimum Days to Make M Bouquets",
-              "slug": "minimum-days-bouquets",
-              "isPosted": true
-            }
-          ]
-        },
-        {
-          "title": "Distance Maximization",
-          "slug": "distance-maximization",
-          "lessons": [
             {
               "title": "Aggressive Cows",
               "slug": "aggressive-cows",
@@ -671,6 +655,37 @@
             {
               "title": "Place k Elements Such That Minimum Distance is Maximum",
               "slug": "place-k-elements-max-distance",
+              "isPosted": true
+            }
+          ]
+        },
+        {
+          "title": "Capacity/Rate Optimization",
+          "slug": "capacity-rate-optimization",
+          "lessons": [
+            {
+              "title": "Introduction to Capacity/Rate Optimization Pattern",
+              "slug": "intro-capacity-rate",
+              "isPosted": true
+            },
+            {
+              "title": "Capacity To Ship Packages Within D Days",
+              "slug": "capacity-ship-packages",
+              "isPosted": true
+            },
+            {
+              "title": "Koko Eating Bananas",
+              "slug": "koko-eating-bananas",
+              "isPosted": true
+            },
+            {
+              "title": "Minimum Days to Make M Bouquets",
+              "slug": "minimum-days-bouquets",
+              "isPosted": true
+            },
+            {
+              "title": "Minimum Time to Finish All Jobs",
+              "slug": "minimum-time-finish-jobs",
               "isPosted": true
             }
           ]
