@@ -1,28 +1,31 @@
-// Time: O(N²), Space: O(1)
-
-#include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Basic Bubble Sort — O(N²) always
+// ============================================================
+class Solution1 {
 public:
-    void bubbleSort(vector<int>& arr) {
-        int n = arr.size();
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    swap(arr[j], arr[j + 1]);
-                }
-            }
-        }
+    void bubbleSort(vector<int>& nums) {
+        int n = nums.size();
+        for (int i = 0; i < n-1; i++)
+            for (int j = 0; j < n-i-1; j++)
+                if (nums[j] > nums[j+1]) swap(nums[j], nums[j+1]);
     }
 };
 
-int main() {
-    Solution sol;
-    vector<int> arr = {64, 34, 25, 12, 22, 11, 90};
-    sol.bubbleSort(arr);
-    for (int num : arr) cout << num << " ";
-    cout << endl;
-    return 0;
-}
+// ============================================================
+// Solution 2: Optimized — early termination if no swaps — O(N) best case
+// ============================================================
+class Solution2 {
+public:
+    void bubbleSort(vector<int>& nums) {
+        int n = nums.size();
+        for (int i = 0; i < n-1; i++) {
+            bool swapped = false;
+            for (int j = 0; j < n-i-1; j++)
+                if (nums[j] > nums[j+1]) { swap(nums[j], nums[j+1]); swapped = true; }
+            if (!swapped) break; // Already sorted!
+        }
+    }
+};

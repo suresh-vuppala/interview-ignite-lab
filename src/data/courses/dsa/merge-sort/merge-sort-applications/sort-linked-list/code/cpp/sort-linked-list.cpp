@@ -1,59 +1,35 @@
-// Time: O(N log N), Space: O(log N)
-
-#include <iostream>
+struct ListNode { int val; ListNode* next; ListNode(int v):val(v),next(nullptr){} };
+#include <vector>
+#include <algorithm>
 using namespace std;
-
-struct ListNode {
-    int val;
-    ListNode* next;
-    ListNode(int x) : val(x), next(nullptr) {}
+// ============================================================
+// Solution 1: Copy to array, sort, write back — O(N log N) Time, O(N) Space
+// ============================================================
+class Solution1 {
+public:
+    ListNode* sortList(ListNode* head) {
+        vector<int> vals; for(auto c=head;c;c=c->next) vals.push_back(c->val);
+        sort(vals.begin(), vals.end());
+        auto c=head; for(int v:vals){c->val=v;c=c->next;}
+        return head;
+    }
 };
 
-ListNode* getMid(ListNode* head) {
-    ListNode *slow = head, *fast = head, *prev = nullptr;
-    while (fast && fast->next) {
-        prev = slow;
-        slow = slow->next;
-        fast = fast->next->next;
+// ============================================================
+// Solution 2: Merge sort on linked list — O(N log N) Time, O(log N) Stack
+// ============================================================
+class Solution2 {
+    ListNode* merge(ListNode* a, ListNode* b) {
+        ListNode d(0); ListNode*t=&d;
+        while(a&&b){if(a->val<=b->val){t->next=a;a=a->next;}else{t->next=b;b=b->next;}t=t->next;}
+        t->next=a?a:b; return d.next;
     }
-    if (prev) prev->next = nullptr;
-    return slow;
-}
-
-ListNode* merge(ListNode* l1, ListNode* l2) {
-    ListNode dummy(0);
-    ListNode* curr = &dummy;
-    
-    while (l1 && l2) {
-        if (l1->val <= l2->val) {
-            curr->next = l1;
-            l1 = l1->next;
-        } else {
-            curr->next = l2;
-            l2 = l2->next;
-        }
-        curr = curr->next;
+public:
+    ListNode* sortList(ListNode* head) {
+        if(!head||!head->next) return head;
+        ListNode*slow=head,*fast=head->next;
+        while(fast&&fast->next){slow=slow->next;fast=fast->next->next;}
+        ListNode*mid=slow->next; slow->next=nullptr;
+        return merge(sortList(head), sortList(mid));
     }
-    
-    curr->next = l1 ? l1 : l2;
-    return dummy.next;
-}
-
-ListNode* sortList(ListNode* head) {
-    if (!head || !head->next) return head;
-    
-    ListNode* mid = getMid(head);
-    ListNode* left = sortList(head);
-    ListNode* right = sortList(mid);
-    
-    return merge(left, right);
-}
-
-int main() {
-    ListNode* head = new ListNode(4);
-    head->next = new ListNode(2);
-    head->next->next = new ListNode(1);
-    head->next->next->next = new ListNode(3);
-    ListNode* sorted = sortList(head);
-    return 0;
-}
+};

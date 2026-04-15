@@ -1,27 +1,29 @@
-class KthLargestElement {
+#include <vector>
+#include <algorithm>
+#include <queue>
+using namespace std;
+// ============================================================
+// Solution 1: Sort descending, return k-1 index — O(N log N)
+// ============================================================
+class Solution1 {
 public:
-    int findKthLargest(vector<int>& arr, int k) {
-        return quickSelect(arr, 0, arr.size() - 1, arr.size() - k); // Convert to 0-indexed position
+    int findKthLargest(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end(), greater<int>());
+        return nums[k-1];
     }
-    
-private:
-    int quickSelect(vector<int>& arr, int low, int high, int k) {
-        int pi = partition(arr, low, high); // Partition array
-        if (pi == k) return arr[pi]; // Found kth largest
-        if (pi > k) return quickSelect(arr, low, pi - 1, k); // Search left
-        return quickSelect(arr, pi + 1, high, k); // Search right
-    }
-    
-    int partition(vector<int>& arr, int low, int high) {
-        int pivot = arr[high];
-        int i = low - 1;
-        for (int j = low; j < high; j++) {
-            if (arr[j] < pivot) {
-                i++;
-                swap(arr[i], arr[j]);
-            }
+};
+
+// ============================================================
+// Solution 2: Min-heap of size K — O(N log K) Time, O(K) Space
+// ============================================================
+class Solution2 {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        priority_queue<int, vector<int>, greater<int>> pq; // Min-heap
+        for(int x : nums) {
+            pq.push(x);
+            if((int)pq.size() > k) pq.pop(); // Keep only K largest
         }
-        swap(arr[i + 1], arr[high]);
-        return i + 1;
+        return pq.top(); // Kth largest = smallest in the K-heap
     }
 };

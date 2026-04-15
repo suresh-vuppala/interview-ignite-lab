@@ -14,7 +14,7 @@
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/insertion-sort/code/cpp/InsertionSort.cpp"
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/insertion-sort/code/cpp/insertion_sort.cpp"
         },
         {
           "language": "python",

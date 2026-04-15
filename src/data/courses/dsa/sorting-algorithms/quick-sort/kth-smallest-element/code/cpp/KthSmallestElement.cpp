@@ -1,27 +1,34 @@
-class KthSmallestElement {
+#include <vector>
+#include <algorithm>
+#include <queue>
+using namespace std;
+// ============================================================
+// Solution 1: Sort then index — O(N log N) Time
+// ============================================================
+class Solution1 {
 public:
-    int findKthSmallest(vector<int>& arr, int k) {
-        return quickSelect(arr, 0, arr.size() - 1, k - 1); // k-1 because 0-indexed
+    int kthSmallest(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end());
+        return nums[k-1];
     }
-    
-private:
-    int quickSelect(vector<int>& arr, int low, int high, int k) {
-        int pi = partition(arr, low, high); // Partition array
-        if (pi == k) return arr[pi]; // Found kth smallest
-        if (pi > k) return quickSelect(arr, low, pi - 1, k); // Search left
-        return quickSelect(arr, pi + 1, high, k); // Search right
+};
+
+// ============================================================
+// Solution 2: Quickselect (Hoare's) — O(N) average, O(N²) worst
+// ============================================================
+class Solution2 {
+    int partition(vector<int>& a, int lo, int hi) {
+        int pivot=a[lo+(hi-lo)/2], i=lo, j=hi;
+        while(i<=j){while(a[i]<pivot)i++;while(a[j]>pivot)j--;if(i<=j)swap(a[i++],a[j--]);}
+        return i;
     }
-    
-    int partition(vector<int>& arr, int low, int high) {
-        int pivot = arr[high];
-        int i = low - 1;
-        for (int j = low; j < high; j++) {
-            if (arr[j] < pivot) {
-                i++;
-                swap(arr[i], arr[j]);
-            }
+public:
+    int kthSmallest(vector<int>& nums, int k) {
+        int lo=0, hi=nums.size()-1; k--; // 0-indexed
+        while(lo<hi){
+            int p=partition(nums,lo,hi);
+            if(k<p) hi=p-1; else lo=p;
         }
-        swap(arr[i + 1], arr[high]);
-        return i + 1;
+        return nums[k];
     }
 };

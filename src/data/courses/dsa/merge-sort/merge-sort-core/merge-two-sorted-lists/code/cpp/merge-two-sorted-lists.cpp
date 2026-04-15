@@ -1,42 +1,31 @@
-// Time: O(N + M), Space: O(1)
-
-#include <iostream>
+#include <vector>
 using namespace std;
-
-struct ListNode {
-    int val;
-    ListNode* next;
-    ListNode(int x) : val(x), next(nullptr) {}
+// ============================================================
+// Solution 1: Concatenate + sort — O((M+N) log(M+N))
+// ============================================================
+#include <algorithm>
+class Solution1 {
+public:
+    vector<int> mergeSorted(vector<int>& a, vector<int>& b) {
+        vector<int> result(a.begin(), a.end());
+        result.insert(result.end(), b.begin(), b.end());
+        sort(result.begin(), result.end()); // Re-sort everything
+        return result;
+    }
 };
 
-ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-    ListNode dummy(0);
-    ListNode* curr = &dummy;
-    
-    while (l1 && l2) {
-        if (l1->val <= l2->val) {
-            curr->next = l1;
-            l1 = l1->next;
-        } else {
-            curr->next = l2;
-            l2 = l2->next;
-        }
-        curr = curr->next;
+// ============================================================
+// Solution 2: Two-pointer merge — O(M+N) Time, O(M+N) Space
+// ============================================================
+class Solution2 {
+public:
+    vector<int> mergeSorted(vector<int>& a, vector<int>& b) {
+        vector<int> result;
+        int i=0, j=0;
+        while(i<(int)a.size() && j<(int)b.size())
+            result.push_back(a[i]<=b[j] ? a[i++] : b[j++]);
+        while(i<(int)a.size()) result.push_back(a[i++]);
+        while(j<(int)b.size()) result.push_back(b[j++]);
+        return result;
     }
-    
-    curr->next = l1 ? l1 : l2;
-    return dummy.next;
-}
-
-int main() {
-    ListNode* l1 = new ListNode(1);
-    l1->next = new ListNode(2);
-    l1->next->next = new ListNode(4);
-    
-    ListNode* l2 = new ListNode(1);
-    l2->next = new ListNode(3);
-    l2->next->next = new ListNode(4);
-    
-    ListNode* result = mergeTwoLists(l1, l2);
-    return 0;
-}
+};
