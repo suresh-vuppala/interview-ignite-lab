@@ -1,39 +1,27 @@
 #include <vector>
 using namespace std;
-
-class NumMatrix {
-private:
-    vector<vector<int>> prefix;
-    
+// ============================================================
+// Solution 1: Brute Force — sum range each query — O(N) per query
+// ============================================================
+class Solution1 {
+    vector<int> nums;
 public:
-    NumMatrix(vector<vector<int>>& matrix) {
-        int m = matrix.size();
-        int n = matrix[0].size();
-        
-        // Create prefix sum matrix of size (m+1) x (n+1)
-        prefix.assign(m + 1, vector<int>(n + 1, 0));
-        
-        // Build prefix sum array
-        for (int i = 1; i <= m; i++) {
-            for (int j = 1; j <= n; j++) {
-                prefix[i][j] = matrix[i-1][j-1] 
-                              + prefix[i-1][j] 
-                              + prefix[i][j-1] 
-                              - prefix[i-1][j-1];
-            }
-        }
-    }
-    
-    int sumRegion(int row1, int col1, int row2, int col2) {
-        return prefix[row2+1][col2+1] 
-             - prefix[row1][col2+1] 
-             - prefix[row2+1][col1] 
-             + prefix[row1][col1];
+    Solution1(vector<int>& n) : nums(n) {}
+    int sumRange(int left, int right) {
+        int sum = 0;
+        for (int i = left; i <= right; i++) sum += nums[i];
+        return sum;
     }
 };
 
-/**
- * Your NumMatrix object will be instantiated and called as such:
- * NumMatrix* obj = new NumMatrix(matrix);
- * int param_1 = obj->sumRegion(row1,col1,row2,col2);
- */
+// ============================================================
+// Solution 2: Prefix Sum — O(1) per query, O(N) preprocess
+// ============================================================
+class Solution2 {
+    vector<int> prefix;
+public:
+    Solution2(vector<int>& nums) : prefix(nums.size() + 1, 0) {
+        for (int i = 0; i < (int)nums.size(); i++) prefix[i+1] = prefix[i] + nums[i];
+    }
+    int sumRange(int left, int right) { return prefix[right+1] - prefix[left]; }
+};

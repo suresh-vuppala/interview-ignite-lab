@@ -1,35 +1,41 @@
 #include <vector>
 #include <unordered_map>
+#include <algorithm>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Brute Force — check all intervals — O(N²)
+// ============================================================
+class Solution1 {
 public:
     int longestWPI(vector<int>& hours) {
-        unordered_map<int, int> firstOccurrence;
-        firstOccurrence[0] = -1;
-        
-        int prefixSum = 0;
-        int maxLength = 0;
-        
-        for (int i = 0; i < hours.size(); i++) {
-            // Add 1 for tiring day (>8), -1 for non-tiring day
-            prefixSum += (hours[i] > 8) ? 1 : -1;
-            
-            // If prefix sum > 0, interval from start is well-performing
-            if (prefixSum > 0) {
-                maxLength = i + 1;
-            }
-            // If (prefixSum - 1) was seen before, subarray between them has sum > 0
-            else if (firstOccurrence.find(prefixSum - 1) != firstOccurrence.end()) {
-                maxLength = max(maxLength, i - firstOccurrence[prefixSum - 1]);
-            }
-            
-            // Store first occurrence of this prefix sum
-            if (firstOccurrence.find(prefixSum) == firstOccurrence.end()) {
-                firstOccurrence[prefixSum] = i;
+        int n = hours.size(), maxLen = 0;
+        for (int i = 0; i < n; i++) {
+            int tiring = 0;
+            for (int j = i; j < n; j++) {
+                if (hours[j] > 8) tiring++; else tiring--;
+                if (tiring > 0) maxLen = max(maxLen, j - i + 1);
             }
         }
-        
-        return maxLength;
+        return maxLen;
+    }
+};
+
+// ============================================================
+// Solution 2: Prefix Sum + HashMap (first occurrence of each sum) — O(N)
+// ============================================================
+class Solution2 {
+public:
+    int longestWPI(vector<int>& hours) {
+        unordered_map<int,int> first;
+        int sum = 0, maxLen = 0;
+        for (int i = 0; i < (int)hours.size(); i++) {
+            sum += (hours[i] > 8) ? 1 : -1;
+            if (sum > 0) maxLen = i + 1;
+            else {
+                if (first.count(sum - 1)) maxLen = max(maxLen, i - first[sum - 1]);
+                if (!first.count(sum)) first[sum] = i;
+            }
+        }
+        return maxLen;
     }
 };

@@ -1,36 +1,38 @@
-#include <string>
+#include <vector>
 #include <unordered_map>
+#include <algorithm>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Brute Force — check all substrings — O(N²)
+// ============================================================
+class Solution1 {
 public:
-    int longestBalancedSubstring(string s) {
-        // We track the difference between character counts
-        // State: (count_a - count_b, count_a - count_c)
-        unordered_map<long long, int> stateMap;
-        stateMap[0] = -1; // Initial state (0, 0) at index -1
-        
-        int count_a = 0, count_b = 0, count_c = 0;
-        int maxLength = 0;
-        
-        for (int i = 0; i < s.length(); i++) {
-            // Update counts
-            if (s[i] == 'a') count_a++;
-            else if (s[i] == 'b') count_b++;
-            else count_c++;
-            
-            // Calculate state as a hash
-            long long state = ((long long)(count_a - count_b) << 32) | (count_a - count_c);
-            
-            // If state was seen before, substring between is balanced
-            if (stateMap.find(state) != stateMap.end()) {
-                maxLength = max(maxLength, i - stateMap[state]);
-            } else {
-                // Store first occurrence of this state
-                stateMap[state] = i;
+    int findMaxLength(vector<int>& nums) {
+        int n = nums.size(), maxLen = 0;
+        for (int i = 0; i < n; i++) {
+            int zeros = 0, ones = 0;
+            for (int j = i; j < n; j++) {
+                if (nums[j] == 0) zeros++; else ones++;
+                if (zeros == ones) maxLen = max(maxLen, j - i + 1);
             }
         }
-        
-        return maxLength;
+        return maxLen;
+    }
+};
+
+// ============================================================
+// Solution 2: Prefix Sum (0→-1) + HashMap — O(N)
+// ============================================================
+class Solution2 {
+public:
+    int findMaxLength(vector<int>& nums) {
+        unordered_map<int,int> first; first[0] = -1;
+        int sum = 0, maxLen = 0;
+        for (int i = 0; i < (int)nums.size(); i++) {
+            sum += (nums[i] == 1) ? 1 : -1; // Treat 0 as -1
+            if (first.count(sum)) maxLen = max(maxLen, i - first[sum]);
+            else first[sum] = i;
+        }
+        return maxLen;
     }
 };
