@@ -24,7 +24,7 @@ public:
 #include <string>
 using namespace std;
 
-class TrieOperations {
+class Solution2 {
     struct TrieNode {
         TrieNode* children[26] = {}; // 26 lowercase letters
         bool isEnd = false; // Marks end of word

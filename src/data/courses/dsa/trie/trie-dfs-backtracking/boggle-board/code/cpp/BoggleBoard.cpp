@@ -39,7 +39,7 @@ public:
 #include <string>
 using namespace std;
 
-class BoggleBoard {
+class Solution2 {
     struct TrieNode {
         TrieNode* children[26] = {};
         string word = ""; // Store word at end

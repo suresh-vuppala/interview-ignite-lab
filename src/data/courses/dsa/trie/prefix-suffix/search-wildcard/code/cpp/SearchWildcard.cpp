@@ -40,7 +40,7 @@ struct TrieNode {
     string word;
 };
 
-class Solution {
+class Solution2 {
     TrieNode* root;
     
     void dfs(TrieNode* node, const string& pattern, int index, vector<string>& result) {

@@ -40,7 +40,7 @@ public:
 #include <algorithm>
 using namespace std;
 
-class AutocompleteSystem {
+class Solution2 {
     struct TrieNode {
         unordered_map<char, TrieNode*> children;
         unordered_map<string, int> sentences; // sentence -> frequency

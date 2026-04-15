@@ -40,7 +40,7 @@ struct RadixNode {
     string edgeLabel;
 };
 
-class CompressedTrie {
+class Solution2 {
     RadixNode* root;
     
 public:

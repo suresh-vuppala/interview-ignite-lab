@@ -37,7 +37,7 @@ struct TrieNode {
     int weight = -1;
 };
 
-class WordFilter {
+class Solution2 {
     TrieNode* root;
     
     void insert(const string& word, int weight) {
