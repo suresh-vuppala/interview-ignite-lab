@@ -1,64 +1,65 @@
-// Time: O(9^(N×N)), Space: O(N×N)
-
-#include <iostream>
 #include <vector>
 using namespace std;
-
-class Solution {
-public:
-    void solveSudoku(vector<vector<char>>& board) {
-        backtrack(board);
-    }
-    
-private:
-    bool backtrack(vector<vector<char>>& board) {
+// ============================================================
+// Solution 1: Try all empty cells, validate each placement — O(9^81)
+// ============================================================
+class Solution1 {
+    bool isValid(vector<vector<char>>& board, int r, int c, char ch) {
         for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
+            if (board[r][i] == ch) return false;
+            if (board[i][c] == ch) return false;
+            if (board[3*(r/3)+i/3][3*(c/3)+i%3] == ch) return false;
+        }
+        return true;
+    }
+    bool solve(vector<vector<char>>& board) {
+        for (int i = 0; i < 9; i++)
+            for (int j = 0; j < 9; j++)
                 if (board[i][j] == '.') {
-                    for (char num = '1'; num <= '9'; num++) {
-                        if (isValid(board, i, j, num)) {
-                            board[i][j] = num;
-                            if (backtrack(board)) return true;
+                    for (char c = '1'; c <= '9'; c++) {
+                        if (isValid(board, i, j, c)) {
+                            board[i][j] = c;
+                            if (solve(board)) return true;
                             board[i][j] = '.';
                         }
                     }
-                    return false;
+                    return false; // No valid digit
                 }
-            }
-        }
-        return true;
+        return true; // All filled
     }
-    
-    bool isValid(vector<vector<char>>& board, int row, int col, char num) {
-        for (int i = 0; i < 9; i++) {
-            if (board[row][i] == num || board[i][col] == num) return false;
-        }
-        
-        int boxRow = (row / 3) * 3, boxCol = (col / 3) * 3;
-        for (int i = boxRow; i < boxRow + 3; i++) {
-            for (int j = boxCol; j < boxCol + 3; j++) {
-                if (board[i][j] == num) return false;
-            }
-        }
-        return true;
-    }
+public:
+    void solveSudoku(vector<vector<char>>& board) { solve(board); }
 };
 
-int main() {
-    Solution sol;
-    vector<vector<char>> board = {{'5','3','.','.','7','.','.','.','.'},
-                                   {'6','.','.','1','9','5','.','.','.'},
-                                   {'.','9','8','.','.','.','.','6','.'},
-                                   {'8','.','.','.','6','.','.','.','3'},
-                                   {'4','.','.','8','.','3','.','.','1'},
-                                   {'7','.','.','.','2','.','.','.','6'},
-                                   {'.','6','.','.','.','.','2','8','.'},
-                                   {'.','.','.','4','1','9','.','.','5'},
-                                   {'.','.','.','.','8','.','.','7','9'}};
-    sol.solveSudoku(board);
-    for (auto& row : board) {
-        for (char c : row) cout << c << " ";
-        cout << endl;
+// ============================================================
+// Solution 2: Constraint sets (row/col/box bitmasks) — faster pruning
+// ============================================================
+class Solution2 {
+    int row[9]={}, col[9]={}, box[9]={};
+    bool solve(vector<vector<char>>& board) {
+        for (int i = 0; i < 9; i++)
+            for (int j = 0; j < 9; j++)
+                if (board[i][j] == '.') {
+                    int b = (i/3)*3+j/3;
+                    for (int d = 0; d < 9; d++) {
+                        int mask = 1 << d;
+                        if (row[i]&mask || col[j]&mask || box[b]&mask) continue;
+                        row[i]|=mask; col[j]|=mask; box[b]|=mask;
+                        board[i][j] = '1' + d;
+                        if (solve(board)) return true;
+                        board[i][j] = '.';
+                        row[i]^=mask; col[j]^=mask; box[b]^=mask;
+                    }
+                    return false;
+                }
+        return true;
     }
-    return 0;
-}
+public:
+    void solveSudoku(vector<vector<char>>& board) {
+        for (int i=0;i<9;i++) for (int j=0;j<9;j++) if (board[i][j]!='.') {
+            int d=board[i][j]-'1', b=(i/3)*3+j/3;
+            row[i]|=(1<<d); col[j]|=(1<<d); box[b]|=(1<<d);
+        }
+        solve(board);
+    }
+};

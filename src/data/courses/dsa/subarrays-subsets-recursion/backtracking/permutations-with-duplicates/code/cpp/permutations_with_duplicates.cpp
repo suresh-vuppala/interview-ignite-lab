@@ -1,47 +1,44 @@
-// Time: O(N × N!), Space: O(N)
-
-#include <iostream>
 #include <vector>
+#include <set>
 #include <algorithm>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Generate all then deduplicate via set — O(N! * N)
+// ============================================================
+class Solution1 {
+    void bt(vector<int>& nums, int start, set<vector<int>>& res) {
+        if (start == (int)nums.size()) { res.insert(nums); return; }
+        for (int i = start; i < (int)nums.size(); i++) {
+            swap(nums[start], nums[i]);
+            bt(nums, start + 1, res);
+            swap(nums[start], nums[i]);
+        }
+    }
 public:
     vector<vector<int>> permuteUnique(vector<int>& nums) {
-        vector<vector<int>> result;
-        vector<bool> visited(nums.size(), false);
-        vector<int> current;
-        sort(nums.begin(), nums.end());
-        backtrack(nums, visited, current, result);
-        return result;
-    }
-    
-private:
-    void backtrack(vector<int>& nums, vector<bool>& visited, vector<int>& current, vector<vector<int>>& result) {
-        if (current.size() == nums.size()) {
-            result.push_back(current);
-            return;
-        }
-        
-        for (int i = 0; i < nums.size(); i++) {
-            if (visited[i] || (i > 0 && nums[i] == nums[i-1] && !visited[i-1])) continue;
-            
-            visited[i] = true;
-            current.push_back(nums[i]);
-            backtrack(nums, visited, current, result);
-            current.pop_back();
-            visited[i] = false;
-        }
+        set<vector<int>> res; bt(nums, 0, res);
+        return vector<vector<int>>(res.begin(), res.end());
     }
 };
 
-int main() {
-    Solution sol;
-    vector<int> nums = {1, 1, 2};
-    vector<vector<int>> result = sol.permuteUnique(nums);
-    for (auto& perm : result) {
-        for (int num : perm) cout << num << " ";
-        cout << endl;
+// ============================================================
+// Solution 2: Sort + Skip Duplicates at same level — O(N! * N)
+// ============================================================
+class Solution2 {
+    void bt(vector<int>& nums, vector<bool>& used, vector<int>& cur, vector<vector<int>>& res) {
+        if (cur.size() == nums.size()) { res.push_back(cur); return; }
+        for (int i = 0; i < (int)nums.size(); i++) {
+            if (used[i]) continue;
+            if (i > 0 && nums[i] == nums[i-1] && !used[i-1]) continue; // Skip dup
+            used[i] = true; cur.push_back(nums[i]);
+            bt(nums, used, cur, res);
+            cur.pop_back(); used[i] = false;
+        }
     }
-    return 0;
-}
+public:
+    vector<vector<int>> permuteUnique(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        vector<vector<int>> res; vector<int> cur; vector<bool> used(nums.size(), false);
+        bt(nums, used, cur, res); return res;
+    }
+};
