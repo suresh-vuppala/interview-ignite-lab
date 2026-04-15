@@ -17,6 +17,17 @@ Detect if an undirected graph contains a cycle.
 
 ---
 
+## All Possible Edge Cases
+1. **Self-loop:** cycle of length 1
+2. **Parallel edges:** multiple edges between same pair
+3. **Tree (no cycle):** V-1 edges, connected
+4. **Disconnected with cycle in one component**
+5. **Single node:** no cycle possible
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

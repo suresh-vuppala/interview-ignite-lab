@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/doubly-circular/detect-circular/code/cpp/detect_circular.cpp"
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/detect-circular/code/cpp/DetectCircular.cpp"
         },
         {
           "language": "java",

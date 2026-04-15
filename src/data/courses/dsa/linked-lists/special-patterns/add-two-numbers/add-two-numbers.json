@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/special-patterns/add-two-numbers/code/cpp/add_two_numbers.cpp"
+          "codeFile": "courses/dsa/linked-lists/special-patterns/add-two-numbers/code/cpp/AddTwoNumbers.cpp"
         },
         {
           "language": "java",

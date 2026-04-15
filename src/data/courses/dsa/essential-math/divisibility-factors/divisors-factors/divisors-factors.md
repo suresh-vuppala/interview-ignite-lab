@@ -11,7 +11,7 @@ Find all divisors of a number N.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁹
 
 <br>
 

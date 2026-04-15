@@ -11,7 +11,9 @@ Find all paths from (0,0) to (N-1,N-1) in a maze with blocked cells.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 5
+- maze[i][j] ∈ {0, 1}
+- maze[0][0] = maze[N-1][N-1] = 1
 
 <br>
 

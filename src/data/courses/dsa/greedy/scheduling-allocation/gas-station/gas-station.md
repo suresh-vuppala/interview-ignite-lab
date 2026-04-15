@@ -11,16 +11,17 @@ Circular route of N gas stations. gas[i]=fuel, cost[i]=travel cost. Find startin
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁵
+- 0 ≤ gas[i], cost[i] ≤ 10⁴ apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Total gas < total cost:** impossible (-1)
+2. **Can start from index 0**
+3. **Only one valid starting point (guaranteed unique)**
 
 <br>
 

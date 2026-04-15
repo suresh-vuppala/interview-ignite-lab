@@ -9,7 +9,7 @@ Sort a linked list in O(N log N).
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ N ≤ 5 × 10⁴
 
 <br>
 

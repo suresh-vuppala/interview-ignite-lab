@@ -11,16 +11,17 @@ Find longest substring with equal number of 0s and 1s.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
+- Array contains only 0s and 1s
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **All 0s or all 1s:** length 0
+2. **Already balanced:** entire array
+3. **Single element:** length 0
 
 <br>
 

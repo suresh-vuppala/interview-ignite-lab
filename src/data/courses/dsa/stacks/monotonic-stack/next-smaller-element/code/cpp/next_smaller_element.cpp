@@ -1,36 +1,29 @@
-// ============================================================
-// Next Smaller Element
-// ============================================================
-
 #include <vector>
 #include <stack>
 using namespace std;
-
+// ============================================================
+// Solution 1: Brute Force — scan right for each — O(N²)
+// ============================================================
 class Solution1 {
 public:
-    vector<int> nextSmaller(vector<int>& nums) {
-        int n = nums.size(); vector<int> result(n, -1);
-        for (int i = 0; i < n; i++)
-            for (int j = i+1; j < n; j++)
-                if (nums[j] < nums[i]) { result[i] = nums[j]; break; }
-        return result;
+    vector<int> nextSmallerElement(vector<int>& nums) {
+        int n=nums.size(); vector<int> res(n,-1);
+        for(int i=0;i<n;i++)for(int j=i+1;j<n;j++)if(nums[j]<nums[i]){res[i]=nums[j];break;}
+        return res;
     }
 };
 
+// ============================================================
+// Solution 2: Monotonic stack (increasing) — O(N)
+// ============================================================
 class Solution2 {
 public:
-    vector<int> nextSmaller(vector<int>& nums) {
-        int n = nums.size(); vector<int> result(n, -1);
-        stack<int> st; // Increasing stack
-
-        for (int i = 0; i < n; i++) {
-            // Pop elements LARGER than incoming — incoming is their NSE
-            while (!st.empty() && nums[i] < nums[st.top()]) {
-                result[st.top()] = nums[i];
-                st.pop();
-            }
+    vector<int> nextSmallerElement(vector<int>& nums) {
+        int n=nums.size(); vector<int> res(n,-1); stack<int> st;
+        for(int i=0;i<n;i++){
+            while(!st.empty()&&nums[st.top()]>nums[i]){res[st.top()]=nums[i];st.pop();}
             st.push(i);
         }
-        return result;
+        return res;
     }
 };

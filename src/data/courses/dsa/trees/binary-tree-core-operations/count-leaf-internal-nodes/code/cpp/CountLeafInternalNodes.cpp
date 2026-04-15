@@ -1,30 +1,38 @@
-﻿#include <iostream>
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
 using namespace std;
-
-struct TreeNode {
-    int val;
-    TreeNode* left;
-    TreeNode* right;
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+// ============================================================
+// Solution 1: Recursive count — O(N) Time, O(H) Space
+// ============================================================
+class Solution1 {
+public:
+    int countLeaves(TreeNode* root) {
+        if (!root) return 0;
+        if (!root->left && !root->right) return 1;
+        return countLeaves(root->left) + countLeaves(root->right);
+    }
+    int countInternal(TreeNode* root) {
+        if (!root || (!root->left && !root->right)) return 0;
+        return 1 + countInternal(root->left) + countInternal(root->right);
+    }
 };
 
-int countLeafNodes(TreeNode* root) {
-    if (!root) return 0;
-    if (!root->left && !root->right) return 1;
-    return countLeafNodes(root->left) + countLeafNodes(root->right);
-}
-
-int countInternalNodes(TreeNode* root) {
-    if (!root || (!root->left && !root->right)) return 0;
-    return 1 + countInternalNodes(root->left) + countInternalNodes(root->right);
-}
-
-int main() {
-    TreeNode* root = new TreeNode(1);
-    root->left = new TreeNode(2);
-    root->right = new TreeNode(3);
-    root->left->left = new TreeNode(4);
-    cout << "Leaf nodes: " << countLeafNodes(root) << endl;
-    cout << "Internal nodes: " << countInternalNodes(root) << endl;
-    return 0;
-}
+// ============================================================
+// Solution 2: Iterative BFS count — O(N) Time, O(W) Space
+// ============================================================
+#include <queue>
+class Solution2 {
+public:
+    pair<int,int> count(TreeNode* root) {
+        if (!root) return {0,0};
+        int leaves=0, internal=0;
+        queue<TreeNode*> q; q.push(root);
+        while (!q.empty()) {
+            auto n = q.front(); q.pop();
+            if (!n->left && !n->right) leaves++;
+            else internal++;
+            if (n->left) q.push(n->left);
+            if (n->right) q.push(n->right);
+        }
+        return {leaves, internal};
+    }
+};

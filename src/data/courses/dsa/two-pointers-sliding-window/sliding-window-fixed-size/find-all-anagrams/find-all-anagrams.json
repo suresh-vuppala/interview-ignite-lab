@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/cpp/find_all_anagrams.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/find-all-anagrams/code/cpp/FindAllAnagrams.cpp"
         },
         {
           "language": "java",

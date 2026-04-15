@@ -1,17 +1,25 @@
-// ============================================================
-// Weighted Graph — Adjacency List
-// ============================================================
 #include <vector>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Adjacency Matrix (weighted) — O(V²) Space
+// ============================================================
+class Solution1 {
 public:
-    vector<vector<pair<int,int>>> buildWeightedGraph(int n, vector<vector<int>>& edges) {
-        vector<vector<pair<int,int>>> adj(n); // adj[u] = {(v, weight)}
-        for (auto& e : edges) {
-            adj[e[0]].push_back({e[1], e[2]}); // u → (v, w)
-            adj[e[1]].push_back({e[0], e[2]}); // v → (u, w) undirected
-        }
+    vector<vector<int>> build(int V, vector<vector<int>>& edges) {
+        vector<vector<int>> matrix(V, vector<int>(V, 0));
+        for (auto& e : edges) matrix[e[0]][e[1]] = e[2]; // u, v, weight
+        return matrix;
+    }
+};
+
+// ============================================================
+// Solution 2: Adjacency List (weighted) — O(V+E) Space
+// ============================================================
+class Solution2 {
+public:
+    vector<vector<pair<int,int>>> build(int V, vector<vector<int>>& edges) {
+        vector<vector<pair<int,int>>> adj(V);
+        for (auto& e : edges) adj[e[0]].push_back({e[1], e[2]});
         return adj;
     }
 };

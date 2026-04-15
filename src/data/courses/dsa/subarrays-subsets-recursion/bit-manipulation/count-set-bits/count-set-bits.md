@@ -11,16 +11,16 @@ Count the number of 1-bits (set bits) in an integer.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ N ≤ 2³¹ - 1
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **N = 0:** 0 bits
+2. **Power of 2:** exactly 1 bit
+3. **All bits set (2^31 - 1):** 31 bits
 
 <br>
 

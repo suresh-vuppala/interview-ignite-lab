@@ -11,16 +11,18 @@ Minimum days to make M bouquets of K adjacent flowers.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
+- 1 ≤ bloomDay[i] ≤ 10⁹
+- 1 ≤ M, K
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **M × K > N:** impossible, return -1
+2. **All bloom on day 1:** answer is 1
+3. **Need adjacent flowers**
 
 <br>
 

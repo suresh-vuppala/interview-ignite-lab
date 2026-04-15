@@ -17,6 +17,17 @@ There are numCourses courses with prerequisites. Determine if you can finish all
 
 ---
 
+## All Possible Edge Cases
+1. **No prerequisites:** always possible
+2. **Simple cycle:** [0,1] and [1,0] → impossible
+3. **Self-dependency:** [0,0] → impossible
+4. **Long chain:** A→B→C→D (possible)
+5. **Multiple independent chains**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

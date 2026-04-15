@@ -11,7 +11,7 @@ Game theory: player taking last stone wins. Can take 1-3 stones per turn.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 2³¹ - 1
 
 <br>
 

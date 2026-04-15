@@ -11,16 +11,20 @@ Search for target in a rotated sorted array.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 5000
+- -10⁴ ≤ nums[i] ≤ 10⁴
+- All values distinct
+- Array rotated 1 to N times
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Not rotated:** standard binary search
+2. **Target at pivot point**
+3. **Single element array**
+4. **Target not present**
 
 <br>
 

@@ -9,7 +9,7 @@ Compare merge sort vs quicksort in practice.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Comparison reference
 
 <br>
 

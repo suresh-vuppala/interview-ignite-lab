@@ -17,6 +17,17 @@ Find the Minimum Spanning Tree (MST) using Kruskal's algorithm. MST connects all
 
 ---
 
+## All Possible Edge Cases
+1. **Disconnected graph:** MST doesn't exist (spanning forest)
+2. **Single vertex:** MST weight = 0
+3. **All edges same weight:** any spanning tree is MST
+4. **Already a tree (E = V-1):** MST = the tree itself
+5. **Parallel edges:** pick the lighter one
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

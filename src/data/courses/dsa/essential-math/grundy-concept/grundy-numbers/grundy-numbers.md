@@ -11,7 +11,7 @@ Sprague-Grundy theorem for solving combinatorial games.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Game-theory specific constraints
 
 <br>
 

@@ -11,7 +11,7 @@ Find all valid dictionary words in a Boggle board.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Same as word-search-ii
 
 <br>
 

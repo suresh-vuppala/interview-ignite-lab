@@ -17,6 +17,17 @@ Implement Depth-First Search (DFS) on a graph. Return nodes in DFS order.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty graph / single vertex**
+2. **Disconnected components** — DFS from one node misses others
+3. **Cycles** — must track visited to avoid infinite recursion
+4. **Very deep graph** — recursion stack overflow risk (use iterative)
+5. **Self-loops**
+
+<br>
+
+---
+
 ## Solution 1: BFS (alternative traversal)
 
 **Intuition:**

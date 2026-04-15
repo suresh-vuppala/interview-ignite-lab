@@ -11,7 +11,7 @@ Understand the difference between subarrays, subsequences, and subsets.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Conceptual comparison
 
 <br>
 

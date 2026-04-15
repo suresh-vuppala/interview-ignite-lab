@@ -11,7 +11,8 @@ Design autocomplete: given prefix, return top-3 hot sentences by frequency.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ sentences ≤ 1000
+- 1 ≤ sentence.length ≤ 100
 
 <br>
 

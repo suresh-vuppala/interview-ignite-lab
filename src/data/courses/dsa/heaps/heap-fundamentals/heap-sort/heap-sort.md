@@ -11,16 +11,18 @@ Sort an array using a heap. Build max-heap, then repeatedly extract maximum to b
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁵
+- -10⁹ ≤ nums[i] ≤ 10⁹ apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Already sorted**
+2. **Reverse sorted:** worst case for some sorts, fine for heap sort
+3. **All equal elements**
+4. **Single element**
 
 <br>
 

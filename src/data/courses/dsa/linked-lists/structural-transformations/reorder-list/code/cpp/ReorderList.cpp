@@ -1,8 +1,33 @@
-#include <iostream>
+struct ListNode { int val; ListNode* next; ListNode(int v):val(v),next(nullptr){} };
 using namespace std;
-struct Node { int data; Node* next; Node(int v):data(v),next(nullptr){} };
-class LL { Node* reverse(Node* h) { Node *p=nullptr,*c=h,*n; while(c) { n=c->next; c->next=p; p=c; c=n; } return p; }
-void merge(Node* l1, Node* l2) { while(l2) { Node *n1=l1->next,*n2=l2->next; l1->next=l2; l2->next=n1; l1=n1; l2=n2; }}
-public: void reorder(Node* h) { if(!h||!h->next) return; Node *s=h,*f=h; while(f->next&&f->next->next) { s=s->next; f=f->next->next; } Node* h2=reverse(s->next); s->next=nullptr; merge(h,h2); }
-void display(Node* h) { while(h) { cout<<h->data<<" "; h=h->next; } cout<<endl; }};
-int main() { LL r; Node* h=new Node(1); h->next=new Node(2); h->next->next=new Node(3); h->next->next->next=new Node(4); r.reorder(h); r.display(h); return 0; }
+// ============================================================
+// Solution 1: Deque — push all, pop from both ends — O(N) Space
+// ============================================================
+#include <deque>
+class Solution1 {
+public:
+    void reorderList(ListNode* head) {
+        deque<ListNode*> dq;for(auto c=head;c;c=c->next)dq.push_back(c);
+        ListNode*cur=dq.front();dq.pop_front();bool front=false;
+        while(!dq.empty()){if(front){cur->next=dq.front();dq.pop_front();}else{cur->next=dq.back();dq.pop_back();}cur=cur->next;front=!front;}
+        cur->next=nullptr;
+    }
+};
+
+// ============================================================
+// Solution 2: Find middle + reverse second half + merge — O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    void reorderList(ListNode* head) {
+        if(!head||!head->next)return;
+        // Find middle
+        ListNode*s=head,*f=head;while(f->next&&f->next->next){s=s->next;f=f->next->next;}
+        // Reverse second half
+        ListNode*prev=nullptr,*cur=s->next;s->next=nullptr;
+        while(cur){auto nxt=cur->next;cur->next=prev;prev=cur;cur=nxt;}
+        // Merge alternating
+        ListNode*l1=head,*l2=prev;
+        while(l2){auto n1=l1->next,n2=l2->next;l1->next=l2;l2->next=n1;l1=n1;l2=n2;}
+    }
+};

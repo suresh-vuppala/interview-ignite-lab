@@ -11,16 +11,17 @@ Implement a circular queue with fixed capacity supporting enQueue, deQueue, Fron
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ K ≤ 1000 (capacity)
+- 0 ≤ value ≤ 1000 apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Enqueue when full:** return false
+2. **Dequeue when empty:** return false
+3. **Wrap around:** rear goes past capacity
 
 <br>
 

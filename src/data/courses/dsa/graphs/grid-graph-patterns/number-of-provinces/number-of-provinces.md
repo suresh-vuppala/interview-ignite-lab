@@ -17,6 +17,16 @@ Given an n×n adjacency matrix where isConnected[i][j]=1 means city i and j are 
 
 ---
 
+## All Possible Edge Cases
+1. **All connected:** 1 province
+2. **All disconnected:** N provinces
+3. **Single city**
+4. **Dense connections:** many edges but few provinces
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

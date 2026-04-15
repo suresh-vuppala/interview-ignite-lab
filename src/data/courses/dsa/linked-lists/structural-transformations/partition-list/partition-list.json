@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/structural-transformations/partition-list/code/cpp/partition_list.cpp"
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/partition-list/code/cpp/PartitionList.cpp"
         },
         {
           "language": "java",

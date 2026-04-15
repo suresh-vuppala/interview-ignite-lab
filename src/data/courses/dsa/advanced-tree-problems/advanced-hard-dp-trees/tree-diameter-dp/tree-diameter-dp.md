@@ -11,7 +11,7 @@ Find tree diameter (longest path between any two nodes) using DP.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁴
 
 <br>
 

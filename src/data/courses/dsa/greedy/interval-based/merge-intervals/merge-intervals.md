@@ -11,16 +11,18 @@ Merge all overlapping intervals into non-overlapping intervals.
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁴
+- 0 ≤ start ≤ end ≤ 10⁴ apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **No overlaps:** return as-is
+2. **All overlap into one:** single merged interval
+3. **Already sorted**
+4. **Touching intervals [1,2],[2,3]:** merge
 
 <br>
 

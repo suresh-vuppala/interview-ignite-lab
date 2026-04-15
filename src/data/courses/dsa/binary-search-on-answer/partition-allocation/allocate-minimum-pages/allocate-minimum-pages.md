@@ -11,16 +11,19 @@ Allocate N books to M students minimizing the maximum pages any student reads.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
+- 1 ≤ books[i] ≤ 10⁹
+- 1 ≤ M ≤ N (students)
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **M > N:** impossible (more students than books)
+2. **M = 1:** one student reads all
+3. **M = N:** each reads one book
+4. **All books same pages**
 
 <br>
 

@@ -11,16 +11,17 @@ Find longest interval where 'good' days (>8hrs) outnumber 'bad' days.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁴
+- 1 ≤ hours[i] ≤ 16
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **All good days (>8 hrs):** entire array
+2. **All bad days:** longest = 0
+3. **Alternating good/bad**
 
 <br>
 

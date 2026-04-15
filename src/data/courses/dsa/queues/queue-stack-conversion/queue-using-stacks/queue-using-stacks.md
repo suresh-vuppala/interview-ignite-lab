@@ -11,16 +11,16 @@ Implement a FIFO queue using only two LIFO stacks.
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 100 operations apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Interleaved push/pop**
+2. **Multiple pops without push**
+3. **Empty queue peek/pop**
 
 <br>
 

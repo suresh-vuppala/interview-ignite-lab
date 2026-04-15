@@ -11,7 +11,8 @@ Search in matrix where each row and column is independently sorted (not globally
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ M, N ≤ 300
+- Each row and column independently sorted
 
 <br>
 

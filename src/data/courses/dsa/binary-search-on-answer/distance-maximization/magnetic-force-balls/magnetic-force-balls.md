@@ -11,16 +11,16 @@ Place M balls maximizing minimum magnetic force (distance). Same as aggressive c
 ---
 
 ## Constraints
-- Typical problem constraints
+- 2 ≤ N ≤ 10⁵
+- 2 ≤ M ≤ N
+- 1 ≤ positions[i] ≤ 10⁹
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Same as aggressive cows**
 
 <br>
 

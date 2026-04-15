@@ -11,7 +11,8 @@ Find the maximum sum of any BST subtree in a binary tree.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 4 × 10⁴
+- -4 × 10⁴ ≤ node.val ≤ 4 × 10⁴
 
 <br>
 

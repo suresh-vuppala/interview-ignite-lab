@@ -11,7 +11,8 @@ Find shortest prefix for each word that uniquely identifies it.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 1000
+- 1 ≤ word.length ≤ 1000
 
 <br>
 

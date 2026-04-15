@@ -1,39 +1,35 @@
-// ============================================================
-// Morris Inorder Traversal — O(1) Space
-// ============================================================
-#include <vector>
-using namespace std;
 struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
-
-class Solution {
+#include <vector>
+#include <stack>
+using namespace std;
+// ============================================================
+// Solution 1: Standard iterative inorder with stack — O(N) Time, O(H) Space
+// ============================================================
+class Solution1 {
 public:
-    vector<int> morrisInorder(TreeNode* root) {
-        vector<int> result;
-        TreeNode* current = root;
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> res; stack<TreeNode*> st; TreeNode* cur=root;
+        while(cur||!st.empty()){ while(cur){st.push(cur);cur=cur->left;} cur=st.top();st.pop(); res.push_back(cur->val); cur=cur->right; }
+        return res; // Uses O(H) stack space
+    }
+};
 
-        while (current) {
-            if (!current->left) {
-                // No left child — process and go right
-                result.push_back(current->val);
-                current = current->right;
-            } else {
-                // Find inorder predecessor (rightmost in left subtree)
-                TreeNode* pred = current->left;
-                while (pred->right && pred->right != current)
-                    pred = pred->right;
-
-                if (!pred->right) {
-                    // First visit — create thread and go left
-                    pred->right = current;
-                    current = current->left;
-                } else {
-                    // Second visit — remove thread, process, go right
-                    pred->right = nullptr;
-                    result.push_back(current->val);
-                    current = current->right;
-                }
+// ============================================================
+// Solution 2: Morris Traversal — O(N) Time, O(1) Space!
+// ============================================================
+class Solution2 {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> res; TreeNode* cur = root;
+        while (cur) {
+            if (!cur->left) { res.push_back(cur->val); cur = cur->right; }
+            else {
+                TreeNode* pred = cur->left;
+                while (pred->right && pred->right != cur) pred = pred->right;
+                if (!pred->right) { pred->right = cur; cur = cur->left; } // Thread
+                else { pred->right = nullptr; res.push_back(cur->val); cur = cur->right; } // Unthread
             }
         }
-        return result;
+        return res;
     }
 };

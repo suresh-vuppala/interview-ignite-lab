@@ -11,7 +11,8 @@ Trie with countWordsEqualTo and countWordsStartingWith.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ word.length ≤ 2000
+- Lowercase English letters
 
 <br>
 

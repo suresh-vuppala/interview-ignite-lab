@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/detect-cycle/code/cpp/detect_cycle.cpp"
+          "codeFile": "courses/dsa/linked-lists/two-pointer-pattern/detect-cycle/code/cpp/DetectCycle.cpp"
         },
         {
           "language": "java",

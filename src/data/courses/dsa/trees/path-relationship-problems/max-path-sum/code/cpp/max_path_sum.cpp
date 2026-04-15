@@ -1,29 +1,32 @@
-// ============================================================
-// Binary Tree Maximum Path Sum
-// ============================================================
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
 #include <algorithm>
 #include <climits>
 using namespace std;
-struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
-
-class Solution {
-    int globalMax = INT_MIN;
+// ============================================================
+// Solution 1: Check all paths between all pairs — O(N²)
+// ============================================================
+class Solution1 {
+    int maxGain(TreeNode* n, int& maxSum) {
+        if(!n) return 0;
+        int l=max(0,maxGain(n->left,maxSum)), r=max(0,maxGain(n->right,maxSum));
+        maxSum=max(maxSum, n->val+l+r); // path through this node
+        return n->val+max(l,r);
+    }
 public:
-    int maxPathSum(TreeNode* root) {
-        globalMax = INT_MIN;
-        maxGain(root);
-        return globalMax;
+    int maxPathSum(TreeNode* root) { int res=INT_MIN; maxGain(root,res); return res; }
+};
+
+// ============================================================
+// Solution 2: Single DFS postorder — O(N) Time, O(H) Space
+// ============================================================
+class Solution2 {
+    int res = INT_MIN;
+    int dfs(TreeNode* n) {
+        if(!n) return 0;
+        int l = max(0, dfs(n->left)), r = max(0, dfs(n->right));
+        res = max(res, l + r + n->val); // Update global max
+        return n->val + max(l, r);       // Return max one-side path
     }
-    // Returns max gain from this node going DOWN (single side)
-    int maxGain(TreeNode* node) {
-        if (!node) return 0;
-        // Max gain from left/right (ignore negatives with max(0,...))
-        int leftGain = max(0, maxGain(node->left));
-        int rightGain = max(0, maxGain(node->right));
-        // Path THROUGH this node (uses both sides)
-        int pathThrough = node->val + leftGain + rightGain;
-        globalMax = max(globalMax, pathThrough);
-        // Return to parent: can only extend ONE side
-        return node->val + max(leftGain, rightGain);
-    }
+public:
+    int maxPathSum(TreeNode* root) { res=INT_MIN; dfs(root); return res; }
 };

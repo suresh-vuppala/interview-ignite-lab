@@ -11,16 +11,17 @@ Every element appears twice except one. Find the single one.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 3 × 10⁴
+- Every element appears twice except one
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Single element array**
+2. **Single number is 0**
+3. **Negative numbers**
 
 <br>
 

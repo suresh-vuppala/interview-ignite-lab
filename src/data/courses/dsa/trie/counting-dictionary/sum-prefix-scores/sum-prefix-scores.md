@@ -11,7 +11,8 @@ For each word, compute sum of scores where score of prefix = count of words havi
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 1000
+- 1 ≤ word.length ≤ 1000
 
 <br>
 

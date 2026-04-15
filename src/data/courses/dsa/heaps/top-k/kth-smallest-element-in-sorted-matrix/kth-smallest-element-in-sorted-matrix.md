@@ -11,16 +11,18 @@ Find the kth smallest element in an N×N matrix where each row and column is sor
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 300
+- -10⁹ ≤ matrix[i][j] ≤ 10⁹
+- 1 ≤ K ≤ N² apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **K = 1:** top-left corner
+2. **K = N²:** bottom-right corner
+3. **All elements equal**
 
 <br>
 

@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/fruits-into-baskets/code/cpp/fruits_into_baskets.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/fruits-into-baskets/code/cpp/FruitsIntoBaskets.cpp"
         },
         {
           "language": "java",

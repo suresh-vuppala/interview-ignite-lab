@@ -11,16 +11,18 @@ Check if subarray of length ≥ 2 exists with sum divisible by K.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
+- 0 ≤ nums[i] ≤ 10⁹
+- 1 ≤ K ≤ 2³¹ - 1
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **K = 1:** any subarray of length ≥ 2
+2. **Two consecutive zeros:** sum=0 divisible by any K
+3. **Length constraint ≥ 2**
 
 <br>
 

@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/singly-ll-core/find-middle-node/code/cpp/find_middle_node.cpp"
+          "codeFile": "courses/dsa/linked-lists/singly-ll-core/find-middle-node/code/cpp/FindMiddleNode.cpp"
         },
         {
           "language": "java",

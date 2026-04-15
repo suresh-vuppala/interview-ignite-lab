@@ -11,16 +11,16 @@ Reverse all 32 bits of an unsigned integer.
 ---
 
 ## Constraints
-- Typical problem constraints
+- N is 32-bit unsigned integer
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **N = 0:** result = 0
+2. **N = 2^31:** result has bit 0 set
+3. **Palindrome bits: same after reversal**
 
 <br>
 

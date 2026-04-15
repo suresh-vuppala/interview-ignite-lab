@@ -11,16 +11,18 @@ Rearrange string so no two adjacent characters are the same. Return empty if imp
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 500
+- Lowercase English letters apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Impossible:** max frequency > (N+1)/2
+2. **Single character:** always valid
+3. **Two characters alternating**
+4. **All same character (N>1):** impossible
 
 <br>
 

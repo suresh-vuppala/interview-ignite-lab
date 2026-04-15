@@ -11,7 +11,7 @@ Place minimum cameras on tree nodes to monitor all nodes. A camera monitors pare
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 1000
 
 <br>
 

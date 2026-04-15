@@ -11,7 +11,7 @@ Implement compressed (radix/Patricia) trie to reduce space.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Conceptual — reduces node count
 
 <br>
 

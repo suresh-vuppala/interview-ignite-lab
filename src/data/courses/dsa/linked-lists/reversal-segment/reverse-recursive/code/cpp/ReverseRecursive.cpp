@@ -1,56 +1,25 @@
-#include <iostream>
+struct ListNode { int val; ListNode* next; ListNode(int v):val(v),next(nullptr){} };
 using namespace std;
-
-struct Node {
-    int data;
-    Node* next;
-    Node(int val) : data(val), next(nullptr) {}
+// ============================================================
+// Solution 1: Iterative three-pointer — O(N) Time, O(1) Space
+// ============================================================
+class Solution1 {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode *prev=nullptr,*cur=head;
+        while(cur){auto nxt=cur->next;cur->next=prev;prev=cur;cur=nxt;}return prev;
+    }
 };
 
-class LinkedList {
-    Node* head;
-    
-    Node* reverseHelper(Node* node) {
-        if (!node || !node->next) return node;
-        Node* newHead = reverseHelper(node->next);
-        node->next->next = node;
-        node->next = nullptr;
+// ============================================================
+// Solution 2: Recursive — O(N) Time, O(N) Stack
+// ============================================================
+class Solution2 {
+public:
+    ListNode* reverseList(ListNode* head) {
+        if(!head||!head->next) return head;
+        ListNode* newHead = reverseList(head->next);
+        head->next->next = head; head->next = nullptr;
         return newHead;
     }
-    
-public:
-    LinkedList() : head(nullptr) {}
-    
-    void insert(int data) {
-        if (!head) head = new Node(data);
-        else {
-            Node* curr = head;
-            while (curr->next) curr = curr->next;
-            curr->next = new Node(data);
-        }
-    }
-    
-    void reverse() {
-        head = reverseHelper(head);
-    }
-    
-    void display() {
-        Node* curr = head;
-        while (curr) {
-            cout << curr->data << " -> ";
-            curr = curr->next;
-        }
-        cout << "null" << endl;
-    }
 };
-
-int main() {
-    LinkedList list;
-    for (int i = 1; i <= 5; i++) list.insert(i);
-    cout << "Original: ";
-    list.display();
-    list.reverse();
-    cout << "Reversed: ";
-    list.display();
-    return 0;
-}

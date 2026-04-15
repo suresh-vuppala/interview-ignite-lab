@@ -11,7 +11,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/trees/binary-tree-core-operations/count-leaf-internal-nodes/code/cpp/count_leaf_internal_nodes.cpp"
+          "codeFile": "courses/dsa/trees/binary-tree-core-operations/count-leaf-internal-nodes/code/cpp/CountLeafInternalNodes.cpp"
         },
         {
           "language": "java",

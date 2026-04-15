@@ -11,7 +11,9 @@ Find all unique combinations that sum to target. Each number can be used unlimit
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ candidates.length ≤ 30
+- 2 ≤ candidates[i] ≤ 40
+- 1 ≤ target ≤ 40
 
 <br>
 

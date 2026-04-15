@@ -11,16 +11,19 @@ Search for an element by scanning array left to right.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁶
+- Array can be unsorted
+- Elements can be negative
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Element not found:** return -1
+2. **First element matches:** best case O(1)
+3. **Empty array:** return -1
+4. **Duplicate elements:** return first occurrence
 
 <br>
 

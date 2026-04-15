@@ -11,16 +11,17 @@ Find minimum number of intervals to remove to make the rest non-overlapping.
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁵
+- -5 × 10⁴ ≤ start < end ≤ 5 × 10⁴ apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **No overlaps:** remove 0
+2. **All same interval:** remove N-1
+3. **Nested intervals**
 
 <br>
 

@@ -11,7 +11,8 @@ Find all nodes at distance K from a target node in a binary tree.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 500
+- 0 ≤ K ≤ 1000
 
 <br>
 

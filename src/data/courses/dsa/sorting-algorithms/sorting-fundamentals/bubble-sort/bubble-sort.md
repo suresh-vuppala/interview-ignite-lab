@@ -11,16 +11,18 @@ Sort by repeatedly swapping adjacent out-of-order elements.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁴
+- -10⁹ ≤ nums[i] ≤ 10⁹
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Already sorted:** O(N) with early termination
+2. **Reverse sorted:** worst case O(N²)
+3. **All equal elements**
+4. **Single element**
 
 <br>
 

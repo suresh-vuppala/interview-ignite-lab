@@ -11,16 +11,16 @@ Understand AND, OR, XOR, NOT, left/right shift operations and their properties.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ N ≤ 2³¹ - 1
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **N = 0:** all bits zero
+2. **N = -1 (signed):** all bits one
+3. **Overflow with left shift**
 
 <br>
 

@@ -11,16 +11,19 @@ Find the longest subarray with sum exactly K.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
+- -10⁵ ≤ nums[i] ≤ 10⁵
+- -10⁹ ≤ K ≤ 10⁹
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Entire array sums to K**
+2. **No subarray sums to K:** return 0
+3. **Negative values** (can't use sliding window)
+4. **Multiple subarrays with same sum**
 
 <br>
 

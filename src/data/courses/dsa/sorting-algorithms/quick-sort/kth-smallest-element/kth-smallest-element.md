@@ -11,16 +11,16 @@ Find kth smallest element using QuickSelect.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ K ≤ N ≤ 10⁵
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **K = 1:** minimum
+2. **K = N:** maximum
+3. **Duplicates around Kth**
 
 <br>
 

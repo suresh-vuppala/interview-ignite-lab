@@ -11,16 +11,17 @@ Select maximum number of non-overlapping activities given start and end times.
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁵
+- 0 ≤ start < end ≤ 10⁹ apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **All activities overlap:** select only 1
+2. **No overlaps:** select all
+3. **Activities with same end time**
 
 <br>
 

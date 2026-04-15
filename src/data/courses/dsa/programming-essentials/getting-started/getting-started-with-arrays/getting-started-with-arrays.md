@@ -11,7 +11,8 @@ Introduction to arrays: creation, access, insertion, deletion, traversal.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Fundamental array operations
+- 0-indexed in most languages
 
 <br>
 

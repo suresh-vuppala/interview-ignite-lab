@@ -11,7 +11,7 @@ Place N queens on N×N board so no two attack each other.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 9
 
 <br>
 

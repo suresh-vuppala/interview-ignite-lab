@@ -1,32 +1,36 @@
-// ============================================================
-// Maximum Width of Binary Tree
-// ============================================================
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
 #include <queue>
 #include <algorithm>
 using namespace std;
-struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
-
-class Solution {
+// ============================================================
+// Solution 1: BFS with position tracking — O(N)
+// ============================================================
+class Solution1 {
 public:
     int widthOfBinaryTree(TreeNode* root) {
-        if (!root) return 0;
-        int maxWidth = 0;
-        queue<pair<TreeNode*, unsigned long long>> q;
-        q.push({root, 0});
-        while (!q.empty()) {
-            int size = q.size();
-            unsigned long long minPos = q.front().second; // Normalize
-            unsigned long long first, last;
-            for (int i = 0; i < size; i++) {
-                auto [node, pos] = q.front(); q.pop();
-                pos -= minPos; // Prevent overflow
-                if (i == 0) first = pos;
-                if (i == size-1) last = pos;
-                if (node->left) q.push({node->left, 2*pos});
-                if (node->right) q.push({node->right, 2*pos+1});
-            }
-            maxWidth = max(maxWidth, (int)(last - first + 1));
+        if(!root) return 0;
+        int maxW=0; queue<pair<TreeNode*,long long>> q; q.push({root,0});
+        while(!q.empty()){
+            int sz=q.size(); long long left=q.front().second, right=left;
+            while(sz--){ auto[n,pos]=q.front();q.pop(); right=pos;
+                if(n->left)q.push({n->left,2*pos}); if(n->right)q.push({n->right,2*pos+1}); }
+            maxW=max(maxW,(int)(right-left+1));
         }
-        return maxWidth;
+        return maxW;
     }
+};
+
+// ============================================================
+// Solution 2: DFS with first position per level — O(N)
+// ============================================================
+class Solution2 {
+    int maxW=0; vector<long long> firstPos;
+    void dfs(TreeNode* n, int d, long long pos) {
+        if(!n) return;
+        if(d>=(int)firstPos.size()) firstPos.push_back(pos);
+        maxW=max(maxW,(int)(pos-firstPos[d]+1));
+        dfs(n->left,d+1,2*pos); dfs(n->right,d+1,2*pos+1);
+    }
+public:
+    int widthOfBinaryTree(TreeNode* root) { maxW=0; firstPos.clear(); dfs(root,0,0); return maxW; }
 };

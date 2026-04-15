@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-k-groups/code/cpp/reverse_k_groups.cpp"
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-k-groups/code/cpp/ReverseKGroups.cpp"
         },
         {
           "language": "java",

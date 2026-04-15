@@ -11,16 +11,17 @@ Find the peak element in a mountain (bitonic) array.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 3 ≤ N ≤ 10⁵
+- Strictly increasing then strictly decreasing
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Peak at second element:** very short ascending
+2. **Peak at second-to-last:** very short descending
+3. **Large array**
 
 <br>
 

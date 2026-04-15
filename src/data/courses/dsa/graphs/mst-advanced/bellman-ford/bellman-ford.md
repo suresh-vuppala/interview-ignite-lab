@@ -17,6 +17,17 @@ Find shortest paths from a source vertex, handling negative edge weights. Detect
 
 ---
 
+## All Possible Edge Cases
+1. **Negative weight cycle:** no shortest path exists → detect and report
+2. **No path to target:** distance = ∞
+3. **All positive weights:** Dijkstra would be faster
+4. **Single node**
+5. **Parallel edges with different weights**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

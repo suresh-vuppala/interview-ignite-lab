@@ -11,7 +11,8 @@ Precompute 2^k-th ancestors for O(log N) ancestor/LCA queries.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
+- Up to 10⁵ queries
 
 <br>
 

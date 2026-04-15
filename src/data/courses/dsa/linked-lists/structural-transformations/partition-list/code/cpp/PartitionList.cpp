@@ -1,6 +1,28 @@
-#include <iostream>
+struct ListNode { int val; ListNode* next; ListNode(int v):val(v),next(nullptr){} };
 using namespace std;
-struct Node { int data; Node* next; Node(int v):data(v),next(nullptr){} };
-class LL { public: Node* partition(Node* h, int x) { Node *d1=new Node(0),*d2=new Node(0),*p1=d1,*p2=d2; while(h) { if(h->data<x) { p1->next=h; p1=p1->next; } else { p2->next=h; p2=p2->next; } h=h->next; } p2->next=nullptr; p1->next=d2->next; return d1->next; }
-void display(Node* h) { while(h) { cout<<h->data<<" "; h=h->next; } cout<<endl; }};
-int main() { LL p; Node* h=new Node(1); h->next=new Node(4); h->next->next=new Node(3); h->next->next->next=new Node(2); p.display(p.partition(h,3)); return 0; }
+// ============================================================
+// Solution 1: Two new lists, concatenate — O(N)
+// ============================================================
+class Solution1 {
+public:
+    ListNode* partition(ListNode* head, int x) {
+        ListNode lessD(0),geqD(0);ListNode*lt=&lessD,*gt=&geqD;
+        while(head){if(head->val<x){lt->next=head;lt=lt->next;}else{gt->next=head;gt=gt->next;}head=head->next;}
+        gt->next=nullptr;lt->next=geqD.next;
+        return lessD.next;
+    }
+};
+
+// ============================================================
+// Solution 2: Same approach — two dummy heads is already optimal O(N)
+// ============================================================
+class Solution2 {
+public:
+    ListNode* partition(ListNode* head, int x) {
+        ListNode before(0),after(0);ListNode*b=&before,*a=&after;
+        for(auto cur=head;cur;cur=cur->next){
+            if(cur->val<x){b->next=cur;b=b->next;}else{a->next=cur;a=a->next;}
+        }
+        a->next=nullptr;b->next=after.next;return before.next;
+    }
+};

@@ -1,22 +1,30 @@
-// ============================================================
-// All Root-to-Leaf Paths
-// ============================================================
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
 #include <vector>
 #include <string>
 using namespace std;
-struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
-
-class Solution {
+// ============================================================
+// Solution 1: DFS with string building — O(N*H)
+// ============================================================
+class Solution1 {
+    void dfs(TreeNode* n, string path, vector<string>& res) {
+        if(!n) return;
+        path += to_string(n->val);
+        if(!n->left&&!n->right) { res.push_back(path); return; }
+        path += "->"; dfs(n->left,path,res); dfs(n->right,path,res);
+    }
 public:
-    vector<string> binaryTreePaths(TreeNode* root) {
-        vector<string> result;
-        if (root) dfs(root, "", result);
-        return result;
+    vector<string> binaryTreePaths(TreeNode* root) { vector<string> res; dfs(root,"",res); return res; }
+};
+
+// ============================================================
+// Solution 2: DFS with vector path — O(N*H)
+// ============================================================
+class Solution2 {
+    void dfs(TreeNode* n, vector<int>& path, vector<string>& res) {
+        if(!n) return; path.push_back(n->val);
+        if(!n->left&&!n->right) { string s; for(int i=0;i<(int)path.size();i++){if(i)s+="->";s+=to_string(path[i]);}res.push_back(s); }
+        dfs(n->left,path,res); dfs(n->right,path,res); path.pop_back();
     }
-    void dfs(TreeNode* node, string path, vector<string>& result) {
-        path += to_string(node->val);
-        if (!node->left && !node->right) { result.push_back(path); return; }
-        if (node->left) dfs(node->left, path + "->", result);
-        if (node->right) dfs(node->right, path + "->", result);
-    }
+public:
+    vector<string> binaryTreePaths(TreeNode* root) { vector<string> res;vector<int>p; dfs(root,p,res); return res; }
 };

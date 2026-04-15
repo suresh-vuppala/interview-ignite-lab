@@ -17,6 +17,17 @@ Capture all 'O' regions surrounded by 'X'. Don't capture 'O's connected to the b
 
 ---
 
+## All Possible Edge Cases
+1. **No 'O' on border:** all 'O's get captured
+2. **All 'O' on border:** nothing gets captured
+3. **Single row/column:** all cells are border cells
+4. **1×1 board:** never captured (border cell)
+5. **Large connected 'O' region touching border**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

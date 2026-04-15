@@ -11,16 +11,18 @@ Implement min-heap and max-heap with insert, extract-min/max, and peek operation
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁵ operations
+- -10⁹ ≤ values ≤ 10⁹ apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Extract from empty heap:** handle error
+2. **Single element**
+3. **All same values**
+4. **Insert in sorted/reverse order**
 
 <br>
 

@@ -11,16 +11,18 @@ Minimum eating speed K to finish all banana piles in H hours.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ piles.length ≤ 10⁴
+- 1 ≤ piles[i] ≤ 10⁹
+- 1 ≤ H ≤ 10⁹
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **H = N:** speed = max pile
+2. **H very large:** speed = 1
+3. **Single pile**
 
 <br>
 

@@ -17,6 +17,17 @@ Find shortest paths between ALL pairs of vertices. Handles negative weights (no 
 
 ---
 
+## All Possible Edge Cases
+1. **Negative weight cycle:** distances become -∞
+2. **Disconnected pairs:** distance = ∞
+3. **Self-loops:** dist[i][i] = 0
+4. **Dense vs sparse graph:** always O(V³) regardless
+5. **V > 400:** too slow, use repeated Dijkstra
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

@@ -11,16 +11,18 @@ Place C cows in N stalls maximizing the minimum distance between any two cows.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 2 ≤ N ≤ 10⁵
+- 2 ≤ C ≤ N
+- 0 ≤ stalls[i] ≤ 10⁹
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **C = 2:** max distance = last - first stall
+2. **C = N:** place in every stall
+3. **All stalls equidistant**
 
 <br>
 

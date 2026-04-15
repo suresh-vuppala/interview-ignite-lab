@@ -11,7 +11,8 @@ Generate all N! permutations of an array.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 8
+- All elements distinct
 
 <br>
 

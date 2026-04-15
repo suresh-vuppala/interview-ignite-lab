@@ -11,7 +11,7 @@ C++ unordered_map/unordered_set internals: hash function, buckets, load factor.
 ---
 
 ## Constraints
-- Typical problem constraints
+- std::unordered_map / unordered_set internals
 
 <br>
 

@@ -11,16 +11,16 @@ Partition around pivot, recursively sort partitions.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Already sorted + first pivot:** O(N²) worst case
+2. **All equal:** O(N²) with Lomuto partition
+3. **Random pivot avoids worst case**
 
 <br>
 

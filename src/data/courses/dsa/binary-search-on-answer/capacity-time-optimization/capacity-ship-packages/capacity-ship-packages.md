@@ -11,16 +11,18 @@ Find minimum ship capacity to ship all packages within D days.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 5 × 10⁴
+- 1 ≤ weights[i] ≤ 500
+- 1 ≤ D ≤ N
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **D = 1:** must carry all in one day
+2. **D = N:** min capacity = max weight
+3. **All weights equal**
 
 <br>
 

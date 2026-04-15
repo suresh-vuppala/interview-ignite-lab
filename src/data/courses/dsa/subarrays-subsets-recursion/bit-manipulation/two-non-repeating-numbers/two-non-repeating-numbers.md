@@ -11,16 +11,17 @@ Every element appears twice except two. Find both unique numbers.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 2 ≤ N ≤ 3 × 10⁴
+- Exactly two unique elements
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Array of size 2:** both are the answer
+2. **Unique numbers adjacent**
+3. **One unique is 0**
 
 <br>
 

@@ -1,63 +1,25 @@
-#include <iostream>
+struct ListNode { int val; ListNode* next; ListNode(int v):val(v),next(nullptr){} };
 using namespace std;
-
-struct Node {
-    int data;
-    Node* next;
-    Node(int val) : data(val), next(nullptr) {}
-};
-
-class LinkedList {
-    Node* head;
+// ============================================================
+// Solution 1: Count then traverse — O(N) two-pass
+// ============================================================
+class Solution1 {
 public:
-    LinkedList() : head(nullptr) {}
-    
-    void insert(int data) {
-        if (!head) head = new Node(data);
-        else {
-            Node* curr = head;
-            while (curr->next) curr = curr->next;
-            curr->next = new Node(data);
-        }
-    }
-    
-    int findMiddleTwoPass() {
-        int count = 0;
-        Node* curr = head;
-        while (curr) {
-            count++;
-            curr = curr->next;
-        }
-        curr = head;
-        for (int i = 0; i < count / 2; i++) curr = curr->next;
-        return curr->data;
-    }
-    
-    int findMiddleSlowFast() {
-        Node* slow = head;
-        Node* fast = head;
-        while (fast && fast->next) {
-            slow = slow->next;
-            fast = fast->next->next;
-        }
-        return slow->data;
-    }
-    
-    void display() {
-        Node* curr = head;
-        while (curr) {
-            cout << curr->data << " -> ";
-            curr = curr->next;
-        }
-        cout << "null" << endl;
+    ListNode* findMiddle(ListNode* head) {
+        int len=0; ListNode*cur=head; while(cur){len++;cur=cur->next;}
+        cur=head; for(int i=0;i<len/2;i++)cur=cur->next;
+        return cur;
     }
 };
 
-int main() {
-    LinkedList list;
-    for (int i = 1; i <= 5; i++) list.insert(i);
-    list.display();
-    cout << "Middle (Two-Pass): " << list.findMiddleTwoPass() << endl;
-    cout << "Middle (Slow-Fast): " << list.findMiddleSlowFast() << endl;
-    return 0;
-}
+// ============================================================
+// Solution 2: Slow/Fast pointers — O(N) single pass
+// ============================================================
+class Solution2 {
+public:
+    ListNode* findMiddle(ListNode* head) {
+        ListNode *slow=head, *fast=head;
+        while(fast&&fast->next){slow=slow->next;fast=fast->next->next;}
+        return slow;  // One pass, O(1) space!
+    }
+};

@@ -11,7 +11,7 @@ Visualize recursion as a tree to analyze time complexity.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Conceptual — analysis technique
 
 <br>
 

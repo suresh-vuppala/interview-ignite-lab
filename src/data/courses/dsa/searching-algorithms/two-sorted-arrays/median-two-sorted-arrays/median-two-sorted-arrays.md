@@ -11,16 +11,19 @@ Find the median of two sorted arrays in O(log(min(m,n))).
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ M, N ≤ 1000
+- 1 ≤ M + N ≤ 2000
+- -10⁶ ≤ values ≤ 10⁶
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **One array empty:** median of the other
+2. **Arrays of different lengths**
+3. **All elements in one < all in other**
+4. **Even vs odd total length**
 
 <br>
 

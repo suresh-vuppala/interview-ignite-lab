@@ -11,7 +11,7 @@ Find all prime factors of N with their multiplicities.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 2 ≤ N ≤ 10⁹
 
 <br>
 

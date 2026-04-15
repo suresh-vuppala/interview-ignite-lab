@@ -11,7 +11,7 @@ Answer maximum XOR queries offline by sorting and processing incrementally.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N, Q ≤ 10⁵
 
 <br>
 

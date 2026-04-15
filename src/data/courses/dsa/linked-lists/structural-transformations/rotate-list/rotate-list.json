@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/structural-transformations/rotate-list/code/cpp/rotate_list.cpp"
+          "codeFile": "courses/dsa/linked-lists/structural-transformations/rotate-list/code/cpp/RotateList.cpp"
         },
         {
           "language": "java",

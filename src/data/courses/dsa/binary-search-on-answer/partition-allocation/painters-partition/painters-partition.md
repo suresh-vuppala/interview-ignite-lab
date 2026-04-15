@@ -11,16 +11,18 @@ Minimize the maximum time for painters to paint boards. Same as allocate-minimum
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
+- 1 ≤ boards[i] ≤ 10⁹
+- 1 ≤ painters ≤ N
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Same as allocate-minimum-pages**
+2. **One painter:** sum of all boards
+3. **N painters:** max single board
 
 <br>
 

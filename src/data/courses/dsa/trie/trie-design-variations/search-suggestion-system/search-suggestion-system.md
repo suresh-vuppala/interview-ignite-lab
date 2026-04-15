@@ -11,7 +11,8 @@ As user types each character, suggest top-3 lexicographically matching products.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ products.length ≤ 1000
+- 1 ≤ searchWord.length ≤ 1000
 
 <br>
 

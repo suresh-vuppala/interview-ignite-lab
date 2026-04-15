@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-first-k/code/cpp/reverse_first_k.cpp"
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-first-k/code/cpp/ReverseFirstK.cpp"
         },
         {
           "language": "java",

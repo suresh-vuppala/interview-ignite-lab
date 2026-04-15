@@ -1,75 +1,28 @@
-#include <iostream>
+struct ListNode { int val; ListNode* next; ListNode(int v):val(v),next(nullptr){} };
 using namespace std;
-
-struct Node {
-    int data;
-    Node* next;
-    Node(int val) : data(val), next(nullptr) {}
-};
-
-class LinkedList {
-    Node* head;
+// ============================================================
+// Solution 1: Linear search — O(N) Time, O(1) Space
+// ============================================================
+class Solution1 {
 public:
-    LinkedList() : head(nullptr) {}
-    
-    void insert(int data) {
-        if (!head) head = new Node(data);
-        else {
-            Node* curr = head;
-            while (curr->next) curr = curr->next;
-            curr->next = new Node(data);
-        }
+    bool search(ListNode* head, int target) {
+        while(head){if(head->val==target)return true;head=head->next;}return false;
     }
-    
-    bool searchByValue(int val) {
-        Node* curr = head;
-        while (curr) {
-            if (curr->data == val) return true;
-            curr = curr->next;
-        }
-        return false;
-    }
-    
-    int searchByPosition(int pos) {
-        Node* curr = head;
-        for (int i = 0; i < pos && curr; i++) curr = curr->next;
-        return curr ? curr->data : -1;
-    }
-    
-    void updateByPosition(int pos, int newVal) {
-        Node* curr = head;
-        for (int i = 0; i < pos && curr; i++) curr = curr->next;
-        if (curr) curr->data = newVal;
-    }
-    
-    void updateByValue(int oldVal, int newVal) {
-        Node* curr = head;
-        while (curr) {
-            if (curr->data == oldVal) {
-                curr->data = newVal;
-                return;
-            }
-            curr = curr->next;
-        }
-    }
-    
-    void display() {
-        Node* curr = head;
-        while (curr) {
-            cout << curr->data << " -> ";
-            curr = curr->next;
-        }
-        cout << "null" << endl;
+    void update(ListNode* head, int oldVal, int newVal) {
+        while(head){if(head->val==oldVal){head->val=newVal;return;}head=head->next;}
     }
 };
 
-int main() {
-    LinkedList list;
-    for (int i = 1; i <= 5; i++) list.insert(i);
-    cout << "Search 3: " << list.searchByValue(3) << endl;
-    cout << "Value at pos 2: " << list.searchByPosition(2) << endl;
-    list.updateByPosition(1, 10);
-    list.updateByValue(5, 50);
-    list.display();
-    return 0;
-}
+// ============================================================
+// Solution 2: Search with index tracking — O(N)
+// ============================================================
+class Solution2 {
+public:
+    int searchIndex(ListNode* head, int target) {
+        int idx=0;while(head){if(head->val==target)return idx;head=head->next;idx++;}return -1;
+    }
+    bool updateAtIndex(ListNode* head, int idx, int newVal) {
+        for(int i=0;i<idx&&head;i++)head=head->next;
+        if(!head)return false;head->val=newVal;return true;
+    }
+};

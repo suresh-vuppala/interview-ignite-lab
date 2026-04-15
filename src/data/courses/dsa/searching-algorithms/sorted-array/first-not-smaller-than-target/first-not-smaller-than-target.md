@@ -11,16 +11,17 @@ Find first element ≥ target in sorted array (lower_bound).
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
+- Array sorted ascending
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **All elements smaller:** return N (not found)
+2. **Target smaller than first element:** return 0
+3. **Exact match exists**
 
 <br>
 

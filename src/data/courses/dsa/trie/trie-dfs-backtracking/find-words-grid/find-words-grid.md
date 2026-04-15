@@ -11,7 +11,7 @@ Find all dictionary words present in grid.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Same as word-search-ii
 
 <br>
 

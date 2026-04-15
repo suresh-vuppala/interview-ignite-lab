@@ -1,28 +1,26 @@
-// ============================================================
-// Minimum Add to Make Parentheses Valid
-// ============================================================
-
 #include <string>
+#include <stack>
 using namespace std;
-
 // ============================================================
-// Solution: Counter (Optimal)
-// Time: O(N) | Space: O(1)
+// Solution 1: Stack — track unmatched indices — O(N) Time+Space
 // ============================================================
-class Solution {
+class Solution1 {
 public:
     int minAddToMakeValid(string s) {
-        int open = 0, close = 0;
+        stack<char> st;
+        for(char c:s){if(c=='('||c=='{')st.push(c);else if(!st.empty()&&((c==')'&&st.top()=='(')||(c=='}'&&st.top()=='{')))st.pop();else st.push(c);}
+        return st.size(); // Unmatched count = additions needed
+    }
+};
 
-        for (char c : s) {
-            if (c == '(') {
-                open++; // Pending open
-            } else {
-                if (open > 0) open--; // Matched
-                else close++;          // Unmatched close
-            }
-        }
-
-        return open + close; // Need this many additions
+// ============================================================
+// Solution 2: Two counters — O(N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    int minAddToMakeValid(string s) {
+        int open=0, close=0;
+        for(char c:s){if(c=='(')open++;else{if(open>0)open--;else close++;}}
+        return open+close; // open unmatched '(' + close unmatched ')'
     }
 };

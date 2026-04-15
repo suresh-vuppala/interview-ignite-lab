@@ -11,7 +11,7 @@ Check if a number N is prime.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁹
 
 <br>
 

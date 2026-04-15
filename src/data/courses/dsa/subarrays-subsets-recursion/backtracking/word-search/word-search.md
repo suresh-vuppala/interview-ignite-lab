@@ -11,7 +11,9 @@ Check if a word exists in grid by following adjacent cells (each cell used once)
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ M, N ≤ 6
+- 1 ≤ word.length ≤ 15
+- Lowercase/uppercase letters
 
 <br>
 

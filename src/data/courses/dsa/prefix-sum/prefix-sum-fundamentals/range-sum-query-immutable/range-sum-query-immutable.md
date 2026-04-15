@@ -11,16 +11,18 @@ Answer range sum queries [l,r] in O(1) after O(N) preprocessing.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁴
+- -10⁵ ≤ nums[i] ≤ 10⁵
+- 0 ≤ left ≤ right < N
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Single element query:** left == right
+2. **Full range query:** left=0, right=N-1
+3. **All negative values**
 
 <br>
 

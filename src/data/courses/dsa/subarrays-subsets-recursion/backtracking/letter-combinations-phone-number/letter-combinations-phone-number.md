@@ -11,7 +11,8 @@ Generate all letter combinations from phone number digit mapping.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 0 ≤ digits.length ≤ 4
+- digits[i] ∈ {'2'-'9'}
 
 <br>
 

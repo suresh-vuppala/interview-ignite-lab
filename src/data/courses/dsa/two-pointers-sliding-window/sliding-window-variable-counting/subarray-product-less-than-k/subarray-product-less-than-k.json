@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-counting/subarray-product-less-than-k/code/cpp/subarray_product_less_than_k.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-counting/subarray-product-less-than-k/code/cpp/SubarrayProductLessThanK.cpp"
         },
         {
           "language": "java",

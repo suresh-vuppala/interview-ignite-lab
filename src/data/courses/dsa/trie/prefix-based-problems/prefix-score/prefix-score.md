@@ -11,7 +11,8 @@ Sum of counts of prefixes of each word across all words.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 1000
+- 1 ≤ word.length ≤ 1000
 
 <br>
 

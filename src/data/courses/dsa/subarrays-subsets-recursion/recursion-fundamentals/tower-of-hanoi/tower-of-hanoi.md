@@ -11,7 +11,7 @@ Move N disks from source to destination using auxiliary peg. Only smaller disk c
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 20
 
 <br>
 

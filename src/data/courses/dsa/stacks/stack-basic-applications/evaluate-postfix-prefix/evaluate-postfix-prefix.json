@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code/cpp/evaluate_postfix_prefix.cpp"
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/evaluate-postfix-prefix/code/cpp/EvaluatePostfixPrefix.cpp"
         },
         {
           "language": "java",

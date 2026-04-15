@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-insert/code/cpp/doubly_insert.cpp"
+          "codeFile": "courses/dsa/linked-lists/doubly-circular/doubly-insert/code/cpp/DoublyInsert.cpp"
         },
         {
           "language": "java",

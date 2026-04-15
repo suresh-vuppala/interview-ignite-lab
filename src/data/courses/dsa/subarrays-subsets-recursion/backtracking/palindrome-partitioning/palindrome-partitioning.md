@@ -11,7 +11,8 @@ Partition string into all possible sets of palindromic substrings.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 16
+- Lowercase English letters
 
 <br>
 

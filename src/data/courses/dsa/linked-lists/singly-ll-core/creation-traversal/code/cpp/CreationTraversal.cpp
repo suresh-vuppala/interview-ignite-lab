@@ -1,67 +1,33 @@
-#include <iostream>
+struct ListNode { int val; ListNode* next; ListNode(int v):val(v),next(nullptr){} };
+#include <vector>
 using namespace std;
-
-struct Node {
-    int data;
-    Node* next;
-    Node(int val) : data(val), next(nullptr) {}
-};
-
-class LinkedList {
-private:
-    Node* head;
-    
+// ============================================================
+// Solution 1: Array-based — store values, simulate list — O(N) Time+Space
+// ============================================================
+class Solution1 {
 public:
-    LinkedList() : head(nullptr) {}
-    
-    // 1. Create linked list from array
-    void create(int arr[], int n) {
-        if (n == 0) return;
-        
-        head = new Node(arr[0]);
-        Node* current = head;
-        
-        for (int i = 1; i < n; i++) {
-            current->next = new Node(arr[i]);
-            current = current->next;
-        }
+    vector<int> traverse(ListNode* head) {
+        vector<int> result;
+        while (head) { result.push_back(head->val); head = head->next; }
+        return result;  // Can also build list from array
     }
-    
-    // 2. Traverse and print
-    void traverse() {
-        Node* current = head;
-        while (current != nullptr) {
-            cout << current->data << " -> ";
-            current = current->next;
-        }
-        cout << "null" << endl;
-    }
-    
-    // 3. Count nodes
-    int countNodes() {
-        int count = 0;
-        Node* current = head;
-        while (current != nullptr) {
-            count++;
-            current = current->next;
-        }
-        return count;
+    ListNode* createFromArray(vector<int>& arr) {
+        ListNode dummy(0); ListNode* tail = &dummy;
+        for (int v : arr) { tail->next = new ListNode(v); tail = tail->next; }
+        return dummy.next;
     }
 };
 
-int main() {
-    LinkedList list;
-    int arr[] = {1, 2, 3, 4, 5};
-    
-    // Create linked list
-    list.create(arr, 5);
-    
-    // Traverse and print
-    cout << "List: ";
-    list.traverse();
-    
-    // Count nodes
-    cout << "Total nodes: " << list.countNodes() << endl;
-    
-    return 0;
-}
+// ============================================================
+// Solution 2: Direct pointer manipulation — O(N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    void traverse(ListNode* head) { for (ListNode* cur=head; cur; cur=cur->next) /* process cur->val */; }
+    ListNode* append(ListNode* head, int val) {
+        ListNode* node = new ListNode(val);
+        if (!head) return node;
+        ListNode* cur = head; while (cur->next) cur = cur->next;
+        cur->next = node; return head;
+    }
+};

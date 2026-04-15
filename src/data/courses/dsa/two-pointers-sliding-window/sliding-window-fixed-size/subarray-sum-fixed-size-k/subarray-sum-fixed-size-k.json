@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/cpp/subarray_sum_fixed_size_k.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/subarray-sum-fixed-size-k/code/cpp/SubarraySumFixedSizeK.cpp"
         },
         {
           "language": "java",

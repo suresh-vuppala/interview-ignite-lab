@@ -11,16 +11,19 @@ Find the minimum value in each sliding window of size k as it moves across the a
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁵
+- 1 ≤ K ≤ N
+- -10⁴ ≤ nums[i] ≤ 10⁴ apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **K = 1:** output = input array
+2. **K = N:** single element = global min
+3. **Sorted ascending:** min always at window start
+4. **Sorted descending:** min always at window end
 
 <br>
 

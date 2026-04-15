@@ -17,6 +17,16 @@ Perform a flood fill on an image. Starting from pixel (sr, sc), change all conne
 
 ---
 
+## All Possible Edge Cases
+1. **New color same as original:** no change needed (avoid infinite loop!)
+2. **Single pixel image**
+3. **Entire image same color:** fill everything
+4. **Isolated pixel:** no neighbors match
+
+<br>
+
+---
+
 ## Solution 1: BFS with queue
 
 **Intuition:**

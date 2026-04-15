@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/cpp/distinct_elements_window.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/distinct-elements-window/code/cpp/DistinctElementsWindow.cpp"
         },
         {
           "language": "java",

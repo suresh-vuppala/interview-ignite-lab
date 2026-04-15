@@ -11,16 +11,17 @@ Find the kth element across two sorted arrays.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ M, N ≤ 10⁵
+- 1 ≤ K ≤ M + N
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **K = 1:** minimum of both first elements
+2. **K = M + N:** maximum of both last elements
+3. **One array exhausted before K**
 
 <br>
 

@@ -11,7 +11,7 @@ Dictionary supporting wildcard '.' search.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Same as search-wildcard
 
 <br>
 

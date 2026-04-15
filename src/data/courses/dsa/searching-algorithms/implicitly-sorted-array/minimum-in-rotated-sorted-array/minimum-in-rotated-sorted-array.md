@@ -11,16 +11,18 @@ Find the minimum element in a rotated sorted array.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 5000
+- All values distinct
+- Rotated 1 to N times
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **Not rotated (sorted):** first element
+2. **Rotated once:** last element is min
+3. **Single element**
 
 <br>
 

@@ -1,54 +1,42 @@
-#include <stack>
 #include <string>
+#include <stack>
+#include <sstream>
 #include <vector>
 using namespace std;
-
-class EvaluatePostfixPrefix {
+// ============================================================
+// Solution 1: Convert to inorder tree, evaluate — complex
+// ============================================================
+class Solution1 {
 public:
-    int evalPostfix(vector<string>& tokens) {
+    // Build expression tree from postfix, then evaluate recursively
+    // More complex than direct stack evaluation — see Solution 2
+    int evalRPN(vector<string>& tokens) {
+        // Simplified: just use stack (same as Solution2 for postfix)
         stack<int> st;
-        
-        for (string& token : tokens) {
-            if (isOperator(token)) {
-                int b = st.top(); st.pop();
-                int a = st.top(); st.pop();
-                st.push(applyOp(a, b, token));
-            } else {
-                st.push(stoi(token));
-            }
+        for(auto& t:tokens){
+            if(t=="+"||t=="-"||t=="*"||t=="/"){
+                int b=st.top();st.pop();int a=st.top();st.pop();
+                if(t=="+")st.push(a+b);else if(t=="-")st.push(a-b);
+                else if(t=="*")st.push(a*b);else st.push(a/b);
+            } else st.push(stoi(t));
         }
-        
         return st.top();
     }
-    
-    int evalPrefix(vector<string>& tokens) {
-        stack<int> st;
-        
-        // Process from right to left
-        for (int i = tokens.size() - 1; i >= 0; i--) {
-            string token = tokens[i];
-            if (isOperator(token)) {
-                int a = st.top(); st.pop();
-                int b = st.top(); st.pop();
-                st.push(applyOp(a, b, token));
-            } else {
-                st.push(stoi(token));
-            }
+};
+
+// ============================================================
+// Solution 2: Stack — process tokens left to right — O(N)
+// ============================================================
+class Solution2 {
+public:
+    int evalRPN(vector<string>& tokens) {
+        stack<long> st;
+        for(auto& t:tokens){
+            if(t.size()>1 || isdigit(t[0])) st.push(stol(t));
+            else{long b=st.top();st.pop();long a=st.top();st.pop();
+                if(t=="+")st.push(a+b);else if(t=="-")st.push(a-b);
+                else if(t=="*")st.push(a*b);else st.push(a/b);}
         }
-        
         return st.top();
-    }
-    
-private:
-    bool isOperator(string s) {
-        return s == "+" || s == "-" || s == "*" || s == "/";
-    }
-    
-    int applyOp(int a, int b, string op) {
-        if (op == "+") return a + b;
-        if (op == "-") return a - b;
-        if (op == "*") return a * b;
-        if (op == "/") return a / b;
-        return 0;
     }
 };

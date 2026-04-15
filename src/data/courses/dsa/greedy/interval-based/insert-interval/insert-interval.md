@@ -11,16 +11,17 @@ Insert a new interval into a sorted list of non-overlapping intervals, merging i
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 0 ≤ N ≤ 10⁴
+- Intervals sorted and non-overlapping apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Empty list:** just add new interval
+2. **No overlap:** insert at correct position
+3. **New interval covers all existing**
 
 <br>
 

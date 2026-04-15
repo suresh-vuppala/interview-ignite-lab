@@ -11,16 +11,17 @@ Classic heap problems: find kth largest in stream, sort a nearly-sorted array, m
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁵
+- 1 ≤ K ≤ N apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **K = 1:** minimum/maximum element
+2. **K = N:** full sort
+3. **K > N:** invalid
 
 <br>
 

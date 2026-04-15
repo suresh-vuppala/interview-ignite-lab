@@ -11,16 +11,17 @@ Find the first element satisfying a boolean condition in a sorted/monotonic arra
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 10⁵
+- Monotonic boolean condition
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **All false:** no true exists → return -1
+2. **All true:** first element is answer
+3. **Boundary at last element**
 
 <br>
 

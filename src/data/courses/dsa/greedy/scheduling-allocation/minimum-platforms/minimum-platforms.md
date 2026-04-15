@@ -11,16 +11,17 @@ Find minimum platforms needed at a train station given arrival and departure tim
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁵
+- 0 ≤ arrival < departure ≤ 2359 apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **No overlapping trains:** 1 platform
+2. **All trains at same time:** N platforms
+3. **Trains arriving as others depart**
 
 <br>
 

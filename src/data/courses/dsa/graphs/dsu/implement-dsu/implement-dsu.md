@@ -16,6 +16,16 @@ Implement Disjoint Set Union (Union-Find) with path compression and union by ran
 
 ---
 
+## All Possible Edge Cases
+1. **Union of same set:** no effect
+2. **Find on non-existent element**
+3. **Long chain without compression:** O(N) find
+4. **Single element sets**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

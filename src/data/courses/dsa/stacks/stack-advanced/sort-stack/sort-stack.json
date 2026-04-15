@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-advanced/sort-stack/code/cpp/sort_stack.cpp"
+          "codeFile": "courses/dsa/stacks/stack-advanced/sort-stack/code/cpp/SortStack.cpp"
         },
         {
           "language": "java",

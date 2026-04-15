@@ -11,7 +11,8 @@ Replace words in sentence with their shortest root from a dictionary.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ dict.length ≤ 1000
+- 1 ≤ sentence words ≤ 1000
 
 <br>
 

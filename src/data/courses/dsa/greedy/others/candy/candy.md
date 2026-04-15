@@ -11,16 +11,18 @@ Distribute minimum candies: each child gets ≥1, higher-rated child gets more t
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 2 × 10⁴
+- 0 ≤ ratings[i] ≤ 2 × 10⁴ apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **All same rating:** everyone gets 1
+2. **Strictly increasing:** [1,2,3,...,N]
+3. **Strictly decreasing:** [N,...,2,1]
+4. **Valley shape (down then up)**
 
 <br>
 

@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/least-consecutive-cards-match/code/cpp/least_consecutive_cards_match.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/least-consecutive-cards-match/code/cpp/LeastConsecutiveCardsMatch.cpp"
         },
         {
           "language": "java",

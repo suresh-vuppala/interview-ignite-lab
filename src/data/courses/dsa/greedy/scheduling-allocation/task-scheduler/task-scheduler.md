@@ -11,16 +11,18 @@ Schedule tasks with cooldown period n. Find minimum intervals to complete all ta
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ N ≤ 10⁴
+- 0 ≤ cooldown ≤ 100
+- Uppercase letters apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **Cooldown = 0:** just N tasks, no idle
+2. **One task type:** (freq-1)×(n+1)+1 intervals
+3. **Many task types fill all idle slots**
 
 <br>
 

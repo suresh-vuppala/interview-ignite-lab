@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-consecutive-ones-iii/code/cpp/max_consecutive_ones_iii.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-longest/max-consecutive-ones-iii/code/cpp/MaxConsecutiveOnesIii.cpp"
         },
         {
           "language": "java",

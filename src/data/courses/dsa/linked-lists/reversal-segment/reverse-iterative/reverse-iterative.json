@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-iterative/code/cpp/reverse_iterative.cpp"
+          "codeFile": "courses/dsa/linked-lists/reversal-segment/reverse-iterative/code/cpp/ReverseIterative.cpp"
         },
         {
           "language": "java",

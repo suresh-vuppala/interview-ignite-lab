@@ -11,7 +11,8 @@ Generate unique permutations when array has duplicate elements.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 8
+- Elements may repeat
 
 <br>
 

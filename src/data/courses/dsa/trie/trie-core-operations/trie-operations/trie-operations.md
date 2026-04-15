@@ -11,7 +11,9 @@ Implement Trie with insert, search, and startsWith operations.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ word.length ≤ 2000
+- 1 ≤ total operations ≤ 3 × 10⁴
+- Lowercase English letters
 
 <br>
 

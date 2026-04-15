@@ -1,43 +1,27 @@
-// ============================================================
-// Max and Min Value in Binary Tree
-// ============================================================
-
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
 #include <algorithm>
 #include <climits>
+#include <queue>
 using namespace std;
-
-struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
-
 // ============================================================
-// Solution 1: DFS — General Binary Tree
-// Time: O(N) | Space: O(H)
+// Solution 1: Recursive — O(N) Time, O(H) Space
 // ============================================================
 class Solution1 {
 public:
-    int findMax(TreeNode* root) {
-        if (!root) return INT_MIN;
-        return max({root->val, findMax(root->left), findMax(root->right)});
-    }
-
-    int findMin(TreeNode* root) {
-        if (!root) return INT_MAX;
-        return min({root->val, findMin(root->left), findMin(root->right)});
-    }
+    int findMax(TreeNode* root) { if(!root) return INT_MIN; return max({root->val, findMax(root->left), findMax(root->right)}); }
+    int findMin(TreeNode* root) { if(!root) return INT_MAX; return min({root->val, findMin(root->left), findMin(root->right)}); }
 };
 
 // ============================================================
-// Solution 2: BST Optimization — Follow Edges
-// Time: O(H) | Space: O(1)
+// Solution 2: Iterative BFS — O(N) Time, O(W) Space
 // ============================================================
 class Solution2 {
 public:
-    int findBSTMin(TreeNode* root) {
-        while (root->left) root = root->left; // Leftmost = min in BST
-        return root->val;
-    }
-
-    int findBSTMax(TreeNode* root) {
-        while (root->right) root = root->right; // Rightmost = max in BST
-        return root->val;
+    pair<int,int> findMinMax(TreeNode* root) {
+        if (!root) return {INT_MAX, INT_MIN};
+        int mn=INT_MAX, mx=INT_MIN;
+        queue<TreeNode*> q; q.push(root);
+        while(!q.empty()) { auto n=q.front();q.pop(); mn=min(mn,n->val); mx=max(mx,n->val); if(n->left)q.push(n->left); if(n->right)q.push(n->right); }
+        return {mn, mx};
     }
 };

@@ -11,7 +11,7 @@ Compute GCD using Euclidean algorithm and LCM from GCD.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ a, b ≤ 10⁹
 
 <br>
 

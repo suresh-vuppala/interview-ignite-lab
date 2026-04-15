@@ -11,7 +11,8 @@ Find modular multiplicative inverse of a under mod m.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ a ≤ 10⁹
+- M is prime (for Fermat's)
 
 <br>
 

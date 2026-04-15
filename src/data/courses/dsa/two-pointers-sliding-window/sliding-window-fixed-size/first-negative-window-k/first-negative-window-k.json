@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/cpp/first_negative_window_k.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/first-negative-window-k/code/cpp/FirstNegativeWindowK.cpp"
         },
         {
           "language": "java",

@@ -11,16 +11,16 @@ Add two integers without using + or - operators.
 ---
 
 ## Constraints
-- Typical problem constraints
+- -1000 ≤ a, b ≤ 1000
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty/single element input**
-2. **Boundary values** (min/max of range)
-3. **All elements same / sorted / reverse sorted**
+1. **One or both zero**
+2. **Negative numbers:** handle two's complement
+3. **Opposite signs**
 
 <br>
 

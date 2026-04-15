@@ -11,7 +11,7 @@ Design structure for queries matching prefix AND suffix.
 ---
 
 ## Constraints
-- Typical problem constraints
+- Same as search-prefix-suffix
 
 <br>
 

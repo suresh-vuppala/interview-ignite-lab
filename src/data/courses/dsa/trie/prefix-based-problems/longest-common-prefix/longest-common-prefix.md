@@ -11,7 +11,9 @@ Find the longest common prefix among all strings.
 ---
 
 ## Constraints
-- Typical problem constraints
+- 1 ≤ N ≤ 200
+- 0 ≤ strs[i].length ≤ 200
+- Lowercase letters
 
 <br>
 

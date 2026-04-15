@@ -11,16 +11,18 @@ Find the Kth largest element in an unsorted array.
 ---
 
 ## Constraints
-- Typical problem constraints apply
+- 1 ≤ K ≤ N ≤ 10⁵
+- -10⁴ ≤ nums[i] ≤ 10⁴ apply
 
 <br>
 
 ---
 
 ## All Possible Edge Cases
-1. **Empty input:** Handle gracefully
-2. **Single element:** Base case
-3. **Large input:** Verify time complexity holds
+1. **K = 1:** maximum element
+2. **K = N:** minimum element
+3. **All elements equal**
+4. **Duplicate values around Kth**
 
 <br>
 
