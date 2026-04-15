@@ -15,6 +15,16 @@ Return the right view of a binary tree — last node visible at each level when 
 
 ---
 
+## All Possible Edge Cases
+1. **Skewed left:** only root visible
+2. **Skewed right:** all nodes visible
+3. **Single node**
+4. **Left subtree deeper than right**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

@@ -15,6 +15,17 @@ Find the contiguous subarray with the largest product.
 
 ---
 
+## All Possible Edge Cases
+1. **Contains zero:** resets product
+2. **Even number of negatives:** product can be positive
+3. **Odd negatives:** skip one negative
+4. **All positive:** entire array
+5. **Single element**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

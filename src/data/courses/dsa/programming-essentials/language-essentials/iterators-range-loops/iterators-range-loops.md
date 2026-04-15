@@ -82,3 +82,7 @@ squares = [x*x for x in nums if x > 0]
 4. **Forgetting to handle empty input** → Check `if (nums.empty())` before accessing `nums[0]`
 
 <br>
+
+
+## All Possible Edge Cases
+1. **N/A — reference material**

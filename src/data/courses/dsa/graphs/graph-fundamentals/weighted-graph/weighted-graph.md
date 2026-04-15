@@ -17,6 +17,15 @@ Build an adjacency list for a weighted graph. Each edge has a weight/cost.
 
 ---
 
+## All Possible Edge Cases
+1. **Zero-weight edges**
+2. **Negative weight edges**
+3. **Parallel edges with different weights**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

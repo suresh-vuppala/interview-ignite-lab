@@ -17,6 +17,15 @@ Count binary strings of length N with no two consecutive 1s.
 
 ---
 
+## All Possible Edge Cases
+1. **N = 1:** 2 strings ("0", "1")
+2. **N = 0:** 1 string (empty)
+3. **Follows Fibonacci-like pattern**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

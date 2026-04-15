@@ -18,6 +18,16 @@ Find all occurrences of pattern in text using KMP or Rabin-Karp.
 
 ---
 
+## All Possible Edge Cases
+1. **Pattern longer than text: no match
+2. **Pattern at start / end of text
+3. **Overlapping matches
+4. **All characters same**
+
+<br>
+
+---
+
 ## Solution 1: Brute force
 
 **Intuition:**

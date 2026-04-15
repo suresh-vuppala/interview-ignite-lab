@@ -17,6 +17,15 @@ Sprague-Grundy theorem for solving combinatorial games.
 
 ---
 
+## All Possible Edge Cases
+1. **Terminal position (no moves):** Grundy = 0
+2. **Combined games:** XOR all Grundy values
+3. **Grundy 0 for all piles → second player wins**
+
+<br>
+
+---
+
 ## Solution 1: Minimax on full game tree
 
 **Intuition:**

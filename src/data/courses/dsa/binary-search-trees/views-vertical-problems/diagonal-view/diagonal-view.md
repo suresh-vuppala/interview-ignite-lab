@@ -15,6 +15,15 @@ Print nodes grouped by diagonal. Same diagonal: going right stays on it, going l
 
 ---
 
+## All Possible Edge Cases
+1. **Right-skewed:** all in one diagonal
+2. **Left-skewed:** each in separate diagonal
+3. **Single node**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

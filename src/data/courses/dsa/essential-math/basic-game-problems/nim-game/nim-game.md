@@ -17,6 +17,16 @@ Game theory: player taking last stone wins. Can take 1-3 stones per turn.
 
 ---
 
+## All Possible Edge Cases
+1. **N = 1,2,3:** first player always wins
+2. **N = 4:** first player always loses
+3. **N % 4 == 0:** losing position
+4. **Very large N:** just check modulo
+
+<br>
+
+---
+
 ## Solution 1: Minimax simulation
 
 **Intuition:**

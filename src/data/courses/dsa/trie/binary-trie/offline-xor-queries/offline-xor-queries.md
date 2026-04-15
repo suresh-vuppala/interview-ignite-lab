@@ -17,6 +17,15 @@ Answer maximum XOR queries offline by sorting and processing incrementally.
 
 ---
 
+## All Possible Edge Cases
+1. **All limits are 0: no valid numbers
+2. **All limits are MAX: use all numbers
+3. **Queries already sorted**
+
+<br>
+
+---
+
 ## Solution 1: Online: rebuild trie per query
 
 **Intuition:**

@@ -17,6 +17,15 @@ Implement ternary search tree as a trie alternative.
 
 ---
 
+## All Possible Edge Cases
+1. **Sorted insertion: balanced TST
+2. **Random insertion
+3. **Single word**
+
+<br>
+
+---
+
 ## Solution 1: 26-children trie
 
 **Intuition:**

@@ -17,6 +17,16 @@ Merge two sorted linked lists into one sorted list.
 
 ---
 
+## All Possible Edge Cases
+1. **One or both empty**
+2. **No interleaving needed (one entirely before other)**
+3. **All same values**
+4. **Very different lengths**
+
+<br>
+
+---
+
 ## Solution 1: Copy to array, sort, rebuild
 
 **Intuition:**

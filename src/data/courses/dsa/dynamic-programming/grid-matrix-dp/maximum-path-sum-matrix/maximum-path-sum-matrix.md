@@ -16,6 +16,16 @@ Find maximum sum path from any cell in first row to any cell in last row. Can mo
 
 ---
 
+## All Possible Edge Cases
+1. **Single row:** max element
+2. **Single column:** sum of column
+3. **Negative values throughout**
+4. **All same values**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

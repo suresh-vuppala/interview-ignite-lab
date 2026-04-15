@@ -17,6 +17,15 @@ Break a positive integer n into at least two positive integers that sum to n. Ma
 
 ---
 
+## All Possible Edge Cases
+1. **N = 2:** 1×1 = 1
+2. **N = 3:** 1×2 = 2
+3. **Large N:** maximize 3s (math insight)**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

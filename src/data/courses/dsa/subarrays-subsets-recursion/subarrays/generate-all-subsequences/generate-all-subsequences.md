@@ -17,6 +17,15 @@ Generate all subsequences using recursion (include/exclude pattern).
 
 ---
 
+## All Possible Edge Cases
+1. **Empty input: 1 subsequence (empty)
+2. **2^N total subsequences
+3. **Order preserved from original**
+
+<br>
+
+---
+
 ## Solution 1: Same recursive approach
 
 **Intuition:**

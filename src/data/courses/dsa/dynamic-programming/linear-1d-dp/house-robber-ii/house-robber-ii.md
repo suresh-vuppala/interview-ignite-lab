@@ -17,6 +17,16 @@ Houses in a CIRCLE. First and last are adjacent. Can't rob adjacent. Maximize to
 
 ---
 
+## All Possible Edge Cases
+1. **Single house:** rob it
+2. **Two houses:** max of both
+3. **All same values in circle**
+4. **N = 3:** pick max of three options
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

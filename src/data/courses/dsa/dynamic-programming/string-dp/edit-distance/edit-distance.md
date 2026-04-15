@@ -16,6 +16,16 @@ Find minimum operations (insert, delete, replace) to convert word1 to word2.
 
 ---
 
+## All Possible Edge Cases
+1. **One string empty:** distance = other's length
+2. **Identical strings:** distance = 0
+3. **Single character strings**
+4. **Completely different strings**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

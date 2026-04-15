@@ -15,6 +15,16 @@ Given K eggs and N floors, find minimum number of trials to find the critical fl
 
 ---
 
+## All Possible Edge Cases
+1. **K = 1 egg:** must go floor by floor = N tries
+2. **N = 0 floors:** 0 tries
+3. **N = 1 floor:** 1 try
+4. **K ≥ log₂(N):** binary search suffices**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

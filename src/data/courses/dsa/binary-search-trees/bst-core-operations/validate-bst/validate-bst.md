@@ -17,6 +17,16 @@ Determine if a binary tree is a valid BST. Every node must satisfy: left subtree
 
 ---
 
+## All Possible Edge Cases
+1. **Single node:** always valid
+2. **All left / all right (skewed)**
+3. **Equal values:** depends on strict vs non-strict BST
+4. **INT_MIN / INT_MAX values in nodes**
+
+<br>
+
+---
+
 ## Solution 1: Range Validation (Optimal)
 
 **Algorithm:** isValid(node, min, max). If node.val ≤ min or node.val ≥ max → false. Recurse: left with (min, node.val), right with (node.val, max).

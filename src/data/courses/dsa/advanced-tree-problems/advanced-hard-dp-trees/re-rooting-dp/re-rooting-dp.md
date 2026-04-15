@@ -17,6 +17,15 @@ Solve tree DP for all possible roots efficiently in O(N).
 
 ---
 
+## All Possible Edge Cases
+1. **Star graph (one center, all leaves)
+2. **Linear chain: rerooting shifts values
+3. **Single node: trivial**
+
+<br>
+
+---
+
 ## Solution 1: Run DFS from each node
 
 **Intuition:**

@@ -17,6 +17,15 @@ Visualize recursion as a tree to analyze time complexity.
 
 ---
 
+## All Possible Edge Cases
+1. **Base case: prevents infinite recursion
+2. **Overlapping subproblems: memoize
+3. **Stack overflow on deep recursion**
+
+<br>
+
+---
+
 ## Solution 1: N/A — conceptual
 
 **Intuition:**

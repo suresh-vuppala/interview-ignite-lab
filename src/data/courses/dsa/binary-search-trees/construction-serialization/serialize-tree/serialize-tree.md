@@ -17,6 +17,16 @@ Serialize a binary tree to a string representation.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty tree:** serialize to empty/null marker
+2. **Single node**
+3. **Skewed tree**
+4. **Null children must be preserved**
+
+<br>
+
+---
+
 ## Solution 1: Recursive preorder to string
 
 **Intuition:**

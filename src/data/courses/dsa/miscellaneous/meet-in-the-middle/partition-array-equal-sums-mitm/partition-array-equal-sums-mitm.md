@@ -17,6 +17,15 @@ Partition array into two equal-sum subsets using MITM for large N.
 
 ---
 
+## All Possible Edge Cases
+1. **Odd total sum: impossible
+2. **All same elements + even count
+3. **Single element: impossible (unless 0)**
+
+<br>
+
+---
+
 ## Solution 1: Standard DP
 
 **Intuition:**

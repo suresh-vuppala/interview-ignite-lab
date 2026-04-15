@@ -17,6 +17,16 @@ Place N queens on N×N board so no two attack each other.
 
 ---
 
+## All Possible Edge Cases
+1. **N = 1: trivial
+2. **N = 2, 3: no solution exists
+3. **N = 4: 2 solutions
+4. **Diagonal + column conflict checking**
+
+<br>
+
+---
+
 ## Solution 1: Try all N^N placements
 
 **Intuition:**

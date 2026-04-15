@@ -17,6 +17,16 @@ Find the cheapest price from src to dst with at most k stops. Return -1 if no su
 
 ---
 
+## All Possible Edge Cases
+1. **No path within K stops:** return -1
+2. **Direct flight exists**
+3. **K = 0:** only direct flights
+4. **Cheaper path needs more stops**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

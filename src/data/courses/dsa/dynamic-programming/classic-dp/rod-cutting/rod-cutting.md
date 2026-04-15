@@ -15,6 +15,16 @@ Given a rod of length N and prices for each length 1..N, maximize revenue by cut
 
 ---
 
+## All Possible Edge Cases
+1. **Rod length = 0:** 0 profit
+2. **All prices equal:** any cut works
+3. **No cut is best (price[n] is max)**
+4. **Price[1] × N > price[N]**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

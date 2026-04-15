@@ -15,6 +15,15 @@ Merge two sorted arrays into one.
 
 ---
 
+## All Possible Edge Cases
+1. **One or both empty
+2. **No interleaving needed
+3. **All elements in one < all in other**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force
 
 **Intuition:**

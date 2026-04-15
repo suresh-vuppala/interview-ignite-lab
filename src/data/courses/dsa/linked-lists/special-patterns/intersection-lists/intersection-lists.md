@@ -17,6 +17,16 @@ Find the intersection node of two singly linked lists.
 
 ---
 
+## All Possible Edge Cases
+1. **No intersection:** return null
+2. **Intersection at head**
+3. **Same list (complete overlap)**
+4. **Different lengths before intersection**
+
+<br>
+
+---
+
 ## Solution 1: Hash Set — O(N+M) time, O(N) space
 
 **Intuition:**

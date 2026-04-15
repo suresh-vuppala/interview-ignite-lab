@@ -16,6 +16,17 @@ Implement BST core operations: search, insert, delete, and find min/max.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty tree:** insert creates root
+2. **Insert duplicate:** depends on convention (left or skip)
+3. **Delete leaf / one child / two children**
+4. **Delete root node**
+5. **Search for non-existent value**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

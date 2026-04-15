@@ -18,6 +18,14 @@ Sum of counts of prefixes of each word across all words.
 
 ---
 
+## All Possible Edge Cases
+1. **All words identical: maximum scores**
+2. **No shared prefixes at all**
+
+<br>
+
+---
+
 ## Solution 1: Check each prefix against all words
 
 **Intuition:**

@@ -17,6 +17,15 @@ Construct a BST from a given postorder traversal.
 
 ---
 
+## All Possible Edge Cases
+1. **Single element**
+2. **All left children (descending)**
+3. **All right children (ascending)**
+
+<br>
+
+---
+
 ## Solution 1: Insert elements one by one
 
 **Intuition:**

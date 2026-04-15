@@ -21,6 +21,15 @@ Given an array, find the Previous Greater Element (PGE) and Previous Smaller Ele
 
 ---
 
+## All Possible Edge Cases
+1. **First element: no previous → -1
+2. **Sorted ascending: prev greater = -1 for all
+3. **All same elements**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force — Scan Left
 
 **Intuition:**

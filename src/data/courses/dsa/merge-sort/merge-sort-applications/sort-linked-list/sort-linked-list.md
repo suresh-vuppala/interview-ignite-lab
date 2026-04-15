@@ -15,6 +15,15 @@ Sort a linked list in O(N log N).
 
 ---
 
+## All Possible Edge Cases
+1. **Empty / single node
+2. **Already sorted
+3. **Two elements reversed**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force
 
 **Intuition:**

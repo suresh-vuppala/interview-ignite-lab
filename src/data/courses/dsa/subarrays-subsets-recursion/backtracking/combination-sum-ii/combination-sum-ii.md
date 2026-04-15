@@ -19,6 +19,15 @@ Find unique combinations summing to target. Each number used AT MOST ONCE. No du
 
 ---
 
+## All Possible Edge Cases
+1. **Duplicate candidates: skip at same level
+2. **Each candidate used at most once
+3. **No valid combination exists**
+
+<br>
+
+---
+
 ## Solution 1: Generate all then filter
 
 **Intuition:**

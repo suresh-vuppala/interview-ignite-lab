@@ -17,6 +17,13 @@ Design structure for queries matching prefix AND suffix.
 
 ---
 
+## All Possible Edge Cases
+1. **Same edge cases as search-prefix-suffix**
+
+<br>
+
+---
+
 ## Solution 1: Scan all words per query
 
 **Intuition:**

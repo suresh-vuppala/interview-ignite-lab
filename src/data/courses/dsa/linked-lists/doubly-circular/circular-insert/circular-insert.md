@@ -12,6 +12,15 @@ Insert a node into a circular linked list.
 ## Constraints
 - `0 ≤ N ≤ 10⁵`
 
+## All Possible Edge Cases
+1. **Insert into empty circular list**
+2. **Insert maintaining sorted order**
+3. **Insert at head position**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

@@ -19,6 +19,16 @@ Find the longest common prefix among all strings.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty array: return ""**
+2. **Single string: return it
+3. **No common prefix at all**
+4. **All strings identical**
+
+<br>
+
+---
+
 ## Solution 1: Compare all pairs
 
 **Intuition:**

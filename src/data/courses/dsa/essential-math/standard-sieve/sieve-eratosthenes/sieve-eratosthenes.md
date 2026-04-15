@@ -17,6 +17,16 @@ Find all primes up to N using the Sieve of Eratosthenes.
 
 ---
 
+## All Possible Edge Cases
+1. **N = 0 or 1:** no primes
+2. **N = 2:** just [2]
+3. **Large N:** memory for boolean array
+4. **Start marking from p² not 2p**
+
+<br>
+
+---
+
 ## Solution 1: Check each number individually
 
 **Intuition:**

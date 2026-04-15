@@ -17,6 +17,16 @@ Compute combinations nCr and permutations nPr.
 
 ---
 
+## All Possible Edge Cases
+1. **R = 0 or R = N:** C(n,r) = 1
+2. **R > N:** C(n,r) = 0
+3. **Large N:** use modular arithmetic to avoid overflow
+4. **R > N/2:** optimize with C(n,r) = C(n,n-r)
+
+<br>
+
+---
+
 ## Solution 1: Direct factorial
 
 **Intuition:**

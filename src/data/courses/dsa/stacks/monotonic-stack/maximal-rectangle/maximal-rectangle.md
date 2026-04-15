@@ -20,6 +20,16 @@ Given a binary matrix filled with 0's and 1's, find the largest rectangle contai
 
 ---
 
+## All Possible Edge Cases
+1. **All 1s: M×N rectangle
+2. **All 0s: area = 0
+3. **Single row / column
+4. **1×1 matrix**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force — Check All Rectangles
 
 **Intuition:**

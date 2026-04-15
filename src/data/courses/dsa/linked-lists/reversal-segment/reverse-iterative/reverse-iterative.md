@@ -17,6 +17,15 @@ Reverse a singly linked list iteratively.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty list:** return null
+2. **Single node:** same
+3. **Already reversed (decreasing)**
+
+<br>
+
+---
+
 ## Solution 1: Create new reversed list
 
 **Intuition:**

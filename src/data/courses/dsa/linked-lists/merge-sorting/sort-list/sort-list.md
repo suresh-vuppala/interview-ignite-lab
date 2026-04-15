@@ -17,6 +17,16 @@ Sort a linked list in O(N log N) time and O(1) space.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty list / single node**
+2. **Already sorted**
+3. **Reverse sorted**
+4. **All duplicate values**
+
+<br>
+
+---
+
 ## Solution 1: Copy to array, sort, rebuild
 
 **Intuition:**

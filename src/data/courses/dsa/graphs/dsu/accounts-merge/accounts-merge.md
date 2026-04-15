@@ -17,6 +17,15 @@ Merge accounts that share at least one email. Each account has a name and list o
 
 ---
 
+## All Possible Edge Cases
+1. **Same email in multiple accounts: merge all**
+2. **No overlapping emails:** each stays separate
+3. **Chain merges: A↔B, B↔C → all merge**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

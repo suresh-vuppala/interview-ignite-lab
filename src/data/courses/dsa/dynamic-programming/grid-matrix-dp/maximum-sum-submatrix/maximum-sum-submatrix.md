@@ -16,6 +16,16 @@ Find the submatrix with maximum sum in a 2D matrix.
 
 ---
 
+## All Possible Edge Cases
+1. **1×1 matrix:** that element
+2. **All positive:** entire matrix
+3. **All negative:** least negative element
+4. **Mixed positive/negative**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

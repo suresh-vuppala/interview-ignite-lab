@@ -17,6 +17,16 @@ Convert a BST to a sorted doubly linked list in-place. Left = prev, Right = next
 
 ---
 
+## All Possible Edge Cases
+1. **Empty tree:** return null
+2. **Single node:** prev=next=null
+3. **Skewed tree (linked list shape)**
+4. **Verify doubly-linked in both directions**
+
+<br>
+
+---
+
 ## Solution 1: Inorder to array, build DLL
 
 **Intuition:**

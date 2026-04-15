@@ -36,3 +36,7 @@ A BST is a binary tree where for every node: **all left descendants < node < all
 **Use BST when you need ordered operations.** Use hash map when you only need lookup.
 
 <br>
+
+
+## All Possible Edge Cases
+1. **N/A — introductory overview**

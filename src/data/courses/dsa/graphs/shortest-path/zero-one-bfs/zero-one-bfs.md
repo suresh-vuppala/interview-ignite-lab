@@ -17,6 +17,15 @@ Find shortest path in a graph where edge weights are only 0 or 1. More efficient
 
 ---
 
+## All Possible Edge Cases
+1. **All weights 0:** all same distance
+2. **All weights 1:** standard BFS
+3. **Mix of 0 and 1 weights**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

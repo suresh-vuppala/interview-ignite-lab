@@ -16,6 +16,16 @@ Count distinct subsequences of s that equal t.
 
 ---
 
+## All Possible Edge Cases
+1. **t longer than s:** result = 0
+2. **s = t:** result = 1
+3. **t is empty:** result = 1
+4. **Many duplicate characters**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

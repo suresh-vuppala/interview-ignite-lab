@@ -18,6 +18,15 @@ Subset sum for large N using Meet in the Middle.
 
 ---
 
+## All Possible Edge Cases
+1. **N ≤ 20: standard DP works
+2. **20 < N ≤ 40: must use meet-in-middle
+3. **Target = 0: empty subset**
+
+<br>
+
+---
+
 ## Solution 1: Standard DP/recursion
 
 **Intuition:**

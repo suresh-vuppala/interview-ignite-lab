@@ -17,6 +17,15 @@ Return all root-to-leaf paths as strings.
 
 ---
 
+## All Possible Edge Cases
+1. **Single node:** one path [root]
+2. **Skewed tree:** one path
+3. **Complete tree: many paths**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

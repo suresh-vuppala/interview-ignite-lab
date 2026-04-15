@@ -15,6 +15,13 @@ Analyze time complexity of sorting algorithms.
 
 ---
 
+## All Possible Edge Cases
+1. **N/A — analysis reference**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force
 
 **Intuition:**

@@ -20,6 +20,16 @@ A node X in the tree is "good" if there are no nodes with a greater value on the
 
 ---
 
+## All Possible Edge Cases
+1. **Root is always good**
+2. **Strictly decreasing path:** only root
+3. **All same values:** all nodes good
+4. **Single node: 1 good node**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

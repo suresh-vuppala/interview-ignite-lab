@@ -17,6 +17,16 @@ You can climb 1 or 2 steps. How many distinct ways to reach the top of N steps?
 
 ---
 
+## All Possible Edge Cases
+1. **N = 0:** 1 way (do nothing)
+2. **N = 1:** 1 way
+3. **Large N:** overflow — use modular arithmetic
+4. **N = 2:** 2 ways
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

@@ -17,6 +17,13 @@ Solve recurrence relations using Master Theorem and substitution.
 
 ---
 
+## All Possible Edge Cases
+1. **N/A — theoretical analysis**
+
+<br>
+
+---
+
 ## Solution 1: Trial and error
 
 **Intuition:**

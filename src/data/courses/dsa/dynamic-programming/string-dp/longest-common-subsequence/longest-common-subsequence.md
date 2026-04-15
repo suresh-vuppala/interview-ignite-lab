@@ -16,6 +16,16 @@ Find the length of the longest common subsequence of two strings.
 
 ---
 
+## All Possible Edge Cases
+1. **One string empty:** LCS = 0
+2. **Identical strings:** LCS = length
+3. **No common characters:** LCS = 0
+4. **One is subsequence of other**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

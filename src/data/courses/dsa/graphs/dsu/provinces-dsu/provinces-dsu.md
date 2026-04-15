@@ -17,6 +17,15 @@ Count connected components (provinces) using Union-Find.
 
 ---
 
+## All Possible Edge Cases
+1. **All connected:** 1 province
+2. **All disconnected:** N provinces
+3. **Single city**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

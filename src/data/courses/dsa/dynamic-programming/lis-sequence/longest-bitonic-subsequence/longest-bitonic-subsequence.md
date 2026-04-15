@@ -15,6 +15,15 @@ Find the length of the longest bitonic subsequence (first increasing, then decre
 
 ---
 
+## All Possible Edge Cases
+1. **Strictly increasing:** no bitonic (need decrease)
+2. **Strictly decreasing:** no bitonic (need increase)
+3. **Peak at first/last element**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

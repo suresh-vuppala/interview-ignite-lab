@@ -17,6 +17,15 @@ Create a singly linked list and traverse it. Print all node values.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty list**
+2. **Single node**
+3. **Traverse null list**
+
+<br>
+
+---
+
 ## Solution 1: Array-based simulation
 
 **Intuition:**

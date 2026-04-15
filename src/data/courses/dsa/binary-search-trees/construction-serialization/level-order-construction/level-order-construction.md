@@ -17,6 +17,15 @@ Construct a binary tree from level-order traversal (with nulls marking missing c
 
 ---
 
+## All Possible Edge Cases
+1. **Single node**
+2. **Complete tree**
+3. **Null markers for missing children**
+
+<br>
+
+---
+
 ## Solution 1: Recursive construction
 
 **Intuition:**

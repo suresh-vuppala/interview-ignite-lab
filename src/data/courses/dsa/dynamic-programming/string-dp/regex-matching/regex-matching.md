@@ -16,6 +16,16 @@ Implement regex matching with '.' (any single char) and '*' (zero or more of pre
 
 ---
 
+## All Possible Edge Cases
+1. **Pattern with .* :** matches any string
+2. **Pattern is just *:** invalid (must follow char)
+3. **Empty pattern:** matches only empty string
+4. **Nested repetition: a*a*a***
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

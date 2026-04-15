@@ -17,6 +17,16 @@ Flatten a multilevel doubly linked list. Nodes may have a child pointer to anoth
 
 ---
 
+## All Possible Edge Cases
+1. **No children:** already flat
+2. **Deep nesting**
+3. **Child at last node
+4. **Empty list**
+
+<br>
+
+---
+
 ## Solution 1: Recursive DFS collecting all values
 
 **Intuition:**

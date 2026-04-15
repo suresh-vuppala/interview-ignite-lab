@@ -17,6 +17,17 @@ Compute GCD using Euclidean algorithm and LCM from GCD.
 
 ---
 
+## All Possible Edge Cases
+1. **a = b:** GCD = a, LCM = a
+2. **One is multiple of other**
+3. **Coprime numbers (GCD = 1)**
+4. **a or b = 0:** GCD(a,0) = a
+5. **LCM overflow:** divide before multiply
+
+<br>
+
+---
+
 ## Solution 1: Trial division
 
 **Intuition:**

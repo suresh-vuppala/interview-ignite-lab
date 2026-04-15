@@ -16,6 +16,15 @@ Reorder L0→L1→...→Ln to L0→Ln→L1→Ln-1→...
 
 ---
 
+## All Possible Edge Cases
+1. **0-2 nodes:** no reordering needed
+2. **Odd vs even length**
+3. **Already in correct order**
+
+<br>
+
+---
+
 ## Solution 1: Copy to array, two-pointer reorder
 
 **Intuition:**

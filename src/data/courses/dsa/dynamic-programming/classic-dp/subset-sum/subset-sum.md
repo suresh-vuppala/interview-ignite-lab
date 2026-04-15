@@ -15,6 +15,16 @@ Determine if a subset exists with sum equal to target.
 
 ---
 
+## All Possible Edge Cases
+1. **Target = 0:** always true (empty subset)
+2. **All elements > target:** false
+3. **Single element = target**
+4. **Negative numbers: changes approach**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

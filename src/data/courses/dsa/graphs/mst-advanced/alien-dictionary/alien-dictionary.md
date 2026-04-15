@@ -17,6 +17,15 @@ Given a sorted list of words in an alien language, derive the order of character
 
 ---
 
+## All Possible Edge Cases
+1. **Invalid ordering ("abc" before "ab"):** impossible
+2. **Single word:** no ordering info
+3. **Cycle in derived ordering:** empty result**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

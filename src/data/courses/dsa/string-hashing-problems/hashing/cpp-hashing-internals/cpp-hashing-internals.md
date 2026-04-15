@@ -17,6 +17,15 @@ C++ unordered_map/unordered_set internals: hash function, buckets, load factor.
 
 ---
 
+## All Possible Edge Cases
+1. **Hash collision causing O(N) lookup
+2. **Rehashing on load factor exceeded
+3. **Custom hash for composite keys**
+
+<br>
+
+---
+
 ## Solution 1: N/A — implementation knowledge
 
 **Intuition:**

@@ -16,6 +16,16 @@ Find the length of the longest palindromic subsequence in a string.
 
 ---
 
+## All Possible Edge Cases
+1. **Already palindrome:** length = N
+2. **No repeated characters:** length = 1
+3. **Single character**
+4. **All same characters**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

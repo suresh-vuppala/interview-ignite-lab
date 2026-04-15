@@ -17,6 +17,16 @@ Remove the nth node from the end of a linked list.
 
 ---
 
+## All Possible Edge Cases
+1. **Remove head (N = length)**
+2. **Remove tail (N = 1)**
+3. **Single node, N = 1**
+4. **N > length: invalid**
+
+<br>
+
+---
+
 ## Solution 1: Two-Pass — Count then traverse
 
 **Intuition:**

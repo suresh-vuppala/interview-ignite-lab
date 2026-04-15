@@ -17,6 +17,16 @@ Convert a sorted array to a height-balanced BST.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty array:** return null
+2. **Single element**
+3. **Two elements:** one root, one child
+4. **Already balanced input**
+
+<br>
+
+---
+
 ## Solution 1: Insert elements one by one
 
 **Intuition:**

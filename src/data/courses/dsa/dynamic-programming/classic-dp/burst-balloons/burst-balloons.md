@@ -15,6 +15,16 @@ Burst balloons to maximize coins. Bursting balloon i gives nums[left]×nums[i]×
 
 ---
 
+## All Possible Edge Cases
+1. **Single balloon:** just burst it
+2. **Two balloons:** try both orders
+3. **All same values**
+4. **Virtual boundary balloons (value 1)**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

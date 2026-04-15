@@ -17,6 +17,15 @@ Deserialize a string back to a binary tree.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty/null input**
+2. **Malformed input string**
+3. **Very deep tree (stack depth)**
+
+<br>
+
+---
+
 ## Solution 1: Parse preorder string recursively
 
 **Intuition:**

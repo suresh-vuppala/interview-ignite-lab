@@ -17,6 +17,17 @@ Detect if a linked list has a cycle.
 
 ---
 
+## All Possible Edge Cases
+1. **No cycle:** return false
+2. **Cycle at head (tail→head)**
+3. **Cycle in middle**
+4. **Single node self-loop
+5. **Empty list**
+
+<br>
+
+---
+
 ## Solution 1: Hash Set — O(N) time, O(N) space
 
 **Intuition:**

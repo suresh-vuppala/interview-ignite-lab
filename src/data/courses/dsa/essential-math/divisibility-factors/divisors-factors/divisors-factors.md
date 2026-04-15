@@ -17,6 +17,16 @@ Find all divisors of a number N.
 
 ---
 
+## All Possible Edge Cases
+1. **N = 1:** only divisor is 1
+2. **N is prime:** exactly 2 divisors
+3. **Perfect square:** odd number of divisors
+4. **N = 0:** undefined
+
+<br>
+
+---
+
 ## Solution 1: Check all 1 to N
 
 **Intuition:**

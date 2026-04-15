@@ -17,6 +17,13 @@ Find all dictionary words present in grid.
 
 ---
 
+## All Possible Edge Cases
+1. **Same edge cases as word-search-ii**
+
+<br>
+
+---
+
 ## Solution 1: Brute force per word
 
 **Intuition:**

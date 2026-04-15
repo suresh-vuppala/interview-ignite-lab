@@ -17,6 +17,15 @@ Find ALL shortest transformation sequences from beginWord to endWord.
 
 ---
 
+## All Possible Edge Cases
+1. **No path exists:** return empty list
+2. **Multiple shortest paths**
+3. **Single transformation suffices**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

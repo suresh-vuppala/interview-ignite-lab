@@ -17,6 +17,16 @@ Add two numbers represented as linked lists (digits in reverse order).
 
 ---
 
+## All Possible Edge Cases
+1. **Different lengths**
+2. **Carry propagation to new digit (999 + 1)**
+3. **One list is zero (0)**
+4. **Both single digit**
+
+<br>
+
+---
+
 ## Solution 1: Convert to integers, add, convert back
 
 **Intuition:**

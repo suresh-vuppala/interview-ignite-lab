@@ -18,6 +18,15 @@ Find words matching both a prefix and suffix pattern.
 
 ---
 
+## All Possible Edge Cases
+1. **No match for both prefix AND suffix
+2. **Word = prefix = suffix
+3. **Empty prefix or suffix**
+
+<br>
+
+---
+
 ## Solution 1: Check each word for both conditions
 
 **Intuition:**

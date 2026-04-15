@@ -17,6 +17,16 @@ Given a BST and a target sum, find if there exist two nodes whose values add up 
 
 ---
 
+## All Possible Edge Cases
+1. **No pair sums to target**
+2. **Same node used twice (not allowed)**
+3. **Negative values in BST**
+4. **Target = 2 × root value**
+
+<br>
+
+---
+
 ## Solution 1: Inorder to Array + Two Pointers — O(N) time, O(N) space
 
 **Intuition:**

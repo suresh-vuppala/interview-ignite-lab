@@ -15,6 +15,15 @@ Compare merge sort vs quicksort in practice.
 
 ---
 
+## All Possible Edge Cases
+1. **N/A — conceptual comparison
+2. **Merge: stable, guaranteed O(N log N)
+3. **Quick: unstable, O(N²) worst case**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force
 
 **Intuition:**

@@ -19,6 +19,16 @@ Word break problem using trie for efficient dictionary lookup.
 
 ---
 
+## All Possible Edge Cases
+1. **Entire string = one dictionary word
+2. **Cannot segment: false
+3. **Empty string: true
+4. **Overlapping word boundaries**
+
+<br>
+
+---
+
 ## Solution 1: DP with hash set lookup
 
 **Intuition:**

@@ -17,6 +17,15 @@ Given a network of n nodes and directed weighted edges, find the time for a sign
 
 ---
 
+## All Possible Edge Cases
+1. **Unreachable node:** return -1
+2. **Single node:** time = 0
+3. **All nodes directly connected to source**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

@@ -29,3 +29,7 @@ Build a prefix array where `prefix[i] = sum(nums[0..i-1])`. Then:
 Subarray Sum Equals K alone accounts for **~5% of Meta interviews**. The prefix sum + hash map combo is a must-know pattern.
 
 <br>
+
+
+## All Possible Edge Cases
+1. **N/A — introductory overview**

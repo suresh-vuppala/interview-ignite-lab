@@ -17,6 +17,16 @@ Move N disks from source to destination using auxiliary peg. Only smaller disk c
 
 ---
 
+## All Possible Edge Cases
+1. **N = 0: no moves
+2. **N = 1: 1 move
+3. **Moves = 2^N - 1
+4. **Cannot place larger disk on smaller**
+
+<br>
+
+---
+
 ## Solution 1: N/A — recursive is optimal
 
 **Intuition:**

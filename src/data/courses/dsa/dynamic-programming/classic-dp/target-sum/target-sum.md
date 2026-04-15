@@ -15,6 +15,16 @@ Assign + or - to each number to reach a target sum. Count the number of ways.
 
 ---
 
+## All Possible Edge Cases
+1. **All zeros:** 2^N ways to reach 0
+2. **Target > total sum:** impossible
+3. **Single element**
+4. **(sum + target) is odd:** impossible**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

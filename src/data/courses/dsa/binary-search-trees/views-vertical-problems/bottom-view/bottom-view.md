@@ -15,6 +15,15 @@ Return the bottom view — last node at each horizontal distance (overwrite as B
 
 ---
 
+## All Possible Edge Cases
+1. **Overlapping columns:** last node at each column wins
+2. **Single node**
+3. **Left-skewed vs right-skewed**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

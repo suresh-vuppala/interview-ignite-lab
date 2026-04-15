@@ -36,3 +36,7 @@ Greedy works when the problem has:
 | **Local Max/Min** | Partition Labels, Valid Parenthesis String |
 
 <br>
+
+
+## All Possible Edge Cases
+1. **N/A — introductory overview**

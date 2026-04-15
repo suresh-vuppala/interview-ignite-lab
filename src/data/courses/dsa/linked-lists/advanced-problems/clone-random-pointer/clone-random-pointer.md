@@ -17,6 +17,16 @@ Clone a linked list with random pointer (same as copy-random-pointer, in advance
 
 ---
 
+## All Possible Edge Cases
+1. **Empty list**
+2. **Random points to self**
+3. **Random is null for all nodes
+4. **All randoms point to same node**
+
+<br>
+
+---
+
 ## Solution 1: Hash Map: original→clone
 
 **Intuition:**

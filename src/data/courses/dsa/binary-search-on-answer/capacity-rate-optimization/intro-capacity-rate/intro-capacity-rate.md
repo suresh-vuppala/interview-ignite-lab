@@ -175,3 +175,7 @@ Use **Capacity/Rate Optimization** when:
 ---
 
 ```code```
+
+
+## All Possible Edge Cases
+1. **N/A — pattern overview**

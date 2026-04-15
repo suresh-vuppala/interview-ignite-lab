@@ -17,6 +17,16 @@ Find the Lowest Common Ancestor of two nodes in a BST. Exploit BST property for 
 
 ---
 
+## All Possible Edge Cases
+1. **One node is ancestor of other**
+2. **Both nodes are same**
+3. **Nodes in different subtrees of root → LCA = root
+4. **One or both nodes not in BST**
+
+<br>
+
+---
+
 ## Solution 1: General BT LCA (ignore BST property)
 
 **Intuition:**

@@ -17,6 +17,16 @@ Deep copy a linked list where each node has a next pointer and a random pointer 
 
 ---
 
+## All Possible Edge Cases
+1. **Empty list**
+2. **Random points to self**
+3. **Random is null**
+4. **All randoms point to head**
+
+<br>
+
+---
+
 ## Solution 1: Hash Map — O(N) space
 
 **Intuition:**

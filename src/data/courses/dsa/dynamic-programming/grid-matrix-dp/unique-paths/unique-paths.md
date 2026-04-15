@@ -16,6 +16,15 @@ Count unique paths from top-left to bottom-right of an m×n grid. Can only move 
 
 ---
 
+## All Possible Edge Cases
+1. **1×1 grid:** 1 path
+2. **1×N or M×1:** 1 path (straight line)
+3. **Large grid:** overflow without modular arithmetic**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

@@ -18,6 +18,15 @@ Count the number of distinct substrings of a given string.
 
 ---
 
+## All Possible Edge Cases
+1. **Single character: 2 (empty + itself)**
+2. **All same characters: N+1
+3. **All different: N(N+1)/2 + 1**
+
+<br>
+
+---
+
 ## Solution 1: Generate all substrings + hash set
 
 **Intuition:**

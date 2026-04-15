@@ -17,6 +17,15 @@ Find all eventual safe nodes in a directed graph. A node is safe if every path s
 
 ---
 
+## All Possible Edge Cases
+1. **Terminal nodes (no outgoing):** always safe
+2. **All nodes in cycle:** no safe nodes
+3. **Node leading to both cycle and terminal**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

@@ -20,6 +20,16 @@ Check if a binary tree is: (a) Full — every node has 0 or 2 children, (b) Comp
 
 ---
 
+## All Possible Edge Cases
+1. **Full: every node has 0 or 2 children**
+2. **Complete: all levels full except possibly last
+3. **Perfect: all levels completely full**
+4. **Single node: all three types**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

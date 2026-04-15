@@ -85,3 +85,7 @@ map.containsKey("hello");
 - **Worst case matters** → Hash map O(n) worst vs BST O(log n) guaranteed
 
 <br>
+
+
+## All Possible Edge Cases
+1. **N/A — conceptual reference**

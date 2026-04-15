@@ -17,6 +17,15 @@ Implement compressed (radix/Patricia) trie to reduce space.
 
 ---
 
+## All Possible Edge Cases
+1. **No shared prefixes: no compression benefit
+2. **Long shared prefixes: maximum compression
+3. **Single word: one edge**
+
+<br>
+
+---
+
 ## Solution 1: Standard trie
 
 **Intuition:**

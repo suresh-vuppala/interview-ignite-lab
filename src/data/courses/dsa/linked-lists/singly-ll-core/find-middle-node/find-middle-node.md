@@ -17,6 +17,15 @@ Find the middle node of a singly linked list. If two middle nodes, return the se
 
 ---
 
+## All Possible Edge Cases
+1. **Single node:** it is the middle
+2. **Two nodes:** second is middle (or first)
+3. **Even vs odd length**
+
+<br>
+
+---
+
 ## Solution 1: Count Then Traverse — O(N), Two Passes
 
 **Intuition:**

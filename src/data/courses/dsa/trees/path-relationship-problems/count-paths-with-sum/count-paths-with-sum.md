@@ -17,6 +17,16 @@ Count paths that sum to a target value. Paths don't need to start at root or end
 
 ---
 
+## All Possible Edge Cases
+1. **Path doesn't need to start at root or end at leaf**
+2. **Negative values allow longer paths
+3. **Target = 0 with negative numbers**
+4. **Single node = target**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force — Start DFS from Every Node
 
 **Intuition:**

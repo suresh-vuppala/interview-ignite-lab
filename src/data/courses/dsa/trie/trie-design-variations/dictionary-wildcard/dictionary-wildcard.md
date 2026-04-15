@@ -17,6 +17,13 @@ Dictionary supporting wildcard '.' search.
 
 ---
 
+## All Possible Edge Cases
+1. **Same as search-wildcard**
+
+<br>
+
+---
+
 ## Solution 1: Linear scan all words
 
 **Intuition:**

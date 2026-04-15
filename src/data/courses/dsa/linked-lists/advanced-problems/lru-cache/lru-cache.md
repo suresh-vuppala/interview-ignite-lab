@@ -16,6 +16,16 @@ Design a Least Recently Used (LRU) cache. O(1) for get and put. When capacity ex
 
 ---
 
+## All Possible Edge Cases
+1. **Get non-existent key:** return -1
+2. **Put when cache full:** evict LRU
+3. **Access existing key updates recency
+4. **Capacity = 1**
+
+<br>
+
+---
+
 ## Solution 1: Array + linear search for LRU
 
 **Intuition:**

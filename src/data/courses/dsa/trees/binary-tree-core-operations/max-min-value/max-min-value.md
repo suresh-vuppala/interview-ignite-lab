@@ -20,6 +20,15 @@ Find the maximum and minimum values in a binary tree.
 
 ---
 
+## All Possible Edge Cases
+1. **Single node: min = max = root value**
+2. **All same values**
+3. **Negative values in tree**
+
+<br>
+
+---
+
 ## Solution 1: DFS — Visit All Nodes (General BT)
 
 **Algorithm:** Recursively compare root value with max/min of left and right subtrees.

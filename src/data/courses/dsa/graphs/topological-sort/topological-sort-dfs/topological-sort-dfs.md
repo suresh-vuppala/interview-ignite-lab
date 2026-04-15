@@ -17,6 +17,16 @@ Return a topological ordering of a directed acyclic graph (DAG) using DFS.
 
 ---
 
+## All Possible Edge Cases
+1. **Cycle → no valid order**
+2. **Linear chain: unique ordering**
+3. **Multiple valid orderings**
+4. **Disconnected DAG**
+
+<br>
+
+---
+
 ## Solution 1: Kahn's BFS approach
 
 **Intuition:**

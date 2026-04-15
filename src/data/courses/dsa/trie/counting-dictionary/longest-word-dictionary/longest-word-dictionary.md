@@ -18,6 +18,15 @@ Find longest word in dictionary where every prefix is also a word in dictionary.
 
 ---
 
+## All Possible Edge Cases
+1. **No word buildable one char at a time**
+2. **Tie in length: lexicographically smallest
+3. **Single character words only**
+
+<br>
+
+---
+
 ## Solution 1: Sort + check each word's prefixes
 
 **Intuition:**

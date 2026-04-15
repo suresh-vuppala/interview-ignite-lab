@@ -18,6 +18,15 @@ Generate unique permutations when array has duplicate elements.
 
 ---
 
+## All Possible Edge Cases
+1. **All same: only 1 permutation
+2. **All distinct: same as basic permutations
+3. **Must skip duplicates at same level**
+
+<br>
+
+---
+
 ## Solution 1: Generate all then deduplicate
 
 **Intuition:**

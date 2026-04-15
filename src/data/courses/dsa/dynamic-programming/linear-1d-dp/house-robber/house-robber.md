@@ -17,6 +17,16 @@ Rob houses along a street. Can't rob two adjacent houses. Maximize total money.
 
 ---
 
+## All Possible Edge Cases
+1. **Single house:** rob it
+2. **Two houses:** rob max
+3. **All same values**
+4. **Alternating high/low values**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

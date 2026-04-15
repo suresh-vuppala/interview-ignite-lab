@@ -20,6 +20,15 @@ Return the reverse level-order traversal — nodes level by level from bottom to
 
 ---
 
+## All Possible Edge Cases
+1. **Empty tree**
+2. **Single node**
+3. **Complete tree**
+
+<br>
+
+---
+
 ## Solution 1: Level order then reverse result
 
 **Intuition:**

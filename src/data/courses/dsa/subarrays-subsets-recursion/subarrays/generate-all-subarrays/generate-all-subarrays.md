@@ -17,6 +17,15 @@ Generate all contiguous subarrays of an array.
 
 ---
 
+## All Possible Edge Cases
+1. **Single element: 1 subarray
+2. **N(N+1)/2 total subarrays
+3. **Empty array: just empty subarray**
+
+<br>
+
+---
+
 ## Solution 1: Same — this IS the standard approach
 
 **Intuition:**

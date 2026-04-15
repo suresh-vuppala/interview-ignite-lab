@@ -17,6 +17,13 @@ Find all valid dictionary words in a Boggle board.
 
 ---
 
+## All Possible Edge Cases
+1. **Same edge cases as word-search-ii**
+
+<br>
+
+---
+
 ## Solution 1: Search each word separately
 
 **Intuition:**

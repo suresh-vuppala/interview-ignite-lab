@@ -17,6 +17,14 @@ Generate all subsets (power set) using recursion.
 
 ---
 
+## All Possible Edge Cases
+1. **Same as subsequences: 2^N subsets
+2. **Include empty set**
+
+<br>
+
+---
+
 ## Solution 1: Same
 
 **Intuition:**

@@ -18,6 +18,15 @@ Search in matrix where each row and column is independently sorted (not globally
 
 ---
 
+## All Possible Edge Cases
+1. **Target not in matrix
+2. **Target at corner
+3. **Multiple occurrences**
+
+<br>
+
+---
+
 ## Solution 1: Scan entire matrix
 
 **Intuition:**

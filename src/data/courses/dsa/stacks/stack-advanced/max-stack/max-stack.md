@@ -20,6 +20,15 @@ Design a stack that supports push, pop, top, and retrieving the maximum element,
 
 ---
 
+## All Possible Edge Cases
+1. **Pop max when it's not on top
+2. **Multiple elements with same max value
+3. **Single element**
+
+<br>
+
+---
+
 ## Solution 1: Naive / Brute Force Approach
 
 **Intuition:**

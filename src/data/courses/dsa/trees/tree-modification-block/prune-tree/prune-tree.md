@@ -17,6 +17,15 @@ Prune a binary tree so that subtrees not containing a 1 are removed. Return the 
 
 ---
 
+## All Possible Edge Cases
+1. **Entire tree contains no 1: return null**
+2. **Root = 0 but subtrees have 1: keep root
+3. **All nodes = 1: unchanged**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

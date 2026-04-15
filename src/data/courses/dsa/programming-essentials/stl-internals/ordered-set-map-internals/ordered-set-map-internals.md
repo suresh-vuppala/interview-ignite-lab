@@ -81,3 +81,7 @@ map.ceilingKey("c"); // Smallest key ≥ "c"
 - **Count elements in range** — subSet or distance between iterators
 
 <br>
+
+
+## All Possible Edge Cases
+1. **N/A — conceptual reference**

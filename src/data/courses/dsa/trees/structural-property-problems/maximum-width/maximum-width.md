@@ -20,6 +20,16 @@ Find the maximum width of a binary tree. Width = number of nodes between the lef
 
 ---
 
+## All Possible Edge Cases
+1. **Single node:** width = 1
+2. **Complete tree:** max width at last level
+3. **Skewed tree:** width always 1
+4. **Sparse levels: wide index gap but few nodes**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

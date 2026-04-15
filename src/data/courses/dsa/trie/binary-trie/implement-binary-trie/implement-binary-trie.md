@@ -18,6 +18,15 @@ Binary trie storing integers bit by bit for XOR operations.
 
 ---
 
+## All Possible Edge Cases
+1. **All zeros inserted
+2. **Maximum 32-bit integer
+3. **Single number**
+
+<br>
+
+---
+
 ## Solution 1: N/A — data structure
 
 **Intuition:**

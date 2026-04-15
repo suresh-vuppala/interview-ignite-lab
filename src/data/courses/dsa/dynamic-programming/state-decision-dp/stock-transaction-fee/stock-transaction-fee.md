@@ -15,6 +15,15 @@ Buy/sell unlimited times with transaction fee per trade.
 
 ---
 
+## All Possible Edge Cases
+1. **Fee larger than any gain:** profit = 0
+2. **Fee = 0:** same as unlimited transactions
+3. **Single profitable trade minus fee**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

@@ -18,6 +18,15 @@ Find shortest prefix for each word that uniquely identifies it.
 
 ---
 
+## All Possible Edge Cases
+1. **All words start with different letters: single char each**
+2. **All words share long prefix
+3. **Single word: first character**
+
+<br>
+
+---
+
 ## Solution 1: Compare all pairs
 
 **Intuition:**

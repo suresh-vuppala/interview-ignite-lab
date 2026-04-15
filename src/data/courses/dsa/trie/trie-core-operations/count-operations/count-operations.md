@@ -18,6 +18,15 @@ Trie with countWordsEqualTo and countWordsStartingWith.
 
 ---
 
+## All Possible Edge Cases
+1. **Count word not in trie: 0**
+2. **Prefix matches but not complete word**
+3. **Same word inserted multiple times**
+
+<br>
+
+---
+
 ## Solution 1: HashMap counting
 
 **Intuition:**

@@ -17,6 +17,16 @@ Find maximum sum of non-adjacent elements in an array. Same as House Robber.
 
 ---
 
+## All Possible Edge Cases
+1. **Single element**
+2. **Two elements:** max of both
+3. **All negative values**
+4. **All same values**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

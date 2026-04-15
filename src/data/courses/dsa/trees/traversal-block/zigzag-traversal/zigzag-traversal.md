@@ -20,6 +20,15 @@ Return the zigzag level order traversal — alternate left-to-right and right-to
 
 ---
 
+## All Possible Edge Cases
+1. **Single node**
+2. **Only left children: alternating direction on single nodes
+3. **Complete tree**
+
+<br>
+
+---
+
 ## Solution 1: Naive / Brute Force Approach
 
 **Intuition:**

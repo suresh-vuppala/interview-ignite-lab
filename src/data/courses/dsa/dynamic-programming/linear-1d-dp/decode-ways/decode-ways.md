@@ -17,6 +17,17 @@ A message of digits can be decoded (A=1..Z=26). Count total ways to decode.
 
 ---
 
+## All Possible Edge Cases
+1. **Leading zero: "0..."** → 0 ways
+2. **Contains "00":** 0 ways
+3. **All 1s and 2s:** maximum branching
+4. **Single digit**
+5. **"10" and "20":** only one decoding each
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

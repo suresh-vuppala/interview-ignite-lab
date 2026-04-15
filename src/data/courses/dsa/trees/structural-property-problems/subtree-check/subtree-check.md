@@ -20,6 +20,16 @@ Given two binary trees root and subRoot, check if subRoot is a subtree of root.
 
 ---
 
+## All Possible Edge Cases
+1. **Subtree = entire tree:** true
+2. **Subtree is null:** true (convention)
+3. **Similar structure but different leaf values**
+4. **Subtree appears multiple times**
+
+<br>
+
+---
+
 ## Solution 1: Naive / Brute Force Approach
 
 **Intuition:**

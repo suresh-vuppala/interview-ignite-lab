@@ -17,6 +17,16 @@ Convert between decimal and binary representations.
 
 ---
 
+## All Possible Edge Cases
+1. **N = 0:** binary is "0"
+2. **N = 1:** binary is "1"
+3. **Power of 2:** single 1-bit
+4. **Large N near INT_MAX**
+
+<br>
+
+---
+
 ## Solution 1: N/A — direct conversion
 
 **Intuition:**

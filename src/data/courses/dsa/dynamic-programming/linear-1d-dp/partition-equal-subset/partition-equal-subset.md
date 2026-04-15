@@ -17,6 +17,16 @@ Can you partition an array into two subsets with equal sum?
 
 ---
 
+## All Possible Edge Cases
+1. **Odd total sum:** impossible
+2. **Single element:** false (unless 0)
+3. **All elements equal + even count**
+4. **One element = half total**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

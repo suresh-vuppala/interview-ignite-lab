@@ -17,6 +17,16 @@ Given n nodes and a list of undirected edges, check if these edges form a valid 
 
 ---
 
+## All Possible Edge Cases
+1. **E ≠ V-1:** not a tree
+2. **Disconnected:** not a tree
+3. **Cycle present:** not a tree
+4. **Single node, no edges:** valid tree**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

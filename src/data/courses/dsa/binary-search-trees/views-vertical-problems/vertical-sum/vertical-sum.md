@@ -15,6 +15,15 @@ Compute the sum of nodes in each vertical column.
 
 ---
 
+## All Possible Edge Cases
+1. **All nodes in same column**
+2. **Negative values**
+3. **Single node: one column sum**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

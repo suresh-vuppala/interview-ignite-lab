@@ -15,6 +15,16 @@ Find length of the longest strictly increasing subsequence.
 
 ---
 
+## All Possible Edge Cases
+1. **Already sorted:** LIS = N
+2. **Reverse sorted:** LIS = 1
+3. **All equal:** LIS = 1
+4. **Single element**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

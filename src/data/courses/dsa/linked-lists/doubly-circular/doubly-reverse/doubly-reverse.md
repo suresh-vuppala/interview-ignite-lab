@@ -12,6 +12,15 @@ Reverse a doubly linked list.
 ## Constraints
 - `0 ≤ N ≤ 10⁵`
 
+## All Possible Edge Cases
+1. **Empty / single node**
+2. **Two nodes: swap**
+3. **Verify both prev and next after reverse**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

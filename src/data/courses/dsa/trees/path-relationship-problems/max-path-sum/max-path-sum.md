@@ -20,6 +20,16 @@ Find the maximum path sum in a binary tree. A path can start and end at ANY node
 
 ---
 
+## All Possible Edge Cases
+1. **All negative:** pick single max node
+2. **Path doesn't need to include root**
+3. **Single node**
+4. **Path can go left→node→right**
+
+<br>
+
+---
+
 ## Solution 1: Check all paths between all pairs
 
 **Intuition:**

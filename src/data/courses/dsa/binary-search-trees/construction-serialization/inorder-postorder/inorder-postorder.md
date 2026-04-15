@@ -17,6 +17,15 @@ Construct a binary tree from inorder and postorder traversal arrays.
 
 ---
 
+## All Possible Edge Cases
+1. **Single node**
+2. **Skewed tree**
+3. **Invalid input (mismatched arrays)**
+
+<br>
+
+---
+
 ## Solution 1: Try all possible trees
 
 **Intuition:**

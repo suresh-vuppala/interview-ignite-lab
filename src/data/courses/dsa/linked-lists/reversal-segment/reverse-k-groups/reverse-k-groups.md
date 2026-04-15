@@ -17,6 +17,16 @@ Reverse nodes in k-group segments. If remaining nodes < k, leave them as-is.
 
 ---
 
+## All Possible Edge Cases
+1. **K = 1:** no change
+2. **K = N:** single full reverse
+3. **Last group smaller than K:** leave as-is
+4. **K > N:** no reversal**
+
+<br>
+
+---
+
 ## Solution 1: Recursive with array copy per group
 
 **Intuition:**

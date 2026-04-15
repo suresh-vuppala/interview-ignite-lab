@@ -17,6 +17,16 @@ Find the floor (largest value ≤ key) and ceil (smallest value ≥ key) in a BS
 
 ---
 
+## All Possible Edge Cases
+1. **Key exists in BST:** floor = ceil = key
+2. **Key smaller than all:** floor doesn't exist
+3. **Key larger than all:** ceil doesn't exist
+4. **Single node BST**
+
+<br>
+
+---
+
 ## Solution 1: Inorder traversal to sorted array, binary search
 
 **Intuition:**

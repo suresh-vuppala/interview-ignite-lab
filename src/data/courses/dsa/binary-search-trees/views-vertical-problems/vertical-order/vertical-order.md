@@ -15,6 +15,15 @@ Return nodes grouped by vertical column (horizontal distance), ordered top-to-bo
 
 ---
 
+## All Possible Edge Cases
+1. **Single node:** one column
+2. **Skewed tree:** each node in different column
+3. **Nodes at same column same level**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

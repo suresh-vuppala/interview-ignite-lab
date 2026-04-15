@@ -17,6 +17,16 @@ Check if a number N is prime.
 
 ---
 
+## All Possible Edge Cases
+1. **N = 0 or 1:** NOT prime
+2. **N = 2:** smallest and only even prime
+3. **Even N > 2:** NOT prime
+4. **Large prime near 10⁹**
+
+<br>
+
+---
+
 ## Solution 1: Check all 2 to N-1
 
 **Intuition:**

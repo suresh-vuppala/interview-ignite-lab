@@ -18,6 +18,16 @@ Precompute 2^k-th ancestors for O(log N) ancestor/LCA queries.
 
 ---
 
+## All Possible Edge Cases
+1. **Leaf node queries
+2. **Root ancestor query: K > depth returns -1
+3. **K = 0: node itself
+4. **Skewed tree (linked list shape)**
+
+<br>
+
+---
+
 ## Solution 1: Walk up one ancestor at a time
 
 **Intuition:**

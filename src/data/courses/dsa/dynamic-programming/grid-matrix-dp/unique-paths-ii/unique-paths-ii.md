@@ -16,6 +16,16 @@ Same as unique paths but with obstacles (grid[i][j]=1 means blocked).
 
 ---
 
+## All Possible Edge Cases
+1. **Start cell blocked:** 0 paths
+2. **End cell blocked:** 0 paths
+3. **No obstacles:** same as unique-paths
+4. **Entire row/column blocked**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

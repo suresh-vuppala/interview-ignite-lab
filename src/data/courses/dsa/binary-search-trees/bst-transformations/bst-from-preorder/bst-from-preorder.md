@@ -17,6 +17,16 @@ Construct a BST from a given preorder traversal.
 
 ---
 
+## All Possible Edge Cases
+1. **Single element**
+2. **Sorted ascending (right-skewed)**
+3. **Sorted descending (left-skewed)**
+4. **Invalid preorder (not a valid BST)**
+
+<br>
+
+---
+
 ## Solution 1: Insert elements one by one into BST
 
 **Intuition:**

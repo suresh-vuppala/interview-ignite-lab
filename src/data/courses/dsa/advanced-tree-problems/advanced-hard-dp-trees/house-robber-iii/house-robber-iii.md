@@ -15,6 +15,16 @@ Houses form a binary tree. Can't rob directly connected (parent-child). Maximize
 
 ---
 
+## All Possible Edge Cases
+1. **Single node:** rob it
+2. **All values in left subtree**
+3. **Alternating levels: rob every other level
+4. **Linear tree (linked list)**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

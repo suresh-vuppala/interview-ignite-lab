@@ -17,6 +17,15 @@ Find the middle of a linked list (duplicate of find-middle-node but in two-point
 
 ---
 
+## All Possible Edge Cases
+1. **Odd length:** exact middle
+2. **Even length:** second of two middles
+3. **Single node**
+
+<br>
+
+---
+
 ## Solution 1: Count then traverse
 
 **Intuition:**

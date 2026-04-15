@@ -15,6 +15,16 @@ Return the left view of a binary tree — first node visible at each level when 
 
 ---
 
+## All Possible Edge Cases
+1. **Skewed right:** only root visible
+2. **Skewed left:** all nodes visible
+3. **Single node**
+4. **Complete binary tree**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

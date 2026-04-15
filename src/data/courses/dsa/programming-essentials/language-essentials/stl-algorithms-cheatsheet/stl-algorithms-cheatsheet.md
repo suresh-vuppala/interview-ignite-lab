@@ -94,3 +94,7 @@ collections.Counter(arr)             # Frequency map
 | `count` | O(n) |
 
 <br>
+
+
+## All Possible Edge Cases
+1. **N/A — reference material**

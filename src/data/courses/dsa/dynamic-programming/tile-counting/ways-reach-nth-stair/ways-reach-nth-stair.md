@@ -17,6 +17,16 @@ Count ways to reach step N if you can take 1, 2, or 3 steps at a time.
 
 ---
 
+## All Possible Edge Cases
+1. **N = 0:** 1 way
+2. **N = 1:** 1 way
+3. **N = 2:** 2 ways (1+1 or 2)
+4. **Large N:** overflow
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

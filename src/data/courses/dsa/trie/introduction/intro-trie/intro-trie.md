@@ -36,3 +36,7 @@ A trie (prefix tree) is a tree-like data structure where each node represents a 
 5. **Advanced** — Compressed trie, ternary search tree, wildcards
 
 <br>
+
+
+## All Possible Edge Cases
+1. **N/A — introductory overview**

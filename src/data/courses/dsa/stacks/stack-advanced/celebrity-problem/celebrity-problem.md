@@ -21,6 +21,16 @@ In a party of N people, find the celebrity. A celebrity is known by everyone but
 
 ---
 
+## All Possible Edge Cases
+1. **No celebrity exists: return -1
+2. **First person is celebrity
+3. **Last person is celebrity
+4. **Everyone knows everyone: no celebrity**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force — Check All
 
 **Intuition:**

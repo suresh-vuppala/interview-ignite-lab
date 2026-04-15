@@ -15,6 +15,16 @@ At most 2 transactions. Maximize profit.
 
 ---
 
+## All Possible Edge Cases
+1. **Only one good transaction exists**
+2. **No profitable transaction:** 0
+3. **Best to use both transactions**
+4. **All decreasing**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

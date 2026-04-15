@@ -20,6 +20,16 @@ Sort a stack such that the smallest elements are on the top. You can only use on
 
 ---
 
+## All Possible Edge Cases
+1. **Already sorted
+2. **Reverse sorted: worst case
+3. **All same values
+4. **Single element**
+
+<br>
+
+---
+
 ## Solution 1: Naive / Brute Force Approach
 
 **Intuition:**

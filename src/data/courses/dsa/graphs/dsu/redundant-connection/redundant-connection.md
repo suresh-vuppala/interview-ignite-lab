@@ -17,6 +17,15 @@ Find the edge that, when removed, makes the graph a valid tree. The graph has ex
 
 ---
 
+## All Possible Edge Cases
+1. **Last edge in input creates cycle**
+2. **Multiple edges could be removed
+3. **Return the one appearing last in input**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

@@ -18,6 +18,15 @@ Find maximum XOR of any two numbers in an array.
 
 ---
 
+## All Possible Edge Cases
+1. **All same numbers: XOR = 0**
+2. **Two numbers with all opposite bits: max XOR
+3. **Single element: XOR with itself = 0**
+
+<br>
+
+---
+
 ## Solution 1: Check all pairs
 
 **Intuition:**

@@ -17,6 +17,16 @@ Two nodes in a BST are swapped by mistake. Recover the BST without changing its 
 
 ---
 
+## All Possible Edge Cases
+1. **Adjacent nodes swapped**
+2. **Non-adjacent nodes swapped**
+3. **Root node is one of the swapped**
+4. **Two-node tree swapped**
+
+<br>
+
+---
+
 ## Solution 1: Inorder to array, find swapped, fix
 
 **Intuition:**

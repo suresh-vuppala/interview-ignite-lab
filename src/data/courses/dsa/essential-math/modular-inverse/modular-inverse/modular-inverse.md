@@ -18,6 +18,16 @@ Find modular multiplicative inverse of a under mod m.
 
 ---
 
+## All Possible Edge Cases
+1. **a = 1:** inverse is 1
+2. **gcd(a, M) ≠ 1:** no inverse exists
+3. **M is not prime:** can't use Fermat's
+4. **a = M-1:** inverse is M-1
+
+<br>
+
+---
+
 ## Solution 1: Try all values
 
 **Intuition:**

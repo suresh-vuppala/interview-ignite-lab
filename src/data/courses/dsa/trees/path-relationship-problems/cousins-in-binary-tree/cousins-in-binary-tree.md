@@ -17,6 +17,15 @@ Given a binary tree and two values x and y, check if nodes with values x and y a
 
 ---
 
+## All Possible Edge Cases
+1. **Same parent → NOT cousins (siblings)**
+2. **Different depths → NOT cousins**
+3. **Root's children: depth 1, no cousins**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

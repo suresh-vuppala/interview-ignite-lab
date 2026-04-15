@@ -15,6 +15,16 @@ Find minimum number of coins to make amount. Unlimited supply of each coin.
 
 ---
 
+## All Possible Edge Cases
+1. **Amount = 0:** 0 coins
+2. **No valid combination:** return -1
+3. **Single coin type**
+4. **Coin value = 1:** amount coins needed**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

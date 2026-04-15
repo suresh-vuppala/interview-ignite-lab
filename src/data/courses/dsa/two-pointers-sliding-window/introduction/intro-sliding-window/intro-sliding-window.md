@@ -46,3 +46,7 @@ for right in range(n):
 - **Counting:** Use `atMost(k) - atMost(k-1)` trick for "exactly K" problems
 
 <br>
+
+
+## All Possible Edge Cases
+1. **N/A — introductory overview**

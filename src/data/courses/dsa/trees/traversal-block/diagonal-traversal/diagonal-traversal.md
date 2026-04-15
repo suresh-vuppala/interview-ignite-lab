@@ -20,6 +20,15 @@ Print the diagonal traversal of a binary tree. Nodes on the same diagonal (root 
 
 ---
 
+## All Possible Edge Cases
+1. **Right-skewed:** all in one diagonal
+2. **Left-skewed:** each separate diagonal
+3. **Single node**
+
+<br>
+
+---
+
 ## Solution 1: DFS with diagonal index
 
 **Intuition:**

@@ -18,6 +18,14 @@ Find maximum XOR of a number with any array element ≤ a constraint.
 
 ---
 
+## All Possible Edge Cases
+1. **No values within constraint: -1
+2. **All values within constraint**
+
+<br>
+
+---
+
 ## Solution 1: Check all valid pairs
 
 **Intuition:**

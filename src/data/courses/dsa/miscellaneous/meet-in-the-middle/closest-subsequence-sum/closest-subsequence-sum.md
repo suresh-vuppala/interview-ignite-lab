@@ -19,6 +19,15 @@ Find subsequence sum closest to a goal.
 
 ---
 
+## All Possible Edge Cases
+1. **Exact match possible: diff = 0
+2. **Empty subsequence (sum=0) is closest
+3. **All positive or all negative**
+
+<br>
+
+---
+
 ## Solution 1: Try all subsequences
 
 **Intuition:**

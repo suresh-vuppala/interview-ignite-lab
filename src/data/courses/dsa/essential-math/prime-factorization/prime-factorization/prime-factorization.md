@@ -17,6 +17,16 @@ Find all prime factors of N with their multiplicities.
 
 ---
 
+## All Possible Edge Cases
+1. **N is prime:** single factor
+2. **Power of 2:** only factor is 2
+3. **Product of two large primes**
+4. **N = 1:** no prime factors
+
+<br>
+
+---
+
 ## Solution 1: Trial division up to N
 
 **Intuition:**

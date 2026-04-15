@@ -17,6 +17,16 @@ Reverse the first k nodes of a linked list.
 
 ---
 
+## All Possible Edge Cases
+1. **K = 0:** no change
+2. **K = 1:** no change
+3. **K = N:** reverse entire list
+4. **K > N:** reverse whatever exists**
+
+<br>
+
+---
+
 ## Solution 1: Copy to array, reverse, rebuild
 
 **Intuition:**

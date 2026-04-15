@@ -17,6 +17,16 @@ N posts, K colors. No more than 2 consecutive posts same color. Count ways.
 
 ---
 
+## All Possible Edge Cases
+1. **N = 0:** 0 ways
+2. **N = 1:** K ways
+3. **N = 2:** K² ways
+4. **K = 1, N > 2:** 0 ways (forced same color)**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

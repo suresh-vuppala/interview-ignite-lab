@@ -17,6 +17,16 @@ Find all root-to-leaf paths where the sum equals a given target. Return the actu
 
 ---
 
+## All Possible Edge Cases
+1. **No path matches:** empty result
+2. **Multiple paths with same sum**
+3. **Path is just root (if leaf)**
+4. **Negative values creating sum**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

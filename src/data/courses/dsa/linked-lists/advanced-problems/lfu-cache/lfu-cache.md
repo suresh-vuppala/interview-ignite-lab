@@ -16,6 +16,16 @@ Design a Least Frequently Used (LFU) cache. O(1) for get and put. When capacity 
 
 ---
 
+## All Possible Edge Cases
+1. **Tie in frequency:** evict least recently used
+2. **Capacity = 0:** never stores
+3. **Same key updated multiple times
+4. **Get increments frequency**
+
+<br>
+
+---
+
 ## Solution 1: Array + frequency counter
 
 **Intuition:**

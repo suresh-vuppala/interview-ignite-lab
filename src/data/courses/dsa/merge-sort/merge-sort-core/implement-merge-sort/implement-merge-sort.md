@@ -15,6 +15,17 @@ Divide array in half, sort each, merge sorted halves.
 
 ---
 
+## All Possible Edge Cases
+1. **Already sorted: still O(N log N)
+2. **Reverse sorted
+3. **Single element
+4. **All equal elements
+5. **Stability: equal elements maintain order**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force
 
 **Intuition:**

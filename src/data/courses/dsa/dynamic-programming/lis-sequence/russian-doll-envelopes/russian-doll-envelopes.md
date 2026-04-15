@@ -15,6 +15,16 @@ Find max number of envelopes you can nest (both width and height must be strictl
 
 ---
 
+## All Possible Edge Cases
+1. **All same width:** can't nest any
+2. **Sorted by both dimensions:** nest all
+3. **Single envelope**
+4. **Same width different heights**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

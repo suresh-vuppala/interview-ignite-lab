@@ -51,6 +51,15 @@ Explanation: The only valid index pair is i = 0 and j = 1, and isPrefixAndSuffix
 
 ---
 
+## All Possible Edge Cases
+1. **No valid pairs: 0
+2. **Word is both prefix and suffix of another
+3. **i < j ordering constraint**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force - Check All Pairs
 
 **Intuition:**

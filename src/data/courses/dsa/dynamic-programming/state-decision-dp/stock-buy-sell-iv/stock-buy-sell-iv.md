@@ -15,6 +15,15 @@ At most K transactions. Maximize profit.
 
 ---
 
+## All Possible Edge Cases
+1. **K ≥ N/2:** equivalent to unlimited transactions
+2. **K = 0:** profit = 0
+3. **K = 1:** same as buy-sell-i**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

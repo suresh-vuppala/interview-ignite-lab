@@ -17,6 +17,16 @@ Construct a binary tree from inorder and preorder traversal arrays.
 
 ---
 
+## All Possible Edge Cases
+1. **Single node**
+2. **Duplicate values (ambiguous tree)**
+3. **Skewed tree**
+4. **Empty arrays**
+
+<br>
+
+---
+
 ## Solution 1: Try all possible trees
 
 **Intuition:**

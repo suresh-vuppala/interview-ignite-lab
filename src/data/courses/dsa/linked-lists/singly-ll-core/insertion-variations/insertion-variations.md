@@ -16,6 +16,16 @@ Insert a node at the head, tail, or a specific position in a singly linked list.
 
 ---
 
+## All Possible Edge Cases
+1. **Insert into empty list**
+2. **Insert at head**
+3. **Insert at tail**
+4. **Insert at position beyond length**
+
+<br>
+
+---
+
 ## Solution 1: Rebuild entire list
 
 **Intuition:**

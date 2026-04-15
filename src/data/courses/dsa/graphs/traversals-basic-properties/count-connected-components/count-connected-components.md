@@ -17,6 +17,15 @@ Count the number of connected components in an undirected graph.
 
 ---
 
+## All Possible Edge Cases
+1. **All connected:** 1 component
+2. **All isolated:** V components
+3. **Single vertex**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

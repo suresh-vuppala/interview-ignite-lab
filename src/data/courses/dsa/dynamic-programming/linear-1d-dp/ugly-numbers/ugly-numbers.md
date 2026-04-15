@@ -17,6 +17,15 @@ Find the nth ugly number. Ugly numbers have only 2, 3, 5 as prime factors. Seque
 
 ---
 
+## All Possible Edge Cases
+1. **N = 1:** return 1
+2. **Large N:** need efficient generation
+3. **Factors only 2, 3, 5**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

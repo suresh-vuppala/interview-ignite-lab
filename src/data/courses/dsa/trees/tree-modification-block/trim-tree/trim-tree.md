@@ -17,6 +17,16 @@ Trim a BST so that all node values are within [low, high]. Return the root of th
 
 ---
 
+## All Possible Edge Cases
+1. **Entire tree within range: unchanged**
+2. **Root out of range**
+3. **All nodes out of range: return null
+4. **Range covers single value**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

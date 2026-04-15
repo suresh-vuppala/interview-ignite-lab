@@ -18,6 +18,15 @@ Java HashMap internals: hashCode, equals, tree buckets.
 
 ---
 
+## All Possible Edge Cases
+1. **Null key handling
+2. **Treeification at bucket size > 8
+3. **equals() without hashCode(): bugs**
+
+<br>
+
+---
+
 ## Solution 1: N/A — implementation knowledge
 
 **Intuition:**

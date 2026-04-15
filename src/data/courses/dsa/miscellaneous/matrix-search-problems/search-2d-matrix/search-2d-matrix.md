@@ -19,6 +19,16 @@ Search for target in a matrix where each row is sorted and first element of each
 
 ---
 
+## All Possible Edge Cases
+1. **Target < first element: false
+2. **Target > last element: false
+3. **1×1 matrix
+4. **Target at boundary**
+
+<br>
+
+---
+
 ## Solution 1: Scan entire matrix
 
 **Intuition:**

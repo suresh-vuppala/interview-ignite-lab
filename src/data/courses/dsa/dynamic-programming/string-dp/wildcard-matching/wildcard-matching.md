@@ -16,6 +16,16 @@ Implement wildcard pattern matching with '?' (any single char) and '*' (any sequ
 
 ---
 
+## All Possible Edge Cases
+1. **Pattern is all *:** matches anything
+2. **No wildcards:** exact match only
+3. **Empty string with * pattern:** true
+4. **Consecutive * characters**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

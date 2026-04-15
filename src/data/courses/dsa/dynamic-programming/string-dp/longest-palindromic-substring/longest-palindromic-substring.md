@@ -16,6 +16,16 @@ Find the longest palindromic substring.
 
 ---
 
+## All Possible Edge Cases
+1. **Entire string is palindrome**
+2. **No palindrome > 1 char**
+3. **Even-length vs odd-length palindrome
+4. **Single character**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

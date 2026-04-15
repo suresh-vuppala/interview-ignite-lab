@@ -17,6 +17,16 @@ Build an adjacency list representation of a graph from a list of edges.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty graph:** no edges
+2. **Self-loops**
+3. **Parallel edges between same pair
+4. **Dense vs sparse graph**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

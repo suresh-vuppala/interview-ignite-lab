@@ -17,6 +17,16 @@ Understand the difference between subarrays, subsequences, and subsets.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty array: 1 subarray (empty), 1 subsequence, 1 subset
+2. **Subarrays are contiguous
+3. **Subsequences maintain order
+4. **Subsets ignore order**
+
+<br>
+
+---
+
 ## Solution 1: N/A — conceptual
 
 **Intuition:**

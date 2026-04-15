@@ -17,6 +17,16 @@ Find the distance (number of edges) between two nodes in a binary tree.
 
 ---
 
+## All Possible Edge Cases
+1. **Same node:** distance = 0
+2. **Parent-child:** distance = 1
+3. **Nodes in different subtrees**
+4. **One node is root**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

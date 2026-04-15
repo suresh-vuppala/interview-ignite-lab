@@ -18,6 +18,16 @@ Design simplified Twitter: postTweet, getNewsFeed, follow, unfollow.
 
 ---
 
+## All Possible Edge Cases
+1. **User with no tweets
+2. **User with no followees: only own tweets
+3. **Follow/unfollow self
+4. **More than 10 tweets: show 10 most recent**
+
+<br>
+
+---
+
 ## Solution 1: Scan all tweets
 
 **Intuition:**

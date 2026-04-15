@@ -18,6 +18,16 @@ Generate all letter combinations from phone number digit mapping.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty input: return []
+2. **Digit 1: no letters mapped
+3. **Single digit: 3-4 combinations
+4. **Digits 7,9 have 4 letters**
+
+<br>
+
+---
+
 ## Solution 1: Same — backtracking IS the approach
 
 **Intuition:**

@@ -17,6 +17,15 @@ Find the maximum sum of any root-to-leaf path.
 
 ---
 
+## All Possible Edge Cases
+1. **All negative values:** pick least negative path
+2. **Single node**
+3. **Skewed tree: only one path**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

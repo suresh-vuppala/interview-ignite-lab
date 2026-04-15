@@ -15,6 +15,15 @@ Unbounded Knapsack: same as 0/1 but each item can be used unlimited times.
 
 ---
 
+## All Possible Edge Cases
+1. **Same as 0/1 but items reusable**
+2. **Single item repeated to fill**
+3. **Lightest item doesn't fit:** profit = 0
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

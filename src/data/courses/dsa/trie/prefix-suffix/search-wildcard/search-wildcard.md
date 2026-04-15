@@ -19,6 +19,15 @@ Search in trie with '.' matching any single character.
 
 ---
 
+## All Possible Edge Cases
+1. **All dots: matches any word of same length
+2. **No dots: exact search
+3. **Word not in dictionary**
+
+<br>
+
+---
+
 ## Solution 1: Brute force string matching
 
 **Intuition:**

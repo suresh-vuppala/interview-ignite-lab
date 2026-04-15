@@ -18,6 +18,15 @@ Replace words in sentence with their shortest root from a dictionary.
 
 ---
 
+## All Possible Edge Cases
+1. **No root matches: sentence unchanged**
+2. **Multiple roots match same word: use shortest
+3. **Root = entire word**
+
+<br>
+
+---
+
 ## Solution 1: Check each root against each word
 
 **Intuition:**

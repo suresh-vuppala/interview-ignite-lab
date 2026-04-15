@@ -18,6 +18,14 @@ For each word, compute sum of scores where score of prefix = count of words havi
 
 ---
 
+## All Possible Edge Cases
+1. **All words share a prefix: high scores
+2. **No shared prefixes: each score = word length**
+
+<br>
+
+---
+
 ## Solution 1: Count each prefix manually
 
 **Intuition:**

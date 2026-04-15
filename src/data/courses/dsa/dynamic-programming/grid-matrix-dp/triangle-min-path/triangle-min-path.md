@@ -16,6 +16,16 @@ Find minimum path sum from top to bottom of a triangle. Each step can go to adja
 
 ---
 
+## All Possible Edge Cases
+1. **Single row:** just that element
+2. **All same values**
+3. **Negative values in triangle**
+4. **Very deep triangle**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

@@ -17,6 +17,15 @@ Given an m×n grid of heights, find all cells where water can flow to BOTH the P
 
 ---
 
+## All Possible Edge Cases
+1. **All same height:** every cell reaches both
+2. **1×1 grid:** reaches both oceans
+3. **Strictly decreasing from corner**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

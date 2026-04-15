@@ -18,6 +18,16 @@ Find the maximum sum of any BST subtree in a binary tree.
 
 ---
 
+## All Possible Edge Cases
+1. **Negative values: BST sum could be negative
+2. **Max sum BST is a single positive node
+3. **Entire tree is BST: sum = total
+4. **No valid BST subtree: return 0**
+
+<br>
+
+---
+
 ## Solution 1: Check every subtree
 
 **Intuition:**

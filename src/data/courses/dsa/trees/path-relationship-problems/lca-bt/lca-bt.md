@@ -20,6 +20,16 @@ Find the Lowest Common Ancestor (LCA) of two nodes p and q in a binary tree.
 
 ---
 
+## All Possible Edge Cases
+1. **One node is ancestor of other**
+2. **Both nodes are same**
+3. **Nodes in different subtrees → LCA = root
+4. **One node doesn't exist in tree**
+
+<br>
+
+---
+
 ## Solution 1: Store paths, compare
 
 **Intuition:**

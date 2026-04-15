@@ -17,6 +17,16 @@ Find the Kth ancestor of a given node in a binary tree.
 
 ---
 
+## All Possible Edge Cases
+1. **K = 0:** the node itself
+2. **K exceeds depth:** doesn't exist
+3. **K = depth:** root
+4. **Node is root, K > 0: doesn't exist**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

@@ -16,6 +16,16 @@ Knight starts at top-left, must reach bottom-right princess. Each cell adds/subt
 
 ---
 
+## All Possible Edge Cases
+1. **1×1 grid:** max(1, 1-cell_value)
+2. **All positive cells:** need HP = 1
+3. **Large negative cell at start**
+4. **Path choice affects starting HP**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

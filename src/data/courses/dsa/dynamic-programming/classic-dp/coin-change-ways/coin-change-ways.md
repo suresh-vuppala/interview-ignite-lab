@@ -15,6 +15,16 @@ Count the number of ways to make amount using given coins (unlimited supply).
 
 ---
 
+## All Possible Edge Cases
+1. **Amount = 0:** 1 way (use nothing)
+2. **No coins:** 0 ways
+3. **Single coin type: amount must be divisible**
+4. **Very large amount**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

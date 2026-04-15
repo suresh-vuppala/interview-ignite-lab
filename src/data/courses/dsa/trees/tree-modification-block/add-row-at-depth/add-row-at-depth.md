@@ -17,6 +17,15 @@ Add a row of nodes with a given value at a given depth in a binary tree.
 
 ---
 
+## All Possible Edge Cases
+1. **Depth = 1: new root with old tree as left child**
+2. **Depth = max_depth + 1: add at leaf level
+3. **Single node tree**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

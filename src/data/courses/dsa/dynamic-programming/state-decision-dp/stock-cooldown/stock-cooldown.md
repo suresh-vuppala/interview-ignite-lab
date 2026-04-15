@@ -15,6 +15,15 @@ Buy/sell with 1-day cooldown after selling.
 
 ---
 
+## All Possible Edge Cases
+1. **Two days:** buy day 1, sell day 2 (no cooldown needed)
+2. **All decreasing:** profit = 0
+3. **Cooldown prevents consecutive sells**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

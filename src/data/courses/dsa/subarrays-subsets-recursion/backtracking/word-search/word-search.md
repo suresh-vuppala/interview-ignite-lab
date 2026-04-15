@@ -19,6 +19,16 @@ Check if a word exists in grid by following adjacent cells (each cell used once)
 
 ---
 
+## All Possible Edge Cases
+1. **Word longer than total cells: impossible
+2. **First letter not in grid: quick reject
+3. **Same cell can't be reused in one path
+4. **Single cell grid, single char word**
+
+<br>
+
+---
+
 ## Solution 1: Check all paths
 
 **Intuition:**

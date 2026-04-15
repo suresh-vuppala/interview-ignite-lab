@@ -17,6 +17,16 @@ Check if a linked list is a palindrome.
 
 ---
 
+## All Possible Edge Cases
+1. **Single node:** palindrome
+2. **Two nodes same value:** palindrome
+3. **Two nodes different:** not palindrome
+4. **Odd vs even length palindromes**
+
+<br>
+
+---
+
 ## Solution 1: Copy to Array + Two Pointers — O(N) space
 
 **Intuition:**

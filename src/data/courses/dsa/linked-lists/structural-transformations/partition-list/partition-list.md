@@ -16,6 +16,16 @@ Partition list around value x: all nodes < x come before nodes ≥ x.
 
 ---
 
+## All Possible Edge Cases
+1. **All elements < x:** no change
+2. **All elements ≥ x:** no change
+3. **x larger than all / smaller than all
+4. **Empty list**
+
+<br>
+
+---
+
 ## Solution 1: Copy to array, partition, rebuild
 
 **Intuition:**

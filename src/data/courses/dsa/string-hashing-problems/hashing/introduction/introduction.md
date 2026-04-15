@@ -19,6 +19,16 @@ Introduction to string hashing concepts and applications.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty string: hash = 0
+2. **Single character
+3. **Hash collision: must verify strings match
+4. **Overflow in hash computation**
+
+<br>
+
+---
+
 ## Solution 1: Direct string comparison
 
 **Intuition:**

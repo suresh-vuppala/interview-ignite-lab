@@ -18,6 +18,15 @@ Partition string into all possible sets of palindromic substrings.
 
 ---
 
+## All Possible Edge Cases
+1. **Single character: 1 partition
+2. **Entire string palindrome: can return as single partition
+3. **No repeating characters: each char separate**
+
+<br>
+
+---
+
 ## Solution 1: Try all partitions and check
 
 **Intuition:**

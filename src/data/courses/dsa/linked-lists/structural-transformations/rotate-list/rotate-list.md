@@ -16,6 +16,16 @@ Rotate a linked list to the right by k places.
 
 ---
 
+## All Possible Edge Cases
+1. **K = 0:** no rotation
+2. **K = N:** back to original
+3. **K > N:** K %= N
+4. **Single node**
+
+<br>
+
+---
+
 ## Solution 1: Rotate one position K times
 
 **Intuition:**

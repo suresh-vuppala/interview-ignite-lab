@@ -18,6 +18,16 @@ Modular arithmetic: addition, subtraction, multiplication.
 
 ---
 
+## All Possible Edge Cases
+1. **Subtraction going negative:** add M before mod
+2. **Multiplication overflow:** use long long
+3. **M = 1:** result always 0
+4. **Exponent = 0:** result = 1
+
+<br>
+
+---
+
 ## Solution 1: Direct computation
 
 **Intuition:**

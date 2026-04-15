@@ -37,3 +37,7 @@ Sorting is one of the most fundamental operations in computer science. Understan
 5. **Applications** — Count Inversions, Sort Linked List
 
 <br>
+
+
+## All Possible Edge Cases
+1. **N/A — introductory overview**

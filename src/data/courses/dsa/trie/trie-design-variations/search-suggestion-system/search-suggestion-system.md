@@ -18,6 +18,15 @@ As user types each character, suggest top-3 lexicographically matching products.
 
 ---
 
+## All Possible Edge Cases
+1. **No matching products for a prefix
+2. **Fewer than 3 matches
+3. **All products match every prefix**
+
+<br>
+
+---
+
 ## Solution 1: Sort + binary search per prefix
 
 **Intuition:**

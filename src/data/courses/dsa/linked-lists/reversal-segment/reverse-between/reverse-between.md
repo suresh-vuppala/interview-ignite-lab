@@ -17,6 +17,16 @@ Reverse nodes from position left to position right (1-indexed) in a linked list.
 
 ---
 
+## All Possible Edge Cases
+1. **left = right:** no change
+2. **left = 1:** reverse from head
+3. **right = N:** reverse to tail
+4. **left = 1, right = N:** reverse entire list**
+
+<br>
+
+---
+
 ## Solution 1: Copy to array, reverse segment, rebuild
 
 **Intuition:**

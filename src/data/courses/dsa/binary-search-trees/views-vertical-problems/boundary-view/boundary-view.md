@@ -15,6 +15,16 @@ Print boundary nodes: left boundary + leaves + right boundary (anti-clockwise). 
 
 ---
 
+## All Possible Edge Cases
+1. **Single node:** just the root
+2. **Only left children**
+3. **Only right children**
+4. **Complete tree**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

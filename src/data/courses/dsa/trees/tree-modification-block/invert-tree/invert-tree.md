@@ -20,6 +20,16 @@ Invert a binary tree (mirror it). Swap every left and right child.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty tree**
+2. **Single node: no change**
+3. **Already symmetric: same after invert
+4. **Skewed tree: mirrors direction**
+
+<br>
+
+---
+
 ## Solution 1: BFS level-order swap
 
 **Intuition:**

@@ -18,6 +18,16 @@ Find all nodes at distance K from a target node in a binary tree.
 
 ---
 
+## All Possible Edge Cases
+1. **K = 0: only the target node
+2. **K exceeds tree depth: empty result
+3. **Target is root: only downward nodes
+4. **Target is leaf: must go upward through parent**
+
+<br>
+
+---
+
 ## Solution 1: DFS from every node checking distance
 
 **Intuition:**

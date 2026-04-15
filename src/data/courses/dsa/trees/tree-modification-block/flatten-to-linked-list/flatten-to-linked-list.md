@@ -17,6 +17,16 @@ Flatten a binary tree to a linked list in-place using preorder traversal. Use ri
 
 ---
 
+## All Possible Edge Cases
+1. **Empty tree**
+2. **Already flattened (right-skewed)
+3. **Left-skewed tree**
+4. **All left pointers must become null**
+
+<br>
+
+---
+
 ## Solution 1: Preorder to Array, Rebuild
 
 **Intuition:**

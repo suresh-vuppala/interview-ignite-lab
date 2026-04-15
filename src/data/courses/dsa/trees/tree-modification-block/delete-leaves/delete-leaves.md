@@ -17,6 +17,15 @@ Delete all leaf nodes with a given target value. After deletion, new leaves with
 
 ---
 
+## All Possible Edge Cases
+1. **All leaves have target: cascading deletion
+2. **No leaves match: unchanged
+3. **Root is only node with target: return null**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

@@ -16,6 +16,16 @@ Find the length of the longest common substring (contiguous) of two strings.
 
 ---
 
+## All Possible Edge Cases
+1. **No common substring:** length = 0
+2. **One string contains other entirely**
+3. **Single character strings**
+4. **Multiple substrings of same max length**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

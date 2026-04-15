@@ -16,6 +16,16 @@ Search for a value in a linked list and update a node's value.
 
 ---
 
+## All Possible Edge Cases
+1. **Value not found**
+2. **Empty list**
+3. **Multiple occurrences**
+4. **Update first vs all occurrences**
+
+<br>
+
+---
+
 ## Solution 1: N/A for search — linear scan is already optimal
 
 **Intuition:**

@@ -16,6 +16,16 @@ Check if s3 is formed by interleaving s1 and s2.
 
 ---
 
+## All Possible Edge Cases
+1. **len(s1)+len(s2) ≠ len(s3):** false
+2. **One string empty:** s3 must equal the other
+3. **s1 = s2:** multiple valid interleavings
+4. **No valid interleaving exists**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

@@ -17,6 +17,15 @@ Find the shortest path between two nodes in a weighted graph. Return the path an
 
 ---
 
+## All Possible Edge Cases
+1. **Unreachable node:** distance = ∞
+2. **Source = destination:** 0
+3. **Multiple shortest paths of same length**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

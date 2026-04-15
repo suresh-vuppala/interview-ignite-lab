@@ -15,6 +15,16 @@ Return the top view — nodes visible when viewed from above, ordered by horizon
 
 ---
 
+## All Possible Edge Cases
+1. **Skewed tree:** all nodes visible
+2. **Complete tree:** only boundary nodes
+3. **Overlapping columns:** first/last wins
+4. **Single node**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

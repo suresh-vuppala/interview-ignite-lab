@@ -17,6 +17,15 @@ Reverse a singly linked list recursively.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty list**
+2. **Single node**
+3. **Very long list: stack overflow risk**
+
+<br>
+
+---
+
 ## Solution 1: Iterative with extra array
 
 **Intuition:**

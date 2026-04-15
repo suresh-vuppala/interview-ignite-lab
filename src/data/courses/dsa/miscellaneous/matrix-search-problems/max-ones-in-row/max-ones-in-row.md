@@ -18,6 +18,15 @@ Find the row with maximum number of 1s in a binary matrix (rows sorted, 0s then 
 
 ---
 
+## All Possible Edge Cases
+1. **No 1s in any row: return -1
+2. **All rows same number of 1s: first row
+3. **First row has all 1s**
+
+<br>
+
+---
+
 ## Solution 1: Count 1s in each row
 
 **Intuition:**

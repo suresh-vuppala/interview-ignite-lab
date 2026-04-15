@@ -21,6 +21,15 @@ Implement a LIFO stack using only two queues. Support push, pop, top, and empty.
 
 ---
 
+## All Possible Edge Cases
+1. **Pop immediately after push
+2. **Multiple pushes then pop
+3. **Empty stack pop/top**
+
+<br>
+
+---
+
 ## Solution 1: Naive / Brute Force Approach
 
 **Intuition:**

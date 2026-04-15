@@ -18,6 +18,16 @@ Design autocomplete: given prefix, return top-3 hot sentences by frequency.
 
 ---
 
+## All Possible Edge Cases
+1. **No matches for prefix: empty list**
+2. **Fewer than 3 matches
+3. **New sentence added with #
+4. **Same prefix different frequencies**
+
+<br>
+
+---
+
 ## Solution 1: Scan all sentences each query
 
 **Intuition:**

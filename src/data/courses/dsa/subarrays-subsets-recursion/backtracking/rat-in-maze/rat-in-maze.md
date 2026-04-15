@@ -19,6 +19,16 @@ Find all paths from (0,0) to (N-1,N-1) in a maze with blocked cells.
 
 ---
 
+## All Possible Edge Cases
+1. **Start or end blocked: no path
+2. **Only one path exists
+3. **Multiple paths: find all
+4. **1×1 maze: already at destination**
+
+<br>
+
+---
+
 ## Solution 1: Same DFS approach
 
 **Intuition:**

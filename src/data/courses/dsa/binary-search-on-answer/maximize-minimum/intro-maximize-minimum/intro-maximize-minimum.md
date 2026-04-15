@@ -149,3 +149,7 @@ Use **Maximize Minimum** when:
 ---
 
 ```code```
+
+
+## All Possible Edge Cases
+1. **N/A — pattern overview**

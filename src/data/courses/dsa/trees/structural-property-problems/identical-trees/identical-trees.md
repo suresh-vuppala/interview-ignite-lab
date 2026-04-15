@@ -20,6 +20,16 @@ Given two binary trees, check if they are structurally identical and have the sa
 
 ---
 
+## All Possible Edge Cases
+1. **Both null:** identical
+2. **One null, one not:** not identical
+3. **Same structure, different values**
+4. **Same values, different structure**
+
+<br>
+
+---
+
 ## Solution 1: Serialize both, compare strings
 
 **Intuition:**

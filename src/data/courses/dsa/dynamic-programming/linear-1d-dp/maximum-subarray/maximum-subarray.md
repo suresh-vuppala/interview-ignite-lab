@@ -17,6 +17,16 @@ Find the contiguous subarray with the largest sum.
 
 ---
 
+## All Possible Edge Cases
+1. **All negative:** pick least negative
+2. **All positive:** entire array
+3. **Single element**
+4. **Alternating positive/negative**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

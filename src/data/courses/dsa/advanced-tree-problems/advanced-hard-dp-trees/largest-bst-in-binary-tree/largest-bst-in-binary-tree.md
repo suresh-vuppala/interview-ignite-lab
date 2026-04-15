@@ -17,6 +17,16 @@ Find the size of the largest BST subtree within a binary tree.
 
 ---
 
+## All Possible Edge Cases
+1. **Entire tree is BST:** size = N
+2. **No BST subtree larger than 1 node
+3. **Largest BST is a single leaf
+4. **Root violates BST but subtrees don't**
+
+<br>
+
+---
+
 ## Solution 1: Check every subtree
 
 **Intuition:**

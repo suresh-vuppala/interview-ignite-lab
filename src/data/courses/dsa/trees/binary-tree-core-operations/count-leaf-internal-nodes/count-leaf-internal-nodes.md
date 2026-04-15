@@ -20,6 +20,15 @@ Count the number of leaf nodes and internal nodes in a binary tree. A leaf has n
 
 ---
 
+## All Possible Edge Cases
+1. **Single node:** 1 leaf, 0 internal
+2. **Complete tree**
+3. **Skewed tree: all internal except last**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

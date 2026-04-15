@@ -20,6 +20,16 @@ Determine if a binary tree is height-balanced — the depth of the two subtrees 
 
 ---
 
+## All Possible Edge Cases
+1. **Empty tree:** balanced
+2. **Single node:** balanced
+3. **Skewed tree:** unbalanced
+4. **Balanced but large height difference in subtrees**
+
+<br>
+
+---
+
 ## Solution 1: Top-Down — Check Height at Each Node
 
 **Intuition:** For each node, compute heights of left and right subtrees and check if they differ by > 1.

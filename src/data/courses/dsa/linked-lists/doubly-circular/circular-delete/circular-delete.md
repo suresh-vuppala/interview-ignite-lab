@@ -12,6 +12,15 @@ Delete a node by value from a circular linked list.
 ## Constraints
 - `1 ≤ N ≤ 10⁵`
 
+## All Possible Edge Cases
+1. **Delete only node → empty list**
+2. **Delete head node**
+3. **Node not in list**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

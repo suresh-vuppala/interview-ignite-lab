@@ -16,6 +16,16 @@ Find minimum sum path from top-left to bottom-right (move right or down).
 
 ---
 
+## All Possible Edge Cases
+1. **1×1 grid:** just that cell
+2. **All zeros:** sum = 0
+3. **Negative values:** changes optimal path
+4. **Single row or column**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

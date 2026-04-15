@@ -18,6 +18,15 @@ Generate unique subsets when array has duplicate elements.
 
 ---
 
+## All Possible Edge Cases
+1. **No duplicates: same as power set
+2. **All same: N+1 subsets
+3. **Sort first to group duplicates**
+
+<br>
+
+---
+
 ## Solution 1: Generate all then deduplicate
 
 **Intuition:**

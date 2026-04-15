@@ -15,6 +15,16 @@ Buy and sell stock once. Maximize profit.
 
 ---
 
+## All Possible Edge Cases
+1. **Prices always decreasing:** profit = 0
+2. **Prices always increasing:** buy first, sell last
+3. **Single day:** can't trade
+4. **All same prices**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

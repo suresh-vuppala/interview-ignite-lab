@@ -17,6 +17,16 @@ Count permutations of N elements where no element appears in its original positi
 
 ---
 
+## All Possible Edge Cases
+1. **N = 0:** 1 (empty derangement)
+2. **N = 1:** 0 (can't derange 1 element)
+3. **N = 2:** 1
+4. **Large N:** overflow
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

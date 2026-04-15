@@ -20,6 +20,15 @@ Return the postorder traversal of a binary tree (Left → Right → Root).
 
 ---
 
+## All Possible Edge Cases
+1. **Empty tree:** empty result
+2. **Single node**
+3. **Skewed tree**
+
+<br>
+
+---
+
 ## Solution 1: Recursive
 
 **Intuition:**

@@ -17,6 +17,15 @@ Detect a cycle in an undirected graph using Union-Find.
 
 ---
 
+## All Possible Edge Cases
+1. **Tree (V-1 edges):** no cycle
+2. **Self-loop:** cycle
+3. **Parallel edges between same pair**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

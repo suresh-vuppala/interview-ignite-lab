@@ -16,6 +16,16 @@ Find minimum cuts to partition s into palindromic substrings.
 
 ---
 
+## All Possible Edge Cases
+1. **Already palindrome:** 0 cuts
+2. **Each character different:** N-1 cuts
+3. **Single character:** 0 cuts
+4. **Repeated characters**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

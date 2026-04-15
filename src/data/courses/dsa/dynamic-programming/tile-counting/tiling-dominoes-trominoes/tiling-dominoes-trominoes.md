@@ -17,6 +17,15 @@ Tile a 2×N board using dominoes (1×2) and trominoes (L-shaped). Count ways mod
 
 ---
 
+## All Possible Edge Cases
+1. **N = 1:** 1 way
+2. **N = 2:** 2 ways
+3. **Large N:** use modular arithmetic**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

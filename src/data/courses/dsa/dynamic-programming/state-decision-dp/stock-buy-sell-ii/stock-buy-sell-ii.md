@@ -15,6 +15,16 @@ Buy and sell stock unlimited times. Maximize profit.
 
 ---
 
+## All Possible Edge Cases
+1. **Decreasing prices:** profit = 0
+2. **Increasing prices:** sum all consecutive gains
+3. **Single day**
+4. **Alternating up/down**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

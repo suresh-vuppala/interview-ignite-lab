@@ -17,6 +17,16 @@ Find the kth smallest and kth largest element in a BST.
 
 ---
 
+## All Possible Edge Cases
+1. **K = 1:** smallest or largest
+2. **K = N:** largest or smallest
+3. **K > N:** invalid
+4. **BST with only left/right children**
+
+<br>
+
+---
+
 ## Solution 1: Inorder to Array — O(N) time, O(N) space
 
 **Intuition:**

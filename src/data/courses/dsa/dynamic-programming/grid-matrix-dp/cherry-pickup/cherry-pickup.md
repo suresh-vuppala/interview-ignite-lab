@@ -16,6 +16,16 @@ Two people traverse grid from (0,0) to (n-1,n-1) and back. Collect maximum cherr
 
 ---
 
+## All Possible Edge Cases
+1. **1×N grid:** sum of max two elements
+2. **Robots start at same row but different columns
+3. **All zeros except corners**
+4. **N = 1 column: both robots on same cell**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

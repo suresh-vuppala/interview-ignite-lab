@@ -19,6 +19,16 @@ Fill a 9×9 Sudoku grid following row, column, and 3×3 box uniqueness rules.
 
 ---
 
+## All Possible Edge Cases
+1. **Already complete: valid as-is
+2. **Nearly empty: many backtracks needed
+3. **Invalid initial state: no solution
+4. **Exactly one solution guaranteed**
+
+<br>
+
+---
+
 ## Solution 1: Try all assignments
 
 **Intuition:**

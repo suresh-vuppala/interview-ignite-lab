@@ -17,6 +17,16 @@ Convert a binary tree to a doubly linked list using inorder traversal. Left poin
 
 ---
 
+## All Possible Edge Cases
+1. **Empty tree: null**
+2. **Single node: prev=next=null
+3. **Skewed tree**
+4. **Verify traversal in both directions**
+
+<br>
+
+---
+
 ## Solution 1: Inorder to array, build DLL
 
 **Intuition:**

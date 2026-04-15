@@ -12,6 +12,15 @@ Detect if a linked list is circular (last node points back to head, not just any
 ## Constraints
 - `0 ≤ N ≤ 10⁵`
 
+## All Possible Edge Cases
+1. **Not circular (has null next)**
+2. **Single node pointing to itself**
+3. **Empty list**
+
+<br>
+
+---
+
 ## Solution 1: Hash Set of visited nodes
 
 **Intuition:**

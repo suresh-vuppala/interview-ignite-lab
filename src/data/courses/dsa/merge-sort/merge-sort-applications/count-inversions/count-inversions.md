@@ -15,6 +15,16 @@ Count pairs (i,j) where i<j but a[i]>a[j].
 
 ---
 
+## All Possible Edge Cases
+1. **Sorted array: 0 inversions
+2. **Reverse sorted: N(N-1)/2 (maximum)
+3. **All equal: 0 inversions
+4. **Single element: 0**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force
 
 **Intuition:**

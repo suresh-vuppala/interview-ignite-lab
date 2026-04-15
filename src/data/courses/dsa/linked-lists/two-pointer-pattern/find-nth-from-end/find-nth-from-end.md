@@ -17,6 +17,15 @@ Find the nth node from the end of a linked list (don't remove — just return it
 
 ---
 
+## All Possible Edge Cases
+1. **N = 1:** last node
+2. **N = length:** first node
+3. **N > length:** doesn't exist**
+
+<br>
+
+---
+
 ## Solution 1: Count then traverse
 
 **Intuition:**

@@ -17,6 +17,16 @@ Common mathematical patterns in competitive programming.
 
 ---
 
+## All Possible Edge Cases
+1. **Catalan(0) = 1, Catalan(1) = 1**
+2. **Fibonacci overflow for large N**
+3. **Fast exponentiation: base = 0**
+4. **Modular arithmetic edge: mod by 1**
+
+<br>
+
+---
+
 ## Solution 1: Ad-hoc computation
 
 **Intuition:**

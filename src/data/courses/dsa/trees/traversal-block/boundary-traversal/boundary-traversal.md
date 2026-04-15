@@ -20,6 +20,15 @@ Print the boundary of a binary tree in anti-clockwise direction: left boundary (
 
 ---
 
+## All Possible Edge Cases
+1. **Single node:** just the root
+2. **Only left / only right children**
+3. **Complete tree**
+
+<br>
+
+---
+
 ## Solution 1: DFS collecting all then filtering
 
 **Intuition:**

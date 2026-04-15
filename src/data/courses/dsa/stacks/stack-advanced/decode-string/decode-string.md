@@ -21,6 +21,16 @@ Given an encoded string like "3[a2[c]]", decode it. The pattern is k[encoded_str
 
 ---
 
+## All Possible Edge Cases
+1. **No brackets: return as-is
+2. **Nested brackets: "2[a3[b]]" → "abbbabbb"
+3. **k = 1: just unwrap brackets
+4. **Adjacent encoded groups**
+
+<br>
+
+---
+
 ## Solution 1: Naive / Brute Force Approach
 
 **Intuition:**

@@ -16,6 +16,15 @@ Group odd-indexed nodes before even-indexed nodes.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty / single / two nodes**
+2. **All odd-indexed same value**
+3. **Already grouped**
+
+<br>
+
+---
+
 ## Solution 1: Create two new lists, concatenate
 
 **Intuition:**

@@ -20,6 +20,15 @@ Return the preorder traversal of a binary tree (Root → Left → Right).
 
 ---
 
+## All Possible Edge Cases
+1. **Empty tree:** empty result
+2. **Single node**
+3. **Skewed left / right**
+
+<br>
+
+---
+
 ## Solution 1: Recursive
 
 **Intuition:**

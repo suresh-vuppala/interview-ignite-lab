@@ -20,6 +20,15 @@ Convert a binary tree to its mirror (same as invert tree). Swap left and right c
 
 ---
 
+## All Possible Edge Cases
+1. **Empty tree**
+2. **Single node (already mirror)**
+3. **Verify children swapped at every level**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

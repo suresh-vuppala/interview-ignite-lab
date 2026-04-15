@@ -18,6 +18,15 @@ Generate all N! permutations of an array.
 
 ---
 
+## All Possible Edge Cases
+1. **Single element: 1 permutation
+2. **N! permutations total
+3. **All distinct elements assumed**
+
+<br>
+
+---
+
 ## Solution 1: Same — backtracking IS the approach
 
 **Intuition:**

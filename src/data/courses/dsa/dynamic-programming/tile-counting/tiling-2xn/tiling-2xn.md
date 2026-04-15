@@ -17,6 +17,16 @@ Fill a 2×N board with 1×2 tiles (horizontal or vertical). Count the number of 
 
 ---
 
+## All Possible Edge Cases
+1. **N = 0:** 1 way (empty)
+2. **N = 1:** 1 way
+3. **Large N:** overflow
+4. **Follows Fibonacci pattern**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

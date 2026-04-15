@@ -15,6 +15,14 @@ Understand stable vs unstable sorting.
 
 ---
 
+## All Possible Edge Cases
+1. **N/A — conceptual comparison
+2. **Equal elements: stable sort preserves original order**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force
 
 **Intuition:**

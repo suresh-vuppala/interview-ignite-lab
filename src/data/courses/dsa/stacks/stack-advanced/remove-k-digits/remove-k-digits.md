@@ -21,6 +21,16 @@ Given a non-negative integer represented as a string, remove k digits to make th
 
 ---
 
+## All Possible Edge Cases
+1. **K = N: return "0"
+2. **K = 0: unchanged
+3. **Leading zeros after removal
+4. **Already smallest possible (ascending)**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force — Try All Combinations
 
 **Intuition:**

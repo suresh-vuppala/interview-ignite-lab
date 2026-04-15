@@ -20,6 +20,16 @@ Given an array, find the next smaller element for each element. The next smaller
 
 ---
 
+## All Possible Edge Cases
+1. **Sorted ascending: each element's NSE is next
+2. **Sorted descending: no NSE for any (-1)
+3. **All same elements: no NSE
+4. **Single element**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force — O(N²)
 
 **Intuition:**

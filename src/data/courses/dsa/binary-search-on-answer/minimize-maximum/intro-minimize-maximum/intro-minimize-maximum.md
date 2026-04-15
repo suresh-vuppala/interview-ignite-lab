@@ -125,3 +125,7 @@ Use **Minimize Maximum** when:
 ---
 
 ```code```
+
+
+## All Possible Edge Cases
+1. **N/A — pattern overview**

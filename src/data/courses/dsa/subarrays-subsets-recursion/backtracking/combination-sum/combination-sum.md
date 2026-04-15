@@ -19,6 +19,16 @@ Find all unique combinations that sum to target. Each number can be used unlimit
 
 ---
 
+## All Possible Edge Cases
+1. **Target = 0: empty combination
+2. **No valid combination
+3. **Same candidate used multiple times
+4. **Target < smallest candidate**
+
+<br>
+
+---
+
 ## Solution 1: Try all combinations
 
 **Intuition:**

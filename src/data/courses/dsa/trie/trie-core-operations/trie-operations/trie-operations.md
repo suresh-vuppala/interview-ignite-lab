@@ -19,6 +19,16 @@ Implement Trie with insert, search, and startsWith operations.
 
 ---
 
+## All Possible Edge Cases
+1. **Search empty trie**
+2. **Prefix of existing word vs complete word**
+3. **Insert same word twice
+4. **Case sensitivity**
+
+<br>
+
+---
+
 ## Solution 1: Hash Set of words
 
 **Intuition:**

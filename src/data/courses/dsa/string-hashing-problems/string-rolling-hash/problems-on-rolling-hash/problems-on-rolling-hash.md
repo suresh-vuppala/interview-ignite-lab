@@ -18,6 +18,16 @@ String matching and duplicate substring problems using rolling hash.
 
 ---
 
+## All Possible Edge Cases
+1. **Pattern = text: match at position 0
+2. **No match exists
+3. **Hash collision: false positive → verify
+4. **Multiple occurrences**
+
+<br>
+
+---
+
 ## Solution 1: Brute force matching
 
 **Intuition:**

@@ -17,6 +17,16 @@ Find tree diameter (longest path between any two nodes) using DP.
 
 ---
 
+## All Possible Edge Cases
+1. **Single node: diameter = 0
+2. **Linear chain: diameter = N-1
+3. **Star graph: diameter = 2
+4. **Balanced binary tree**
+
+<br>
+
+---
+
 ## Solution 1: BFS from every node
 
 **Intuition:**

@@ -17,6 +17,16 @@ Each step has a cost. Pay the cost to climb 1 or 2 steps from that position. Fin
 
 ---
 
+## All Possible Edge Cases
+1. **Two elements:** min of both
+2. **All costs equal**
+3. **Zero cost steps**
+4. **Costs descending or ascending**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

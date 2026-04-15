@@ -22,3 +22,7 @@ A queue processes elements in the order they arrive — like a line at a store. 
 | Priority Queue | min/max extraction | Dijkstra, K-way merge (see Heaps) |
 
 <br>
+
+
+## All Possible Edge Cases
+1. **N/A — introductory overview**

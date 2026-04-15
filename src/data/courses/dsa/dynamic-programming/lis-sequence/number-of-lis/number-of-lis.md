@@ -15,6 +15,15 @@ Count the number of longest increasing subsequences.
 
 ---
 
+## All Possible Edge Cases
+1. **All same elements:** every element is LIS of length 1 → count = N
+2. **Strictly increasing:** count = 1
+3. **Multiple subsequences of same max length**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

@@ -17,6 +17,16 @@ Given a binary tree and a target sum, determine if the tree has a root-to-leaf p
 
 ---
 
+## All Possible Edge Cases
+1. **Target = root value, root is leaf:** true
+2. **No path with target sum**
+3. **Negative values in path**
+4. **Must end at leaf (not internal node)**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

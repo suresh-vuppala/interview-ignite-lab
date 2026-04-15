@@ -20,6 +20,15 @@ Find the diameter of a binary tree — the length of the longest path between an
 
 ---
 
+## All Possible Edge Cases
+1. **Single node:** diameter = 0
+2. **Skewed tree:** diameter = N-1
+3. **Diameter may not pass through root**
+
+<br>
+
+---
+
 ## Solution 1: For Each Node, Compute Left+Right Height
 
 **Intuition:**

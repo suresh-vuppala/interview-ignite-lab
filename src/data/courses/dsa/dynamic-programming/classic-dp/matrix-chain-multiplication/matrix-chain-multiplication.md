@@ -15,6 +15,16 @@ Find minimum number of scalar multiplications to multiply a chain of matrices.
 
 ---
 
+## All Possible Edge Cases
+1. **Two matrices:** only one way
+2. **All same dimensions**
+3. **Chain of 1×1 matrices**
+4. **Optimal split at first/last**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**

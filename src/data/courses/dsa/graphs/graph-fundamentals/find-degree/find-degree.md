@@ -17,6 +17,15 @@ Find the degree of each node in a graph. For directed graphs, find in-degree and
 
 ---
 
+## All Possible Edge Cases
+1. **Isolated vertex:** degree = 0
+2. **Self-loop:** adds 2 to degree
+3. **Directed graph:** in-degree vs out-degree**
+
+<br>
+
+---
+
 ## Solution 1: Brute Force / Naive Approach
 
 **Intuition:**

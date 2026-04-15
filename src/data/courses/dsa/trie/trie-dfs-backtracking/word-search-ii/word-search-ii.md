@@ -19,6 +19,16 @@ Find all words from a dictionary that exist in a grid by traversing adjacent cel
 
 ---
 
+## All Possible Edge Cases
+1. **No words found in board: empty result**
+2. **All words found
+3. **Duplicate words in input list
+4. **Word longer than total cells**
+
+<br>
+
+---
+
 ## Solution 1: DFS per word separately
 
 **Intuition:**

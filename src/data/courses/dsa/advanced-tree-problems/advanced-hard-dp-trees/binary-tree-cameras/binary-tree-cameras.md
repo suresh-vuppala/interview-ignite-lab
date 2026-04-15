@@ -17,6 +17,16 @@ Place minimum cameras on tree nodes to monitor all nodes. A camera monitors pare
 
 ---
 
+## All Possible Edge Cases
+1. **Single node:** 1 camera
+2. **Linear chain (skewed tree)**
+3. **Perfect binary tree: optimal placement every 3 levels
+4. **All leaf nodes need coverage from parent**
+
+<br>
+
+---
+
 ## Solution 1: DFS try all placements
 
 **Intuition:**

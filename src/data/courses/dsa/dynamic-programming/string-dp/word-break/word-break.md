@@ -16,6 +16,17 @@ Determine if s can be segmented into space-separated dictionary words.
 
 ---
 
+## All Possible Edge Cases
+1. **Entire string is one word**
+2. **Cannot be segmented:** false
+3. **Empty string:** true
+4. **Overlapping words in dictionary**
+5. **Same word used multiple times**
+
+<br>
+
+---
+
 ## Solution 1: Recursion (Brute Force)
 
 **Intuition:**

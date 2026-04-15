@@ -17,6 +17,16 @@ Merge k sorted linked lists into one sorted list.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty lists array**
+2. **Some lists empty**
+3. **K = 1:** return the single list
+4. **All lists have one element**
+
+<br>
+
+---
+
 ## Solution 1: Merge Pairs Iteratively — O(N × k)
 
 **Intuition:**

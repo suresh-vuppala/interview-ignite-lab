@@ -18,6 +18,15 @@ Find all index pairs where words[i]+words[j] forms a palindrome.
 
 ---
 
+## All Possible Edge Cases
+1. **Empty string: pairs with any palindrome word
+2. **Reverse pairs: "abc" and "cba"
+3. **Single character words**
+
+<br>
+
+---
+
 ## Solution 1: Check all pairs
 
 **Intuition:**

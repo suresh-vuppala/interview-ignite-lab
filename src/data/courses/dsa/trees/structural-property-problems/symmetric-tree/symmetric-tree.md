@@ -20,6 +20,16 @@ Check whether a binary tree is a mirror of itself (symmetric around its center).
 
 ---
 
+## All Possible Edge Cases
+1. **Single node:** symmetric
+2. **Left subtree ≠ mirror of right
+3. **Null tree:** symmetric
+4. **Values match but structure doesn't mirror**
+
+<br>
+
+---
+
 ## Solution 1: Naive / Brute Force Approach
 
 **Intuition:**

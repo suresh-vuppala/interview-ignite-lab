@@ -20,6 +20,16 @@ Implement Morris Inorder Traversal — O(1) space inorder traversal without recu
 
 ---
 
+## All Possible Edge Cases
+1. **Empty tree**
+2. **Right-skewed (no left children):** no threading needed
+3. **Left-skewed: maximum threading**
+4. **Tree must be fully restored after traversal**
+
+<br>
+
+---
+
 ## Solution 1: Standard recursive/iterative with stack
 
 **Intuition:**

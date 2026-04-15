@@ -18,6 +18,16 @@ Move coins in binary tree so each node has exactly 1. Return minimum moves.
 
 ---
 
+## All Possible Edge Cases
+1. **All coins at root: must push to leaves
+2. **Each node already has 1 coin: 0 moves
+3. **Leaf with 0 coins: parent must send 1
+4. **Node with many coins: distribute to subtree**
+
+<br>
+
+---
+
 ## Solution 1: BFS redistribution
 
 **Intuition:**

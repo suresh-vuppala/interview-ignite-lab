@@ -17,6 +17,16 @@ Given beginWord, endWord, and a word list, find the shortest transformation sequ
 
 ---
 
+## All Possible Edge Cases
+1. **endWord not in wordList:** return 0
+2. **beginWord = endWord:** return 0 or 1
+3. **No transformation possible
+4. **Very long word list**
+
+<br>
+
+---
+
 ## Solution 1: BFS + Check All Pairs
 
 **Intuition:**

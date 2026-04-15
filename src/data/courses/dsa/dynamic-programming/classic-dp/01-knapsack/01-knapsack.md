@@ -15,6 +15,16 @@
 
 ---
 
+## All Possible Edge Cases
+1. **Capacity = 0:** profit = 0
+2. **Single item fits:** take it
+3. **All items too heavy:** profit = 0
+4. **All items fit:** take all**
+
+<br>
+
+---
+
 ## Solution 1: Recursion
 
 **Intuition:**
