@@ -36,7 +36,7 @@ struct TrieNode {
     bool isEnd = false;
 };
 
-class WordDictionary {
+class Solution2 {
     TrieNode* root;
     
     bool searchHelper(const string& word, int index, TrieNode* node) {

@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-window-substring/code/cpp/minimum_window_substring.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-variable-shortest/minimum-window-substring/code/cpp/MinimumWindowSubstring.cpp"
         },
         {
           "language": "java",

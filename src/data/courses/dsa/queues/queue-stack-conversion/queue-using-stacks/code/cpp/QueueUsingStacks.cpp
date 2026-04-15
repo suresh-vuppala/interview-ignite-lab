@@ -1,29 +1,41 @@
-class QueueUsingStacks {
-    stack<int> s1, s2;
+#include <stack>
+using namespace std;
+// ============================================================
+// Solution 1: Two stacks — O(N) dequeue (transfer each time)
+// ============================================================
+class Solution1 {
+    stack<int> in, out;
 public:
-    void enqueue(int x) {
-        s1.push(x);
-    }
-    
+    void enqueue(int x) { in.push(x); }
     int dequeue() {
-        if (s2.empty()) {
-            while (!s1.empty()) {
-                s2.push(s1.top());
-                s1.pop();
-            }
-        }
-        int val = s2.top();
-        s2.pop();
-        return val;
+        // Transfer ALL elements every dequeue — O(N)
+        while(!in.empty()){out.push(in.top());in.pop();}
+        int v=out.top();out.pop();
+        while(!out.empty()){in.push(out.top());out.pop();}
+        return v;
     }
-    
-    int peek() {
-        if (s2.empty()) {
-            while (!s1.empty()) {
-                s2.push(s1.top());
-                s1.pop();
-            }
-        }
-        return s2.top();
+    int front() {
+        while(!in.empty()){out.push(in.top());in.pop();}
+        int v=out.top();
+        while(!out.empty()){in.push(out.top());out.pop();}
+        return v;
     }
+};
+
+// ============================================================
+// Solution 2: Two stacks — amortized O(1) dequeue (lazy transfer)
+// ============================================================
+class Solution2 {
+    stack<int> in, out;
+public:
+    void enqueue(int x) { in.push(x); }
+    int dequeue() {
+        if(out.empty()) while(!in.empty()){out.push(in.top());in.pop();} // Transfer only when needed
+        int v=out.top();out.pop();return v;
+    }
+    int front() {
+        if(out.empty()) while(!in.empty()){out.push(in.top());in.pop();}
+        return out.top();
+    }
+    bool empty() { return in.empty()&&out.empty(); }
 };

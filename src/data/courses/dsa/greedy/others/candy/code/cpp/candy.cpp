@@ -1,22 +1,41 @@
-class Solution {
+#include <vector>
+#include <algorithm>
+#include <numeric>
+using namespace std;
+// ============================================================
+// Solution 1: Brute Force — iterate until stable — O(N²)
+// ============================================================
+class Solution1 {
 public:
-    // O(n) time, O(n) space — Two-pass: left-to-right, right-to-left
     int candy(vector<int>& ratings) {
         int n = ratings.size();
-        vector<int> candies(n, 1); // Everyone gets at least 1
-        
-        // Left pass: if rating[i] > rating[i-1], give more than left neighbor
-        for (int i = 1; i < n; i++)
-            if (ratings[i] > ratings[i-1])
-                candies[i] = candies[i-1] + 1;
-        
-        // Right pass: if rating[i] > rating[i+1], ensure more than right neighbor
-        for (int i = n-2; i >= 0; i--)
-            if (ratings[i] > ratings[i+1])
-                candies[i] = max(candies[i], candies[i+1] + 1);
-        
-        int total = 0;
-        for (int c : candies) total += c;
-        return total;
+        vector<int> candies(n, 1);
+        bool changed = true;
+        while (changed) {
+            changed = false;
+            for (int i = 0; i < n; i++) {
+                if (i > 0 && ratings[i] > ratings[i-1] && candies[i] <= candies[i-1])
+                    { candies[i] = candies[i-1] + 1; changed = true; }
+                if (i < n-1 && ratings[i] > ratings[i+1] && candies[i] <= candies[i+1])
+                    { candies[i] = candies[i+1] + 1; changed = true; }
+            }
+        }
+        return accumulate(candies.begin(), candies.end(), 0);
+    }
+};
+
+// ============================================================
+// Solution 2: Two-pass greedy — left-to-right then right-to-left — O(N)
+// ============================================================
+class Solution2 {
+public:
+    int candy(vector<int>& ratings) {
+        int n = ratings.size();
+        vector<int> candies(n, 1);
+        for (int i = 1; i < n; i++) // Left to right
+            if (ratings[i] > ratings[i-1]) candies[i] = candies[i-1] + 1;
+        for (int i = n-2; i >= 0; i--) // Right to left
+            if (ratings[i] > ratings[i+1]) candies[i] = max(candies[i], candies[i+1] + 1);
+        return accumulate(candies.begin(), candies.end(), 0);
     }
 };

@@ -1,41 +1,43 @@
-// Time: O(N^(T/M)), Space: O(T/M)
-
-#include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Generate all combinations, filter by sum — O(N^target)
+// ============================================================
+class Solution1 {
+    void generate(vector<int>& c, int target, int start, vector<int>& cur, vector<vector<int>>& res) {
+        if (target == 0) { res.push_back(cur); return; }
+        if (target < 0) return;
+        for (int i = start; i < (int)c.size(); i++) {
+            cur.push_back(c[i]);
+            generate(c, target - c[i], i, cur, res); // Can reuse same element
+            cur.pop_back();
+        }
+    }
 public:
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-        vector<vector<int>> result;
-        vector<int> current;
-        backtrack(candidates, target, 0, current, result);
-        return result;
-    }
-    
-private:
-    void backtrack(vector<int>& candidates, int target, int index, vector<int>& current, vector<vector<int>>& result) {
-        if (target == 0) {
-            result.push_back(current);
-            return;
-        }
-        if (target < 0) return;
-        
-        for (int i = index; i < candidates.size(); i++) {
-            current.push_back(candidates[i]);
-            backtrack(candidates, target - candidates[i], i, current, result);
-            current.pop_back();
-        }
+        vector<vector<int>> res; vector<int> cur;
+        generate(candidates, target, 0, cur, res); return res;
     }
 };
 
-int main() {
-    Solution sol;
-    vector<int> candidates = {2, 3, 6, 7};
-    vector<vector<int>> result = sol.combinationSum(candidates, 7);
-    for (auto& comb : result) {
-        for (int num : comb) cout << num << " ";
-        cout << endl;
+// ============================================================
+// Solution 2: Backtracking with sort + early termination — pruned O(N^target)
+// ============================================================
+class Solution2 {
+    void bt(vector<int>& c, int target, int start, vector<int>& cur, vector<vector<int>>& res) {
+        if (target == 0) { res.push_back(cur); return; }
+        for (int i = start; i < (int)c.size(); i++) {
+            if (c[i] > target) break; // Sorted → prune all remaining
+            cur.push_back(c[i]);
+            bt(c, target - c[i], i, cur, res);
+            cur.pop_back();
+        }
     }
-    return 0;
-}
+public:
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+        sort(candidates.begin(), candidates.end()); // Sort for pruning
+        vector<vector<int>> res; vector<int> cur;
+        bt(candidates, target, 0, cur, res); return res;
+    }
+};

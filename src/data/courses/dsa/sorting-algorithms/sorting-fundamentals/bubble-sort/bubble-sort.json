@@ -14,7 +14,7 @@
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/bubble-sort/code/cpp/BubbleSort.cpp"
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/bubble-sort/code/cpp/bubble_sort.cpp"
         },
         {
           "language": "python",

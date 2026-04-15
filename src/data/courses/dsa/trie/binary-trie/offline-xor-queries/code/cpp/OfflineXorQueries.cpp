@@ -29,7 +29,7 @@ public:
 #include <algorithm>
 using namespace std;
 
-class OfflineXorQueries {
+class Solution2 {
     struct TrieNode {
         TrieNode* children[2] = {};
     };

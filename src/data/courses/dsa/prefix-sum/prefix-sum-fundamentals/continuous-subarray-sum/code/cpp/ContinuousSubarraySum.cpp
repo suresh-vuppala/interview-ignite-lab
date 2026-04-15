@@ -1,31 +1,34 @@
 #include <vector>
 #include <unordered_map>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Brute Force — all subarrays of length ≥ 2 — O(N²)
+// ============================================================
+class Solution1 {
 public:
     bool checkSubarraySum(vector<int>& nums, int k) {
-        unordered_map<int, int> modMap;
-        modMap[0] = -1; // Initialize with 0 modulo at index -1
-        
-        int prefixSum = 0;
-        
-        for (int i = 0; i < nums.size(); i++) {
-            prefixSum += nums[i];
-            int mod = prefixSum % k;
-            
-            // Check if we've seen this modulo before
-            if (modMap.find(mod) != modMap.end()) {
-                // Check if the subarray length is at least 2
-                if (i - modMap[mod] >= 2) {
-                    return true;
-                }
-            } else {
-                // Store first occurrence of this modulo
-                modMap[mod] = i;
-            }
+        int n = nums.size();
+        for (int i = 0; i < n; i++) {
+            int sum = nums[i];
+            for (int j = i+1; j < n; j++) { sum += nums[j]; if (sum % k == 0) return true; }
         }
-        
+        return false;
+    }
+};
+
+// ============================================================
+// Solution 2: Prefix Sum mod K + HashMap — O(N)
+// ============================================================
+class Solution2 {
+public:
+    bool checkSubarraySum(vector<int>& nums, int k) {
+        unordered_map<int,int> modIndex; modIndex[0] = -1;
+        int sum = 0;
+        for (int i = 0; i < (int)nums.size(); i++) {
+            sum += nums[i]; int mod = sum % k;
+            if (modIndex.count(mod)) { if (i - modIndex[mod] >= 2) return true; }
+            else modIndex[mod] = i;
+        }
         return false;
     }
 };

@@ -44,7 +44,7 @@ struct TrieNode {
     vector<int> palindromeSuffixes;
 };
 
-class Solution {
+class Solution2 {
     bool isPalindrome(const string& word, int left, int right) {
         while (left < right) {
             if (word[left++] != word[right--]) return false;

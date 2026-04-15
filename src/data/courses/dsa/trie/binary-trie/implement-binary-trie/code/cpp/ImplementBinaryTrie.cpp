@@ -21,7 +21,7 @@ public:
 // ============================================================
 // Solution 2: Optimal (Trie-based)
 // ============================================================
-class ImplementBinaryTrie {
+class Solution2 {
     struct TrieNode {
         TrieNode* children[2] = {}; // 0 and 1 for binary
     };

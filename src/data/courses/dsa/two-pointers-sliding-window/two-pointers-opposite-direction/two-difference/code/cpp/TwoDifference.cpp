@@ -1,99 +1,41 @@
 #include <vector>
 #include <unordered_set>
+#include <unordered_map>
 #include <algorithm>
 using namespace std;
-
-// ==================== SOLUTION 1: BRUTE FORCE ====================
-// Time: O(N²) | Space: O(1)
-bool twoDifferenceBrute(vector<int>& arr, int k) {
-    int n = arr.size();
-    // Check all pairs
-    for (int i = 0; i < n; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (arr[j] - arr[i] == k) {  // Found pair with difference k
-                return true;
+// ============================================================
+// Solution 1: Brute Force — check all pairs — O(N²) Time
+// ============================================================
+class Solution1 {
+public:
+    int findPairs(vector<int>& nums, int k) {
+        int count = 0, n = nums.size();
+        sort(nums.begin(), nums.end());
+        for (int i = 0; i < n; i++) {
+            if (i > 0 && nums[i] == nums[i-1]) continue; // Skip duplicates
+            for (int j = i + 1; j < n; j++) {
+                if (nums[j] - nums[i] == k) { count++; break; }
+                if (nums[j] - nums[i] > k) break; // Sorted, no point continuing
             }
         }
+        return count;
     }
-    return false;
-}
+};
 
-// ==================== SOLUTION 2: TWO POINTERS ====================
-// Time: O(N) | Space: O(1)
-bool twoDifferenceTwoPointers(vector<int>& arr, int k) {
-    int n = arr.size();
-    int left = 0, right = 1;
-    
-    while (right < n) {
-        int diff = arr[right] - arr[left];
-        
-        // Found the pair
-        if (diff == k && left != right) {
-            return true;
+// ============================================================
+// Solution 2: HashMap / Two Pointers — O(N) Time
+// ============================================================
+class Solution2 {
+public:
+    int findPairs(vector<int>& nums, int k) {
+        if (k < 0) return 0;
+        unordered_map<int, int> freq;
+        for (int x : nums) freq[x]++;
+        int count = 0;
+        for (auto& [num, cnt] : freq) {
+            if (k == 0) { if (cnt >= 2) count++; } // Same element pair
+            else { if (freq.count(num + k)) count++; } // num + k exists
         }
-        
-        // Difference too small, move right pointer
-        if (diff < k) {
-            right++;
-        }
-        // Difference too large, move left pointer
-        else {
-            left++;
-        }
-        
-        // Ensure pointers don't overlap
-        if (left == right) {
-            right++;
-        }
+        return count;
     }
-    
-    return false;
-}
-
-// ==================== SOLUTION 3: HASHSET ====================
-// Time: O(N) | Space: O(N)
-bool twoDifferenceHashSet(vector<int>& arr, int k) {
-    unordered_set<int> seen;
-    
-    for (int num : arr) {
-        // Check if num + k or num - k exists
-        if (seen.count(num + k) || seen.count(num - k)) {
-            return true;
-        }
-        seen.insert(num);
-    }
-    
-    return false;
-}
-
-// ==================== SOLUTION 4: BINARY SEARCH ====================
-// Time: O(N log N) | Space: O(1)
-bool binarySearch(vector<int>& arr, int start, int target) {
-    int left = start, right = arr.size() - 1;
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-        if (arr[mid] == target) {
-            return true;
-        } else if (arr[mid] < target) {
-            left = mid + 1;
-        } else {
-            right = mid - 1;
-        }
-    }
-    return false;
-}
-
-bool twoDifferenceBinarySearch(vector<int>& arr, int k) {
-    // For each element, search for element + k
-    for (int i = 0; i < arr.size(); i++) {
-        if (binarySearch(arr, i + 1, arr[i] + k)) {
-            return true;
-        }
-    }
-    return false;
-}
-
-// Main solution - recommended approach
-bool twoDifference(vector<int>& arr, int k) {
-    return twoDifferenceTwoPointers(arr, k);
-}
+};

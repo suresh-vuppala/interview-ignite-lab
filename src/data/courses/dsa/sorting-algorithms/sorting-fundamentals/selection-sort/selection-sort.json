@@ -14,7 +14,7 @@
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/selection-sort/code/cpp/SelectionSort.cpp"
+          "codeFile": "courses/dsa/sorting-algorithms/sorting-fundamentals/selection-sort/code/cpp/selection_sort.cpp"
         },
         {
           "language": "python",

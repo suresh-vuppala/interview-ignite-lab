@@ -39,7 +39,7 @@ struct TSTNode {
     TSTNode(char c) : ch(c), left(nullptr), middle(nullptr), right(nullptr), isEnd(false) {}
 };
 
-class TernarySearchTree {
+class Solution2 {
     TSTNode* root;
     
     TSTNode* insert(TSTNode* node, const string& word, int index) {

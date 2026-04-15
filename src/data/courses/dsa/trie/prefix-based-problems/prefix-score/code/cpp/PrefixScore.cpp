@@ -30,7 +30,7 @@ public:
 #include <string>
 using namespace std;
 
-class PrefixScore {
+class Solution2 {
     struct TrieNode {
         TrieNode* children[26] = {};
         int prefixCount = 0; // Count of words passing through

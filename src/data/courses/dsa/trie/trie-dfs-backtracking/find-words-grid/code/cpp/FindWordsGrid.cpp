@@ -39,7 +39,7 @@ public:
 #include <string>
 using namespace std;
 
-class FindWordsGrid {
+class Solution2 {
     struct TrieNode {
         TrieNode* children[26] = {};
         string word = "";

@@ -1,19 +1,32 @@
-// Stable Merge Sort
-void merge(vector<int>& arr, int l, int m, int r) {
-    vector<int> L(arr.begin() + l, arr.begin() + m + 1);
-    vector<int> R(arr.begin() + m + 1, arr.begin() + r + 1);
-    int i = 0, j = 0, k = l;
-    while (i < L.size() && j < R.size()) 
-        arr[k++] = (L[i] <= R[j]) ? L[i++] : R[j++]; // <= ensures stability
-    while (i < L.size()) arr[k++] = L[i++];
-    while (j < R.size()) arr[k++] = R[j++];
-}
-
-void mergeSort(vector<int>& arr, int l, int r) {
-    if (l < r) {
-        int m = l + (r - l) / 2;
-        mergeSort(arr, l, m);
-        mergeSort(arr, m + 1, r);
-        merge(arr, l, m, r);
+#include <vector>
+#include <algorithm>
+using namespace std;
+// ============================================================
+// Solution 1: Unstable sort (Selection Sort) — equal elements may reorder
+// ============================================================
+class Solution1 {
+public:
+    void unstableSort(vector<pair<int,char>>& items) {
+        int n=items.size();
+        for(int i=0;i<n-1;i++){
+            int minIdx=i;
+            for(int j=i+1;j<n;j++) if(items[j].first<items[minIdx].first) minIdx=j;
+            swap(items[i],items[minIdx]); // May reorder equal-key elements!
+        }
     }
-}
+};
+
+// ============================================================
+// Solution 2: Stable sort (Insertion Sort/Merge Sort) — preserves relative order
+// ============================================================
+class Solution2 {
+public:
+    void stableSort(vector<pair<int,char>>& items) {
+        // Insertion sort is stable: equal elements stay in original order
+        for(int i=1;i<(int)items.size();i++){
+            auto key=items[i]; int j=i-1;
+            while(j>=0 && items[j].first>key.first){items[j+1]=items[j];j--;}
+            items[j+1]=key; // Only moves past STRICTLY greater — stable!
+        }
+    }
+};

@@ -1,51 +1,58 @@
-// Time: O(N!), Space: O(N)
-
-#include <iostream>
 #include <vector>
-#include <unordered_set>
+#include <string>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Try all N^N placements, validate — O(N^N * N)
+// ============================================================
+class Solution1 {
+    bool isValid(vector<int>& queens, int row) {
+        for (int i = 0; i < row; i++) {
+            if (queens[i] == queens[row]) return false;
+            if (abs(queens[i] - queens[row]) == abs(i - row)) return false;
+        }
+        return true;
+    }
+    void solve(int n, int row, vector<int>& queens, vector<vector<string>>& res) {
+        if (row == n) {
+            vector<string> board(n, string(n, '.'));
+            for (int i = 0; i < n; i++) board[i][queens[i]] = 'Q';
+            res.push_back(board); return;
+        }
+        for (int col = 0; col < n; col++) {
+            queens[row] = col;
+            if (isValid(queens, row)) solve(n, row + 1, queens, res);
+        }
+    }
 public:
     vector<vector<string>> solveNQueens(int n) {
-        vector<vector<string>> result;
-        vector<string> board(n, string(n, '.'));
-        unordered_set<int> cols, diag, antiDiag;
-        backtrack(0, n, board, cols, diag, antiDiag, result);
-        return result;
-    }
-    
-private:
-    void backtrack(int row, int n, vector<string>& board, unordered_set<int>& cols, unordered_set<int>& diag, unordered_set<int>& antiDiag, vector<vector<string>>& result) {
-        if (row == n) {
-            result.push_back(board);
-            return;
-        }
-        
-        for (int col = 0; col < n; col++) {
-            if (cols.count(col) || diag.count(row - col) || antiDiag.count(row + col)) continue;
-            
-            board[row][col] = 'Q';
-            cols.insert(col);
-            diag.insert(row - col);
-            antiDiag.insert(row + col);
-            
-            backtrack(row + 1, n, board, cols, diag, antiDiag, result);
-            
-            board[row][col] = '.';
-            cols.erase(col);
-            diag.erase(row - col);
-            antiDiag.erase(row + col);
-        }
+        vector<vector<string>> res; vector<int> queens(n);
+        solve(n, 0, queens, res); return res;
     }
 };
 
-int main() {
-    Solution sol;
-    vector<vector<string>> result = sol.solveNQueens(4);
-    for (auto& solution : result) {
-        for (auto& row : solution) cout << row << endl;
-        cout << endl;
+// ============================================================
+// Solution 2: Backtracking + column/diagonal sets — O(N!) pruned
+// ============================================================
+class Solution2 {
+    void bt(int n, int row, vector<bool>& cols, vector<bool>& d1, vector<bool>& d2,
+            vector<int>& queens, vector<vector<string>>& res) {
+        if (row == n) {
+            vector<string> board(n, string(n, '.'));
+            for (int i = 0; i < n; i++) board[i][queens[i]] = 'Q';
+            res.push_back(board); return;
+        }
+        for (int col = 0; col < n; col++) {
+            if (cols[col] || d1[row-col+n-1] || d2[row+col]) continue; // O(1) check!
+            cols[col] = d1[row-col+n-1] = d2[row+col] = true;
+            queens[row] = col;
+            bt(n, row + 1, cols, d1, d2, queens, res);
+            cols[col] = d1[row-col+n-1] = d2[row+col] = false;
+        }
     }
-    return 0;
-}
+public:
+    vector<vector<string>> solveNQueens(int n) {
+        vector<vector<string>> res; vector<int> queens(n);
+        vector<bool> cols(n,false), d1(2*n,false), d2(2*n,false);
+        bt(n, 0, cols, d1, d2, queens, res); return res;
+    }
+};

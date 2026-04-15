@@ -14,7 +14,7 @@
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/sorting-algorithms/quick-sort/code/cpp/QuickSort.cpp"
+          "codeFile": "courses/dsa/sorting-algorithms/quick-sort/code/cpp/quick_sort.cpp"
         },
         {
           "language": "python",

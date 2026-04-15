@@ -1,151 +1,76 @@
+// ============================================================
+// Minimum Window Substring
+// ============================================================
+
 #include <string>
 #include <unordered_map>
 #include <climits>
 using namespace std;
 
-class Solution {
+// ============================================================
+// Solution 1: Brute Force
+// Time: O(N²×M) | Space: O(M)
+// ============================================================
+class Solution1 {
 public:
-    // ==================== SOLUTION 1: BRUTE FORCE ====================
-    // Time: O(n³) | Space: O(m)
-    string minWindowBruteForce(string s, string t) {
-        if (s.empty() || t.empty()) return "";
-        
-        unordered_map<char, int> tCount;
-        for (char c : t) {
-            tCount[c]++;
-        }
-        
-        string minWindow = "";
-        int minLen = INT_MAX;
-        
-        // Check all substrings
-        for (int i = 0; i < s.length(); i++) {
-            for (int j = i; j < s.length(); j++) {
-                string window = s.substr(i, j - i + 1);
-                
-                if (containsAll(window, tCount) && window.length() < minLen) {
-                    minLen = window.length();
-                    minWindow = window;
-                }
-            }
-        }
-        
-        return minWindow;
-    }
-    
-    bool containsAll(string window, unordered_map<char, int>& tCount) {
-        unordered_map<char, int> windowCount;
-        for (char c : window) {
-            windowCount[c]++;
-        }
-        
-        for (auto& entry : tCount) {
-            if (windowCount[entry.first] < entry.second) {
-                return false;
-            }
-        }
-        return true;
-    }
-    
-    // ==================== SOLUTION 2: SLIDING WINDOW WITH FREQUENCY MAPS ====================
-    // Time: O(n+m) | Space: O(m+k)
-    string minWindowSlidingWindow(string s, string t) {
-        if (s.empty() || t.empty()) return "";
-        
-        unordered_map<char, int> tCount;
-        for (char c : t) {
-            tCount[c]++;
-        }
-        
-        unordered_map<char, int> windowCount;
-        int left = 0;
-        int minLen = INT_MAX;
-        int minStart = 0;
-        
-        for (int right = 0; right < s.length(); right++) {
-            // Add character to window
-            windowCount[s[right]]++;
-            
-            // Try to shrink window
-            while (containsAllChars(windowCount, tCount)) {
-                // Update minimum
-                if (right - left + 1 < minLen) {
-                    minLen = right - left + 1;
-                    minStart = left;
-                }
-                
-                // Shrink from left
-                windowCount[s[left]]--;
-                if (windowCount[s[left]] == 0) {
-                    windowCount.erase(s[left]);
-                }
-                left++;
-            }
-        }
-        
-        return minLen == INT_MAX ? "" : s.substr(minStart, minLen);
-    }
-    
-    bool containsAllChars(unordered_map<char, int>& window, unordered_map<char, int>& t) {
-        for (auto& entry : t) {
-            if (window[entry.first] < entry.second) {
-                return false;
-            }
-        }
-        return true;
-    }
-    
-    // ==================== SOLUTION 3: OPTIMIZED WITH MATCH COUNT ====================
-    // Time: O(n+m) | Space: O(m+k)
-    string minWindowOptimized(string s, string t) {
-        if (s.empty() || t.empty()) return "";
-        
-        unordered_map<char, int> tCount;
-        for (char c : t) {
-            tCount[c]++;
-        }
-        
-        int required = tCount.size();
-        unordered_map<char, int> windowCount;
-        int matched = 0;
-        
-        int left = 0;
-        int minLen = INT_MAX;
-        int minStart = 0;
-        
-        for (int right = 0; right < s.length(); right++) {
-            // Add character to window
-            char c = s[right];
-            windowCount[c]++;
-            
-            // Check if frequency matches
-            if (tCount.count(c) && windowCount[c] == tCount[c]) {
-                matched++;
-            }
-            
-            // Try to shrink window
-            while (matched == required) {
-                // Update minimum
-                if (right - left + 1 < minLen) {
-                    minLen = right - left + 1;
-                    minStart = left;
-                }
-                
-                // Shrink from left
-                char leftChar = s[left];
-                windowCount[leftChar]--;
-                if (tCount.count(leftChar) && windowCount[leftChar] < tCount[leftChar]) {
-                    matched--;
-                }
-                left++;
-            }
-        }
-        
-        return minLen == INT_MAX ? "" : s.substr(minStart, minLen);
-    }
-    
-    // ==================== MAIN SOLUTION (RECOMMENDED) ====================
     string minWindow(string s, string t) {
-        return minWindowOptimized(s, t);
+        int minLen = INT_MAX, minStart = 0;
+        unordered_map<char, int> tFreq;
+        for (char c : t) tFreq[c]++;
+
+        for (int i = 0; i < s.size(); i++) {
+            unordered_map<char, int> wFreq;
+            for (int j = i; j < s.size(); j++) {
+                wFreq[s[j]]++;
+                bool valid = true;
+                for (auto& [c, cnt] : tFreq)
+                    if (wFreq[c] < cnt) { valid = false; break; }
+                if (valid && j - i + 1 < minLen) {
+                    minLen = j - i + 1;
+                    minStart = i;
+                    break;
+                }
+            }
+        }
+        return minLen == INT_MAX ? "" : s.substr(minStart, minLen);
+    }
+};
+
+// ============================================================
+// Solution 2: Sliding Window + Frequency Tracking (Optimal)
+// Time: O(N+M) | Space: O(N+M)
+// ============================================================
+class Solution2 {
+public:
+    string minWindow(string s, string t) {
+        unordered_map<char, int> tFreq, wFreq;
+        for (char c : t) tFreq[c]++;
+
+        int required = tFreq.size(); // Unique chars needed
+        int formed = 0;              // Unique chars fully met
+        int left = 0, minLen = INT_MAX, minStart = 0;
+
+        for (int right = 0; right < s.size(); right++) {
+            // Expand: add right character
+            wFreq[s[right]]++;
+            if (tFreq.count(s[right]) && wFreq[s[right]] == tFreq[s[right]])
+                formed++;
+
+            // Shrink: minimize window while still valid
+            while (formed == required) {
+                if (right - left + 1 < minLen) {
+                    minLen = right - left + 1;
+                    minStart = left;
+                }
+
+                // Remove left character
+                wFreq[s[left]]--;
+                if (tFreq.count(s[left]) && wFreq[s[left]] < tFreq[s[left]])
+                    formed--;
+                left++;
+            }
+        }
+
+        return minLen == INT_MAX ? "" : s.substr(minStart, minLen);
     }
 };

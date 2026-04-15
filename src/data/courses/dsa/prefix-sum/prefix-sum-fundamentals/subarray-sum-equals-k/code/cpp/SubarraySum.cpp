@@ -1,29 +1,34 @@
 #include <vector>
 #include <unordered_map>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Brute Force — check all subarrays — O(N²)
+// ============================================================
+class Solution1 {
 public:
     int subarraySum(vector<int>& nums, int k) {
-        unordered_map<int, int> prefixCount;
-        prefixCount[0] = 1; // Base case: empty prefix with sum 0
-        
-        int count = 0;
-        int prefixSum = 0;
-        
-        for (int num : nums) {
-            prefixSum += num;
-            
-            // Check if (prefixSum - k) exists in our map
-            // This means we found a subarray with sum k
-            if (prefixCount.find(prefixSum - k) != prefixCount.end()) {
-                count += prefixCount[prefixSum - k];
-            }
-            
-            // Add current prefix sum to map
-            prefixCount[prefixSum]++;
+        int count = 0, n = nums.size();
+        for (int i = 0; i < n; i++) {
+            int sum = 0;
+            for (int j = i; j < n; j++) { sum += nums[j]; if (sum == k) count++; }
         }
-        
+        return count;
+    }
+};
+
+// ============================================================
+// Solution 2: Prefix Sum + HashMap — O(N) Time, O(N) Space
+// ============================================================
+class Solution2 {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        unordered_map<int,int> prefixCount; prefixCount[0] = 1;
+        int sum = 0, count = 0;
+        for (int x : nums) {
+            sum += x;
+            if (prefixCount.count(sum - k)) count += prefixCount[sum - k];
+            prefixCount[sum]++;
+        }
         return count;
     }
 };

@@ -25,7 +25,7 @@ public:
 #include <string>
 using namespace std;
 
-class CountOperations {
+class Solution2 {
     struct TrieNode {
         TrieNode* children[26] = {}; // 26 lowercase letters
         int wordCount = 0; // Count of words ending here

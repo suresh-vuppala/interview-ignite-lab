@@ -1,16 +1,29 @@
-#include <iostream>
-#include <string>
+#include <vector>
 using namespace std;
-
-int fib(int n) {
-    if (n <= 1) return n;
-    return fib(n-1) + fib(n-2);
-}
-
-void printTree(int n, string indent = "") {
-    cout << indent << "fib(" << n << ")" << endl;
-    if (n > 1) {
-        printTree(n-1, indent + "  ");
-        printTree(n-2, indent + "  ");
+// ============================================================
+// Solution 1: Naive Fibonacci — overlapping subproblems — O(2^N)
+// ============================================================
+class Solution1 {
+public:
+    int fib(int n) {
+        if (n <= 1) return n;
+        return fib(n - 1) + fib(n - 2);
+        // Recursion tree: exponential nodes, many repeated calls
+        // fib(5) calls fib(3) twice, fib(2) three times, etc.
     }
-}
+};
+
+// ============================================================
+// Solution 2: Memoized Fibonacci — prune repeated branches — O(N)
+// ============================================================
+class Solution2 {
+    vector<int> memo;
+    int solve(int n) {
+        if (n <= 1) return n;
+        if (memo[n] != -1) return memo[n];
+        return memo[n] = solve(n - 1) + solve(n - 2);
+        // Same tree structure but each node computed only once
+    }
+public:
+    int fib(int n) { memo.assign(n + 1, -1); return solve(n); }
+};

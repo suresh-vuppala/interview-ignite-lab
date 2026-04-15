@@ -1,30 +1,33 @@
-// Time: O(N²), Space: O(1)
-
-#include <iostream>
 #include <vector>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: Basic Insertion Sort — shift elements — O(N²)
+// ============================================================
+class Solution1 {
 public:
-    void insertionSort(vector<int>& arr) {
-        int n = arr.size();
-        for (int i = 1; i < n; i++) {
-            int key = arr[i];
-            int j = i - 1;
-            while (j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j];
-                j--;
-            }
-            arr[j + 1] = key;
+    void insertionSort(vector<int>& nums) {
+        for (int i = 1; i < (int)nums.size(); i++) {
+            int key = nums[i], j = i-1;
+            while (j >= 0 && nums[j] > key) { nums[j+1] = nums[j]; j--; }
+            nums[j+1] = key;
         }
     }
 };
 
-int main() {
-    Solution sol;
-    vector<int> arr = {64, 34, 25, 12, 22, 11, 90};
-    sol.insertionSort(arr);
-    for (int num : arr) cout << num << " ";
-    cout << endl;
-    return 0;
-}
+// ============================================================
+// Solution 2: Binary Insertion Sort — binary search for position — O(N²) shifts, O(N log N) comparisons
+// ============================================================
+#include <algorithm>
+class Solution2 {
+public:
+    void insertionSort(vector<int>& nums) {
+        for (int i = 1; i < (int)nums.size(); i++) {
+            int key = nums[i];
+            // Binary search for insertion position in [0..i-1]
+            int pos = upper_bound(nums.begin(), nums.begin()+i, key) - nums.begin();
+            // Shift elements right
+            for (int j = i; j > pos; j--) nums[j] = nums[j-1];
+            nums[pos] = key;
+        }
+    }
+};

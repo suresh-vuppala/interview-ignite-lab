@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/sliding-window-maximum/code/cpp/sliding_window_maximum.cpp"
+          "codeFile": "courses/dsa/two-pointers-sliding-window/sliding-window-fixed-size/sliding-window-maximum/code/cpp/SlidingWindowMaximum.cpp"
         },
         {
           "language": "java",

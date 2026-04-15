@@ -34,7 +34,7 @@ public:
 #include <algorithm>
 using namespace std;
 
-class LongestWordDictionary {
+class Solution2 {
     struct TrieNode {
         TrieNode* children[26] = {};
         bool isEnd = false;

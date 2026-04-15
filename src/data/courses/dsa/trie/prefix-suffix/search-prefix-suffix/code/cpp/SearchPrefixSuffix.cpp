@@ -40,7 +40,7 @@ struct TrieNode {
     vector<int> indices;
 };
 
-class Solution {
+class Solution2 {
     TrieNode* forwardTrie;
     TrieNode* reverseTrie;
     

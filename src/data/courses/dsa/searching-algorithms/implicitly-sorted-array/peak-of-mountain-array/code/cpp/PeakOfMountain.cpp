@@ -1,37 +1,30 @@
-#include <iostream>
 #include <vector>
 using namespace std;
-
-/**
- * Find peak index in a mountain array
- * Time: O(log n), Space: O(1)
- */
-int findPeak(vector<int>& nums) {
-    int left = 0, right = nums.size() - 1;
-    
-    while (left < right) {
-        int mid = left + (right - left) / 2;
-        
-        // If we're on uphill side, peak is to the right
-        if (nums[mid] < nums[mid + 1]) {
-            left = mid + 1;
-        } else {
-            // We're on downhill side or at peak
-            right = mid;
-        }
+// ============================================================
+// Solution 1: Linear scan — O(N) Time
+// ============================================================
+class Solution1 {
+public:
+    int peakIndexInMountainArray(vector<int>& arr) {
+        for (int i = 1; i < (int)arr.size() - 1; i++)
+            if (arr[i] > arr[i-1] && arr[i] > arr[i+1]) return i;
+        return -1;
     }
-    
-    return left;
-}
+};
 
-int main() {
-    vector<int> nums1 = {1, 3, 5, 4, 2};
-    cout << "Peak index: " << findPeak(nums1) << endl;  // Output: 2
-    cout << "Peak value: " << nums1[findPeak(nums1)] << endl;  // Output: 5
-    
-    vector<int> nums2 = {0, 10, 5, 2};
-    cout << "Peak index: " << findPeak(nums2) << endl;  // Output: 1
-    cout << "Peak value: " << nums2[findPeak(nums2)] << endl;  // Output: 10
-    
-    return 0;
-}
+// ============================================================
+// Solution 2: Binary search — O(log N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+public:
+    int peakIndexInMountainArray(vector<int>& arr) {
+        int lo = 1, hi = arr.size() - 2;
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (arr[mid] > arr[mid-1] && arr[mid] > arr[mid+1]) return mid;
+            if (arr[mid] < arr[mid+1]) lo = mid + 1; // Peak is to the right
+            else hi = mid - 1; // Peak is to the left
+        }
+        return lo;
+    }
+};

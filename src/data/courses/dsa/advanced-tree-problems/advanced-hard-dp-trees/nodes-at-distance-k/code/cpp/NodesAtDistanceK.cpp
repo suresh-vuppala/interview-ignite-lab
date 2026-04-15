@@ -1,90 +1,73 @@
-// Time: O(N)
-// Space: O(N)
-
+struct TreeNode { int val; TreeNode *left, *right; TreeNode(int v):val(v),left(nullptr),right(nullptr){} };
 #include <vector>
 #include <unordered_map>
-#include <unordered_set>
 #include <queue>
-#include <iostream>
 using namespace std;
-
-struct TreeNode {
-    int val;
-    TreeNode *left, *right;
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-};
-
-class NodesAtDistanceK {
+// ============================================================
+// Solution 1: Find target, then DFS up+down tracking distance — O(N)
+// ============================================================
+class Solution1 {
+    unordered_map<TreeNode*, TreeNode*> parentMap;
+    void buildParent(TreeNode* n, TreeNode* par) {
+        if (!n) return;
+        parentMap[n] = par;
+        buildParent(n->left, n); buildParent(n->right, n);
+    }
+    TreeNode* findNode(TreeNode* root, int target) {
+        if (!root) return nullptr;
+        if (root->val == target) return root;
+        auto l = findNode(root->left, target);
+        return l ? l : findNode(root->right, target);
+    }
 public:
-    /**
-     * Find all nodes at distance k from target
-     */
-    static vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {
-        unordered_map<TreeNode*, TreeNode*> parent;
-        buildParent(root, nullptr, parent);
-        
-        queue<TreeNode*> q;
-        unordered_set<TreeNode*> visited;
-        vector<int> result;
-        
-        q.push(target);
-        visited.insert(target);
+    vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {
+        buildParent(root, nullptr);
+        // BFS from target using parent pointers
+        queue<TreeNode*> q; q.push(target);
+        unordered_map<TreeNode*,bool> visited; visited[target] = true;
         int dist = 0;
-        
         while (!q.empty()) {
-            int size = q.size();
-            
-            if (dist == k) {
-                while (!q.empty()) {
-                    result.push_back(q.front()->val);
-                    q.pop();
-                }
-                return result;
+            if (dist == k) { vector<int> res; while (!q.empty()) { res.push_back(q.front()->val); q.pop(); } return res; }
+            int sz = q.size(); dist++;
+            while (sz--) {
+                auto n = q.front(); q.pop();
+                for (auto next : {n->left, n->right, parentMap[n]})
+                    if (next && !visited[next]) { visited[next] = true; q.push(next); }
             }
-            
-            for (int i = 0; i < size; i++) {
-                TreeNode* node = q.front();
-                q.pop();
-                
-                if (node->left && !visited.count(node->left)) {
-                    visited.insert(node->left);
-                    q.push(node->left);
-                }
-                if (node->right && !visited.count(node->right)) {
-                    visited.insert(node->right);
-                    q.push(node->right);
-                }
-                if (parent[node] && !visited.count(parent[node])) {
-                    visited.insert(parent[node]);
-                    q.push(parent[node]);
-                }
-            }
-            dist++;
         }
-        
-        return result;
-    }
-    
-private:
-    static void buildParent(TreeNode* node, TreeNode* par, unordered_map<TreeNode*, TreeNode*>& parent) {
-        if (!node) return;
-        parent[node] = par;
-        buildParent(node->left, node, parent);
-        buildParent(node->right, node, parent);
+        return {};
     }
 };
 
-int main() {
-    TreeNode* root = new TreeNode(3);
-    root->left = new TreeNode(5);
-    root->right = new TreeNode(1);
-    TreeNode* target = root->left;
-    int k = 2;
-    
-    vector<int> result = NodesAtDistanceK::distanceK(root, target, k);
-    cout << "Nodes at distance " << k << ": ";
-    for (int val : result) cout << val << " ";
-    cout << endl;
-    
-    return 0;
-}
+// ============================================================
+// Solution 2: DFS returning distance — O(N) without parent map
+// ============================================================
+class Solution2 {
+    vector<int> result;
+    void collectDown(TreeNode* n, int dist, int k) {
+        if (!n) return;
+        if (dist == k) { result.push_back(n->val); return; }
+        collectDown(n->left, dist+1, k); collectDown(n->right, dist+1, k);
+    }
+    int dfs(TreeNode* n, TreeNode* target, int k) {
+        if (!n) return -1;
+        if (n == target) { collectDown(n, 0, k); return 0; }
+        int l = dfs(n->left, target, k);
+        if (l >= 0) {
+            if (l + 1 == k) result.push_back(n->val);
+            else collectDown(n->right, l + 2, k);
+            return l + 1;
+        }
+        int r = dfs(n->right, target, k);
+        if (r >= 0) {
+            if (r + 1 == k) result.push_back(n->val);
+            else collectDown(n->left, r + 2, k);
+            return r + 1;
+        }
+        return -1;
+    }
+public:
+    vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {
+        result.clear(); dfs(root, target, k); return result;
+    }
+};

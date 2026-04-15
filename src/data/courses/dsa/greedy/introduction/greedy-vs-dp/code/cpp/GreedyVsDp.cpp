@@ -1,27 +1,37 @@
-class GreedyVsDP {
+// ============================================================
+// Solution 1: DP approach — Coin Change example — O(N*amount)
+// ============================================================
+#include <vector>
+#include <algorithm>
+#include <climits>
+using namespace std;
+class Solution1 {
 public:
-    // Greedy: Activity Selection - Choose activities that finish earliest
-    int maxActivities(vector<int>& start, vector<int>& end) {
-        sort(end.begin(), end.end()); // Sort by end time
-        int count = 1, lastEnd = end[0];
-        for (int i = 1; i < end.size(); i++) {
-            if (start[i] >= lastEnd) { // No overlap with previous activity
-                count++;
-                lastEnd = end[i];
-            }
-        }
-        return count;
+    // DP always finds optimal — considers all combinations
+    int coinChangeDP(vector<int>& coins, int amount) {
+        vector<int> dp(amount+1, amount+1);
+        dp[0] = 0;
+        for (int i = 1; i <= amount; i++)
+            for (int c : coins)
+                if (c <= i) dp[i] = min(dp[i], 1 + dp[i-c]);
+        return dp[amount] > amount ? -1 : dp[amount];
     }
-    
-    // DP: 0/1 Knapsack - Need to consider all possibilities
-    int knapsack(vector<int>& wt, vector<int>& val, int W) {
-        int n = wt.size();
-        vector<int> dp(W + 1, 0); // dp[w] = max value with weight w
-        for (int i = 0; i < n; i++) {
-            for (int w = W; w >= wt[i]; w--) { // Iterate backwards to avoid using same item twice
-                dp[w] = max(dp[w], dp[w - wt[i]] + val[i]);
-            }
+};
+
+// ============================================================
+// Solution 2: Greedy approach — pick largest coin first — O(N log N)
+// ============================================================
+class Solution2 {
+public:
+    // Greedy FAILS for some coin sets! e.g. coins={1,3,4}, amount=6
+    // Greedy: 4+1+1=3 coins. Optimal: 3+3=2 coins.
+    int coinChangeGreedy(vector<int>& coins, int amount) {
+        sort(coins.rbegin(), coins.rend()); // Largest first
+        int count = 0;
+        for (int c : coins) {
+            count += amount / c;
+            amount %= c;
         }
-        return dp[W];
+        return amount == 0 ? count : -1; // May fail!
     }
 };

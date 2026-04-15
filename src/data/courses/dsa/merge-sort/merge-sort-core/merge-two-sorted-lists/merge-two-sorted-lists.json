@@ -14,7 +14,7 @@
         },
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/merge-sort/merge-sort-core/merge-two-sorted-lists/code/cpp/MergeTwoSortedLists.cpp"
+          "codeFile": "courses/dsa/merge-sort/merge-sort-core/merge-two-sorted-lists/code/cpp/merge-two-sorted-lists.cpp"
         },
         {
           "language": "python",

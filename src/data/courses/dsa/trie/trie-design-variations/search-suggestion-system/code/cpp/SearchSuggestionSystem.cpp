@@ -43,7 +43,7 @@ struct TrieNode {
     vector<string> suggestions;
 };
 
-class Solution {
+class Solution2 {
 public:
     vector<vector<string>> suggestedProducts(vector<string>& products, string searchWord) {
         sort(products.begin(), products.end());

@@ -1,33 +1,35 @@
 #include <vector>
+#include <algorithm>
 using namespace std;
-
-class HeapSort {
+// ============================================================
+// Solution 1: Selection sort — find min each pass — O(N²)
+// ============================================================
+class Solution1 {
 public:
-    void heapify(vector<int>& arr, int n, int i) {
-        int largest = i;
-        int l = 2 * i + 1;
-        int r = 2 * i + 2;
-        
-        if (l < n && arr[l] > arr[largest])
-            largest = l;
-        if (r < n && arr[r] > arr[largest])
-            largest = r;
-        
-        if (largest != i) {
-            swap(arr[i], arr[largest]);
-            heapify(arr, n, largest);
+    void sort(vector<int>& nums) {
+        int n = nums.size();
+        for (int i = 0; i < n; i++) {
+            int minIdx = i;
+            for (int j = i+1; j < n; j++) if (nums[j] < nums[minIdx]) minIdx = j;
+            swap(nums[i], nums[minIdx]);
         }
     }
-    
-    void heapSort(vector<int>& arr) {
-        int n = arr.size();
-        
-        for (int i = n / 2 - 1; i >= 0; i--)
-            heapify(arr, n, i);
-        
-        for (int i = n - 1; i > 0; i--) {
-            swap(arr[0], arr[i]);
-            heapify(arr, i, 0);
-        }
+};
+
+// ============================================================
+// Solution 2: Heap Sort — O(N log N) Time, O(1) Space
+// ============================================================
+class Solution2 {
+    void heapify(vector<int>& nums, int n, int i) {
+        int largest = i, l = 2*i+1, r = 2*i+2;
+        if (l < n && nums[l] > nums[largest]) largest = l;
+        if (r < n && nums[r] > nums[largest]) largest = r;
+        if (largest != i) { swap(nums[i], nums[largest]); heapify(nums, n, largest); }
+    }
+public:
+    void sort(vector<int>& nums) {
+        int n = nums.size();
+        for (int i = n/2-1; i >= 0; i--) heapify(nums, n, i); // Build max-heap
+        for (int i = n-1; i > 0; i--) { swap(nums[0], nums[i]); heapify(nums, i, 0); } // Extract max
     }
 };
