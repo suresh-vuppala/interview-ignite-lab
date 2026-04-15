@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/stacks/stack-advanced/remove-k-digits/code/cpp/remove_k_digits.cpp"
+          "codeFile": "courses/dsa/stacks/stack-advanced/remove-k-digits/code/cpp/RemoveKDigits.cpp"
         },
         {
           "language": "java",

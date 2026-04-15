@@ -10,7 +10,7 @@
       "languages": [
         {
           "language": "cpp",
-          "codeFile": "courses/dsa/miscellaneous/array-problems/majority-element/code/cpp/majority_element.cpp"
+          "codeFile": "courses/dsa/miscellaneous/array-problems/majority-element/code/cpp/MajorityElement.cpp"
         },
         {
           "language": "java",
