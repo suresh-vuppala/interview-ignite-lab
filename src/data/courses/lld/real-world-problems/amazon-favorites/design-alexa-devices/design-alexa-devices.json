@@ -23,6 +23,10 @@
         {
           "language": "java",
           "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-alexa-devices/code/java/AlexaDeviceSystem.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-alexa-devices/code/cpp/AlexaDeviceSystem.cpp"
         }
       ]
     }

@@ -23,6 +23,10 @@
         {
           "language": "java",
           "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-atm/code/java/ATMSystem.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-atm/code/cpp/ATMSystem.cpp"
         }
       ]
     }

@@ -22,6 +22,10 @@
         {
           "language": "java",
           "codeFile": "courses/lld/real-world-problems/uber-favorites/design-hit-counter/code/java/HitCounterSystem.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/lld/real-world-problems/uber-favorites/design-hit-counter/code/cpp/HitCounterSystem.cpp"
         }
       ]
     }

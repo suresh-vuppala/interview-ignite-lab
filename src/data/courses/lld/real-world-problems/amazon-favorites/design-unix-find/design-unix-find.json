@@ -23,6 +23,10 @@
         {
           "language": "java",
           "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-unix-find/code/java/UnixFindSystem.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-unix-find/code/cpp/UnixFindSystem.cpp"
         }
       ]
     }

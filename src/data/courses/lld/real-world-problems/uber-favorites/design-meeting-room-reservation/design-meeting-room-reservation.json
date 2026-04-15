@@ -22,6 +22,10 @@
         {
           "language": "java",
           "codeFile": "courses/lld/real-world-problems/uber-favorites/design-meeting-room-reservation/code/java/MeetingRoomSystem.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/lld/real-world-problems/uber-favorites/design-meeting-room-reservation/code/cpp/MeetingRoomSystem.cpp"
         }
       ]
     }

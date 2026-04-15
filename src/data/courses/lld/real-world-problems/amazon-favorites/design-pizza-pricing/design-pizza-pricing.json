@@ -23,6 +23,10 @@
         {
           "language": "java",
           "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-pizza-pricing/code/java/PizzaPricingSystem.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/lld/real-world-problems/amazon-favorites/design-pizza-pricing/code/cpp/PizzaPricingSystem.cpp"
         }
       ]
     }

@@ -23,6 +23,10 @@
         {
           "language": "java",
           "codeFile": "courses/lld/real-world-problems/uber-favorites/design-logging-framework/code/java/LoggingFramework.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/lld/real-world-problems/uber-favorites/design-logging-framework/code/cpp/LoggingFramework.cpp"
         }
       ]
     }

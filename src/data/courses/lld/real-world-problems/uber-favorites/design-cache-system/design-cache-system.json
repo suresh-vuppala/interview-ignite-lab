@@ -23,6 +23,10 @@
         {
           "language": "java",
           "codeFile": "courses/lld/real-world-problems/uber-favorites/design-cache-system/code/java/CacheSystem.java"
+        },
+        {
+          "language": "cpp",
+          "codeFile": "courses/lld/real-world-problems/uber-favorites/design-cache-system/code/cpp/CacheSystem.cpp"
         }
       ]
     }
