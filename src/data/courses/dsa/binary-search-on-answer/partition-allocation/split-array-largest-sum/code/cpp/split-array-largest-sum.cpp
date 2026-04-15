@@ -1,59 +1,45 @@
-// Time: O(N * log(sum - max))
-// Space: O(1)
-
 #include <vector>
 #include <algorithm>
 #include <numeric>
 using namespace std;
-
-class Solution {
+// ============================================================
+// Solution 1: DP — O(N² * K) Time
+// ============================================================
+class Solution1 {
 public:
     int splitArray(vector<int>& nums, int k) {
         int n = nums.size();
-        
-        // Binary search range
-        int low = *max_element(nums.begin(), nums.end());  // Minimum possible answer
-        int high = accumulate(nums.begin(), nums.end(), 0); // Maximum possible answer
-        int result = high;
-        
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-            
-            // Check if we can split with max sum = mid
-            if (canSplit(nums, n, k, mid)) {
-                result = mid;      // This works, try smaller
-                high = mid - 1;
-            } else {
-                low = mid + 1;     // Too small, need larger limit
-            }
-        }
-        
-        return result;
+        vector<int> prefix(n + 1, 0);
+        for (int i = 0; i < n; i++) prefix[i + 1] = prefix[i] + nums[i];
+        // dp[i][j] = min largest sum splitting first i elements into j groups
+        vector<vector<int>> dp(n + 1, vector<int>(k + 1, INT_MAX));
+        dp[0][0] = 0;
+        for (int i = 1; i <= n; i++)
+            for (int j = 1; j <= min(i, k); j++)
+                for (int p = j - 1; p < i; p++)
+                    dp[i][j] = min(dp[i][j], max(dp[p][j - 1], prefix[i] - prefix[p]));
+        return dp[n][k];
     }
-    
-private:
-    bool canSplit(vector<int>& nums, int n, int k, int maxSum) {
-        int subarrayCount = 1;     // Start with first subarray
-        int currentSum = 0;        // Sum of current subarray
-        
-        for (int i = 0; i < n; i++) {
-            // If a single element is larger than our limit, impossible
-            if (nums[i] > maxSum) return false;
-            
-            // Try to add current element to current subarray
-            if (currentSum + nums[i] <= maxSum) {
-                currentSum += nums[i];  // Add to current subarray
-            } else {
-                // Current subarray's limit reached, start new subarray
-                subarrayCount++;
-                currentSum = nums[i];   // Start new subarray with current element
-                
-                // If we need more subarrays than allowed, this limit is too small
-                if (subarrayCount > k) return false;
-            }
+};
+
+// ============================================================
+// Solution 2: Binary Search on Answer — O(N log S)
+// ============================================================
+class Solution2 {
+    bool canSplit(vector<int>& nums, int k, int maxSum) {
+        int groups = 1, cur = 0;
+        for (int x : nums) {
+            if (x > maxSum) return false;
+            if (cur + x > maxSum) { groups++; cur = x; }
+            else cur += x;
         }
-        
-        // Successfully split into k or fewer subarrays within the limit
-        return true;
+        return groups <= k;
+    }
+public:
+    int splitArray(vector<int>& nums, int k) {
+        int lo = *max_element(nums.begin(), nums.end());
+        int hi = accumulate(nums.begin(), nums.end(), 0);
+        while (lo < hi) { int mid = lo + (hi - lo) / 2; if (canSplit(nums, k, mid)) hi = mid; else lo = mid + 1; }
+        return lo;
     }
 };
