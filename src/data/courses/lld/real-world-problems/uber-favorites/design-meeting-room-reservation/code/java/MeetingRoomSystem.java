@@ -1,91 +1,59 @@
-// Meeting Room Reservation System
+// DESIGN: Meeting Room Reservation — LLD (Java) | Key: Overlap detection
 import java.util.*;
-import java.time.*;
-
-class MeetingRoom {
-    private String id, name;
-    private int capacity;
-    private int floor;
-    private Set<String> amenities;
-    
-    public MeetingRoom(String id, String name, int capacity, int floor, String... amenities) {
-        this.id = id; this.name = name; this.capacity = capacity;
-        this.floor = floor; this.amenities = new HashSet<>(List.of(amenities));
-    }
-    public String getId() { return id; }
-    public String getName() { return name; }
-    public int getCapacity() { return capacity; }
-    public boolean hasAmenity(String a) { return amenities.contains(a); }
-}
 
 class TimeSlot {
-    private LocalDateTime start, end;
-    public TimeSlot(LocalDateTime start, LocalDateTime end) {
-        if (!end.isAfter(start)) throw new IllegalArgumentException("End must be after start");
-        this.start = start; this.end = end;
-    }
-    public boolean overlaps(TimeSlot other) {
-        return start.isBefore(other.end) && other.start.isBefore(end);
-    }
-    public LocalDateTime getStart() { return start; }
-    public LocalDateTime getEnd() { return end; }
+    int startH, startM, endH, endM;
+    TimeSlot(int sh, int sm, int eh, int em) { startH=sh; startM=sm; endH=eh; endM=em; }
+    int startMins() { return startH*60+startM; } int endMins() { return endH*60+endM; }
+    boolean overlaps(TimeSlot o) { return startMins()<o.endMins() && o.startMins()<endMins(); }
+    String toString2() { return String.format("%02d:%02d-%02d:%02d",startH,startM,endH,endM); }
 }
-
-class Booking {
-    private String id;
-    private MeetingRoom room;
-    private String organizer;
-    private List<String> attendees;
-    private TimeSlot timeSlot;
-    
-    public Booking(String id, MeetingRoom room, String organizer, List<String> attendees, TimeSlot slot) {
-        this.id = id; this.room = room; this.organizer = organizer;
-        this.attendees = attendees; this.timeSlot = slot;
-    }
-    public String getId() { return id; }
-    public MeetingRoom getRoom() { return room; }
-    public TimeSlot getTimeSlot() { return timeSlot; }
+class MeetingRoom { String id, name; int capacity;
+    MeetingRoom(String id, String name, int cap) { this.id=id; this.name=name; this.capacity=cap; }
+    String getId() { return id; } String getName() { return name; } int getCapacity() { return capacity; }
 }
-
+class Booking { String id; MeetingRoom room; String organizer; TimeSlot slot;
+    Booking(String id, MeetingRoom r, String org, TimeSlot s) { this.id=id; room=r; organizer=org; slot=s; }
+}
 class MeetingScheduler {
-    private List<MeetingRoom> rooms = new ArrayList<>();
-    private Map<String, List<Booking>> roomBookings = new HashMap<>(); // roomId → bookings
-    private int bookingCounter = 0;
-    
-    public void addRoom(MeetingRoom room) {
-        rooms.add(room);
-        roomBookings.put(room.getId(), new ArrayList<>());
+    List<MeetingRoom> rooms = new ArrayList<>();
+    Map<String, List<Booking>> bookings = new HashMap<>(); int counter = 0;
+    void addRoom(MeetingRoom r) { rooms.add(r); bookings.put(r.getId(), new ArrayList<>()); }
+    synchronized Booking book(String roomId, String org, TimeSlot slot) {
+        for (Booking b : bookings.get(roomId))
+            if (b.slot.overlaps(slot)) { System.out.println("  [ERROR] Conflict"); return null; }
+        MeetingRoom room = rooms.stream().filter(r->r.getId().equals(roomId)).findFirst().orElse(null);
+        Booking b = new Booking("BK-"+(++counter), room, org, slot);
+        bookings.get(roomId).add(b);
+        System.out.println("  Booked "+room.getName()+" for "+org+" at "+slot.toString2());
+        return b;
     }
-    
-    public synchronized Booking book(String roomId, String organizer, List<String> attendees, TimeSlot slot) {
-        List<Booking> bookings = roomBookings.get(roomId);
-        if (bookings == null) throw new IllegalArgumentException("Room not found");
-        
-        // Conflict check
-        for (Booking b : bookings) {
-            if (b.getTimeSlot().overlaps(slot))
-                throw new IllegalStateException("Room already booked for this time");
+    void cancel(String bookingId) {
+        for (List<Booking> bks : bookings.values()) bks.removeIf(b->b.id.equals(bookingId));
+        System.out.println("  Cancelled "+bookingId);
+    }
+    List<MeetingRoom> findAvailable(TimeSlot slot, int minCap) {
+        List<MeetingRoom> result = new ArrayList<>();
+        for (MeetingRoom r : rooms) {
+            if (r.getCapacity()<minCap) continue;
+            boolean conflict = bookings.get(r.getId()).stream().anyMatch(b->b.slot.overlaps(slot));
+            if (!conflict) result.add(r);
         }
-        
-        MeetingRoom room = rooms.stream().filter(r -> r.getId().equals(roomId)).findFirst().orElseThrow();
-        Booking booking = new Booking("BK-" + (++bookingCounter), room, organizer, attendees, slot);
-        bookings.add(booking);
-        System.out.println("✅ Booked " + room.getName() + " for " + organizer);
-        return booking;
-    }
-    
-    public synchronized void cancel(String bookingId) {
-        for (List<Booking> bookings : roomBookings.values()) {
-            bookings.removeIf(b -> b.getId().equals(bookingId));
-        }
-        System.out.println("Cancelled booking " + bookingId);
-    }
-    
-    public List<MeetingRoom> findAvailable(TimeSlot slot, int minCapacity) {
-        return rooms.stream()
-            .filter(r -> r.getCapacity() >= minCapacity)
-            .filter(r -> roomBookings.get(r.getId()).stream()
-                .noneMatch(b -> b.getTimeSlot().overlaps(slot)))
-            .toList();
+        return result;
     }
 }
+public class MeetingRoomSystem {
+    public static void main(String[] args) {
+        System.out.println("=== Meeting Room — Java ===");
+        MeetingScheduler s = new MeetingScheduler();
+        s.addRoom(new MeetingRoom("R1","Board Room",20));
+        s.addRoom(new MeetingRoom("R2","Huddle",6));
+        s.book("R1","Alice",new TimeSlot(10,0,11,0));
+        s.book("R1","Bob",new TimeSlot(10,30,11,30)); // Conflict!
+        s.book("R1","Bob",new TimeSlot(11,0,12,0)); // OK
+        System.out.println("Available 10-11: "+s.findAvailable(new TimeSlot(10,0,11,0),5).stream()
+            .map(MeetingRoom::getName).reduce("",(a,b)->a+" "+b));
+        System.out.println("=== Complete ===");
+    }
+}
+// SUMMARY: Overlap formula: start1<end2 && start2<end1, synchronized booking

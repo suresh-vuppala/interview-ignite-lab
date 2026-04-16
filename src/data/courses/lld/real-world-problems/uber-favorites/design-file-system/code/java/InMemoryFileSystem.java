@@ -1,94 +1,48 @@
-// In-Memory File System
+// DESIGN: In-Memory File System — LLD (Java) | Composite Pattern
 import java.util.*;
-import java.util.stream.*;
-
-abstract class FileSystemNode {
-    protected String name;
-    protected Directory parent;
-    public FileSystemNode(String name) { this.name = name; }
-    public String getName() { return name; }
-    public boolean isDirectory() { return false; }
-    public Directory getParent() { return parent; }
-    public void setParent(Directory p) { this.parent = p; }
+class FSNode { String name; FSNode parent;
+    FSNode(String n) { name=n; } String getName() { return name; }
+    boolean isDirectory() { return false; } void setParent(FSNode p) { parent=p; }
 }
-
-class File extends FileSystemNode {
-    private String content = "";
-    public File(String name) { super(name); }
-    public String getContent() { return content; }
-    public void setContent(String c) { this.content = c; }
-    public int getSize() { return content.length(); }
+class FSFile extends FSNode { String content="";
+    FSFile(String n) { super(n); }
+    void write(String c) { content=c; } String read() { return content; }
 }
-
-class Directory extends FileSystemNode {
-    private Map<String, FileSystemNode> children = new LinkedHashMap<>();
-    public Directory(String name) { super(name); }
-    @Override public boolean isDirectory() { return true; }
-    
-    public void addChild(FileSystemNode node) { children.put(node.getName(), node); node.setParent(this); }
-    public void removeChild(String name) { children.remove(name); }
-    public FileSystemNode getChild(String name) { return children.get(name); }
-    public Collection<FileSystemNode> listChildren() { return children.values(); }
-    
-    public List<FileSystemNode> listMatching(String pattern) {
-        String regex = pattern.replace(".", "\.").replace("*", ".*");
-        return children.values().stream()
-            .filter(n -> n.getName().matches(regex))
-            .collect(Collectors.toList());
-    }
+class FSDir extends FSNode { Map<String,FSNode> children = new LinkedHashMap<>();
+    FSDir(String n) { super(n); } boolean isDirectory() { return true; }
+    void add(FSNode n) { children.put(n.getName(),n); n.setParent(this); }
+    FSNode getChild(String n) { return children.get(n); }
+    List<String> list() { List<String> r=new ArrayList<>(); for(var e:children.entrySet()) r.add(e.getKey()+(e.getValue().isDirectory()?"/":"")); return r; }
 }
-
-class FileSystem {
-    private Directory root;
-    private Directory currentDir;
-    
-    public FileSystem() {
-        root = new Directory("/");
-        currentDir = root;
+class InMemoryFS {
+    FSDir root = new FSDir("/"); FSDir current = root;
+    void mkdir(String path) {
+        String[] parts=path.split("/"); FSDir dir=path.startsWith("/")?root:current;
+        for(String p:parts) { if(p.isEmpty()) continue; FSNode c=dir.getChild(p);
+            if(c==null){FSDir nd=new FSDir(p);dir.add(nd);dir=nd;} else if(c.isDirectory()) dir=(FSDir)c; }
+        System.out.println("  mkdir: "+path);
     }
-    
-    public void mkdir(String path) {
-        String[] parts = path.split("/");
-        Directory dir = path.startsWith("/") ? root : currentDir;
-        for (String part : parts) {
-            if (part.isEmpty()) continue;
-            FileSystemNode child = dir.getChild(part);
-            if (child == null) {
-                Directory newDir = new Directory(part);
-                dir.addChild(newDir);
-                dir = newDir;
-            } else if (child.isDirectory()) {
-                dir = (Directory) child;
-            } else throw new IllegalStateException(part + " is a file, not directory");
-        }
+    void touch(String n) { if(current.getChild(n)==null) current.add(new FSFile(n)); System.out.println("  touch: "+n); }
+    void cd(String p) {
+        if("/".equals(p)) current=root;
+        else if("..".equals(p)) { if(current.parent!=null) current=(FSDir)current.parent; }
+        else { FSNode n=current.getChild(p); if(n!=null&&n.isDirectory()) current=(FSDir)n; }
     }
-    
-    public void touch(String name) {
-        if (currentDir.getChild(name) == null) currentDir.addChild(new File(name));
-    }
-    
-    public void cd(String path) {
-        if ("/".equals(path)) { currentDir = root; return; }
-        if ("..".equals(path)) {
-            if (currentDir.getParent() != null) currentDir = currentDir.getParent();
-            return;
-        }
-        FileSystemNode node = currentDir.getChild(path);
-        if (node != null && node.isDirectory()) currentDir = (Directory) node;
-        else throw new IllegalArgumentException("Directory not found: " + path);
-    }
-    
-    public String pwd() {
-        Deque<String> stack = new ArrayDeque<>();
-        Directory d = currentDir;
-        while (d != null && d != root) { stack.push(d.getName()); d = d.getParent(); }
-        return "/" + String.join("/", stack);
-    }
-    
-    public List<String> ls(String pattern) {
-        Collection<FileSystemNode> items = pattern != null && pattern.contains("*")
-            ? currentDir.listMatching(pattern)
-            : currentDir.listChildren();
-        return items.stream().map(n -> n.getName() + (n.isDirectory() ? "/" : "")).toList();
+    String pwd() { Deque<String> parts=new ArrayDeque<>(); FSNode d=current;
+        while(d!=null&&d!=root){parts.push(d.getName());d=d.parent;} return "/"+String.join("/",parts); }
+    void ls() { System.out.println("  ls "+pwd()+": "+current.list()); }
+    void writeFile(String n, String c) { FSNode nd=current.getChild(n); if(nd!=null&&!nd.isDirectory()) ((FSFile)nd).write(c); }
+    void cat(String n) { FSNode nd=current.getChild(n); if(nd!=null&&!nd.isDirectory()) System.out.println("  cat: "+((FSFile)nd).read()); }
+}
+public class InMemoryFileSystem {
+    public static void main(String[] args) {
+        System.out.println("=== File System — Java ===");
+        InMemoryFS fs=new InMemoryFS();
+        fs.mkdir("src/main"); fs.cd("src"); fs.cd("main");
+        System.out.println("  pwd: "+fs.pwd());
+        fs.touch("App.java"); fs.writeFile("App.java","public class App{}"); fs.cat("App.java"); fs.ls();
+        fs.cd(".."); System.out.println("  pwd: "+fs.pwd()); fs.ls();
+        System.out.println("=== Complete ===");
     }
 }
+// SUMMARY: Composite(FSDir contains FSNode), path resolution, cd/pwd

@@ -1,115 +1,97 @@
-// Uber Driver Dispatch System
+// DESIGN: Uber Driver Dispatch — LLD (Java) | Patterns: Strategy, State
+// FR: Match riders to nearest/highest-rated drivers, fare calculation
+// PLANTUML: (see C++ for full diagram)
 import java.util.*;
 import java.util.stream.*;
 
 class Location {
-    private double lat, lng;
-    public Location(double lat, double lng) { this.lat = lat; this.lng = lng; }
-    public double distanceTo(Location other) {
-        return Math.sqrt(Math.pow(lat - other.lat, 2) + Math.pow(lng - other.lng, 2)); // Simplified
-    }
+    double lat, lng;
+    Location(double lat, double lng) { this.lat = lat; this.lng = lng; }
+    double distanceTo(Location o) { return Math.sqrt(Math.pow(lat-o.lat,2)+Math.pow(lng-o.lng,2)); }
 }
 
 enum DriverStatus { AVAILABLE, BUSY, OFFLINE }
+enum RideStatus { REQUESTED, MATCHED, COMPLETED, CANCELLED }
+
 class Driver {
-    private String id, name;
-    private Location location;
-    private DriverStatus status;
-    private double rating;
-    public Driver(String id, String name, Location loc) {
-        this.id = id; this.name = name; this.location = loc;
-        this.status = DriverStatus.AVAILABLE; this.rating = 5.0;
-    }
-    public String getId() { return id; }
-    public String getName() { return name; }
-    public Location getLocation() { return location; }
-    public DriverStatus getStatus() { return status; }
-    public void setStatus(DriverStatus s) { this.status = s; }
-    public double getRating() { return rating; }
-    public void setLocation(Location l) { this.location = l; }
+    String id, name; Location location; DriverStatus status; double rating;
+    Driver(String id, String name, Location loc) { this.id=id; this.name=name; this.location=loc; status=DriverStatus.AVAILABLE; rating=5.0; }
+    String getName() { return name; } Location getLocation() { return location; }
+    DriverStatus getStatus() { return status; } void setStatus(DriverStatus s) { status=s; }
+    double getRating() { return rating; }
 }
 
 class Rider {
-    private String id, name;
-    private Location location;
-    public Rider(String id, String name, Location loc) { this.id = id; this.name = name; this.location = loc; }
-    public Location getLocation() { return location; }
-    public String getName() { return name; }
+    String id, name; Location location;
+    Rider(String id, String name, Location loc) { this.id=id; this.name=name; this.location=loc; }
+    String getName() { return name; }
 }
 
-enum RideStatus { REQUESTED, MATCHED, PICKED_UP, IN_PROGRESS, COMPLETED, CANCELLED }
 class Ride {
-    private String rideId;
-    private Rider rider;
-    private Driver driver;
-    private Location pickup, destination;
-    private RideStatus status;
-    private double fare;
-    
-    public Ride(String id, Rider rider, Location pickup, Location dest) {
-        this.rideId = id; this.rider = rider; this.pickup = pickup;
-        this.destination = dest; this.status = RideStatus.REQUESTED;
-    }
-    public void assignDriver(Driver d) { this.driver = d; this.status = RideStatus.MATCHED; d.setStatus(DriverStatus.BUSY); }
-    public void complete(double fare) { this.fare = fare; this.status = RideStatus.COMPLETED; driver.setStatus(DriverStatus.AVAILABLE); }
-    public Location getPickup() { return pickup; }
-    public Location getDestination() { return destination; }
-    public RideStatus getStatus() { return status; }
+    String rideId; Rider rider; Driver driver; Location pickup, dest; RideStatus status; double fare;
+    Ride(String id, Rider r, Location p, Location d) { rideId=id; rider=r; pickup=p; dest=d; status=RideStatus.REQUESTED; }
+    void assignDriver(Driver d) { driver=d; status=RideStatus.MATCHED; d.setStatus(DriverStatus.BUSY); }
+    void complete(double f) { fare=f; status=RideStatus.COMPLETED; if(driver!=null) driver.setStatus(DriverStatus.AVAILABLE); }
 }
 
-// Strategy — matching algorithm
-interface MatchingStrategy {
-    Driver findDriver(Location pickup, List<Driver> drivers);
-}
+interface MatchingStrategy { Driver findDriver(Location pickup, List<Driver> drivers); String describe(); }
 
 class NearestDriverStrategy implements MatchingStrategy {
     public Driver findDriver(Location pickup, List<Driver> drivers) {
-        return drivers.stream()
-            .filter(d -> d.getStatus() == DriverStatus.AVAILABLE)
-            .min(Comparator.comparingDouble(d -> d.getLocation().distanceTo(pickup)))
-            .orElse(null);
+        return drivers.stream().filter(d->d.getStatus()==DriverStatus.AVAILABLE)
+            .min(Comparator.comparingDouble(d->d.getLocation().distanceTo(pickup))).orElse(null);
     }
+    public String describe() { return "Nearest"; }
 }
 
 class HighestRatedStrategy implements MatchingStrategy {
-    private double maxRadius;
-    public HighestRatedStrategy(double radius) { this.maxRadius = radius; }
+    double maxRadius;
+    HighestRatedStrategy(double r) { maxRadius=r; }
     public Driver findDriver(Location pickup, List<Driver> drivers) {
-        return drivers.stream()
-            .filter(d -> d.getStatus() == DriverStatus.AVAILABLE)
-            .filter(d -> d.getLocation().distanceTo(pickup) <= maxRadius)
-            .max(Comparator.comparingDouble(Driver::getRating))
-            .orElse(null);
+        return drivers.stream().filter(d->d.getStatus()==DriverStatus.AVAILABLE)
+            .filter(d->d.getLocation().distanceTo(pickup)<=maxRadius)
+            .max(Comparator.comparingDouble(Driver::getRating)).orElse(null);
     }
+    public String describe() { return "HighestRated"; }
 }
 
-// Fare calculation
 class FareCalculator {
-    private static final double BASE_FARE = 2.50;
-    private static final double PER_KM = 1.50;
-    private static final double PER_MIN = 0.25;
-    
-    public double calculate(double distanceKm, double durationMin, double surgeMultiplier) {
-        return (BASE_FARE + PER_KM * distanceKm + PER_MIN * durationMin) * surgeMultiplier;
-    }
+    double baseFare=2.50, perKm=1.50, perMin=0.25;
+    double calculate(double dist, double dur, double surge) { return (baseFare+perKm*dist+perMin*dur)*surge; }
 }
 
-// Service
 class RideService {
-    private List<Driver> drivers = new ArrayList<>();
-    private MatchingStrategy strategy;
-    private FareCalculator fareCalc = new FareCalculator();
-    private int rideCounter = 0;
-    
-    public RideService(MatchingStrategy strategy) { this.strategy = strategy; }
-    public void registerDriver(Driver d) { drivers.add(d); }
-    
-    public Ride requestRide(Rider rider, Location pickup, Location destination) {
-        Ride ride = new Ride("RIDE-" + (++rideCounter), rider, pickup, destination);
-        Driver driver = strategy.findDriver(pickup, drivers);
-        if (driver == null) { System.out.println("No drivers available"); return null; }
-        ride.assignDriver(driver);
-        System.out.println("Matched " + rider.getName() + " with driver " + driver.getName());
+    List<Driver> drivers = new ArrayList<>();
+    MatchingStrategy strategy; FareCalculator fareCalc = new FareCalculator(); int counter = 0;
+    RideService(MatchingStrategy s) { strategy=s; }
+    void registerDriver(Driver d) { drivers.add(d); }
+    void setStrategy(MatchingStrategy s) { strategy=s; }
+    Ride requestRide(Rider rider, Location pickup, Location dest) {
+        Ride ride = new Ride("RIDE-"+(++counter), rider, pickup, dest);
+        System.out.println("  Request by "+rider.getName()+" ["+strategy.describe()+"]");
+        Driver d = strategy.findDriver(pickup, drivers);
+        if (d==null) { System.out.println("  [ERROR] No drivers"); return ride; }
+        ride.assignDriver(d);
+        double dist = pickup.distanceTo(dest);
+        double fare = fareCalc.calculate(dist, dist*2, 1.0);
+        ride.complete(fare);
+        System.out.printf("  Matched %s. Fare: $%.2f%n", d.getName(), fare);
         return ride;
     }
 }
+
+public class UberDispatchSystem {
+    public static void main(String[] args) {
+        System.out.println("=== Uber Dispatch — Java ===");
+        Driver d1=new Driver("D1","Alice",new Location(0,0));
+        Driver d2=new Driver("D2","Bob",new Location(1,1));
+        Rider r1=new Rider("R1","Dave",new Location(0.5,0.5));
+        NearestDriverStrategy nearest = new NearestDriverStrategy();
+        RideService svc = new RideService(nearest);
+        svc.registerDriver(d1); svc.registerDriver(d2);
+        svc.requestRide(r1, new Location(0.5,0.5), new Location(3,3));
+        svc.requestRide(r1, new Location(0,0), new Location(5,5));
+        System.out.println("=== Complete ===");
+    }
+}
+// SUMMARY: Strategy(MatchingStrategy), FareCalculator, Ride lifecycle

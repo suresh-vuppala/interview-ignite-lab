@@ -1,118 +1,47 @@
-// Logging Framework — Chain of Responsibility + Strategy
+// DESIGN: Logging Framework — LLD (Java) | CoR + Strategy + Singleton
 import java.util.*;
 import java.time.*;
 import java.time.format.*;
-
 enum LogLevel { DEBUG, INFO, WARN, ERROR, FATAL }
-
-class LogMessage {
-    private LogLevel level;
-    private String message;
-    private String threadName;
-    private LocalDateTime timestamp;
-    
-    public LogMessage(LogLevel level, String message) {
-        this.level = level; this.message = message;
-        this.threadName = Thread.currentThread().getName();
-        this.timestamp = LocalDateTime.now();
-    }
-    public LogLevel getLevel() { return level; }
-    public String getMessage() { return message; }
-    public String getThreadName() { return threadName; }
-    public LocalDateTime getTimestamp() { return timestamp; }
+class LogMessage { LogLevel level; String message, timestamp;
+    LogMessage(LogLevel l,String m){level=l;message=m;timestamp=LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));}
 }
-
-// Formatter (Strategy)
-interface LogFormatter {
-    String format(LogMessage msg);
-}
-
-class PlainFormatter implements LogFormatter {
-    private static final DateTimeFormatter FMT = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-    public String format(LogMessage msg) {
-        return String.format("[%s] [%-5s] [%s] %s",
-            msg.getTimestamp().format(FMT), msg.getLevel(), msg.getThreadName(), msg.getMessage());
-    }
-}
-
-class JSONFormatter implements LogFormatter {
-    public String format(LogMessage msg) {
-        return String.format("{"timestamp":"%s","level":"%s","thread":"%s","message":"%s"}",
-            msg.getTimestamp(), msg.getLevel(), msg.getThreadName(), msg.getMessage());
-    }
-}
-
-// Handler (Chain of Responsibility)
+interface LogFormatter { String format(LogMessage msg); }
+class PlainFmt implements LogFormatter { public String format(LogMessage m){return "["+m.timestamp+"] ["+m.level+"] "+m.message;} }
+class JSONFmt implements LogFormatter { public String format(LogMessage m){return "{ts:"+m.timestamp+",level:"+m.level+",msg:"+m.message+"}";} }
 abstract class LogHandler {
-    protected LogLevel minLevel;
-    protected LogHandler next;
-    protected LogFormatter formatter;
-    
-    public LogHandler(LogLevel minLevel, LogFormatter formatter) {
-        this.minLevel = minLevel; this.formatter = formatter;
-    }
-    
-    public LogHandler setNext(LogHandler handler) { this.next = handler; return handler; }
-    
-    public void handle(LogMessage msg) {
-        if (msg.getLevel().ordinal() >= minLevel.ordinal()) {
-            write(formatter.format(msg));
-        }
-        if (next != null) next.handle(msg); // Always pass along (unlike approval chain)
-    }
-    
-    protected abstract void write(String formattedMsg);
+    LogLevel minLevel; LogHandler next; LogFormatter formatter;
+    LogHandler(LogLevel min,LogFormatter fmt){minLevel=min;formatter=fmt;}
+    LogHandler setNext(LogHandler h){next=h;return h;}
+    void handle(LogMessage msg){if(msg.level.ordinal()>=minLevel.ordinal())write(formatter.format(msg));if(next!=null)next.handle(msg);}
+    abstract void write(String formatted);
 }
-
 class ConsoleHandler extends LogHandler {
-    public ConsoleHandler(LogLevel min, LogFormatter fmt) { super(min, fmt); }
-    protected void write(String msg) { System.out.println(msg); }
+    ConsoleHandler(LogLevel min,LogFormatter f){super(min,f);} void write(String m){System.out.println(m);}
 }
-
 class FileHandler extends LogHandler {
-    private String filename;
-    public FileHandler(LogLevel min, LogFormatter fmt, String filename) {
-        super(min, fmt); this.filename = filename;
-    }
-    protected void write(String msg) {
-        // In real impl: write to file
-        System.out.println("[FILE:" + filename + "] " + msg);
-    }
+    String file; FileHandler(LogLevel min,LogFormatter f,String file){super(min,f);this.file=file;}
+    void write(String m){System.out.println("[FILE:"+file+"] "+m);}
 }
-
-// Logger (Singleton)
 class Logger {
-    private static volatile Logger instance;
-    private LogHandler handlerChain;
-    
-    private Logger() {}
-    
-    public static Logger getInstance() {
-        if (instance == null) {
-            synchronized (Logger.class) {
-                if (instance == null) instance = new Logger();
-            }
-        }
-        return instance;
-    }
-    
-    public void setHandlerChain(LogHandler chain) { this.handlerChain = chain; }
-    
-    public void log(LogLevel level, String message) {
-        if (handlerChain != null) handlerChain.handle(new LogMessage(level, message));
-    }
-    
-    public void debug(String msg) { log(LogLevel.DEBUG, msg); }
-    public void info(String msg) { log(LogLevel.INFO, msg); }
-    public void warn(String msg) { log(LogLevel.WARN, msg); }
-    public void error(String msg) { log(LogLevel.ERROR, msg); }
-    public void fatal(String msg) { log(LogLevel.FATAL, msg); }
+    private static Logger instance; LogHandler chain;
+    private Logger(){} static Logger getInstance(){if(instance==null)instance=new Logger();return instance;}
+    void setChain(LogHandler h){chain=h;}
+    void log(LogLevel l,String m){if(chain!=null)chain.handle(new LogMessage(l,m));}
+    void debug(String m){log(LogLevel.DEBUG,m);} void info(String m){log(LogLevel.INFO,m);}
+    void warn(String m){log(LogLevel.WARN,m);} void error(String m){log(LogLevel.ERROR,m);}
 }
-
-// Setup:
-// LogHandler console = new ConsoleHandler(LogLevel.DEBUG, new PlainFormatter());
-// LogHandler file = new FileHandler(LogLevel.INFO, new JSONFormatter(), "app.log");
-// console.setNext(file);
-// Logger.getInstance().setHandlerChain(console);
-// Logger.getInstance().info("Server started"); // → console + file
-// Logger.getInstance().debug("Detail");         // → console only
+public class LoggingFramework {
+    public static void main(String[] args) {
+        System.out.println("=== Logging — Java ===");
+        ConsoleHandler con=new ConsoleHandler(LogLevel.DEBUG,new PlainFmt());
+        FileHandler fil=new FileHandler(LogLevel.INFO,new JSONFmt(),"app.log");
+        con.setNext(fil);
+        Logger.getInstance().setChain(con);
+        Logger.getInstance().debug("Starting...");
+        Logger.getInstance().info("Server up");
+        Logger.getInstance().error("Timeout!");
+        System.out.println("=== Complete ===");
+    }
+}
+// SUMMARY: CoR(console->file, ALWAYS passes), Strategy(formatters), Singleton(logger)

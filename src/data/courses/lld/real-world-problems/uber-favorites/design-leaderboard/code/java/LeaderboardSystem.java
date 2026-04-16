@@ -1,61 +1,43 @@
-// Leaderboard — HashMap + TreeMap
+// DESIGN: Leaderboard — LLD (Java) | Dual-map: HashMap + TreeMap
 import java.util.*;
-
 class Leaderboard {
-    private Map<Integer, Integer> playerScores; // playerId → total score
-    private TreeMap<Integer, Set<Integer>> scoreBoard; // score → set of playerIds (descending)
-    
-    public Leaderboard() {
-        playerScores = new HashMap<>();
-        scoreBoard = new TreeMap<>(Collections.reverseOrder()); // Descending
+    Map<Integer,Integer> scores = new HashMap<>();
+    TreeMap<Integer,Set<Integer>> board = new TreeMap<>(Collections.reverseOrder());
+
+    void addScore(int pid, int score) {
+        int old = scores.getOrDefault(pid, 0), nw = old + score;
+        if (old>0) { board.get(old).remove(pid); if(board.get(old).isEmpty()) board.remove(old); }
+        scores.put(pid, nw);
+        board.computeIfAbsent(nw, k->new HashSet<>()).add(pid);
+        System.out.println("  Player"+pid+": +"+score+" = "+nw);
     }
-    
-    public void addScore(int playerId, int score) {
-        int oldScore = playerScores.getOrDefault(playerId, 0);
-        int newScore = oldScore + score;
-        
-        // Remove from old position
-        if (oldScore > 0) {
-            Set<Integer> players = scoreBoard.get(oldScore);
-            players.remove(playerId);
-            if (players.isEmpty()) scoreBoard.remove(oldScore);
-        }
-        
-        // Add to new position
-        playerScores.put(playerId, newScore);
-        scoreBoard.computeIfAbsent(newScore, k -> new HashSet<>()).add(playerId);
-    }
-    
-    public int top(int K) {
-        int total = 0, count = 0;
-        for (Map.Entry<Integer, Set<Integer>> entry : scoreBoard.entrySet()) {
-            int score = entry.getKey();
-            int playersAtScore = entry.getValue().size();
-            int take = Math.min(playersAtScore, K - count);
-            total += score * take;
-            count += take;
-            if (count >= K) break;
-        }
+
+    int top(int K) {
+        int total=0, count=0;
+        for(var e:board.entrySet()) { int take=Math.min(e.getValue().size(),K-count); total+=e.getKey()*take; count+=take; if(count>=K) break; }
         return total;
     }
-    
-    public void reset(int playerId) {
-        int score = playerScores.getOrDefault(playerId, 0);
-        if (score > 0) {
-            Set<Integer> players = scoreBoard.get(score);
-            players.remove(playerId);
-            if (players.isEmpty()) scoreBoard.remove(score);
-        }
-        playerScores.put(playerId, 0);
+
+    void reset(int pid) {
+        int s=scores.getOrDefault(pid,0); if(s>0){board.get(s).remove(pid);if(board.get(s).isEmpty())board.remove(s);}
+        scores.put(pid,0); System.out.println("  Reset player"+pid);
     }
-    
-    public int getPlayerRank(int playerId) {
-        int playerScore = playerScores.getOrDefault(playerId, 0);
-        int rank = 1;
-        for (Map.Entry<Integer, Set<Integer>> entry : scoreBoard.entrySet()) {
-            if (entry.getKey() <= playerScore) break;
-            rank += entry.getValue().size();
-        }
+
+    int getRank(int pid) {
+        int ps=scores.getOrDefault(pid,0); int rank=1;
+        for(var e:board.entrySet()) { if(e.getKey()<=ps) break; rank+=e.getValue().size(); }
         return rank;
     }
 }
+public class LeaderboardSystem {
+    public static void main(String[] args) {
+        System.out.println("=== Leaderboard — Java ===");
+        Leaderboard lb=new Leaderboard();
+        lb.addScore(1,50); lb.addScore(2,80); lb.addScore(3,50); lb.addScore(4,120);
+        System.out.println("Top2: "+lb.top(2)); System.out.println("Rank(1): "+lb.getRank(1));
+        lb.addScore(1,100); System.out.println("Top2 after: "+lb.top(2));
+        lb.reset(4); System.out.println("Top3 after reset: "+lb.top(3));
+        System.out.println("=== Complete ===");
+    }
+}
+// SUMMARY: HashMap(O(1) lookup) + TreeMap(sorted desc) = O(logN) add, O(K) top

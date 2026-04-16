@@ -1,119 +1,129 @@
-#include <string>
-#include <chrono>
-#include <ctime>
+// ===========================================================================
+// DESIGN: Logging Framework — Low Level Design
+// Patterns: Chain of Responsibility, Strategy, Singleton
+// ===========================================================================
+// FR: Log levels (DEBUG→FATAL), multiple outputs, formatters, level filtering
+// PLANTUML: Logger(Singleton)*--LogHandler(chain), LogHandler-->LogFormatter(Strategy)
+
 #include <iostream>
-#include <memory>
-#include <thread>
-#include <sstream>
-#include <iomanip>
+#include <string>
+#include <ctime>
+#include <cstdio>
 using namespace std;
 
-enum class LogLevel { DEBUG, INFO, WARN, ERROR, FATAL };
+enum LogLevel { LOG_DEBUG=0, LOG_INFO=1, LOG_WARN=2, LOG_ERROR=3, LOG_FATAL=4 };
 
-string logLevelToString(LogLevel level) {
-    switch (level) {
-        case LogLevel::DEBUG: return "DEBUG";
-        case LogLevel::INFO: return "INFO";
-        case LogLevel::WARN: return "WARN";
-        case LogLevel::ERROR: return "ERROR";
-        case LogLevel::FATAL: return "FATAL";
-    }
-    return "UNKNOWN";
+string levelStr(LogLevel l) {
+    switch(l) { case LOG_DEBUG:return"DEBUG"; case LOG_INFO:return"INFO"; case LOG_WARN:return"WARN";
+        case LOG_ERROR:return"ERROR"; case LOG_FATAL:return"FATAL"; }
+    return"";
 }
 
 struct LogMessage {
     LogLevel level;
-    string message;
-    string threadName;
-    string timestamp;
-
-    LogMessage(LogLevel level, string msg) : level(level), message(move(msg)) {
-        auto now = chrono::system_clock::now();
-        auto t = chrono::system_clock::to_time_t(now);
-        ostringstream oss;
-        oss << put_time(localtime(&t), "%Y-%m-%d %H:%M:%S");
-        timestamp = oss.str();
-        ostringstream tid; tid << this_thread::get_id();
-        threadName = "thread-" + tid.str();
+    string message, timestamp;
+    LogMessage(LogLevel l, const string& m) : level(l), message(m) {
+        time_t now = time(0);
+        char buf[20];
+        strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", localtime(&now));
+        timestamp = string(buf);
     }
 };
 
-// ========== FORMATTER (Strategy) ==========
+// Strategy: Formatter
 class LogFormatter {
 public:
-    virtual ~LogFormatter() = default;
+    virtual ~LogFormatter() {}
     virtual string format(const LogMessage& msg) const = 0;
 };
 
 class PlainFormatter : public LogFormatter {
 public:
-    string format(const LogMessage& msg) const override {
-        return "[" + msg.timestamp + "] [" + logLevelToString(msg.level) + "] [" + msg.threadName + "] " + msg.message;
+    string format(const LogMessage& msg) const {
+        return "[" + msg.timestamp + "] [" + levelStr(msg.level) + "] " + msg.message;
     }
 };
 
 class JSONFormatter : public LogFormatter {
 public:
-    string format(const LogMessage& msg) const override {
-        return "{"timestamp":"" + msg.timestamp + "","level":"" + logLevelToString(msg.level)
-             + "","thread":"" + msg.threadName + "","message":"" + msg.message + ""}";
+    string format(const LogMessage& msg) const {
+        return "{\"ts\":\"" + msg.timestamp + "\",\"level\":\"" + levelStr(msg.level) + "\",\"msg\":\"" + msg.message + "\"}";
     }
 };
 
-// ========== HANDLER (Chain of Responsibility) ==========
+// Chain of Responsibility: Handler
 class LogHandler {
 protected:
     LogLevel minLevel;
-    shared_ptr<LogHandler> next;
-    unique_ptr<LogFormatter> formatter;
+    LogHandler* next;
+    LogFormatter* formatter;
 public:
-    LogHandler(LogLevel minLevel, unique_ptr<LogFormatter> fmt)
-        : minLevel(minLevel), formatter(move(fmt)) {}
-    virtual ~LogHandler() = default;
-
-    LogHandler* setNext(shared_ptr<LogHandler> handler) {
-        next = move(handler);
-        return next.get();
-    }
+    LogHandler(LogLevel min, LogFormatter* fmt) : minLevel(min), next(NULL), formatter(fmt) {}
+    virtual ~LogHandler() {}
+    void setNext(LogHandler* h) { next = h; }
 
     void handle(const LogMessage& msg) {
         if ((int)msg.level >= (int)minLevel) write(formatter->format(msg));
-        if (next) next->handle(msg);
+        if (next) next->handle(msg);  // ALWAYS pass to next (unlike approval chain)
     }
 
-    virtual void write(const string& formattedMsg) = 0;
+    virtual void write(const string& formatted) = 0;
 };
 
 class ConsoleHandler : public LogHandler {
 public:
-    ConsoleHandler(LogLevel min, unique_ptr<LogFormatter> fmt) : LogHandler(min, move(fmt)) {}
-    void write(const string& msg) override { cout << msg << endl; }
+    ConsoleHandler(LogLevel min, LogFormatter* fmt) : LogHandler(min, fmt) {}
+    void write(const string& msg) { cout << msg << endl; }
 };
 
 class FileHandler : public LogHandler {
     string filename;
 public:
-    FileHandler(LogLevel min, unique_ptr<LogFormatter> fmt, string fn)
-        : LogHandler(min, move(fmt)), filename(move(fn)) {}
-    void write(const string& msg) override { cout << "[FILE:" << filename << "] " << msg << endl; }
+    FileHandler(LogLevel min, LogFormatter* fmt, const string& file)
+        : LogHandler(min, fmt), filename(file) {}
+    void write(const string& msg) { cout << "[FILE:" << filename << "] " << msg << endl; }
 };
 
-// ========== LOGGER (Singleton) ==========
+// Singleton Logger
 class Logger {
-    shared_ptr<LogHandler> handlerChain;
-    Logger() = default;
+    LogHandler* chain;
+    Logger() : chain(NULL) {}
+    Logger(const Logger&);
+    static Logger* instance;
 public:
-    static Logger& getInstance() { static Logger instance; return instance; }
-    Logger(const Logger&) = delete;
-    Logger& operator=(const Logger&) = delete;
-
-    void setHandlerChain(shared_ptr<LogHandler> chain) { handlerChain = move(chain); }
-    void log(LogLevel level, const string& message) {
-        if (handlerChain) handlerChain->handle(LogMessage(level, message));
+    static Logger* getInstance() {
+        if (!instance) instance = new Logger();
+        return instance;
     }
-    void debug(const string& msg) { log(LogLevel::DEBUG, msg); }
-    void info(const string& msg) { log(LogLevel::INFO, msg); }
-    void warn(const string& msg) { log(LogLevel::WARN, msg); }
-    void error(const string& msg) { log(LogLevel::ERROR, msg); }
-    void fatal(const string& msg) { log(LogLevel::FATAL, msg); }
+    void setChain(LogHandler* h) { chain = h; }
+    void log(LogLevel level, const string& msg) { if(chain) chain->handle(LogMessage(level, msg)); }
+    void debug(const string& m) { log(LOG_DEBUG, m); }
+    void info(const string& m)  { log(LOG_INFO, m); }
+    void warn(const string& m)  { log(LOG_WARN, m); }
+    void error(const string& m) { log(LOG_ERROR, m); }
+    void fatal(const string& m) { log(LOG_FATAL, m); }
 };
+Logger* Logger::instance = NULL;
+
+int main() {
+    cout << "============================================\n  Logging Framework — LLD Demo\n============================================" << endl;
+
+    PlainFormatter plain;
+    JSONFormatter json;
+    ConsoleHandler console(LOG_DEBUG, &plain);  // Console: all levels
+    FileHandler file(LOG_INFO, &json, "app.log"); // File: INFO+
+    console.setNext(&file);  // Chain: Console -> File
+
+    Logger::getInstance()->setChain(&console);
+    Logger::getInstance()->debug("App starting...");     // Console only
+    Logger::getInstance()->info("Server listening");      // Console + File
+    Logger::getInstance()->warn("High memory usage");     // Console + File
+    Logger::getInstance()->error("Connection timeout");   // Console + File
+    Logger::getInstance()->fatal("System crash!");         // Console + File
+
+    cout << "\n=== Complete ===" << endl;
+    return 0;
+}
+// SUMMARY: CoR(handler chain processes AND passes), Strategy(formatters), Singleton(logger)
+// KEY: Logging chain ALWAYS passes (unlike approval chain that stops)
+// PRACTICES: SRP per handler, OCP(new handlers/formatters), DIP(Logger->LogHandler abstraction)

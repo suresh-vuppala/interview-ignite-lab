@@ -1,116 +1,43 @@
-// Movie Ticket Booking System
+// DESIGN: Movie Ticket Booking — LLD (Java) | Key: Seat locking (all-or-nothing)
 import java.util.*;
-import java.time.*;
-
 enum SeatType { REGULAR, PREMIUM, VIP }
 enum SeatStatus { AVAILABLE, LOCKED, BOOKED }
-
 class Seat {
-    private int row, col;
-    private SeatType type;
-    private SeatStatus status = SeatStatus.AVAILABLE;
-    private long lockExpiry = 0; // Timestamp when lock expires
-    private String lockedBy;
-    
-    public Seat(int row, int col, SeatType type) { this.row = row; this.col = col; this.type = type; }
-    
-    public synchronized boolean lock(String userId, long durationMs) {
-        checkLockExpiry();
-        if (status != SeatStatus.AVAILABLE) return false;
-        status = SeatStatus.LOCKED;
-        lockedBy = userId;
-        lockExpiry = System.currentTimeMillis() + durationMs;
-        return true;
-    }
-    
-    public synchronized boolean book(String userId) {
-        if (status != SeatStatus.LOCKED || !userId.equals(lockedBy)) return false;
-        status = SeatStatus.BOOKED;
-        return true;
-    }
-    
-    public synchronized void release() {
-        status = SeatStatus.AVAILABLE;
-        lockedBy = null;
-        lockExpiry = 0;
-    }
-    
-    private void checkLockExpiry() {
-        if (status == SeatStatus.LOCKED && System.currentTimeMillis() > lockExpiry) release();
-    }
-    
-    public boolean isAvailable() { checkLockExpiry(); return status == SeatStatus.AVAILABLE; }
-    public SeatType getType() { return type; }
-    public String getPosition() { return "R" + row + "C" + col; }
+    int row,col; SeatType type; SeatStatus status=SeatStatus.AVAILABLE; String lockedBy;
+    Seat(int r,int c,SeatType t){row=r;col=c;type=t;}
+    boolean isAvailable(){return status==SeatStatus.AVAILABLE;}
+    synchronized boolean lock(String uid){if(status!=SeatStatus.AVAILABLE)return false;status=SeatStatus.LOCKED;lockedBy=uid;return true;}
+    synchronized boolean book(String uid){if(status!=SeatStatus.LOCKED||!uid.equals(lockedBy))return false;status=SeatStatus.BOOKED;return true;}
+    void release(){status=SeatStatus.AVAILABLE;lockedBy=null;}
+    double getPrice(){return type==SeatType.VIP?25:type==SeatType.PREMIUM?15:10;}
+    String pos(){return "R"+row+"C"+col;}
 }
-
-class Movie {
-    private String id, title, genre;
-    private int durationMinutes;
-    public Movie(String id, String title, String genre, int dur) {
-        this.id = id; this.title = title; this.genre = genre; this.durationMinutes = dur;
-    }
-    public String getTitle() { return title; }
-}
-
+class Movie { String title; Movie(String t){title=t;} }
 class Show {
-    private String id;
-    private Movie movie;
-    private Seat[][] seats;
-    private LocalDateTime startTime;
-    
-    public Show(String id, Movie movie, int rows, int cols, LocalDateTime time) {
-        this.id = id; this.movie = movie; this.startTime = time;
-        seats = new Seat[rows][cols];
-        for (int r = 0; r < rows; r++)
-            for (int c = 0; c < cols; c++)
-                seats[r][c] = new Seat(r, c, r < 2 ? SeatType.VIP : r < 5 ? SeatType.PREMIUM : SeatType.REGULAR);
-    }
-    
-    public List<Seat> getAvailableSeats() {
-        List<Seat> available = new ArrayList<>();
-        for (Seat[] row : seats) for (Seat s : row) if (s.isAvailable()) available.add(s);
-        return available;
-    }
-    
-    public boolean lockSeats(List<int[]> positions, String userId) {
-        long LOCK_DURATION = 5 * 60 * 1000; // 5 min
-        List<Seat> locked = new ArrayList<>();
-        for (int[] pos : positions) {
-            Seat seat = seats[pos[0]][pos[1]];
-            if (!seat.lock(userId, LOCK_DURATION)) {
-                locked.forEach(Seat::release); // Rollback
-                return false;
-            }
-            locked.add(seat);
-        }
+    Movie movie; Seat[][] seats;
+    Show(Movie m,int rows,int cols){movie=m;seats=new Seat[rows][cols];
+        for(int r=0;r<rows;r++) for(int c=0;c<cols;c++) seats[r][c]=new Seat(r,c,r<2?SeatType.VIP:r<4?SeatType.PREMIUM:SeatType.REGULAR);}
+    int available(){int c=0;for(Seat[] r:seats)for(Seat s:r)if(s.isAvailable())c++;return c;}
+    boolean lockSeats(int[][] pos,String uid){
+        List<Seat> locked=new ArrayList<>();
+        for(int[] p:pos){if(!seats[p[0]][p[1]].lock(uid)){for(Seat s:locked)s.release();return false;}locked.add(seats[p[0]][p[1]]);}
         return true;
     }
-    
-    public boolean confirmBooking(List<int[]> positions, String userId) {
-        for (int[] pos : positions) {
-            if (!seats[pos[0]][pos[1]].book(userId)) return false;
-        }
-        return true;
-    }
-    
-    public Movie getMovie() { return movie; }
+    boolean confirmBooking(int[][] pos,String uid){for(int[] p:pos)if(!seats[p[0]][p[1]].book(uid))return false;return true;}
+    double calcPrice(int[][] pos){double t=0;for(int[] p:pos)t+=seats[p[0]][p[1]].getPrice();return t;}
 }
-
-class Booking {
-    private String id, userId;
-    private Show show;
-    private List<Seat> seats;
-    private double totalPrice;
-    private String status = "CONFIRMED";
-    
-    public Booking(String id, String userId, Show show, List<Seat> seats, double price) {
-        this.id = id; this.userId = userId; this.show = show;
-        this.seats = seats; this.totalPrice = price;
-    }
-    
-    public void cancel() {
-        status = "CANCELLED";
-        seats.forEach(Seat::release);
+public class MovieTicketBooking {
+    public static void main(String[] args) {
+        System.out.println("=== Movie Ticket — Java ===");
+        Show show=new Show(new Movie("Matrix"),8,10);
+        System.out.println("Available: "+show.available());
+        int[][] s1={{0,0},{0,1}};
+        if(show.lockSeats(s1,"U1")){System.out.printf("Locked! $%.2f%n",show.calcPrice(s1));show.confirmBooking(s1,"U1");}
+        if(!show.lockSeats(s1,"U2")) System.out.println("U2: seats taken!");
+        int[][] s2={{5,0},{5,1}};
+        if(show.lockSeats(s2,"U2")){show.confirmBooking(s2,"U2");System.out.printf("U2 booked: $%.2f%n",show.calcPrice(s2));}
+        System.out.println("Remaining: "+show.available());
+        System.out.println("=== Complete ===");
     }
 }
+// SUMMARY: All-or-nothing seat lock (rollback on failure), VIP/Premium/Regular pricing
