@@ -1,0 +1,26 @@
+{
+  "title": "Score of Parentheses",
+  "slug": "score-of-parentheses",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "score-of-parentheses.md",
+  "codeExamples": [
+    {
+      "title": "Score of Parentheses Solutions",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/score-of-parentheses/code/cpp/ScoreOfParentheses.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/score-of-parentheses/code/java/ScoreOfParentheses.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/score-of-parentheses/code/python/score_of_parentheses.py"
+        }
+      ]
+    }
+  ]
+}

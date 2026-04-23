@@ -1,0 +1,26 @@
+{
+  "title": "Evaluate Nested Expression",
+  "slug": "evaluate-nested-expression",
+  "isPremium": false,
+  "isPosted": true,
+  "mdFile": "evaluate-nested-expression.md",
+  "codeExamples": [
+    {
+      "title": "Evaluate Nested Expression",
+      "languages": [
+        {
+          "language": "cpp",
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/evaluate-nested-expression/code/cpp/EvaluateNestedExpression.cpp"
+        },
+        {
+          "language": "java",
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/evaluate-nested-expression/code/java/EvaluateNestedExpression.java"
+        },
+        {
+          "language": "python",
+          "codeFile": "courses/dsa/stacks/stack-basic-applications/evaluate-nested-expression/code/python/evaluate_nested_expression.py"
+        }
+      ]
+    }
+  ]
+}

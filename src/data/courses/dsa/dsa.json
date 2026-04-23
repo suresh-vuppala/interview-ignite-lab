@@ -1242,6 +1242,11 @@
             },
             {
               "isPosted": true,
+              "title": "Score of Parentheses",
+              "slug": "score-of-parentheses"
+            },
+            {
+              "isPosted": true,
               "title": "Remove Outermost Parentheses",
               "slug": "remove-outermost-parentheses"
             },
@@ -1259,6 +1264,11 @@
               "isPosted": true,
               "title": "Infix to Postfix",
               "slug": "infix-to-postfix"
+            },
+            {
+              "isPosted": true,
+              "title": "Evaluate Nested Expression",
+              "slug": "evaluate-nested-expression"
             }
           ]
         },

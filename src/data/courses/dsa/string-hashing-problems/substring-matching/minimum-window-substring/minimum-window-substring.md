@@ -117,19 +117,63 @@ right=10('A'): formed=3 ★ window="CODEBA"→shrink...
 
 ---
 
+## Solution 3: Binary Search on Length + Sliding Window
+
+**Intuition:**
+Binary search on the window length. For each candidate length, check if any window of that length contains all characters of t using sliding window.
+
+**Algorithm:**
+1. Binary search on length: low = |t|, high = |s|
+2. For each mid (candidate length):
+   - Use sliding window to check if any window of length mid contains all chars of t
+   - If yes, try smaller length (high = mid - 1)
+   - If no, try larger length (low = mid + 1)
+3. Return the minimum valid length window
+
+**Check Function (canFindWindow):**
+- Use sliding window of fixed size = mid
+- Track frequency of characters in current window
+- Check if window satisfies all requirements of t
+
+### Time Complexity: O(N × log N)
+**Why?**
+- Binary search: O(log N) iterations
+- Each iteration: O(N) to check all windows of length mid
+- Total: O(N × log N)
+
+**Detailed breakdown:**
+- N = 100,000 → log(100,000) ≈ 17
+- Total operations: 100,000 × 17 = 1,700,000
+- Slower than sliding window O(N) but demonstrates binary search thinking
+
+### Space Complexity: O(|s| + |t|)
+**Why?**
+- Frequency maps for checking
+
+**When to use this approach:**
+- Interview variation: "Find if window of length K exists"
+- Demonstrates binary search on answer pattern
+- Good for follow-up discussions
+
+<br>
+
+---
+
 ## Complexity Progression Summary
 
 | Solution | Time | Space | Key Improvement |
 |----------|------|-------|----------------|
 | Brute Force | O(N²×M) | O(M) | Check all substrings |
 | Sliding Window | O(N+M) | O(N+M) | Expand/shrink with formed tracking |
+| Binary Search | O(N×log N) | O(N+M) | Binary search on window length |
 
 **Recommended Solution:** Sliding Window (Solution 2) — O(N+M) time.
 
 **Key Insights:**
 1. **Formed counter:** Tracks how many unique chars are fully satisfied — avoids checking entire map
 2. **Expand then shrink:** Expand right until valid, shrink left to minimize
-3. **FAANG favorite:** Tests both sliding window mechanics AND frequency tracking
+3. **Binary search variation:** Useful for "check if window of length K exists" problems
+4. **FAANG favorite:** Tests both sliding window mechanics AND frequency tracking
 
 
 <br>
